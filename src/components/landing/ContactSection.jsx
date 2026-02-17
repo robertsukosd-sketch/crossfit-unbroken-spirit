@@ -71,7 +71,7 @@ export default function ContactSection() {
             {t("contact")}
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
-            {t("contactTitle")} <span className="text-blue-500">{t("contactTitle") === "Hai să Vorbim" ? "Vorbim" : "Talk"}</span>
+            {t("contactTitle")}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {t("contactSubtitle")}
