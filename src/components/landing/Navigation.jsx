@@ -56,9 +56,9 @@ export default function Navigation() {
             >
               <LogoSVG size={120} />
                <div className="hidden sm:block text-center leading-tight">
-                 <div className="text-base font-black text-white">CrossFit</div>
-                 <div className="text-base font-black text-white">Unbroken Spirit</div>
-               </div>
+                  <div className="text-xl font-black text-sky-400 uppercase">CROSSFIT</div>
+                  <div className="text-sm font-black text-blue-700 uppercase">UNBROKEN SPIRIT</div>
+                </div>
             </a>
 
             {/* Desktop Navigation */}
