@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Dumbbell, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Logo from './Logo';
 
 const navLinks = [
   { name: "Acasă", href: "#hero" },
@@ -50,9 +51,7 @@ export default function Navigation() {
               onClick={(e) => { e.preventDefault(); scrollToSection('#hero'); }}
               className="flex items-center gap-3"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center">
-                <Dumbbell className="w-5 h-5 text-white" />
-              </div>
+              <Logo size={40} />
               <span className="text-xl font-black text-white hidden sm:block">CrossFit Unbroken Spirit</span>
             </a>
 
