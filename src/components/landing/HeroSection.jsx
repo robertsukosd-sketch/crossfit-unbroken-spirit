@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
       
       {/* Geometric accent */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-red-600/20 to-transparent transform skew-x-12 origin-top-right" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-600/20 to-transparent transform skew-x-12 origin-top-right" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
@@ -29,13 +29,13 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-2 mb-6 text-sm font-semibold tracking-widest text-red-500 uppercase bg-red-500/10 rounded-full border border-red-500/30">
+          <span className="inline-block px-4 py-2 mb-6 text-sm font-semibold tracking-widest text-sky-400 uppercase bg-sky-500/10 rounded-full border border-sky-500/30">
             Antrenează-te ca un campion
           </span>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight">
             FORȚĂ.
-            <span className="block bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
               COMUNITATE.
             </span>
             REZULTATE.
@@ -50,7 +50,7 @@ export default function HeroSection() {
             <Button 
               size="lg"
               onClick={() => scrollToSection('pricing')}
-              className="bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white px-10 py-6 text-lg font-bold rounded-full shadow-lg shadow-red-500/30 transition-all hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-10 py-6 text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-all hover:scale-105"
             >
               Începe Acum
             </Button>

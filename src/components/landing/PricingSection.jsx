@@ -105,8 +105,8 @@ export default function PricingSection() {
   return (
     <section id="pricing" className="py-24 bg-zinc-950 relative overflow-hidden">
       {/* Background accents */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-red-600/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-orange-600/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-sky-600/5 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
@@ -115,11 +115,11 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-red-500 font-semibold tracking-wider uppercase text-sm">
+          <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
             Prețuri Transparente
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
-            Alege Planul <span className="text-red-500">Potrivit</span>
+            Alege Planul <span className="text-blue-500">Potrivit</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Investește în sănătatea ta. Fiecare plan include coaching profesionist 
@@ -135,8 +135,8 @@ export default function PricingSection() {
               viewport={{ once: true }}
               className="flex items-center gap-3 mb-8"
             >
-              <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center">
-                <category.icon className="w-5 h-5 text-red-500" />
+              <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                <category.icon className="w-5 h-5 text-sky-400" />
               </div>
               <h3 className="text-2xl font-bold text-white">{category.title}</h3>
             </motion.div>
@@ -157,15 +157,15 @@ export default function PricingSection() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className={`relative rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] ${
                     plan.featured 
-                      ? 'bg-gradient-to-br from-red-600 to-orange-500 shadow-2xl shadow-red-500/20' 
-                      : 'bg-zinc-900/80 border border-zinc-800 hover:border-red-500/30'
+                      ? 'bg-gradient-to-br from-blue-600 to-sky-500 shadow-2xl shadow-blue-500/20' 
+                      : 'bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/30'
                   }`}
                 >
                   {plan.popular && (
                     <div className={`absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${
                       plan.featured 
-                        ? 'bg-white text-red-600' 
-                        : 'bg-red-500 text-white'
+                        ? 'bg-white text-blue-600' 
+                        : 'bg-blue-500 text-white'
                     }`}>
                       Popular
                     </div>
@@ -195,7 +195,7 @@ export default function PricingSection() {
                     {plan.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-start gap-3">
                         <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                          plan.featured ? 'text-white' : 'text-red-500'
+                          plan.featured ? 'text-white' : 'text-sky-400'
                         }`} />
                         <span className={`text-sm ${plan.featured ? 'text-white/90' : 'text-gray-300'}`}>
                           {feature}
@@ -207,8 +207,8 @@ export default function PricingSection() {
                   <Button 
                     className={`w-full font-bold rounded-full ${
                       plan.featured 
-                        ? 'bg-white text-red-600 hover:bg-white/90' 
-                        : 'bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white border border-red-500/30'
+                        ? 'bg-white text-blue-600 hover:bg-white/90' 
+                        : 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'
                     }`}
                     onClick={() => scrollToSection('contact')}
                   >

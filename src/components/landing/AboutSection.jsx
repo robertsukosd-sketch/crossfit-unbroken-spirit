@@ -29,7 +29,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-24 bg-zinc-950 relative overflow-hidden">
       {/* Background accent */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -51,7 +51,7 @@ export default function AboutSection() {
             </div>
             
             {/* Stats overlay */}
-            <div className="absolute -bottom-8 -right-8 bg-gradient-to-br from-red-600 to-orange-500 rounded-2xl p-6 shadow-2xl">
+            <div className="absolute -bottom-8 -right-8 bg-gradient-to-br from-blue-600 to-sky-500 rounded-2xl p-6 shadow-2xl">
               <div className="text-center">
                 <span className="block text-4xl font-black text-white">500+</span>
                 <span className="text-white/80 text-sm font-medium">Membri Activi</span>
@@ -66,11 +66,11 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-red-500 font-semibold tracking-wider uppercase text-sm">
+            <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
               Despre Noi
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6 leading-tight">
-              Mai mult decât un <span className="text-red-500">gym</span>
+              Mai mult decât un <span className="text-blue-500">gym</span>
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
               Suntem o comunitate de oameni pasionați de fitness și performanță. 
@@ -88,8 +88,8 @@ export default function AboutSection() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="flex gap-4"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center">
-                    <feature.icon className="w-6 h-6 text-red-500" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                    <feature.icon className="w-6 h-6 text-sky-400" />
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">{feature.title}</h3>

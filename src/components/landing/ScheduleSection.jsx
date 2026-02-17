@@ -57,11 +57,11 @@ const schedule = {
 const days = ["Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă", "Duminică"];
 
 const classColors = {
-  "CrossFit": "bg-red-500/20 border-red-500/30 text-red-400",
-  "HIIT": "bg-orange-500/20 border-orange-500/30 text-orange-400",
-  "Weightlifting": "bg-purple-500/20 border-purple-500/30 text-purple-400",
-  "Gymnastics": "bg-pink-500/20 border-pink-500/30 text-pink-400",
-  "Open Gym": "bg-blue-500/20 border-blue-500/30 text-blue-400",
+  "CrossFit": "bg-blue-500/20 border-blue-500/30 text-blue-400",
+  "HIIT": "bg-sky-500/20 border-sky-500/30 text-sky-400",
+  "Weightlifting": "bg-indigo-500/20 border-indigo-500/30 text-indigo-400",
+  "Gymnastics": "bg-violet-500/20 border-violet-500/30 text-violet-400",
+  "Open Gym": "bg-cyan-500/20 border-cyan-500/30 text-cyan-400",
 };
 
 export default function ScheduleSection() {
@@ -76,11 +76,11 @@ export default function ScheduleSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-red-500 font-semibold tracking-wider uppercase text-sm">
+          <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
             Program
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
-            Orarul <span className="text-red-500">Claselor</span>
+            Orarul <span className="text-blue-500">Claselor</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Găsește ora potrivită pentru antrenamentul tău. 
@@ -97,7 +97,7 @@ export default function ScheduleSection() {
               className={cn(
                 "px-4 py-2 rounded-full text-sm font-semibold transition-all",
                 selectedDay === day
-                  ? "bg-red-500 text-white"
+                  ? "bg-blue-500 text-white"
                   : "bg-zinc-900 text-gray-400 hover:bg-zinc-800 hover:text-white"
               )}
             >

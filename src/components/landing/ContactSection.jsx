@@ -55,7 +55,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-24 bg-zinc-950 relative overflow-hidden">
       {/* Background accents */}
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-red-600/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-blue-600/10 to-transparent rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
@@ -64,11 +64,11 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-red-500 font-semibold tracking-wider uppercase text-sm">
+          <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
             Contact
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
-            Hai să <span className="text-red-500">Vorbim</span>
+            Hai să <span className="text-blue-500">Vorbim</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Ai întrebări? Vrei să încerci o clasă gratuită? 
@@ -94,8 +94,8 @@ export default function ContactSection() {
                   transition={{ delay: index * 0.1 }}
                   className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-4">
-                    <info.icon className="w-6 h-6 text-red-500" />
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4">
+                    <info.icon className="w-6 h-6 text-sky-400" />
                   </div>
                   <h4 className="text-white font-bold mb-2">{info.title}</h4>
                   {info.details.map((detail, i) => (
@@ -177,7 +177,7 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
                       placeholder="Ion Popescu"
-                      className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-red-500"
+                      className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-blue-500"
                     />
                   </div>
                   
@@ -192,7 +192,7 @@ export default function ContactSection() {
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
                         placeholder="ion@email.com"
-                        className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-red-500"
+                        className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-blue-500"
                       />
                     </div>
                     <div>
@@ -204,7 +204,7 @@ export default function ContactSection() {
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                         placeholder="+40 722 123 456"
-                        className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-red-500"
+                        className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-blue-500"
                       />
                     </div>
                   </div>
@@ -226,7 +226,7 @@ export default function ContactSection() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white py-6 text-lg font-bold rounded-full"
+                    className="w-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white py-6 text-lg font-bold rounded-full"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">

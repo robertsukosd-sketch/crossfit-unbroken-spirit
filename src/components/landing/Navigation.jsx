@@ -50,7 +50,7 @@ export default function Navigation() {
               onClick={(e) => { e.preventDefault(); scrollToSection('#hero'); }}
               className="flex items-center gap-3"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-orange-500 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center">
                 <Dumbbell className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-black text-white hidden sm:block">CROSSFIT</span>
@@ -66,7 +66,7 @@ export default function Navigation() {
                   className="text-gray-300 hover:text-white font-medium transition-colors relative group"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
                 </a>
               ))}
             </div>
@@ -75,7 +75,7 @@ export default function Navigation() {
             <div className="hidden lg:block">
               <Button
                 onClick={() => scrollToSection('#contact')}
-                className="bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white font-bold rounded-full px-6"
+                className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-full px-6"
               >
                 Probă Gratuită
               </Button>
@@ -110,7 +110,7 @@ export default function Navigation() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="block text-2xl font-bold text-white hover:text-red-500 transition-colors"
+                  className="block text-2xl font-bold text-white hover:text-blue-400 transition-colors"
                 >
                   {link.name}
                 </motion.a>
@@ -123,7 +123,7 @@ export default function Navigation() {
               >
                 <Button
                   onClick={() => scrollToSection('#contact')}
-                  className="w-full bg-gradient-to-r from-red-600 to-orange-500 text-white font-bold rounded-full py-6 text-lg"
+                  className="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold rounded-full py-6 text-lg"
                 >
                   Probă Gratuită
                 </Button>

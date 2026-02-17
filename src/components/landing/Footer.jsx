@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600 to-orange-500 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center">
                 <Dumbbell className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-black text-white">CROSSFIT</span>
@@ -23,13 +23,13 @@ export default function Footer() {
             <div className="flex gap-4">
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center hover:bg-red-500 transition-colors group"
+                className="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center hover:bg-blue-500 transition-colors group"
               >
                 <Instagram className="w-5 h-5 text-gray-400 group-hover:text-white" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center hover:bg-red-500 transition-colors group"
+                className="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center hover:bg-blue-500 transition-colors group"
               >
                 <Facebook className="w-5 h-5 text-gray-400 group-hover:text-white" />
               </a>
@@ -44,7 +44,7 @@ export default function Footer() {
                 <li key={link}>
                   <a 
                     href={`#${link.toLowerCase().replace('ă', 'a').replace('ț', 't')}`}
-                    className="text-gray-400 hover:text-red-500 transition-colors"
+                    className="text-gray-400 hover:text-blue-400 transition-colors"
                   >
                     {link}
                   </a>
@@ -58,15 +58,15 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4">Contact</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-gray-400">
-                <MapPin className="w-4 h-4 text-red-500 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0" />
                 <span>Strada Fitness Nr. 10, București</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-4 h-4 text-red-500 flex-shrink-0" />
+                <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
                 <span>+40 722 123 456</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-4 h-4 text-red-500 flex-shrink-0" />
+                <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
                 <span>contact@crossfit.ro</span>
               </li>
             </ul>
@@ -79,10 +79,10 @@ export default function Footer() {
             © {currentYear} CrossFit. Toate drepturile rezervate.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-500 text-sm hover:text-red-500 transition-colors">
+            <a href="#" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
               Termeni și Condiții
             </a>
-            <a href="#" className="text-gray-500 text-sm hover:text-red-500 transition-colors">
+            <a href="#" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
               Politica de Confidențialitate
             </a>
           </div>
