@@ -76,14 +76,15 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 h-auto">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="h-full"
           >
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-6 h-full">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={info.title}
@@ -91,7 +92,7 @@ export default function ContactSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800"
+                  className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-col justify-center"
                 >
                   <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4">
                     <info.icon className="w-6 h-6 text-sky-400" />
