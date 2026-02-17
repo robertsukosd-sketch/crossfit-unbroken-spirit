@@ -115,9 +115,6 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
-            Prețuri Transparente
-          </span>
           <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
             Alege Planul <span className="text-blue-500">Potrivit</span>
           </h2>
