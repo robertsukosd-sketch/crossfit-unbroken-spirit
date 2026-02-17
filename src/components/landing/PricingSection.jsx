@@ -121,10 +121,10 @@ export default function PricingSection() {
           <h2 className="text-gray-400 text-lg max-w-2xl mx-auto">Fiecare plan include coaching profesionist și acces la comunitatea noastră.
 
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Investește în sănătatea ta. Fiecare plan include coaching profesionist 
-            și acces la comunitatea noastră.
-          </p>
+          
+
+
+
         </motion.div>
         
         {pricingCategories.map((category, catIndex) =>
