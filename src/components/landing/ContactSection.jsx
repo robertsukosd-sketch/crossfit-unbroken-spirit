@@ -82,7 +82,6 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-8"
           >
             <div className="grid sm:grid-cols-2 gap-6">
               {contactInfo.map((info, index) => (
@@ -103,29 +102,6 @@ export default function ContactSection() {
                   ))}
                 </motion.div>
               ))}
-            </div>
-
-            {/* Social Links */}
-            <div className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800">
-              <h4 className="text-white font-bold mb-4">Urmărește-ne</h4>
-              <div className="flex gap-4">
-                <a 
-                  href="https://www.instagram.com/crossfit.unbroken.spirit" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:scale-110 transition-transform"
-                >
-                  <Instagram className="w-6 h-6 text-white" />
-                </a>
-                <a 
-                  href="https://www.facebook.com/profile.php?id=61588232038424" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center hover:scale-110 transition-transform"
-                >
-                  <Facebook className="w-6 h-6 text-white" />
-                </a>
-              </div>
             </div>
           </motion.div>
 
@@ -234,19 +210,6 @@ export default function ContactSection() {
                   </Button>
                 </form>
               )}
-            </div>
-
-            {/* Map */}
-            <div className="rounded-xl overflow-hidden h-80 bg-zinc-900 border border-zinc-800">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.8341894651926!2d26.100449!3d44.394874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff3e1f1f1f1f%3A0x1f1f1f1f1f1f1f1f!2sSplaiul%20Unirii%20257-259%2C%20Bucuresti!5e0!3m2!1sro!2sro!4v1699999999999!5m2!1sro!2sro"
-                width="100%"
-                height="100%"
-                style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
             </div>
           </motion.div>
         </div>
