@@ -1,11 +1,16 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-const LanguageContext = createContext();
+const LanguageContext = createContext(null);
 
 export const useLanguage = () => {
   const context = React.useContext(LanguageContext);
   if (!context) {
-    throw new Error('useLanguage must be used within LanguageProvider');
+    // Return default context if not wrapped
+    return {
+      language: 'ro',
+      changeLanguage: () => {},
+      t: (key) => translations['ro'][key] || key
+    };
   }
   return context;
 };
@@ -156,7 +161,13 @@ export default function LanguageProvider({ children }) {
     return translations[language][key] || translations['ro'][key] || key;
   };
 
-  if (!isLoaded) return children;
+  if (!isLoaded) {
+    return (
+      <LanguageContext.Provider value={{ language: 'ro', changeLanguage, t }}>
+        {children}
+      </LanguageContext.Provider>
+    );
+  }
 
   return (
     <LanguageContext.Provider value={{ language, changeLanguage, t }}>
