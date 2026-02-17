@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Users } from 'lucide-react';
 import { cn } from "@/lib/utils";
@@ -75,6 +75,10 @@ export default function ScheduleSection() {
   const schedule = getSchedule(t);
   const days = getDays(t);
   const [selectedDay, setSelectedDay] = useState(days[0]);
+
+  useEffect(() => {
+    setSelectedDay(days[0]);
+  }, [days]);
 
   return (
     <section id="schedule" className="py-24 bg-black relative">
