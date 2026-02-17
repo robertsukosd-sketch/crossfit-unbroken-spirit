@@ -134,6 +134,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="space-y-6"
           >
             <div className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-800">
               {isSubmitted ? (
@@ -233,6 +234,19 @@ export default function ContactSection() {
                   </Button>
                 </form>
               )}
+            </div>
+
+            {/* Map */}
+            <div className="rounded-xl overflow-hidden h-80 bg-zinc-900 border border-zinc-800">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.8341894651926!2d26.100449!3d44.394874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff3e1f1f1f1f%3A0x1f1f1f1f1f1f1f1f!2sSplaiul%20Unirii%20257-259%2C%20Bucuresti!5e0!3m2!1sro!2sro!4v1699999999999!5m2!1sro!2sro"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </motion.div>
         </div>
