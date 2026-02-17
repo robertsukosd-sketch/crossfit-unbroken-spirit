@@ -36,12 +36,10 @@ export default function HeroSection() {
           </span>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight">
-            {t("heroTitle").split("COMUNITATE").map((part, i) => (
-              <span key={i}>
-                {part}
-                {i === 0 && <span className="text-blue-500">COMUNITATE</span>}
-              </span>
-            ))}
+            {language === 'ro' 
+              ? <>FORȚĂ. <span className="text-blue-500">COMUNITATE</span>. REZULTATE.</>
+              : <>STRENGTH. <span className="text-blue-500">COMMUNITY</span>. RESULTS.</>
+            }
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
