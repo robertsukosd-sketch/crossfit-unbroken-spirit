@@ -1,0 +1,158 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Clock, Users } from 'lucide-react';
+import { cn } from "@/lib/utils";
+
+const schedule = {
+  "Luni": [
+    { time: "07:00", class: "CrossFit", coach: "Alex", spots: 12 },
+    { time: "09:00", class: "Open Gym", coach: "-", spots: 20 },
+    { time: "12:00", class: "CrossFit", coach: "Maria", spots: 12 },
+    { time: "17:00", class: "CrossFit", coach: "Alex", spots: 12 },
+    { time: "18:00", class: "CrossFit", coach: "Maria", spots: 12 },
+    { time: "19:00", class: "Weightlifting", coach: "Dan", spots: 10 },
+  ],
+  "Marți": [
+    { time: "07:00", class: "CrossFit", coach: "Maria", spots: 12 },
+    { time: "09:00", class: "Open Gym", coach: "-", spots: 20 },
+    { time: "12:00", class: "CrossFit", coach: "Alex", spots: 12 },
+    { time: "17:00", class: "HIIT", coach: "Maria", spots: 15 },
+    { time: "18:00", class: "CrossFit", coach: "Alex", spots: 12 },
+    { time: "19:00", class: "CrossFit", coach: "Dan", spots: 12 },
+  ],
+  "Miercuri": [
+    { time: "07:00", class: "CrossFit", coach: "Alex", spots: 12 },
+    { time: "09:00", class: "Open Gym", coach: "-", spots: 20 },
+    { time: "12:00", class: "CrossFit", coach: "Maria", spots: 12 },
+    { time: "17:00", class: "CrossFit", coach: "Alex", spots: 12 },
+    { time: "18:00", class: "Gymnastics", coach: "Dan", spots: 10 },
+    { time: "19:00", class: "CrossFit", coach: "Maria", spots: 12 },
+  ],
+  "Joi": [
+    { time: "07:00", class: "CrossFit", coach: "Maria", spots: 12 },
+    { time: "09:00", class: "Open Gym", coach: "-", spots: 20 },
+    { time: "12:00", class: "CrossFit", coach: "Alex", spots: 12 },
+    { time: "17:00", class: "CrossFit", coach: "Maria", spots: 12 },
+    { time: "18:00", class: "CrossFit", coach: "Alex", spots: 12 },
+    { time: "19:00", class: "Weightlifting", coach: "Dan", spots: 10 },
+  ],
+  "Vineri": [
+    { time: "07:00", class: "CrossFit", coach: "Alex", spots: 12 },
+    { time: "09:00", class: "Open Gym", coach: "-", spots: 20 },
+    { time: "12:00", class: "CrossFit", coach: "Maria", spots: 12 },
+    { time: "17:00", class: "CrossFit", coach: "Alex", spots: 12 },
+    { time: "18:00", class: "CrossFit", coach: "Maria", spots: 12 },
+    { time: "19:00", class: "HIIT", coach: "Dan", spots: 15 },
+  ],
+  "Sâmbătă": [
+    { time: "09:00", class: "CrossFit", coach: "Alex", spots: 15 },
+    { time: "10:00", class: "Open Gym", coach: "-", spots: 20 },
+    { time: "11:00", class: "CrossFit", coach: "Maria", spots: 15 },
+  ],
+  "Duminică": [
+    { time: "10:00", class: "Open Gym", coach: "-", spots: 20 },
+  ]
+};
+
+const days = ["Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă", "Duminică"];
+
+const classColors = {
+  "CrossFit": "bg-red-500/20 border-red-500/30 text-red-400",
+  "HIIT": "bg-orange-500/20 border-orange-500/30 text-orange-400",
+  "Weightlifting": "bg-purple-500/20 border-purple-500/30 text-purple-400",
+  "Gymnastics": "bg-pink-500/20 border-pink-500/30 text-pink-400",
+  "Open Gym": "bg-blue-500/20 border-blue-500/30 text-blue-400",
+};
+
+export default function ScheduleSection() {
+  const [selectedDay, setSelectedDay] = useState("Luni");
+
+  return (
+    <section id="schedule" className="py-24 bg-black relative">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <span className="text-red-500 font-semibold tracking-wider uppercase text-sm">
+            Program
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
+            Orarul <span className="text-red-500">Claselor</span>
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Găsește ora potrivită pentru antrenamentul tău. 
+            Clase disponibile de dimineața până seara.
+          </p>
+        </motion.div>
+
+        {/* Day selector */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {days.map((day) => (
+            <button
+              key={day}
+              onClick={() => setSelectedDay(day)}
+              className={cn(
+                "px-4 py-2 rounded-full text-sm font-semibold transition-all",
+                selectedDay === day
+                  ? "bg-red-500 text-white"
+                  : "bg-zinc-900 text-gray-400 hover:bg-zinc-800 hover:text-white"
+              )}
+            >
+              {day}
+            </button>
+          ))}
+        </div>
+
+        {/* Schedule grid */}
+        <motion.div
+          key={selectedDay}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          {schedule[selectedDay].map((item, index) => (
+            <motion.div
+              key={`${item.time}-${item.class}`}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.05 }}
+              className={cn(
+                "rounded-xl p-5 border backdrop-blur-sm",
+                classColors[item.class] || "bg-zinc-900/50 border-zinc-800"
+              )}
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  <span className="font-bold text-lg">{item.time}</span>
+                </div>
+                <div className="flex items-center gap-1 text-xs opacity-80">
+                  <Users className="w-3 h-3" />
+                  <span>{item.spots} locuri</span>
+                </div>
+              </div>
+              <h4 className="text-white font-bold text-xl mb-1">{item.class}</h4>
+              {item.coach !== "-" && (
+                <p className="text-sm opacity-80">Coach: {item.coach}</p>
+              )}
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Legend */}
+        <div className="flex flex-wrap justify-center gap-4 mt-10">
+          {Object.entries(classColors).map(([className, colors]) => (
+            <div key={className} className="flex items-center gap-2">
+              <div className={cn("w-3 h-3 rounded-full", colors.split(' ')[0])} />
+              <span className="text-gray-400 text-sm">{className}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
