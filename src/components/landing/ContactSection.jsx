@@ -73,7 +73,7 @@ export default function ContactSection() {
           <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
             {t("contactTitle")}
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto whitespace-pre-line leading-snug">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto whitespace-pre-line leading-none">
             {t("contactSubtitle")}
           </p>
         </motion.div>
