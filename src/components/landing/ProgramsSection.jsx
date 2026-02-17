@@ -64,15 +64,10 @@ export default function ProgramsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
-            Ce Oferim
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
-            Programele <span className="text-blue-500">Noastre</span>
-          </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Alegem varietatea pentru că fiecare persoană este unică.<br />
-            Găsește programul potrivit pentru tine.
+          <p className="text-2xl md:text-3xl font-bold text-white max-w-3xl mx-auto leading-relaxed">
+            <span className="bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
+              Fiecare persoană este unică
+            </span>, iar programele noastre variate sunt adaptabile oricărui nivel de fitness.
           </p>
         </motion.div>
         
