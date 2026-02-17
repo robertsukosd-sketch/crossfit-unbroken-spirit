@@ -115,12 +115,14 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="text-center mb-16">
 
-          <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
-            Prețuri Transparente
-          </span>
-          <h2 className="text-gray-400 text-lg max-w-2xl mx-auto">Fiecare plan include coaching profesionist și acces la comunitatea noastră.
-
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+            <span className="bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
+              Prețuri
+            </span>
           </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Fiecare plan include coaching profesionist și acces la comunitatea noastră.
+          </p>
           
 
 
