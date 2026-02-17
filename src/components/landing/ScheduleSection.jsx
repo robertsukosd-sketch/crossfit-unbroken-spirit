@@ -78,7 +78,7 @@ export default function ScheduleSection() {
 
   useEffect(() => {
     setSelectedDay(days[0]);
-  }, [days]);
+  }, [language]);
 
   return (
     <section id="schedule" className="py-24 bg-black relative">
