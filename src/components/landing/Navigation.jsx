@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Logo from './Logo';
+import LogoSVG from './LogoSVG';
 import { useLanguage } from '../LanguageProvider';
 
 const getNavLinks = (t) => [
@@ -54,7 +54,7 @@ export default function Navigation() {
               onClick={(e) => { e.preventDefault(); scrollToSection('#hero'); }}
               className="flex items-center gap-3"
             >
-              <Logo size={40} />
+              <LogoSVG size={40} />
                <div className="hidden sm:block text-center leading-tight">
                  <div className="text-base font-black text-white">CrossFit</div>
                  <div className="text-base font-black text-white">Unbroken Spirit</div>
