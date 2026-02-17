@@ -65,6 +65,7 @@ const days = ["Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă", "Dumi
 
 const classColors = {
   "CrossFit": "bg-blue-500/20 border-blue-500/30 text-blue-400",
+  "CrossFit Kids": "bg-purple-500/20 border-purple-500/30 text-purple-400",
   "Open Gym": "bg-cyan-500/20 border-cyan-500/30 text-cyan-400",
 };
 
