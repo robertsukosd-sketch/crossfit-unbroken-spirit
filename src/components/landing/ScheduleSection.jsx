@@ -92,7 +92,7 @@ export default function ScheduleSection() {
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
             Orarul <span className="text-blue-500">Claselor</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto whitespace-pre-line">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {t("scheduleSubtitle")}
           </p>
         </motion.div>
