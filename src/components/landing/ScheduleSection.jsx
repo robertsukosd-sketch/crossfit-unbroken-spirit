@@ -56,7 +56,7 @@ const schedule = {
   ],
   "Sâmbătă": [
     { time: "09:00", class: "CrossFit Kids", coach: "Dmytro", spots: 15 },
-    { time: "10:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "10:00-11:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
   ],
   "Duminică": []
 };
