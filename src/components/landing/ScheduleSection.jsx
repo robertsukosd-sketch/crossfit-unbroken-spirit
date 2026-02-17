@@ -10,13 +10,11 @@ const schedule = {
     { time: "12:00", class: "CrossFit", coach: "Maria", spots: 12 },
     { time: "17:00", class: "CrossFit", coach: "Alex", spots: 12 },
     { time: "18:00", class: "CrossFit", coach: "Maria", spots: 12 },
-    { time: "19:00", class: "Weightlifting", coach: "Dan", spots: 10 },
   ],
   "Marți": [
     { time: "07:00", class: "CrossFit", coach: "Maria", spots: 12 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 20 },
     { time: "12:00", class: "CrossFit", coach: "Alex", spots: 12 },
-    { time: "17:00", class: "HIIT", coach: "Maria", spots: 15 },
     { time: "18:00", class: "CrossFit", coach: "Alex", spots: 12 },
     { time: "19:00", class: "CrossFit", coach: "Dan", spots: 12 },
   ],
@@ -25,7 +23,6 @@ const schedule = {
     { time: "09:00", class: "Open Gym", coach: "-", spots: 20 },
     { time: "12:00", class: "CrossFit", coach: "Maria", spots: 12 },
     { time: "17:00", class: "CrossFit", coach: "Alex", spots: 12 },
-    { time: "18:00", class: "Gymnastics", coach: "Dan", spots: 10 },
     { time: "19:00", class: "CrossFit", coach: "Maria", spots: 12 },
   ],
   "Joi": [
@@ -34,7 +31,6 @@ const schedule = {
     { time: "12:00", class: "CrossFit", coach: "Alex", spots: 12 },
     { time: "17:00", class: "CrossFit", coach: "Maria", spots: 12 },
     { time: "18:00", class: "CrossFit", coach: "Alex", spots: 12 },
-    { time: "19:00", class: "Weightlifting", coach: "Dan", spots: 10 },
   ],
   "Vineri": [
     { time: "07:00", class: "CrossFit", coach: "Alex", spots: 12 },
@@ -42,7 +38,6 @@ const schedule = {
     { time: "12:00", class: "CrossFit", coach: "Maria", spots: 12 },
     { time: "17:00", class: "CrossFit", coach: "Alex", spots: 12 },
     { time: "18:00", class: "CrossFit", coach: "Maria", spots: 12 },
-    { time: "19:00", class: "HIIT", coach: "Dan", spots: 15 },
   ],
   "Sâmbătă": [
     { time: "09:00", class: "CrossFit", coach: "Alex", spots: 15 },
@@ -58,9 +53,6 @@ const days = ["Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă", "Dumi
 
 const classColors = {
   "CrossFit": "bg-blue-500/20 border-blue-500/30 text-blue-400",
-  "HIIT": "bg-sky-500/20 border-sky-500/30 text-sky-400",
-  "Weightlifting": "bg-indigo-500/20 border-indigo-500/30 text-indigo-400",
-  "Gymnastics": "bg-violet-500/20 border-violet-500/30 text-violet-400",
   "Open Gym": "bg-cyan-500/20 border-cyan-500/30 text-cyan-400",
 };
 
