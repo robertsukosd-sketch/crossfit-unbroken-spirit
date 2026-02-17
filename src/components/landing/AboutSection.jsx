@@ -27,7 +27,7 @@ const getFeatures = (t) => [
 ];
 
 export default function AboutSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const features = getFeatures(t);
   return (
     <section id="about" className="py-24 bg-zinc-950 relative overflow-hidden">
