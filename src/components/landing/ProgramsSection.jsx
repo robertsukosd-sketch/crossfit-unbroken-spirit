@@ -104,21 +104,6 @@ export default function ProgramsSection() {
             </motion.div>
           ))}
         </div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Button 
-            size="lg"
-            onClick={() => scrollToSection('contact')}
-            className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-10 py-6 text-lg font-bold rounded-full"
-          >
-            Începe O Ședință Gratuită
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
