@@ -6,31 +6,34 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { base44 } from '@/api/base44Client';
 import { toast } from "sonner";
+import { useLanguage } from '../LanguageProvider';
 
-const contactInfo = [
+const getContactInfo = (t) => [
   {
     icon: MapPin,
-    title: "Adresă",
+    title: t("address"),
     details: ["Splaiul Unirii 257-259", "Sector 3, București"]
   },
   {
     icon: Phone,
-    title: "Telefon",
+    title: t("phone"),
     details: ["+40 748 838 767", "+40 740 269 769"]
   },
   {
     icon: Mail,
-    title: "Email",
+    title: t("email"),
     details: ["contact@crossfit.ro"]
   },
   {
     icon: Clock,
-    title: "Program",
-    details: ["L-V: 07:00 - 20:30", "S: 09:00 - 11:30", "D: Închis"]
+    title: t("schedule_label"),
+    details: [t("hours"), t("hoursSaturday"), t("hoursSunday")]
   }
 ];
 
 export default function ContactSection() {
+  const { t } = useLanguage();
+  const contactInfo = getContactInfo(t);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -65,14 +68,13 @@ export default function ContactSection() {
           className="text-center mb-16"
         >
           <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
-            Contact
+            {t("contact")}
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
-            Hai să <span className="text-blue-500">Vorbim</span>
+            {t("contactTitle")} <span className="text-blue-500">{t("contactTitle") === "Hai să Vorbim" ? "Vorbim" : "Talk"}</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ai întrebări? Vrei să încerci o clasă gratuită?<br />
-            Scrie-ne și te contactăm în cel mai scurt timp.
+            {t("contactSubtitle")}
           </p>
         </motion.div>
 
@@ -121,31 +123,31 @@ export default function ContactSection() {
                   className="text-center py-12"
                 >
                   <div className="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="w-10 h-10 text-green-500" />
+                  <CheckCircle className="w-10 h-10 text-green-500" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">Mulțumim!</h3>
+                  <h3 className="text-2xl font-bold text-white mb-3">{t("thank")}</h3>
                   <p className="text-gray-400 mb-6">
-                    Am primit mesajul tău. Te vom contacta în curând.
+                  {t("thankDesc")}
                   </p>
                   <Button
-                    variant="outline"
-                    onClick={() => setIsSubmitted(false)}
-                    className="border-zinc-700 text-white hover:bg-zinc-800"
+                  variant="outline"
+                  onClick={() => setIsSubmitted(false)}
+                  className="border-zinc-700 text-white hover:bg-zinc-800"
                   >
-                    Trimite Alt Mesaj
+                  {t("sendAnother")}
                   </Button>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Nume Complet *
+                      {t("fullName")} *
                     </label>
                     <Input
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      placeholder="Ion Popescu"
+                      placeholder={t("fullNamePlaceholder")}
                       className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-blue-500"
                     />
                   </div>
@@ -153,26 +155,26 @@ export default function ContactSection() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Email *
+                        {t("email")} *
                       </label>
                       <Input
                         type="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        placeholder="ion@email.com"
+                        placeholder={t("emailPlaceholder")}
                         className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-blue-500"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Telefon
+                        {t("phone")}
                       </label>
                       <Input
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        placeholder="+40 722 123 456"
+                        placeholder={t("phonePlaceholder")}
                         className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-blue-500"
                       />
                     </div>
@@ -180,13 +182,13 @@ export default function ContactSection() {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Mesaj *
+                      {t("message")} *
                     </label>
                     <Textarea
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      placeholder="Cu ce te putem ajuta?"
+                      placeholder={t("messagePlaceholder")}
                       rows={5}
                       className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-red-500 resize-none"
                     />
@@ -200,12 +202,12 @@ export default function ContactSection() {
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">
                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        Se trimite...
+                        {t("sending")}
                       </span>
                     ) : (
                       <span className="flex items-center gap-2">
                         <Send className="w-5 h-5" />
-                        Trimite Mesajul
+                        {t("sendMessage")}
                       </span>
                     )}
                   </Button>
@@ -225,7 +227,7 @@ export default function ContactSection() {
             className="h-40"
           >
             <div className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 h-full flex flex-col justify-center items-center text-center">
-              <h4 className="text-white font-bold mb-4">Urmărește-ne</h4>
+              <h4 className="text-white font-bold mb-4">{t("follow")}</h4>
               <div className="flex gap-4 justify-center">
                 <a 
                   href="https://www.instagram.com/crossfit.unbroken.spirit" 
