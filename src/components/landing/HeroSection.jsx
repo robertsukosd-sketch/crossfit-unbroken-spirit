@@ -60,7 +60,7 @@ export default function HeroSection() {
               onClick={() => scrollToSection('programs')}
               className="bg-white text-blue-600 hover:bg-gray-100 border-2 border-white px-10 py-6 text-lg font-bold rounded-full"
             >
-              {t("discoverPrograms")}
+              {t("discoverThePrograms")}
             </Button>
           </div>
         </motion.div>
