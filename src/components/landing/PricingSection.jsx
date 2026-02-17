@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Sparkles, Dumbbell, Apple, User } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { useLanguage } from '../LanguageProvider';
 
-const pricingCategories = [
+const getPricingCategories = (t) => [
 {
   title: "Abonamente CrossFit",
   icon: Dumbbell,
@@ -98,6 +99,9 @@ const pricingCategories = [
 
 
 export default function PricingSection() {
+  const { t } = useLanguage();
+  const pricingCategories = getPricingCategories(t);
+  
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -117,11 +121,11 @@ export default function PricingSection() {
 
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
             <span className="bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
-              Prețuri
+              {t("pricingTitle")}
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Fiecare plan include coaching profesionist și acces la comunitatea noastră.
+            {t("pricingSubtitle")}
           </p>
           
 
@@ -169,7 +173,7 @@ export default function PricingSection() {
               'bg-white text-blue-600' :
               'bg-blue-500 text-white'}`
               }>
-                      Popular
+                      {t("popular")}
                     </div>
               }
                   
@@ -187,7 +191,7 @@ export default function PricingSection() {
                         {plan.price}
                       </span>
                       <span className={`text-lg ${plan.featured ? 'text-white/80' : 'text-gray-400'}`}>
-                        RON
+                        {t("ron")}
                       </span>
                     </div>
                     <span className={`text-sm ${plan.featured ? 'text-white/60' : 'text-gray-500'}`}>
@@ -215,8 +219,7 @@ export default function PricingSection() {
                 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'}`
                 }
                 onClick={() => scrollToSection('contact')}>
-
-                    Începe Acum
+                    {t("startNowBtn")}
                   </Button>
                 </motion.div>
             )}
