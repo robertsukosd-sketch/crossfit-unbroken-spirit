@@ -119,7 +119,15 @@ export default function ScheduleSection() {
           transition={{ duration: 0.3 }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
         >
-          {schedule[selectedDay].map((item, index) => (
+          {schedule[selectedDay].length === 0 ? (
+            <div className="col-span-full flex items-center justify-center py-16">
+              <div className="rounded-xl p-8 border border-zinc-800 bg-zinc-900/50 text-center">
+                <h4 className="text-white font-bold text-2xl mb-2">Închis</h4>
+                <p className="text-gray-400">Nu avem clase programate în această zi</p>
+              </div>
+            </div>
+          ) : (
+            schedule[selectedDay].map((item, index) => (
             <motion.div
               key={`${item.time}-${item.class}`}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -145,7 +153,8 @@ export default function ScheduleSection() {
                 <p className="text-sm opacity-80">Coach: {item.coach}</p>
               )}
             </motion.div>
-          ))}
+            ))
+          )}
         </motion.div>
 
         {/* Legend */}
