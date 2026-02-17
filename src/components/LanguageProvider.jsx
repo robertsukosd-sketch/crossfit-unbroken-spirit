@@ -199,7 +199,7 @@ export const translations = {
     spotsAvailable: "spots",
     coach: "Coach",
     contactTitle: "Let's Talk",
-    contactSubtitle: "Have questions? Want to try a free class? Write to us and we'll contact you as soon as possible.",
+    contactSubtitle: "Do you have any questions? Do you want to try a free class? Write to us and we will contact you as soon as possible.",
     address: "Address",
     phone: "Phone",
     email: "Email",
