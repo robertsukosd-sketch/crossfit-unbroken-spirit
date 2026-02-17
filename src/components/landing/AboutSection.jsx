@@ -6,22 +6,22 @@ const features = [
   {
     icon: Flame,
     title: "Antrenamente Intense",
-    description: "Workout-uri variate zilnic care te provoacă să depășești limitele"
+    description: "Antrenamente variate zilnic, care-ți pun la încercare limitele."
   },
   {
     icon: Users,
     title: "Comunitate Puternică",
-    description: "Alături de oameni motivați care te susțin în fiecare pas"
+    description: "Vino alături de oameni motivați, care te susțin la fiecare pas."
   },
   {
     icon: Target,
     title: "Coaching Profesionist",
-    description: "Antrenori certificați dedicați progresului tău"
+    description: "Antrenori dedicați progresului tău."
   },
   {
     icon: Trophy,
     title: "Rezultate Vizibile",
-    description: "Transformări reale prin muncă și dedicare"
+    description: "Transformări reale și durabile, obținute prin muncă și dedicare."
   }
 ];
 
@@ -83,7 +83,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">{feature.title}</h3>
-                    <p className="text-gray-500 text-sm">{feature.description}</p>
+                    <p className="text-gray-500 text-sm text-justify">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
