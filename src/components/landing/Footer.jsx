@@ -1,8 +1,10 @@
 import React from 'react';
 import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 import Logo from './Logo';
+import { useLanguage } from '../LanguageProvider';
 
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -19,8 +21,7 @@ export default function Footer() {
                </div>
              </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Comunitatea ta de fitness. Antrenamente funcționale de înaltă intensitate 
-              pentru rezultate reale.
+              {t("tagline")}
             </p>
             <div className="flex gap-4">
               <a 
@@ -44,15 +45,15 @@ export default function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold mb-4">Link-uri Rapide</h4>
+            <h4 className="text-white font-bold mb-4">{t("quickLinks")}</h4>
             <ul className="space-y-3">
-              {['Acasă', 'Programe', 'Prețuri', 'Orar', 'Contact'].map((link) => (
-                <li key={link}>
+              {[{label: t("home"), href: "#hero"}, {label: t("programs"), href: "#programs"}, {label: t("pricing"), href: "#pricing"}, {label: t("schedule"), href: "#schedule"}, {label: t("contact"), href: "#contact"}].map((link) => (
+                <li key={link.href}>
                   <a 
-                    href={`#${link.toLowerCase().replace('ă', 'a').replace('ț', 't')}`}
+                    href={link.href}
                     className="text-gray-400 hover:text-blue-400 transition-colors"
                   >
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -61,7 +62,7 @@ export default function Footer() {
           
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold mb-4">Contact</h4>
+            <h4 className="text-white font-bold mb-4">{t("footerContact")}</h4>
             <ul className="space-y-3">
                <li className="flex items-center gap-3 text-gray-400">
                  <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0" />
@@ -86,14 +87,14 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            © {currentYear} CrossFit Unbroken Spirit. Toate drepturile rezervate.
+            © {currentYear} CrossFit Unbroken Spirit. {t("copyright")}
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
-              Termeni și Condiții
+              {t("terms")}
             </a>
             <a href="#" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
-              Politica de Confidențialitate
+              {t("privacy")}
             </a>
           </div>
         </div>

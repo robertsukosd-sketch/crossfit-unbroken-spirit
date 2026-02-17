@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Users } from 'lucide-react';
 import { cn } from "@/lib/utils";
+import { useLanguage } from '../LanguageProvider';
 
-const schedule = {
-  "Luni": [
+const getSchedule = (t) => ({
+  [t("monday")]: [
     { time: "07:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "08:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
@@ -14,7 +15,7 @@ const schedule = {
     { time: "18:30", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "19:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
-  "Marți": [
+  [t("tuesday")]: [
     { time: "07:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "08:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
@@ -24,7 +25,7 @@ const schedule = {
     { time: "18:30", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "19:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
-  "Miercuri": [
+  [t("wednesday")]: [
     { time: "07:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "08:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
@@ -34,7 +35,7 @@ const schedule = {
     { time: "18:30", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "19:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
-  "Joi": [
+  [t("thursday")]: [
     { time: "07:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "08:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
@@ -44,7 +45,7 @@ const schedule = {
     { time: "18:30", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "19:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
-  "Vineri": [
+  [t("friday")]: [
     { time: "07:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "08:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
@@ -54,14 +55,14 @@ const schedule = {
     { time: "18:30", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "19:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
-  "Sâmbătă": [
+  [t("saturday")]: [
     { time: "09:00", class: "CrossFit Kids", coach: "CB", spots: 15 },
     { time: "10:00-11:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
-  "Duminică": []
-};
+  [t("sunday")]: []
+});
 
-const days = ["Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă", "Duminică"];
+const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday"), t("friday"), t("saturday"), t("sunday")];
 
 const classColors = {
   "CrossFit": "bg-blue-500/20 border-blue-500/30 text-blue-400",
@@ -70,7 +71,10 @@ const classColors = {
 };
 
 export default function ScheduleSection() {
-  const [selectedDay, setSelectedDay] = useState("Luni");
+  const { t } = useLanguage();
+  const schedule = getSchedule(t);
+  const days = getDays(t);
+  const [selectedDay, setSelectedDay] = useState(days[0]);
 
   return (
     <section id="schedule" className="py-24 bg-black relative">
@@ -82,11 +86,10 @@ export default function ScheduleSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-            Orarul <span className="text-blue-500">Claselor</span>
+            {t("scheduleTitle")}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Găsește ora potrivită pentru antrenamentul tău.<br />
-            Clase disponibile de dimineața până seara.
+            {t("scheduleSubtitle")}
           </p>
         </motion.div>
 
@@ -119,8 +122,8 @@ export default function ScheduleSection() {
           {schedule[selectedDay].length === 0 ? (
             <div className="col-span-full flex items-center justify-center py-16">
               <div className="rounded-xl p-8 border border-zinc-800 bg-zinc-900/50 text-center">
-                <h4 className="text-white font-bold text-2xl mb-2">Închis</h4>
-                <p className="text-gray-400">Nu avem clase programate în această zi</p>
+                <h4 className="text-white font-bold text-2xl mb-2">{t("closed")}</h4>
+                <p className="text-gray-400">{t("noClasses")}</p>
               </div>
             </div>
           ) : (
@@ -142,12 +145,12 @@ export default function ScheduleSection() {
                 </div>
                 <div className="flex items-center gap-1 text-xs opacity-80">
                   <Users className="w-3 h-3" />
-                  <span>{item.spots} locuri</span>
+                  <span>{item.spots} {t("spotsAvailable")}</span>
                 </div>
               </div>
               <h4 className="text-white font-bold text-xl mb-1">{item.class}</h4>
               {item.coach !== "-" && (
-                <p className="text-sm opacity-80">Coach: {item.coach}</p>
+                <p className="text-sm opacity-80">{t("coach")}: {item.coach}</p>
               )}
             </motion.div>
             ))
