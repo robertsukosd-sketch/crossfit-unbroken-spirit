@@ -116,27 +116,29 @@ export default function Navigation() {
             <div className="lg:hidden flex items-center gap-2">
               <div className="flex gap-1 bg-zinc-900 rounded-full p-1">
                 <button
-                  onClick={() => changeLanguage('ro')}
-                  className={cn(
-                    "px-2 py-1 rounded-full text-xs font-semibold transition-all",
-                    language === 'ro' 
-                      ? "bg-blue-500 text-white" 
-                      : "text-gray-400"
-                  )}
-                >
-                  RO
-                </button>
-                <button
-                  onClick={() => changeLanguage('en')}
-                  className={cn(
-                    "px-2 py-1 rounded-full text-xs font-semibold transition-all",
-                    language === 'en' 
-                      ? "bg-blue-500 text-white" 
-                      : "text-gray-400"
-                  )}
-                >
-                  EN
-                </button>
+                    type="button"
+                    onClick={() => changeLanguage('ro')}
+                    className={cn(
+                      "px-2 py-1 rounded-full text-xs font-semibold transition-all",
+                      language === 'ro' 
+                        ? "bg-blue-500 text-white" 
+                        : "text-gray-400"
+                    )}
+                  >
+                    RO
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => changeLanguage('en')}
+                    className={cn(
+                      "px-2 py-1 rounded-full text-xs font-semibold transition-all",
+                      language === 'en' 
+                        ? "bg-blue-500 text-white" 
+                        : "text-gray-400"
+                    )}
+                  >
+                    EN
+                  </button>
               </div>
               {/* Mobile Menu Button */}
               <button
