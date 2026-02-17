@@ -12,8 +12,8 @@ const pricingCategories = [
     name: "Drop In",
     price: "60",
     period: "ședință",
-    description: "Perfect pentru vizitatori",
-    features: ["1 ședință CrossFit", "Acces echipamente", "Coaching inclus"],
+    description: "Încearcă un antrenament",
+    features: ["Perfect pentru vizitatori", "1 ședință CrossFit", "Coaching inclus"],
     popular: false
   },
   {
