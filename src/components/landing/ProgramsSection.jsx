@@ -2,46 +2,49 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Dumbbell, Heart, Zap, Users, Timer, TrendingUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { useLanguage } from '../LanguageProvider';
 
-const programs = [
+const getPrograms = (t) => [
   {
     icon: Dumbbell,
-    title: "CrossFit",
-    description: "Antrenamente funcționale de înaltă intensitate, care combină gimnastică, haltere și condiționare.",
+    title: t("crossfitTitle"),
+    description: t("crossfitDesc"),
     color: "from-blue-600 to-sky-500",
     image: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=600&q=80"
   },
   {
     icon: TrendingUp,
-    title: "Haltere",
-    description: "Tehnici de halterofilie olimpică, pentru dezvoltare forței și puterii explozive.",
+    title: t("weightlifting"),
+    description: t("weightliftingDesc"),
     color: "from-blue-700 to-blue-500",
     image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=600&q=80"
   },
   {
     icon: Heart,
-    title: "Gimnastică",
-    description: "Dezvoltă forța relativă, stabilitatea, mobilitatea și flexibilitatea pentru performanță.",
+    title: t("gymnastics"),
+    description: t("gymnasticsDesc"),
     color: "from-indigo-500 to-blue-500",
     image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80"
   },
   {
     icon: Users,
-    title: "Personal Training",
-    description: "Antrenament 1-la-1 personalizat pentru a-ți atinge obiectivele in ritmul tău.",
+    title: t("personalTraining"),
+    description: t("personalTrainingDesc"),
     color: "from-violet-500 to-blue-500",
     image: "https://images.unsplash.com/photo-1571388208497-71bedc66e932?w=600&q=80"
   },
   {
     icon: Timer,
-    title: "Open Gym",
-    description: "Acces liber la echipamente pentru antrenamente independente.",
+    title: t("openGym"),
+    description: t("openGymDesc"),
     color: "from-cyan-500 to-sky-400",
     image: "https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?w=600&q=80"
   }
 ];
 
 export default function ProgramsSection() {
+  const { t } = useLanguage();
+  const programs = getPrograms(t);
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -59,8 +62,8 @@ export default function ProgramsSection() {
         >
           <p className="text-2xl md:text-3xl font-bold text-white max-w-3xl mx-auto leading-relaxed">
             <span className="bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
-              Fiecare persoană este unică
-            </span>, iar programele noastre variate sunt adaptabile oricărui nivel de fitness.
+              {t("everyoneUnique")}
+            </span>, {t("everyoneUniqueDesc")}
           </p>
         </motion.div>
         
