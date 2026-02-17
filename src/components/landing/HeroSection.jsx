@@ -2,8 +2,10 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../LanguageProvider';
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -30,20 +32,15 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block px-4 py-2 mb-6 text-sm font-semibold tracking-widest text-sky-400 uppercase bg-sky-500/10 rounded-full border border-sky-500/30">
-            Antrenează-te ca un campion
+            {t("heroTag")}
           </span>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight">
-            FORȚĂ.
-            <span className="block bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
-              COMUNITATE.
-            </span>
-            REZULTATE.
+            {t("heroTitle")}
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Descoperă potențialul tău maxim într-o comunitate dedicată performanței. 
-            CrossFit pentru toate nivelurile de fitness.
+            {t("heroSubtitle")}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -52,7 +49,7 @@ export default function HeroSection() {
               onClick={() => scrollToSection('pricing')}
               className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-10 py-6 text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-all hover:scale-105"
             >
-              Începe Acum
+              {t("startNow")}
             </Button>
             <Button 
               size="lg"
@@ -60,7 +57,7 @@ export default function HeroSection() {
               onClick={() => scrollToSection('programs')}
               className="bg-white text-blue-600 hover:bg-gray-100 border-2 border-white px-10 py-6 text-lg font-bold rounded-full"
             >
-              Descoperă Programele
+              {t("discoverPrograms")}
             </Button>
           </div>
         </motion.div>
