@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center">
                 <Dumbbell className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-black text-white">CROSSFIT</span>
+              <span className="text-2xl font-black text-white">CrossFit Unbroken Spirit</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Comunitatea ta de fitness. Antrenamente funcționale de înaltă intensitate 
@@ -76,7 +76,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            © {currentYear} CrossFit. Toate drepturile rezervate.
+            © {currentYear} CrossFit Unbroken Spirit. Toate drepturile rezervate.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
