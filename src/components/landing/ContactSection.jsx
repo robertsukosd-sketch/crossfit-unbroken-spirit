@@ -221,8 +221,9 @@ export default function ContactSection() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="h-80"
           >
-            <div className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800">
+            <div className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 h-full flex flex-col">
               <h4 className="text-white font-bold mb-4">Urmărește-ne</h4>
               <div className="flex gap-4">
                 <a 
