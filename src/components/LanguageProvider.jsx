@@ -139,7 +139,7 @@ export const translations = {
     aboutUs: "About Us",
     moreThangym: "More than a gym",
     aboutDesc: "We are a community of people passionate about fitness and performance. Regardless of your level, we help you achieve your goals through general CrossFit training, weightlifting and gymnastics, in a motivating atmosphere, with a coach always by your side, ready to guide you.",
-    intenseTraining: "Intense Training",
+    intenseTraining: "High Intensity Training",
     intenseTrainingDesc: "Varied daily workouts that challenge your limits.",
     strongCommunity: "Strong Community",
     strongCommunityDesc: "Join motivated people who support you at every step.",
