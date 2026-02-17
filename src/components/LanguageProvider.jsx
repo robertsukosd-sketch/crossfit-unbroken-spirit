@@ -27,7 +27,7 @@ export const translations = {
     heroTitle: "FORȚĂ. COMUNITATE. REZULTATE.",
     heroSubtitle: "Descoperă potențialul tău maxim într-o comunitate dedicată performanței. CrossFit pentru toate nivelurile de fitness.",
     startNow: "Începe Acum",
-    discoverPrograms: "Descoveră Programele",
+    discoverPrograms: "Descopera Programele",
     aboutUs: "Despre Noi",
     moreThangym: "Mai mult decât un gym",
     aboutDesc: "Suntem o comunitate de oameni pasionați de fitness și performanță. Indiferent de nivelul tău, te ajutăm să-ți atingi obiectivele prin antrenamente generale de CrossFit, haltere și gimnastică, într-o atmosferă motivantă, cu un antrenor mereu lângă tine, gata să te îndrume.",
