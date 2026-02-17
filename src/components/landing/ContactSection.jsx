@@ -132,7 +132,7 @@ export default function ContactSection() {
                   <Button
                   variant="outline"
                   onClick={() => setIsSubmitted(false)}
-                  className="border-zinc-700 text-white hover:bg-zinc-800"
+                  className="border-zinc-700 text-blue-500 hover:bg-zinc-800"
                   >
                   {t("sendAnother")}
                   </Button>
