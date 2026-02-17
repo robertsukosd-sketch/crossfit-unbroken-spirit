@@ -83,7 +83,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">{feature.title}</h3>
-                    <p className="text-gray-500 text-sm text-justify">{feature.description}</p>
+                    <p className="text-gray-500 text-lg text-justify">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
