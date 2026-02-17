@@ -91,7 +91,7 @@ export const translations = {
     spotsAvailable: "locuri",
     coach: "Antrenor",
     contactTitle: "Hai să Vorbim",
-    contactSubtitle: "Ai întrebări? Vrei să încerci o clasă gratuită?\nScrie-ne și te contactăm în cel mai scurt timp.",
+    contactSubtitle: "Ai întrebări? Vrei să încerci o clasă gratuită?\n\nScrie-ne și te contactăm în cel mai scurt timp.",
     address: "Adresă",
     phone: "Telefon",
     email: "Email",
