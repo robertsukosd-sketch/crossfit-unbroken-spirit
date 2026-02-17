@@ -13,7 +13,7 @@ const pricingCategories = [
     price: "60",
     period: "ședință",
     description: "Încearcă un antrenament",
-    features: ["Perfect pentru vizitatori", "1 ședință CrossFit sau 1 ședință Open Gym"],
+    features: ["Perfect pentru vizitatori", "1 ședință CrossFit / Open Gym"],
     popular: false
   },
   {
