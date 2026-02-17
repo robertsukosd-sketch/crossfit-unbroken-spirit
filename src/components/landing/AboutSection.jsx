@@ -65,7 +65,7 @@ export default function AboutSection() {
               {t("aboutUs")}
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6 leading-tight">
-              {t("moreThangym")} <span className="text-blue-500">gym</span>
+              {t("moreThangym")}
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
               {t("aboutDesc")}
