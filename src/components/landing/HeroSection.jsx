@@ -58,7 +58,7 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('programs')}
-              className="border-2 border-white/30 text-white hover:bg-white/10 px-10 py-6 text-lg font-bold rounded-full backdrop-blur-sm"
+              className="bg-white text-blue-600 hover:bg-gray-100 border-2 border-white px-10 py-6 text-lg font-bold rounded-full"
             >
               Descoperă Programele
             </Button>
