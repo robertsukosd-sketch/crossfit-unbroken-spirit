@@ -76,7 +76,7 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex gap-4"
+                  className="flex gap-4 max-w-[280px]"
                 >
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-sky-400" />
