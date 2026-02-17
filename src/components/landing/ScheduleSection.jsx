@@ -71,7 +71,7 @@ const classColors = {
 };
 
 export default function ScheduleSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const schedule = getSchedule(t);
   const days = getDays(t);
   const [selectedDay, setSelectedDay] = useState(days[0]);
@@ -90,7 +90,10 @@ export default function ScheduleSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-            Orarul <span className="text-blue-500">Claselor</span>
+            {language === 'ro' 
+              ? <>Orarul <span className="text-blue-500">Claselor</span></>
+              : <>Class <span className="text-blue-500">Schedule</span></>
+            }
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto whitespace-pre-line">
             {t("scheduleSubtitle")}
