@@ -84,7 +84,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="h-full"
           >
-            <div className="grid sm:grid-cols-2 gap-6 h-full items-start">
+            <div className="grid sm:grid-cols-2 gap-6 h-full auto-rows-fr">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={info.title}
