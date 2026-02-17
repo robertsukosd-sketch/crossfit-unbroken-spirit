@@ -110,13 +110,17 @@ export default function ContactSection() {
               <h4 className="text-white font-bold mb-4">Urmărește-ne</h4>
               <div className="flex gap-4">
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/crossfit.unbroken.spirit" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:scale-110 transition-transform"
                 >
                   <Instagram className="w-6 h-6 text-white" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.facebook.com/profile.php?id=61588232038424" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center hover:scale-110 transition-transform"
                 >
                   <Facebook className="w-6 h-6 text-white" />
