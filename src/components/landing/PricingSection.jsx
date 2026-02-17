@@ -60,7 +60,7 @@ const pricingCategories = [
     price: "360",
     period: "lună",
     description: "Antrenament independent",
-    features: ["Acces nelimitat echipamente", "Program flexibil", "Fără clase de grup"],
+    features: ["Program flexibil", "Fără clase de grup"],
     popular: false
   },
   {
