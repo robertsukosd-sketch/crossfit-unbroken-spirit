@@ -158,7 +158,7 @@ export default function ScheduleSection() {
               )}
             </motion.div>
             ))
-          )}
+          ) : null}
         </motion.div>
 
         {/* Legend */}
