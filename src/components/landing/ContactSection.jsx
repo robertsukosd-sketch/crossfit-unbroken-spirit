@@ -94,7 +94,7 @@ export default function ContactSection() {
                   transition={{ delay: index * 0.1 }}
                   className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-col justify-center"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 self-start">
                     <info.icon className="w-6 h-6 text-sky-400" />
                   </div>
                   <h4 className="text-white font-bold mb-2">{info.title}</h4>
