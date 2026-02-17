@@ -174,12 +174,14 @@ export default function PricingSection() {
               }
                   
                   <div className="text-center mb-6">
-                    <h4 className={`text-lg font-bold mb-2 ${plan.featured ? 'text-white' : 'text-white'}`}>
-                      {plan.name}
-                    </h4>
-                    <p className={`text-sm mb-4 ${plan.featured ? 'text-white/80' : 'text-gray-400'}`}>
-                      {plan.description}
-                    </p>
+                    <div className="h-20 mb-4">
+                      <h4 className={`text-lg font-bold mb-2 ${plan.featured ? 'text-white' : 'text-white'}`}>
+                        {plan.name}
+                      </h4>
+                      <p className={`text-sm ${plan.featured ? 'text-white/80' : 'text-gray-400'}`}>
+                        {plan.description}
+                      </p>
+                    </div>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className={`text-4xl font-black ${plan.featured ? 'text-white' : 'text-white'}`}>
                         {plan.price}
@@ -187,10 +189,10 @@ export default function PricingSection() {
                       <span className={`text-lg ${plan.featured ? 'text-white/80' : 'text-gray-400'}`}>
                         RON
                       </span>
-                      <span className={`text-sm ${plan.featured ? 'text-white/60' : 'text-gray-500'}`}>
-                        / {plan.period}
-                      </span>
                     </div>
+                    <span className={`text-sm ${plan.featured ? 'text-white/60' : 'text-gray-500'}`}>
+                      / {plan.period}
+                    </span>
                   </div>
                   
                   <ul className="space-y-3 mb-6 flex-grow">
