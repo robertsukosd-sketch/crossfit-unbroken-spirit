@@ -65,9 +65,7 @@ export default function AboutSection() {
               Mai mult decât un <span className="text-blue-500">gym</span>
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              Suntem o comunitate de oameni pasionați de fitness și performanță. 
-              Indiferent de nivelul tău, te ajutăm să-ți atingi obiectivele prin 
-              antrenamente funcționale, coaching personalizat și o atmosferă motivantă.
+              Suntem o comunitate de oameni pasionați de fitness și performanță. Indiferent de nivelul tău, te ajutăm să-ți atingi obiectivele prin antrenamente generale de CrossFit, haltere și gimnastică, într-o atmosferă motivantă, cu un antrenor mereu lângă tine, gata să te îndrume.
             </p>
             
             <div className="grid sm:grid-cols-2 gap-6">
