@@ -71,7 +71,7 @@ export default function ProgramsSection() {
             Programele <span className="text-blue-500">Noastre</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Alegem varietatea pentru că fiecare persoană este unică. 
+            Alegem varietatea pentru că fiecare persoană este unică.<br />
             Găsește programul potrivit pentru tine.
           </p>
         </motion.div>
