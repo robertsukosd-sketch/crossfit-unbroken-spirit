@@ -13,7 +13,7 @@ const pricingCategories = [
     price: "60",
     period: "ședință",
     description: "Încearcă un antrenament",
-    features: ["Perfect pentru vizitatori", "1 ședință CrossFit", "Coaching inclus"],
+    features: ["Perfect pentru vizitatori", "1 ședință CrossFit", "1 ședință Open Gym"],
     popular: false
   },
   {
@@ -21,7 +21,7 @@ const pricingCategories = [
     price: "200",
     period: "săptămână",
     description: "Încearcă o săptămână completă",
-    features: ["Acces nelimitat 7 zile", "Toate clasele incluse", "Coaching inclus"],
+    features: ["Acces nelimitat 7 zile", "Toate clasele incluse"],
     popular: false
   },
   {
@@ -29,7 +29,7 @@ const pricingCategories = [
     price: "320",
     period: "lună",
     description: "2 antrenamente pe săptămână",
-    features: ["8 ședințe pe lună", "Flexibilitate program", "Coaching inclus"],
+    features: ["8 ședințe pe lună", "Flexibilitate program"],
     popular: false
   },
   {
@@ -37,7 +37,7 @@ const pricingCategories = [
     price: "400",
     period: "lună",
     description: "3 antrenamente pe săptămână",
-    features: ["12 ședințe pe lună", "Flexibilitate program", "Coaching inclus"],
+    features: ["12 ședințe pe lună", "Flexibilitate program"],
     popular: true
   },
   {
