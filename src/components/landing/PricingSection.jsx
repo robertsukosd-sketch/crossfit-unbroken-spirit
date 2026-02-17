@@ -155,7 +155,7 @@ export default function PricingSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className={`relative rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] ${
+                  className={`relative rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] flex flex-col h-full ${
                     plan.featured 
                       ? 'bg-gradient-to-br from-blue-600 to-sky-500 shadow-2xl shadow-blue-500/20' 
                       : 'bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/30'
@@ -191,7 +191,7 @@ export default function PricingSection() {
                     </span>
                   </div>
                   
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-3 mb-6 flex-grow">
                     {plan.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-start gap-3">
                         <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
