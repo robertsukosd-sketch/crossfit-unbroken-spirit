@@ -62,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-3">
                <li className="flex items-center gap-3 text-gray-400">
                  <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                 <span>Splaiul Unirii 257-259, București</span>
+                 <span>Splaiul Unirii 257-259, Sector 3, București</span>
                </li>
                <li className="flex items-center gap-3 text-gray-400">
                  <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
