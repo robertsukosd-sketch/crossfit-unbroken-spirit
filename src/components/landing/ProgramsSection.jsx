@@ -12,6 +12,20 @@ const programs = [
     image: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=600&q=80"
   },
   {
+    icon: TrendingUp,
+    title: "Haltere",
+    description: "Tehnici de halterofilie olimpică, pentru dezvoltare forței și puterii explozive.",
+    color: "from-blue-700 to-blue-500",
+    image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=600&q=80"
+  },
+  {
+    icon: Heart,
+    title: "Gimnastică",
+    description: "Dezvoltă forța relativă, stabilitatea, mobilitatea și flexibilitatea pentru performanță.",
+    color: "from-indigo-500 to-blue-500",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80"
+  },
+  {
     icon: Users,
     title: "Personal Training",
     description: "Antrenament 1-la-1 personalizat pentru a-ți atinge obiectivele in ritmul tău.",
@@ -50,7 +64,7 @@ export default function ProgramsSection() {
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
           {programs.map((program, index) => (
             <motion.div
               key={program.title}
@@ -58,7 +72,9 @@ export default function ProgramsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-800 hover:border-blue-500/50 transition-all duration-500"
+              className={`group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-800 hover:border-blue-500/50 transition-all duration-500 lg:col-span-2 ${
+                index === 3 ? 'lg:col-start-2' : ''
+              }`}
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
