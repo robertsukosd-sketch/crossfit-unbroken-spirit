@@ -99,8 +99,8 @@ const getPricingCategories = (t) => [
 
 
 export default function PricingSection() {
-  const { t } = useLanguage();
-  const pricingCategories = getPricingCategories(t);
+  const { t, language } = useLanguage();
+  const pricingCategories = getPricingCategories(t, language);
   
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
