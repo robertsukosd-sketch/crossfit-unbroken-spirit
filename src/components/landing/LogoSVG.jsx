@@ -9,31 +9,39 @@ export default function LogoSVG({ size = 40 }) {
       className="flex-shrink-0"
     >
       <defs>
-        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: '#0ea5e9', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: '#2563eb', stopOpacity: 1 }} />
+        <linearGradient id="spiralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#0ea5e9" />
+          <stop offset="100%" stopColor="#2563eb" />
         </linearGradient>
       </defs>
 
-      {/* Background circle */}
-      <circle cx="20" cy="20" r="19" fill="none" stroke="url(#logoGradient)" strokeWidth="1.5" opacity="0.5" />
+      {/* Infinite spiral/circle representing unbroken */}
+      <g strokeLinecap="round" strokeLinejoin="round">
+        {/* Outer spiral arc - left side */}
+        <path
+          d="M 8 20 Q 8 10 18 10 Q 28 10 28 20"
+          fill="none"
+          stroke="url(#spiralGrad)"
+          strokeWidth="2.2"
+        />
+        
+        {/* Inner connecting arc - right side */}
+        <path
+          d="M 28 20 Q 28 30 18 30 Q 8 30 8 20"
+          fill="none"
+          stroke="url(#spiralGrad)"
+          strokeWidth="2.2"
+          opacity="0.7"
+        />
 
-      {/* Main shape - stylized "U" for Unbroken */}
-      <path
-        d="M 10 8 L 10 22 C 10 28 14 32 20 32 C 26 32 30 28 30 22 L 30 8"
-        fill="none"
-        stroke="url(#logoGradient)"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-
-      {/* Top accent bars */}
-      <line x1="12" y1="8" x2="16" y2="8" stroke="#0ea5e9" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="24" y1="8" x2="28" y2="8" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
-
-      {/* Center accent */}
-      <circle cx="20" cy="20" r="3" fill="url(#logoGradient)" />
+        {/* Center geometric accent - barbell inspired */}
+        <circle cx="20" cy="20" r="3.5" fill="#0ea5e9" />
+        <rect x="14" y="19" width="12" height="2" fill="#2563eb" opacity="0.8" />
+        
+        {/* Small circles on sides - weight plates */}
+        <circle cx="12" cy="20" r="2" fill="#0ea5e9" opacity="0.6" />
+        <circle cx="28" cy="20" r="2" fill="#2563eb" opacity="0.6" />
+      </g>
     </svg>
   );
 }
