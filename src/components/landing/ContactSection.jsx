@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Program",
-    details: ["L-V: 06:00 - 21:00", "S: 09:00 - 14:00", "D: 10:00 - 13:00"]
+    details: ["L-V: 07:00 - 19:30", "S: 09:00 - 11:30", "D: Închis"]
   }
 ];
 
