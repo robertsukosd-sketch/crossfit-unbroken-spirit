@@ -49,14 +49,6 @@ export default function AboutSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
-            
-            {/* Stats overlay */}
-            <div className="absolute -bottom-8 -right-8 bg-gradient-to-br from-blue-600 to-sky-500 rounded-2xl p-6 shadow-2xl">
-              <div className="text-center">
-                <span className="block text-4xl font-black text-white">500+</span>
-                <span className="text-white/80 text-sm font-medium">Membri Activi</span>
-              </div>
-            </div>
           </motion.div>
           
           {/* Right side - Content */}
