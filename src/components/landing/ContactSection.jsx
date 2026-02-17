@@ -224,9 +224,9 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="h-40"
           >
-            <div className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 h-full flex flex-col">
+            <div className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 h-full flex flex-col justify-center items-center text-center">
               <h4 className="text-white font-bold mb-4">Urmărește-ne</h4>
-              <div className="flex gap-4">
+              <div className="flex gap-4 justify-center">
                 <a 
                   href="https://www.instagram.com/crossfit.unbroken.spirit" 
                   target="_blank"
