@@ -129,7 +129,7 @@ export const translations = {
     pricing: "Pricing",
     schedule: "Schedule",
     contact: "Contact",
-    freeTrial: "Free Session",
+    freeTrial: "Book a Free Session",
     heroTag: "Train like a champion",
     heroTitle: "STRENGTH. COMMUNITY. RESULTS.",
     heroSubtitle: "Discover your maximum potential in a community dedicated to performance. CrossFit for all fitness levels.",
