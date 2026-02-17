@@ -1,4 +1,5 @@
 import React from 'react';
+import LanguageProvider from '@/components/LanguageProvider';
 import Navigation from '@/components/landing/Navigation';
 import HeroSection from '@/components/landing/HeroSection';
 import AboutSection from '@/components/landing/AboutSection';
@@ -10,17 +11,19 @@ import Footer from '@/components/landing/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black">
-      <Navigation />
-      <div id="hero">
-        <HeroSection />
+    <LanguageProvider>
+      <div className="min-h-screen bg-black">
+        <Navigation />
+        <div id="hero">
+          <HeroSection />
+        </div>
+        <AboutSection />
+        <ProgramsSection />
+        <PricingSection />
+        <ScheduleSection />
+        <ContactSection />
+        <Footer />
       </div>
-      <AboutSection />
-      <ProgramsSection />
-      <PricingSection />
-      <ScheduleSection />
-      <ContactSection />
-      <Footer />
-    </div>
+    </LanguageProvider>
   );
 }
