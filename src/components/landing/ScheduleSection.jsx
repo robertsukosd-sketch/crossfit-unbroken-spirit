@@ -59,9 +59,7 @@ const schedule = {
     { time: "10:00", class: "Open Gym", coach: "-", spots: 20 },
     { time: "11:00", class: "CrossFit", coach: "Maria", spots: 15 },
   ],
-  "Duminică": [
-    { time: "10:00", class: "Open Gym", coach: "-", spots: 20 },
-  ]
+  "Duminică": []
 };
 
 const days = ["Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă", "Duminică"];
