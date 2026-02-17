@@ -187,10 +187,10 @@ export default function PricingSection() {
                       <span className={`text-lg ${plan.featured ? 'text-white/80' : 'text-gray-400'}`}>
                         RON
                       </span>
-                      <span className={`text-sm ${plan.featured ? 'text-white/60' : 'text-gray-500'}`}>
-                        / {plan.period}
-                      </span>
                     </div>
+                    <span className={`text-sm ${plan.featured ? 'text-white/60' : 'text-gray-500'}`}>
+                      / {plan.period}
+                    </span>
                   </div>
                   
                   <ul className="space-y-3 mb-6 flex-grow">
