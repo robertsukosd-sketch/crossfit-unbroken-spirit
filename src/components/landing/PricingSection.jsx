@@ -119,8 +119,9 @@ export default function PricingSection() {
             Alege Planul <span className="text-blue-500">Potrivit</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Investește în sănătatea ta. Fiecare plan include coaching profesionist 
-            și acces la comunitatea noastră.
+            Investește în sănătatea ta.
+            <br />
+            Fiecare plan include coaching profesionist și acces la comunitatea noastră.
           </p>
         </motion.div>
         
