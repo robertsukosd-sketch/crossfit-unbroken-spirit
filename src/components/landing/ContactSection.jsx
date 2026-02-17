@@ -11,7 +11,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresă",
-    details: ["Strada Fitness Nr. 10", "București, Sector 1"]
+    details: ["Splaiul Unirii 257-259", "București, Sector 3"]
   },
   {
     icon: Phone,
