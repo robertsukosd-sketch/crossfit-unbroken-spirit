@@ -76,7 +76,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection('#contact')}
                 className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-full px-6"
               >
-                Probă Gratuită
+                O Ședință Gratuită
               </Button>
             </div>
 
@@ -124,7 +124,7 @@ export default function Navigation() {
                   onClick={() => scrollToSection('#contact')}
                   className="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold rounded-full py-6 text-lg"
                 >
-                  Probă Gratuită
+                  O Ședință Gratuită
                 </Button>
               </motion.div>
             </div>

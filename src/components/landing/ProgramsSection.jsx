@@ -126,7 +126,7 @@ export default function ProgramsSection() {
             onClick={() => scrollToSection('contact')}
             className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-10 py-6 text-lg font-bold rounded-full"
           >
-            Începe O Probă Gratuită
+            Începe O Ședință Gratuită
           </Button>
         </motion.div>
       </div>
