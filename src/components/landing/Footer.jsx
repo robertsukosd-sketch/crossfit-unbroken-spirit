@@ -60,19 +60,23 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4">Contact</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-gray-400">
-                <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                <span>Strada Fitness Nr. 10, București</span>
-              </li>
-              <li className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                <span>+40 722 123 456</span>
-              </li>
-              <li className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                <span>contact@crossfit.ro</span>
-              </li>
-            </ul>
+               <li className="flex items-center gap-3 text-gray-400">
+                 <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                 <span>Splaiul Unirii 257-259, București</span>
+               </li>
+               <li className="flex items-center gap-3 text-gray-400">
+                 <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                 <span>+40 748 838 767</span>
+               </li>
+               <li className="flex items-center gap-3 text-gray-400">
+                 <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                 <span>+40 740 269 769</span>
+               </li>
+               <li className="flex items-center gap-3 text-gray-400">
+                 <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                 <span>contact@crossfit.ro</span>
+               </li>
+             </ul>
           </div>
         </div>
         
