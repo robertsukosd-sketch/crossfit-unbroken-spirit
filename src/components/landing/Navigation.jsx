@@ -80,27 +80,29 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center gap-4">
               <div className="flex gap-1 bg-zinc-900 rounded-full p-1">
                 <button
-                  onClick={() => changeLanguage('ro')}
-                  className={cn(
-                    "px-3 py-1 rounded-full text-sm font-semibold transition-all",
-                    language === 'ro' 
-                      ? "bg-blue-500 text-white" 
-                      : "text-gray-400 hover:text-white"
-                  )}
-                >
-                  RO
-                </button>
-                <button
-                  onClick={() => changeLanguage('en')}
-                  className={cn(
-                    "px-3 py-1 rounded-full text-sm font-semibold transition-all",
-                    language === 'en' 
-                      ? "bg-blue-500 text-white" 
-                      : "text-gray-400 hover:text-white"
-                  )}
-                >
-                  EN
-                </button>
+                    type="button"
+                    onClick={() => changeLanguage('ro')}
+                    className={cn(
+                      "px-3 py-1 rounded-full text-sm font-semibold transition-all",
+                      language === 'ro' 
+                        ? "bg-blue-500 text-white" 
+                        : "text-gray-400 hover:text-white"
+                    )}
+                  >
+                    RO
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => changeLanguage('en')}
+                    className={cn(
+                      "px-3 py-1 rounded-full text-sm font-semibold transition-all",
+                      language === 'en' 
+                        ? "bg-blue-500 text-white" 
+                        : "text-gray-400 hover:text-white"
+                    )}
+                  >
+                    EN
+                  </button>
               </div>
               <Button
                 onClick={() => scrollToSection('#contact')}
