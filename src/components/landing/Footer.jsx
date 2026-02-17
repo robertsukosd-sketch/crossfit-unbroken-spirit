@@ -12,9 +12,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <Logo size={48} />
-              <span className="text-2xl font-black text-white">CrossFit Unbroken Spirit</span>
-            </div>
+               <Logo size={48} />
+               <div className="text-center">
+                 <div className="text-xl font-black text-white">CrossFit</div>
+                 <div className="text-xl font-black text-white">Unbroken Spirit</div>
+               </div>
+             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Comunitatea ta de fitness. Antrenamente funcționale de înaltă intensitate 
               pentru rezultate reale.
