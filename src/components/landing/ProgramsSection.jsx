@@ -7,35 +7,28 @@ const programs = [
   {
     icon: Dumbbell,
     title: "CrossFit",
-    description: "Antrenamente funcționale de înaltă intensitate care combină gimnastică, halterofilie și condiționare metabolică.",
+    description: "Antrenamente funcționale de înaltă intensitate, care combină gimnastică, haltere și condiționare.",
     color: "from-blue-600 to-sky-500",
     image: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=600&q=80"
   },
   {
-    icon: Zap,
-    title: "HIIT",
-    description: "Sesiuni intense de cardio și forță pentru arderea maximă de calorii și îmbunătățirea condiției fizice.",
-    color: "from-sky-500 to-cyan-400",
-    image: "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?w=600&q=80"
-  },
-  {
     icon: TrendingUp,
-    title: "Weightlifting",
-    description: "Tehnici de halterofilie olimpică pentru dezvoltarea forței și puterii explosive.",
+    title: "Haltere",
+    description: "Tehnici de halterofilie olimpică, pentru dezvoltare forței și puterii explozive.",
     color: "from-blue-700 to-blue-500",
     image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=600&q=80"
   },
   {
     icon: Heart,
-    title: "Gymnastics",
-    description: "Dezvoltă controlul corporal, flexibilitatea și skill-uri de gimnastică pentru performanță.",
+    title: "Gimnastică",
+    description: "Dezvoltă forța relativă, stabilitatea, mobilitatea și flexibilitatea pentru performanță.",
     color: "from-indigo-500 to-blue-500",
     image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80"
   },
   {
     icon: Users,
     title: "Personal Training",
-    description: "Antrenament 1-la-1 personalizat pentru a-ți atinge obiectivele mai rapid.",
+    description: "Antrenament 1-la-1 personalizat pentru a-ți atinge obiectivele in ritmul tău.",
     color: "from-violet-500 to-blue-500",
     image: "https://images.unsplash.com/photo-1571388208497-71bedc66e932?w=600&q=80"
   },
