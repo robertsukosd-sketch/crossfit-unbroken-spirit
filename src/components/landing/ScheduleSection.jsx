@@ -81,10 +81,7 @@ export default function ScheduleSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
-            Program
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
             Orarul <span className="text-blue-500">Claselor</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
