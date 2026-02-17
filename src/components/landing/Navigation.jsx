@@ -53,8 +53,8 @@ export default function Navigation() {
             >
               <Logo size={40} />
                <div className="hidden sm:block text-center leading-tight">
-                 <div className="text-sm font-black text-white">CrossFit</div>
-                 <div className="text-sm font-black text-white">Unbroken Spirit</div>
+                 <div className="text-base font-black text-white">CrossFit</div>
+                 <div className="text-base font-black text-white">Unbroken Spirit</div>
                </div>
             </a>
 
