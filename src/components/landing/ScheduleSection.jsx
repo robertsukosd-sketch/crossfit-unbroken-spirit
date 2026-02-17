@@ -5,11 +5,14 @@ import { cn } from "@/lib/utils";
 
 const schedule = {
   "Luni": [
-    { time: "07:00", class: "CrossFit", coach: "Alex", spots: 12 },
-    { time: "09:00", class: "Open Gym", coach: "-", spots: 20 },
-    { time: "12:00", class: "CrossFit", coach: "Maria", spots: 12 },
-    { time: "17:00", class: "CrossFit", coach: "Alex", spots: 12 },
-    { time: "18:00", class: "CrossFit", coach: "Maria", spots: 12 },
+    { time: "07:00", class: "CrossFit", coach: "Alex", spots: 15 },
+    { time: "08:00", class: "CrossFit", coach: "Maria", spots: 15 },
+    { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
+    { time: "12:30", class: "Open Gym", coach: "-", spots: 3 },
+    { time: "12:30", class: "CrossFit", coach: "Alex", spots: 15 },
+    { time: "17:30", class: "CrossFit", coach: "Maria", spots: 15 },
+    { time: "18:30", class: "CrossFit", coach: "Alex", spots: 15 },
+    { time: "19:30", class: "CrossFit", coach: "Maria", spots: 15 },
   ],
   "Marți": [
     { time: "07:00", class: "CrossFit", coach: "Maria", spots: 12 },
