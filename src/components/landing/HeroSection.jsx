@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../LanguageProvider';
 
 export default function HeroSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
