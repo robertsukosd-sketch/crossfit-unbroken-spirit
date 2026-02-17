@@ -83,7 +83,7 @@ export default function ScheduleSection() {
             Orarul <span className="text-blue-500">Claselor</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Găsește ora potrivită pentru antrenamentul tău. 
+            Găsește ora potrivită pentru antrenamentul tău.<br />
             Clase disponibile de dimineața până seara.
           </p>
         </motion.div>
