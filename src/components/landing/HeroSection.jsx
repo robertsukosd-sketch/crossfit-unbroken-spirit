@@ -36,7 +36,7 @@ export default function HeroSection() {
           </span>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight">
-            FORȚĂ. <span className="text-sky-400">COMUNITATE</span>. REZULTATE.
+            FORȚĂ. <span className="text-blue-500">COMUNITATE</span>. REZULTATE.
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
