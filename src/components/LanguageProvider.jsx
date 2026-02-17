@@ -89,7 +89,7 @@ export const translations = {
     closed: "Închis",
     noClasses: "Nu avem clase programate în această zi",
     spotsAvailable: "locuri",
-    coach: "Coach",
+    coach: "Antrenor",
     contactTitle: "Hai să Vorbim",
     contactSubtitle: "Ai întrebări? Vrei să încerci o clasă gratuită?\nScrie-ne și te contactăm în cel mai scurt timp.",
     address: "Adresă",
