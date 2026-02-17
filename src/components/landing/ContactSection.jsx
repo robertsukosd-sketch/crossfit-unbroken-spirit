@@ -71,7 +71,7 @@ export default function ContactSection() {
             Hai să <span className="text-blue-500">Vorbim</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ai întrebări? Vrei să încerci o clasă gratuită? 
+            Ai întrebări? Vrei să încerci o clasă gratuită?<br />
             Scrie-ne și te contactăm în cel mai scurt timp.
           </p>
         </motion.div>
