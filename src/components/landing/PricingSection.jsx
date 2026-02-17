@@ -4,49 +4,49 @@ import { Check, Sparkles, Dumbbell, Apple, User } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
 
-const getPricingCategories = (t, language) => [
+const getPricingCategories = (t) => [
 {
-  title: language === 'ro' ? "Abonamente CrossFit" : "CrossFit Memberships",
+  title: "Abonamente CrossFit",
   icon: Dumbbell,
   plans: [
   {
     name: "Drop In",
     price: "60",
-    period: language === 'ro' ? "ședință" : "class",
-    description: t("dropInDesc"),
-    features: language === 'ro' ? ["Perfect pentru vizitatori", "1 ședință CrossFit / Open Gym"] : [t("dropInPerfect"), t("dropInFeature")],
+    period: "ședință",
+    description: "Încearcă un antrenament",
+    features: ["Perfect pentru vizitatori", "1 ședință CrossFit / Open Gym"],
     popular: false
   },
   {
-    name: t("dropInWeek"),
+    name: "Drop In 1 Week",
     price: "200",
-    period: language === 'ro' ? "săptămână" : "week",
-    description: t("dropInWeekDesc"),
-    features: language === 'ro' ? ["Acces nelimitat 7 zile", "Toate clasele incluse"] : [t("dropInWeekFeature1"), t("dropInWeekFeature2")],
+    period: "săptămână",
+    description: "Încearcă o săptămână completă",
+    features: ["Acces nelimitat 7 zile", "Toate clasele incluse"],
     popular: false
   },
   {
-    name: t("eightSessions"),
+    name: "8 Ședințe",
     price: "320",
-    period: language === 'ro' ? "lună" : "month",
-    description: t("eightSessionsDesc"),
-    features: language === 'ro' ? ["8 ședințe pe lună", "Flexibilitate program"] : [t("eightSessionsFeature1"), t("eightSessionsFeature2")],
+    period: "lună",
+    description: "2 antrenamente pe săptămână",
+    features: ["8 ședințe pe lună", "Flexibilitate program"],
     popular: false
   },
   {
-    name: t("twelveSessions"),
+    name: "12 Ședințe",
     price: "400",
-    period: language === 'ro' ? "lună" : "month",
-    description: t("twelveSessionsDesc"),
-    features: language === 'ro' ? ["12 ședințe pe lună", "Flexibilitate program"] : [t("twelveSessionsFeature1"), t("twelveSessionsFeature2")],
+    period: "lună",
+    description: "3 antrenamente pe săptămână",
+    features: ["12 ședințe pe lună", "Flexibilitate program"],
     popular: true
   },
   {
-    name: t("unlimited"),
+    name: "Nelimitat",
     price: "500",
-    period: language === 'ro' ? "lună" : "month",
-    description: t("unlimitedDesc"),
-    features: language === 'ro' ? ["Ședințe nelimitate", "Toate clasele incluse", "Open Gym inclus", "Prioritate înscriere"] : [t("unlimitedFeature1"), t("unlimitedFeature2"), t("unlimitedFeature3"), t("unlimitedFeature4")],
+    period: "lună",
+    description: "Acces complet fără restricții",
+    features: ["Ședințe nelimitate", "Toate clasele incluse", "Open Gym inclus", "Prioritate înscriere"],
     popular: true,
     featured: true
   }]
@@ -99,8 +99,8 @@ const getPricingCategories = (t, language) => [
 
 
 export default function PricingSection() {
-  const { t, language } = useLanguage();
-  const pricingCategories = getPricingCategories(t, language);
+  const { t } = useLanguage();
+  const pricingCategories = getPricingCategories(t);
   
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
