@@ -12,8 +12,8 @@ const pricingCategories = [
     name: "Drop In",
     price: "60",
     period: "ședință",
-    description: "1 ședință CrossFit sau 1 ședință OpenGym",
-    features: ["1 ședință CrossFit", "Coaching inclus"],
+    description: "Perfect pentru vizitatori",
+    features: ["1 ședință CrossFit", "Acces echipamente", "Coaching inclus"],
     popular: false
   },
   {
