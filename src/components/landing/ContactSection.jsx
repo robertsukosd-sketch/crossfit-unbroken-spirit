@@ -11,7 +11,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresă",
-    details: ["Splaiul Unirii 257-259", "București, Sector 3"]
+    details: ["Splaiul Unirii 257-259", "Sector 3, București"]
   },
   {
     icon: Phone,
