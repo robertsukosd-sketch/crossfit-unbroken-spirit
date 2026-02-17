@@ -78,7 +78,7 @@ export const translations = {
     startNowBtn: "Începe Acum",
     ron: "RON",
     scheduleTitle: "Orarul Claselor",
-    scheduleSubtitle: "Găsește ora potrivită pentru antrenamentul tău.\nClase disponibile de dimineața până seara.",
+    scheduleSubtitle: "Găsește ora potrivită pentru antrenamentul tău.\n\nClase disponibile de dimineața până seara.",
     monday: "Luni",
     tuesday: "Marți",
     wednesday: "Miercuri",
