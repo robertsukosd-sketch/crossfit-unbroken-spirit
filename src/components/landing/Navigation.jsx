@@ -4,18 +4,21 @@ import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Logo from './Logo';
+import { useLanguage } from '../LanguageProvider';
 
-const navLinks = [
-  { name: "Acasă", href: "#hero" },
-  { name: "Programe", href: "#programs" },
-  { name: "Prețuri", href: "#pricing" },
-  { name: "Orar", href: "#schedule" },
-  { name: "Contact", href: "#contact" },
+const getNavLinks = (t) => [
+  { name: t("home"), href: "#hero" },
+  { name: t("programs"), href: "#programs" },
+  { name: t("pricing"), href: "#pricing" },
+  { name: t("schedule"), href: "#schedule" },
+  { name: t("contact"), href: "#contact" },
 ];
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, changeLanguage, t } = useLanguage();
+  const navLinks = getNavLinks(t);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,23 +76,74 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block">
+            {/* Language & CTA Button */}
+            <div className="hidden lg:flex items-center gap-4">
+              <div className="flex gap-1 bg-zinc-900 rounded-full p-1">
+                <button
+                  onClick={() => changeLanguage('ro')}
+                  className={cn(
+                    "px-3 py-1 rounded-full text-sm font-semibold transition-all",
+                    language === 'ro' 
+                      ? "bg-blue-500 text-white" 
+                      : "text-gray-400 hover:text-white"
+                  )}
+                >
+                  RO
+                </button>
+                <button
+                  onClick={() => changeLanguage('en')}
+                  className={cn(
+                    "px-3 py-1 rounded-full text-sm font-semibold transition-all",
+                    language === 'en' 
+                      ? "bg-blue-500 text-white" 
+                      : "text-gray-400 hover:text-white"
+                  )}
+                >
+                  EN
+                </button>
+              </div>
               <Button
                 onClick={() => scrollToSection('#contact')}
                 className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-full px-6"
               >
-                O Ședință Gratuită
+                {t("freeTrial")}
               </Button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-white"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Language Toggle Mobile */}
+            <div className="lg:hidden flex items-center gap-2">
+              <div className="flex gap-1 bg-zinc-900 rounded-full p-1">
+                <button
+                  onClick={() => changeLanguage('ro')}
+                  className={cn(
+                    "px-2 py-1 rounded-full text-xs font-semibold transition-all",
+                    language === 'ro' 
+                      ? "bg-blue-500 text-white" 
+                      : "text-gray-400"
+                  )}
+                >
+                  RO
+                </button>
+                <button
+                  onClick={() => changeLanguage('en')}
+                  className={cn(
+                    "px-2 py-1 rounded-full text-xs font-semibold transition-all",
+                    language === 'en' 
+                      ? "bg-blue-500 text-white" 
+                      : "text-gray-400"
+                  )}
+                >
+                  EN
+                </button>
+              </div>
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 text-white"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </motion.nav>
@@ -127,7 +181,7 @@ export default function Navigation() {
                   onClick={() => scrollToSection('#contact')}
                   className="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold rounded-full py-6 text-lg"
                 >
-                  O Ședință Gratuită
+                  {t("freeTrial")}
                 </Button>
               </motion.div>
             </div>
