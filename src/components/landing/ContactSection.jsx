@@ -222,7 +222,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="h-80"
+            className="h-40"
           >
             <div className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 h-full flex flex-col">
               <h4 className="text-white font-bold mb-4">Urmărește-ne</h4>
@@ -231,17 +231,17 @@ export default function ContactSection() {
                   href="https://www.instagram.com/crossfit.unbroken.spirit" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:scale-110 transition-transform"
+                  className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:scale-110 transition-transform"
                 >
-                  <Instagram className="w-6 h-6 text-white" />
+                  <Instagram className="w-8 h-8 text-white" />
                 </a>
                 <a 
                   href="https://www.facebook.com/profile.php?id=61588232038424" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center hover:scale-110 transition-transform"
+                  className="w-16 h-16 rounded-xl bg-blue-600 flex items-center justify-center hover:scale-110 transition-transform"
                 >
-                  <Facebook className="w-6 h-6 text-white" />
+                  <Facebook className="w-8 h-8 text-white" />
                 </a>
               </div>
             </div>
