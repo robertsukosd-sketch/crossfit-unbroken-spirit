@@ -233,14 +233,12 @@ export const translations = {
 };
 
 export default function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState('ro');
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('appLanguage') || 'ro';
-    setLanguage(savedLanguage);
-    setIsLoaded(true);
-  }, []);
+  const [language, setLanguage] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('appLanguage') || 'ro';
+    }
+    return 'ro';
+  });
 
   const changeLanguage = (lang) => {
     localStorage.setItem('appLanguage', lang);
@@ -250,14 +248,6 @@ export default function LanguageProvider({ children }) {
   const t = (key) => {
     return translations[language][key] || translations['ro'][key] || key;
   };
-
-  if (!isLoaded) {
-    return (
-      <LanguageContext.Provider value={{ language: 'ro', changeLanguage, t }}>
-        {children}
-      </LanguageContext.Provider>
-    );
-  }
 
   return (
     <LanguageContext.Provider value={{ language, changeLanguage, t }}>
