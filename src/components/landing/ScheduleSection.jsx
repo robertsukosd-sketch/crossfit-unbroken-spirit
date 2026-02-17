@@ -5,58 +5,58 @@ import { cn } from "@/lib/utils";
 
 const schedule = {
   "Luni": [
-    { time: "07:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "08:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "07:00", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "08:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
     { time: "12:30", class: "Open Gym", coach: "-", spots: 3 },
-    { time: "12:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "17:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "18:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "19:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "12:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "17:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "18:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "19:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
   "Marți": [
-    { time: "07:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "08:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "07:00", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "08:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
     { time: "12:30", class: "Open Gym", coach: "-", spots: 3 },
-    { time: "12:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "17:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "18:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "19:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "12:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "17:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "18:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "19:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
   "Miercuri": [
-    { time: "07:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "08:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "07:00", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "08:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
     { time: "12:30", class: "Open Gym", coach: "-", spots: 3 },
-    { time: "12:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "17:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "18:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "19:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "12:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "17:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "18:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "19:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
   "Joi": [
-    { time: "07:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "08:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "07:00", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "08:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
     { time: "12:30", class: "Open Gym", coach: "-", spots: 3 },
-    { time: "12:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "17:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "18:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "19:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "12:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "17:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "18:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "19:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
   "Vineri": [
-    { time: "07:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "08:00", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "07:00", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "08:00", class: "CrossFit", coach: "CB", spots: 15 },
     { time: "09:00", class: "Open Gym", coach: "-", spots: 3 },
     { time: "12:30", class: "Open Gym", coach: "-", spots: 3 },
-    { time: "12:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "17:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "18:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
-    { time: "19:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "12:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "17:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "18:30", class: "CrossFit", coach: "CB", spots: 15 },
+    { time: "19:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
   "Sâmbătă": [
-    { time: "09:00", class: "CrossFit Kids", coach: "Dmytro", spots: 15 },
-    { time: "10:00-11:30", class: "CrossFit", coach: "Dmytro", spots: 15 },
+    { time: "09:00", class: "CrossFit Kids", coach: "CB", spots: 15 },
+    { time: "10:00-11:30", class: "CrossFit", coach: "CB", spots: 15 },
   ],
   "Duminică": []
 };
@@ -145,7 +145,10 @@ export default function ScheduleSection() {
                   <span>{item.spots} locuri</span>
                 </div>
               </div>
-              <h4 className="text-white font-bold text-xl">{item.class}</h4>
+              <h4 className="text-white font-bold text-xl mb-1">{item.class}</h4>
+              {item.coach !== "-" && (
+                <p className="text-sm opacity-80">Coach: {item.coach}</p>
+              )}
             </motion.div>
             ))
           )}
