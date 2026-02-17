@@ -52,7 +52,10 @@ export default function Navigation() {
               className="flex items-center gap-3"
             >
               <Logo size={40} />
-              <span className="text-xl font-black text-white hidden sm:block">CrossFit Unbroken Spirit</span>
+               <div className="hidden sm:block text-center leading-tight">
+                 <div className="text-sm font-black text-white">CrossFit</div>
+                 <div className="text-sm font-black text-white">Unbroken Spirit</div>
+               </div>
             </a>
 
             {/* Desktop Navigation */}
