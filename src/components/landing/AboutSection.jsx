@@ -1,31 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, Flame, Trophy } from 'lucide-react';
+import { useLanguage } from '../LanguageProvider';
 
-const features = [
+const getFeatures = (t) => [
   {
     icon: Flame,
-    title: "Antrenamente Intense",
-    description: "Antrenamente variate zilnic, care-ți pun la încercare limitele."
+    title: t("intenseTraining"),
+    description: t("intenseTrainingDesc")
   },
   {
     icon: Users,
-    title: "Comunitate Puternică",
-    description: "Vino alături de oameni motivați, care te susțin la fiecare pas."
+    title: t("strongCommunity"),
+    description: t("strongCommunityDesc")
   },
   {
     icon: Target,
-    title: "Coaching Profesionist",
-    description: "Antrenori dedicați progresului tău."
+    title: t("professionalCoaching"),
+    description: t("professionalCoachingDesc")
   },
   {
     icon: Trophy,
-    title: "Rezultate Vizibile",
-    description: "Transformări reale și durabile, obținute prin muncă și dedicare."
+    title: t("visibleResults"),
+    description: t("visibleResultsDesc")
   }
 ];
 
 export default function AboutSection() {
+  const { t } = useLanguage();
+  const features = getFeatures(t);
   return (
     <section id="about" className="py-24 bg-zinc-950 relative overflow-hidden">
       {/* Background accent */}
@@ -59,13 +62,13 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
-              Despre Noi
+              {t("aboutUs")}
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6 leading-tight">
-              Mai mult decât un <span className="text-blue-500">gym</span>
+              {t("moreThangym")} <span className="text-blue-500">gym</span>
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              Suntem o comunitate de oameni pasionați de fitness și performanță. Indiferent de nivelul tău, te ajutăm să-ți atingi obiectivele prin antrenamente generale de CrossFit, haltere și gimnastică, într-o atmosferă motivantă, cu un antrenor mereu lângă tine, gata să te îndrume.
+              {t("aboutDesc")}
             </p>
             
             <div className="grid sm:grid-cols-2 gap-6">
