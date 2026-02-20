@@ -24,7 +24,7 @@ export default function HeroSection() {
       {/* Logo overlay */}
       <div className="absolute inset-0 flex items-center justify-center opacity-20">
         <img 
-          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/6f20a4dfe_image.png"
+          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/fba9de03f_image.png"
           alt="CrossFit Unbroken Spirit"
           className="w-1/2 max-w-2xl object-contain"
         />
