@@ -54,11 +54,7 @@ export default function Navigation() {
               onClick={(e) => { e.preventDefault(); scrollToSection('#hero'); }}
               className="flex items-center gap-3"
             >
-              <LogoSVG size={120} />
-               <div className="hidden sm:block text-center leading-tight">
-                  <div className="text-xl font-black text-sky-400 uppercase">CROSSFIT</div>
-                  <div className="text-sm font-black text-blue-700 uppercase">UNBROKEN SPIRIT</div>
-                </div>
+              <LogoSVG size={60} />
             </a>
 
             {/* Desktop Navigation */}
