@@ -21,6 +21,15 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
       
+      {/* Logo overlay */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-20">
+        <img 
+          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/6f20a4dfe_image.png"
+          alt="CrossFit Unbroken Spirit"
+          className="w-1/2 max-w-2xl object-contain"
+        />
+      </div>
+      
       {/* Geometric accent */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-600/20 to-transparent transform skew-x-12 origin-top-right" />
       
