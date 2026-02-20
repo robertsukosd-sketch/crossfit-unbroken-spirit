@@ -55,6 +55,10 @@ export default function Navigation() {
               className="flex items-center gap-3"
             >
               <LogoSVG size={60} />
+              <div className="hidden sm:block text-left leading-tight">
+                <div className="text-lg font-black text-white uppercase tracking-wide">CROSSFIT</div>
+                <div className="text-sm font-black text-blue-400 uppercase tracking-wide">UNBROKEN SPIRIT</div>
+              </div>
             </a>
 
             {/* Desktop Navigation */}
