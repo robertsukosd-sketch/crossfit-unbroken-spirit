@@ -5,7 +5,8 @@ export default function LogoSVG({ size = 40 }) {
       alt="CrossFit Unbroken Spirit"
       width={size}
       height={size}
-      className="flex-shrink-0 rounded-lg"
+      className="flex-shrink-0 object-contain"
+      style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
     />
   );
 }
