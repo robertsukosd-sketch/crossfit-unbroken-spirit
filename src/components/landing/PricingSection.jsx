@@ -65,6 +65,14 @@ const getPricingCategories = (t) => [
     popular: false
   },
   {
+    name: "CrossFit Family",
+    price: "900",
+    period: "lună",
+    description: "Abonament pentru familii/cupluri",
+    features: ["Ședințe nelimitate", "Toate clasele incluse", "Open Gym inclus", "Prioritate înscriere"],
+    popular: false
+  },
+  {
     name: "Nutriție",
     price: "350",
     period: "lună",
