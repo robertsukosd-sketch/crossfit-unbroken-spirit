@@ -4,80 +4,96 @@ import { Check, Sparkles, Dumbbell, Apple, User } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
 
-const getPricingCategories = (t) => [
+const getPricingCategories = (t, language) => [
 {
-  title: "Abonamente CrossFit",
+  title: language === 'ro' ? "Abonamente CrossFit" : "CrossFit Memberships",
   icon: Dumbbell,
   plans: [
   {
     name: "Drop In",
     price: "60",
-    period: "ședință",
-    description: "Încearcă un antrenament",
-    features: ["Perfect pentru vizitatori", "1 ședință CrossFit / Open Gym"],
+    period: language === 'ro' ? "ședință" : "session",
+    description: language === 'ro' ? "Încearcă un antrenament" : "Try a workout",
+    features: language === 'ro' 
+      ? ["Perfect pentru vizitatori", "1 ședință CrossFit / Open Gym"]
+      : ["Perfect for visitors", "1 CrossFit / Open Gym session"],
     popular: false
   },
   {
     name: "Drop In 1 Week",
     price: "200",
-    period: "săptămână",
-    description: "Încearcă o săptămână completă",
-    features: ["Acces nelimitat 7 zile", "Toate clasele incluse"],
+    period: language === 'ro' ? "săptămână" : "week",
+    description: language === 'ro' ? "Încearcă o săptămână completă" : "Try a full week",
+    features: language === 'ro' 
+      ? ["Acces nelimitat 7 zile", "Toate clasele incluse"]
+      : ["Unlimited 7-day access", "All classes included"],
     popular: false
   },
   {
-    name: "8 Ședințe",
+    name: language === 'ro' ? "8 Ședințe" : "8 Sessions",
     price: "320",
-    period: "lună",
-    description: "2 antrenamente pe săptămână",
-    features: ["8 ședințe pe lună", "Flexibilitate program"],
+    period: language === 'ro' ? "lună" : "month",
+    description: language === 'ro' ? "2 antrenamente pe săptămână" : "2 workouts per week",
+    features: language === 'ro' 
+      ? ["8 ședințe pe lună", "Flexibilitate program"]
+      : ["8 sessions per month", "Schedule flexibility"],
     popular: false
   },
   {
-    name: "12 Ședințe",
+    name: language === 'ro' ? "12 Ședințe" : "12 Sessions",
     price: "400",
-    period: "lună",
-    description: "3 antrenamente pe săptămână",
-    features: ["12 ședințe pe lună", "Flexibilitate program"],
+    period: language === 'ro' ? "lună" : "month",
+    description: language === 'ro' ? "3 antrenamente pe săptămână" : "3 workouts per week",
+    features: language === 'ro' 
+      ? ["12 ședințe pe lună", "Flexibilitate program"]
+      : ["12 sessions per month", "Schedule flexibility"],
     popular: true
   },
   {
-    name: "Nelimitat",
+    name: language === 'ro' ? "Nelimitat" : "Unlimited",
     price: "500",
-    period: "lună",
-    description: "Acces complet fără restricții",
-    features: ["Ședințe nelimitate", "Toate clasele incluse", "Open Gym inclus", "Prioritate înscriere"],
+    period: language === 'ro' ? "lună" : "month",
+    description: language === 'ro' ? "Acces complet fără restricții" : "Full access with no restrictions",
+    features: language === 'ro' 
+      ? ["Ședințe nelimitate", "Toate clasele incluse", "Open Gym inclus", "Prioritate înscriere"]
+      : ["Unlimited sessions", "All classes included", "Open Gym included", "Priority booking"],
     popular: true,
     featured: true
   }]
 
 },
 {
-  title: "Servicii Extra",
+  title: language === 'ro' ? "Servicii Extra" : "Extra Services",
   icon: Sparkles,
   plans: [
   {
     name: "Open Gym",
     price: "360",
-    period: "lună",
-    description: "Antrenament independent",
-    features: ["Program flexibil", "Fără clase de grup"],
+    period: language === 'ro' ? "lună" : "month",
+    description: language === 'ro' ? "Antrenament independent" : "Independent training",
+    features: language === 'ro' 
+      ? ["Program flexibil", "Fără clase de grup"]
+      : ["Flexible schedule", "No group classes"],
     popular: false
   },
   {
     name: "CrossFit Family",
     price: "900",
-    period: "lună",
-    description: "Abonament pentru familii/cupluri",
-    features: ["Ședințe nelimitate", "Toate clasele incluse", "Open Gym inclus", "Prioritate înscriere"],
+    period: language === 'ro' ? "lună" : "month",
+    description: language === 'ro' ? "Abonament pentru familii/cupluri" : "For families/couples",
+    features: language === 'ro' 
+      ? ["Ședințe nelimitate", "Toate clasele incluse", "Open Gym inclus", "Prioritate înscriere"]
+      : ["Unlimited sessions", "All classes included", "Open Gym included", "Priority booking"],
     popular: false
   },
   {
-    name: "Nutriție",
+    name: language === 'ro' ? "Nutriție" : "Nutrition",
     price: "350",
-    period: "lună",
-    description: "Plan alimentar personalizat",
-    features: ["Consultație inițială", "Plan nutrițional", "Monitorizare progres", "Suport continuu"],
+    period: language === 'ro' ? "lună" : "month",
+    description: language === 'ro' ? "Plan alimentar personalizat" : "Personalized meal plan",
+    features: language === 'ro' 
+      ? ["Consultație inițială", "Plan nutrițional", "Monitorizare progres", "Suport continuu"]
+      : ["Initial consultation", "Nutrition plan", "Progress monitoring", "Ongoing support"],
     popular: false
   }]
 
@@ -87,19 +103,23 @@ const getPricingCategories = (t) => [
   icon: User,
   plans: [
   {
-    name: "PT 8 Ședințe",
+    name: language === 'ro' ? "PT 8 Ședințe" : "PT 8 Sessions",
     price: "1300",
-    period: "8 ședințe",
-    description: "Antrenament personalizat",
-    features: ["8 sesiuni 1-la-1", "Program individualizat", "Tehnici avansate", "Feedback constant"],
+    period: language === 'ro' ? "8 ședințe" : "8 sessions",
+    description: language === 'ro' ? "Antrenament personalizat" : "Personalized training",
+    features: language === 'ro' 
+      ? ["8 sesiuni 1-la-1", "Program individualizat", "Tehnici avansate", "Feedback constant"]
+      : ["8 one-on-one sessions", "Individualized program", "Advanced techniques", "Constant feedback"],
     popular: false
   },
   {
-    name: "PT 12 Ședințe",
+    name: language === 'ro' ? "PT 12 Ședințe" : "PT 12 Sessions",
     price: "1600",
-    period: "12 ședințe",
-    description: "Transformare completă",
-    features: ["12 sesiuni 1-la-1", "Program individualizat", "Nutriție de bază", "Suport WhatsApp", "Monitorizare progres"],
+    period: language === 'ro' ? "12 ședințe" : "12 sessions",
+    description: language === 'ro' ? "Transformare completă" : "Complete transformation",
+    features: language === 'ro' 
+      ? ["12 sesiuni 1-la-1", "Program individualizat", "Nutriție de bază", "Suport WhatsApp", "Monitorizare progres"]
+      : ["12 one-on-one sessions", "Individualized program", "Basic nutrition", "WhatsApp support", "Progress monitoring"],
     popular: true
   }]
 
@@ -107,8 +127,8 @@ const getPricingCategories = (t) => [
 
 
 export default function PricingSection() {
-  const { t } = useLanguage();
-  const pricingCategories = getPricingCategories(t);
+  const { t, language } = useLanguage();
+  const pricingCategories = getPricingCategories(t, language);
   
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
