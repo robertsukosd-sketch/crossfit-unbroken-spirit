@@ -257,6 +257,40 @@ export default function CookieConsent() {
 
       {/* Overlay */}
       <div className="fixed bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/50 to-transparent pointer-events-none z-35" />
+
+      {/* Cookie Details Modal */}
+      {selectedCookie && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-black/50" onClick={() => setSelectedCookie(null)} />
+          <div className="bg-zinc-900 rounded-lg border border-zinc-800 p-6 max-w-md w-full relative">
+            <button
+              onClick={() => setSelectedCookie(null)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            
+            <h3 className="text-white font-bold mb-4">
+              {selectedCookie === 'essential' && t.essential}
+              {selectedCookie === 'analytics' && t.analytics}
+              {selectedCookie === 'marketing' && t.marketing}
+            </h3>
+            
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              {selectedCookie === 'essential' && t.essentialDetails}
+              {selectedCookie === 'analytics' && t.analyticsDetails}
+              {selectedCookie === 'marketing' && t.marketingDetails}
+            </p>
+            
+            <button
+              onClick={() => setSelectedCookie(null)}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              {t.close}
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
