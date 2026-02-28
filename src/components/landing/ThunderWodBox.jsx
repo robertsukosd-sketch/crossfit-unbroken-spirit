@@ -8,9 +8,9 @@ const androidQr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data
 
 export default function ThunderWodBox({ className = '' }) {
   return (
-    <div className={`bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-row items-center justify-center gap-6 h-full ${className}`}>
+    <div className={`bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-row items-start justify-center gap-6 h-full ${className}`}>
       {/* Logo */}
-      <div className="flex items-center justify-center">
+      <div className="flex items-start justify-center pt-1">
         <img
           src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/fafce54d5_Screenshot2026-02-28at235506.png"
           alt="ThunderWOD"
