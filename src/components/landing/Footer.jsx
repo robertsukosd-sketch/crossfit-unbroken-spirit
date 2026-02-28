@@ -4,9 +4,32 @@ import Logo from './Logo';
 import { useLanguage } from '../LanguageProvider';
 import PolicyModal from './PolicyModal';
 
+const cookieContent = (
+  <>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+    <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</p>
+  </>
+);
+
+const gdprContent = (
+  <>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Conform Regulamentului General privind Protecția Datelor (GDPR) nr. 2016/679, avem obligația de a vă informa cu privire la prelucrarea datelor dumneavoastră cu caracter personal.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Datele colectate sunt utilizate exclusiv în scopurile declarate și nu vor fi transmise terților fără consimțământul explicit al utilizatorului.</p>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Aveți dreptul de acces, rectificare, ștergere și portabilitate a datelor dumneavoastră personale.</p>
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Puteți retrage consimțământul în orice moment, fără a afecta legalitatea prelucrării efectuate anterior retragerii acestuia.</p>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti. Pentru exercitarea drepturilor menționate sau pentru orice întrebări legate de prelucrarea datelor, ne puteți contacta la train@unbrokenspirit.ro.</p>
+    <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Avem dreptul de a actualiza această politică periodic, iar versiunea actualizată va fi disponibilă pe site-ul nostru.</p>
+  </>
+);
+
 export default function Footer() {
   const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
+  const [openModal, setOpenModal] = useState(null); // 'cookie' | 'gdpr' | null
   
   return (
     <footer className="bg-black border-t border-zinc-900">
