@@ -262,9 +262,8 @@ export default function ContactSection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="h-40"
             >
-              <ThunderWodBox className="h-full" />
+              <ThunderWodBox />
             </motion.div>
           </div>
 
