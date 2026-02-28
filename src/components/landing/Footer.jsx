@@ -63,16 +63,94 @@ const getCookieContent = (language) => {
   );
 };
 
-const gdprContent = (
-  <>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Conform Regulamentului General privind Protecția Datelor (GDPR) nr. 2016/679, avem obligația de a vă informa cu privire la prelucrarea datelor dumneavoastră cu caracter personal.</p>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Datele colectate sunt utilizate exclusiv în scopurile declarate și nu vor fi transmise terților fără consimțământul explicit al utilizatorului.</p>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Aveți dreptul de acces, rectificare, ștergere și portabilitate a datelor dumneavoastră personale.</p>
-    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Puteți retrage consimțământul în orice moment, fără a afecta legalitatea prelucrării efectuate anterior retragerii acestuia.</p>
-    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti. Pentru exercitarea drepturilor menționate sau pentru orice întrebări legate de prelucrarea datelor, ne puteți contacta la train@unbrokenspirit.ro.</p>
-    <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Avem dreptul de a actualiza această politică periodic, iar versiunea actualizată va fi disponibilă pe site-ul nostru.</p>
-  </>
-);
+const getPrivacyContent = (language) => {
+  if (language === 'ro') {
+    return (
+      <>
+        <p><strong>1. Introducere și Responsabil de Prelucrare</strong></p>
+        <p>Conform Regulamentului General privind Protecția Datelor (GDPR) nr. 2016/679 și legislației românești privind protecția datelor, S.C. UNBROKEN CLUB S.R.L. (denumit în continuare "noi" sau "compania") este responsabilă pentru prelucrarea datelor dumneavoastră cu caracter personal. Pentru orice întrebări privind confidențialitatea, contactați-ne la train@unbrokenspirit.ro sau +40 748 838 767.</p>
+        
+        <p><strong>2. Ce Date Colectăm</strong></p>
+        <p>Colectăm următoarele categorii de date: date de identificare (nume, prenume, e-mail, telefon), date de localizare (adresă), date de sănătate (antecedente medicale în scopuri de siguranță la antrenament), date de plată (informații bancare sau de card, doar pentru procesare securizată), date de urmărire (adresa IP, cookie-uri, dispozitiv).</p>
+        
+        <p><strong>3. Bazele Juridice pentru Prelucrare</strong></p>
+        <p>Prelucrarea datelor dumneavoastră se bazează pe: consimțământul explicit (pentru comunicări de marketing), contractul de prestare de servicii (pentru a vă oferi serviciile de antrenament), obligații legale (pentru conformitate cu legislația munca și sănătate), interesul legitim (pentru securitate și prevenirea fraudei).</p>
+        
+        <p><strong>4. Scopurile Prelucrării Datelor</strong></p>
+        <p>Datele dumneavoastră sunt utilizate pentru: prestarea serviciilor de antrenament și fitness, gestionarea abonamentelor și plăților, comunicări administrative și legate de servicii, marketing și promovare (cu consimțământul explicit), îmbunătățirea serviciilor și site-ului, respectarea obligațiilor legale și de reglementare, prevenirea fraudelor și a activităților ilegale.</p>
+        
+        <p><strong>5. Partajarea Datelor cu Terți</strong></p>
+        <p>Nu vândutm și nu partajăm datele dumneavoastră cu terți fără consimțământul explicit, cu excepția cazurilor în care suntem obligați legal. Partenerii noștri (procesatori de plăți, furnizori de cloud) sunt obligați prin contracte să respecte confidențialitatea și securitatea.</p>
+        
+        <p><strong>6. Transferuri Internaționale</strong></p>
+        <p>Datele dumneavoastră sunt stocate în principal în Uniunea Europeană. Orice transfer în afara UE se face cu mecanisme de protecție adecvate, conform GDPR.</p>
+        
+        <p><strong>7. Retenția Datelor</strong></p>
+        <p>Păstrăm datele dumneavoastră doar cât timp este necesar: datele contractuale sunt reținute pentru durata abonamentului și 6 ani după (conform legii fiscale), datele de marketing sunt șterse la retragerea consimțământului, datele de securitate sunt reținute conform legislației.</p>
+        
+        <p><strong>8. Drepturile Dumneavoastră</strong></p>
+        <p>Aveți următoarele drepturi conform GDPR: dreptul de acces (să aflați ce date avem despre dumneavoastră), dreptul de rectificare (să corectați datele inexacte), dreptul la ștergere (dreptul de a fi uitat), dreptul la restricționarea prelucrării, dreptul la portabilitate (să primiți datele într-un format structurat), dreptul de a vă opune prelucrării, dreptul de a nu fi supus unor decizii automatizate. Pentru a exercita aceste drepturi, contactați-ne la train@unbrokenspirit.ro.</p>
+        
+        <p><strong>9. Securitatea Datelor</strong></p>
+        <p>Implementăm măsuri de securitate tehnice și organizatorice pentru a proteja datele dumneavoastră împotriva accesului neautorizat, modificării, pierderii sau utilizării abuzive. Utilizăm criptare (SSL/TLS), acces restricționat și testare regulată a sistemelor de securitate.</p>
+        
+        <p><strong>10. Incidente de Securitate</strong></p>
+        <p>În cazul unei breșe de date care ar putea afecta drepturile dumneavoastră, vom notifica autoritățile competente și, dacă este cazul, pe dumneavoastră, conform GDPR.</p>
+        
+        <p><strong>11. Cookie-uri și Tehnologii de Urmărire</strong></p>
+        <p>Utilizăm cookie-uri și alte tehnologii de urmărire conform politicii noastre separate de cookie-uri. Puteți controla aceste tehnologii prin setările browserului.</p>
+        
+        <p><strong>12. Contact cu Autoritatea de Protecție a Datelor</strong></p>
+        <p>Dacă considerați că prelucrarea datelor dumneavoastră încalcă GDPR, puteți depune o plângere la Autoritatea Națională pentru Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), strada Dem. I. Dobrescu nr. 22-24, sector 1, București, sau online pe www.dataprotection.ro.</p>
+        
+        <p><strong>13. Modificări ale Politicii</strong></p>
+        <p>Avem dreptul de a actualiza această politică periodic. Versiunea actualizată va fi disponibilă pe site-ul nostru cu data ultimei modificări evident marcată.</p>
+      </>
+    );
+  }
+  return (
+    <>
+      <p><strong>1. Introduction and Data Controller</strong></p>
+      <p>In accordance with the General Data Protection Regulation (GDPR) no. 2016/679 and Romanian data protection legislation, S.C. UNBROKEN CLUB S.R.L. (hereinafter "we" or "the company") is responsible for processing your personal data. For any privacy-related questions, contact us at train@unbrokenspirit.ro or +40 748 838 767.</p>
+      
+      <p><strong>2. What Data We Collect</strong></p>
+      <p>We collect the following categories of data: identification data (name, surname, email, phone), location data (address), health data (medical history for training safety purposes), payment data (bank or card information, only for secure processing), tracking data (IP address, cookies, device).</p>
+      
+      <p><strong>3. Legal Bases for Processing</strong></p>
+      <p>The processing of your data is based on: explicit consent (for marketing communications), service provision contract (to provide you training and fitness services), legal obligations (for labor and health law compliance), legitimate interest (for security and fraud prevention).</p>
+      
+      <p><strong>4. Purposes of Data Processing</strong></p>
+      <p>Your data is used for: providing training and fitness services, managing memberships and payments, administrative and service-related communications, marketing and promotion (with explicit consent), improving services and website, complying with legal and regulatory obligations, preventing fraud and illegal activities.</p>
+      
+      <p><strong>5. Sharing Data with Third Parties</strong></p>
+      <p>We do not sell or share your data with third parties without explicit consent, except where legally required. Our partners (payment processors, cloud providers) are contractually obligated to maintain confidentiality and security.</p>
+      
+      <p><strong>6. International Transfers</strong></p>
+      <p>Your data is stored primarily within the European Union. Any transfer outside the EU is done with appropriate safeguards under GDPR.</p>
+      
+      <p><strong>7. Data Retention</strong></p>
+      <p>We keep your data only as long as necessary: contract data is retained for the duration of membership and 6 years after (according to tax law), marketing data is deleted upon consent withdrawal, security data is retained according to legislation.</p>
+      
+      <p><strong>8. Your Rights</strong></p>
+      <p>You have the following rights under GDPR: right of access (to know what data we have about you), right of rectification (to correct inaccurate data), right to erasure (right to be forgotten), right to restrict processing, right to data portability (to receive data in structured format), right to object to processing, right not to be subject to automated decision-making. To exercise these rights, contact us at train@unbrokenspirit.ro.</p>
+      
+      <p><strong>9. Data Security</strong></p>
+      <p>We implement technical and organizational security measures to protect your data against unauthorized access, modification, loss, or misuse. We use encryption (SSL/TLS), restricted access, and regular security testing.</p>
+      
+      <p><strong>10. Security Breaches</strong></p>
+      <p>In the event of a data breach that could affect your rights, we will notify competent authorities and, if necessary, you, in accordance with GDPR.</p>
+      
+      <p><strong>11. Cookies and Tracking Technologies</strong></p>
+      <p>We use cookies and other tracking technologies in accordance with our separate cookie policy. You can control these technologies through your browser settings.</p>
+      
+      <p><strong>12. Contact Data Protection Authority</strong></p>
+      <p>If you believe that processing of your data violates GDPR, you can file a complaint with the National Authority for Supervision of Personal Data Processing (ANSPDCP), str. Dem. I. Dobrescu no. 22-24, sector 1, Bucharest, or online at www.dataprotection.ro.</p>
+      
+      <p><strong>13. Policy Changes</strong></p>
+      <p>We have the right to update this policy periodically. The updated version will be available on our website with the date of last modification clearly marked.</p>
+    </>
+  );
+};
 
 const getTermsContent = (language) => {
   if (language === 'ro') {
