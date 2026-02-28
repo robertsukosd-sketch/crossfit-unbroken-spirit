@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 import Logo from './Logo';
 import { useLanguage } from '../LanguageProvider';
+import PolicyModal from './PolicyModal';
 
 export default function Footer() {
   const { t } = useLanguage();
