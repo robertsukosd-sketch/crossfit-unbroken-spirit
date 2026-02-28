@@ -19,19 +19,23 @@ export default function ThunderWodBox({ className = '' }) {
       </div>
 
       {/* iOS QR */}
-      <div className="flex flex-col items-center gap-1">
+      <div className="flex flex-col items-center gap-2">
         <a href={IOS_URL} target="_blank" rel="noopener noreferrer">
           <img src={iosQr} alt="App Store QR" className="w-24 h-24 rounded-lg bg-white p-1" />
         </a>
-        <span className="text-gray-400 text-xs">App Store</span>
+        <a href={IOS_URL} target="_blank" rel="noopener noreferrer">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-7 object-contain" />
+        </a>
       </div>
 
       {/* Android QR */}
-      <div className="flex flex-col items-center gap-1">
+      <div className="flex flex-col items-center gap-2">
         <a href={ANDROID_URL} target="_blank" rel="noopener noreferrer">
           <img src={androidQr} alt="Google Play QR" className="w-24 h-24 rounded-lg bg-white p-1" />
         </a>
-        <span className="text-gray-400 text-xs">Google Play</span>
+        <a href={ANDROID_URL} target="_blank" rel="noopener noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-7 object-contain" />
+        </a>
       </div>
     </div>
   );
