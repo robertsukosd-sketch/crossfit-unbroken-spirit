@@ -26,16 +26,30 @@ const gdprContent = (
   </>
 );
 
-const termsContent = (
-  <>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aceste Termeni și Condiții guvernează utilizarea site-ului nostru și serviciilor oferite de CrossFit Unbroken Spirit.</p>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Utilizatorul acceptă că utilizarea acestui site se face pe bază de voluntariat și sub răspunderea sa exclusivă.</p>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Ne rezervăm dreptul de a modifica acești termeni și condiții în orice moment, iar modificările vor intra în vigoare imediat.</p>
-    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Utilizatorul declară că are vârsta minimă legal permisă și că acceptă toate riscurile asociate cu participarea la activitățile noastre fitness.</p>
-    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti. Orice dispută sau reclamație va fi rezolvată conform legilor României și sub jurisdicția instanțelor competente din București.</p>
-    <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Pentru orice întrebări referitoare la acești termeni, vă rugăm să ne contactați la train@unbrokenspirit.ro.</p>
-  </>
-);
+const getTermsContent = (language) => {
+  if (language === 'ro') {
+    return (
+      <>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aceste Termeni și Condiții guvernează utilizarea site-ului nostru și serviciilor oferite de CrossFit Unbroken Spirit.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Utilizatorul acceptă că utilizarea acestui site se face pe bază de voluntariat și sub răspunderea sa exclusivă.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Ne rezervăm dreptul de a modifica acești termeni și condiții în orice moment, iar modificările vor intra în vigoare imediat.</p>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Utilizatorul declară că are vârsta minimă legal permisă și că acceptă toate riscurile asociate cu participarea la activitățile noastre fitness.</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti. Orice dispută sau reclamație va fi rezolvată conform legilor României și sub jurisdicția instanțelor competente din București.</p>
+        <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Pentru orice întrebări referitoare la acești termeni, vă rugăm să ne contactați la train@unbrokenspirit.ro.</p>
+      </>
+    );
+  }
+  return (
+    <>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. These Terms and Conditions govern the use of our website and services provided by CrossFit Unbroken Spirit.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. The user agrees that the use of this website is voluntary and at their sole responsibility.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. We reserve the right to modify these terms and conditions at any time, and changes will take effect immediately.</p>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. The user declares that they are of legal age and accept all risks associated with participating in our fitness activities.</p>
+      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti. Any disputes or claims will be resolved according to Romanian law and under the jurisdiction of competent courts in Bucharest.</p>
+      <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. For any questions regarding these terms, please contact us at train@unbrokenspirit.ro.</p>
+    </>
+  );
+};
 
 export default function Footer() {
   const { t, language } = useLanguage();
