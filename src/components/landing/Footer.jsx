@@ -127,6 +127,13 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Legal Info */}
+      <div className="text-center text-gray-500 text-xs px-6 pb-4">
+        {language === 'ro'
+          ? 'Toate drepturile rezervate S.C. UNBROKEN CLUB S.R.L., Nr. R.C.: J2025078440006, C.U.I.: RO52691871, Adresa: Bucuresti, Sector 1, Str. Pitar Mos, Nr. 27, la cabinet Av. Stanciu-Burileanu Bogdan, et. 5, ap. 17, Capital social 500 RON.'
+          : 'All rights reserved S.C. UNBROKEN CLUB S.R.L., Reg. No.: J2025078440006, VAT: RO52691871, Address: Bucharest, Sector 1, Pitar Mos St., No. 27, at the office of Att. Stanciu-Burileanu Bogdan, 5th floor, apt. 17, Share capital 500 RON.'}
+      </div>
+
       {/* ANPC Badges */}
       <div className="flex flex-row flex-wrap items-center justify-center gap-4 pb-8">
         <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow">
