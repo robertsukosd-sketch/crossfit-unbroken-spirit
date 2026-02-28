@@ -24,7 +24,7 @@ const getPrograms = (t) => [
     title: t("gymnastics"),
     description: t("gymnasticsDesc"),
     color: "from-indigo-500 to-blue-500",
-    image: "https://images.unsplash.com/photo-1598971639058-fab3c3109a09?auto=format&fit=crop&w=600&q=80"
+    image: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=600&q=80"
   },
   {
     icon: Users,
