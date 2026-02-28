@@ -27,7 +27,7 @@ const gdprContent = (
 );
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const currentYear = new Date().getFullYear();
   const [openModal, setOpenModal] = useState(null); // 'cookie' | 'gdpr' | null
   
@@ -114,12 +114,6 @@ export default function Footer() {
             © {currentYear} CrossFit Unbroken Spirit. {t("copyright")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="#" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
-              {t("terms")}
-            </a>
-            <a href="#" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
-              {t("privacy")}
-            </a>
             <button onClick={() => setOpenModal('cookie')} className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
               {t("cookiePolicy")}
             </button>
@@ -134,10 +128,10 @@ export default function Footer() {
       </div>
 
       {openModal === 'cookie' && (
-        <PolicyModal title={t("cookiePolicy")} content={cookieContent} onClose={() => setOpenModal(null)} />
+        <PolicyModal title={t("cookiePolicy")} content={cookieContent} onClose={() => setOpenModal(null)} closeLabel={language === 'ro' ? 'Închide' : 'Close'} />
       )}
       {openModal === 'gdpr' && (
-        <PolicyModal title={t("gdprPolicy")} content={gdprContent} onClose={() => setOpenModal(null)} />
+        <PolicyModal title={t("gdprPolicy")} content={gdprContent} onClose={() => setOpenModal(null)} closeLabel={language === 'ro' ? 'Închide' : 'Close'} />
       )}
     </footer>
   );

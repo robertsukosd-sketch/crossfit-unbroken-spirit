@@ -1,7 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
 
-export default function PolicyModal({ title, content, onClose }) {
+export default function PolicyModal({ title, content, onClose, closeLabel = 'Close' }) {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={onClose}>
       <div
@@ -30,7 +30,7 @@ export default function PolicyModal({ title, content, onClose }) {
             onClick={onClose}
             className="w-full py-3 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-full transition-all"
           >
-            Închide / Close
+            {closeLabel}
           </button>
         </div>
       </div>

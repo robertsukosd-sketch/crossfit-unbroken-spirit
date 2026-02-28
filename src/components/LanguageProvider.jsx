@@ -231,7 +231,7 @@ export const translations = {
     terms: "Terms & Conditions",
     privacy: "Privacy Policy",
     cookiePolicy: "Cookie Policy",
-    gdprPolicy: "Confidentiality & GDPR",
+    gdprPolicy: "Privacy Policy",
     anpc: "ANPC",
     copyright: "All rights reserved.",
     tagline: "Your fitness community. High-intensity functional training for real results.",
