@@ -224,7 +224,7 @@ export default function ContactSection() {
         </div>
 
         {/* Bottom row: Social Links and Map */}
-        <div className="grid lg:grid-cols-2 gap-12 mt-12">
+        <div className="grid lg:grid-cols-3 gap-12 mt-12">
           {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -254,6 +254,9 @@ export default function ContactSection() {
               </div>
             </div>
           </motion.div>
+
+          {/* ThunderWOD App */}
+          <ThunderWodBox />
 
           {/* Map */}
           <motion.div
