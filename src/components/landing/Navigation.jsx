@@ -189,15 +189,14 @@ export default function Navigation() {
                 transition={{ delay: 0.5 }}
                 className="pt-6"
               >
-                <a
-                  href="https://apps.apple.com/app/thunderwod/id1607744328"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => scrollToSection('#contact')}
                   className="flex items-center justify-center gap-2 w-full border border-zinc-600 text-gray-300 rounded-full py-3 text-base font-medium"
                 >
                   <Smartphone className="w-5 h-5 text-sky-400" />
                   ThunderWOD App
-                </a>
+                </button>
                 <Button
                   onClick={() => scrollToSection('#contact')}
                   className="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold rounded-full py-6 text-lg"
