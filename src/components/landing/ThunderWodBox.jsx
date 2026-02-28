@@ -27,7 +27,7 @@ export default function ThunderWodBox({ className = '' }) {
         <img
           src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/fafce54d5_Screenshot2026-02-28at235506.png"
           alt="ThunderWOD"
-          className="w-28 h-28 object-contain rounded-lg"
+          className="w-24 h-24 object-contain rounded-lg"
         />
       </div>
 
@@ -37,7 +37,7 @@ export default function ThunderWodBox({ className = '' }) {
           <img
             src={qrSrc}
             alt="QR Code"
-            className="w-28 h-28 rounded-lg bg-white p-1"
+            className="w-24 h-24 rounded-lg bg-white p-1"
           />
         </a>
       </div>
