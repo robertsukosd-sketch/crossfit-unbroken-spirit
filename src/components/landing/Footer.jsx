@@ -140,15 +140,15 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-3">
             <button onClick={() => setOpenModal('cookie')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
-              Cookies
+              {language === 'ro' ? 'Cookie-uri' : 'Cookies'}
             </button>
             <span className="text-gray-600">|</span>
             <button onClick={() => setOpenModal('gdpr')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
-              Privacy
+              {language === 'ro' ? 'Confidențialitate și GDPR' : 'Privacy'}
             </button>
             <span className="text-gray-600">|</span>
             <button onClick={() => setOpenModal('terms')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
-              Terms and Conditions
+              {language === 'ro' ? 'Termeni și Condiții' : 'Terms and Conditions'}
             </button>
             <span className="text-gray-600">|</span>
             <a href="https://anpc.ro" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
