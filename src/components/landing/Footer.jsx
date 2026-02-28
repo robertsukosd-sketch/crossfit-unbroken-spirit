@@ -113,16 +113,18 @@ export default function Footer() {
           <p className="text-gray-500 text-sm">
             © {currentYear} CrossFit Unbroken Spirit. {t("copyright")}
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button onClick={() => setOpenModal('cookie')} className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
-              {t("cookiePolicy")}
+          <div className="flex flex-wrap justify-center items-center gap-3">
+            <button onClick={() => setOpenModal('cookie')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+              Cookies
             </button>
-            <button onClick={() => setOpenModal('gdpr')} className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
-              {t("gdprPolicy")}
+            <span className="text-gray-600">|</span>
+            <button onClick={() => setOpenModal('gdpr')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+              Privacy
             </button>
-            <a href="https://anpc.ro" target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
-              {t("anpc")}
-            </a>
+            <span className="text-gray-600">|</span>
+            <button className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+              Terms and Conditions
+            </button>
           </div>
         </div>
       </div>
