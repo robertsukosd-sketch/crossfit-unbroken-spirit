@@ -102,7 +102,7 @@ export default function Footer() {
                </li>
                <li className="flex items-center gap-3 text-gray-400">
                  <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                 <span>contact@crossfit.ro</span>
+                 <span>train@unbrokenspirit.ro</span>
                </li>
              </ul>
           </div>
