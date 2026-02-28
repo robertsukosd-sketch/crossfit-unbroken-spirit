@@ -125,6 +125,10 @@ export default function Footer() {
             <button className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
               Terms and Conditions
             </button>
+            <span className="text-gray-600">|</span>
+            <a href="https://anpc.ro" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+              ANPC
+            </a>
           </div>
         </div>
       </div>
