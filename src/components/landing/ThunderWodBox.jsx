@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-const IOS_URL = 'https://apps.apple.com/ro/app/thunderwod/id1607744328';
+const IOS_URL = 'https://apps.apple.com/app/thunderwod/id1607744328';
 const ANDROID_URL = 'https://play.google.com/store/apps/details?id=imok.thunderwod.app';
-
-// QR codes generated via api.qrserver.com pointing to each store
-const IOS_QR = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(IOS_URL)}`;
-const ANDROID_QR = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(ANDROID_URL)}`;
 
 function detectPlatform() {
   const ua = navigator.userAgent || '';
@@ -21,34 +17,25 @@ export default function ThunderWodBox({ className = '' }) {
     setPlatform(detectPlatform());
   }, []);
 
-  const qrSrc = platform === 'ios' ? IOS_QR : ANDROID_QR;
   const storeUrl = platform === 'ios' ? IOS_URL : ANDROID_URL;
-  const storeLabel = platform === 'ios' ? 'App Store' : platform === 'android' ? 'Google Play' : 'App Store / Google Play';
+  const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(storeUrl)}`;
 
   return (
-    <div className={`bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-col items-center justify-center text-center gap-4 h-full ${className}`}>
-      {/* ThunderWOD Logo */}
-      <div className="flex flex-col items-center gap-1">
-        <img
-          src="https://thunderwod.com/wp-content/uploads/2022/01/logo-thunderwod.png"
-          alt="ThunderWOD"
-          className="h-10 object-contain"
-          onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.nextSibling.style.display = 'block';
-          }}
-        />
-        <span className="text-white font-bold text-lg hidden">ThunderWOD</span>
-      </div>
+    <div className={`bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-row items-center justify-between gap-4 h-full ${className}`}>
+      {/* Logo on the left */}
+      <img
+        src="https://thunderwod.com/wp-content/uploads/2022/01/logo-thunderwod.png"
+        alt="ThunderWOD"
+        className="h-12 object-contain"
+      />
 
-      {/* QR Code */}
-      <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
+      {/* QR Code on the right */}
+      <a href={storeUrl} target="_blank" rel="noopener noreferrer">
         <img
           src={qrSrc}
           alt="QR Code"
-          className="w-28 h-28 rounded-lg bg-white p-1"
+          className="w-24 h-24 rounded-lg bg-white p-1"
         />
-        <span className="text-gray-400 text-xs">Scanează pentru {storeLabel}</span>
       </a>
     </div>
   );
