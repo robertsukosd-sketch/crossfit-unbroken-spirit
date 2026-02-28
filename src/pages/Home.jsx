@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { ChevronUp } from 'lucide-react';
 import LanguageProvider from '@/components/LanguageProvider';
 import Navigation from '@/components/landing/Navigation';
 import HeroSection from '@/components/landing/HeroSection';
@@ -10,6 +11,14 @@ import ContactSection from '@/components/landing/ContactSection';
 import Footer from '@/components/landing/Footer';
 
 export default function Home() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 300);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-black">
@@ -23,6 +32,16 @@ export default function Home() {
         <ScheduleSection />
         <ContactSection />
         <Footer />
+
+        {visible && (
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="fixed bottom-8 right-6 z-50 w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center shadow-lg transition-all"
+            aria-label="Back to top"
+          >
+            <ChevronUp className="w-6 h-6" />
+          </button>
+        )}
       </div>
     </LanguageProvider>
   );
