@@ -18,9 +18,9 @@ export default function ThunderWodBox({ className = '' }) {
         {/* Logo */}
         <div className="flex items-center justify-center">
           <img
-            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/fafce54d5_Screenshot2026-02-28at235506.png"
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4bc32f189_Mobile-Mockup2x-1280x960.png"
             alt="ThunderWOD"
-            className="w-28 h-28 object-contain rounded-lg"
+            className="w-36 h-28 object-contain"
           />
         </div>
 
