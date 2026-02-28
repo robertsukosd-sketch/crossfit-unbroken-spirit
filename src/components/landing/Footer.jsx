@@ -113,16 +113,32 @@ export default function Footer() {
           <p className="text-gray-500 text-sm">
             © {currentYear} CrossFit Unbroken Spirit. {t("copyright")}
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             <a href="#" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
               {t("terms")}
             </a>
             <a href="#" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
               {t("privacy")}
             </a>
+            <button onClick={() => setOpenModal('cookie')} className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
+              {t("cookiePolicy")}
+            </button>
+            <button onClick={() => setOpenModal('gdpr')} className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
+              {t("gdprPolicy")}
+            </button>
+            <a href="https://anpc.ro" target="_blank" rel="noopener noreferrer" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">
+              {t("anpc")}
+            </a>
           </div>
         </div>
       </div>
+
+      {openModal === 'cookie' && (
+        <PolicyModal title={t("cookiePolicy")} content={cookieContent} onClose={() => setOpenModal(null)} />
+      )}
+      {openModal === 'gdpr' && (
+        <PolicyModal title={t("gdprPolicy")} content={gdprContent} onClose={() => setOpenModal(null)} />
+      )}
     </footer>
   );
 }
