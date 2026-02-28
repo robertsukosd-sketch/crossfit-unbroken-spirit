@@ -28,21 +28,21 @@ export default function Home() {
         <div id="hero">
           <HeroSection />
         </div>
-        <div className="py-20">
+        <motion.div className="py-20" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <AboutSection />
-        </div>
-        <div className="py-20">
+        </motion.div>
+        <motion.div className="py-20" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <ProgramsSection />
-        </div>
-        <div className="py-20">
+        </motion.div>
+        <motion.div className="py-20" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <PricingSection />
-        </div>
-        <div className="py-20">
+        </motion.div>
+        <motion.div className="py-20" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <ScheduleSection />
-        </div>
-        <div className="py-20">
+        </motion.div>
+        <motion.div className="py-20" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <ContactSection />
-        </div>
+        </motion.div>
         <Footer />
 
         <AccessibilityToolbar />
