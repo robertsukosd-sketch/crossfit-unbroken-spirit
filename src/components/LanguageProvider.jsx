@@ -95,7 +95,7 @@ export const translations = {
     contactSubtitle: "Ai întrebări? Vrei să încerci o clasă gratuită?\n\nScrie-ne și te contactăm în cel mai scurt timp.",
     address: "Adresă",
     phone: "Telefon",
-    email: "Email",
+    email: "E-mail",
     schedule_label: "Program",
     fullName: "Nume Complet",
     fullNamePlaceholder: "Ion Popescu",

@@ -22,7 +22,7 @@ const getContactInfo = (t) => [
   {
     icon: Mail,
     title: t("email"),
-    details: ["contact@crossfit.ro"]
+    details: ["train@unbrokenspirit.ro"]
   },
   {
     icon: Clock,
@@ -48,6 +48,11 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     await base44.entities.ContactSubmission.create(formData);
+    await base44.integrations.Core.SendEmail({
+      to: 'train@unbrokenspirit.ro',
+      subject: `Mesaj nou de la ${formData.name}`,
+      body: `Nume: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone || '-'}\n\nMesaj:\n${formData.message}`
+    });
     
     setIsSubmitted(true);
     setFormData({ name: '', email: '', phone: '', message: '' });
