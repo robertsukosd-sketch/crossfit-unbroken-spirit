@@ -172,7 +172,7 @@ export default function CookieConsent() {
               {/* Cookie Options */}
               <div className="space-y-3">
                 {/* Essential */}
-                <div className="flex items-start gap-3 p-3 bg-zinc-800/50 rounded-lg">
+                <div className="flex items-start gap-3 p-3 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors">
                   <input
                     type="checkbox"
                     checked={preferences.essential}
@@ -183,10 +183,16 @@ export default function CookieConsent() {
                     <p className="text-white font-semibold text-sm">{t.essential}</p>
                     <p className="text-gray-400 text-xs">{t.essentialDesc}</p>
                   </div>
+                  <button
+                    onClick={() => setSelectedCookie('essential')}
+                    className="text-blue-400 text-xs hover:text-blue-300 whitespace-nowrap ml-2"
+                  >
+                    {t.learnMore}
+                  </button>
                 </div>
 
                 {/* Analytics */}
-                <div className="flex items-start gap-3 p-3 bg-zinc-800/50 rounded-lg">
+                <div className="flex items-start gap-3 p-3 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors">
                   <input
                     type="checkbox"
                     checked={preferences.analytics}
@@ -197,10 +203,16 @@ export default function CookieConsent() {
                     <p className="text-white font-semibold text-sm">{t.analytics}</p>
                     <p className="text-gray-400 text-xs">{t.analyticsDesc}</p>
                   </div>
+                  <button
+                    onClick={() => setSelectedCookie('analytics')}
+                    className="text-blue-400 text-xs hover:text-blue-300 whitespace-nowrap ml-2"
+                  >
+                    {t.learnMore}
+                  </button>
                 </div>
 
                 {/* Marketing */}
-                <div className="flex items-start gap-3 p-3 bg-zinc-800/50 rounded-lg">
+                <div className="flex items-start gap-3 p-3 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-colors">
                   <input
                     type="checkbox"
                     checked={preferences.marketing}
@@ -211,6 +223,12 @@ export default function CookieConsent() {
                     <p className="text-white font-semibold text-sm">{t.marketing}</p>
                     <p className="text-gray-400 text-xs">{t.marketingDesc}</p>
                   </div>
+                  <button
+                    onClick={() => setSelectedCookie('marketing')}
+                    className="text-blue-400 text-xs hover:text-blue-300 whitespace-nowrap ml-2"
+                  >
+                    {t.learnMore}
+                  </button>
                 </div>
               </div>
 
