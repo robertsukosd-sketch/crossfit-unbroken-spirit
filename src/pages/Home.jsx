@@ -9,6 +9,7 @@ import PricingSection from '@/components/landing/PricingSection';
 import ScheduleSection from '@/components/landing/ScheduleSection';
 import ContactSection from '@/components/landing/ContactSection';
 import Footer from '@/components/landing/Footer';
+import AccessibilityToolbar from '@/components/landing/AccessibilityToolbar';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
