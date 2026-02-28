@@ -17,6 +17,11 @@ const translations = {
     rejectAll: 'Respinge Non-Esențiale',
     savePreferences: 'Salvează Preferințe',
     manage: 'Gestionează Preferințe',
+    learnMore: 'Află mai multe',
+    close: 'Închide',
+    essentialDetails: 'Cookie-urile esențiale sunt critice pentru funcționarea de bază a site-ului. Ele permit autentificarea, securitatea sesiunilor și memorarea setărilor dvs. Fără acestea, anumite funcții ale site-ului nu vor funcționa corect.',
+    analyticsDetails: 'Cookie-urile de analiză ne ajută să colectăm informații anonime despre modul în care utilizatorii interacționează cu site-ul nostru. Acestea ne permit să analizăm traficul, paginile populare și erorile pentru a îmbunătăți constant performanța și experiența utilizatorului.',
+    marketingDetails: 'Cookie-urile de marketing sunt utilizate pentru a urmări comportamentul de navigare și pentru a afișa publicități relevante. Acestea pot fi partajate cu parteneri de advertising pentru a optimiza campaniile și pentru a vă arăta conținut personalizat pe alte site-uri.',
   },
   en: {
     title: 'Cookie Preferences',
@@ -31,6 +36,11 @@ const translations = {
     rejectAll: 'Reject Non-Essential',
     savePreferences: 'Save Preferences',
     manage: 'Manage Preferences',
+    learnMore: 'Learn more',
+    close: 'Close',
+    essentialDetails: 'Essential cookies are critical for basic website functionality. They enable authentication, session security, and remember your settings. Without them, certain website features will not work properly.',
+    analyticsDetails: 'Analytics cookies help us collect anonymous information about how users interact with our website. They allow us to analyze traffic, popular pages, and errors to continuously improve performance and user experience.',
+    marketingDetails: 'Marketing cookies are used to track browsing behavior and display relevant advertisements. They may be shared with advertising partners to optimize campaigns and show you personalized content on other websites.',
   },
 };
 
