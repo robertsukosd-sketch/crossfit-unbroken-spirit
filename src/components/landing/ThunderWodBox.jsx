@@ -43,6 +43,7 @@ export default function ThunderWodBox({ className = '' }) {
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-7 object-contain" />
         </a>
       </div>
+      </div>
     </div>
   );
 }
