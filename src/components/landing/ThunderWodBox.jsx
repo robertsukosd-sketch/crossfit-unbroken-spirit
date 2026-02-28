@@ -8,8 +8,13 @@ const iosQr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${e
 const androidQr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(ANDROID_URL)}`;
 
 export default function ThunderWodBox({ className = '' }) {
+  const { language } = useLanguage();
+  const title = language === 'ro' ? 'Descarcă aplicația' : 'Download the app';
+
   return (
-    <div className={`bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-row items-center justify-center gap-6 h-full ${className}`}>
+    <div className={`bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-col gap-4 h-full ${className}`}>
+      <h4 className="text-white font-bold text-center">{title}</h4>
+      <div className="flex flex-row items-center justify-center gap-6 flex-1">
       {/* Logo */}
       <div className="flex items-center justify-center">
         <img
