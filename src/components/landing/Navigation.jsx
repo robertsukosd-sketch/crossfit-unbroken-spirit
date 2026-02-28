@@ -106,7 +106,7 @@ export default function Navigation() {
               </div>
               <button
                 type="button"
-                onClick={() => scrollToSection('#contact')}
+                onClick={() => scrollToSection('#thunderwod-app')}
                 className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-600 text-gray-300 hover:text-white hover:border-zinc-400 text-sm font-medium transition-all"
               >
                 <Smartphone className="w-4 h-4 text-sky-400" />
