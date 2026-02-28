@@ -21,22 +21,26 @@ export default function ThunderWodBox({ className = '' }) {
   const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(storeUrl)}`;
 
   return (
-    <div className={`bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-row items-center justify-between gap-4 h-full ${className}`}>
-      {/* Logo on the left */}
-      <img
-        src="https://thunderwod.com/wp-content/uploads/2022/01/logo-thunderwod.png"
-        alt="ThunderWOD"
-        className="h-12 object-contain"
-      />
-
-      {/* QR Code on the right */}
-      <a href={storeUrl} target="_blank" rel="noopener noreferrer">
+    <div className={`bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-row items-center justify-center gap-8 h-full ${className}`}>
+      {/* Logo centered left */}
+      <div className="flex items-center justify-center">
         <img
-          src={qrSrc}
-          alt="QR Code"
-          className="w-24 h-24 rounded-lg bg-white p-1"
+          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/fafce54d5_Screenshot2026-02-28at235506.png"
+          alt="ThunderWOD"
+          className="h-16 w-16 object-contain rounded-lg"
         />
-      </a>
+      </div>
+
+      {/* QR Code centered right */}
+      <div className="flex items-center justify-center">
+        <a href={storeUrl} target="_blank" rel="noopener noreferrer">
+          <img
+            src={qrSrc}
+            alt="QR Code"
+            className="w-24 h-24 rounded-lg bg-white p-1"
+          />
+        </a>
+      </div>
     </div>
   );
 }
