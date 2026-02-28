@@ -76,7 +76,7 @@ export default function ContactSection() {
             {t("contact")}
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
-            {t("contactTitle")}
+            {t("contactTitlePrefix")} <span className="text-blue-500">{t("contactTitleHighlight")}</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto whitespace-pre-line leading-none">
             {t("contactSubtitle")}
