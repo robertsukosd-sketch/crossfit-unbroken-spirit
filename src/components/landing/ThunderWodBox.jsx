@@ -14,7 +14,7 @@ function detectPlatform() {
   return 'other';
 }
 
-export default function ThunderWodBox() {
+export default function ThunderWodBox({ className = '' }) {
   const [platform, setPlatform] = useState('other');
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function ThunderWodBox() {
   const storeLabel = platform === 'ios' ? 'App Store' : platform === 'android' ? 'Google Play' : 'App Store / Google Play';
 
   return (
-    <div className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-col items-center justify-center text-center gap-4">
+    <div className={`bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-col items-center justify-center text-center gap-4 h-full ${className}`}>
       {/* ThunderWOD Logo */}
       <div className="flex flex-col items-center gap-1">
         <img
