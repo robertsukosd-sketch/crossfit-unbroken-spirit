@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../LanguageProvider';
 
 const IOS_URL = 'https://apps.apple.com/app/thunderwod/id1607744328';
 const ANDROID_URL = 'https://play.google.com/store/apps/details?id=imok.thunderwod.app';
