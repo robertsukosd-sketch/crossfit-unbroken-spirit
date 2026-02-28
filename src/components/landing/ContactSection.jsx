@@ -223,40 +223,50 @@ export default function ContactSection() {
           </motion.div>
         </div>
 
-        {/* Bottom row: Social Links and Map */}
-        <div className="grid lg:grid-cols-3 gap-12 mt-12">
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="h-40"
-          >
-            <div className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 h-full flex flex-col justify-center items-center text-center">
-              <h4 className="text-white font-bold mb-4">{t("follow")}</h4>
-              <div className="flex gap-4 justify-center">
-                <a 
-                  href="https://www.instagram.com/crossfit.unbroken.spirit" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:scale-110 transition-transform"
-                >
-                  <Instagram className="w-8 h-8 text-white" />
-                </a>
-                <a 
-                  href="https://www.facebook.com/profile.php?id=61588232038424" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-16 h-16 rounded-xl bg-blue-600 flex items-center justify-center hover:scale-110 transition-transform"
-                >
-                  <Facebook className="w-8 h-8 text-white" />
-                </a>
+        {/* Bottom row: Social Links + ThunderWOD | Map */}
+        <div className="grid lg:grid-cols-2 gap-12 mt-12">
+          {/* Left column: Social Links + ThunderWOD stacked */}
+          <div className="flex flex-col gap-6">
+            {/* Social Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="h-40"
+            >
+              <div className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 h-full flex flex-col justify-center items-center text-center">
+                <h4 className="text-white font-bold mb-4">{t("follow")}</h4>
+                <div className="flex gap-4 justify-center">
+                  <a 
+                    href="https://www.instagram.com/crossfit.unbroken.spirit" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:scale-110 transition-transform"
+                  >
+                    <Instagram className="w-8 h-8 text-white" />
+                  </a>
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61588232038424" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-16 h-16 rounded-xl bg-blue-600 flex items-center justify-center hover:scale-110 transition-transform"
+                  >
+                    <Facebook className="w-8 h-8 text-white" />
+                  </a>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          {/* ThunderWOD App */}
-          <ThunderWodBox />
+            {/* ThunderWOD App */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="h-40"
+            >
+              <ThunderWodBox className="h-full" />
+            </motion.div>
+          </div>
 
           {/* Map */}
           <motion.div
