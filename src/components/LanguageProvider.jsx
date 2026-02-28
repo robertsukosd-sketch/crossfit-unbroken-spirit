@@ -205,7 +205,7 @@ export const translations = {
     contactSubtitle: "Do you have any questions? Do you want to try a free class? Write to us and we will contact you as soon as possible.",
     address: "Address",
     phone: "Phone",
-    email: "Email",
+    email: "E-mail",
     schedule_label: "Schedule",
     fullName: "Full Name",
     fullNamePlaceholder: "John Doe",
