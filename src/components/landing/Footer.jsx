@@ -127,6 +127,16 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* ANPC Badges */}
+      <div className="flex flex-col items-center pb-8">
+        <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow">
+          <img style={{width:'250px', margin:'5px'}} src="https://wpfitness.eu/wp-content/uploads/2022/10/anpc-sal.png" alt="Solutionarea Alternativa a Litigiilor" />
+        </a>
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="nofollow">
+          <img style={{width:'250px', margin:'5px'}} src="https://wpfitness.eu/wp-content/uploads/2022/10/anpc-sol.png" alt="Solutionarea Online a Litigiilor" />
+        </a>
+      </div>
+
       {openModal === 'cookie' && (
         <PolicyModal title={t("cookiePolicy")} content={cookieContent} onClose={() => setOpenModal(null)} closeLabel={language === 'ro' ? 'Închide' : 'Close'} />
       )}
