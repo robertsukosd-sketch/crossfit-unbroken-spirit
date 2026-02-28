@@ -372,10 +372,10 @@ export default function Footer() {
       </div>
 
       {openModal === 'cookie' && (
-        <PolicyModal title={t("cookiePolicy")} content={cookieContent} onClose={() => setOpenModal(null)} closeLabel={language === 'ro' ? 'Închide' : 'Close'} />
+        <PolicyModal title={language === 'ro' ? 'Politica de Cookie-uri' : 'Cookie Policy'} content={getCookieContent(language)} onClose={() => setOpenModal(null)} closeLabel={language === 'ro' ? 'Închide' : 'Close'} />
       )}
       {openModal === 'gdpr' && (
-        <PolicyModal title={language === 'ro' ? 'Confidențialitate și GDPR' : t("gdprPolicy")} content={gdprContent} onClose={() => setOpenModal(null)} closeLabel={language === 'ro' ? 'Închide' : 'Close'} />
+        <PolicyModal title={language === 'ro' ? 'Confidențialitate și GDPR' : 'Privacy and GDPR'} content={getPrivacyContent(language)} onClose={() => setOpenModal(null)} closeLabel={language === 'ro' ? 'Închide' : 'Close'} />
       )}
       {openModal === 'terms' && (
         <PolicyModal title={language === 'ro' ? 'Termeni și Condiții' : 'Terms and Conditions'} content={getTermsContent(language)} onClose={() => setOpenModal(null)} closeLabel={language === 'ro' ? 'Închide' : 'Close'} />
