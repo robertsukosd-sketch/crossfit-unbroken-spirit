@@ -27,11 +27,21 @@ export default function Home() {
         <div id="hero">
           <HeroSection />
         </div>
-        <AboutSection />
-        <ProgramsSection />
-        <PricingSection />
-        <ScheduleSection />
-        <ContactSection />
+        <div className="py-20">
+          <AboutSection />
+        </div>
+        <div className="py-20">
+          <ProgramsSection />
+        </div>
+        <div className="py-20">
+          <PricingSection />
+        </div>
+        <div className="py-20">
+          <ScheduleSection />
+        </div>
+        <div className="py-20">
+          <ContactSection />
+        </div>
         <Footer />
 
         <AccessibilityToolbar />
