@@ -34,6 +34,8 @@ export default function Home() {
         <ContactSection />
         <Footer />
 
+        <AccessibilityToolbar />
+
         {visible && (
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
