@@ -49,6 +49,7 @@ export default function CookieConsent() {
   const t = translations[language] || translations.en;
   const [showBanner, setShowBanner] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [selectedCookie, setSelectedCookie] = useState(null);
   const [preferences, setPreferences] = useState({
     essential: true,
     analytics: false,
