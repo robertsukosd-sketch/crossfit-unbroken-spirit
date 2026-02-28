@@ -128,12 +128,12 @@ export default function Footer() {
       </div>
 
       {/* ANPC Badges */}
-      <div className="flex flex-col items-center pb-8">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-4 pb-8">
         <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow">
-          <img style={{width:'250px', margin:'5px'}} src="https://wpfitness.eu/wp-content/uploads/2022/10/anpc-sal.png" alt="Solutionarea Alternativa a Litigiilor" />
+          <img style={{width:'250px'}} src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/fdece7d95_anpc-sal.png" alt="Solutionarea Alternativa a Litigiilor" />
         </a>
         <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="nofollow">
-          <img style={{width:'250px', margin:'5px'}} src="https://wpfitness.eu/wp-content/uploads/2022/10/anpc-sol.png" alt="Solutionarea Online a Litigiilor" />
+          <img style={{width:'250px'}} src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/af3f98021_anpc-sol.png" alt="Solutionarea Online a Litigiilor" />
         </a>
       </div>
 
