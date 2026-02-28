@@ -4,16 +4,64 @@ import Logo from './Logo';
 import { useLanguage } from '../LanguageProvider';
 import PolicyModal from './PolicyModal';
 
-const cookieContent = (
-  <>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
-    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-    <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</p>
-  </>
-);
+const getCookieContent = (language) => {
+  if (language === 'ro') {
+    return (
+      <>
+        <p><strong>1. Ce sunt Cookie-urile?</strong></p>
+        <p>Cookie-urile sunt fișiere mici text stocate pe dispozitivul dumneavoastră (computer, telefon, tabletă) atunci când vizitați site-ul nostru. Acestea conțin informații despre preferințele și comportamentul de navigare, permițând site-ului să vă recunoască și să ofere o experiență personalizată.</p>
+        
+        <p><strong>2. Tipuri de Cookie-uri pe Care le Folosim</strong></p>
+        <p><strong>Cookie-uri Esențiale (Necesare):</strong> Acestea sunt critice pentru funcționarea site-ului. Fără ele, funcții de bază cum ar fi autentificarea și securitatea nu vor funcționa. Nu necesită consimțământul explicit conform legii.</p>
+        <p><strong>Cookie-uri de Performanță:</strong> Ne ajută să înțelegem cum utilizatorii interacționează cu site-ul nostru prin colectarea de date anonime despre vizite, pagini vizitate și erori. Utilizăm această informație pentru a îmbunătăți performanța site-ului.</p>
+        <p><strong>Cookie-uri Funcționale:</strong> Memorizează preferințele dumneavoastră (limba, zona, etc.) pentru a personaliza experiența de navigare.</p>
+        <p><strong>Cookie-uri de Marketing:</strong> Utilizate pentru a urmări comportamentul dumneavoastră și a afișa publicități relevante. Aceste cookie-uri sunt partajate cu parteneri de advertising și necesită consimțământul explicit.</p>
+        
+        <p><strong>3. Cookie-uri Terților</strong></p>
+        <p>Site-ul nostru poate conține cookie-uri terților, cum ar fi de la Google Analytics, pentru a analiza traficul și comportamentul utilizatorilor. Terții pot utiliza aceste informații pentru a afișa publicități pe alte site-uri.</p>
+        
+        <p><strong>4. Cum Poți Controla Cookie-urile</strong></p>
+        <p>Poți controla și șterge cookie-urile prin setările browserului tău. Majoritatea browserelor moderne permit să blochezi cookie-urile sau să primești notificări înainte ca acestea să fie stocate. Rețineți că dezactivarea anumitor cookie-uri poate afecta funcția site-ului.</p>
+        
+        <p><strong>5. Consimțământul pentru Cookie-uri</strong></p>
+        <p>Conform legislației românești și GDPR, te vom cere consimțământul pentru cookie-urile non-esențiale. Poți retrage consimțământul în orice moment din setările de confidențialitate.</p>
+        
+        <p><strong>6. Retenție și Ștergere</strong></p>
+        <p>Cookie-urile esențiale sunt șterse atunci când închizi browserul sau după un anumit período. Cookie-urile funcționale și de marketing pot persista mai mult. Poți șterge manual cookie-urile în orice moment.</p>
+        
+        <p><strong>7. Contact și Opțiuni de Opt-Out</strong></p>
+        <p>Pentru mai multe informații sau pentru a opta din cookie-urile de marketing, contactează-ne la train@unbrokenspirit.ro.</p>
+      </>
+    );
+  }
+  return (
+    <>
+      <p><strong>1. What Are Cookies?</strong></p>
+      <p>Cookies are small text files stored on your device (computer, phone, tablet) when you visit our website. They contain information about your preferences and browsing behavior, allowing the website to recognize you and provide a personalized experience.</p>
+      
+      <p><strong>2. Types of Cookies We Use</strong></p>
+      <p><strong>Essential (Necessary) Cookies:</strong> These are critical for website functionality. Without them, basic functions such as authentication and security will not work. They do not require explicit consent under the law.</p>
+      <p><strong>Performance Cookies:</strong> They help us understand how users interact with our website by collecting anonymous data about visits, pages viewed, and errors. We use this information to improve website performance.</p>
+      <p><strong>Functional Cookies:</strong> Remember your preferences (language, area, etc.) to personalize your browsing experience.</p>
+      <p><strong>Marketing Cookies:</strong> Used to track your behavior and display relevant advertisements. These cookies are shared with advertising partners and require explicit consent.</p>
+      
+      <p><strong>3. Third-Party Cookies</strong></p>
+      <p>Our website may contain cookies from third parties, such as Google Analytics, to analyze traffic and user behavior. Third parties may use this information to display advertisements on other websites.</p>
+      
+      <p><strong>4. How You Can Control Cookies</strong></p>
+      <p>You can control and delete cookies through your browser settings. Most modern browsers allow you to block cookies or receive notifications before they are stored. Note that disabling certain cookies may affect website functionality.</p>
+      
+      <p><strong>5. Consent for Cookies</strong></p>
+      <p>In accordance with Romanian legislation and GDPR, we will request your consent for non-essential cookies. You can withdraw consent at any time from privacy settings.</p>
+      
+      <p><strong>6. Retention and Deletion</strong></p>
+      <p>Essential cookies are deleted when you close your browser or after a certain period. Functional and marketing cookies may persist longer. You can manually delete cookies at any time.</p>
+      
+      <p><strong>7. Contact and Opt-Out Options</strong></p>
+      <p>For more information or to opt-out of marketing cookies, contact us at train@unbrokenspirit.ro.</p>
+    </>
+  );
+};
 
 const gdprContent = (
   <>
