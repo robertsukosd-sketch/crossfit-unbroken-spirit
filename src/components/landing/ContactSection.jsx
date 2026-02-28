@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { base44 } from '@/api/base44Client';
 import { toast } from "sonner";
 import { useLanguage } from '../LanguageProvider';
+import ThunderWodBox from '../landing/ThunderWodBox';
 
 const getContactInfo = (t) => [
   {
