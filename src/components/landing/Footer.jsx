@@ -133,7 +133,7 @@ export default function Footer() {
               Privacy
             </button>
             <span className="text-gray-600">|</span>
-            <button className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+            <button onClick={() => setOpenModal('terms')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
               Terms and Conditions
             </button>
             <span className="text-gray-600">|</span>
