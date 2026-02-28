@@ -104,6 +104,15 @@ export default function Navigation() {
                     EN
                   </button>
               </div>
+              <a
+                href="https://apps.apple.com/app/thunderwod/id1607744328"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-600 text-gray-300 hover:text-white hover:border-zinc-400 text-sm font-medium transition-all"
+              >
+                <Smartphone className="w-4 h-4 text-sky-400" />
+                ThunderWOD App
+              </a>
               <Button
                 onClick={() => scrollToSection('#contact')}
                 className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-full px-6"
