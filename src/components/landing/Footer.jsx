@@ -167,6 +167,9 @@ export default function Footer() {
       {openModal === 'gdpr' && (
         <PolicyModal title={t("gdprPolicy")} content={gdprContent} onClose={() => setOpenModal(null)} closeLabel={language === 'ro' ? 'Închide' : 'Close'} />
       )}
+      {openModal === 'terms' && (
+        <PolicyModal title={language === 'ro' ? 'Termeni și Condiții' : 'Terms and Conditions'} content={termsContent} onClose={() => setOpenModal(null)} closeLabel={language === 'ro' ? 'Închide' : 'Close'} />
+      )}
     </footer>
   );
 }
