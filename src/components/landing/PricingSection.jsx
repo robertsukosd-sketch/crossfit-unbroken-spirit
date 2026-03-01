@@ -95,17 +95,27 @@ const getPricingCategories = (t, language) => [
     popular: false
   },
   {
-    name: language === 'ro' ? "Nutriție" : "Nutrition",
-    price: "350",
-    period: language === 'ro' ? "lună" : "month",
-    description: language === 'ro' ? "Plan alimentar personalizat" : "Personalized meal plan",
-    features: language === 'ro' 
-      ? ["Consultație inițială", "Plan nutrițional", "Monitorizare progres", "Suport continuu"]
-      : ["Initial consultation", "Nutrition plan", "Progress monitoring", "Ongoing support"],
-    popular: false
-  }]
+     name: language === 'ro' ? "Nutriție" : "Nutrition",
+     price: "350",
+     period: language === 'ro' ? "lună" : "month",
+     description: language === 'ro' ? "Plan alimentar personalizat" : "Personalized meal plan",
+     features: language === 'ro' 
+       ? ["Consultație inițială", "Plan nutrițional", "Monitorizare progres", "Suport continuu"]
+       : ["Initial consultation", "Nutrition plan", "Progress monitoring", "Ongoing support"],
+     popular: false
+   },
+   {
+     name: language === 'ro' ? "Reducere Elevi/Studenti" : "Student Discount",
+     price: "300",
+     period: language === 'ro' ? "lună" : "month",
+     description: language === 'ro' ? "*pana in 26 de ani" : "*up to 26 years old",
+     features: language === 'ro' 
+       ? ["Toate beneficiile abonamentului nelimitat"]
+       : ["All unlimited membership benefits"],
+     popular: false
+   }]
 
-},
+  },
 {
   title: "Personal Training",
   icon: User,
