@@ -59,10 +59,27 @@ export default function StartHereSection() {
           viewport={{ once: true }}
           className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-800 mb-8 max-w-4xl mx-auto">
           
-          <div className="space-y-6 text-gray-300 leading-relaxed">
-            <p>
-              {t("startHerePreview")}
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="text-gray-300 leading-relaxed">
+              <p>
+                {t("startHerePreview")}
+              </p>
+            </div>
+            <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/mlVrkiCoKkg"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+          
+          <div className="space-y-6 text-gray-300 leading-relaxed mt-6">
             
             {isExpanded && (
               <motion.div
