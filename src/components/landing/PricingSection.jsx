@@ -193,7 +193,7 @@ export default function PricingSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               style={mobileOrder !== undefined ? { order: mobileOrder } : {}}
-              className={`relative rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] flex flex-col h-full md:[order:unset] ${
+              className={`relative rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] flex flex-col h-full md:![order:0] ${
               plan.featured ?
               'bg-gradient-to-br from-blue-600 to-sky-500 shadow-2xl shadow-blue-500/20' :
               'bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/30'}`
