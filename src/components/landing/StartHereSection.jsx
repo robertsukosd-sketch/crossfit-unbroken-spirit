@@ -42,7 +42,8 @@ export default function StartHereSection() {
   ];
 
   return (
-    <section id="starthere" className="py-24 bg-zinc-950 relative overflow-hidden">
+    <>
+    <section id="starthere" ref={sectionRef} className="py-24 bg-zinc-950 relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute top-1/3 left-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-sky-600/5 rounded-full blur-3xl" />
