@@ -8,6 +8,8 @@ import ReactMarkdown from 'react-markdown';
 export default function StartHereSection() {
   const { t, language } = useLanguage();
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
+  const sectionRef = React.useRef(null);
 
   const links = [
     {
