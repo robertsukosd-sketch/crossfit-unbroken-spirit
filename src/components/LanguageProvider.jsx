@@ -146,7 +146,7 @@ export const translations = {
     freeTrial: "Book a Free Session",
     heroTag: "Train like a champion",
     heroTitle: "STRENGTH. COMMUNITY. RESULTS.",
-    heroSubtitle: "Discover your maximum potential in a community dedicated to performance. CrossFit for all fitness levels.",
+    heroSubtitle: "Discover your maximum potential in a longevity and performance driven community. CrossFit for any level of fitness.",
     startNow: "Start Now",
     discoverPrograms: "Discover Programs",
     discoverThePrograms: "Discover the Programs",
