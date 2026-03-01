@@ -172,7 +172,7 @@ export default function ScheduleSection() {
           ))}
         </div>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex flex-col items-center gap-4">
           <div className="relative rounded-2xl px-6 py-4 text-center max-w-2xl w-full border border-sky-500/30 bg-sky-500/5">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600/10 to-sky-500/10" />
             <p className="relative text-gray-300 text-base">
@@ -187,6 +187,25 @@ export default function ScheduleSection() {
               >
                 {language === 'ro' ? '⚡ descarcă aplicația ThunderWOD' : '⚡ download the ThunderWOD app'}
               </button>
+            </p>
+          </div>
+
+          <div className="relative rounded-2xl px-6 py-4 text-center max-w-2xl w-full border border-amber-500/30 bg-amber-500/5">
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-amber-600/10 to-yellow-500/10" />
+            <p className="relative text-gray-300 text-base">
+              {language === 'ro'
+                ? 'Pe calculator? Deschide sau accesează'
+                : 'On desktop? Open or access'
+              }
+              {' '}
+              <a
+                href="https://app.thunderwod.com/#/wod"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-black text-amber-400 hover:text-white transition-all bg-amber-500/20 hover:bg-amber-500 px-2 py-0.5 rounded-md text-base inline-block"
+              >
+                {language === 'ro' ? '🖥️ ThunderWOD pe desktop' : '🖥️ ThunderWOD on desktop'}
+              </a>
             </p>
           </div>
         </div>
