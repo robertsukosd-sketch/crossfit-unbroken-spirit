@@ -1,6 +1,6 @@
-export const IOS_UNIVERSAL_LINK = 'https://app.thunderwod.com';
+export const IOS_DEEP_LINK = 'thunderwod://';
 export const IOS_APP_STORE = 'https://apps.apple.com/app/thunderwod/id1607744328';
-export const ANDROID_UNIVERSAL_LINK = 'https://app.thunderwod.com';
+export const ANDROID_DEEP_LINK = 'thunderwod://';
 export const ANDROID_PLAY_STORE = 'https://play.google.com/store/apps/details?id=imok.thunderwod.app';
 export const DESKTOP_URL = 'https://app.thunderwod.com/#/wod';
 
