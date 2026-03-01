@@ -60,8 +60,8 @@ export default function StartHereSection() {
           viewport={{ once: true }}
           className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-800 mb-8 max-w-4xl mx-auto">
           
-          <div className="flex flex-col gap-8">
-            <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none w-full">
+          <div className="grid md:grid-cols-[1.3fr_1fr] gap-8 items-center">
+            <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none">
               <ReactMarkdown
                 components={{
                   h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
