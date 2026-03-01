@@ -12,23 +12,27 @@ export default function ThunderWodBox({ className = '' }) {
       <h4 className="text-white font-bold text-center">{title}</h4>
       <div className="flex flex-row items-center justify-center gap-6 flex-1">
         {/* Logo */}
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <img
             src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/892734e42_logothunderwod.jpeg"
             alt="ThunderWOD"
-            className="w-36 h-28 object-contain"
+            className="w-28 h-28 object-contain"
           />
         </div>
 
         {/* iOS */}
-        <a href={IOS_URL} target="_blank" rel="noopener noreferrer">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-10 object-contain" />
-        </a>
+        <div className="flex flex-col items-center justify-center">
+          <a href={IOS_URL} target="_blank" rel="noopener noreferrer">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="w-28 h-28 object-contain" />
+          </a>
+        </div>
 
         {/* Android */}
-        <a href={ANDROID_URL} target="_blank" rel="noopener noreferrer">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-10 object-contain" />
-        </a>
+        <div className="flex flex-col items-center justify-center">
+          <a href={ANDROID_URL} target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="w-28 h-28 object-contain" />
+          </a>
+        </div>
       </div>
     </div>
   );
