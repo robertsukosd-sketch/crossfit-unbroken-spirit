@@ -270,7 +270,7 @@ export default function PricingSection() {
                 'bg-white text-blue-600 hover:bg-white/90' :
                 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'}`
                 }>
-                    <a href={getAppStoreUrl()} target="_blank" rel="noopener noreferrer">
+                    <a href={isDesktop() ? 'https://app.thunderwod.com/#/wod' : getAppStoreUrl()} target="_blank" rel="noopener noreferrer">
                       {t("startNowBtn")}
                     </a>
                   </Button>
