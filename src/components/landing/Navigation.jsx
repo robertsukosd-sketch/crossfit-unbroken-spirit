@@ -168,12 +168,12 @@ export default function Navigation() {
 
             {/* Language Toggle Mobile + Menu Button */}
             <div className="lg:hidden flex items-center gap-2 flex-shrink-0">
-              <div className="flex flex-row gap-1 bg-zinc-900 rounded-full p-1">
+              <div className="flex flex-row gap-0.5 bg-zinc-900 rounded-full p-0.5">
                 <button
                     type="button"
                     onClick={() => changeLanguage('ro')}
                     className={cn(
-                      "px-2 py-1 rounded-full text-xs font-semibold transition-all",
+                      "px-1.5 py-0.5 rounded-full text-[10px] font-semibold transition-all",
                       language === 'ro' 
                         ? "bg-blue-500 text-white" 
                         : "text-gray-400"
@@ -185,7 +185,7 @@ export default function Navigation() {
                     type="button"
                     onClick={() => changeLanguage('en')}
                     className={cn(
-                      "px-2 py-1 rounded-full text-xs font-semibold transition-all",
+                      "px-1.5 py-0.5 rounded-full text-[10px] font-semibold transition-all",
                       language === 'en' 
                         ? "bg-blue-500 text-white" 
                         : "text-gray-400"
