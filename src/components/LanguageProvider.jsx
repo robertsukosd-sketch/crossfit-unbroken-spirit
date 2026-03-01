@@ -307,7 +307,20 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     startHereSubtitle: "A quick guide for those who are new to CrossFit",
     startHerePreview: "**What is CrossFit?**\n\nIf you already searched on the Internet, you probably found the official definition: \"constantly varied functional movements, executed at a high intensity\". Sounds pretty technical, right? **Here's what it actually means:** CrossFit is a training program designed to prepare you for real life. You're not just training to look good in the mirror (though that will be a consequence).",
     startHerePreviewFullWidth: "You're training so you can lift a heavy box without breaking your back, so you can run for the bus without running out of breath, and be in the best physical shape of your life.\n\nWe combine gymnastics, weightlifting and cardio elements, which we vary every day. With us, routine is the enemy, so you will never get bored.",
-    startHereFullText1: `## Why CrossFit and Not a Traditional Gym? (The Math of Results)
+    startHereFullText1: `## The Supreme Myth: "I Need to Be in Shape First to Start CrossFit"
+
+It's perfectly normal to feel intimidated the first time, but that's also the biggest barrier keeping you stuck. From the start, one thing must be clear: **you don't need to be in shape to start CrossFit; you start CrossFit to get in shape.**
+
+Saying you need to train before coming to us is like saying you need to already know a foreign language before signing up for a course. It makes no sense!
+
+Here's the reality in our gym: at the same class, a former competitive athlete and a 40-year-old who works all day at a desk can train side by side. Both do the same workout, but adapted to each person's level (we call this the **scaled** version).
+
+* If the workout calls for squats with a heavy weight, one person might use the prescribed weight, while another might use a PVC pipe or just bodyweight, sitting on a box.
+* If today's Workout of the Day (WOD) has pull-ups, some will do them at the bar, others will do assisted ring rows with their feet on the ground.
+
+Intensity is completely relative. Coaches are here to make sure you work correctly and at **your limit**, not your neighbor's. **Your ego stays at the door.** Come exactly as you are now.
+
+## Why CrossFit and Not a Traditional Gym? (The Math of Results)
 
 Let's be honest: a traditional gym membership often seems cheaper at first glance. But how much does a lack of results and wasted time really cost you? Here's why the CrossFit model works completely differently:
 
