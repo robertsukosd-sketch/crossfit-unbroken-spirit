@@ -91,7 +91,6 @@ export default function StartHereSection() {
               </div>
             <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none space-y-4">
               <p>{t("startHerePreviewFullWidth")}</p>
-              <p>{language === 'ro' ? 'Combinăm elemente de gimnastică, ridicări de greutăți și cardio, pe care le schimbăm în fiecare zi. La noi, rutina este inamicul, așa că n-o să te plictisești niciodată.' : 'We combine gymnastics, weightlifting and cardio elements, which we vary every day. With us, routine is the enemy, so you will never get bored.'}</p>
             </div>
           </div>
           
