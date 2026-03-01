@@ -305,7 +305,7 @@ export default function StartHereSection() {
         </motion.div>
       </div>
     </section>
-    
+
     {/* Sticky Show Less Button */}
     <AnimatePresence>
       {isExpanded && isSectionVisible && (
