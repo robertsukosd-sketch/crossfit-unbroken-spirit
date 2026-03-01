@@ -159,7 +159,7 @@ Probabil te întrebi de ce ai alege box-ul nostru în locul unui abonament la o 
 
 * Alergarea este excelentă pentru inimă, dar lucrează doar rezistența. 
 * CrossFit-ul este un program complet. Noi te ajutăm să dezvolți echilibrat toate cele **10 abilități fizice generale**: rezistență cardiovasculară, stamină, forță, flexibilitate, putere, viteză, coordonare, agilitate, echilibru și precizie. Devii un atlet complet, nu doar unul care poate alerga mult.`,
-    startHereFullText3: `## Ce rezultate concrete vei obține?
+    startHereFullText3: `## Ce rezultate concrete poți obține?
 
 Nu vindem iluzii, ci rezultate pe care le poți măsura în timp real, săptămână de săptămână:
 
