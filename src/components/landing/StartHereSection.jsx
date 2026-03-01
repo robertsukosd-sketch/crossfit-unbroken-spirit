@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown, ExternalLink } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
+import ReactMarkdown from 'react-markdown';
 
 export default function StartHereSection() {
   const { t, language } = useLanguage();
@@ -60,10 +61,15 @@ export default function StartHereSection() {
           className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-800 mb-8 max-w-4xl mx-auto">
           
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-gray-300 leading-relaxed">
-              <p>
+            <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none">
+              <ReactMarkdown
+                components={{
+                  h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
+                  p: ({node, ...props}) => <p className="m-0" {...props} />,
+                }}
+              >
                 {t("startHerePreview")}
-              </p>
+              </ReactMarkdown>
             </div>
             <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
               <iframe
