@@ -164,7 +164,7 @@ Probabil te întrebi de ce ai alege box-ul nostru în locul unui abonament la o 
 Nu vindem iluzii, ci rezultate pe care le poți măsura în timp real, săptămână de săptămână:
 
 * **Compoziție corporală schimbată:** Vei vedea o scădere clară a procentului de grăsime și o creștere a masei musculare (hainele se vor așeza altfel pe tine).
-* **Forță și rezistență dublate:** Vei putea ridica greutăți la care nici nu visai în prima zi și vei putea susține efortul mai mult timp, fără să obosești.
+* **Forță și rezistență crescute:** Vei putea ridica greutăți la care nici nu visai în prima zi și vei putea susține efortul mai mult timp, fără să obosești.
 * **O sănătate de fier:** Analizele tale se vor îmbunătăți (tensiune arterială optimă, ritm cardiac de repaus redus, energie constantă pe tot parcursul zilei).
 * **Mobilitate recâștigată:** Vom corecta postura greșită de la birou și vei scăpa de rigiditatea și durerile de spate.
 
