@@ -18,6 +18,7 @@ export const useLanguage = () => {
 export const translations = {
   ro: {
     home: "Acasă",
+    startHere: "Incepe Aici",
     programs: "Programe",
     pricing: "Prețuri",
     schedule: "Orar",
@@ -128,9 +129,16 @@ export const translations = {
     anpc: "ANPC",
     copyright: "Toate drepturile rezervate.",
     tagline: "Comunitatea ta de fitness. Antrenamente funcționale de înaltă intensitate pentru rezultate reale.",
+    startHereTitle: "De Unde Să Începi",
+    startHereSubtitle: "Ghid complet pentru cei care sunt noi în lumea CrossFit",
+    startHerePreview: "CrossFit nu este doar o modalitate de antrenament - este o revoluție în modul în care ne gândim la fitness. Spre deosebire de salele de sport tradiționale, CrossFit combină puterea unei comunități dedicate cu programare profesională și coaching expert.",
+    startHereFullText1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    startHereFullText2: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    startHereFullText3: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
   },
   en: {
     home: "Home",
+    startHere: "Start Here",
     programs: "Programs",
     pricing: "Pricing",
     schedule: "Schedule",
@@ -241,6 +249,12 @@ export const translations = {
     anpc: "ANPC",
     copyright: "All rights reserved.",
     tagline: "Your fitness community. High-intensity functional training for real results.",
+    startHereTitle: "Where to Start",
+    startHereSubtitle: "Complete guide for those new to the world of CrossFit",
+    startHerePreview: "CrossFit is not just a way to train - it is a revolution in how we think about fitness. Unlike traditional gyms, CrossFit combines the power of a dedicated community with professional programming and expert coaching.",
+    startHereFullText1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    startHereFullText2: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    startHereFullText3: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
   }
 };
 
