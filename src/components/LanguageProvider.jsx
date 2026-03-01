@@ -354,11 +354,11 @@ At your first workouts, you might hear terms that sound like secret language. Do
 * **Box / Affiliate:** That's what we call the CrossFit gym. It's an open, raw space with no mirrors and full of energy. Official gyms are independent "affiliates", not corporate franchises.
 * **WOD (Workout of the Day):** Your task for the day, which is always different from what you did yesterday.
 * **AMRAP (As Many Rounds/Reps As Possible):** The challenge to do as many rounds or reps as possible from a series of exercises in a given time. You set your own pace!
-* **EMOM (Every Minute on the Minute):** You start an exercise at the beginning of each minute. Whatever time is left in that minute after you finish your reps is your rest.
-* **Tabata:** A fast and intense workout format: 8 rounds of 20 seconds of maximum effort, followed by 10 seconds of rest. It only lasts 4 minutes, but we promise you'll feel it fully!
+* **EMOM (Every Minute on the Minute):** You start an exercise at the beginning of each minute. Your reps is your rest time.
+* **Tabata:** A fast and intense workout format: 8 rounds, 20 seconds each, of maximum effort, followed by 10 seconds of rest. It only lasts 4 minutes, but we promise you'll feel it fully!
 * **PR / PB (Personal Record / Personal Best):** Your personal record on a lift or a WOD. This is the moment the whole gym will clap for you!
 * **Benchmark:** A standard test workout we repeat a few times a year. It's how we clearly and mathematically measure how much you've progressed from the previous months.
-* **Hero WOD:** A special, usually harder and more intense workout, created globally in honor of a member of the armed forces or emergency services who died in the line of duty.
+* **Hero WOD:** A special, usually harder and more intense workout, created globally in honor of a member of the armed forces or emergency services that died in the line of duty.
 * **Chipper:** A workout made up of a long list of exercises (usually with many reps each). You finish all reps of one exercise and move to the next, gradually "chipping away" at the total volume of work until you reach the end.
 * **Met-Con (Metabolic Conditioning):** The metabolic conditioning (cardio) part of the workout, designed to increase your endurance and burn calories long after you leave the gym.
 * **Kipping:** A fluid movement, specific to gymnastics, where you use the swing and momentum of your own body to complete a movement (like pull-ups on the bar). It doesn't mean you're "cheating," it means you're moving more efficiently using your whole body.
