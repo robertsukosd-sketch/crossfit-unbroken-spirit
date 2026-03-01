@@ -5,6 +5,7 @@ import LanguageProvider from '@/components/LanguageProvider';
 import Navigation from '@/components/landing/Navigation';
 import HeroSection from '@/components/landing/HeroSection';
 import AboutSection from '@/components/landing/AboutSection';
+import StartHereSection from '@/components/landing/StartHereSection';
 import ProgramsSection from '@/components/landing/ProgramsSection';
 import PricingSection from '@/components/landing/PricingSection';
 import ScheduleSection from '@/components/landing/ScheduleSection';
@@ -32,6 +33,9 @@ export default function Home() {
         <motion.div className="py-20" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <AboutSection />
         </motion.div>
+        <div id="starthere">
+          <StartHereSection />
+        </div>
         <motion.div className="py-20" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <ProgramsSection />
         </motion.div>
