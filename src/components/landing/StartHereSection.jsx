@@ -149,39 +149,43 @@ export default function StartHereSection() {
                   </ReactMarkdown>
                 </div>
 
-                {/* Images Grid */}
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
-                    <img 
-                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/268d0195a_image.png" 
-                      alt="CrossFit" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
-                    <img 
-                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/9966cf2d9_image.png" 
-                      alt="Running vs CrossFit" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
+                {language === 'ro' && (
+                  <>
+                    {/* Images Grid */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
+                        <img 
+                          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/268d0195a_image.png" 
+                          alt="CrossFit" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
+                        <img 
+                          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/9966cf2d9_image.png" 
+                          alt="Running vs CrossFit" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
 
-                <div className="bg-zinc-800/50 rounded-xl p-6">
-                  <ReactMarkdown
-                    className="prose prose-invert prose-sm max-w-none"
-                    components={{
-                      h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
-                      h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
-                      p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
-                      ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
-                      li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                      strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
-                    }}
-                  >
-                    {t("startHereFullText3")}
-                  </ReactMarkdown>
-                </div>
+                    <div className="bg-zinc-800/50 rounded-xl p-6">
+                      <ReactMarkdown
+                        className="prose prose-invert prose-sm max-w-none"
+                        components={{
+                          h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
+                          h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
+                          p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
+                          ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
+                          li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                          strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
+                        }}
+                      >
+                        {t("startHereFullText3")}
+                      </ReactMarkdown>
+                    </div>
+                  </>
+                )}
               </motion.div>
             )}
           </div>
