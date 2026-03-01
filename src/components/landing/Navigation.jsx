@@ -104,14 +104,31 @@ export default function Navigation() {
                     EN
                   </button>
               </div>
-              <button
+              <motion.button
                 type="button"
                 onClick={() => scrollToSection('#thunderwod-app')}
-                className="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-600 text-gray-300 hover:text-white hover:border-zinc-400 text-sm font-medium transition-all"
+                animate={{ boxShadow: ['0 0 0px #38bdf8', '0 0 12px #38bdf8', '0 0 0px #38bdf8'] }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                className="relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold text-white transition-all overflow-hidden"
+                style={{ background: 'linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 50%, #1e3a5f 100%)', backgroundSize: '200% 100%' }}
+                whileHover={{ scale: 1.05 }}
               >
-                <Smartphone className="w-4 h-4 text-sky-400" />
-                ThunderWOD App
-              </button>
+                <motion.span
+                  className="absolute inset-0 rounded-full"
+                  animate={{ opacity: [0, 0.3, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
+                />
+                <Smartphone className="w-4 h-4 text-sky-300 relative z-10" />
+                <span className="relative z-10">ThunderWOD App</span>
+                <motion.span
+                  className="relative z-10 text-[10px] bg-sky-400 text-black font-black px-1.5 py-0.5 rounded-full leading-none"
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  NEW
+                </motion.span>
+              </motion.button>
               <Button
                 onClick={() => scrollToSection('#contact')}
                 className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-full px-6"
