@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Clock, Users } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
-import { openMobileOrDesktop } from '../appStoreUtils';
+import { openAppStore, openMobileOrDesktop } from '../appStoreUtils';
 
 const getSchedule = (t) => ({
   [t("monday")]: [

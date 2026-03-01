@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Check, Sparkles, Dumbbell, Apple, User } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
-import { openAppStore } from '../appStoreUtils';
+import { openMobileOrDesktop } from '../appStoreUtils';
 
 const getPricingCategories = (t, language) => [
 {
