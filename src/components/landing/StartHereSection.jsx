@@ -94,21 +94,6 @@ export default function StartHereSection() {
             </div>
           </div>
           
-          <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none mt-6">
-            <ReactMarkdown
-              components={{
-                h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
-                h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
-                p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
-                ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
-                li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
-              }}
-            >
-              {t("startHereFullText1")}
-            </ReactMarkdown>
-          </div>
-
           <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700 mt-6">
             <iframe
               width="100%"
