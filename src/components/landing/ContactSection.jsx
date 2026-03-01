@@ -100,15 +100,20 @@ export default function ContactSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-col"
+                  className="bg-zinc-900/50 rounded-xl p-4 sm:p-6 border border-zinc-800 flex flex-col sm:flex-col"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4">
-                    <info.icon className="w-6 h-6 text-sky-400" />
+                  {/* Mobile: row layout with icon + text side by side */}
+                  <div className="flex flex-row sm:flex-col items-center sm:items-start gap-3 sm:gap-0">
+                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0 sm:mb-4">
+                      <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-sky-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold sm:mb-2 text-sm sm:text-base">{info.title}</h4>
+                      {info.details.map((detail, i) => (
+                        <p key={i} className="text-gray-400 text-xs sm:text-sm">{detail}</p>
+                      ))}
+                    </div>
                   </div>
-                  <h4 className="text-white font-bold mb-2">{info.title}</h4>
-                  {info.details.map((detail, i) => (
-                    <p key={i} className="text-gray-400 text-sm">{detail}</p>
-                  ))}
                 </motion.div>
               ))}
             </div>
