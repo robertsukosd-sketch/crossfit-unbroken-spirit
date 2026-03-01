@@ -351,9 +351,9 @@ We don't sell illusions, but results you can measure in real time, week by week:
 
 At your first workouts, you might hear terms that sound like secret language. Don't worry, here's your survival dictionary:
 
-* **Box / Affiliate:** That's what we call the CrossFit gym. It's an open, raw space with no mirrors and full of energy. Official gyms are "affiliates" independent, not corporate franchises.
-* **WOD (Workout of the Day):** Your mission for the day, which is always different from what you did yesterday.
-* **AMRAP (As Many Rounds/Reps As Possible):** The challenge to do as many rounds or reps as possible from a series of exercises in a given time. You're the one setting the pace!
+* **Box / Affiliate:** That's what we call the CrossFit gym. It's an open, raw space with no mirrors and full of energy. Official gyms are independent "affiliates", not corporate franchises.
+* **WOD (Workout of the Day):** Your task for the day, which is always different from what you did yesterday.
+* **AMRAP (As Many Rounds/Reps As Possible):** The challenge to do as many rounds or reps as possible from a series of exercises in a given time. You set your own pace!
 * **EMOM (Every Minute on the Minute):** You start an exercise at the beginning of each minute. Whatever time is left in that minute after you finish your reps is your rest.
 * **Tabata:** A fast and intense workout format: 8 rounds of 20 seconds of maximum effort, followed by 10 seconds of rest. It only lasts 4 minutes, but we promise you'll feel it fully!
 * **PR / PB (Personal Record / Personal Best):** Your personal record on a lift or a WOD. This is the moment the whole gym will clap for you!
