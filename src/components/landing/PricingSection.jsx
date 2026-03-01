@@ -253,7 +253,7 @@ export default function PricingSection() {
                 onClick={() => scrollToSection('contact')}>
                     {t("startNowBtn")}
                   </Button>
-                </motion.div>;
+                </motion.div>
             })}
             </div>
           </div>
