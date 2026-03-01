@@ -225,6 +225,7 @@ export const translations = {
     sendAnother: "Send Another Message",
     follow: "Follow Us",
     location: "Splaiul Unirii 257-259, Sector 3, Bucharest",
+    locationCity: "Sector 3, Bucharest",
     phone1: "+40 748 838 767",
     phone2: "+40 740 269 769",
     email_contact: "train@unbrokenspirit.ro",
