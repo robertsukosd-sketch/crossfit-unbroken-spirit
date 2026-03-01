@@ -115,7 +115,7 @@ export default function ProgramsSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            onClick={() => scrollToSection('thunderwod-app')}
+            onClick={() => openAppStore()}
             className="relative px-8 py-4 rounded-full text-white font-black text-lg overflow-hidden"
             style={{ background: 'linear-gradient(135deg, #1e40af 0%, #0ea5e9 100%)' }}
             whileTap={{ scale: 0.97 }}

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import LogoSVG from './LogoSVG';
 import { useLanguage } from '../LanguageProvider';
+import { openAppStore } from '../appStoreUtils';
 
 const getNavLinks = (t) => [
   { name: t("home"), href: "#hero" },
