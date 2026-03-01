@@ -113,7 +113,6 @@ export default function ContactSection() {
                         <p key={i} className="text-gray-400 text-xs sm:text-sm">{detail}</p>
                       ))}
                     </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
