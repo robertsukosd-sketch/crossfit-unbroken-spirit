@@ -132,7 +132,7 @@ export const translations = {
     startHereTitle: "De Unde Să Începi",
     startHereSubtitle: "Ghid complet pentru cei care sunt noi în lumea CrossFit",
     startHerePreview: "**Ce înseamnă CrossFit? (Pe limba ta)**\n\nDacă ai căutat pe Internet, probabil ai găsit definiția oficială: \"mișcări funcționale, constant variate, executate la intensitate ridicată\". Sună cam tehnic, nu? **Uite ce înseamnă de fapt:** CrossFit-ul este un antrenament conceput să te pregătească pentru viața reală. Nu te antrenezi doar ca să arăți bine în oglindă (deși asta va fi o consecință).",
-    startHerePreviewFullWidth: "Te antrenezi ca să poți ridica o cutie grea fără să ți se blocheze spatele, să alergi după autobuz și să nu rămâi fără aer și să fii în cea mai bună formă fizică a vieții tale.",
+    startHerePreviewFullWidth: "Te antrenezi ca să poți ridica o cutie grea fără să ți se blocheze spatele, să alergi după autobuz și să nu rămâi fără aer și să fii în cea mai bună formă fizică a vieții tale.\n\nCombinăm elemente de gimnastică, ridicări de greutăți și cardio, pe care le schimbăm în fiecare zi. La noi, rutina este inamicul, așa că n-o să te plictisești niciodată.",
     startHereFullText1: `## Mitul suprem: „Trebuie să fiu deja în formă ca să mă apuc de CrossFit"
 
 E perfect normal ca prima oară să te simți intimidat, dar asta e și cea mai mare barieră care te ține pe loc. De la bun început, un lucru trebuie să fie clar: **nu trebuie să fii în formă ca să te apuci de CrossFit; te apuci de CrossFit ca să ajungi să fii în formă.**
