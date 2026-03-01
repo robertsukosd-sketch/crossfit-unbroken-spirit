@@ -318,7 +318,7 @@ Here's the reality in our gym: at the same class, a former competitive athlete a
 * If the workout calls for squats with a heavy weight, one person might use the prescribed weight, while another might use a PVC pipe or just bodyweight, sitting on a box.
 * If today's Workout of the Day (WOD) has pull-ups, some will do them at the bar, others will do assisted ring rows with their feet on the ground.
 
-Intensity is completely relative. Coaches are here to make sure you work correctly and at **your limit**, not your neighbor's. **Your ego stays at the door.** Come exactly as you are now.
+Intensity is completely relative. Coaches are here to make sure you work correctly and at **your limit**. **Your ego stays at the door.** Come exactly as you are now.
 
 ## Why CrossFit and Not a Traditional Gym? (The Math of Results)
 
