@@ -43,7 +43,7 @@ const getPrograms = (t) => [
 ];
 
 export default function ProgramsSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const programs = getPrograms(t);
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
