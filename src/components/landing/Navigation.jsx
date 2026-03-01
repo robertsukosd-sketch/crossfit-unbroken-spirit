@@ -168,7 +168,7 @@ export default function Navigation() {
 
             {/* Language Toggle Mobile + Menu Button */}
             <div className="lg:hidden flex items-center gap-2 flex-shrink-0">
-              <div className="flex flex-col gap-1 bg-zinc-900 rounded-full p-1">
+              <div className="flex flex-row gap-1 bg-zinc-900 rounded-full p-1">
                 <button
                     type="button"
                     onClick={() => changeLanguage('ro')}
