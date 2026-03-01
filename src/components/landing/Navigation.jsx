@@ -166,8 +166,8 @@ export default function Navigation() {
               </motion.button>
             </div>
 
-            {/* Language Toggle Mobile */}
-            <div className="lg:hidden flex items-center gap-2">
+            {/* Language Toggle Mobile + Menu Button */}
+            <div className="lg:hidden flex items-center gap-2 flex-shrink-0">
               <div className="flex gap-1 bg-zinc-900 rounded-full p-1">
                 <button
                     type="button"
