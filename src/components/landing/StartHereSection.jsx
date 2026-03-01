@@ -28,12 +28,6 @@ export default function StartHereSection() {
       image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/d43e8e0de_image.png'
     },
     {
-      title: language === 'ro' ? 'Antrenamentul Zilei' : 'Workout of the Day',
-      description: language === 'ro' ? 'Antrenamentul zilei la nivel mondial' : 'Daily workout challenges worldwide',
-      url: 'https://www.crossfit.com/workout/',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/d43e8e0de_image.png'
-    },
-    {
       title: language === 'ro' ? 'CrossFit Games' : 'CrossFit Games',
       description: language === 'ro' ? 'Campionatul mundial CrossFit' : 'CrossFit World Championship',
       url: 'https://games.crossfit.com',
