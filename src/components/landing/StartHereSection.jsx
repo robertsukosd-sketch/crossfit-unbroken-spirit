@@ -94,20 +94,7 @@ export default function StartHereSection() {
             </div>
           </div>
           
-          {isExpanded && (
-            <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700 mt-6">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/1Q18EOZfTJQ"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-          )}
+
 
           <div className="space-y-6 text-gray-300 leading-relaxed mt-6">
             
