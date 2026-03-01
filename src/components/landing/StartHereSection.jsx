@@ -13,7 +13,7 @@ export default function StartHereSection() {
       title: language === 'ro' ? 'CrossFit.com' : 'CrossFit.com',
       description: language === 'ro' ? 'Site-ul oficial al CrossFit' : 'Official CrossFit website',
       url: 'https://www.crossfit.com',
-      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=400&fit=crop'
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/d43e8e0de_image.png'
     },
     {
       title: language === 'ro' ? 'CrossFit Games' : 'CrossFit Games',
