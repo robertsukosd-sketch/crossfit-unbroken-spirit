@@ -34,24 +34,22 @@ export function openAppStore() {
 export function openAppWithFallback() {
   const ua = navigator.userAgent || '';
   
-  if (/android/i.test(ua)) {
-    // Android: try universal link, fallback to Play Store after timeout
-    const timeout = setTimeout(() => {
-      window.location.href = ANDROID_PLAY_STORE;
-    }, 2500);
-    
+  if (/iphone|ipad|ipod/i.test(ua)) {
+    // iOS: use App Store (universal links require server-side configuration)
+    window.location.href = IOS_APP_STORE;
+  } else if (/android/i.test(ua)) {
+    // Android: try universal link, fallback to Play Store
+    const appOpenedAt = Date.now();
     window.location.href = ANDROID_UNIVERSAL_LINK;
-    window.addEventListener('pagehide', () => clearTimeout(timeout), { once: true });
-  } else if (/iphone|ipad|ipod/i.test(ua)) {
-    // iOS: try universal link, fallback to App Store after timeout
-    const timeout = setTimeout(() => {
-      window.location.href = IOS_APP_STORE;
+    
+    const checkIfOpened = setTimeout(() => {
+      if (Date.now() - appOpenedAt < 3000) {
+        window.location.href = ANDROID_PLAY_STORE;
+      }
     }, 2500);
     
-    window.location.href = IOS_UNIVERSAL_LINK;
-    window.addEventListener('pagehide', () => clearTimeout(timeout), { once: true });
+    window.addEventListener('pagehide', () => clearTimeout(checkIfOpened), { once: true });
   } else {
-    // Desktop
     window.open(DESKTOP_URL, '_blank');
   }
 }
