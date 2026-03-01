@@ -363,14 +363,7 @@ At your first workouts, you might hear terms that sound like secret language. Do
 * **Kipping:** A fluid movement, specific to gymnastics, where you use the swing and momentum of your own body to complete a movement (like pull-ups on the bar). It doesn't mean you're "cheating," it means you're moving more efficiently using your whole body.
 * **RX (As Prescribed):** When you manage to do the workout exactly as written on the board with the prescribed weights and movements. It's the original version, designed to challenge the most advanced athletes in the gym.
 * **Scaled (Adapted / Modified):** *This is the most important word for you!* Any CrossFit movement and any weight can be modified by the coach to fit your current fitness level, while still preserving the benefits of the original workout.`,
-    startHereFullText3: `## What Can You Get Out of CrossFit Training?
-
-No gimmicks here, just results you can measure in real time, week by week:
-
-* **Changed body composition:** You'll see a clear decrease in fat percentage and an increase in muscle mass (clothes will fit differently on you).
-* **Increased strength and endurance:** You'll be able to lift weights you didn't even dream of on day one and sustain effort longer without getting tired.
-* **Solid health:** Your blood work will improve (optimal blood pressure, reduced resting heart rate, constant energy throughout the day).
-* **Restored mobility:** By strengthening your back muscles, you'll correct poor desk posture and eliminate stiffness and back pain.`,
+    startHereFullText3: ``,
   }
 };
 
