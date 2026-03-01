@@ -101,8 +101,19 @@ export default function StartHereSection() {
                 className="space-y-6">
                 
                 <div className="bg-zinc-800/50 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{language === 'ro' ? 'De ce CrossFit?' : 'Why CrossFit?'}</h3>
-                  <p>{t("startHereFullText1")}</p>
+                  <ReactMarkdown
+                    className="prose prose-invert prose-sm max-w-none"
+                    components={{
+                      h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
+                      h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
+                      p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
+                      ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
+                      li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                      strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
+                    }}
+                  >
+                    {t("startHereFullText1")}
+                  </ReactMarkdown>
                 </div>
 
                 {/* Video Placeholder */}
@@ -118,8 +129,19 @@ export default function StartHereSection() {
                 </div>
 
                 <div className="bg-zinc-800/50 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{language === 'ro' ? 'CrossFit vs Sala Tradițională' : 'CrossFit vs Traditional Gym'}</h3>
-                  <p>{t("startHereFullText2")}</p>
+                  <ReactMarkdown
+                    className="prose prose-invert prose-sm max-w-none"
+                    components={{
+                      h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
+                      h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
+                      p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
+                      ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
+                      li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                      strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
+                    }}
+                  >
+                    {t("startHereFullText2")}
+                  </ReactMarkdown>
                 </div>
 
                 {/* Images Grid */}
@@ -141,8 +163,19 @@ export default function StartHereSection() {
                 </div>
 
                 <div className="bg-zinc-800/50 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{language === 'ro' ? 'Rezultate Reale' : 'Real Results'}</h3>
-                  <p>{t("startHereFullText3")}</p>
+                  <ReactMarkdown
+                    className="prose prose-invert prose-sm max-w-none"
+                    components={{
+                      h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
+                      h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
+                      p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
+                      ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
+                      li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                      strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
+                    }}
+                  >
+                    {t("startHereFullText3")}
+                  </ReactMarkdown>
                 </div>
               </motion.div>
             )}
