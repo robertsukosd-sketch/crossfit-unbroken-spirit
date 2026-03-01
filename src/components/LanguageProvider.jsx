@@ -223,7 +223,7 @@ export const translations = {
     thankDesc: "We received your message. We will contact you soon.",
     sendAnother: "Send Another Message",
     follow: "Follow Us",
-    location: "Splaiul Unirii 257-259, Sector 3, București",
+    location: "Splaiul Unirii 257-259, Sector 3, Bucharest",
     phone1: "+40 748 838 767",
     phone2: "+40 740 269 769",
     email_contact: "train@unbrokenspirit.ro",
