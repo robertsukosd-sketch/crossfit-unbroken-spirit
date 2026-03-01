@@ -184,16 +184,16 @@ export default function PricingSection() {
           }>
               {category.plans.map((plan, index) => {
                 const totalPlans = category.plans.length;
-                // On mobile, reverse order for the CrossFit Memberships category (5 plans)
-                const mobileOrder = category.plans.length === 5 ? `order-${totalPlans - index}` : '';
+                // On mobile, reverse order for CrossFit Memberships (5 plans)
+                const mobileOrder = category.plans.length === 5 ? totalPlans - index : undefined;
                 return <motion.div
               key={plan.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              style={{ ['--mobile-order']: totalPlans - index }}
-              className={`relative rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] flex flex-col h-full md:order-none ${mobileOrder} ${
+              style={mobileOrder !== undefined ? { order: mobileOrder } : {}}
+              className={`relative rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] flex flex-col h-full md:[order:unset] ${
               plan.featured ?
               'bg-gradient-to-br from-blue-600 to-sky-500 shadow-2xl shadow-blue-500/20' :
               'bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/30'}`
