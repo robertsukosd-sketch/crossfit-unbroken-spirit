@@ -21,9 +21,9 @@ export default function ThunderWodBox({ className = '' }) {
         </div>
 
         {/* iOS */}
-        <div className="flex flex-col items-center justify-center w-28 h-28 bg-black rounded-xl p-2">
+        <div className="flex flex-col items-center justify-center w-28 h-28">
           <a href={IOS_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="w-full object-contain" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Download on the App Store" className="w-20 h-20 object-contain" style={{filter: 'invert(1)'}} />
           </a>
         </div>
 
