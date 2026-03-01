@@ -26,7 +26,7 @@ export const translations = {
     freeTrial: "O Ședință Gratuită",
     heroTag: "Antrenează-te ca un campion",
     heroTitle: "FORȚĂ. COMUNITATE. REZULTATE.",
-    heroSubtitle: "Descoperă potențialul tău maxim într-o comunitate dedicată longevității și performanței.",
+    heroSubtitle: "Descoperă potențialul tău maxim într-o comunitate dedicată longevității și performanței. CrossFit pentru toate nivelurile de fitness.",
     startNow: "Începe Acum",
     discoverPrograms: "Descoperă Programele",
     discoverThePrograms: "Descoperă Programele",
