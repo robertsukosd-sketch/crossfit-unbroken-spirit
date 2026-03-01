@@ -182,7 +182,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
 * **Hero WOD:** Un antrenament special, de obicei mai greu și mai intens, creat la nivel global în onoarea unui membru al forțelor armate sau de intervenție care a căzut la datorie. 
 * **Chipper:** Un antrenament format dintr-o listă lungă de exerciții (de obicei cu multe repetări fiecare). Termini toate repetările de la un exercițiu și treci la următorul, „ciobind" treptat din volumul total de muncă până ajungi la final.
 * **Met-Con (Metabolic Conditioning):** Partea de condiționare metabolică (cardio) a antrenamentului, menită să-ți crească rezistența la efort și să ardă calorii mult timp după ce ai plecat de la sală.
-* **Kipping:** O mișcare fluidă, specifică gimnasticii, în care folosești balansul și impulsul propriului corp pentru a completa o mișcare (cum ar fi tracțiunile la bară). Nu este un „trișat", ci o modalitate de a mișca eficient întregul corp.
+* **Kipping:** O mișcare fluidă, specifică gimnasticii, în care folosești balansul și impulsul propriului corp pentru a completa o mișcare (cum ar fi tracțiunile la bară). Nu înseamnă că „trișezi", ci că îți miști într-un mod mai eficient întregul corp.
 * **RX (As Prescribed):** Când reușești să faci antrenamentul exact cu greutățile și mișcările scrise pe tablă. Este varianta originală, gândită pentru a-i provoca pe cei mai avansați atleți din sală.
 * **Scaled (Adaptat / Modificat):** *Acesta este cel mai important cuvânt pentru tine!* Orice mișcare și orice greutate din CrossFit pot fi modificate de antrenor pentru a se potrivi nivelului tău fizic actual, păstrând în același timp beneficiile antrenamentului original.`,
   },
