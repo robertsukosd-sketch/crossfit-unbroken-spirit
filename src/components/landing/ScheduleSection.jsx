@@ -182,7 +182,7 @@ export default function ScheduleSection() {
               }
               <br />
               <button
-                onClick={() => document.getElementById('thunderwod-app')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => openAppStore()}
                 className="font-black text-sky-400 hover:text-white transition-all bg-sky-500/20 hover:bg-sky-500 px-2 py-0.5 rounded-md text-base inline-block mt-1"
               >
                 {language === 'ro' ? '⚡ descarcă aplicația ThunderWOD' : '⚡ download the ThunderWOD app'}
