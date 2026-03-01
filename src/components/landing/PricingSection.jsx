@@ -194,6 +194,8 @@ export default function PricingSection() {
             <div className={`grid gap-6 ${
           category.plans.length === 2 ?
           'md:grid-cols-2 max-w-3xl' :
+          category.plans.length === 4 ?
+          'grid-cols-1 md:grid-cols-2 lg:grid-cols-4' :
           category.plans.length === 5 ?
           'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5' :
           'md:grid-cols-2 lg:grid-cols-3'}`
