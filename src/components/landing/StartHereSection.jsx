@@ -160,8 +160,8 @@ export default function StartHereSection() {
                   </div>
                   <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
                     <img 
-                      src="https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=600&h=400&fit=crop" 
-                      alt="Training" 
+                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/9966cf2d9_image.png" 
+                      alt="Running vs CrossFit" 
                       className="w-full h-full object-cover"
                     />
                   </div>
