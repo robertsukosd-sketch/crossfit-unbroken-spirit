@@ -235,30 +235,7 @@ export default function Navigation() {
                 transition={{ delay: 0.5 }}
                 className="pt-6"
               >
-                <motion.button
-                  type="button"
-                  onClick={() => scrollToSection('#thunderwod-app')}
-                  animate={{ boxShadow: ['0 0 0px #38bdf8', '0 0 16px #38bdf8', '0 0 0px #38bdf8'] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                  className="relative flex items-center justify-center gap-2 w-full rounded-full py-3 text-base font-bold text-white overflow-hidden mb-3"
-                  style={{ background: 'linear-gradient(135deg, #0c2340 0%, #0ea5e9 50%, #0c2340 100%)' }}
-                >
-                  <motion.span
-                    className="absolute inset-0"
-                    animate={{ opacity: [0, 0.25, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
-                  />
-                  <Smartphone className="w-5 h-5 text-sky-300 relative z-10" />
-                  <span className="relative z-10">ThunderWOD App</span>
-                  <motion.span
-                    className="relative z-10 text-[10px] bg-sky-400 text-black font-black px-1.5 py-0.5 rounded-full leading-none"
-                    animate={{ scale: [1, 1.15, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    NEW
-                  </motion.span>
-                </motion.button>
+
                 <Button
                   onClick={() => scrollToSection('#contact')}
                   className="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold rounded-full py-6 text-lg"
