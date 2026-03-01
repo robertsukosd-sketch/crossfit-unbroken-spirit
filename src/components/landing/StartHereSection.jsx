@@ -116,6 +116,21 @@ export default function StartHereSection() {
                 exit={{ opacity: 0, height: 0 }}
                 className="space-y-6 text-gray-300">
 
+                <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none">
+                  <ReactMarkdown
+                    components={{
+                      h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
+                      h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
+                      p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
+                      ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
+                      li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                      strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
+                    }}
+                  >
+                    {t("startHereFullText1")}
+                  </ReactMarkdown>
+                </div>
+
                 <div className="bg-zinc-800/50 rounded-xl p-6">
                   <ReactMarkdown
                     className="prose prose-invert prose-sm max-w-none"
