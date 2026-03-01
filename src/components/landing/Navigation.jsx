@@ -145,7 +145,7 @@ export default function Navigation() {
             <div className="lg:hidden flex-1 flex justify-center px-1 min-w-0 overflow-hidden">
               <motion.button
                 type="button"
-                onClick={() => openAppStore()}
+                onClick={() => openAppWithFallback()}
                 animate={{ boxShadow: ['0 0 0px #38bdf8', '0 0 10px #38bdf8', '0 0 0px #38bdf8'] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 className="relative flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white overflow-hidden"
