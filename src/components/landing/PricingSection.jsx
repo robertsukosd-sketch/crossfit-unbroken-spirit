@@ -182,14 +182,18 @@ export default function PricingSection() {
           'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5' :
           'md:grid-cols-2 lg:grid-cols-3'}`
           }>
-              {category.plans.map((plan, index) =>
-            <motion.div
+              {category.plans.map((plan, index) => {
+                const totalPlans = category.plans.length;
+                // On mobile, reverse order for the CrossFit Memberships category (5 plans)
+                const mobileOrder = category.plans.length === 5 ? `order-${totalPlans - index}` : '';
+                return <motion.div
               key={plan.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className={`relative rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] flex flex-col h-full ${
+              style={{ ['--mobile-order']: totalPlans - index }}
+              className={`relative rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] flex flex-col h-full md:order-none ${mobileOrder} ${
               plan.featured ?
               'bg-gradient-to-br from-blue-600 to-sky-500 shadow-2xl shadow-blue-500/20' :
               'bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/30'}`
