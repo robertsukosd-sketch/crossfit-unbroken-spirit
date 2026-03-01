@@ -120,16 +120,17 @@ export default function StartHereSection() {
                   </ReactMarkdown>
                 </div>
 
-                {/* Video Placeholder */}
-                <div className="relative w-full aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-3">
-                        <div className="w-0 h-0 border-l-8 border-l-transparent border-r-0 border-t-5 border-t-transparent border-b-5 border-b-transparent" style={{borderLeft: '12px solid transparent', borderRight: '0px', borderTop: '8px solid #0ea5e9', borderBottom: '8px solid #0ea5e9'}} />
-                      </div>
-                      <p className="text-gray-400">{language === 'ro' ? '[Video placeholder]' : '[Video placeholder]'}</p>
-                    </div>
-                  </div>
+                <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/1Q18EOZfTJQ"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
                 </div>
 
                 <div className="bg-zinc-800/50 rounded-xl p-6">
