@@ -260,9 +260,9 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
                <Logo size={48} />
-               <div className="text-center">
-                 <div className="text-2xl font-black text-sky-400 uppercase">CROSSFIT</div>
-                 <div className="text-base font-black text-blue-700 uppercase">UNBROKEN SPIRIT</div>
+               <div className="text-center leading-tight">
+                 <div className="text-lg font-black text-white uppercase tracking-wide">CROSSFIT</div>
+                 <div className="text-sm font-black text-blue-400 uppercase tracking-wide">UNBROKEN SPIRIT</div>
                </div>
              </div>
             <p className="text-gray-400 mb-6 max-w-md">
