@@ -107,7 +107,7 @@ export default function Navigation() {
               </div>
               <motion.button
                 type="button"
-                onClick={() => openAppStore()}
+                onClick={() => openAppWithFallback()}
                 animate={{ boxShadow: ['0 0 0px #38bdf8', '0 0 12px #38bdf8', '0 0 0px #38bdf8'] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 className="relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold text-white transition-all overflow-hidden"
