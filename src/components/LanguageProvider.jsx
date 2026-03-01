@@ -135,7 +135,7 @@ export const translations = {
     startHerePreviewFullWidth: "Te antrenezi ca să poți ridica o cutie grea fără să ți se blocheze spatele, să alergi după autobuz și să nu rămâi fără aer și să fii în cea mai bună formă fizică a vieții tale.",
     startHereFullText1: `## Mitul suprem: „Trebuie să fiu deja în formă ca să mă apuc de CrossFit"
 
-E perfect normal ca prima oară să te simți intimidat, dar asta e și cea mai mare barieră care te ține pe loc. De la bun început, un lucru trebuie să fie clar: nu trebuie să fii în formă ca să te apuci de CrossFit; te apuci de CrossFit ca să ajungi să fii în formă.
+E perfect normal ca prima oară să te simți intimidat, dar asta e și cea mai mare barieră care te ține pe loc. De la bun început, un lucru trebuie să fie clar: **nu trebuie să fii în formă ca să te apuci de CrossFit; te apuci de CrossFit ca să ajungi să fii în formă.**
 
 A spune că trebuie să te antrenezi înainte să vii la noi e ca și cum ai spune că trebuie să știi deja o limbă străină înainte să te înscrii la curs. N-are niciun sens!
 
