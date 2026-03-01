@@ -313,7 +313,7 @@ It's perfectly normal to feel intimidated the first time, but that's also the bi
 
 Saying you need to train before coming to us is like saying you need to already know a foreign language before signing up for a course. It makes no sense!
 
-Here's the reality in our gym: at the same class, a former competitive athlete and a 40-year-old who works all day at a desk can train side by side. Both do the same workout, but adapted to each person's level (we call this the **scaled** version).
+Here's the reality in our gym: at the same class, a former competitive athlete and a 40-year-old with a desk job can train side by side. Both do the same workout, but adapted to each person's level (we call this the **scaled** version).
 
 * If the workout calls for squats with a heavy weight, one person might use the prescribed weight, while another might use a PVC pipe or just bodyweight, sitting on a box.
 * If today's Workout of the Day (WOD) has pull-ups, some will do them at the bar, others will do assisted ring rows with their feet on the ground.
