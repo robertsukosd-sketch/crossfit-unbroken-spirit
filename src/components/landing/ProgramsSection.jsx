@@ -125,7 +125,10 @@ export default function ProgramsSection() {
               transition={{ duration: 2, repeat: Infinity }}
               style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
             />
-            <span className="relative z-10">⚡ Încearcă o Ședință Gratuită</span>
+            <span className="relative z-10 flex flex-col items-center leading-tight">
+              <span>⚡ Încearcă</span>
+              <span>o Ședință Gratuită</span>
+            </span>
           </motion.button>
         </div>
       </div>
