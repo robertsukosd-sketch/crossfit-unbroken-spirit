@@ -144,7 +144,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection('#thunderwod-app')}
                 animate={{ boxShadow: ['0 0 0px #38bdf8', '0 0 10px #38bdf8', '0 0 0px #38bdf8'] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white overflow-hidden"
+                className="relative flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white overflow-hidden"
                 style={{ background: 'linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 50%, #1e3a5f 100%)' }}
                 whileHover={{ scale: 1.05 }}
               >
