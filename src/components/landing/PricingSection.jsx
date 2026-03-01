@@ -5,6 +5,13 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
 import { openMobileOrDesktop } from '../appStoreUtils';
 
+function scrollToDownloadApp() {
+  const el = document.getElementById('thunderwod-app');
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
 const getPricingCategories = (t, language) => [
 {
   title: language === 'ro' ? "Abonamente CrossFit" : "CrossFit Memberships",
