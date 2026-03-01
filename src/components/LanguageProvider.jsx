@@ -159,7 +159,26 @@ Probabil te întrebi de ce ai alege box-ul nostru în locul unui abonament la o 
 
 * Alergarea este excelentă pentru inimă, dar lucrează doar rezistența. 
 * CrossFit-ul este un program complet. Noi te ajutăm să dezvolți echilibrat toate cele **10 abilități fizice generale**: rezistență cardiovasculară, stamină, forță, flexibilitate, putere, viteză, coordonare, agilitate, echilibru și precizie. Devii un atlet complet, nu doar unul care poate alerga mult.`,
-    startHereFullText3: "**Ce rezultate concrete vei obține?**\n\nNu vindem iluzii, ci rezultate pe care le poți măsura în timp real, săptămână de săptămână:\n\n• Compoziție corporală schimbată: Vei vedea o scădere clară a procentului de grăsime și o creștere a masei musculare (hainele se vor așeza altfel pe tine).\n• Forță și rezistență dublate: Vei putea ridica greutăți la care nici nu visai în prima zi și vei putea susține efortul mai mult timp, fără să obosești.\n• O sănătate de fier: Analizele tale se vor îmbunătăți (tensiune arterială optimă, ritm cardiac de repaus redus, energie constantă pe tot parcursul zilei).\n• Mobilitate recâștigată: Vom corecta postura greșită de la birou și vei scăpa de rigiditatea și durerile de spate.\n\n**Glosarul Începătorului: Vorbește pe limba noastră**\n\nLa primele antrenamente, s-ar putea să aud termeni care sună a limbaj secret. Stai liniștit, iată mini-dicționarul de supraviețuire:\n\n• Box: Așa numim noi sala. E un spațiu deschis, brut, fără oglinzi și plin de energie.\n• WOD (Workout of the Day): Antrenamentul Zilei. Misiunea ta pentru ziua respectivă.\n• AMRAP (As Many Rounds/Reps As Possible): Provocarea de a face cât mai multe runde sau repetări dintr-o serie de exerciții, într-un timp dat.\n• EMOM (Every Minute on the Minute): Începi un exercițiu fix la începutul fiecărui minut. Ce îți rămâne din acel minut după ce termini repetările este pauza ta.\n• PR / PB (Personal Record / Personal Best): Recordul tău personal la o ridicare sau la un WOD. Motivul pentru care toată sala va bate palma cu tine!\n• RX (As Prescribed): Când reușești să faci antrenamentul exact cu greutățile și mișcările scrise pe tablă.\n• Scaled (Adaptat): Acesta este cel mai important cuvânt pentru tine! Orice mișcare din CrossFit poate fi modificată (scalată) de antrenor pentru a se potrivi nivelului tău, fie că ești sportiv de performanță, fie că ești sedentar și vrei să te apuci de mișcare.",
+    startHereFullText3: `## Ce rezultate concrete vei obține?
+
+Nu vindem iluzii, ci rezultate pe care le poți măsura în timp real, săptămână de săptămână:
+
+* **Compoziție corporală schimbată:** Vei vedea o scădere clară a procentului de grăsime și o creștere a masei musculare (hainele se vor așeza altfel pe tine).
+* **Forță și rezistență dublate:** Vei putea ridica greutăți la care nu visai în prima zi și vei putea susține efortul mai mult timp, fără să obosești.
+* **O sănătate de fier:** Analizele tale se vor îmbunătăți (tensiune arterială optimă, ritm cardiac de repaus redus, energie constantă pe tot parcursul zilei).
+* **Mobilitate recâștigată:** Vom corecta postura greșită de la birou și vei scăpa de rigiditatea și durerile de spate.
+
+## Glosarul Începătorului: Vorbește pe limba noastră
+
+La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj secret. Stai liniștit, iată mini-dicționarul de supraviețuire:
+
+* **Box:** Așa numim noi sala. E un spațiu deschis, brut, fără oglinzi și plin de energie.
+* **WOD (Workout of the Day):** Antrenamentul Zilei. Misiunea ta pentru ziua respectivă.
+* **AMRAP (As Many Rounds/Reps As Possible):** Provocarea de a face cât mai multe runde sau repetări dintr-un circuit, într-un timp dat.
+* **EMOM (Every Minute on the Minute):** Începi un exercițiu fix la începutul fiecărui minut. Ce îți rămâne din acel minut după ce termini repetările este pauza ta.
+* **PR / PB (Personal Record / Personal Best):** Recordul tău personal la o ridicare sau la un WOD. Motivul pentru care toată sala va bate palma cu tine!
+* **RX (As Prescribed):** Când reușești să faci antrenamentul exact cu greutățile și mișcările scrise pe tablă.
+* **Scaled (Adaptat):** *Acesta este cel mai important cuvânt pentru tine!* Orice mișcare din CrossFit poate fi modificată (scalată) de antrenor pentru a se potrivi nivelului tău, fie că ești sportiv de performanță sau nu ai mai făcut mișcare de 10 ani.`,
   },
   en: {
     home: "Home",
