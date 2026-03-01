@@ -11,6 +11,15 @@ export default function StartHereSection() {
   const [isSectionVisible, setIsSectionVisible] = useState(false);
   const sectionRef = React.useRef(null);
 
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsSectionVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   const links = [
     {
       title: language === 'ro' ? 'CrossFit.com' : 'CrossFit.com',
