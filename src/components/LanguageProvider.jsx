@@ -142,7 +142,7 @@ A spune că trebuie să te antrenezi înainte să vii la noi e ca și cum ai spu
 Iată realitatea din sala noastră: la aceeași clasă, se pot antrena cot la cot un fost sportiv de performanță și o persoană de 40 de ani care lucrează toată ziua la birou și nu are prea mult timp pentru mișcare. Amândoi fac același antrenament, dar adaptat nivelului fiecăruia (vei vedea mai jos că noi numim asta varianta **scaled**).
 
 * Dacă antrenamentul cere genuflexiuni cu o halteră grea, o persoană poate folosi chiar greutatea prescrisă în antrenament, pe când alta poate folosi o țeavă de PVC sau pur și simplu cu greutatea corpulu, așezându-se pe o cutie.
-* Dacă în antrenamentul zilei (Workout of the Day) sunt programate tracțiuni, unii le vor face la bară, iar alții vor face ramat la inele, sprijinindu-se pe picioare.
+* Dacă în antrenamentul zilei (**Workout of the Day**) sunt programate tracțiuni, unii le vor face la bară, iar alții vor face ramat la inele, sprijinindu-se pe picioare.
 
 Intensitatea e complet relativă. Antrenorii sunt aici ca să se asigure că lucrezi corect și la **limita ta** de confort, nu a celui de lângă tine. **Ego-ul rămâne mereu la ușă.** Vino exact așa cum ești acum.`,
     startHereFullText2: `## Cu ce suntem diferiți? 
