@@ -130,9 +130,7 @@ export default function PricingSection() {
   const { t, language } = useLanguage();
   const pricingCategories = getPricingCategories(t, language);
   
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const iosAppUrl = "https://apps.apple.com/app/thunderwod/id6450798655";
 
   return (
     <section id="pricing" className="py-24 bg-zinc-950 relative overflow-hidden">
