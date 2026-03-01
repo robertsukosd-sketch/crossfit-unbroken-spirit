@@ -307,7 +307,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     startHereSubtitle: "A quick guide for those who are new to CrossFit",
     startHerePreview: "**What is CrossFit?**\n\nIf you already searched on the Internet, you probably found the official definition: \"constantly varied functional movements, executed at a high intensity\". Sounds pretty technical, right? **Here's what it actually means:** CrossFit is a training program designed to prepare you for real life. You're not just training to look good in the mirror (though that will be a consequence).",
     startHerePreviewFullWidth: "You're training so you can lift a heavy box without breaking your back, so you can run for the bus without running out of breath, and be in the best physical shape of your life.\n\nWe combine gymnastics, weightlifting and cardio elements, which we vary every day. With us, routine is the enemy, so you will never get bored.",
-    startHereFullText1: `## The Supreme Myth: "I Need to Be in Shape First to Start CrossFit"
+    startHereFullText1: `## The Biggest Lie: "I First Need to Be in Shape Before I Start CrossFit"
 
 It's perfectly normal to feel intimidated the first time, but that's also the biggest barrier keeping you stuck. From the start, one thing must be clear: **you don't need to be in shape to start CrossFit; you start CrossFit to get in shape.**
 
