@@ -27,11 +27,10 @@ export default function ThunderWodBox({ className = '' }) {
         </a>
 
         {/* Android */}
-        <div className="flex flex-col items-center justify-center">
-          <a href={ANDROID_URL} target="_blank" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="w-28 h-28 object-contain" />
-          </a>
-        </div>
+        <a href={ANDROID_URL} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play" className="w-16 h-16 object-contain" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-8 object-contain" />
+        </a>
       </div>
     </div>
   );
