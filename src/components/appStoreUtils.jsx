@@ -34,14 +34,25 @@ export function openAppStore() {
 export function openAppWithFallback() {
   const ua = navigator.userAgent || '';
   
-  if (/iphone|ipad|ipod/i.test(ua)) {
-    // iOS: try deep link, fallback to App Store
+  if (/iphone|ipad|ipot/i.test(ua)) {
+    // iOS: try deep link via iframe (more reliable on Safari), fallback to App Store
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+    
     const timeout = setTimeout(() => {
+      document.body.removeChild(iframe);
       window.location.href = IOS_APP_STORE;
     }, 2500);
     
-    window.location.href = IOS_DEEP_LINK;
-    window.addEventListener('pagehide', () => clearTimeout(timeout), { once: true });
+    iframe.src = IOS_DEEP_LINK;
+    
+    window.addEventListener('pagehide', () => {
+      clearTimeout(timeout);
+      if (document.body.contains(iframe)) {
+        document.body.removeChild(iframe);
+      }
+    }, { once: true });
   } else if (/android/i.test(ua)) {
     // Android: try deep link, fallback to Play Store
     const timeout = setTimeout(() => {
