@@ -145,20 +145,22 @@ Iată realitatea din sala noastră: la aceeași clasă, se pot antrena cot la co
 * Dacă în antrenamentul zilei (**Workout of the Day**) sunt programate tracțiuni, unii le vor face la bară, iar alții vor face ramat la inele, sprijinindu-se pe picioare.
 
 Intensitatea e complet relativă. Antrenorii sunt aici ca să se asigure că lucrezi corect și la **limita ta** de confort, nu a celui de lângă tine. **Ego-ul rămâne mereu la ușă.** Vino exact așa cum ești acum.`,
-    startHereFullText2: `## Cu ce suntem diferiți? 
+    startHereFullText2: `## De ce CrossFit și nu o Sală Clasică? (Matematica Rezultatelor)
 
-Probabil te întrebi de ce ai alege box-ul nostru în locul unui abonament mai ieftin la o sală obișnuită sau în locul unei alergări gratuite în parc. Iată diferența:
+Să fim sinceri: un abonament la o sală clasică este adesea mai ieftin la prima vedere. Dar cât te costă, de fapt, lipsa rezultatelor și timpul pierdut? Iată de ce modelul CrossFit funcționează complet diferit:
 
-### CrossFit vs. Sala Clasică de Fitness
+* **Antrenor aproape Personal inclus, nu plătit separat:** La o sală clasică, plătești doar accesul la aparate. Dacă vrei să știi ce faci și să nu te accidentezi, trebuie să plătești separat un Antrenor Personal (ceea ce îți mărește considerabil costul lunar). La noi, **antrenorul si antrenamentul sunt incluse în abonament**. Fiecare clasă este condusă de un antrenor care îți explică mișcările, te corectează constant și îți adaptează greutățile. Este antrenament personalizat pentru nivelul tău, dar cu energia și susținerea întregului grup.
+* **Eficiență maximă (Fără scroll pe telefon):** Știi cum arată o oră la o sală obișnuită: 15 minute aștepți să se elibereze un aparat, 15 minute stai pe telefon între serii și nu știi exact ce să lucrezi azi. La noi, intri pe ușă și, timp de 60 de minute, ești ghidat secundă cu secundă: încălzire specifică, tehnică, forță și antrenamentul zilei (WOD). **Sunt cele mai eficiente, dar și cele mai plăcute 60 de minute din ziua ta.** Nicio secundă pierdută.
+* **Construim o armură, nu doar mușchi de oglindă:** Aparatele de la sala clasică îți izolează mușchii în timp ce stai așezat confortabil pe un scaun. În viața reală, corpul tău nu funcționează așa. Când ridici un copil în brațe, când muți mobilă sau când pui bagajul în avion, corpul tău lucrează ca un întreg. Noi folosim mișcări compuse (genuflexiuni, îndreptări cu bara, ridicări deasupra capului) care declanșează un răspuns hormonal uriaș, arzând grăsime mai rapid și construind o forță funcțională pe care o vei simți zi de zi.
+* **Responsabilitate (Cineva observă când lipsești):** Sălilor comerciale le convine cel mai mult să îți faci abonament pe un an și să nu mai treci pe acolo niciodată. Așa fac ele profit. La noi, faci parte dintr-o comunitate. Lucrezi în grupuri mici. Când nu apari la clasa ta obișnuită, antrenorul și colegii te vor întreba a doua zi: *„Hei, unde ai fost ieri, te-am așteptat la antrenament!"*. Această responsabilitate te va face să te mobilizezi și să vii la sală exact în zilele în care motivația îți scade.
 
-* **Corpul tău este aparatul:** La o sală clasică te așezi pe un scaun și împingi la niște aparate care izolează o singură grupă musculară. La noi, folosești greutăți libere (gantere, kettlebell, bare) și propria greutate pentru a antrena tot corpul simultan.
-* **Comunitate, nu singurătate:** La sala clasică îți pui căștile, eviți contactul vizual și ești pe cont propriu. La noi, fiecare clasă este condusă de un antrenor dedicat care te învață și te corectează, iar colegii te încurajează exact atunci când vrei să renunți. 
-* **Zero decizii de luat:** Nu trebuie să te gândești „azi ce lucrez?". Vii la sală, antrenamentul este deja gândit și scris pe tablă, iar antrenorul te ghidează pas cu pas.
+## De ce CrossFit și nu doar Alergare în Parc? (Uzura vs. Construcția Corpului)
 
-### CrossFit vs. Alergarea (Cardio clasic)
+Alergarea e un mod fantastic de a-ți elibera mintea și de a lucra inima, iar partea cea mai bună e că e gratuită. Dar, din punct de vedere biomecanic, alergarea pe termen lung, fără un antrenament serios de forță, vine cu un preț ridicat:
 
-* Alergarea este excelentă pentru inimă, dar lucrează doar rezistența. 
-* CrossFit-ul este un program complet. Noi te ajutăm să dezvolți echilibrat toate cele **10 abilități fizice generale**: rezistență cardiovasculară, stamină, forță, flexibilitate, putere, viteză, coordonare, agilitate, echilibru și precizie. Devii un atlet complet, nu doar unul care poate alerga mult.`,
+* **Îți construim șasiul pentru a putea susține motorul:** Gândește-te la inima și plămânii tăi ca la motorul unei mașini, iar la oase, articulații și musculatură ca la șasiu. Alergarea îți face motorul de cursă, dar dacă șasiul tău este slab, se va rupe sub presiune. Durerile constante de genunchi, glezne și șolduri apar la alergători pentru că musculatura picioarelor și a trunchiului (core) nu e suficient de puternică să absoarbă șocul repetat al impactului cu asfaltul. Antrenamentele noastre îți construiesc „armura" necesară pentru a putea alerga ani de zile fără accidentări.
+* **Arzi calorii chiar și când dormi:** Alergarea la un ritm constant arde calorii doar *în timp ce alergi*. Imediat ce te-ai oprit, procesul de ardere se încheie. În schimb, antrenamentele noastre cu greutăți și intensitate ridicată dezvoltă masa musculară slabă. Mușchiul e un țesut activ din punct de vedere metabolic. Asta înseamnă că, după un WOD la noi, vei continua să arzi calorii în ritm accelerat (datorită efectului EPOC - Excess Post-exercise Oxygen Consumption) timp de până la 24 de ore după antrenament, chiar și în repaos.
+* **Evitarea plafonării:** Corpul uman e o mașinărie incredibilă de supraviețuire și adaptare. Dacă alergi 5 km în fiecare zi, în doar câteva săptămâni corpul tău va deveni atât de eficient la această mișcare încât va arde din ce în ce mai puține calorii pentru același efort. În CrossFit, pentru că schimbăm stimulul zilnic (folosim greutăți diferite, combinăm gimnastica cu sprinturile, modificăm durata efortului), **corpul tău nu se poate plafona**. E scos mereu din zona de confort și forțat să creeze noi adaptări.`,
     startHereFullText3: `## Ce rezultate concrete poți obține?
 
 Nu vindem iluzii, ci rezultate pe care le poți măsura în timp real, săptămână de săptămână:
