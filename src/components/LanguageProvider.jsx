@@ -147,7 +147,7 @@ Iată realitatea din sala noastră: la aceeași clasă, se pot antrena cot la co
 Intensitatea e complet relativă. Antrenorii sunt aici ca să se asigure că lucrezi corect și la **limita ta** de confort, nu a celui de lângă tine. **Ego-ul rămâne mereu la ușă.** Vino exact așa cum ești acum.`,
     startHereFullText2: `## Cu ce suntem diferiți? 
 
-Probabil te întrebi de ce ai alege box-ul nostru în locul unui abonament la o sală obișnuită sau în locul unei alergări în parc. Iată diferența:
+Probabil te întrebi de ce ai alege box-ul nostru în locul unui abonament mai ieftin la o sală obișnuită sau în locul unei alergări gratuite în parc. Iată diferența:
 
 ### CrossFit vs. Sala Clasică de Fitness
 
