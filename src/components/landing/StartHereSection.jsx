@@ -247,7 +247,7 @@ export default function StartHereSection() {
             className="mt-6 flex items-center gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors"
             whileHover={{ x: 5 }}>
             
-            <span>{isExpanded ? (language === 'ro' ? 'Arată Mai Puțin' : 'Show Less') : (language === 'ro' ? 'Citește Mai Departe' : 'Continue Reading')}</span>
+            <span>{language === 'ro' ? 'Citește Mai Departe' : 'Continue Reading'}</span>
             <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} transition={{ duration: 0.3 }}>
               <ChevronDown className="w-5 h-5" />
             </motion.div>
