@@ -306,6 +306,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     startHereTitle: "Where to Start",
     startHereSubtitle: "Complete guide for those new to the world of CrossFit",
     startHerePreview: "### What is CrossFit? (In your language)\n\nIf you searched on the Internet, you probably found the official definition: \"functional movements, constantly varied, executed at high intensity\". Sounds pretty technical, right? Here's what it actually means: CrossFit is a training program designed to prepare you for real life. You're not just training to look good in the mirror (though that will be a consequence). You're training so you can lift a heavy box without throwing your back out, run for the bus without running out of breath, and be in the best physical shape of your life.",
+    startHerePreviewFullWidth: "We combine gymnastics, weightlifting and cardio elements, which we vary every day. With us, routine is the enemy, so you will never get bored.",
     startHereFullText1: `## Why CrossFit and Not a Traditional Gym? (The Math of Results)
 
 Let's be honest: a traditional gym membership often seems cheaper at first glance. But how much does a lack of results and wasted time really cost you? Here's why the CrossFit model works completely differently:
