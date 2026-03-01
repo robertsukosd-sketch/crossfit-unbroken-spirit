@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown, ExternalLink } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
+import ReactMarkdown from 'react-markdown';
 
 export default function StartHereSection() {
   const { t, language } = useLanguage();
