@@ -12,13 +12,13 @@ export default function ThunderWodBox({ className = '' }) {
       <h4 className="text-white font-bold text-center">{title}</h4>
       <div className="flex flex-row items-center justify-center gap-6 flex-1">
         {/* Logo */}
-        <div className="flex flex-col items-center justify-center">
+        <a href="https://thunderwod.com/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center">
           <img
             src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/892734e42_logothunderwod.jpeg"
             alt="ThunderWOD"
             className="w-28 h-28 object-contain"
           />
-        </div>
+        </a>
 
         {/* iOS */}
         <a href={IOS_URL} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2">
