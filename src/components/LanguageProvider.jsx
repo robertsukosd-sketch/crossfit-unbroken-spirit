@@ -138,7 +138,7 @@ export const translations = {
   },
   en: {
     home: "Home",
-    startHere: "Start Here",
+    startHere: "Beginners",
     programs: "Programs",
     pricing: "Pricing",
     schedule: "Schedule",
