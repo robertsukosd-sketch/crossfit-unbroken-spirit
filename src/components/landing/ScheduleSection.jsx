@@ -156,9 +156,6 @@ export default function ScheduleSection() {
                 </div>
               </div>
               <h4 className="text-white font-bold text-xl mb-1">{item.class}</h4>
-              {item.coach !== "-" && (
-                <p className="text-sm opacity-80">{t("coach")}: {item.coach}</p>
-              )}
             </motion.div>
             ))
           ) : null}
