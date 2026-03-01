@@ -120,6 +120,38 @@ export default function StartHereSection() {
                   </ReactMarkdown>
                 </div>
 
+                {language === 'en' && (
+                  <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/1Q18EOZfTJQ"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                )}
+
+                {language === 'en' && (
+                  <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none">
+                    <ReactMarkdown
+                      components={{
+                        h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
+                        h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
+                        p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
+                        ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
+                        li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                        strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
+                      }}
+                    >
+                      {t("startHereFullText1Part2En")}
+                    </ReactMarkdown>
+                  </div>
+                )}
+
                 <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
                   <iframe
                     width="100%"
