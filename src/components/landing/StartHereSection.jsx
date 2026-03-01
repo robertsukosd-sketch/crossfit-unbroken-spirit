@@ -66,14 +66,7 @@ export default function StartHereSection() {
                 <ReactMarkdown
                   components={{
                     h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
-                    p: ({node, ...props}) => {
-                      const text = props.children?.join('') || '';
-                      // Check if this is the last two sentences
-                      if (text.includes('Combinăm elemente') || text.includes('Combine elements')) {
-                        return null; // Will render separately below
-                      }
-                      return <p className="m-0" {...props} />;
-                    },
+                    p: ({node, ...props}) => <p className="m-0" {...props} />,
                   }}
                 >
                   {t("startHerePreview")}
