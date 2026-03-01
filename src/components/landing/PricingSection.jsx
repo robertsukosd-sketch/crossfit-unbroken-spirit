@@ -91,7 +91,7 @@ const getPricingCategories = (t, language) => [
      description: language === 'ro' ? "*pana in 26 de ani" : "*up to 26 years old",
      features: language === 'ro' 
        ? ["Toate beneficiile abonamentului nelimitat"]
-       : ["Unlimited Membership"],
+       : ["All Unlimited Membership benefits"],
      popular: false
    },
    {
