@@ -64,13 +64,13 @@ export default function Navigation() {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                  className="text-gray-300 hover:text-white font-medium transition-colors relative group px-1"
+                  className="text-gray-300 hover:text-white font-medium transition-colors relative group"
                 >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
