@@ -172,16 +172,17 @@ export default function ScheduleSection() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <div className="relative rounded-2xl px-6 py-4 text-center max-w-xl w-full border border-sky-500/30 bg-sky-500/5">
+          <div className="relative rounded-2xl px-6 py-4 text-center max-w-2xl w-full border border-sky-500/30 bg-sky-500/5">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600/10 to-sky-500/10" />
             <p className="relative text-gray-300 text-base">
               {language === 'ro'
-                ? <>Pentru a-ți rezerva locul la clasele de CrossFit sau sesiunile de Open Gym, </>
-                : <>To reserve your spot for CrossFit classes or Open Gym sessions, </>
+                ? 'Pentru a-ți rezerva locul la clasele de CrossFit sau sesiunile de Open Gym,'
+                : 'To reserve your spot for CrossFit classes or Open Gym sessions,'
               }
+              <br />
               <button
                 onClick={() => document.getElementById('thunderwod-app')?.scrollIntoView({ behavior: 'smooth' })}
-                className="font-black text-sky-400 hover:text-white transition-all bg-sky-500/20 hover:bg-sky-500 px-2 py-0.5 rounded-md text-base inline-block"
+                className="font-black text-sky-400 hover:text-white transition-all bg-sky-500/20 hover:bg-sky-500 px-2 py-0.5 rounded-md text-base inline-block mt-1"
               >
                 {language === 'ro' ? '⚡ descarcă aplicația ThunderWOD' : '⚡ download the ThunderWOD app'}
               </button>
