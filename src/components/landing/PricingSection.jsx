@@ -130,7 +130,7 @@ export default function PricingSection() {
   const { t, language } = useLanguage();
   const pricingCategories = getPricingCategories(t, language);
   
-  const iosAppUrl = "https://apps.apple.com/app/thunderwod/id1607744328";
+  // no-op, using openAppStore below
 
   return (
     <section id="pricing" className="py-24 bg-zinc-950 relative overflow-hidden">

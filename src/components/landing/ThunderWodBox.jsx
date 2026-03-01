@@ -1,8 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../LanguageProvider';
-
-const IOS_URL = 'https://apps.apple.com/app/thunderwod/id1607744328';
-const ANDROID_URL = 'https://play.google.com/store/apps/details?id=imok.thunderwod.app';
+import { IOS_URL, ANDROID_URL } from '../appStoreUtils';
 
 const iosQr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(IOS_URL)}`;
 const androidQr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(ANDROID_URL)}`;
