@@ -18,7 +18,7 @@ export const useLanguage = () => {
 export const translations = {
   ro: {
     home: "Acasă",
-    startHere: "Incepe Aici",
+    startHere: "Începe Aici",
     programs: "Programe",
     pricing: "Prețuri",
     schedule: "Orar",
