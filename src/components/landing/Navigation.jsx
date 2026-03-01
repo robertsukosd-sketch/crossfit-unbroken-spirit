@@ -138,7 +138,7 @@ export default function Navigation() {
             </div>
 
             {/* ThunderWOD App - Mobile Header */}
-            <div className="lg:hidden flex-1 flex justify-center px-2">
+            <div className="lg:hidden flex-1 flex justify-center px-1 min-w-0">
               <motion.button
                 type="button"
                 onClick={() => scrollToSection('#thunderwod-app')}
