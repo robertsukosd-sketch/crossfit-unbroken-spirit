@@ -13,7 +13,7 @@ const getContactInfo = (t) => [
   {
     icon: MapPin,
     title: t("address"),
-    details: ["Splaiul Unirii 257-259", "Sector 3, București"]
+    details: [t("location").split(", Sector 3")[0], "Sector 3, " + t("location").split("Sector 3, ")[1]]
   },
   {
     icon: Phone,
