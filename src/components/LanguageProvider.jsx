@@ -304,7 +304,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     copyright: "All rights reserved.",
     tagline: "Your fitness community. High-intensity functional training for real results.",
     startHereTitle: "Where to Start",
-    startHereSubtitle: "Complete guide for those new to the world of CrossFit",
+    startHereSubtitle: "A quick guide for those who are new to CrossFit",
     startHerePreview: "**What is CrossFit?**\n\nIf you already searched on the Internet, you probably found the official definition: \"constantly varied functional movements, executed at a high intensity\". Sounds pretty technical, right? **Here's what it actually means:** CrossFit is a training program designed to prepare you for real life. You're not just training to look good in the mirror (though that will be a consequence).",
     startHerePreviewFullWidth: "You're training so you can lift a heavy box without breaking your back, so you can run for the bus without running out of breath, and be in the best physical shape of your life.\n\nWe combine gymnastics, weightlifting and cardio elements, which we vary every day. With us, routine is the enemy, so you will never get bored.",
     startHereFullText1: `## Why CrossFit and Not a Traditional Gym? (The Math of Results)
