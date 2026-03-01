@@ -168,13 +168,6 @@ export default function StartHereSection() {
                 </div>
 
                 <div className="bg-zinc-800/50 rounded-xl p-6">
-                  <div className="mb-6 rounded-lg overflow-hidden border border-zinc-700">
-                    <img 
-                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/f100bfcb9_image.png"
-                      alt="CrossFit Glossary"
-                      className="w-full h-auto"
-                    />
-                  </div>
                   <ReactMarkdown
                     className="prose prose-invert prose-sm max-w-none"
                     components={{
