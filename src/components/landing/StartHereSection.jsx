@@ -155,8 +155,8 @@ export default function StartHereSection() {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
                         <img 
-                          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/268d0195a_image.png" 
-                          alt="CrossFit" 
+                          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/0c659a90e_image.png" 
+                          alt="Traditional Gym vs CrossFit" 
                           className="w-full h-full object-cover"
                         />
                       </div>
