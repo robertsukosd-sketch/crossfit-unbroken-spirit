@@ -156,11 +156,11 @@ export default function StartHereSection() {
                 className="group relative overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-blue-500/50 transition-all duration-300">
                 
                 {/* Image */}
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden bg-black flex items-center justify-center p-4">
                   <img 
                     src={link.image} 
                     alt={link.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
                 </div>
