@@ -336,7 +336,7 @@ Running is a fantastic way to clear your mind and work your heart, and the best 
 * **We build the chassis to support the engine:** Think of your heart and lungs as a car's engine, and your bones, joints, and muscles as the chassis. Running builds your racing engine, but if your chassis is weak, it will break under pressure. Constant knee, ankle, and hip pain in runners happens because the leg and core muscles aren't strong enough to absorb the repeated impact of hitting the pavement. Our training builds the "armor" you need to run for years without injury.
 * **You burn calories even when sleeping:** Running at a steady pace only burns calories *while you're running*. The moment you stop, the burn stops. In contrast, our weight and high-intensity training builds lean muscle mass. Muscle is metabolically active tissue. This means after a WOD with us, you'll continue burning calories at an accelerated rate (thanks to the EPOC effect - Excess Post-exercise Oxygen Consumption) for up to 24 hours after training, even at rest.
 * **Avoiding plateaus:** The human body is an incredible survival and adaptation machine. If you run 5 km every day, within weeks your body becomes so efficient at this movement that it burns fewer and fewer calories for the same effort. In CrossFit, because we change the stimulus daily (using different weights, combining gymnastics with sprints, changing effort duration), **your body can't plateau**. It's constantly pushed out of its comfort zone and forced to create new adaptations.`,
-    startHereFullText2: `## Concrete Results You'll Get
+    startHereFullText2: `## What Can You Get Out of CrossFit Training?
 
 We don't sell illusions, but results you can measure in real time, week by week:
 
