@@ -107,6 +107,27 @@ export default function ProgramsSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Mobile-only CTA button */}
+        <div className="md:hidden mt-10 flex justify-center">
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            onClick={() => scrollToSection('thunderwod-app')}
+            className="relative px-8 py-4 rounded-full text-white font-black text-lg overflow-hidden"
+            style={{ background: 'linear-gradient(135deg, #1e40af 0%, #0ea5e9 100%)' }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <motion.span
+              className="absolute inset-0 rounded-full"
+              animate={{ opacity: [0, 0.3, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
+            />
+            <span className="relative z-10">⚡ Încearcă o Ședință Gratuită</span>
+          </motion.button>
+        </div>
       </div>
     </section>
   );
