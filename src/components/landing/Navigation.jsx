@@ -131,7 +131,10 @@ export default function Navigation() {
                 </motion.span>
               </motion.button>
               <Button
-                onClick={() => scrollToSection('#contact')}
+                onClick={() => {
+                  document.getElementById('thunderwod-app')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  setIsMobileMenuOpen(false);
+                }}
                 className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-full px-6"
               >
                 {t("freeTrial")}
