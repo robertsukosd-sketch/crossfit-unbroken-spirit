@@ -345,7 +345,7 @@ We don't sell illusions, but results you can measure in real time, week by week:
 * **Solid health:** Your blood work will improve (optimal blood pressure, reduced resting heart rate, constant energy throughout the day).
 * **Restored mobility:** By strengthening your back muscles, you'll correct poor desk posture and eliminate stiffness and back pain.
 
-![CrossFit Glossary](https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/f100bfcb9_image.png)
+![CrossFit Glossary](https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/47b405b96_image.png)
 
 ## Beginner's Glossary: Speak Our Language
 
