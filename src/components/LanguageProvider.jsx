@@ -186,9 +186,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
 * **Met-Con (Metabolic Conditioning):** Partea de condiționare metabolică (cardio) a antrenamentului, menită să-ți crească rezistența la efort și să ardă calorii mult timp după ce ai plecat de la sală.
 * **Kipping:** O mișcare fluidă, specifică gimnasticii, în care folosești balansul și impulsul propriului corp pentru a completa o mișcare (cum ar fi tracțiunile la bară). Nu înseamnă că „trișezi", ci că îți miști într-un mod mai eficient întregul corp.
 * **RX (As Prescribed):** Când reușești să faci antrenamentul exact cu greutățile și mișcările scrise pe tablă. Este varianta originală, gândită pentru a-i provoca pe cei mai avansați atleți din sală.
-* **Scaled (Adaptat / Modificat):** *Acesta este cel mai important cuvânt pentru tine!* Orice mișcare și orice greutate din CrossFit pot fi modificate de antrenor pentru a se potrivi nivelului tău fizic actual, păstrând în același timp beneficiile antrenamentului original.
-
-![CrossFit Glossary](https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/f100bfcb9_image.png)`,
+* **Scaled (Adaptat / Modificat):** *Acesta este cel mai important cuvânt pentru tine!* Orice mișcare și orice greutate din CrossFit pot fi modificate de antrenor pentru a se potrivi nivelului tău fizic actual, păstrând în același timp beneficiile antrenamentului original.`,
   },
   en: {
     home: "Home",
