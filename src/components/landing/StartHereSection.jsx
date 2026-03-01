@@ -60,28 +60,40 @@ export default function StartHereSection() {
           viewport={{ once: true }}
           className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-800 mb-8 max-w-4xl mx-auto">
           
-          <div className="grid md:grid-cols-[1.3fr_1fr] gap-8 items-center">
-            <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none">
-              <ReactMarkdown
-                components={{
-                  h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
-                  p: ({node, ...props}) => <p className="m-0" {...props} />,
-                }}
-              >
-                {t("startHerePreview")}
-              </ReactMarkdown>
+          <div className="space-y-6">
+            <div className="grid md:grid-cols-[1.3fr_1fr] gap-8 items-start">
+              <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none">
+                <ReactMarkdown
+                  components={{
+                    h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
+                    p: ({node, ...props}) => {
+                      const text = props.children?.join('') || '';
+                      // Check if this is the last two sentences
+                      if (text.includes('Combinăm elemente') || text.includes('Combine elements')) {
+                        return null; // Will render separately below
+                      }
+                      return <p className="m-0" {...props} />;
+                    },
+                  }}
+                >
+                  {t("startHerePreview")}
+                </ReactMarkdown>
+              </div>
+              <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/mlVrkiCoKkg"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
             </div>
-            <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/mlVrkiCoKkg"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
+            <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none">
+              <p>{language === 'ro' ? 'Combinăm elemente de gimnastică, ridicări de greutăți și cardio, pe care le schimbăm în fiecare zi. La noi, rutina este inamicul, așa că n-o să te plictisești niciodată.' : 'We combine gymnastics, weightlifting and cardio elements, which we vary every day. With us, routine is the enemy, so you will never get bored.'}</p>
             </div>
           </div>
           
