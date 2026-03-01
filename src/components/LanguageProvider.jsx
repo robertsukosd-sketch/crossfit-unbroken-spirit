@@ -363,7 +363,7 @@ At your first workouts, you might hear terms that sound like secret language. Do
 * **Kipping:** A fluid movement, specific to gymnastics, where you use the swing and momentum of your own body to complete a movement (like pull-ups on the bar). It doesn't mean you're "cheating," it means you're moving more efficiently using your whole body.
 * **RX (As Prescribed):** When you manage to do the workout exactly as written on the board with the prescribed weights and movements. It's the original version, designed to challenge the most advanced athletes in the gym.
 * **Scaled (Adapted / Modified):** *This is the most important word for you!* Any CrossFit movement and any weight can be modified by the coach to fit your current fitness level, while still preserving the benefits of the original workout.`,
-    startHereFullText1Part2En: `## Why CrossFit and Not a Traditional Gym? (The Math of Results)
+    startHereFullText1Part2En: `## Why CrossFit and Not a Traditional Gym? (The Math of Results)`,
     startHereFullText3: ``,
   }
 };
