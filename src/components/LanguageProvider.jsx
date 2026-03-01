@@ -165,10 +165,10 @@ Alergarea e un mod fantastic de a-ți elibera mintea și de a lucra inima, iar p
 
 Nu vindem iluzii, ci rezultate pe care le poți măsura în timp real, săptămână de săptămână:
 
-* **Compoziție corporală schimbată:** Vei vedea o <span style="color: rgb(56, 189, 248)">scădere clară a procentului de grăsime</span> și o <span style="color: rgb(56, 189, 248)">creștere a masei musculare</span> (hainele se vor așeza altfel pe tine).
-* **Forță și rezistență crescute:** Vei putea <span style="color: rgb(56, 189, 248)">ridica greutăți</span> la care nici nu visai în prima zi și vei putea <span style="color: rgb(56, 189, 248)">susține efortul mai mult timp</span>, fără să obosești.
-* **O sănătate de fier:** <span style="color: rgb(56, 189, 248)">Analizele tale se vor îmbunătăți</span> (tensiune arterială optimă, ritm cardiac de repaus redus, energie constantă pe tot parcursul zilei).
-* **Mobilitate recâștigată:** Întărind musculatura spatelui, îți vei <span style="color: rgb(56, 189, 248)">corecta postura greșită de la birou</span>, ameliorând dureri.
+* **Compoziție corporală schimbată:** Vei vedea o scădere clară a procentului de grăsime și o creștere a masei musculare (hainele se vor așeza altfel pe tine).
+* **Forță și rezistență crescute:** Vei putea ridica greutăți la care nici nu visai în prima zi și vei putea susține efortul mai mult timp, fără să obosești.
+* **O sănătate de fier:** Analizele tale se vor îmbunătăți (tensiune arterială optimă, ritm cardiac de repaus redus, energie constantă pe tot parcursul zilei).
+* **Mobilitate recâștigată:** Întărind musculatura spatelui, îți vei corecta postura greșită de la birou, ameliorând acest dureri.
 
 ![CrossFit Glossary](https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/f100bfcb9_image.png)
 
@@ -339,10 +339,10 @@ Running is a fantastic way to clear your mind and work your heart, and the best 
 
 We don't sell illusions, but results you can measure in real time, week by week:
 
-* **Changed body composition:** You'll see a <span style="color: rgb(56, 189, 248)">clear decrease in fat percentage</span> and an <span style="color: rgb(56, 189, 248)">increase in muscle mass</span> (clothes will fit differently on you).
-* **Increased strength and endurance:** You'll be able to <span style="color: rgb(56, 189, 248)">lift weights</span> you didn't even dream of on day one and <span style="color: rgb(56, 189, 248)">sustain effort longer</span> without getting tired.
-* **Solid health:** Your <span style="color: rgb(56, 189, 248)">blood work will improve</span> (optimal blood pressure, reduced resting heart rate, constant energy throughout the day).
-* **Restored mobility:** By strengthening your back muscles, you'll <span style="color: rgb(56, 189, 248)">correct poor desk posture</span> and eliminate stiffness and back pain.
+* **Changed body composition:** You'll see a clear decrease in fat percentage and an increase in muscle mass (clothes will fit differently on you).
+* **Increased strength and endurance:** You'll be able to lift weights you didn't even dream of on day one and sustain effort longer without getting tired.
+* **Solid health:** Your blood work will improve (optimal blood pressure, reduced resting heart rate, constant energy throughout the day).
+* **Restored mobility:** By strengthening your back muscles, you'll correct poor desk posture and eliminate stiffness and back pain.
 
 ![CrossFit Glossary](https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/47b405b96_image.png)
 
