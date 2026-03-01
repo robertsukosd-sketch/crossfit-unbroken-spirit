@@ -126,8 +126,17 @@ export default function ProgramsSection() {
               style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
             />
             <span className="relative z-10 flex flex-col items-center leading-tight">
-              <span>⚡ Încearcă</span>
-              <span>o Ședință Gratuită</span>
+              {language === 'ro' ? (
+                <>
+                  <span>⚡ Încearcă</span>
+                  <span>o Ședință Gratuită</span>
+                </>
+              ) : (
+                <>
+                  <span>⚡ Book</span>
+                  <span>a Free Session</span>
+                </>
+              )}
             </span>
           </motion.button>
         </div>
