@@ -52,7 +52,7 @@ export default function Navigation() {
             <a 
               href="#hero"
               onClick={(e) => { e.preventDefault(); scrollToSection('#hero'); }}
-              className="flex items-center gap-3"
+              className="flex items-center gap-3 flex-shrink-0"
             >
               <LogoSVG size={60} />
               <div className="hidden sm:block text-center leading-tight">
