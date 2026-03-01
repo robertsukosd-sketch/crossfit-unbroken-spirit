@@ -94,9 +94,8 @@ export default function StartHereSection() {
             </div>
           </div>
           
-          <div className="bg-zinc-800/50 rounded-xl p-6 mt-6">
+          <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none mt-6">
             <ReactMarkdown
-              className="prose prose-invert prose-sm max-w-none"
               components={{
                 h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
                 h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
