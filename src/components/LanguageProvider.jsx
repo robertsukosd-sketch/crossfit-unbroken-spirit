@@ -319,7 +319,7 @@ Here's the reality in our gym: at the same class, a former competitive athlete a
 * If today's Workout of the Day (WOD) has pull-ups, some will do them at the bar, others will do assisted ring rows with their feet on the ground.
 
 Intensity is completely relative. Coaches are here to make sure you work correctly and at **your limit**. **Your ego stays at the door.** Come exactly as you are now.`,
-    startHereFullText1Part2: `## Why CrossFit and Not a Traditional Gym? (The Math of Results)
+    startHereFullText1Part2En: `## Why CrossFit and Not a Traditional Gym? (The Math of Results)
 
 Let's be honest: a traditional gym membership often seems cheaper at first glance. But how much does a lack of results and wasted time really cost you? Here's why the CrossFit model works completely differently:
 
@@ -363,7 +363,6 @@ At your first workouts, you might hear terms that sound like secret language. Do
 * **Kipping:** A fluid movement, specific to gymnastics, where you use the swing and momentum of your own body to complete a movement (like pull-ups on the bar). It doesn't mean you're "cheating," it means you're moving more efficiently using your whole body.
 * **RX (As Prescribed):** When you manage to do the workout exactly as written on the board with the prescribed weights and movements. It's the original version, designed to challenge the most advanced athletes in the gym.
 * **Scaled (Adapted / Modified):** *This is the most important word for you!* Any CrossFit movement and any weight can be modified by the coach to fit your current fitness level, while still preserving the benefits of the original workout.`,
-    startHereFullText1Part2En: `## Why CrossFit and Not a Traditional Gym? (The Math of Results)`,
     startHereFullText3: ``,
   }
 };

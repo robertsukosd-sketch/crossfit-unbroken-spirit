@@ -152,19 +152,6 @@ export default function StartHereSection() {
                   </div>
                 )}
 
-                <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/1Q18EOZfTJQ"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
-
                 <div className="bg-zinc-800/50 rounded-xl p-6">
                   <ReactMarkdown
                     className="prose prose-invert prose-sm max-w-none"
