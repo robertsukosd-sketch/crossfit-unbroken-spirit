@@ -31,6 +31,36 @@ export function openAppStore() {
   window.open(getAppStoreUrl(), '_blank');
 }
 
+export function openAppWithFallback() {
+  const ua = navigator.userAgent || '';
+  
+  if (/android/i.test(ua)) {
+    // Android: try universal link, fallback to Play Store after timeout
+    const timeout = setTimeout(() => {
+      window.location.href = ANDROID_PLAY_STORE;
+    }, 2500);
+    
+    window.location.href = ANDROID_UNIVERSAL_LINK;
+    window.addEventListener('pagehide', () => clearTimeout(timeout), { once: true });
+  } else if (/iphone|ipad|ipod/i.test(ua)) {
+    // iOS: try universal link, fallback to App Store after timeout
+    const timeout = setTimeout(() => {
+      window.location.href = IOS_APP_STORE;
+    }, 2500);
+    
+    window.location.href = IOS_UNIVERSAL_LINK;
+    window.addEventListener('pagehide', () => clearTimeout(timeout), { once: true });
+  } else {
+    // Desktop
+    window.open(DESKTOP_URL, '_blank');
+  }
+}
+
 export function openMobileOrDesktop() {
-  window.open(getMobileOrDesktopUrl(), '_blank');
+  const ua = navigator.userAgent || '';
+  if (/android|iphone|ipad|ipod/i.test(ua)) {
+    openAppWithFallback();
+  } else {
+    window.open(DESKTOP_URL, '_blank');
+  }
 }
