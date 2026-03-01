@@ -241,7 +241,10 @@ export default function Navigation() {
               >
 
                 <Button
-                  onClick={() => scrollToSection('#contact')}
+                  onClick={() => {
+                    document.getElementById('thunderwod-app')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    setIsMobileMenuOpen(false);
+                  }}
                   className="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold rounded-full py-6 text-lg"
                 >
                   {t("freeTrial")}
