@@ -135,16 +135,16 @@ export const translations = {
     startHerePreviewFullWidth: "Te antrenezi ca să poți ridica o cutie grea fără să ți se blocheze spatele, să alergi după autobuz și să nu rămâi fără aer și să fii în cea mai bună formă fizică a vieții tale.",
     startHereFullText1: `## Mitul suprem: „Trebuie să fiu deja în formă ca să mă apuc de CrossFit"
 
-Este perfect normal ca prima oară să te simți intimidat, dar aceasta este și cea mai mare barieră care te ține pe loc. Să lămurim un lucru chiar acum: **nu trebuie să fii în formă ca să începi CrossFit-ul; începi CrossFit-ul exact ca să ajungi în formă.**
+E perfect normal ca prima oară să te simți intimidat, dar asta e și cea mai mare barieră care te ține pe loc. De la bun început, un lucru trebuie să fie clar: nu trebuie să fii în formă ca să te apuci de CrossFit; te apuci de CrossFit ca să ajungi să fii în formă.
 
-A spune că trebuie să te antrenezi înainte să vii la noi este ca și cum ai spune că trebuie să știi deja o limbă străină înainte să te înscrii la curs. Nu are sens! 
+A spune că trebuie să te antrenezi înainte să vii la noi e ca și cum ai spune că trebuie să știi deja o limbă străină înainte să te înscrii la curs. N-are niciun sens!
 
-Iată realitatea din sala noastră: la aceeași clasă, vei vedea lucrând cot la cot un fost sportiv de 25 de ani și o persoană de 50 de ani care lucrează toată ziua la birou și nu a mai făcut mișcare de un deceniu. Amândoi fac *același* antrenament, dar perfect adaptat nivelului fiecăruia (vei vedea mai jos că noi numim asta varianta *Scaled*). 
+Iată realitatea din sala noastră: la aceeași clasă, se pot antrena cot la cot un fost sportiv de performanță și o persoană de 40 de ani care lucrează toată ziua la birou și nu are prea mult timp pentru mișcare. Amândoi fac același antrenament, dar adaptat nivelului fiecăruia (vei vedea mai jos că noi numim asta varianta scaled).
 
-* Dacă antrenamentul cere genuflexiuni cu o halteră grea, sportivul va folosi acea greutate, iar tu vei face genuflexiuni cu o țeavă de PVC sau pur și simplu cu greutatea corpului tău, așezându-te pe o cutie. 
-* Dacă pe tablă scrie tracțiuni, unii le vor face la bară, iar tu vei trage de niște inele, sprijinindu-te pe picioare.
+* Dacă antrenamentul cere genuflexiuni cu o halteră grea, o persoană poate folosi chiar greutatea prescrisă în antrenament, pe când alta poate folosi o țeavă de PVC sau pur și simplu cu greutatea corpulu, așezându-se pe o cutie.
+* Dacă în antrenamentul zilei (Workout of the Day) sunt programate tracțiuni, unii le vor face la bară, iar alții vor face ramat la inele, sprijinindu-se pe picioare.
 
-Intensitatea este complet relativă. Antrenorii noștri sunt aici ca să se asigure că lucrezi corect și la limita *ta* de confort, nu a celui de lângă tine. Ego-ul rămâne mereu la ușă. Vino exact așa cum ești acum.`,
+Intensitatea e complet relativă. Antrenorii sunt aici ca să se asigure că lucrezi corect și la limita ta de confort, nu a celui de lângă tine. Ego-ul rămâne mereu la ușă. Vino exact așa cum ești acum.`,
     startHereFullText2: `## Cu ce suntem diferiți? 
 
 Probabil te întrebi de ce ai alege box-ul nostru în locul unui abonament la o sală obișnuită sau în locul unei alergări în parc. Iată diferența:
