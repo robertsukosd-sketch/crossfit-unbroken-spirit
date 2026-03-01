@@ -24,7 +24,7 @@ export default function StartHereSection() {
     {
       title: language === 'ro' ? 'Jurnale și Publicații' : 'Journals & Publications',
       description: language === 'ro' ? 'Cercetări și articole științifice' : 'Scientific research and articles',
-      url: 'https://www.crossfit.com/health/journals-and-publications',
+      url: 'https://journal.crossfit.com/',
       image: 'https://images.unsplash.com/photo-1507238691854-564c5ac63af3?w=400&h=400&fit=crop'
     }
   ];
