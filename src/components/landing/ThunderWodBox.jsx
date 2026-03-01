@@ -2,8 +2,6 @@ import React from 'react';
 import { useLanguage } from '../LanguageProvider';
 import { IOS_URL, ANDROID_URL } from '../appStoreUtils';
 
-const iosQr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(IOS_URL)}`;
-const androidQr = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(ANDROID_URL)}`;
 
 export default function ThunderWodBox({ className = '' }) {
   const { language } = useLanguage();
