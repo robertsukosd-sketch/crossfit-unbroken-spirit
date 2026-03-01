@@ -34,25 +34,24 @@ export function openAppStore() {
 export function openAppWithFallback() {
   const ua = navigator.userAgent || '';
   
-  if (/iphone|ipad|ipot/i.test(ua)) {
-    // iOS: try deep link via iframe (more reliable on Safari), fallback to App Store
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
+  if (/iphone|ipad|ipod/i.test(ua)) {
+    // iOS: try deep link with detection - if app responds, it will close the tab
+    // If not, fallback to App Store
+    const startTime = Date.now();
     
+    // Set up timeout to redirect to App Store if app doesn't open
     const timeout = setTimeout(() => {
-      document.body.removeChild(iframe);
-      window.location.href = IOS_APP_STORE;
-    }, 2500);
-    
-    iframe.src = IOS_DEEP_LINK;
-    
-    window.addEventListener('pagehide', () => {
-      clearTimeout(timeout);
-      if (document.body.contains(iframe)) {
-        document.body.removeChild(iframe);
+      // Check if we're still in the app (if app didn't open, we're still on the page)
+      if (Date.now() - startTime > 1500) {
+        window.location.href = IOS_APP_STORE;
       }
-    }, { once: true });
+    }, 1500);
+    
+    // Try to open the app - if successful, this page will be backgrounded/closed
+    window.location.href = IOS_DEEP_LINK;
+    
+    // Clear timeout if page is hidden (app successfully opened)
+    window.addEventListener('pagehide', () => clearTimeout(timeout), { once: true });
   } else if (/android/i.test(ua)) {
     // Android: try deep link, fallback to Play Store
     const timeout = setTimeout(() => {
