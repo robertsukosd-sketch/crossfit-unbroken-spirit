@@ -267,8 +267,7 @@ export default function PricingSection() {
                 plan.featured ?
                 'bg-white text-blue-600 hover:bg-white/90' :
                 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'}`
-                }
-                onClick={() => openMobileOrDesktop()}>
+                }>
                     {t("startNowBtn")}
                   </Button>
                 </motion.div>
