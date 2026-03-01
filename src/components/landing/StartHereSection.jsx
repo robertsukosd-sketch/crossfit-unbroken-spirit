@@ -126,6 +126,7 @@ export default function StartHereSection() {
                       ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
                       li: ({node, ...props}) => <li className="mb-1" {...props} />,
                       strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
+                      a: ({node, ...props}) => <a {...props} className="text-sky-400 hover:text-sky-300 font-semibold underline" />,
                     }}
                   >
                     {t("startHereFullText1")}
@@ -158,6 +159,7 @@ export default function StartHereSection() {
                           ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
                           li: ({node, ...props}) => <li className="mb-1" {...props} />,
                           strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
+                          a: ({node, ...props}) => <a {...props} className="text-sky-400 hover:text-sky-300 font-semibold underline" />,
                         }}
                       >
                         {t("startHereFullText1Part2En")}
