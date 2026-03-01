@@ -9,6 +9,7 @@ import { openAppWithFallback } from '../appStoreUtils';
 
 const getNavLinks = (t) => [
   { name: t("home"), href: "#hero" },
+  { name: t("startHere"), href: "#starthere" },
   { name: t("programs"), href: "#programs" },
   { name: t("pricing"), href: "#pricing" },
   { name: t("schedule"), href: "#schedule" },
