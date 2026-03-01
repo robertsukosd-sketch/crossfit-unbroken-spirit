@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Check, Sparkles, Dumbbell, Apple, User } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
-import { openMobileOrDesktop } from '../appStoreUtils';
+
 
 function scrollToDownloadApp() {
   const el = document.getElementById('thunderwod-app');
