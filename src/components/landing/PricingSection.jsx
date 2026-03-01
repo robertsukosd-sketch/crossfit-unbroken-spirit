@@ -264,12 +264,15 @@ export default function PricingSection() {
                   </ul>
                   
                   <Button
+                asChild
                 className={`w-full font-bold rounded-full ${
                 plan.featured ?
                 'bg-white text-blue-600 hover:bg-white/90' :
                 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'}`
                 }>
-                    {t("startNowBtn")}
+                    <a href={getAppStoreUrl()} target="_blank" rel="noopener noreferrer">
+                      {t("startNowBtn")}
+                    </a>
                   </Button>
                 </motion.div>
             })}
