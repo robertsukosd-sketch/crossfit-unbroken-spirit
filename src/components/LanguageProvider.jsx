@@ -142,7 +142,7 @@ A spune că trebuie să te antrenezi înainte să vii la noi e ca și cum ai spu
 Iată realitatea din sala noastră: la aceeași clasă, se pot antrena cot la cot un fost sportiv de performanță și o persoană de 40 de ani care lucrează toată ziua la birou și nu are prea mult timp pentru mișcare. Amândoi fac același antrenament, dar adaptat nivelului fiecăruia (vei vedea mai jos că noi numim asta varianta **scaled**).
 
 * Dacă antrenamentul cere genuflexiuni cu o halteră grea, o persoană poate folosi chiar greutatea prescrisă în antrenament, pe când alta poate folosi o țeavă de PVC sau pur și simplu cu greutatea corpulu, așezându-se pe o cutie.
-* Dacă în antrenamentul zilei (**Workout of the Day**) sunt programate tracțiuni, unii le vor face la bară, iar alții vor face ramat la inele, sprijinindu-se pe picioare.
+* Dacă în antrenamentul zilei (**[Workout of the Day](https://www.crossfit.com/workout/)**) sunt programate tracțiuni, unii le vor face la bară, iar alții vor face ramat la inele, sprijinindu-se pe picioare.
 
 Intensitatea e complet relativă. Antrenorii sunt aici ca să se asigure că lucrezi corect și la **limita ta** de confort, nu a celui de lângă tine. **Ego-ul rămâne mereu la ușă.** Vino exact așa cum ești acum.`,
     startHereFullText2: `## De ce CrossFit și nu o Sală Clasică? (Matematica Rezultatelor)
@@ -316,7 +316,7 @@ Saying you need to train before coming to us is like saying you need to already 
 Here's the reality in our gym: at the same class, a former competitive athlete and a 40-year-old with a desk job can train side by side. Both do the same workout, but adapted to each person's level (we call this the **scaled** version).
 
 * If the workout calls for squats with a heavy weight, one person might use the prescribed weight, while another might use a PVC pipe or just bodyweight, sitting on a box.
-* If today's Workout of the Day (WOD) has pull-ups, some will do them at the bar, others will do assisted ring rows with their feet on the ground.
+* If today's [Workout of the Day](https://www.crossfit.com/workout/) (WOD) has pull-ups, some will do them at the bar, others will do assisted ring rows with their feet on the ground.
 
 Intensity is completely relative. Coaches are here to make sure you work correctly and at **your limit**. **Your ego stays at the door.** Come exactly as you are now.`,
     startHereFullText1Part2En: `## Why CrossFit and Not a Traditional Gym? (The Simple Math)
@@ -324,7 +324,7 @@ Intensity is completely relative. Coaches are here to make sure you work correct
 Let's be honest: a traditional gym membership often seems cheaper at first glance. But how much does a lack of results and wasted time really cost you? Here's why the CrossFit model works completely differently:
 
 * **An almost Personal Trainer is included:** In a traditional gym, you pay only for access to equipment. If you want to know what you're doing and avoid injury, you need to pay separately for a Personal Trainer (which significantly increases your monthly cost). With us, **the coach and workout are included in your membership**. Every class is led by a coach who explains movements, constantly corrects you, and adjusts weights for you. It's personalized training for your level, but with the energy and support of the whole group.
-* **No doom scrolling on your phone:** Here's what an hour at a regular gym looks like: 15 minutes waiting for equipment to free up, 15 minutes on your phone between sets, and no clue what to work on today. With us, you walk in the door and for 60 minutes you get step by step guidance: specific warm-up, technique, strength, and the Workout of the Day (WOD). **These are the most efficient, but also the most enjoyable 60 minutes of your day.** No time wasted.
+* **No doom scrolling on your phone:** Here's what an hour at a regular gym looks like: 15 minutes waiting for equipment to free up, 15 minutes on your phone between sets, and no clue what to work on today. With us, you walk in the door and for 60 minutes you get step by step guidance: specific warm-up, technique, strength, and the [Workout of the Day](https://www.crossfit.com/workout/) (WOD). **These are the most efficient, but also the most enjoyable 60 minutes of your day.** No time wasted.
 * **We build armor, not just mirror muscles:** Machines at traditional gyms isolate your muscles while you sit comfortably in a chair. In real life, your body doesn't work that way. When you lift a child, move furniture, or put luggage in a plane, your body works as a whole. We use compound movements (squats, deadlifts, overhead presses) that trigger a massive hormonal response, burning fat faster and building functional strength you'll feel every day.
 * **Accountability (Someone notices when you're missing):** Commercial gyms profit most when you buy a year-long membership and never come back. That's their business model. With us, you're part of a community. You train in small groups. When you miss your regular class, the coach and your classmates will ask you the next day: *"Hey, where were you yesterday, we were waiting for you in class!"*. This accountability will motivate you to come to the gym exactly when your motivation dips.
 
