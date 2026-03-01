@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Dumbbell, Heart, Zap, Users, Timer, TrendingUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
+import { openAppStore } from '../appStoreUtils';
 
 const getPrograms = (t) => [
   {
