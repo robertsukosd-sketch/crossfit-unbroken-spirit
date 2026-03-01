@@ -77,18 +77,18 @@ export default function StartHereSection() {
                 </ReactMarkdown>
               </div>
               <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/1Q18EOZfTJQ"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
+               <iframe
+                 width="100%"
+                 height="100%"
+                 src="https://www.youtube.com/embed/mlVrkiCoKkg"
+                 title="YouTube video player"
+                 frameBorder="0"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                 allowFullScreen
+                 className="w-full h-full"
+               />
               </div>
-            </div>
+              </div>
             <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none space-y-4">
               <p>{t("startHerePreviewFullWidth")}</p>
               <p>{language === 'ro' ? 'Combinăm elemente de gimnastică, ridicări de greutăți și cardio, pe care le schimbăm în fiecare zi. La noi, rutina este inamicul, așa că n-o să te plictisești niciodată.' : 'We combine gymnastics, weightlifting and cardio elements, which we vary every day. With us, routine is the enemy, so you will never get bored.'}</p>
