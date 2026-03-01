@@ -75,33 +75,13 @@ const getPricingCategories = (t, language) => [
   icon: Sparkles,
   plans: [
   {
-    name: "Open Gym",
-    price: "360",
-    period: language === 'ro' ? "lună" : "month",
-    description: language === 'ro' ? "Antrenament independent" : "Independent training",
-    features: language === 'ro' 
-      ? ["Program flexibil", "Fără clase de grup"]
-      : ["Flexible schedule", "No group classes"],
-    popular: false
-  },
-  {
-    name: "CrossFit Family",
-    price: "900",
-    period: language === 'ro' ? "lună" : "month",
-    description: language === 'ro' ? "Abonament pentru familii/cupluri" : "For families/couples",
-    features: language === 'ro' 
-      ? ["Ședințe nelimitate", "Toate clasele incluse", "Open Gym inclus", "Prioritate înscriere"]
-      : ["Unlimited sessions", "All classes included", "Open Gym included", "Priority booking"],
-    popular: false
-  },
-  {
-     name: language === 'ro' ? "Nutriție" : "Nutrition",
-     price: "350",
+     name: "Open Gym",
+     price: "360",
      period: language === 'ro' ? "lună" : "month",
-     description: language === 'ro' ? "Plan alimentar personalizat" : "Personalized meal plan",
+     description: language === 'ro' ? "Antrenament independent" : "Independent training",
      features: language === 'ro' 
-       ? ["Consultație inițială", "Plan nutrițional", "Monitorizare progres", "Suport continuu"]
-       : ["Initial consultation", "Nutrition plan", "Progress monitoring", "Ongoing support"],
+       ? ["Program flexibil", "Fără clase de grup"]
+       : ["Flexible schedule", "No group classes"],
      popular: false
    },
    {
@@ -112,6 +92,26 @@ const getPricingCategories = (t, language) => [
      features: language === 'ro' 
        ? ["Toate beneficiile abonamentului nelimitat"]
        : ["All unlimited membership benefits"],
+     popular: false
+   },
+   {
+     name: "CrossFit Family",
+     price: "900",
+     period: language === 'ro' ? "lună" : "month",
+     description: language === 'ro' ? "Abonament pentru familii/cupluri" : "For families/couples",
+     features: language === 'ro' 
+       ? ["Ședințe nelimitate", "Toate clasele incluse", "Open Gym inclus", "Prioritate înscriere"]
+       : ["Unlimited sessions", "All classes included", "Open Gym included", "Priority booking"],
+     popular: false
+   },
+   {
+     name: language === 'ro' ? "Nutriție" : "Nutrition",
+     price: "350",
+     period: language === 'ro' ? "lună" : "month",
+     description: language === 'ro' ? "Plan alimentar personalizat" : "Personalized meal plan",
+     features: language === 'ro' 
+       ? ["Consultație inițială", "Plan nutrițional", "Monitorizare progres", "Suport continuu"]
+       : ["Initial consultation", "Nutrition plan", "Progress monitoring", "Ongoing support"],
      popular: false
    }]
 
