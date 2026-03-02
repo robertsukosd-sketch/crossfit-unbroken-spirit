@@ -143,34 +143,7 @@ export default function Navigation() {
               </Button>
             </div>
 
-            {/* ThunderWOD App - Mobile Header */}
-            <div className="lg:hidden flex-1 flex justify-center px-1 min-w-0 overflow-hidden">
-              <motion.button
-                type="button"
-                onClick={() => openAppWithFallback()}
-                animate={{ boxShadow: ['0 0 0px #38bdf8', '0 0 10px #38bdf8', '0 0 0px #38bdf8'] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 50%, #1e3a5f 100%)' }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <motion.span
-                  className="absolute inset-0 rounded-full"
-                  animate={{ opacity: [0, 0.3, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
-                />
-                <Smartphone className="w-3.5 h-3.5 text-sky-300 relative z-10" />
-                <span className="relative z-10">ThunderWOD</span>
-                <motion.span
-                  className="relative z-10 text-[9px] bg-sky-400 text-black font-black px-1 py-0.5 rounded-full leading-none"
-                  animate={{ scale: [1, 1.15, 1] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  NEW
-                </motion.span>
-              </motion.button>
-            </div>
+
 
             {/* Language Toggle Mobile + Menu Button */}
             <div className="lg:hidden flex items-center gap-2 flex-shrink-0">
