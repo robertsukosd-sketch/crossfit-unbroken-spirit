@@ -88,7 +88,7 @@ export default function ProgramsSection() {
                   width={600}
                   height={192}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 will-change-transform"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
                 <div className={`absolute top-4 left-4 w-12 h-12 rounded-xl bg-gradient-to-br ${program.color} flex items-center justify-center shadow-lg`}>
@@ -115,6 +115,7 @@ export default function ProgramsSection() {
         {/* Mobile-only CTA button */}
         <div className="md:hidden mt-10 flex justify-center">
           <motion.button
+            type="button"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
