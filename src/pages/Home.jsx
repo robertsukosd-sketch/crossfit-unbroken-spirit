@@ -46,6 +46,7 @@ export default function Home() {
 
   return (
     <LanguageProvider>
+      <SeoMeta />
       <div className="min-h-screen bg-black">
         <Navigation />
         <div id="hero">

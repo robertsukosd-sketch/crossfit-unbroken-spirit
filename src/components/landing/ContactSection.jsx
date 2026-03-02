@@ -151,10 +151,11 @@ export default function ContactSection() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="contact-name" className="block text-sm font-medium text-gray-300 mb-2">
                       {t("fullName")} *
                     </label>
                     <Input
+                      id="contact-name"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -165,10 +166,11 @@ export default function ContactSection() {
                   
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label htmlFor="contact-email" className="block text-sm font-medium text-gray-300 mb-2">
                         {t("email")} *
                       </label>
                       <Input
+                        id="contact-email"
                         type="email"
                         required
                         value={formData.email}
@@ -178,10 +180,11 @@ export default function ContactSection() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-300 mb-2">
                         {t("phone")}
                       </label>
                       <Input
+                        id="contact-phone"
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -192,10 +195,11 @@ export default function ContactSection() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="contact-message" className="block text-sm font-medium text-gray-300 mb-2">
                       {t("message")} *
                     </label>
                     <Textarea
+                      id="contact-message"
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}

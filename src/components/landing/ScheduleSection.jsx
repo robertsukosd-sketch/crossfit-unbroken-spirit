@@ -108,7 +108,7 @@ export default function ScheduleSection() {
               key={day}
               onClick={() => setSelectedDay(day)}
               className={cn(
-                "px-4 py-2 rounded-full text-sm font-semibold transition-all",
+                "px-4 py-2 min-h-[44px] rounded-full text-sm font-semibold transition-colors",
                 selectedDay === day
                   ? "bg-blue-500 text-white"
                   : "bg-zinc-900 text-gray-300 hover:bg-zinc-800 hover:text-white"
