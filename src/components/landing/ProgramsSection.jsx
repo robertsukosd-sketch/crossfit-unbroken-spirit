@@ -85,6 +85,9 @@ export default function ProgramsSection() {
                 <img 
                   src={program.image}
                   alt={program.title}
+                  width={600}
+                  height={192}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
