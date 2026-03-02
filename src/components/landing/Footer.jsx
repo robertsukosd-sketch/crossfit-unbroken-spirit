@@ -255,9 +255,9 @@ export default function Footer() {
   return (
     <footer className="bg-black border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="sm:col-span-2">
             <div className="flex items-center gap-3 mb-4">
                <Logo size={48} />
                <div className="text-center leading-tight">
@@ -332,7 +332,7 @@ export default function Footer() {
         </div>
         
         {/* Bottom */}
-        <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm">
             © {currentYear} CrossFit Unbroken Spirit. {t("copyright")}
           </p>
