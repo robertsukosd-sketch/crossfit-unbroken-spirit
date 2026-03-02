@@ -122,13 +122,14 @@ export default function ScheduleSection() {
               aria-label={day}
               aria-pressed={selectedDay === day}
               className={cn(
-                "px-4 py-2 min-h-[44px] rounded-full text-sm font-semibold transition-colors",
+                "px-3 sm:px-4 py-2 min-h-[44px] rounded-full text-sm font-semibold transition-colors",
                 selectedDay === day
                   ? "bg-blue-500 text-white"
                   : "bg-zinc-900 text-gray-300 hover:bg-zinc-800 hover:text-white"
               )}
             >
-              {day}
+              <span className="sm:hidden">{dayAbbr[day]}</span>
+              <span className="hidden sm:inline">{day}</span>
             </button>
           ))}
         </div>
