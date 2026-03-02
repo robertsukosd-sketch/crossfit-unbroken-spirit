@@ -276,7 +276,7 @@ export default function Footer() {
                 aria-label="Instagram"
                 className="w-11 h-11 rounded-lg bg-zinc-900 flex items-center justify-center hover:bg-blue-500 transition-colors group"
               >
-                <Instagram className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                <Instagram aria-hidden="true" className="w-5 h-5 text-gray-300 group-hover:text-white" />
               </a>
               <a 
                 href="https://www.facebook.com/profile.php?id=61588232038424" 
@@ -285,7 +285,7 @@ export default function Footer() {
                 aria-label="Facebook"
                 className="w-11 h-11 rounded-lg bg-zinc-900 flex items-center justify-center hover:bg-blue-500 transition-colors group"
               >
-                <Facebook className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                <Facebook aria-hidden="true" className="w-5 h-5 text-gray-300 group-hover:text-white" />
               </a>
             </div>
           </div>
@@ -364,12 +364,12 @@ export default function Footer() {
       </div>
 
       {/* ANPC Badges */}
-      <div className="flex flex-row flex-wrap items-center justify-center gap-4 pb-8">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-4 pb-8 px-4">
         <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow">
-          <img width="250" height="50" style={{width:'250px', height:'auto'}} src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/fdece7d95_anpc-sal.png" alt="Solutionarea Alternativa a Litigiilor" />
+          <img width="250" height="50" style={{width:'min(250px, 100%)', height:'auto'}} src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/fdece7d95_anpc-sal.png" alt="Solutionarea Alternativa a Litigiilor" className="max-w-full" />
         </a>
         <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="nofollow">
-          <img width="250" height="50" style={{width:'250px', height:'auto'}} src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/af3f98021_anpc-sol.png" alt="Solutionarea Online a Litigiilor" />
+          <img width="250" height="50" style={{width:'min(250px, 100%)', height:'auto'}} src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/af3f98021_anpc-sol.png" alt="Solutionarea Online a Litigiilor" className="max-w-full" />
         </a>
       </div>
 
