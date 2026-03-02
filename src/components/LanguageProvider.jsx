@@ -235,7 +235,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     openGym: "Open Gym",
     openGymDesc: "Free access to equipment for independent workouts.",
     pricingTitle: "Pricing",
-    pricingSubtitle: "Each plan includes professional coaching and access to our community.",
+    pricingSubtitle: "Learn right from day one. No judgment. Real coaches, real progress. Compete with your past self.",
     crossfitMemberships: "CrossFit Memberships",
     dropIn: "Drop In",
     dropInDesc: "Try a workout",
