@@ -96,7 +96,7 @@ export default function ScheduleSection() {
               : <>Class <span className="text-blue-500">Schedule</span></>
             }
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto whitespace-pre-line">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto whitespace-pre-line">
             {t("scheduleSubtitle")}
           </p>
         </motion.div>
@@ -111,7 +111,7 @@ export default function ScheduleSection() {
                 "px-4 py-2 rounded-full text-sm font-semibold transition-all",
                 selectedDay === day
                   ? "bg-blue-500 text-white"
-                  : "bg-zinc-900 text-gray-400 hover:bg-zinc-800 hover:text-white"
+                  : "bg-zinc-900 text-gray-300 hover:bg-zinc-800 hover:text-white"
               )}
             >
               {day}
@@ -131,7 +131,7 @@ export default function ScheduleSection() {
             <div className="col-span-full flex items-center justify-center py-16">
               <div className="rounded-xl p-8 border border-zinc-800 bg-zinc-900/50 text-center">
                 <h4 className="text-white font-bold text-2xl mb-2">{t("closed")}</h4>
-                <p className="text-gray-400">{t("noClasses")}</p>
+                <p className="text-gray-300">{t("noClasses")}</p>
               </div>
             </div>
           ) : selectedDay && schedule[selectedDay] ? (
@@ -167,7 +167,7 @@ export default function ScheduleSection() {
           {Object.entries(classColors).map(([className, colors]) => (
             <div key={className} className="flex items-center gap-2">
               <div className={cn("w-3 h-3 rounded-full", colors.split(' ')[0])} />
-              <span className="text-gray-400 text-sm">{className}</span>
+              <span className="text-gray-300 text-sm">{className}</span>
             </div>
           ))}
         </div>
