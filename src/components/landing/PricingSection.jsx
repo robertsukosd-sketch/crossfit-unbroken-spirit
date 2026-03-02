@@ -241,11 +241,11 @@ export default function PricingSection() {
                       <span className={`text-4xl font-black ${plan.featured ? 'text-white' : 'text-white'}`}>
                         {plan.price}
                       </span>
-                      <span className={`text-lg ${plan.featured ? 'text-white/80' : 'text-gray-400'}`}>
+                      <span className={`text-lg ${plan.featured ? 'text-white/80' : 'text-gray-300'}`}>
                         {t("ron")}
                       </span>
                     </div>
-                    <span className={`text-sm ${plan.featured ? 'text-white/60' : 'text-gray-500'}`}>
+                    <span className={`text-sm ${plan.featured ? 'text-white/70' : 'text-gray-400'}`}>
                       / {plan.period}
                     </span>
                   </div>

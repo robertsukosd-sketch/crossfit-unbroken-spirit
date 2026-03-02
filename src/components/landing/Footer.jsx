@@ -333,7 +333,7 @@ export default function Footer() {
         
         {/* Bottom */}
         <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-400 text-sm">
             © {currentYear} CrossFit Unbroken Spirit. {t("copyright")}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-3">
@@ -357,7 +357,7 @@ export default function Footer() {
       </div>
 
       {/* Legal Info */}
-      <div className="text-center text-gray-500 text-xs px-6 pb-4">
+      <div className="text-center text-gray-400 text-xs px-6 pb-4">
         {language === 'ro'
           ? 'Toate drepturile rezervate S.C. UNBROKEN CLUB S.R.L., Nr. R.C.: J2025078440006, C.U.I.: RO52691871, Adresa: Bucuresti, Sector 1, Str. Pitar Mos, Nr. 27, la cabinet Av. Stanciu-Burileanu Bogdan, et. 5, ap. 17, Capital social 500 RON.'
           : 'All rights reserved S.C. UNBROKEN CLUB S.R.L., Reg. No.: J2025078440006, VAT: RO52691871, Address: Bucharest, Sector 1, Pitar Mos St., No. 27, at the office of Att. Stanciu-Burileanu Bogdan, 5th floor, apt. 17, Share capital 500 RON.'}
@@ -366,10 +366,10 @@ export default function Footer() {
       {/* ANPC Badges */}
       <div className="flex flex-row flex-wrap items-center justify-center gap-4 pb-8">
         <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow">
-          <img style={{width:'250px'}} src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/fdece7d95_anpc-sal.png" alt="Solutionarea Alternativa a Litigiilor" />
+          <img width="250" height="50" style={{width:'250px', height:'auto'}} src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/fdece7d95_anpc-sal.png" alt="Solutionarea Alternativa a Litigiilor" />
         </a>
         <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="nofollow">
-          <img style={{width:'250px'}} src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/af3f98021_anpc-sol.png" alt="Solutionarea Online a Litigiilor" />
+          <img width="250" height="50" style={{width:'250px', height:'auto'}} src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/af3f98021_anpc-sol.png" alt="Solutionarea Online a Litigiilor" />
         </a>
       </div>
 

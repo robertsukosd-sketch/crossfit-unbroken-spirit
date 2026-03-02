@@ -183,7 +183,7 @@ export default function ScheduleSection() {
               <br />
               <button
                 onClick={() => openAppStore()}
-                className="font-black text-sky-400 hover:text-white transition-all bg-sky-500/20 hover:bg-sky-500 px-2 py-0.5 rounded-md text-base inline-block mt-1"
+                className="font-black text-sky-400 hover:text-white transition-colors bg-sky-500/20 hover:bg-sky-500 px-2 py-0.5 rounded-md text-base inline-block mt-1"
               >
                 {language === 'ro' ? '⚡ descarcă aplicația ThunderWOD' : '⚡ download the ThunderWOD app'}
               </button>
@@ -202,7 +202,7 @@ export default function ScheduleSection() {
                 href="https://app.thunderwod.com/#/wod"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-black text-amber-400 hover:text-white transition-all bg-amber-500/20 hover:bg-amber-500 px-2 py-0.5 rounded-md text-base inline-block"
+                className="font-black text-amber-400 hover:text-white transition-colors bg-amber-500/20 hover:bg-amber-500 px-2 py-0.5 rounded-md text-base inline-block"
               >
                 {language === 'ro' ? '🖥️ ThunderWOD pe desktop' : '🖥️ ThunderWOD on desktop'}
               </a>
