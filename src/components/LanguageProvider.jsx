@@ -26,7 +26,7 @@ export const translations = {
     freeTrial: "O Ședință Gratuită",
     heroTag: "Pentru tine. Pentru PRs. Pentru comunitate.",
     heroTitle: "FORȚĂ. COMUNITATE. TRANSFORMĂRI REALE.",
-    heroSubtitle: "Fie că începi de la 0, fie că ești avansat, găsești la noi tot ce-ți trebuie.",
+    heroSubtitle: "Fie că începi de la zero, fie că ești avansat, găsești la noi tot ce-ți trebuie.",
     startNow: "Începe Acum",
     discoverPrograms: "Descoperă Programele",
     discoverThePrograms: "Descoperă Programele",
