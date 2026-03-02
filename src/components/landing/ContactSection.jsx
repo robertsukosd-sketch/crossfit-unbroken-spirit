@@ -254,7 +254,7 @@ export default function ContactSection() {
                     aria-label="Instagram"
                     className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-90 transition-opacity"
                   >
-                    <Instagram className="w-8 h-8 text-white" />
+                    <Instagram aria-hidden="true" className="w-8 h-8 text-white" />
                   </a>
                   <a 
                     href="https://www.facebook.com/profile.php?id=61588232038424" 
@@ -263,7 +263,7 @@ export default function ContactSection() {
                     aria-label="Facebook"
                     className="w-16 h-16 rounded-xl bg-blue-600 flex items-center justify-center hover:opacity-90 transition-opacity"
                   >
-                    <Facebook className="w-8 h-8 text-white" />
+                    <Facebook aria-hidden="true" className="w-8 h-8 text-white" />
                   </a>
                 </div>
               </div>
