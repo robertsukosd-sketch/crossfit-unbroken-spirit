@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Smartphone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import LogoSVG from './LogoSVG';
+import Logo from './Logo';
 import { useLanguage } from '../LanguageProvider';
 import { openAppWithFallback } from '../appStoreUtils';
 
@@ -57,7 +57,7 @@ export default function Navigation() {
               onClick={(e) => { e.preventDefault(); scrollToSection('#hero'); }}
               className="flex items-center gap-3 flex-shrink-0"
             >
-              <LogoSVG size={68} />
+              <Logo size={68} />
               <div className="hidden sm:block text-center leading-tight">
                 <div className="text-xl font-black text-white tracking-wide">CrossFit</div>
                 <div className="text-sm font-black text-blue-400 uppercase tracking-wide">UNBROKEN SPIRIT</div>
