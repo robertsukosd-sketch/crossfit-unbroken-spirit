@@ -102,7 +102,7 @@ export const translations = {
     contactTitle: "Hai să vorbim",
     contactTitlePrefix: "Hai să",
     contactTitleHighlight: "vorbim",
-    contactSubtitle: "O clasă gratuită, fără întrebări. Nu-ți spune nimeni „ești prea lent". Vii, te antrenezi, nimic mai mult.",
+    contactSubtitle: "O clasă gratuită, fără întrebări. Nu-ți spune nimeni 'ești prea lent'. Vii, te antrenezi, nimic mai mult.",
     address: "Adresă",
     phone: "Telefon",
     email: "E-mail",
