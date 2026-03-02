@@ -157,7 +157,7 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
                       placeholder={t("fullNamePlaceholder")}
-                      className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-blue-500"
+                      className="bg-zinc-800 border-zinc-600 text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-blue-500"
                     />
                   </div>
                   
@@ -173,7 +173,7 @@ export default function ContactSection() {
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
                         placeholder={t("emailPlaceholder")}
-                        className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-blue-500"
+                        className="bg-zinc-800 border-zinc-600 text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                     <div>
@@ -186,7 +186,7 @@ export default function ContactSection() {
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                         placeholder={t("phonePlaceholder")}
-                        className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-blue-500"
+                        className="bg-zinc-800 border-zinc-600 text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                   </div>
