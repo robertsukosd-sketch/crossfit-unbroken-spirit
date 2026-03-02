@@ -121,7 +121,7 @@ export default function ScheduleSection() {
                   : "bg-zinc-900 text-gray-300 hover:bg-zinc-800 hover:text-white"
               )}
             >
-              <span className="sm:hidden">{dayAbbr[day]}</span>
+              <span className="sm:hidden">{dayAbbrList[days.indexOf(day)]}</span>
               <span className="hidden sm:inline">{day}</span>
             </button>
           ))}
