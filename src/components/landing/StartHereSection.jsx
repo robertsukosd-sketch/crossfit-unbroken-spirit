@@ -304,15 +304,16 @@ export default function StartHereSection() {
                     alt={link.title}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                  {/* Gradient only on md+ where text is overlaid */}
+                  <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
                 </div>
 
-                {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h4 className="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">
+                {/* Content — stacked below image on mobile, overlaid on md+ */}
+                <div className="p-4 md:absolute md:bottom-0 md:left-0 md:right-0 md:p-6 bg-black md:bg-transparent">
+                  <h4 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2 group-hover:text-sky-400 transition-colors">
                     {link.title}
                   </h4>
-                  <p className="text-gray-300 text-sm mb-4">{link.description}</p>
+                  <p className="text-gray-300 text-sm mb-3 md:mb-4">{link.description}</p>
                   <div className="flex items-center gap-2 text-sky-400 font-semibold text-sm">
                     <span>{language === 'ro' ? 'Vizitează' : 'Visit'}</span>
                     <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
