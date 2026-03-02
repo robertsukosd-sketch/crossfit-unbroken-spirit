@@ -47,8 +47,8 @@ export default function HeroSection() {
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 leading-tight">
             {language === 'ro' 
-              ? <>FORȚĂ. <span className="text-blue-500">COMUNITATE</span>. REZULTATE.</>
-              : <>STRENGTH. <span className="text-blue-500">COMMUNITY</span>. RESULTS.</>
+              ? <>FORȚĂ. <span className="text-blue-500">COMUNITATE</span>. TRANSFORMĂRI REALE.</>
+              : <>STRONG. <span className="text-blue-500">SUPPORTED</span>. STRONGER.</>
             }
           </h1>
           
