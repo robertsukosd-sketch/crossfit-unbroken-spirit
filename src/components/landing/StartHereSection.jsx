@@ -126,6 +126,7 @@ export default function StartHereSection() {
             
             {isExpanded && (
               <motion.div
+                id="starthere-expanded"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
@@ -260,6 +261,8 @@ export default function StartHereSection() {
 
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
+            aria-expanded={isExpanded}
+            aria-controls="starthere-expanded"
             className="mt-6 flex items-center gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors"
             whileHover={{ x: 5 }}>
             
@@ -295,7 +298,7 @@ export default function StartHereSection() {
                 className="group relative overflow-hidden rounded-2xl border border-zinc-800 hover:border-blue-500/50 transition-all duration-300 bg-black">
 
                 {/* Image */}
-                <div className="aspect-square overflow-hidden bg-black flex items-center justify-center p-4">
+                <div className="aspect-video overflow-hidden bg-black flex items-center justify-center p-4">
                   <img 
                     src={link.image} 
                     alt={link.title}
