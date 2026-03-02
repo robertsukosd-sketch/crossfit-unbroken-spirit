@@ -72,11 +72,14 @@ const classColors = {
   "Open Gym": "bg-cyan-500/20 border-cyan-500/30 text-cyan-400",
 };
 
+const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin", "Sâm", "Dum"];
+const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
 export default function ScheduleSection() {
   const { t, language } = useLanguage();
   const schedule = getSchedule(t);
   const days = getDays(t);
-  const dayAbbr = getDayAbbr(t);
+  const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
   const [selectedDay, setSelectedDay] = useState(days[0]);
 
   useEffect(() => {
