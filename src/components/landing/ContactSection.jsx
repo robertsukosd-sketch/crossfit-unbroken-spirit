@@ -79,7 +79,7 @@ export default function ContactSection() {
           <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
             {t("contactTitlePrefix")} <span className="text-blue-500">{t("contactTitleHighlight")}</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto whitespace-pre-line leading-none">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto whitespace-pre-line leading-none">
             {t("contactSubtitle")}
           </p>
         </motion.div>
@@ -110,7 +110,7 @@ export default function ContactSection() {
                     <div>
                       <h4 className="text-white font-bold sm:mb-2 text-sm sm:text-base">{info.title}</h4>
                       {info.details.map((detail, i) => (
-                        <p key={i} className="text-gray-400 text-xs sm:text-sm">{detail}</p>
+                        <p key={i} className="text-gray-300 text-xs sm:text-sm">{detail}</p>
                       ))}
                     </div>
                     </div>
@@ -137,7 +137,7 @@ export default function ContactSection() {
                   <CheckCircle className="w-10 h-10 text-green-500" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">{t("thank")}</h3>
-                  <p className="text-gray-400 mb-6">
+                  <p className="text-gray-300 mb-6">
                   {t("thankDesc")}
                   </p>
                   <Button
@@ -246,7 +246,8 @@ export default function ContactSection() {
                     href="https://www.instagram.com/crossfit.unbroken.spirit" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:scale-110 transition-transform"
+                    aria-label="Instagram"
+                    className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-90 transition-opacity"
                   >
                     <Instagram className="w-8 h-8 text-white" />
                   </a>
@@ -254,7 +255,8 @@ export default function ContactSection() {
                     href="https://www.facebook.com/profile.php?id=61588232038424" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-16 h-16 rounded-xl bg-blue-600 flex items-center justify-center hover:scale-110 transition-transform"
+                    aria-label="Facebook"
+                    className="w-16 h-16 rounded-xl bg-blue-600 flex items-center justify-center hover:opacity-90 transition-opacity"
                   >
                     <Facebook className="w-8 h-8 text-white" />
                   </a>
