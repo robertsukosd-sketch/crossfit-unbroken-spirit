@@ -87,7 +87,7 @@ export default function StartHereSection() {
           className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-800 mb-8 max-w-4xl mx-auto">
           
           <div className="space-y-6">
-            <div className="grid md:grid-cols-[1.3fr_1fr] gap-8 items-start">
+            <div className="grid md:grid-cols-[1.3fr_1fr] gap-6 md:gap-8 items-start">
               <div className="text-gray-200 leading-relaxed prose prose-invert prose-sm max-w-none">
                 <ReactMarkdown
                   components={{
@@ -283,7 +283,7 @@ export default function StartHereSection() {
             {language === 'ro' ? 'Resurse Oficiale CrossFit' : 'Official CrossFit Resources'}
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {links.map((link, index) => (
               <motion.a
                 key={link.url}
