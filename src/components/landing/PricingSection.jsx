@@ -212,7 +212,7 @@ export default function PricingSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               style={mobileOrder !== undefined ? { order: mobileOrder } : {}}
-              className={`relative rounded-2xl p-6 transition-colors duration-300 flex flex-col h-full md:![order:0] ${
+              className={`relative rounded-2xl p-6 transition-colors duration-300 flex flex-col h-full md:![order:0] overflow-visible ${
               plan.featured ?
               'bg-gradient-to-br from-blue-600 to-sky-500 shadow-2xl shadow-blue-500/20' :
               'bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/30'}`
@@ -229,7 +229,7 @@ export default function PricingSection() {
               }
                   
                   <div className="text-center mb-6">
-                    <div className="h-20 mb-4">
+                    <div className="min-h-[5rem] mb-4">
                       <h4 className={`text-lg font-bold mb-2 ${plan.featured ? 'text-white' : 'text-white'}`}>
                         {plan.name}
                       </h4>
