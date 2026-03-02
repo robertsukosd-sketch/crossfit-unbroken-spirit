@@ -103,7 +103,7 @@ export default function ScheduleSection() {
         </motion.div>
 
         {/* Day selector */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
+        <div className="flex flex-wrap justify-center gap-2 mb-10 lg:flex-nowrap">
           {days.map((day) => (
             <button
               key={day}

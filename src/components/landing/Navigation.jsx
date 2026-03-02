@@ -110,22 +110,22 @@ export default function Navigation() {
               <motion.button
                 type="button"
                 onClick={() => openAppWithFallback()}
-                animate={{ boxShadow: ['0 0 0px #38bdf8', '0 0 12px #38bdf8', '0 0 0px #38bdf8'] }}
+                animate={{ boxShadow: ['0 0 0px #38bdf8', '0 0 18px #38bdf8', '0 0 0px #38bdf8'] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold text-white transition-all overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 50%, #1e3a5f 100%)', backgroundSize: '200% 100%' }}
+                className="relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white transition-all overflow-hidden"
+                style={{ background: 'linear-gradient(135deg, #0369a1 0%, #0ea5e9 50%, #0369a1 100%)', backgroundSize: '200% 100%' }}
                 whileHover={{ scale: 1.05 }}
               >
                 <motion.span
                   className="absolute inset-0 rounded-full"
-                  animate={{ opacity: [0, 0.3, 0] }}
+                  animate={{ opacity: [0, 0.4, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
                   style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
                 />
-                <Smartphone className="w-4 h-4 text-sky-300 relative z-10" />
+                <Smartphone className="w-4 h-4 text-sky-200 relative z-10" />
                 <span className="relative z-10">ThunderWOD App</span>
                 <motion.span
-                  className="relative z-10 text-[10px] bg-sky-400 text-black font-black px-1.5 py-0.5 rounded-full leading-none"
+                  className="relative z-10 text-[10px] bg-white text-blue-700 font-black px-1.5 py-0.5 rounded-full leading-none"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
@@ -137,7 +137,7 @@ export default function Navigation() {
                   document.getElementById('thunderwod-app')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                   setIsMobileMenuOpen(false);
                 }}
-                className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-full px-6"
+                className="bg-zinc-800 hover:bg-zinc-700 text-gray-200 font-semibold rounded-full px-5 border border-zinc-700"
               >
                 {t("freeTrial")}
               </Button>

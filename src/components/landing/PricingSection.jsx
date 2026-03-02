@@ -268,6 +268,8 @@ export default function PricingSection() {
                 className={`w-full font-bold rounded-full ${
                 plan.featured ?
                 'bg-white text-blue-600 hover:bg-white/90' :
+                plan.popular ?
+                'bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-500/30' :
                 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'}`
                 }>
                     <a href={isDesktop() ? 'https://app.thunderwod.com/#/wod' : getAppStoreUrl()} target="_blank" rel="noopener noreferrer">
