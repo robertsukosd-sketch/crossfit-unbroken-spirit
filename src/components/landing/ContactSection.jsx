@@ -92,7 +92,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="h-full"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 h-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={info.title}
@@ -245,22 +245,22 @@ export default function ContactSection() {
                 <h4 className="text-white font-bold mb-4">{t("follow")}</h4>
                 <div className="flex gap-4 justify-center">
                   <a 
-                    href="https://www.instagram.com/crossfit.unbroken.spirit" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-90 transition-opacity"
+                   href="https://www.instagram.com/crossfit.unbroken.spirit" 
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram"
+                   className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-90 transition-opacity"
                   >
-                    <Instagram aria-hidden="true" className="w-8 h-8 text-white" />
+                   <Instagram aria-hidden="true" className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
                   </a>
                   <a 
-                    href="https://www.facebook.com/profile.php?id=61588232038424" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="w-16 h-16 rounded-xl bg-blue-600 flex items-center justify-center hover:opacity-90 transition-opacity"
+                   href="https://www.facebook.com/profile.php?id=61588232038424" 
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook"
+                   className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-blue-600 flex items-center justify-center hover:opacity-90 transition-opacity"
                   >
-                    <Facebook aria-hidden="true" className="w-8 h-8 text-white" />
+                   <Facebook aria-hidden="true" className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
                   </a>
                 </div>
               </div>

@@ -259,10 +259,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-               <Logo size={48} />
+               <Logo size={56} />
                <div className="text-center leading-tight">
-                 <div className="text-lg font-black text-white tracking-wide">CrossFit</div>
-                 <div className="text-sm font-black text-blue-400 uppercase tracking-wide">UNBROKEN SPIRIT</div>
+                 <div className="text-xl font-black text-white tracking-wide">CrossFit</div>
+                 <div className="text-xs font-black text-blue-400 uppercase tracking-wide">UNBROKEN SPIRIT</div>
                </div>
              </div>
             <p className="text-gray-300 mb-6 max-w-md">
