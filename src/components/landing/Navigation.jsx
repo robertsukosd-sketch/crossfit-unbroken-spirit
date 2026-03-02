@@ -74,7 +74,7 @@ export default function Navigation() {
                   className="text-gray-200 hover:text-white font-medium transition-colors relative group text-sm"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-[width] group-hover:w-full" />
                 </a>
               ))}
             </div>
