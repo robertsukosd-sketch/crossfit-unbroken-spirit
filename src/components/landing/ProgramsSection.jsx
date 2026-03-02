@@ -63,8 +63,8 @@ export default function ProgramsSection() {
         >
           <p className="text-2xl md:text-3xl font-bold text-white max-w-3xl mx-auto leading-relaxed">
             <span className="bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
-              {t("everyoneUnique")}
-            </span>, {t("everyoneUniqueDesc")}
+              {t("everyoneUnique")},
+            </span> {t("everyoneUniqueDesc")}
           </p>
         </motion.div>
         
