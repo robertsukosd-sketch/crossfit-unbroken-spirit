@@ -57,6 +57,7 @@ const getSchedule = (t) => ({
     { time: "19:30", class: "CrossFit", coach: "CB", spots: 16 },
   ],
   [t("saturday")]: [
+    { time: "08:00-10:00", class: "Open Gym", coach: "-", spots: 10 },
     { time: "09:00", class: "CrossFit Kids", coach: "CB", spots: 15 },
     { time: "10:00-11:30", class: "CrossFit", coach: "CB", spots: 16 },
   ],
