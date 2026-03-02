@@ -292,7 +292,7 @@ export default function StartHereSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`group relative overflow-hidden rounded-2xl border border-zinc-800 hover:border-blue-500/50 transition-all duration-300 ${link.title.includes('Games') || link.title.includes('Journal') ? 'bg-black' : 'bg-zinc-900'}`}>
+                className="group relative overflow-hidden rounded-2xl border border-zinc-800 hover:border-blue-500/50 transition-all duration-300 bg-black"
                 
                 {/* Image */}
                 <div className="aspect-square overflow-hidden bg-black flex items-center justify-center p-4">
