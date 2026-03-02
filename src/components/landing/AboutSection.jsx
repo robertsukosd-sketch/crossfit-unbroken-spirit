@@ -47,7 +47,7 @@ export default function AboutSection() {
             <div className="relative rounded-2xl overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80"
-                alt="CrossFit Training"
+                alt="Athletes training CrossFit at Unbroken Spirit gym"
                 width={800}
                 height={500}
                 loading="lazy"
@@ -85,7 +85,7 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex gap-4 max-w-[280px]"
+                  className="flex gap-4"
                 >
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-sky-400" />
