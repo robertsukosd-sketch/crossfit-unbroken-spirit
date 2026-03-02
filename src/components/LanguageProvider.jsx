@@ -38,7 +38,7 @@ export const translations = {
     strongCommunity: "Comunitate Puternică",
     strongCommunityDesc: "Nu-ți ascunzi efortul. Aici bate toata lumea palma.",
     professionalCoaching: "Coaching Profesionist",
-    professionalCoachingDesc: "Corectii în timp real. La tine. Nu la grup.",
+    professionalCoachingDesc: "Corecții în timp real. La tine, nu la grup.",
     visibleResults: "Rezultate Vizibile",
     visibleResultsDesc: "Masoarabil. Săptamână cu săptamână.",
     everyoneUnique: "Toți suntem diferiți",
