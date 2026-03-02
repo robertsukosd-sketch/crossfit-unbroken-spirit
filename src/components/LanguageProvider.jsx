@@ -206,7 +206,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     contact: "Contact",
     freeTrial: "Book a Free Session",
     heroTag: "Build strength. Find community. Set PRs.",
-    heroTitle: "STRONG. SUPPORTED. STRONGER.",
+    heroTitle: "Strong. Supported. Stronger.",
     heroSubtitle: "New to CrossFit or already competitive, we push you at YOUR level.",
     startNow: "Start Now",
     discoverPrograms: "Discover Programs",
