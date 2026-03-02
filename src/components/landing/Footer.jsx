@@ -258,13 +258,13 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-               <Logo size={56} />
-               <div className="text-center leading-tight">
-                 <div className="text-xl font-black text-white tracking-wide">CrossFit</div>
-                 <div className="text-xs font-black text-blue-400 uppercase tracking-wide">UNBROKEN SPIRIT</div>
+            <div className="flex items-center gap-3 mb-4 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 rounded-lg p-1">
+                 <Logo size={56} />
+                 <div className="text-center leading-tight">
+                   <div className="text-xl font-black text-white tracking-wide">CrossFit</div>
+                   <div className="text-xs font-black text-blue-400 uppercase tracking-wide">UNBROKEN SPIRIT</div>
+                 </div>
                </div>
-             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               {t("tagline")}
             </p>
@@ -315,17 +315,17 @@ export default function Footer() {
                  <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0" />
                  <span>Splaiul Unirii 257-259, Sector 3, București</span>
                </li>
-               <li className="flex items-center gap-3 text-gray-300">
-                 <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                 <span>+40 748 838 767</span>
+               <li className="flex items-center gap-3 text-gray-200">
+                 <Phone className="w-5 h-5 text-sky-400 flex-shrink-0" />
+                 <span className="text-sm">+40 748 838 767</span>
                </li>
-               <li className="flex items-center gap-3 text-gray-300">
-                 <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                 <span>+40 740 269 769</span>
+               <li className="flex items-center gap-3 text-gray-200">
+                 <Phone className="w-5 h-5 text-sky-400 flex-shrink-0" />
+                 <span className="text-sm">+40 740 269 769</span>
                </li>
-               <li className="flex items-center gap-3 text-gray-300">
-                 <Mail className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                 <span>train@unbrokenspirit.ro</span>
+               <li className="flex items-center gap-3 text-gray-200">
+                 <Mail className="w-5 h-5 text-sky-400 flex-shrink-0" />
+                 <span className="text-sm">train@unbrokenspirit.ro</span>
                </li>
              </ul>
           </div>
@@ -357,7 +357,7 @@ export default function Footer() {
       </div>
 
       {/* Legal Info */}
-      <div className="text-center text-gray-400 text-xs px-6 pb-4 break-words">
+      <div className="text-center text-gray-400 text-xs sm:text-sm px-6 pb-4 break-words leading-relaxed">
         {language === 'ro'
           ? 'Toate drepturile rezervate S.C. UNBROKEN CLUB S.R.L., Nr. R.C.: J2025078440006, C.U.I.: RO52691871, Adresa: Bucuresti, Sector 1, Str. Pitar Mos, Nr. 27, la cabinet Av. Stanciu-Burileanu Bogdan, et. 5, ap. 17, Capital social 500 RON.'
           : 'All rights reserved S.C. UNBROKEN CLUB S.R.L., Reg. No.: J2025078440006, VAT: RO52691871, Address: Bucharest, Sector 1, Pitar Mos St., No. 27, at the office of Att. Stanciu-Burileanu Bogdan, 5th floor, apt. 17, Share capital 500 RON.'}

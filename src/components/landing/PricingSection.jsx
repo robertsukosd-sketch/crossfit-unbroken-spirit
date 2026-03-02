@@ -164,7 +164,7 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="text-center mb-16">
 
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
               {t("pricingTitle")}
             </span>

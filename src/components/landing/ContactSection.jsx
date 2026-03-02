@@ -76,7 +76,7 @@ export default function ContactSection() {
           <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
             {t("contact")}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-3 mb-6 leading-tight">
             {t("contactTitlePrefix")} <span className="text-blue-500">{t("contactTitleHighlight")}</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto whitespace-pre-line leading-relaxed">
@@ -148,7 +148,7 @@ export default function ContactSection() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="contact-name" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="contact-name" className="block text-sm font-medium text-gray-300 mb-2 focus-within:text-blue-400">
                       {t("fullName")} *
                     </label>
                     <Input
@@ -163,7 +163,7 @@ export default function ContactSection() {
                   
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="contact-email" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label htmlFor="contact-email" className="block text-sm font-medium text-gray-300 mb-2 focus-within:text-blue-400">
                         {t("email")} *
                       </label>
                       <Input
@@ -177,7 +177,7 @@ export default function ContactSection() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-300 mb-2 focus-within:text-blue-400">
                         {t("phone")}
                       </label>
                       <Input
@@ -192,7 +192,7 @@ export default function ContactSection() {
                   </div>
                   
                   <div>
-                    <label htmlFor="contact-message" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="contact-message" className="block text-sm font-medium text-gray-300 mb-2 focus-within:text-blue-400">
                       {t("message")} *
                     </label>
                     <Textarea
@@ -202,7 +202,7 @@ export default function ContactSection() {
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                       placeholder={t("messagePlaceholder")}
                       rows={5}
-                      className="bg-zinc-800 border-zinc-700 text-white placeholder:text-gray-500 focus:border-red-500 resize-none"
+                      className="bg-zinc-800 border-zinc-600 text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-blue-500 resize-none"
                     />
                   </div>
                   

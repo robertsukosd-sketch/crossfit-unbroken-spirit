@@ -67,13 +67,13 @@ export default function AboutSection() {
             <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
               {t("aboutUs")}
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mt-3 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-3 mb-6 leading-tight">
               {language === 'ro' 
                 ? <>Mai mult decât un <span className="text-blue-500">gym</span></>
                 : <>More than a <span className="text-blue-500">gym</span></>
               }
             </h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
               {t("aboutDesc")}
             </p>
             

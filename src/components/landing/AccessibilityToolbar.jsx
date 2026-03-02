@@ -83,7 +83,7 @@ export default function AccessibilityToolbar() {
       {/* Toggle button */}
       <button
         onClick={() => setOpen(o => !o)}
-        className="fixed left-0 top-1/2 -translate-y-1/2 z-50 bg-blue-600 hover:bg-blue-500 text-white w-10 h-10 rounded-r-xl flex items-center justify-center shadow-lg transition-all"
+        className="fixed left-0 top-1/2 -translate-y-1/2 z-40 bg-blue-600 hover:bg-blue-500 text-white w-11 h-11 rounded-r-xl flex items-center justify-center shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
         aria-label={t.title}
       >
         <Accessibility className="w-5 h-5" />

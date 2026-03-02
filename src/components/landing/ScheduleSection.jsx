@@ -95,7 +95,7 @@ export default function ScheduleSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
             {language === 'ro' 
               ? <>Orarul <span className="text-blue-500">Claselor</span></>
               : <>Class <span className="text-blue-500">Schedule</span></>
@@ -115,10 +115,10 @@ export default function ScheduleSection() {
               aria-label={day}
               aria-pressed={selectedDay === day}
               className={cn(
-                "px-3 sm:px-4 py-2 min-h-[44px] rounded-full text-sm font-semibold transition-colors",
+                "px-3 sm:px-4 py-2 min-h-[44px] rounded-full text-sm font-semibold transition-colors flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-blue-400",
                 selectedDay === day
                   ? "bg-blue-500 text-white"
-                  : "bg-zinc-900 text-gray-300 hover:bg-zinc-800 hover:text-white"
+                  : "bg-zinc-900 text-gray-300 hover:bg-zinc-700 hover:text-white"
               )}
             >
               <span className="sm:hidden">{dayAbbrList[days.indexOf(day)]}</span>
