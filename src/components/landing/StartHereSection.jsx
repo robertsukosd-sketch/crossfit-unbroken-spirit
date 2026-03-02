@@ -321,7 +321,7 @@ export default function StartHereSection() {
               document.getElementById('starthere')?.scrollIntoView({ behavior: 'smooth' });
             }, 0);
           }}
-          className="fixed bottom-6 md:bottom-6 left-1/2 -translate-x-1/2 top-1/2 md:top-auto -translate-y-1/2 md:translate-y-0 z-40 flex items-center gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors bg-zinc-950 px-4 py-2 rounded-full border border-zinc-800 hover:border-sky-400"
+          className="fixed bottom-6 left-4 md:left-1/2 md:-translate-x-1/2 z-40 flex items-center gap-1 md:gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors bg-zinc-950 px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-zinc-800 hover:border-sky-400 text-sm md:text-base"
         >
           <span>{language === 'ro' ? 'Închide' : 'Show Less'}</span>
           <motion.div animate={{ rotate: 180 }} transition={{ duration: 0.3 }}>
