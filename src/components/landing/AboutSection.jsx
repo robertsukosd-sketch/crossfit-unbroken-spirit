@@ -46,12 +46,12 @@ export default function AboutSection() {
           >
             <div className="relative rounded-2xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80"
-                alt="Athletes training CrossFit at Unbroken Spirit gym"
-                width={800}
-                height={500}
-                loading="lazy"
-                className="w-full h-[500px] object-cover"
+               src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80"
+               alt="Athletes training CrossFit at Unbroken Spirit gym"
+               width={800}
+               height={500}
+               loading="lazy"
+               className="w-full h-64 sm:h-80 lg:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>

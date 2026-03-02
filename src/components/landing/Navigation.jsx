@@ -50,7 +50,7 @@ export default function Navigation() {
         )}
       >
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-24">
+          <div className="flex items-center justify-between h-16 md:h-24">
             {/* Logo */}
             <a 
               href="#hero"
