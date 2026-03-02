@@ -86,7 +86,7 @@ export default function Navigation() {
                     type="button"
                     onClick={() => changeLanguage('ro')}
                     className={cn(
-                      "px-3 py-1 rounded-full text-sm font-semibold transition-all",
+                      "px-3 py-1 rounded-full text-sm font-semibold transition-colors",
                       language === 'ro' 
                         ? "bg-blue-500 text-white" 
                         : "text-gray-300 hover:text-white"
