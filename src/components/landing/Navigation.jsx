@@ -43,7 +43,7 @@ export default function Navigation() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-50 transition-colors transition-shadow duration-300",
           isScrolled 
             ? "bg-black/90 backdrop-blur-lg border-b border-zinc-800" 
             : "bg-black/70 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none"
@@ -71,7 +71,7 @@ export default function Navigation() {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                  className="text-gray-300 hover:text-white font-medium transition-colors relative group text-sm"
+                  className="text-gray-200 hover:text-white font-medium transition-colors relative group text-sm"
                 >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
@@ -174,15 +174,16 @@ export default function Navigation() {
 
             {/* Language Toggle Mobile + Menu Button */}
             <div className="lg:hidden flex items-center gap-2 flex-shrink-0">
-              <div className="flex flex-row gap-0.5 bg-zinc-900 rounded-full p-0.5">
+              <div className="flex flex-row gap-0.5 bg-zinc-900 rounded-full p-1">
                 <button
                     type="button"
                     onClick={() => changeLanguage('ro')}
+                    aria-label="Switch to Romanian"
                     className={cn(
-                      "px-1.5 py-0.5 rounded-full text-[10px] font-semibold transition-all",
+                      "min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-xs font-semibold transition-colors",
                       language === 'ro' 
                         ? "bg-blue-500 text-white" 
-                        : "text-gray-400"
+                        : "text-gray-300 hover:text-white"
                     )}
                   >
                     RO
@@ -190,11 +191,12 @@ export default function Navigation() {
                   <button
                     type="button"
                     onClick={() => changeLanguage('en')}
+                    aria-label="Switch to English"
                     className={cn(
-                      "px-1.5 py-0.5 rounded-full text-[10px] font-semibold transition-all",
+                      "min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-xs font-semibold transition-colors",
                       language === 'en' 
                         ? "bg-blue-500 text-white" 
-                        : "text-gray-400"
+                        : "text-gray-300 hover:text-white"
                     )}
                   >
                     EN
@@ -203,7 +205,8 @@ export default function Navigation() {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 text-white"
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-white"
               >
                 {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
