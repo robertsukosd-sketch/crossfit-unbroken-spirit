@@ -60,7 +60,7 @@ export default function HeroSection() {
             <Button 
               size="lg"
               onClick={() => scrollToSection('pricing')}
-              className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-10 py-6 text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-colors"
+              className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-8 py-6 text-base md:text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-colors"
             >
               {t("startNow")}
             </Button>
@@ -68,7 +68,7 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('programs')}
-              className="bg-transparent text-white hover:bg-white/10 border-2 border-white/50 hover:border-white px-10 py-6 text-lg font-bold rounded-full"
+              className="bg-transparent text-white hover:bg-white/10 border-2 border-white/50 hover:border-white px-8 py-6 text-base md:text-lg font-bold rounded-full"
             >
               {t("discoverThePrograms")}
             </Button>
