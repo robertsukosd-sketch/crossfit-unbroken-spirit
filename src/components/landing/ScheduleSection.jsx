@@ -5,16 +5,6 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
 import { openAppStore, openMobileOrDesktop } from '../appStoreUtils';
 
-const getDayAbbr = (t) => ({
-  [t("monday")]:    t("mondayAbbr") || t("monday").slice(0, 3),
-  [t("tuesday")]:   t("tuesdayAbbr") || t("tuesday").slice(0, 3),
-  [t("wednesday")]: t("wednesdayAbbr") || t("wednesday").slice(0, 3),
-  [t("thursday")]:  t("thursdayAbbr") || t("thursday").slice(0, 3),
-  [t("friday")]:    t("fridayAbbr") || t("friday").slice(0, 3),
-  [t("saturday")]:  t("saturdayAbbr") || t("saturday").slice(0, 3),
-  [t("sunday")]:    t("sundayAbbr") || t("sunday").slice(0, 3),
-});
-
 const getSchedule = (t) => ({
   [t("monday")]: [
     { time: "07:00", class: "CrossFit", coach: "CB", spots: 16 },
