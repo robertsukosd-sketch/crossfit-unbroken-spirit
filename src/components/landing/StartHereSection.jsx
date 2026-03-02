@@ -164,7 +164,7 @@ export default function StartHereSection() {
 
                 {language === 'en' && (
                   <>
-                    <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none">
+                    <div className="text-gray-200 leading-relaxed prose prose-invert prose-sm max-w-none">
                       <ReactMarkdown
                         components={{
                           h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,

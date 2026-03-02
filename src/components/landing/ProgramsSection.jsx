@@ -98,7 +98,7 @@ export default function ProgramsSection() {
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-sky-400 transition-colors">
                   {program.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {program.description}
                 </p>
               </div>
