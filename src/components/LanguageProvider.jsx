@@ -54,7 +54,7 @@ export const translations = {
     openGym: "Open Gym",
     openGymDesc: "Acces liber la echipamente pentru antrenamente independente.",
     pricingTitle: "Prețuri",
-    pricingSubtitle: "Fiecare plan include coaching profesionist și acces la comunitatea noastră.",
+    pricingSubtitle: "Antrenori care te învaţă. O comunitate care nu judecă. Progres vizibil. Competiţia e numai cu tine, nu cu ceilalţi.",
     crossfitMemberships: "Abonamente CrossFit",
     dropIn: "Drop In",
     dropInDesc: "Încearcă un antrenament",
