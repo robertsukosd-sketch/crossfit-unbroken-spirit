@@ -86,6 +86,7 @@ export default function ScheduleSection() {
   const { t, language } = useLanguage();
   const schedule = getSchedule(t);
   const days = getDays(t);
+  const dayAbbr = getDayAbbr(t);
   const [selectedDay, setSelectedDay] = useState(days[0]);
 
   useEffect(() => {
