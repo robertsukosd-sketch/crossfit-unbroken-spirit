@@ -259,18 +259,17 @@ export default function StartHereSection() {
             )}
           </div>
 
-          <motion.button
-            onClick={() => setIsExpanded(!isExpanded)}
-            aria-expanded={isExpanded}
-            aria-controls="starthere-expanded"
-            className="mt-6 flex items-center gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors"
-            whileHover={{ x: 5 }}>
-            
-            <span>{language === 'ro' ? 'Citește Mai Departe' : 'Continue Reading'}</span>
-            <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} transition={{ duration: 0.3 }}>
+          {!isExpanded && (
+            <motion.button
+              onClick={() => setIsExpanded(true)}
+              aria-expanded={isExpanded}
+              aria-controls="starthere-expanded"
+              className="mt-6 flex items-center gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors"
+              whileHover={{ x: 5 }}>
+              <span>{language === 'ro' ? 'Citește Mai Departe' : 'Continue Reading'}</span>
               <ChevronDown className="w-5 h-5" />
-            </motion.div>
-          </motion.button>
+            </motion.button>
+          )}
         </motion.div>
 
         {/* Resources Section */}
