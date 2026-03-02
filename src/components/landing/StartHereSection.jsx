@@ -14,7 +14,7 @@ export default function StartHereSection() {
   React.useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsSectionVisible(entry.isIntersecting),
-      { threshold: 0.1 }
+      { threshold: 0, rootMargin: '0px 0px -90% 0px' }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
