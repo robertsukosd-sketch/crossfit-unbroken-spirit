@@ -74,7 +74,7 @@ export default function StartHereSection() {
               {t("startHereTitle")}
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
             {t("startHereSubtitle")}
           </p>
         </motion.div>
@@ -88,7 +88,7 @@ export default function StartHereSection() {
           
           <div className="space-y-6">
             <div className="grid md:grid-cols-[1.3fr_1fr] gap-8 items-start">
-              <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none">
+              <div className="text-gray-200 leading-relaxed prose prose-invert prose-sm max-w-none">
                 <ReactMarkdown
                   components={{
                     h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
@@ -115,7 +115,7 @@ export default function StartHereSection() {
                />
               </div>
               </div>
-            <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none space-y-4">
+            <div className="text-gray-200 leading-relaxed prose prose-invert prose-sm max-w-none space-y-4">
               <p>{t("startHerePreviewFullWidth")}</p>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function StartHereSection() {
                 exit={{ opacity: 0, height: 0 }}
                 className="space-y-6 text-gray-300">
 
-                <div className="text-gray-300 leading-relaxed prose prose-invert prose-sm max-w-none">
+                <div className="text-gray-200 leading-relaxed prose prose-invert prose-sm max-w-none">
                   <ReactMarkdown
                     components={{
                       h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
