@@ -17,6 +17,7 @@ export default function HeroSection() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80')`,
+          // fetchpriority high for above-fold background
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
@@ -59,7 +60,7 @@ export default function HeroSection() {
             <Button 
               size="lg"
               onClick={() => scrollToSection('pricing')}
-              className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-10 py-6 text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-all hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-10 py-6 text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-colors"
             >
               {t("startNow")}
             </Button>
