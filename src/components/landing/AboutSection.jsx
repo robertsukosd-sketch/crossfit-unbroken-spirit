@@ -48,6 +48,9 @@ export default function AboutSection() {
               <img 
                 src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80"
                 alt="CrossFit Training"
+                width={800}
+                height={500}
+                loading="lazy"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -70,7 +73,7 @@ export default function AboutSection() {
                 : <>More than a <span className="text-blue-500">gym</span></>
               }
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+            <p className="text-gray-300 text-lg leading-relaxed mb-8">
               {t("aboutDesc")}
             </p>
             
@@ -89,7 +92,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">{feature.title}</h3>
-                    <p className="text-gray-500 text-base text-justify tracking-tight">{feature.description}</p>
+                    <p className="text-gray-300 text-base text-justify tracking-tight">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
