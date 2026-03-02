@@ -215,7 +215,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     professionalCoachingDesc: "Coaches dedicated to your progress.",
     visibleResults: "Visible Results",
     visibleResultsDesc: "Real and lasting transformations achieved through hard work and dedication.",
-    everyoneUnique: "Every person is unique"
+    everyoneUnique: "Every person is unique",
     everyoneUniqueDesc: "and our varied programs are adaptable to any fitness level.",
     crossfitTitle: "CrossFit",
     crossfitDesc: "High-intensity functional workouts combining gymnastics, weightlifting and conditioning.",
