@@ -84,7 +84,7 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 h-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 h-auto">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -92,7 +92,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="h-full"
           >
-            <div className="grid grid-cols-2 gap-3 h-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 h-full">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={info.title}
@@ -231,7 +231,7 @@ export default function ContactSection() {
         </div>
 
         {/* Bottom row: Social Links + ThunderWOD | Map */}
-        <div className="grid lg:grid-cols-2 gap-12 mt-12">
+        <div className="grid lg:grid-cols-2 gap-8 mt-10">
           {/* Left column: Social Links + ThunderWOD stacked */}
           <div className="flex flex-col gap-6">
             {/* Social Links */}
