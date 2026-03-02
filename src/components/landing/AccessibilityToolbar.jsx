@@ -91,7 +91,7 @@ export default function AccessibilityToolbar() {
 
       {/* Panel */}
       {open && (
-        <div className="fixed left-10 top-1/2 -translate-y-1/2 z-50 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl p-4 w-52">
+        <div className="fixed left-10 top-1/2 -translate-y-1/2 z-50 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl p-4 w-52 max-h-[calc(100vh-2rem)] overflow-y-auto">
           <div className="flex items-center justify-between mb-3">
             <span className="text-white font-semibold text-sm">{t.title}</span>
             <button onClick={() => setOpen(false)} className="text-gray-400 hover:text-white">
