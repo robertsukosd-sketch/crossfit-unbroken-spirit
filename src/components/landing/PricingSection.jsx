@@ -169,7 +169,7 @@ export default function PricingSection() {
               {t("pricingTitle")}
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             {t("pricingSubtitle")}
           </p>
           
@@ -212,7 +212,7 @@ export default function PricingSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               style={mobileOrder !== undefined ? { order: mobileOrder } : {}}
-              className={`relative rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] flex flex-col h-full md:![order:0] ${
+              className={`relative rounded-2xl p-6 transition-colors duration-300 flex flex-col h-full md:![order:0] ${
               plan.featured ?
               'bg-gradient-to-br from-blue-600 to-sky-500 shadow-2xl shadow-blue-500/20' :
               'bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/30'}`
@@ -233,7 +233,7 @@ export default function PricingSection() {
                       <h4 className={`text-lg font-bold mb-2 ${plan.featured ? 'text-white' : 'text-white'}`}>
                         {plan.name}
                       </h4>
-                      <p className={`text-sm ${plan.featured ? 'text-white/80' : 'text-gray-400'}`}>
+                      <p className={`text-sm ${plan.featured ? 'text-white/80' : 'text-gray-300'}`}>
                         {plan.description}
                       </p>
                     </div>
