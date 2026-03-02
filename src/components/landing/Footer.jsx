@@ -255,7 +255,7 @@ export default function Footer() {
   return (
     <footer className="bg-black border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
@@ -337,15 +337,15 @@ export default function Footer() {
             © {currentYear} CrossFit Unbroken Spirit. {t("copyright")}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-3">
-            <button onClick={() => setOpenModal('cookie')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+            <button onClick={() => setOpenModal('cookie')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
               {language === 'ro' ? 'Cookie-uri' : 'Cookies'}
             </button>
             <span className="text-gray-600">|</span>
-            <button onClick={() => setOpenModal('gdpr')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+            <button onClick={() => setOpenModal('gdpr')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
               {language === 'ro' ? 'Confidențialitate și GDPR' : 'Privacy'}
             </button>
             <span className="text-gray-600">|</span>
-            <button onClick={() => setOpenModal('terms')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+            <button onClick={() => setOpenModal('terms')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
               {language === 'ro' ? 'Termeni și Condiții' : 'Terms and Conditions'}
             </button>
             <span className="text-gray-600">|</span>

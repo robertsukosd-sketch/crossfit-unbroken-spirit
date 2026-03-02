@@ -68,7 +68,7 @@ export default function ProgramsSection() {
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {programs.map((program, index) => (
             <motion.div
               key={program.title}
@@ -76,9 +76,7 @@ export default function ProgramsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-800 hover:border-blue-500/50 transition-all duration-500 lg:col-span-2 ${
-                index === 3 ? 'lg:col-start-2' : ''
-              }`}
+              className="group relative bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-800 hover:border-blue-500/50 transition-all duration-500"
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
