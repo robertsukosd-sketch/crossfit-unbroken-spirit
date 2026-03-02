@@ -89,7 +89,7 @@ export default function Navigation() {
                       "px-3 py-1 rounded-full text-sm font-semibold transition-all",
                       language === 'ro' 
                         ? "bg-blue-500 text-white" 
-                        : "text-gray-400 hover:text-white"
+                        : "text-gray-300 hover:text-white"
                     )}
                   >
                     RO
@@ -98,10 +98,10 @@ export default function Navigation() {
                     type="button"
                     onClick={() => changeLanguage('en')}
                     className={cn(
-                      "px-3 py-1 rounded-full text-sm font-semibold transition-all",
+                      "px-3 py-1 rounded-full text-sm font-semibold transition-colors",
                       language === 'en' 
                         ? "bg-blue-500 text-white" 
-                        : "text-gray-400 hover:text-white"
+                        : "text-gray-300 hover:text-white"
                     )}
                   >
                     EN
