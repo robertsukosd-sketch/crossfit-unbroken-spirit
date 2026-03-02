@@ -20,6 +20,20 @@ export default function StartHereSection() {
     return () => observer.disconnect();
   }, []);
 
+  React.useEffect(() => {
+    const handleNavClick = (e) => {
+      const anchor = e.target.closest('a[href^="#"]');
+      if (anchor) {
+        const href = anchor.getAttribute('href');
+        if (href !== '#starthere') {
+          setIsExpanded(false);
+        }
+      }
+    };
+    document.addEventListener('click', handleNavClick);
+    return () => document.removeEventListener('click', handleNavClick);
+  }, []);
+
   const links = [
     {
       title: language === 'ro' ? 'CrossFit.com' : 'CrossFit.com',
