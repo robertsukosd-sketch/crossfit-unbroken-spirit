@@ -20,9 +20,11 @@ function SeoMeta() {
     if (language === 'ro') {
       document.title = 'CrossFit Unbroken Spirit - Forță. Comunitate. Rezultate.';
       document.querySelector('meta[name="description"]')?.setAttribute('content', 'Descoperă potențialul tău maxim la CrossFit Unbroken Spirit. Antrenamente funcționale de înaltă intensitate, coaching dedicat și o comunitate puternică. CrossFit pentru toate nivelurile de fitness.');
+      document.documentElement.lang = 'ro';
     } else {
       document.title = 'CrossFit Unbroken Spirit - Strength. Community. Results.';
       document.querySelector('meta[name="description"]')?.setAttribute('content', 'Discover your maximum potential at CrossFit Unbroken Spirit. High-intensity functional training, dedicated coaching, and a strong community for real results. CrossFit for all fitness levels.');
+      document.documentElement.lang = 'en';
     }
   }, [language]);
   return null;
