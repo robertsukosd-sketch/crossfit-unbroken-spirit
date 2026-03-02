@@ -18,6 +18,7 @@ const getNavLinks = (t) => [
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, changeLanguage, t } = useLanguage();
   const navLinks = getNavLinks(t);
