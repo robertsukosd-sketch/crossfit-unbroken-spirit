@@ -92,7 +92,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="h-full"
           >
-            <div className="grid sm:grid-cols-2 gap-6 h-full auto-rows-fr">
+            <div className="grid grid-cols-2 gap-3 h-full">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={info.title}
@@ -100,23 +100,20 @@ export default function ContactSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-zinc-900/50 rounded-xl p-4 sm:p-6 border border-zinc-800 flex flex-col sm:flex-col"
+                  className="bg-zinc-900/50 rounded-xl p-3 sm:p-4 border border-zinc-800 flex flex-row items-start gap-3"
                 >
-                  {/* Mobile: row layout with icon + text side by side */}
-                  <div className="flex flex-row sm:flex-col items-center sm:items-start gap-3 sm:gap-0">
-                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0 sm:mb-4">
-                      <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-sky-400" />
-                    </div>
-                    <div>
-                      <h4 className="text-white font-bold sm:mb-2 text-sm sm:text-base">{info.title}</h4>
-                      {info.details.map((detail, i) => (
-                        <p key={i} className="text-gray-300 text-xs sm:text-sm">{detail}</p>
-                      ))}
-                    </div>
-                    </div>
-                    </motion.div>
+                  <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <info.icon className="w-4 h-4 text-sky-400" />
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="text-white font-bold text-xs sm:text-sm mb-1">{info.title}</h4>
+                    {info.details.map((detail, i) => (
+                      <p key={i} className="text-gray-400 text-xs truncate">{detail}</p>
                     ))}
-                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
           {/* Contact Form */}
