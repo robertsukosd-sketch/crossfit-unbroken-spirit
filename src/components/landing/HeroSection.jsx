@@ -77,14 +77,16 @@ export default function HeroSection() {
       </div>
       
       {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
+      <motion.button
+        type="button"
+        aria-label="Scroll down"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer bg-transparent border-0 p-2"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
         onClick={() => scrollToSection('about')}
       >
-        <ChevronDown className="w-8 h-8 text-white/60" />
-      </motion.div>
+        <ChevronDown aria-hidden="true" className="w-8 h-8 text-white/60" />
+      </motion.button>
     </section>
   );
 }
