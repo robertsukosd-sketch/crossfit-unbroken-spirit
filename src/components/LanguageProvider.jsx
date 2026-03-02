@@ -137,7 +137,7 @@ export const translations = {
     copyright: "Toate drepturile rezervate.",
     tagline: "Comunitatea ta de fitness. Antrenamente funcționale de înaltă intensitate pentru rezultate reale.",
     startHereTitle: "De Unde Să Începi",
-    startHereSubtitle: "Ghid complet pentru cei care sunt noi în lumea CrossFit",
+    startHereSubtitle: "Toți termenii au fost neclari când i-am auzit prima oară. Toți am fost în locul tău la un moment dat.",
     startHerePreview: "**Ce înseamnă CrossFit? (Pe limba ta)**\n\nDacă ai căutat pe Internet, probabil ai găsit definiția oficială: \"mișcări funcționale, constant variate, executate la intensitate ridicată\". Sună cam tehnic, nu? **Uite ce înseamnă de fapt:** CrossFit-ul este un antrenament conceput să te pregătească pentru viața reală. Nu te antrenezi doar ca să arăți bine în oglindă (deși asta va fi o consecință).",
     startHerePreviewFullWidth: "Te antrenezi ca să poți ridica o cutie grea fără să ți se blocheze spatele, să alergi după autobuz și să nu rămâi fără aer și să fii în cea mai bună formă fizică a vieții tale.\n\nCombinăm elemente de gimnastică, ridicări de greutăți și cardio, pe care le schimbăm în fiecare zi. La noi, rutina este inamicul, așa că n-o să te plictisești niciodată.",
     startHereFullText1: `## Mitul suprem: „Trebuie să fiu deja în formă ca să mă apuc de CrossFit"
@@ -318,7 +318,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     copyright: "All rights reserved.",
     tagline: "Your fitness community. High-intensity functional training for real results.",
     startHereTitle: "Where to Start",
-    startHereSubtitle: "A quick guide for those who are new to CrossFit",
+    startHereSubtitle: "Every single term here was confusing when we first heard it. Everyone was you once.",
     startHerePreview: "**What is CrossFit?**\n\nIf you already searched on the Internet, you probably found the official definition: \"constantly varied functional movements, executed at a high intensity\". Sounds pretty technical, right? **Here's what it actually means:** CrossFit is a training program designed to prepare you for real life. You're not just training to look good in the mirror (though that will be a consequence).",
     startHerePreviewFullWidth: "You're training so you can lift a heavy box without breaking your back, so you can run for the bus without running out of breath, and be in the best physical shape of your life.\n\nWe combine gymnastics, weightlifting and cardio elements, which we vary every day. With us, routine is the enemy, so you will never get bored.",
     startHereFullText1: `## The Biggest Lie: "I First Need to Be in Shape Before I Start CrossFit"
