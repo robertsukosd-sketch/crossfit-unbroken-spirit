@@ -96,7 +96,7 @@ export default function ScheduleSection() {
               : <>Class <span className="text-blue-500">Schedule</span></>
             }
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto whitespace-pre-line">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             {t("scheduleSubtitle")}
           </p>
         </motion.div>
@@ -107,6 +107,8 @@ export default function ScheduleSection() {
             <button
               key={day}
               onClick={() => setSelectedDay(day)}
+              aria-label={day}
+              aria-pressed={selectedDay === day}
               className={cn(
                 "px-4 py-2 min-h-[44px] rounded-full text-sm font-semibold transition-colors",
                 selectedDay === day
