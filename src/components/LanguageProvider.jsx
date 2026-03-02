@@ -41,7 +41,7 @@ export const translations = {
     professionalCoachingDesc: "Antrenori dedicați progresului tău.",
     visibleResults: "Rezultate Vizibile",
     visibleResultsDesc: "Transformări reale și durabile, obținute prin muncă și dedicare.",
-    everyoneUnique: "Fiecare persoană este unică",
+    everyoneUnique: "Toți suntem diferiți,",
     everyoneUniqueDesc: "iar programele noastre sunt adaptabile oricărui nivel de formă fizică.",
     crossfitTitle: "CrossFit",
     crossfitDesc: "Antrenamente funcționale de înaltă intensitate, care combină gimnastică, haltere și condiționare.",
