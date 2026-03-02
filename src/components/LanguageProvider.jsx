@@ -40,7 +40,7 @@ export const translations = {
     professionalCoaching: "Coaching Profesionist",
     professionalCoachingDesc: "Corecții în timp real. La tine, nu la grup.",
     visibleResults: "Rezultate Vizibile",
-    visibleResultsDesc: "Masoarabil. Săptamână cu săptamână.",
+    visibleResultsDesc: "Măsurabil. Săptămână de săptămână.",
     everyoneUnique: "Toți suntem diferiți",
     everyoneUniqueDesc: "iar programele noastre sunt adaptabile oricărui nivel de formă fizică.",
     crossfitTitle: "CrossFit",
