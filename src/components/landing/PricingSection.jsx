@@ -169,7 +169,7 @@ export default function PricingSection() {
               {t("pricingTitle")}
             </span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto whitespace-pre-line">
             {t("pricingSubtitle")}
           </p>
           
