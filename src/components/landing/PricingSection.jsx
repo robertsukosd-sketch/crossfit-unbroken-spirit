@@ -151,7 +151,7 @@ const getCategories = (language) => [
     icon: Globe,
     description: language === 'ro'
       ? 'În vizită sau curios să încerci? Ești binevenit așa cum ești.\nTestează spiritul Unbroken fără angajamente.'
-      : 'Visiting or just curious? You are welcome exactly as you are. Experience the Unbroken spirit with no commitment.',
+      : 'Visiting or just curious? Come as you are.\nExperience the Unbroken spirit with no commitments.',
     plans: [
       {
         name: 'Drop In',
