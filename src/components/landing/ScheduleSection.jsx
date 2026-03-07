@@ -113,7 +113,7 @@ export default function ScheduleSection() {
 
         {/* Day selector */}
          <div className="flex flex-wrap justify-center gap-2 mb-10 overflow-x-auto px-2 -mx-2 pb-2 lg:flex-nowrap lg:overflow-x-visible lg:px-0 lg:mx-0 lg:pb-0">
-          {days.map((day) => (
+          {days.map((day, i) => (
             <button
               key={day}
               onClick={() => setSelectedDay(day)}
@@ -126,7 +126,7 @@ export default function ScheduleSection() {
                   : "bg-zinc-900 text-gray-300 hover:bg-zinc-700 hover:text-white"
               )}
             >
-              <span className="sm:hidden">{dayAbbrList[days.indexOf(day)]}</span>
+              <span className="sm:hidden">{dayAbbrList[i]}</span>
               <span className="hidden sm:inline">{day}</span>
             </button>
           ))}
