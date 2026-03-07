@@ -54,7 +54,7 @@ export default function Home() {
         <div id="hero">
           <HeroSection />
         </div>
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div id="about" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <AboutSection />
         </motion.div>
         <div id="starthere">
