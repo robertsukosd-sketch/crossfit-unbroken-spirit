@@ -49,8 +49,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? 'lună' : 'month',
         description: language === 'ro' ? 'Acces complet fără restricții' : 'Full access, no restrictions',
         features: language === 'ro'
-          ? ['Ședințe nelimitate', 'Toate clasele incluse', 'Open Gym inclus', 'Prioritate înscriere']
-          : ['Unlimited sessions', 'All classes included', 'Open Gym included', 'Priority booking'],
+          ? ['Ședințe nelimitate', 'Toate clasele incluse', 'Open Gym inclus', 'Prioritate înscriere', 'Loc de parcare inclus']
+          : ['Unlimited sessions', 'All classes included', 'Open Gym included', 'Priority booking', 'Free parking spot'],
         popular: true,
         featured: true,
       },
