@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Smartphone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import Logo from './Logo';
 import { useLanguage } from '../LanguageProvider';
 import { openAppWithFallback } from '../appStoreUtils';
-import BookFreeSessionModal from './BookFreeSessionModal';
 
 const getNavLinks = (t) => [
   { name: t("home"), href: "#hero" },
@@ -17,12 +16,11 @@ const getNavLinks = (t) => [
   { name: t("contact"), href: "#contact" },
 ];
 
-export default function Navigation() {
+export default function Navigation({ onBookSession }) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, changeLanguage, t } = useLanguage();
-  const navLinks = getNavLinks(t);
+  const navLinks = useMemo(() => getNavLinks(t), [language]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +33,11 @@ export default function Navigation() {
   const scrollToSection = (href) => {
     const id = href.replace('#', '');
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleBookClick = () => {
+    onBookSession();
     setIsMobileMenuOpen(false);
   };
 
@@ -83,9 +86,10 @@ export default function Navigation() {
             {/* Language & CTA Button */}
             <div className="hidden lg:flex items-center gap-4">
               <div className="flex gap-1 bg-zinc-900 rounded-full p-1">
-                <button
+                 <button
                     type="button"
                     onClick={() => changeLanguage('ro')}
+                    aria-label="Switch to Romanian"
                     className={cn(
                       "px-3 py-1 rounded-full text-sm font-semibold transition-colors",
                       language === 'ro' 
@@ -98,6 +102,7 @@ export default function Navigation() {
                   <button
                     type="button"
                     onClick={() => changeLanguage('en')}
+                    aria-label="Switch to English"
                     className={cn(
                       "px-3 py-1 rounded-full text-sm font-semibold transition-colors",
                       language === 'en' 
@@ -134,7 +139,8 @@ export default function Navigation() {
                 </motion.span>
               </motion.button>
               <Button
-                onClick={() => setIsModalOpen(true)}
+                type="button"
+                onClick={handleBookClick}
                 className="bg-zinc-800 hover:bg-zinc-700 text-gray-200 font-semibold rounded-full px-5 border border-zinc-700"
               >
                 {t("freeTrial")}
@@ -175,6 +181,7 @@ export default function Navigation() {
               </div>
               {/* Mobile Menu Button */}
               <button
+                type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-white"
@@ -240,17 +247,17 @@ export default function Navigation() {
                   </motion.span>
                 </motion.button>
                 <Button
-                  onClick={() => { setIsModalOpen(true); setIsMobileMenuOpen(false); }}
-                  className="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold rounded-full py-6 text-lg"
-                >
-                  {t("freeTrial")}
-                </Button>
+                   type="button"
+                   onClick={handleBookClick}
+                   className="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold rounded-full py-6 text-lg"
+                 >
+                   {t("freeTrial")}
+                 </Button>
               </motion.div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-      <BookFreeSessionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-    </>
-  );
-}
+      </>
+      );
+      }

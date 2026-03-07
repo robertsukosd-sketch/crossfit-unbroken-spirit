@@ -48,11 +48,15 @@ export default function Home() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const handleBookSession = () => {
+    setIsBookingModalOpen(true);
+  };
+
   return (
     <LanguageProvider>
       <SeoMeta />
       <div className="min-h-screen bg-black">
-        <Navigation />
+        <Navigation onBookSession={handleBookSession} />
         <div id="hero">
           <HeroSection />
         </div>
@@ -63,7 +67,7 @@ export default function Home() {
           <StartHereSection />
         </div>
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <ProgramsSection onBookSession={() => setIsBookingModalOpen(true)} />
+          <ProgramsSection onBookSession={handleBookSession} />
         </motion.div>
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <PricingSection />

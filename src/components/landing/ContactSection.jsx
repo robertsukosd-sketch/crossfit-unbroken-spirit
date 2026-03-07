@@ -32,8 +32,16 @@ const getContactInfo = (t) => [
   }
 ];
 
+const QUICK_LINKS = [
+  { labelKey: 'home', href: '#hero' },
+  { labelKey: 'programs', href: '#programs' },
+  { labelKey: 'pricing', href: '#pricing' },
+  { labelKey: 'schedule', href: '#schedule' },
+  { labelKey: 'contact', href: '#contact' }
+];
+
 export default function ContactSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const contactInfo = getContactInfo(t);
   const [formData, setFormData] = useState({
     name: '',
@@ -48,17 +56,23 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    await base44.entities.ContactSubmission.create(formData);
-    await base44.integrations.Core.SendEmail({
-      to: 'train@unbrokenspirit.ro',
-      subject: `Mesaj nou de la ${formData.name}`,
-      body: `Nume: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone || '-'}\n\nMesaj:\n${formData.message}`
-    });
-    
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    toast.success('Mesajul a fost trimis cu succes!');
-    setIsSubmitting(false);
+    try {
+      await base44.entities.ContactSubmission.create(formData);
+      const isRo = language === 'ro';
+      await base44.integrations.Core.SendEmail({
+        to: 'train@unbrokenspirit.ro',
+        subject: isRo ? `Mesaj nou de la ${formData.name}` : `New message from ${formData.name}`,
+        body: `${isRo ? 'Nume' : 'Name'}: ${formData.name}\n${isRo ? 'Email' : 'Email'}: ${formData.email}\n${isRo ? 'Telefon' : 'Phone'}: ${formData.phone || '-'}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${formData.message}`
+      });
+      
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      toast.success(isRo ? 'Mesajul a fost trimis cu succes!' : 'Message sent successfully!');
+      setIsSubmitting(false);
+    } catch (error) {
+      setIsSubmitting(false);
+      toast.error(language === 'ro' ? 'Eroare la trimitere. Încercați din nou.' : 'Error sending message. Please try again.');
+    }
   };
 
   return (

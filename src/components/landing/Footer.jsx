@@ -247,6 +247,14 @@ const getTermsContent = (language) => {
   );
 };
 
+const QUICK_LINKS = [
+  { label: 'home', href: '#hero' },
+  { label: 'programs', href: '#programs' },
+  { label: 'pricing', href: '#pricing' },
+  { label: 'schedule', href: '#schedule' },
+  { label: 'contact', href: '#contact' }
+];
+
 export default function Footer() {
   const { t, language } = useLanguage();
   const currentYear = new Date().getFullYear();
@@ -258,13 +266,13 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2">
-            <div className="flex items-center gap-3 mb-4 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 rounded-lg p-1">
+            <a href="#hero" className="flex items-center gap-3 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-1 inline-block">
                  <Logo size={56} />
                  <div className="text-center leading-tight">
                    <div className="text-xl font-black text-white tracking-wide">CrossFit</div>
                    <div className="text-xs font-black text-blue-400 uppercase tracking-wide">UNBROKEN SPIRIT</div>
                  </div>
-               </div>
+               </a>
             <p className="text-gray-300 mb-6 max-w-md">
               {t("tagline")}
             </p>
@@ -294,13 +302,13 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4">{t("quickLinks")}</h4>
             <ul className="space-y-3">
-              {[{label: t("home"), href: "#hero"}, {label: t("programs"), href: "#programs"}, {label: t("pricing"), href: "#pricing"}, {label: t("schedule"), href: "#schedule"}, {label: t("contact"), href: "#contact"}].map((link) => (
+              {QUICK_LINKS.map((link) => (
                 <li key={link.href}>
                   <a 
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
-                    {link.label}
+                    {t(link.label)}
                   </a>
                 </li>
               ))}

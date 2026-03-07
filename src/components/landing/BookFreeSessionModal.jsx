@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { base44 } from "@/api/base44Client";
+import { toast } from "sonner";
 import { useLanguage } from '../LanguageProvider';
 
 const PREFILLED_MESSAGE = {
@@ -19,26 +20,31 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    await base44.entities.ContactSubmission.create({
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      message: PREFILLED_MESSAGE[language],
-      status: 'new',
-    });
-    const isRo = language === 'ro';
-    await base44.integrations.Core.SendEmail({
-      to: 'train@unbrokenspirit.ro',
-      subject: isRo ? `Rezervare Ședință Gratuită - ${form.name}` : `Free Session Booking - ${form.name}`,
-      body: `${isRo ? 'Nume' : 'Name'}: ${form.name}
+    try {
+      await base44.entities.ContactSubmission.create({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        message: PREFILLED_MESSAGE[language],
+        status: 'new',
+      });
+      const isRo = language === 'ro';
+      await base44.integrations.Core.SendEmail({
+        to: 'train@unbrokenspirit.ro',
+        subject: isRo ? `Rezervare Ședință Gratuită - ${form.name}` : `Free Session Booking - ${form.name}`,
+        body: `${isRo ? 'Nume' : 'Name'}: ${form.name}
 ${isRo ? 'Email' : 'Email'}: ${form.email}
 ${isRo ? 'Telefon' : 'Phone'}: ${form.phone || (isRo ? 'Necompletat' : 'Not provided')}
 
 ${isRo ? 'Mesaj' : 'Message'}:
 ${PREFILLED_MESSAGE[language]}`,
-    });
-    setSending(false);
-    setSubmitted(true);
+      });
+      setSending(false);
+      setSubmitted(true);
+    } catch (error) {
+      setSending(false);
+      toast.error(language === 'ro' ? 'Eroare la trimitere. Încercați din nou.' : 'Error sending request. Please try again.');
+    }
   };
 
   const handleClose = () => {
