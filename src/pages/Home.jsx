@@ -76,6 +76,7 @@ export default function Home() {
         </motion.div>
         <Footer />
 
+        <BookFreeSessionModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
         <AccessibilityToolbar />
         <CookieConsent />
 
