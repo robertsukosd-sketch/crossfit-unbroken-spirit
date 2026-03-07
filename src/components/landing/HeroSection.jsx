@@ -35,8 +35,10 @@ export default function HeroSection() {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-600/20 to-transparent transform skew-x-12 origin-top-right" />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 w-full min-h-screen flex flex-col items-center justify-between py-24 px-6">
+        {/* Top: tag + title */}
         <motion.div
+          className="text-center max-w-5xl mx-auto mt-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -45,13 +47,24 @@ export default function HeroSection() {
             {t("heroTag")}
           </span>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-0 leading-tight">
             {language === 'ro' 
               ? <>FORȚĂ. <span className="text-blue-500">COMUNITATE</span>. TRANSFORMĂRI REALE.</>
               : <>STRONG. <span className="text-blue-500">SUPPORTED</span>. STRONGER.</>
             }
           </h1>
-          
+        </motion.div>
+
+        {/* Spacer to push buttons below logo */}
+        <div className="flex-1" />
+
+        {/* Bottom: subtitle + buttons */}
+        <motion.div
+          className="text-center max-w-5xl mx-auto mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             {t("heroSubtitle")}
           </p>
