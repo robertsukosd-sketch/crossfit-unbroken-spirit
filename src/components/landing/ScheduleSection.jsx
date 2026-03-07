@@ -154,17 +154,11 @@ export default function ScheduleSection() {
                 classColors[item.class] || "bg-zinc-900/50 border-zinc-800"
               )}
             >
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span className="font-bold text-lg">{item.time}</span>
-                </div>
-                <div className="flex items-center gap-1 text-xs opacity-80">
-                  <Users className="w-3 h-3" />
-                  <span>{item.spots} {t("spotsAvailable")}</span>
-                </div>
-              </div>
-              <h4 className="text-white font-bold text-xl mb-1">{item.class}</h4>
+              <div className="flex items-center gap-2 mb-3">
+                   <Clock className="w-4 h-4" />
+                   <span className="font-bold text-lg">{item.time}</span>
+               </div>
+               <h4 className="text-white font-bold text-xl mb-1">{item.class}</h4>
             </motion.div>
             ))
           ) : null}
