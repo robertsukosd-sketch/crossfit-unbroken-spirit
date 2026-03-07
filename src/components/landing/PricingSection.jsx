@@ -74,7 +74,7 @@ const getCategories = (language) => [
           ? ['Program flexibil', 'Acces la echipamente', 'Fără clase de grup', 'Loc de parcare inclus']
           : ['Flexible schedule', 'Equipment access', 'No group classes', 'Free parking spot'],
         popular: true,
-        featured: false,
+        featured: true,
       },
       {
         name: language === 'ro' ? 'Reducere Elevi/Studenți' : 'Student Discount',
