@@ -155,10 +155,16 @@ export default function ScheduleSection() {
               )}
             >
               <div className="flex items-center gap-2 mb-3">
-                   <Clock className="w-4 h-4" />
-                   <span className="font-bold text-lg">{item.time}</span>
-               </div>
-               <h4 className="text-white font-bold text-xl mb-1">{item.class}</h4>
+                  <Clock className="w-4 h-4" />
+                  <span className="font-bold text-lg">{item.time}</span>
+              </div>
+              <h4 className="text-white font-bold text-xl mb-2">{item.class}</h4>
+              {item.spots && (
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-sm font-semibold opacity-80">{item.spots} {language === 'ro' ? 'locuri' : 'spots'}</span>
+                  <span className="text-xs opacity-50">{language === 'ro' ? '(capacitate maximă indicativă)' : '(indicative max capacity)'}</span>
+                </div>
+              )}
             </motion.div>
             ))
           ) : null}
