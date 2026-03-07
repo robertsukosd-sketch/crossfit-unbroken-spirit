@@ -158,21 +158,23 @@ export default function ScheduleSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
                 className={cn(
-                  "rounded-xl p-5 border backdrop-blur-sm",
+                  "rounded-xl p-5 border backdrop-blur-sm relative",
                   classColors[item.class] || "bg-zinc-900/50 border-zinc-800"
                 )}
               >
+                {item.spots && (
+                  <div className="absolute top-3 right-4 flex flex-col items-end gap-0">
+                    <span className="text-xs font-semibold opacity-80 flex items-center gap-1">
+                      <Users className="w-3 h-3" />{item.spots} {language === 'ro' ? 'locuri' : 'spots'}
+                    </span>
+                    <span className="text-xs opacity-40">{language === 'ro' ? '(cap. max indicativă)' : '(indicative max cap.)'}</span>
+                  </div>
+                )}
                 <div className="flex items-center gap-2 mb-3">
                     <Clock className="w-4 h-4" />
                     <span className="font-bold text-lg">{item.time}</span>
                 </div>
-                <h4 className="text-white font-bold text-xl mb-2">{item.class}</h4>
-                {item.spots && (
-                  <div className="flex flex-col gap-0.5">
-                    <span className="text-sm font-semibold opacity-80">{item.spots} {language === 'ro' ? 'locuri' : 'spots'}</span>
-                    <span className="text-xs opacity-50">{language === 'ro' ? '(capacitate maximă indicativă)' : '(indicative max capacity)'}</span>
-                  </div>
-                )}
+                <h4 className="text-white font-bold text-xl">{item.class}</h4>
               </motion.div>
               )
             ))
