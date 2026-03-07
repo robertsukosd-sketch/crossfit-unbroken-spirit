@@ -59,9 +59,9 @@ export default function Navigation({ onBookSession }) {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <a 
-              href="#hero"
-              onClick={(e) => { e.preventDefault(); scrollToSection('#hero'); }}
-              className="flex items-center gap-3 flex-shrink-0"
+             href="#hero"
+             onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}
+             className="flex items-center gap-3 flex-shrink-0"
             >
               <Logo size={68} />
               <div className="hidden sm:block text-center leading-tight">
