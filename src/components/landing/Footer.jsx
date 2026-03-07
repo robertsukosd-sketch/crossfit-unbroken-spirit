@@ -248,9 +248,7 @@ const getTermsContent = (language) => {
   );
 };
 
-import { CONTACT_EMAIL, QUICK_FOOTER_LINKS } from '@/lib/config';
-
-const { scrollToSection } = require('@/lib/utils/scrolling');
+import { CONTACT_EMAIL, QUICK_FOOTER_LINKS, scrollToSection } from '../config';
 
 export default function Footer() {
   const { t, language } = useLanguage();
