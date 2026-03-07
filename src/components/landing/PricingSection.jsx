@@ -62,8 +62,8 @@ const getCategories = (language) => [
     sublabel: language === 'ro' ? 'Servicii Extra' : 'Extra Services',
     icon: Sparkles,
     description: language === 'ro'
-      ? 'Optimizează-ți performanța. Servicii complementare care accelerează progresul și susțin evoluția ta continuă.'
-      : 'Optimize your performance. Complementary services that accelerate progress and support your continuous evolution.',
+      ? 'Optimizează-ți performanța.\nServicii complementare pentru un progress accelerat.'
+      : 'Optimize your performance.\nComplementary services for accelerated progress.',
     plans: [
       {
         name: 'Open Gym',
