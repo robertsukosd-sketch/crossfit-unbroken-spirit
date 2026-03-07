@@ -281,7 +281,7 @@ export default function PricingSection() {
             {language === 'ro' ? (
               <>Investește în Tine. Construiește un{' '}
                 <span className="bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
-                  Spirit Neîntrerupt.
+                  Spirit Unbroken.
                 </span>
               </>
             ) : (
