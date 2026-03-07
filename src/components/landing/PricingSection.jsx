@@ -170,8 +170,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? 'săptămână' : 'week',
         description: language === 'ro' ? 'Încearcă o săptămână completă' : 'Try a full week',
         features: language === 'ro'
-          ? ['Acces nelimitat 7 zile', 'Toate clasele incluse', 'Ideal pentru călători']
-          : ['Unlimited 7-day access', 'All classes included', 'Ideal for travelers'],
+          ? ['Acces nelimitat 7 zile', 'Toate clasele incluse', 'Ideal pentru călători', 'Loc de parcare inclus']
+          : ['Unlimited 7-day access', 'All classes included', 'Ideal for travelers', 'Free parking spot'],
         popular: true,
         featured: true,
       },
