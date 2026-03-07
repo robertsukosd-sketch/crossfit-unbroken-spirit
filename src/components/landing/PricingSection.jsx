@@ -137,8 +137,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '12 ședințe' : '12 sessions',
         description: language === 'ro' ? 'Transformare completă' : 'Complete transformation',
         features: language === 'ro'
-          ? ['12 sesiuni 1-la-1', 'Program individualizat', 'Nutriție de bază', 'Suport WhatsApp', 'Monitorizare progres']
-          : ['12 one-on-one sessions', 'Individualized program', 'Basic nutrition', 'WhatsApp support', 'Progress monitoring'],
+          ? ['12 sesiuni 1-la-1', 'Program individualizat', 'Nutriție de bază', 'Suport WhatsApp', 'Monitorizare progres', 'Loc de parcare inclus']
+          : ['12 one-on-one sessions', 'Individualized program', 'Basic nutrition', 'WhatsApp support', 'Progress monitoring', 'Free parking spot'],
         popular: true,
         featured: true,
       },
