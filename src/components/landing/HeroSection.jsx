@@ -47,9 +47,9 @@ export default function HeroSection() {
             {t("heroTag")}
           </span>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-0 leading-tight whitespace-nowrap">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-0 leading-tight">
             {language === 'ro' 
-              ? <>FORȚĂ. <span className="text-blue-500">COMUNITATE</span>. TRANSFORMĂRI REALE.</>
+              ? <>FORȚĂ. <span className="text-blue-500">COMUNITATE</span>. <span className="whitespace-nowrap">TRANSFORMĂRI REALE.</span></>
               : <>STRONG. <span className="text-blue-500">SUPPORTED</span>. STRONGER.</>
             }
           </h1>
