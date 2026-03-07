@@ -338,7 +338,7 @@ export default function PricingSection() {
               <span className="text-white font-black text-xl sm:text-2xl">{activeCategory.label}</span>
               <span className="text-zinc-500 text-sm font-medium hidden sm:inline">— {activeCategory.sublabel}</span>
             </div>
-            <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
+            <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto whitespace-pre-line">
               {activeCategory.description}
             </p>
           </motion.div>
