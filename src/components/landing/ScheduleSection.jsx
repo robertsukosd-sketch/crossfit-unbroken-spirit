@@ -150,7 +150,7 @@ export default function ScheduleSection() {
           ) : selectedDay && schedule[selectedDay] ? (
             schedule[selectedDay].map((item, index) => (
               item.time === null ? (
-                <div key={`empty-${index}`} className="hidden lg:block" />
+                <div key={`empty-${index}`} className="hidden sm:block" />
               ) : (
               <motion.div
                 key={`${item.time}-${item.class}`}
