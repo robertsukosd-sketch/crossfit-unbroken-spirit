@@ -95,8 +95,8 @@ const getCategories = (language) => [
         features: language === 'ro'
           ? ['Ședințe nelimitate (2 persoane)', 'Toate clasele incluse', 'Open Gym inclus', 'Prioritate înscriere', 'Loc de parcare inclus']
           : ['Unlimited sessions (2 people)', 'All classes included', 'Open Gym included', 'Priority booking', 'Free parking spot'],
-        popular: true,
-        featured: true,
+        popular: false,
+        featured: false,
       },
       {
         name: language === 'ro' ? 'Nutriție' : 'Nutrition',
