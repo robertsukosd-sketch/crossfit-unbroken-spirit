@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Clock } from 'lucide-react';
+import { Clock, Users } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
 import { openAppStore, openMobileOrDesktop } from '../appStoreUtils';
