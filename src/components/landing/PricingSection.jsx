@@ -126,8 +126,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '8 ședințe' : '8 sessions',
         description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
         features: language === 'ro'
-          ? ['8 sesiuni 1-la-1', 'Program individualizat', 'Tehnici avansate', 'Feedback constant']
-          : ['8 one-on-one sessions', 'Individualized program', 'Advanced techniques', 'Constant feedback'],
+          ? ['8 sesiuni 1-la-1', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
+          : ['8 one-on-one sessions', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
         popular: false,
         featured: false,
       },
