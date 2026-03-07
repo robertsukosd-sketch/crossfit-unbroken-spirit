@@ -3,7 +3,7 @@ import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 import Logo from './Logo';
 import { useLanguage } from '../LanguageProvider';
 import PolicyModal from './PolicyModal';
-import { QUICK_FOOTER_LINKS, scrollToSection } from '../config';
+import { CONTACT_EMAIL, QUICK_FOOTER_LINKS, scrollToSection } from '../config';
 
 const getCookieContent = (language) => {
   if (language === 'ro') {
@@ -247,8 +247,6 @@ const getTermsContent = (language) => {
     </>
   );
 };
-
-import { CONTACT_EMAIL, QUICK_FOOTER_LINKS, scrollToSection } from '../config';
 
 export default function Footer() {
   const { t, language } = useLanguage();
