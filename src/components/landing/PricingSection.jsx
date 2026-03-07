@@ -38,8 +38,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? 'lună' : 'month',
         description: language === 'ro' ? '3 antrenamente pe săptămână' : '3 workouts per week',
         features: language === 'ro'
-          ? ['12 ședințe pe lună', 'Flexibilitate program', 'Acces la toate orele']
-          : ['12 sessions per month', 'Schedule flexibility', 'Access to all class times'],
+          ? ['12 ședințe pe lună', 'Flexibilitate program', 'Acces la toate orele', 'Loc de parcare inclus']
+          : ['12 sessions per month', 'Schedule flexibility', 'Access to all class times', 'Free parking spot'],
         popular: true,
         featured: false,
       },
