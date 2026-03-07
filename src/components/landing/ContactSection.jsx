@@ -155,19 +155,22 @@ export default function ContactSection() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
+                  className="text-center py-8 sm:py-12"
                 >
-                  <div className="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="w-10 h-10 text-green-500" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-green-500" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">{t("thank")}</h3>
-                  <p className="text-gray-300 mb-6">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">{t("thank")}</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base hidden sm:block">
                   {t("thankDesc")}
+                  </p>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:hidden">
+                  {t("thankDescMobile")}
                   </p>
                   <Button
                   variant="outline"
                   onClick={() => setIsSubmitted(false)}
-                  className="border-zinc-700 text-blue-500 hover:bg-zinc-800"
+                  className="border-zinc-700 text-blue-500 hover:bg-zinc-800 text-sm sm:text-base"
                   >
                   {t("sendAnother")}
                   </Button>
