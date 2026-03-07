@@ -55,9 +55,22 @@ export default function ContactSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = language === 'ro' ? 'Numele este obligatoriu' : 'Name is required';
+    if (!formData.email.trim()) newErrors.email = language === 'ro' ? 'Email-ul este obligatoriu' : 'Email is required';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = language === 'ro' ? 'Email invalid' : 'Invalid email';
+    if (!formData.message.trim()) newErrors.message = language === 'ro' ? 'Mesajul este obligatoriu' : 'Message is required';
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
+    
     setIsSubmitting(true);
     
     try {
@@ -71,6 +84,7 @@ export default function ContactSection() {
       
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
+      setErrors({});
       toast.success(isRo ? 'Mesajul a fost trimis cu succes!' : 'Message sent successfully!');
       setIsSubmitting(false);
     } catch (error) {
@@ -187,10 +201,13 @@ export default function ContactSection() {
                       minLength={2}
                       maxLength={100}
                       value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      onChange={(e) => { setFormData({...formData, name: e.target.value}); if(errors.name) setErrors({...errors, name: ''})}}
                       placeholder={t("fullNamePlaceholder")}
-                      className="bg-zinc-800 border-zinc-600 text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-blue-500"
+                      className={`bg-zinc-800 text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-blue-500 ${errors.name ? 'border-red-500 focus:border-red-500' : 'border-zinc-600'}`}
+                      aria-invalid={!!errors.name}
+                      aria-describedby={errors.name ? 'name-error' : undefined}
                     />
+                    {errors.name && <p id="name-error" className="text-red-400 text-xs mt-1">{errors.name}</p>}
                   </div>
                   
                   <div className="grid sm:grid-cols-2 gap-4">
@@ -203,10 +220,13 @@ export default function ContactSection() {
                         type="email"
                         required
                         value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        onChange={(e) => { setFormData({...formData, email: e.target.value}); if(errors.email) setErrors({...errors, email: ''})}}
                         placeholder={t("emailPlaceholder")}
-                        className="bg-zinc-800 border-zinc-600 text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-blue-500"
+                        className={`bg-zinc-800 text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-blue-500 ${errors.email ? 'border-red-500 focus:border-red-500' : 'border-zinc-600'}`}
+                        aria-invalid={!!errors.email}
+                        aria-describedby={errors.email ? 'email-error' : undefined}
                       />
+                      {errors.email && <p id="email-error" className="text-red-400 text-xs mt-1">{errors.email}</p>}
                     </div>
                     <div>
                       <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-300 mb-2 focus-within:text-blue-400">
@@ -233,18 +253,21 @@ export default function ContactSection() {
                       minLength={10}
                       maxLength={1000}
                       value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      onChange={(e) => { setFormData({...formData, message: e.target.value}); if(errors.message) setErrors({...errors, message: ''})}}
                       placeholder={t("messagePlaceholder")}
                       rows={5}
-                      className="bg-zinc-800 border-zinc-600 text-white placeholder:text-gray-400 focus:border-blue-500 focus:ring-blue-500 resize-none"
+                      className={`resize-none focus:border-blue-500 focus:ring-blue-500 placeholder:text-gray-400 text-white bg-zinc-800 ${errors.message ? 'border-red-500 focus:border-red-500' : 'border-zinc-600'}`}
+                      aria-invalid={!!errors.message}
+                      aria-describedby={errors.message ? 'message-error' : undefined}
                     />
+                    {errors.message && <p id="message-error" className="text-red-400 text-xs mt-1">{errors.message}</p>}
                   </div>
                   
                   <Button
                     type="submit"
                     disabled={isSubmitting}
                     aria-busy={isSubmitting}
-                    className="w-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white py-6 text-lg font-bold rounded-full"
+                    className="w-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white py-6 text-lg font-bold rounded-full focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-zinc-900 disabled:opacity-70"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">
@@ -326,6 +349,7 @@ export default function ContactSection() {
               style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)', minHeight: '400px' }}
               allowFullScreen=""
               loading="lazy"
+              title="CrossFit Unbroken Spirit location"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </motion.div>

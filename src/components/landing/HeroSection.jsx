@@ -17,7 +17,7 @@ export default function HeroSection() {
         sizes="100vw"
         alt=""
         aria-hidden="true"
-        fetchPriority="high"
+        fetchpriority="high"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
@@ -27,6 +27,8 @@ export default function HeroSection() {
         <img 
           src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/6f20a4dfe_image.png"
           alt="CrossFit Unbroken Spirit"
+          width={500}
+          height={500}
           className="w-1/2 max-w-2xl object-contain"
         />
       </div>
@@ -73,7 +75,7 @@ export default function HeroSection() {
             <Button 
               size="lg"
               onClick={() => scrollToSection('pricing')}
-              className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base md:text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-colors"
+              className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base md:text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
             >
               {t("startNow")}
             </Button>
@@ -81,7 +83,7 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('programs')}
-              className="bg-transparent text-white hover:bg-white/10 border-2 border-white/50 hover:border-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base md:text-lg font-bold rounded-full"
+              className="bg-transparent text-white hover:bg-white/10 border-2 border-white/50 hover:border-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base md:text-lg font-bold rounded-full focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
             >
               {t("discoverThePrograms")}
             </Button>

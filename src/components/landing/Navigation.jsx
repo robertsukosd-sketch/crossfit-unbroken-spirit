@@ -74,14 +74,14 @@ export default function Navigation({ onBookSession }) {
             <div className="hidden lg:flex items-center gap-4">
               {navLinks.map((link) => (
                 <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => { e.preventDefault(); scrollNavToSection(link.href); }}
-                  className="text-gray-200 hover:text-white font-medium transition-colors relative group text-sm"
-                >
-                  {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-[width] group-hover:w-full" />
-                </a>
+                   key={link.name}
+                   href={link.href}
+                   onClick={(e) => { e.preventDefault(); scrollNavToSection(link.href); }}
+                   className="text-gray-200 hover:text-white font-medium transition-colors relative group text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
+                 >
+                   {link.name}
+                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-[width] group-hover:w-full" />
+                 </a>
               ))}
             </div>
 
@@ -207,16 +207,16 @@ export default function Navigation({ onBookSession }) {
             <div className="px-6 py-8 space-y-6">
               {navLinks.map((link, index) => (
                 <motion.a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => { e.preventDefault(); scrollNavToSection(link.href); }}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="block text-2xl font-bold text-white hover:text-blue-400 transition-colors"
-                >
-                  {link.name}
-                </motion.a>
+                   key={link.name}
+                   href={link.href}
+                   onClick={(e) => { e.preventDefault(); scrollNavToSection(link.href); }}
+                   initial={{ opacity: 0, x: -20 }}
+                   animate={{ opacity: 1, x: 0 }}
+                   transition={{ delay: index * 0.1 }}
+                   className="block text-2xl font-bold text-white hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-3 py-2"
+                 >
+                   {link.name}
+                 </motion.a>
               ))}
               <motion.div
                 initial={{ opacity: 0 }}
