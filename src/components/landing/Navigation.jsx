@@ -240,10 +240,7 @@ export default function Navigation() {
                   </motion.span>
                 </motion.button>
                 <Button
-                  onClick={() => {
-                    document.getElementById('thunderwod-app')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    setIsMobileMenuOpen(false);
-                  }}
+                  onClick={() => { setIsModalOpen(true); setIsMobileMenuOpen(false); }}
                   className="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold rounded-full py-6 text-lg"
                 >
                   {t("freeTrial")}
