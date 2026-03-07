@@ -5,6 +5,8 @@ import { useLanguage } from '../LanguageProvider';
 import PolicyModal from './PolicyModal';
 import { CONTACT_EMAIL, QUICK_FOOTER_LINKS, scrollToSection } from '../config';
 
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/Splaiul+Unirii+257-259+Bucuresti";
+
 const getCookieContent = (language) => {
   if (language === 'ro') {
     return (
@@ -313,9 +315,9 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4">{t("footerContact")}</h4>
             <ul className="space-y-3">
                <li className="flex items-center gap-3 text-gray-300">
-                 <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                 <span>Splaiul Unirii 257-259, Sector 3, București</span>
-               </li>
+                  <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                  <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">Splaiul Unirii 257-259, Sector 3, București</a>
+                </li>
                <li className="flex items-center gap-3 text-gray-200">
                  <Phone className="w-5 h-5 text-sky-400 flex-shrink-0" />
                  <a href="tel:+40748838767" className="text-sm hover:text-sky-400 transition-colors">+40 748 838 767</a>

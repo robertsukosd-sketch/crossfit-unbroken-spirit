@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, Instagram, Facebook, CheckCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -10,11 +10,14 @@ import { useLanguage } from '../LanguageProvider';
 import ThunderWodBox from '../landing/ThunderWodBox';
 import { CONTACT_EMAIL, PHONE_1, PHONE_2, GYM_ADDRESS } from '../config';
 
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/Splaiul+Unirii+257-259+Bucuresti";
+
 const getContactInfo = (t) => [
   {
     icon: MapPin,
     title: t("address"),
-    details: [GYM_ADDRESS.split(', ')[0], t("locationCity")]
+    details: [GYM_ADDRESS.split(', ')[0], t("locationCity")],
+    isAddress: true
   },
   {
     icon: Phone,
@@ -128,6 +131,9 @@ export default function ContactSection() {
                       }
                       if (detail.includes('@')) {
                         return <a key={i} href={`mailto:${detail}`} className="text-gray-400 text-xs truncate hover:text-sky-400 transition-colors block">{detail}</a>;
+                      }
+                      if (info.isAddress) {
+                        return <a key={i} href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 text-xs truncate hover:text-sky-400 transition-colors block">{detail}</a>;
                       }
                       return <p key={i} className="text-gray-400 text-xs truncate">{detail}</p>;
                     })}
