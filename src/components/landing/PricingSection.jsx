@@ -18,8 +18,8 @@ const getCategories = (language) => [
     sublabel: language === 'ro' ? 'Abonamente CrossFit' : 'CrossFit Memberships',
     icon: Dumbbell,
     description: language === 'ro'
-      ? 'Fundamentul transformării tale. Antrenamente de grup ghidate de coachi, calibrate la nivelul tău.'
-      : 'The foundation of your transformation. Group workouts guided by coaches, calibrated to your level.',
+      ? 'Fundamentul transformării tale.\nAntrenamente de grup, adaptate nivelului tău.'
+      : 'The foundation of your transformation.\nGroup workouts guided by coaches, calibrated to your level.',
     plans: [
       {
         name: language === 'ro' ? '8 Ședințe' : '8 Sessions',
