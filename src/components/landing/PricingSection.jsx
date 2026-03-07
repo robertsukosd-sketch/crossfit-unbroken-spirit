@@ -150,7 +150,7 @@ const getCategories = (language) => [
     sublabel: language === 'ro' ? 'Vizitatori & Drop-In' : 'Visitors & Drop-In',
     icon: Globe,
     description: language === 'ro'
-      ? 'În vizită sau curios să încerci? Ești binevenit exact așa cum ești. Experimentează spiritul Unbroken fără angajament.'
+      ? 'În vizită sau curios să încerci? Ești binevenit așa cum ești.\nTestează spiritul Unbroken fără angajamente.'
       : 'Visiting or just curious? You are welcome exactly as you are. Experience the Unbroken spirit with no commitment.',
     plans: [
       {
