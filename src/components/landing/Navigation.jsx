@@ -76,7 +76,7 @@ export default function Navigation({ onBookSession }) {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={(e) => { e.preventDefault(); scrollNavToSection(link.href); }}
+                  onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
                   className="text-gray-200 hover:text-white font-medium transition-colors relative group text-sm"
                 >
                   {link.name}
@@ -209,7 +209,7 @@ export default function Navigation({ onBookSession }) {
                 <motion.a
                   key={link.name}
                   href={link.href}
-                  onClick={(e) => { e.preventDefault(); scrollNavToSection(link.href); }}
+                  onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
