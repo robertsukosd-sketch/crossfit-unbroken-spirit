@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../LanguageProvider';
-import { scrollToSection } from '@/lib/utils/scrolling';
+import { scrollToSection } from '../config';
 
 export default function HeroSection() {
   const { t, language } = useLanguage();

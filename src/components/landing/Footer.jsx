@@ -3,6 +3,7 @@ import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 import Logo from './Logo';
 import { useLanguage } from '../LanguageProvider';
 import PolicyModal from './PolicyModal';
+import { QUICK_FOOTER_LINKS, scrollToSection } from '../config';
 
 const getCookieContent = (language) => {
   if (language === 'ro') {

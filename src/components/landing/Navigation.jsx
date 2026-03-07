@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import Logo from './Logo';
 import { useLanguage } from '../LanguageProvider';
 import { openAppWithFallback } from '../appStoreUtils';
-import { scrollToSection } from '@/lib/utils/scrolling';
+import { scrollToSection } from '../config';
 
 const getNavLinks = (t) => [
   { name: t("home"), href: "#hero" },

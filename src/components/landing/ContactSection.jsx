@@ -8,7 +8,7 @@ import { base44 } from '@/api/base44Client';
 import { toast } from "sonner";
 import { useLanguage } from '../LanguageProvider';
 import ThunderWodBox from '../landing/ThunderWodBox';
-import { CONTACT_EMAIL, PHONE_1, PHONE_2, GYM_ADDRESS } from '@/lib/config';
+import { CONTACT_EMAIL, PHONE_1, PHONE_2, GYM_ADDRESS } from '../config';
 
 const getContactInfo = (t) => [
   {

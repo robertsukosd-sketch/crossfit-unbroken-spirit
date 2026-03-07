@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
 import MarkdownRenderer from '../MarkdownRenderer';
-import { scrollToSectionWithDelay } from '@/lib/utils/scrolling';
+import { scrollToSectionWithDelay } from '../config';
 
 export default function StartHereSection() {
   const { t, language } = useLanguage();
