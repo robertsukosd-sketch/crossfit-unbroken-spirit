@@ -42,7 +42,7 @@ const getPrograms = (t) => [
   }
 ];
 
-export default function ProgramsSection() {
+export default function ProgramsSection({ onBookSession }) {
   const { t, language } = useLanguage();
   const programs = getPrograms(t);
   const scrollToSection = (id) => {
