@@ -209,6 +209,11 @@ function PlanCard({ plan, index, t }) {
         <span className={cn('text-sm', plan.featured ? 'text-white/70' : 'text-gray-400')}>
           / {plan.period}
         </span>
+        {plan.studentNote && (
+          <div className="mt-3 px-3 py-2 rounded-xl bg-white/15 border border-white/25 text-white/90 text-xs font-semibold">
+            {plan.studentNote}
+          </div>
+        )}
       </div>
 
       <ul className="space-y-3 mb-6 flex-grow">
