@@ -134,10 +134,7 @@ export default function Navigation() {
                 </motion.span>
               </motion.button>
               <Button
-                onClick={() => {
-                  document.getElementById('thunderwod-app')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                  setIsMobileMenuOpen(false);
-                }}
+                onClick={() => setIsModalOpen(true)}
                 className="bg-zinc-800 hover:bg-zinc-700 text-gray-200 font-semibold rounded-full px-5 border border-zinc-700"
               >
                 {t("freeTrial")}
