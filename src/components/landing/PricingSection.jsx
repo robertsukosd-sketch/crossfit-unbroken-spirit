@@ -78,17 +78,7 @@ const getCategories = (language) => [
         popular: true,
         featured: true,
       },
-      {
-        name: language === 'ro' ? 'Reducere Elevi/Studenți' : 'Student Discount',
-        price: '300',
-        period: language === 'ro' ? 'lună' : 'month',
-        description: language === 'ro' ? '*până la 26 de ani' : '*up to 26 years old',
-        features: language === 'ro'
-          ? ['Toate beneficiile abonamentului Nelimitat', 'Tarif special pentru tineri', 'Loc de parcare inclus']
-          : ['All Unlimited Membership benefits', 'Special rate for young athletes', 'Free parking spot'],
-        popular: false,
-        featured: false,
-      },
+
       {
         name: 'CrossFit Family',
         price: '900',
