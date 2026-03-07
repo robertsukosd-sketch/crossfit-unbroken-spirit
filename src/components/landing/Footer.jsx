@@ -317,15 +317,15 @@ export default function Footer() {
                </li>
                <li className="flex items-center gap-3 text-gray-200">
                  <Phone className="w-5 h-5 text-sky-400 flex-shrink-0" />
-                 <span className="text-sm">+40 748 838 767</span>
+                 <a href="tel:+40748838767" className="text-sm hover:text-sky-400 transition-colors">+40 748 838 767</a>
                </li>
                <li className="flex items-center gap-3 text-gray-200">
                  <Phone className="w-5 h-5 text-sky-400 flex-shrink-0" />
-                 <span className="text-sm">+40 740 269 769</span>
+                 <a href="tel:+40740269769" className="text-sm hover:text-sky-400 transition-colors">+40 740 269 769</a>
                </li>
                <li className="flex items-center gap-3 text-gray-200">
                  <Mail className="w-5 h-5 text-sky-400 flex-shrink-0" />
-                 <span className="text-sm">train@unbrokenspirit.ro</span>
+                 <a href="mailto:train@unbrokenspirit.ro" className="text-sm hover:text-sky-400 transition-colors">train@unbrokenspirit.ro</a>
                </li>
              </ul>
           </div>
