@@ -26,10 +26,16 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
       message: PREFILLED_MESSAGE[language],
       status: 'new',
     });
+    const isRo = language === 'ro';
     await base44.integrations.Core.SendEmail({
       to: 'train@unbrokenspirit.ro',
-      subject: language === 'ro' ? `Rezervare Ședință Gratuită - ${form.name}` : `Free Session Booking - ${form.name}`,
-      body: `${language === 'ro' ? 'Nume' : 'Name'}: ${form.name}\n${language === 'ro' ? 'Email' : 'Email'}: ${form.email}\n${language === 'ro' ? 'Telefon' : 'Phone'}: ${form.phone}\n\n${PREFILLED_MESSAGE[language]}`,
+      subject: isRo ? `Rezervare Ședință Gratuită - ${form.name}` : `Free Session Booking - ${form.name}`,
+      body: `${isRo ? 'Nume' : 'Name'}: ${form.name}
+${isRo ? 'Email' : 'Email'}: ${form.email}
+${isRo ? 'Telefon' : 'Phone'}: ${form.phone || (isRo ? 'Necompletat' : 'Not provided')}
+
+${isRo ? 'Mesaj' : 'Message'}:
+${PREFILLED_MESSAGE[language]}`,
     });
     setSending(false);
     setSubmitted(true);
