@@ -117,8 +117,8 @@ const getCategories = (language) => [
     sublabel: 'Personal Training',
     icon: User,
     description: language === 'ro'
-      ? 'Atenție 1-la-1 dedicată exclusiv ție. Antrenamente personalizate pentru a-ți atinge obiectivele mai rapid și mai sigur.'
-      : 'Undivided 1-on-1 attention dedicated exclusively to you. Personalized training to reach your goals faster and safer.',
+      ? 'Atenție 1-la-1 dedicată exclusiv ție.\nAntrenamente personalizate pentru obiectivele tale.'
+      : 'Undivided 1-on-1 attention dedicated exclusively to you.\nPersonalized training for your goals.',
     plans: [
       {
         name: language === 'ro' ? 'PT 8 Ședințe' : 'PT 8 Sessions',
