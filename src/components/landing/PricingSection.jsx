@@ -48,6 +48,8 @@ const getCategories = (language) => [
         price: '500',
         period: language === 'ro' ? 'lună' : 'month',
         description: language === 'ro' ? 'Acces complet fără restricții' : 'Full access, no restrictions',
+        studentPrice: '300',
+        studentNote: language === 'ro' ? '🎓 Elevi/Studenți până la 26 ani: 300 RON / lună' : '🎓 Students up to 26 years old: 300 RON / month',
         features: language === 'ro'
           ? ['Ședințe nelimitate', 'Toate clasele incluse', 'Open Gym inclus', 'Prioritate înscriere', 'Loc de parcare inclus']
           : ['Unlimited sessions', 'All classes included', 'Open Gym included', 'Priority booking', 'Free parking spot'],
