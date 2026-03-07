@@ -250,6 +250,7 @@ export default function Navigation() {
           </motion.div>
         )}
       </AnimatePresence>
+      <BookFreeSessionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 }
