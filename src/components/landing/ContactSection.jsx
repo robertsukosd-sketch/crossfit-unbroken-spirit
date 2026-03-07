@@ -107,9 +107,15 @@ export default function ContactSection() {
                   </div>
                   <div className="min-w-0">
                     <h4 className="text-white font-bold text-xs sm:text-sm mb-1">{info.title}</h4>
-                    {info.details.map((detail, i) => (
-                      <p key={i} className="text-gray-400 text-xs truncate">{detail}</p>
-                    ))}
+                    {info.details.map((detail, i) => {
+                      if (detail.startsWith('+')) {
+                        return <a key={i} href={`tel:${detail.replace(/\s/g, '')}`} className="text-gray-400 text-xs truncate hover:text-sky-400 transition-colors block">{detail}</a>;
+                      }
+                      if (detail.includes('@')) {
+                        return <a key={i} href={`mailto:${detail}`} className="text-gray-400 text-xs truncate hover:text-sky-400 transition-colors block">{detail}</a>;
+                      }
+                      return <p key={i} className="text-gray-400 text-xs truncate">{detail}</p>;
+                    })}
                   </div>
                 </motion.div>
               ))}
