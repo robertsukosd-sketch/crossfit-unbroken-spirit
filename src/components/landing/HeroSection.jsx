@@ -3,18 +3,18 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../LanguageProvider';
+import { scrollToSection } from '@/lib/utils/scrolling';
 
 export default function HeroSection() {
   const { t, language } = useLanguage();
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with overlay */}
       <img
         src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80"
+        srcSet="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=640&q=80 640w, https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1280&q=80 1280w, https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80 1920w"
+        sizes="100vw"
         alt=""
         aria-hidden="true"
         fetchPriority="high"

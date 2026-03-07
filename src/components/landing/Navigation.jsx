@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Smartphone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import Logo from './Logo';
 import { useLanguage } from '../LanguageProvider';
 import { openAppWithFallback } from '../appStoreUtils';
+import { scrollToSection } from '@/lib/utils/scrolling';
 
 const getNavLinks = (t) => [
   { name: t("home"), href: "#hero" },
@@ -22,19 +23,20 @@ export default function Navigation({ onBookSession }) {
   const { language, changeLanguage, t } = useLanguage();
   const navLinks = useMemo(() => getNavLinks(t), [language]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+  const handleScroll = useCallback(() => {
+    setIsScrolled(window.scrollY > 50);
   }, []);
 
-  const scrollToSection = (href) => {
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  const scrollNavToSection = useCallback((href) => {
     const id = href.replace('#', '');
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    scrollToSection(id);
     setIsMobileMenuOpen(false);
-  };
+  }, []);
 
   const handleBookClick = () => {
     onBookSession();
@@ -91,7 +93,7 @@ export default function Navigation({ onBookSession }) {
                     onClick={() => changeLanguage('ro')}
                     aria-label="Switch to Romanian"
                     className={cn(
-                      "px-3 py-1 rounded-full text-sm font-semibold transition-colors",
+                      "px-3 py-1 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500",
                       language === 'ro' 
                         ? "bg-blue-500 text-white" 
                         : "text-gray-300 hover:text-white"
@@ -104,7 +106,7 @@ export default function Navigation({ onBookSession }) {
                     onClick={() => changeLanguage('en')}
                     aria-label="Switch to English"
                     className={cn(
-                      "px-3 py-1 rounded-full text-sm font-semibold transition-colors",
+                      "px-3 py-1 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500",
                       language === 'en' 
                         ? "bg-blue-500 text-white" 
                         : "text-gray-300 hover:text-white"

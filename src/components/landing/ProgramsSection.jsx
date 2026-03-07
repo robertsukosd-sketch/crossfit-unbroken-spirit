@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Dumbbell, Heart, Zap, Users, Timer, TrendingUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -44,10 +44,7 @@ const getPrograms = (t) => [
 
 export default function ProgramsSection({ onBookSession }) {
   const { t, language } = useLanguage();
-  const programs = getPrograms(t);
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const programs = useMemo(() => getPrograms(t), [language]);
 
   return (
     <section id="programs" className="py-24 bg-black relative">
@@ -80,13 +77,14 @@ export default function ProgramsSection({ onBookSession }) {
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
                 <img 
-                  src={program.image}
-                  alt={program.title}
-                  width={600}
-                  height={192}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 will-change-transform"
-                />
+                    src={program.image}
+                    alt={program.title}
+                    width={600}
+                    height={192}
+                    loading="lazy"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 will-change-transform"
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
                 <div className={`absolute top-4 left-4 w-12 h-12 rounded-xl bg-gradient-to-br ${program.color} flex items-center justify-center shadow-lg`}>
                   <program.icon className="w-6 h-6 text-white" />
@@ -110,17 +108,23 @@ export default function ProgramsSection({ onBookSession }) {
         </div>
 
         {/* Mobile-only CTA button */}
-        <div className="md:hidden mt-10 flex justify-center">
-          <motion.button
-            type="button"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            onClick={() => onBookSession?.()}
-            className="relative px-8 py-4 rounded-full text-white font-black text-lg overflow-hidden"
-            style={{ background: 'linear-gradient(135deg, #1e40af 0%, #0ea5e9 100%)' }}
-            whileTap={{ scale: 0.97 }}
-          >
+         <div className="md:hidden mt-10 flex justify-center">
+           <motion.button
+             type="button"
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             onClick={() => {
+               if (onBookSession) {
+                 onBookSession();
+               } else {
+                 console.warn('onBookSession callback not provided to ProgramsSection');
+               }
+             }}
+             className="relative px-8 py-4 rounded-full text-white font-black lg:text-lg overflow-hidden whitespace-nowrap"
+             style={{ background: 'linear-gradient(135deg, #1e40af 0%, #0ea5e9 100%)' }}
+             whileTap={{ scale: 0.97 }}
+           >
             <motion.span
               className="absolute inset-0 rounded-full"
               animate={{ opacity: [0, 0.3, 0] }}

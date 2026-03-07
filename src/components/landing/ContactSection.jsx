@@ -8,22 +8,23 @@ import { base44 } from '@/api/base44Client';
 import { toast } from "sonner";
 import { useLanguage } from '../LanguageProvider';
 import ThunderWodBox from '../landing/ThunderWodBox';
+import { CONTACT_EMAIL, PHONE_1, PHONE_2, GYM_ADDRESS } from '@/lib/config';
 
 const getContactInfo = (t) => [
   {
     icon: MapPin,
     title: t("address"),
-    details: ["Splaiul Unirii 257-259", t("locationCity")]
+    details: [GYM_ADDRESS.split(', ')[0], t("locationCity")]
   },
   {
     icon: Phone,
     title: t("phone"),
-    details: ["+40 748 838 767", "+40 740 269 769"]
+    details: [PHONE_1, PHONE_2]
   },
   {
     icon: Mail,
     title: t("email"),
-    details: ["train@unbrokenspirit.ro"]
+    details: [CONTACT_EMAIL]
   },
   {
     icon: Clock,
@@ -60,7 +61,7 @@ export default function ContactSection() {
       await base44.entities.ContactSubmission.create(formData);
       const isRo = language === 'ro';
       await base44.integrations.Core.SendEmail({
-        to: 'train@unbrokenspirit.ro',
+        to: CONTACT_EMAIL,
         subject: isRo ? `Mesaj nou de la ${formData.name}` : `New message from ${formData.name}`,
         body: `${isRo ? 'Nume' : 'Name'}: ${formData.name}\n${isRo ? 'Email' : 'Email'}: ${formData.email}\n${isRo ? 'Telefon' : 'Phone'}: ${formData.phone || '-'}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${formData.message}`
       });
@@ -174,6 +175,8 @@ export default function ContactSection() {
                     <Input
                       id="contact-name"
                       required
+                      minLength={2}
+                      maxLength={100}
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
                       placeholder={t("fullNamePlaceholder")}
@@ -218,6 +221,8 @@ export default function ContactSection() {
                     <Textarea
                       id="contact-message"
                       required
+                      minLength={10}
+                      maxLength={1000}
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                       placeholder={t("messagePlaceholder")}

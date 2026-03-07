@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { base44 } from "@/api/base44Client";
 import { toast } from "sonner";
 import { useLanguage } from '../LanguageProvider';
+import { CONTACT_EMAIL } from '@/lib/config';
 
 const PREFILLED_MESSAGE = {
   ro: "Bună! Sunt curios/curioasă să descopăr ce oferă CrossFit Unbroken Spirit și aș vrea să rezerv ședința mea gratuită. Aștept cu interes să mă contactați.",
@@ -30,7 +31,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
       });
       const isRo = language === 'ro';
       await base44.integrations.Core.SendEmail({
-        to: 'train@unbrokenspirit.ro',
+        to: CONTACT_EMAIL,
         subject: isRo ? `Rezervare Ședință Gratuită - ${form.name}` : `Free Session Booking - ${form.name}`,
         body: `${isRo ? 'Nume' : 'Name'}: ${form.name}
 ${isRo ? 'Email' : 'Email'}: ${form.email}
@@ -48,11 +49,9 @@ ${PREFILLED_MESSAGE[language]}`,
   };
 
   const handleClose = () => {
+    setSubmitted(false);
+    setForm({ name: '', email: '', phone: '' });
     onClose();
-    setTimeout(() => {
-      setSubmitted(false);
-      setForm({ name: '', email: '', phone: '' });
-    }, 400);
   };
 
   return (

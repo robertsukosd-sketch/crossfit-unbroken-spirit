@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, Flame, Trophy } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
@@ -28,7 +28,7 @@ const getFeatures = (t) => [
 
 export default function AboutSection() {
   const { t, language } = useLanguage();
-  const features = getFeatures(t);
+  const features = useMemo(() => getFeatures(t), [language]);
   return (
     <section id="about" className="py-24 bg-zinc-950 relative overflow-hidden">
       {/* Background accent */}
@@ -51,6 +51,7 @@ export default function AboutSection() {
                width={800}
                height={500}
                loading="lazy"
+               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                className="w-full h-64 sm:h-80 lg:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

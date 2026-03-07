@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ExternalLink } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
-import ReactMarkdown from 'react-markdown';
+import MarkdownRenderer from '../MarkdownRenderer';
+import { scrollToSectionWithDelay } from '@/lib/utils/scrolling';
 
 export default function StartHereSection() {
   const { t, language } = useLanguage();
@@ -20,21 +20,22 @@ export default function StartHereSection() {
     return () => observer.disconnect();
   }, []);
 
-  React.useEffect(() => {
-    const handleNavClick = (e) => {
-      const anchor = e.target.closest('a[href^="#"]');
-      if (anchor) {
-        const href = anchor.getAttribute('href');
-        if (href !== '#starthere') {
-          setIsExpanded(false);
-        }
+  const handleNavClick = useCallback((e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (anchor) {
+      const href = anchor.getAttribute('href');
+      if (href !== '#starthere') {
+        setIsExpanded(false);
       }
-    };
-    document.addEventListener('click', handleNavClick);
-    return () => document.removeEventListener('click', handleNavClick);
+    }
   }, []);
 
-  const links = [
+  React.useEffect(() => {
+    document.addEventListener('click', handleNavClick);
+    return () => document.removeEventListener('click', handleNavClick);
+  }, [handleNavClick]);
+
+  const links = useMemo(() => [
     {
       title: language === 'ro' ? 'CrossFit.com' : 'CrossFit.com',
       description: language === 'ro' ? 'Site-ul oficial al CrossFit' : 'Official CrossFit website',
@@ -53,7 +54,7 @@ export default function StartHereSection() {
       url: 'https://journal.crossfit.com/',
       image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/0b875ae07_image.png'
     }
-  ];
+  ], [language]);
 
   return (
     <>
@@ -88,19 +89,8 @@ export default function StartHereSection() {
           
           <div className="space-y-6">
             <div className="grid md:grid-cols-[1.3fr_1fr] gap-6 md:gap-8 items-start">
-              <div className="text-gray-200 leading-relaxed prose prose-invert prose-sm max-w-none">
-                <ReactMarkdown
-                  components={{
-                    h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
-                    h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
-                    p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
-                    ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
-                    li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                    strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
-                  }}
-                >
-                  {t("startHerePreview")}
-                </ReactMarkdown>
+              <div className="text-gray-200 leading-relaxed max-w-none">
+                <MarkdownRenderer>{t("startHerePreview")}</MarkdownRenderer>
               </div>
               <div className="aspect-video bg-zinc-800 rounded-xl overflow-hidden border border-zinc-700">
                <iframe
@@ -132,20 +122,8 @@ export default function StartHereSection() {
                 exit={{ opacity: 0, height: 0 }}
                 className="space-y-6 text-gray-300">
 
-                <div className="text-gray-200 leading-relaxed prose prose-invert prose-sm max-w-none">
-                  <ReactMarkdown
-                    components={{
-                      h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
-                      h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
-                      p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
-                      ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
-                      li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                      strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
-                      a: ({node, ...props}) => <a {...props} className="text-sky-400 hover:text-sky-300 font-semibold underline" />,
-                    }}
-                  >
-                    {t("startHereFullText1")}
-                  </ReactMarkdown>
+                <div className="text-gray-200 leading-relaxed max-w-none">
+                   <MarkdownRenderer>{t("startHereFullText1")}</MarkdownRenderer>
                 </div>
 
                 {language === 'en' && (
@@ -165,20 +143,8 @@ export default function StartHereSection() {
 
                 {language === 'en' && (
                   <>
-                    <div className="text-gray-200 leading-relaxed prose prose-invert prose-sm max-w-none">
-                      <ReactMarkdown
-                        components={{
-                          h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
-                          h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
-                          p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
-                          ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
-                          li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                          strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
-                          a: ({node, ...props}) => <a {...props} className="text-sky-400 hover:text-sky-300 font-semibold underline" />,
-                        }}
-                      >
-                        {t("startHereFullText1Part2En")}
-                      </ReactMarkdown>
+                    <div className="text-gray-200 leading-relaxed max-w-none">
+                      <MarkdownRenderer>{t("startHereFullText1Part2En")}</MarkdownRenderer>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-4">
@@ -201,19 +167,7 @@ export default function StartHereSection() {
                 )}
 
                 <div className="bg-zinc-800/50 rounded-xl p-6">
-                  <ReactMarkdown
-                    className="prose prose-invert prose-sm max-w-none"
-                    components={{
-                      h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
-                      h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
-                      p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
-                      ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
-                      li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                      strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
-                    }}
-                  >
-                    {t("startHereFullText2")}
-                  </ReactMarkdown>
+                   <MarkdownRenderer>{t("startHereFullText2")}</MarkdownRenderer>
                 </div>
 
                 {language === 'ro' && (
@@ -237,19 +191,7 @@ export default function StartHereSection() {
                     </div>
 
                     <div className="bg-zinc-800/50 rounded-xl p-6">
-                      <ReactMarkdown
-                        className="prose prose-invert prose-sm max-w-none"
-                        components={{
-                          h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
-                          h3: ({node, ...props}) => <h3 className="text-xl font-bold text-white mb-4" {...props} />,
-                          p: ({node, ...props}) => <p className="m-0 mb-3" {...props} />,
-                          ul: ({node, ...props}) => <ul className="list-disc list-inside space-y-2 mb-3" {...props} />,
-                          li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                          strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
-                        }}
-                      >
-                        {t("startHereFullText3")}
-                      </ReactMarkdown>
+                      <MarkdownRenderer>{t("startHereFullText3")}</MarkdownRenderer>
                     </div>
                   </>
                 )}
@@ -332,9 +274,7 @@ export default function StartHereSection() {
           exit={{ opacity: 0, y: 20 }}
           onClick={() => {
             setIsExpanded(false);
-            setTimeout(() => {
-              document.getElementById('starthere')?.scrollIntoView({ behavior: 'smooth' });
-            }, 0);
+            scrollToSectionWithDelay('starthere', 300);
           }}
           className="fixed bottom-6 left-4 md:left-1/2 md:-translate-x-1/2 z-40 flex items-center gap-1 md:gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors bg-zinc-950 px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-zinc-800 hover:border-sky-400 text-sm md:text-base"
         >
