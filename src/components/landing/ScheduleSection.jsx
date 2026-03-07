@@ -82,14 +82,14 @@ const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 export default function ScheduleSection() {
   const { t, language } = useLanguage();
-  const schedule = getSchedule(t);
-  const days = getDays(t);
+  const schedule = useMemo(() => getSchedule(t), [language]);
+  const days = useMemo(() => getDays(t), [language]);
   const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
   const [selectedDay, setSelectedDay] = useState(days[0]);
 
   useEffect(() => {
     setSelectedDay(days[0]);
-  }, [language]);
+  }, [days]);
 
   return (
     <section id="schedule" className="py-24 bg-black relative">
