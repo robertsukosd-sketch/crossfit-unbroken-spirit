@@ -63,7 +63,7 @@ export default function Home() {
           <StartHereSection />
         </div>
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <ProgramsSection />
+          <ProgramsSection onBookSession={() => setIsBookingModalOpen(true)} />
         </motion.div>
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <PricingSection />
