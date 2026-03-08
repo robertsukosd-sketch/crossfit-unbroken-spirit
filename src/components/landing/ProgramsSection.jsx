@@ -47,7 +47,7 @@ const getPrograms = (t, language) => [
     title: t("openGym"),
     description: t("openGymDesc"),
     color: "from-cyan-500 to-sky-400",
-    image: "https://media.giphy.com/media/pQ5qPAB60piUl8yWD6/giphy.gif"
+    image: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTdrZmFwaHB4bWhuMjVhZTVkZWlybDBpdWdqbjRvbm1qd2tqa3BoNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DHRYTeJxXkOjOxK4mf/giphy.gif"
   }
 ];
 
