@@ -82,7 +82,7 @@ const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 export default function ScheduleSection() {
   const { t, language } = useLanguage();
-  const schedule = useMemo(() => getSchedule(t), [language]);
+  const schedule = useMemo(() => getSchedule(t, language), [language]);
   const days = useMemo(() => getDays(t), [language]);
   const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
   const todayIndex = new Date().getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
