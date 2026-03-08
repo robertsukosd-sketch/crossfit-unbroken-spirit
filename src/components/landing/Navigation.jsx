@@ -19,6 +19,7 @@ const getNavLinks = (t) => [
 
 export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobileMenuOpen }) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
   const { language, changeLanguage, t } = useLanguage();
   const navLinks = useMemo(() => getNavLinks(t), [language]);
 
