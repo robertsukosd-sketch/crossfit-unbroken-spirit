@@ -33,7 +33,7 @@ const getPrograms = (t, language) => [
       ? "Dacă obosești prea repede, nu e vorba de voință — e vorba de motor. Sesiunile noastre de condiționare îți construiesc capacitatea cardiovasculară mai multă putere, mai mult timp, mai puțin efort resimțit. Fii cel care dă ritmul, nu cel care se luptă să țină pasul."
       : "If you're gassing out before the workout ends, willpower isn't the problem — your engine is. Our conditioning sessions build the cardiovascular capacity that powers everything else. More output. Longer. Easier. Stop surviving workouts. Start owning them.",
     color: "from-orange-600 to-red-500",
-    image: "https://media.giphy.com/media/qnUPdqq750CHST2MwS/giphy.gif"
+    image: "https://media.giphy.com/media/xUOwGkdSnU89ib4FnW/giphy.gif"
   },
   {
     icon: Users,
