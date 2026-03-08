@@ -4,7 +4,7 @@ import { Dumbbell, Heart, Zap, Users, Timer, TrendingUp, Flame } from 'lucide-re
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
 
-const getPrograms = (t) => [
+const getPrograms = (t, language) => [
   {
     icon: Dumbbell,
     title: t("crossfitTitle"),
