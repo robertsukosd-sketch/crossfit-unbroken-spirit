@@ -24,7 +24,7 @@ const getPrograms = (t, language) => [
     title: t("gymnastics"),
     description: t("gymnasticsDesc"),
     color: "from-indigo-500 to-blue-500",
-    image: "https://media.giphy.com/media/uevCvFflMPH7QK6w9Q/giphy.gif"
+    image: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2o3NGZtcGJzMHpqODZ6N2c2cHVteXZrNWtxNnVueDBpaGZmejByOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3osBLvoR8tGE6OI5os/giphy.gif"
   },
   {
     icon: Flame,
