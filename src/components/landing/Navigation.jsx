@@ -148,7 +148,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                 onClick={() => openAppWithFallback()}
                 animate={{ boxShadow: ['0 0 0px #38bdf8', '0 0 18px #38bdf8', '0 0 0px #38bdf8'] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white transition-all overflow-hidden"
+                className="relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white transition-all overflow-hidden whitespace-nowrap flex-shrink-0"
                 style={{ background: 'linear-gradient(135deg, #0369a1 0%, #0ea5e9 50%, #0369a1 100%)', backgroundSize: '200% 100%' }}
                 whileHover={{ scale: 1.05 }}
               >
