@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Dumbbell, Heart, Zap, Users, Timer, TrendingUp } from 'lucide-react';
+import { Dumbbell, Heart, Zap, Users, Timer, TrendingUp, Flame } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useLanguage } from '../LanguageProvider';
 
