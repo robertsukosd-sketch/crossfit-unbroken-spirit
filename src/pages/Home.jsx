@@ -93,13 +93,24 @@ export default function Home() {
         />
 
         {visible && (
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="hidden lg:flex fixed bottom-8 right-6 z-50 w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-500 text-white items-center justify-center shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
-            aria-label="Back to top"
-          >
-            <ChevronUp className="w-6 h-6" />
-          </button>
+          <>
+            {/* Desktop: bottom-right */}
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="hidden lg:flex fixed bottom-8 right-6 z-50 w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-500 text-white items-center justify-center shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
+              aria-label="Back to top"
+            >
+              <ChevronUp className="w-6 h-6" />
+            </button>
+            {/* Mobile: below accessibility button on the left */}
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="lg:hidden fixed left-0 top-[calc(50%+3rem)] z-40 bg-blue-600 hover:bg-blue-500 text-white w-11 h-11 rounded-r-xl flex items-center justify-center shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-400"
+              aria-label="Back to top"
+            >
+              <ChevronUp className="w-5 h-5" />
+            </button>
+          </>
         )}
       </div>
     </LanguageProvider>
