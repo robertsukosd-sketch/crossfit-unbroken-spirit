@@ -7,6 +7,7 @@ import { scrollToSection } from '../config';
 
 export default function HeroSection() {
   const { t, language } = useLanguage();
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-x-hidden">

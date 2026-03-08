@@ -252,6 +252,13 @@ export default function PricingSection() {
   const categories = getCategories(language);
   const [activeId, setActiveId] = useState('core');
   const activeCategory = categories.find((c) => c.id === activeId);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 640);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const gridClass = (count) => {
     if (count === 2) return 'grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto';
