@@ -17,9 +17,8 @@ const getNavLinks = (t) => [
   { name: t("contact"), href: "#contact" },
 ];
 
-export default function Navigation({ onBookSession }) {
+export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobileMenuOpen }) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, changeLanguage, t } = useLanguage();
   const navLinks = useMemo(() => getNavLinks(t), [language]);
 
