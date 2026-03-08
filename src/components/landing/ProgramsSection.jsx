@@ -17,7 +17,7 @@ const getPrograms = (t, language) => [
     title: t("weightlifting"),
     description: t("weightliftingDesc"),
     color: "from-blue-700 to-blue-500",
-    image: "https://media.giphy.com/media/OaXzCz4GzsAXLGfrgq/giphy.gif"
+    image: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmNzM2kweGg1cXNydHR6MHNxNnFpODQ3ZG5zZjQ4dXl6MnRzeXk4aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c10FJ0dpZ5CEF03JTO/giphy.gif"
   },
   {
     icon: Heart,
