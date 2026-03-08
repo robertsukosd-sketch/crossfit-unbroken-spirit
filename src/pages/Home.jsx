@@ -35,6 +35,7 @@ function SeoMeta() {
 export default function Home() {
   const [visible, setVisible] = useState(false);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Add meta description tag if it doesn't exist
