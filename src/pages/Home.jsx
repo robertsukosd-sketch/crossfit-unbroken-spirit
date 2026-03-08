@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <LanguageProvider>
       <SeoMeta />
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen bg-black pb-20 lg:pb-0">
         <Navigation onBookSession={handleBookSession} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
         <div id="hero">
           <HeroSection />
