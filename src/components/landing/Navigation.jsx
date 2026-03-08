@@ -87,17 +87,27 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-4">
-              {navLinks.map((link) => (
-                <a
-                   key={link.name}
-                   href={link.href}
-                   onClick={(e) => { e.preventDefault(); scrollNavToSection(link.href); }}
-                   className="text-gray-200 hover:text-white font-medium transition-colors relative group text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
-                 >
-                   {link.name}
-                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-[width] group-hover:w-full" />
-                 </a>
-              ))}
+              {navLinks.map((link) => {
+                const sectionId = link.href.replace('#', '');
+                const isActive = activeSection === sectionId;
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => { e.preventDefault(); scrollNavToSection(link.href); }}
+                    className={cn(
+                      "font-medium transition-colors relative group text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1",
+                      isActive ? "text-blue-400" : "text-gray-200 hover:text-white"
+                    )}
+                  >
+                    {link.name}
+                    <span className={cn(
+                      "absolute -bottom-1 left-0 h-0.5 bg-blue-500 transition-[width]",
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    )} />
+                  </a>
+                );
+              })}
             </div>
 
             {/* Language & CTA Button */}
