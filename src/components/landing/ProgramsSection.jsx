@@ -27,6 +27,15 @@ const getPrograms = (t, language) => [
     image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80"
   },
   {
+    icon: Flame,
+    title: language === 'ro' ? "Condiționare" : "Conditioning",
+    description: language === 'ro'
+      ? "Dacă obosești prea repede, nu e vorba de voință — e vorba de motor. Sesiunile noastre de condiționare îți construiesc capacitatea cardiovasculară care alimentează totul: mai multă putere, mai mult timp, mai puțin efort resimțit. Fii cel care dă ritmul, nu cel care se luptă să țină pasul."
+      : "If you're gassing out before the workout ends, willpower isn't the problem — your engine is. Our conditioning sessions build the cardiovascular capacity that powers everything else. More output. Longer. Easier. Stop surviving workouts. Start owning them.",
+    color: "from-orange-600 to-red-500",
+    image: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=600&q=80"
+  },
+  {
     icon: Users,
     title: t("personalTraining"),
     description: t("personalTrainingDesc"),
