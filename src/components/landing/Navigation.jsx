@@ -248,14 +248,14 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                 <motion.button
                   type="button"
                   onClick={() => { openAppWithFallback(); setIsMobileMenuOpen(false); }}
-                  animate={{ boxShadow: ['0 0 0px #38bdf8', '0 0 12px #38bdf8', '0 0 0px #38bdf8'] }}
+                  animate={shouldReduceMotion ? {} : { boxShadow: ['0 0 0px #38bdf8', '0 0 12px #38bdf8', '0 0 0px #38bdf8'] }}
                   transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                   className="relative w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full text-base font-bold text-white overflow-hidden"
                   style={{ background: 'linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 50%, #1e3a5f 100%)' }}
                 >
                   <motion.span
                     className="absolute inset-0 rounded-full"
-                    animate={{ opacity: [0, 0.3, 0] }}
+                    animate={shouldReduceMotion ? { opacity: 0 } : { opacity: [0, 0.3, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                     style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
                   />
@@ -263,11 +263,11 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                   <span className="relative z-10">ThunderWOD App</span>
                   <motion.span
                     className="relative z-10 text-[10px] bg-sky-400 text-black font-black px-1.5 py-0.5 rounded-full leading-none"
-                    animate={{ scale: [1, 1.1, 1] }}
+                    animate={shouldReduceMotion ? {} : { scale: [1, 1.1, 1] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
-                  >
+                    >
                     NEW
-                  </motion.span>
+                    </motion.span>
                 </motion.button>
 
               </motion.div>
