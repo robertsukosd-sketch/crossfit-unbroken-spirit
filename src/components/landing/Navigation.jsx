@@ -32,6 +32,21 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
+  useEffect(() => {
+    const sectionIds = ['hero', 'starthere', 'programs', 'pricing', 'schedule', 'contact'];
+    const observers = sectionIds.map(id => {
+      const el = document.getElementById(id);
+      if (!el) return null;
+      const observer = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
+        { threshold: 0.3 }
+      );
+      observer.observe(el);
+      return observer;
+    });
+    return () => observers.forEach(o => o?.disconnect());
+  }, []);
+
   const scrollNavToSection = useCallback((href) => {
     const id = href.replace('#', '');
     scrollToSection(id);
