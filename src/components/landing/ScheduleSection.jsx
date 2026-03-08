@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
 import { openAppStore } from '../appStoreUtils';
 
-const getSchedule = (t) => ({
+const getSchedule = (t, language) => ({
   [t("monday")]: [
     { time: "07:00", class: "CrossFit", spots: 16 },
     { time: "08:00", class: "CrossFit", spots: 16 },
