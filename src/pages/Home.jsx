@@ -62,24 +62,24 @@ export default function Home() {
         <div id="hero">
           <HeroSection />
         </div>
-        <motion.div id="about" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <div id="about">
           <AboutSection />
-        </motion.div>
+        </div>
         <div id="starthere">
           <StartHereSection />
         </div>
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <div id="programs">
           <ProgramsSection onBookSession={handleBookSession} />
-        </motion.div>
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        </div>
+        <div id="pricing">
           <PricingSection />
-        </motion.div>
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        </div>
+        <div id="schedule">
           <ScheduleSection />
-        </motion.div>
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        </div>
+        <div id="contact">
           <ContactSection />
-        </motion.div>
+        </div>
         <Footer />
 
         <BookFreeSessionModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
