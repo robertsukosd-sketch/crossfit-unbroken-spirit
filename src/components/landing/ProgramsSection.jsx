@@ -137,7 +137,7 @@ export default function ProgramsSection({ onBookSession }) {
            >
             <motion.span
               className="absolute inset-0 rounded-full"
-              animate={{ opacity: [0, 0.3, 0] }}
+              animate={shouldReduceMotion ? { opacity: 0 } : { opacity: [0, 0.3, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
               style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
             />
