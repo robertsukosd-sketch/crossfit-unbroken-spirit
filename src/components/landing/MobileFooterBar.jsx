@@ -17,7 +17,7 @@ export default function MobileFooterBar({ onBookSession, isMobileMenuOpen, setIs
       <button
         type="button"
         onClick={handleScheduleClick}
-        className="flex flex-col items-center gap-0.5 text-gray-300 hover:text-white transition-colors min-w-[52px]"
+        className="flex flex-col items-center gap-0.5 text-gray-300 hover:text-white transition-colors min-w-[52px] min-h-[44px] justify-center"
         aria-label={t("schedule")}
       >
         <Calendar className="w-5 h-5" />

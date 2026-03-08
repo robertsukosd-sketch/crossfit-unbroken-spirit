@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useLanguage } from '../LanguageProvider';
 import { scrollToSection } from '../config';
 
