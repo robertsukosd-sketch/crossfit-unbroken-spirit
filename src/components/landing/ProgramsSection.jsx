@@ -10,21 +10,21 @@ const getPrograms = (t, language) => [
     title: t("crossfitTitle"),
     description: t("crossfitDesc"),
     color: "from-blue-600 to-sky-500",
-    image: "https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif"
+    image: "https://media.giphy.com/media/UALlXcWPDm0qfqLFTt/giphy.gif"
   },
   {
     icon: TrendingUp,
     title: t("weightlifting"),
     description: t("weightliftingDesc"),
     color: "from-blue-700 to-blue-500",
-    image: "https://media.giphy.com/media/3o7TKu8RvQuomFfUUU/giphy.gif"
+    image: "https://media.giphy.com/media/OaXzCz4GzsAXLGfrgq/giphy.gif"
   },
   {
     icon: Heart,
     title: t("gymnastics"),
     description: t("gymnasticsDesc"),
     color: "from-indigo-500 to-blue-500",
-    image: "https://media.giphy.com/media/l0HlKghz9YkDYlFqw/giphy.gif"
+    image: "https://media.giphy.com/media/zWEW3fncuH09xR3JUC/giphy.gif"
   },
   {
     icon: Flame,
@@ -33,21 +33,21 @@ const getPrograms = (t, language) => [
       ? "Dacă obosești prea repede, nu e vorba de voință — e vorba de motor. Sesiunile noastre de condiționare îți construiesc capacitatea cardiovasculară mai multă putere, mai mult timp, mai puțin efort resimțit. Fii cel care dă ritmul, nu cel care se luptă să țină pasul."
       : "If you're gassing out before the workout ends, willpower isn't the problem — your engine is. Our conditioning sessions build the cardiovascular capacity that powers everything else. More output. Longer. Easier. Stop surviving workouts. Start owning them.",
     color: "from-orange-600 to-red-500",
-    image: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+    image: "https://media.giphy.com/media/niY3b9di4DsEvWizQk/giphy.gif"
   },
   {
     icon: Users,
     title: t("personalTraining"),
     description: t("personalTrainingDesc"),
     color: "from-violet-500 to-blue-500",
-    image: "https://media.giphy.com/media/l46Cy1rHbQ92uuLXa/giphy.gif"
+    image: "https://media.giphy.com/media/Bporr4aaInEkFwbSgw/giphy.gif"
   },
   {
     icon: Timer,
     title: t("openGym"),
     description: t("openGymDesc"),
     color: "from-cyan-500 to-sky-400",
-    image: "https://media.giphy.com/media/3o6ZsYm95CxO3KXi9O/giphy.gif"
+    image: "https://media.giphy.com/media/pQ5qPAB60piUl8yWD6/giphy.gif"
   }
 ];
 
