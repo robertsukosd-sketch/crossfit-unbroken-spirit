@@ -67,7 +67,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-colors transition-shadow duration-300",
+          "fixed top-0 left-0 right-0 z-50 transition-[color,background-color,border-color,box-shadow] duration-300",
           isScrolled 
             ? "bg-black/90 backdrop-blur-lg border-b border-zinc-800" 
             : "bg-black/70 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none"
