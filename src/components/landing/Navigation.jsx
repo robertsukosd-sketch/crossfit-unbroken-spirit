@@ -23,33 +23,31 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
   const { language, changeLanguage, t } = useLanguage();
   const navLinks = useMemo(() => getNavLinks(t), [language]);
 
+  const sectionIds = ['hero', 'starthere', 'programs', 'pricing', 'schedule', 'contact'];
+
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 50);
+
+    const scrollMid = window.scrollY + window.innerHeight / 2;
+    let closest = sectionIds[0];
+    let closestDist = Infinity;
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const mid = el.offsetTop + el.offsetHeight / 2;
+      const dist = Math.abs(scrollMid - mid);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closest = id;
+      }
+    });
+    setActiveSection(closest);
   }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
-
-  useEffect(() => {
-    const sectionIds = ['hero', 'starthere', 'programs', 'pricing', 'schedule', 'contact'];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
-    );
-    sectionIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
-  }, []);
 
   const scrollNavToSection = useCallback((href) => {
     const id = href.replace('#', '');
