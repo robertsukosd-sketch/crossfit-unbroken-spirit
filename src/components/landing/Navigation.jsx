@@ -34,17 +34,21 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
 
   useEffect(() => {
     const sectionIds = ['hero', 'starthere', 'programs', 'pricing', 'schedule', 'contact'];
-    const observers = sectionIds.map(id => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
+    );
+    sectionIds.forEach(id => {
       const el = document.getElementById(id);
-      if (!el) return null;
-      const observer = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
-        { threshold: 0.3 }
-      );
-      observer.observe(el);
-      return observer;
+      if (el) observer.observe(el);
     });
-    return () => observers.forEach(o => o?.disconnect());
+    return () => observer.disconnect();
   }, []);
 
   const scrollNavToSection = useCallback((href) => {
