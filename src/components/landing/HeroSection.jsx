@@ -97,7 +97,7 @@ export default function HeroSection() {
         type="button"
         aria-label="Scroll down"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer bg-transparent border-0 p-2"
-        animate={{ y: [0, 10, 0] }}
+        animate={shouldReduceMotion ? {} : { y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
         onClick={() => scrollToSection('about')}
       >

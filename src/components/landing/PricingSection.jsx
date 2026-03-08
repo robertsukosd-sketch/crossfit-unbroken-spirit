@@ -359,7 +359,6 @@ export default function PricingSection() {
           >
             {[...activeCategory.plans]
               .sort((a, b) => {
-                const isMobile = window.innerWidth < 640;
                 if (!isMobile) return 0;
                 const aScore = (a.featured ? 2 : 0) + (a.popular ? 1 : 0);
                 const bScore = (b.featured ? 2 : 0) + (b.popular ? 1 : 0);
