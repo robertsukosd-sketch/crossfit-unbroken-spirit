@@ -75,7 +75,7 @@ export default function StartHereSection() {
               {t("startHereTitle")}
             </span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 whitespace-pre-line">
             {t("startHereSubtitle")}
           </p>
         </motion.div>
