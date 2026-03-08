@@ -21,6 +21,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const { language, changeLanguage, t } = useLanguage();
+  const shouldReduceMotion = useReducedMotion();
   const navLinks = useMemo(() => getNavLinks(t), [language]);
 
   const sectionIds = ['hero', 'starthere', 'programs', 'pricing', 'schedule', 'contact'];
