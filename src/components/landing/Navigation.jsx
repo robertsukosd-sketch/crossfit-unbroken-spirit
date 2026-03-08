@@ -180,15 +180,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                     EN
                   </button>
               </div>
-              {/* Mobile Menu Button */}
-              <button
-                type="button"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-                className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-white"
-              >
-                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
+
             </div>
           </div>
         </div>
