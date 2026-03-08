@@ -247,13 +247,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                     NEW
                   </motion.span>
                 </motion.button>
-                <Button
-                   type="button"
-                   onClick={handleBookClick}
-                   className="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white font-bold rounded-full py-6 text-lg"
-                 >
-                   {t("freeTrial")}
-                 </Button>
+
               </motion.div>
             </div>
           </motion.div>
