@@ -54,6 +54,7 @@ const getPrograms = (t, language) => [
 export default function ProgramsSection({ onBookSession }) {
   const { t, language } = useLanguage();
   const programs = useMemo(() => getPrograms(t, language), [language]);
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <section id="programs" className="py-24 bg-black relative">
