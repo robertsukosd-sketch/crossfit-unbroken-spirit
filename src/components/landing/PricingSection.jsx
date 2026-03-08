@@ -350,7 +350,15 @@ export default function PricingSection() {
             transition={{ duration: 0.2 }}
             className={cn('grid gap-6', gridClass(activeCategory.plans.length))}
           >
-            {activeCategory.plans.map((plan, index) => (
+            {[...activeCategory.plans]
+              .sort((a, b) => {
+                const isMobile = window.innerWidth < 640;
+                if (!isMobile) return 0;
+                const aScore = (a.featured ? 2 : 0) + (a.popular ? 1 : 0);
+                const bScore = (b.featured ? 2 : 0) + (b.popular ? 1 : 0);
+                return bScore - aScore;
+              })
+              .map((plan, index) => (
               <PlanCard key={plan.name} plan={plan} index={index} t={t} />
             ))}
           </motion.div>
