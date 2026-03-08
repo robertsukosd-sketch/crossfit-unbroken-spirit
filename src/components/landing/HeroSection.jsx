@@ -77,7 +77,7 @@ export default function HeroSection() {
               onClick={() => scrollToSection('pricing')}
               className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base md:text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
             >
-              {t("startNow")}
+              {language === 'ro' ? 'Alege-ți abonamentul' : 'Choose your subscription'}
             </Button>
             <Button 
               size="lg"
