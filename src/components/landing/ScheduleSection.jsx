@@ -85,10 +85,14 @@ export default function ScheduleSection() {
   const schedule = useMemo(() => getSchedule(t), [language]);
   const days = useMemo(() => getDays(t), [language]);
   const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
-  const [selectedDay, setSelectedDay] = useState(days[0]);
+  const todayIndex = new Date().getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+  // days array is Mon(0)...Sun(6), so map JS day to our array index
+  const mappedIndex = todayIndex === 0 ? 6 : todayIndex - 1;
+
+  const [selectedDay, setSelectedDay] = useState(days[mappedIndex]);
 
   useEffect(() => {
-    setSelectedDay(days[0]);
+    setSelectedDay(days[mappedIndex]);
   }, [days]);
 
   return (
