@@ -10,7 +10,7 @@ const getPrograms = (t, language) => [
     title: t("crossfitTitle"),
     description: t("crossfitDesc"),
     color: "from-blue-600 to-sky-500",
-    image: "https://media.giphy.com/media/UALlXcWPDm0qfqLFTt/giphy.gif"
+    image: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDd2YXR0bjdsMnk0ODR1YXd3cWN2bW53ajV5MnhhNHJ1aHc2ZGRmdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/THhyMw6vqpJrPyYPXM/giphy.gif"
   },
   {
     icon: TrendingUp,
