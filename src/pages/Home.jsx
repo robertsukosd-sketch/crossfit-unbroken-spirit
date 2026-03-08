@@ -86,10 +86,16 @@ export default function Home() {
         <AccessibilityToolbar />
         <CookieConsent />
 
+        <MobileFooterBar
+          onBookSession={handleBookSession}
+          isMobileMenuOpen={isMobileMenuOpen}
+          setIsMobileMenuOpen={setIsMobileMenuOpen}
+        />
+
         {visible && (
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="fixed bottom-8 right-6 z-50 w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
+            className="hidden lg:flex fixed bottom-8 right-6 z-50 w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-500 text-white items-center justify-center shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
             aria-label="Back to top"
           >
             <ChevronUp className="w-6 h-6" />
