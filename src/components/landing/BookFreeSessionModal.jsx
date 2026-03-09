@@ -6,6 +6,7 @@ import { base44 } from "@/api/base44Client";
 import { toast } from "sonner";
 import { useLanguage } from '../LanguageProvider';
 import { CONTACT_EMAIL } from '../config';
+import MiniSchedulePopup from './MiniSchedulePopup';
 
 const PREFILLED_MESSAGE = {
   ro: "Bună! Sunt curios/curioasă să descopăr ce oferă CrossFit Unbroken Spirit și aș vrea să rezerv ședința mea gratuită. Aștept cu interes să mă contactați.",
