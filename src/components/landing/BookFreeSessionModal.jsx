@@ -127,8 +127,8 @@ ${fullMessage}`,
 
               {!submitted ? (
                 <>
-                  <div className="mb-4">
-                    <h2 className="text-2xl font-black text-white mb-1">
+                  <div className="mb-3">
+                    <h2 className="text-xl sm:text-2xl font-black text-white mb-1">
                       {isRo ? 'Rezervă o Ședință Gratuită' : 'Book a Free Session'}
                     </h2>
                     <p className="text-gray-400 text-sm leading-relaxed">
