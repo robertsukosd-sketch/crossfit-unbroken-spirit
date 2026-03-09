@@ -89,9 +89,37 @@ ${PREFILLED_MESSAGE[language]}`,
                     {language === 'ro' ? 'Rezervă o Ședință Gratuită' : 'Book a Free Session'}
                   </h2>
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    {language === 'ro'
-                      ? 'Completează datele tale și te contactăm noi pentru a stabili ziua și ora.'
-                      : 'Fill in your details and we\'ll reach out to schedule your session.'}
+                    {language === 'ro' ? (
+                      <>
+                        Verifică{' '}
+                        <span className="relative inline-block">
+                          <button
+                            type="button"
+                            onClick={() => setShowSchedule((v) => !v)}
+                            className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors"
+                          >
+                            Orarul
+                          </button>
+                          <MiniSchedulePopup isOpen={showSchedule} onClose={() => setShowSchedule(false)} />
+                        </span>
+                        {' '}și alege o oră. Completează datele tale și te contactăm noi pentru a stabili ziua și ora.
+                      </>
+                    ) : (
+                      <>
+                        Check our{' '}
+                        <span className="relative inline-block">
+                          <button
+                            type="button"
+                            onClick={() => setShowSchedule((v) => !v)}
+                            className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors"
+                          >
+                            Schedule
+                          </button>
+                          <MiniSchedulePopup isOpen={showSchedule} onClose={() => setShowSchedule(false)} />
+                        </span>
+                        {' '}and pick a time. Fill in your details and we'll reach out to schedule your session.
+                      </>
+                    )}
                   </p>
                 </div>
 
