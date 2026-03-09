@@ -205,7 +205,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     pricing: "Pricing",
     schedule: "Schedule",
     contact: "Contact",
-    freeTrial: "Book a Free Session",
+    freeTrial: "Your First Free Session",
     heroTag: "Build strength. Find community. Set PRs.",
     heroTitle: "Strong. Supported. Stronger.",
     heroSubtitle: "New to CrossFit or already competitive, we push you at YOUR level.",
