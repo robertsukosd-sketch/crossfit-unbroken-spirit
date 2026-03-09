@@ -94,7 +94,6 @@ ${fullMessage}`,
     setSelectedSlot(null);
     setUserMessage('');
     setShowSchedule(false);
-    setEmailBlurred(false);
     onClose();
   };
 
