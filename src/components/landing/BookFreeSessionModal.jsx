@@ -149,7 +149,7 @@ ${fullMessage}`,
                           <button
                             type="button"
                             onClick={() => setShowSchedule((v) => !v)}
-                            className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors"
+                            className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
                           >
                             Schedule
                           </button>
