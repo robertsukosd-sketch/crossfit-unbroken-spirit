@@ -169,7 +169,7 @@ ${fullMessage}`,
                   />
 
                   {/* Motivational message box */}
-                  <div className="mb-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-xl">
+                  <div className="mb-4 p-3 bg-blue-500/10 border border-blue-500/30 rounded-xl">
                     <p className="text-sm text-sky-300 leading-relaxed">
                       {isRo ? (
                         <><span className="italic">"Cel mai greu lucru din CrossFit nu e antrenamentul, ci să intri pe ușă pentru prima dată."</span> Nu mai sta pe gânduri! <strong>Prima ta ședință e gratuită.</strong></>
