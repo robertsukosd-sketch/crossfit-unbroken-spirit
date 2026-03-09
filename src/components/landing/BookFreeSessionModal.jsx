@@ -118,7 +118,7 @@ ${fullMessage}`,
             <div className="p-4 sm:p-8">
               <button
                 onClick={handleClose}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-1"
+                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-150 p-1 rounded-full hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 cursor-pointer"
                 aria-label="Close"
               >
                 <X className="w-5 h-5" />
