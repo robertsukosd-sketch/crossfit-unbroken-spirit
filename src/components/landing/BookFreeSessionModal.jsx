@@ -116,7 +116,7 @@ ${fullMessage}`,
             className="relative w-full max-w-md bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl max-h-[92vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-6 sm:p-8">
+            <div className="p-4 sm:p-8">
               <button
                 onClick={handleClose}
                 className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-1"
