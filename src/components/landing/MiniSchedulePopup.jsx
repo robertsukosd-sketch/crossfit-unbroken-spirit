@@ -81,7 +81,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
             </div>
 
             {/* Classes grid */}
-            <div className="grid grid-cols-2 gap-1.5">
+            <div className="grid grid-cols-3 sm:grid-cols-2 gap-1.5">
               {classes.length === 0 ? (
                 <div className="col-span-2 text-center py-3 text-gray-500 text-xs">
                   {language === 'ro' ? 'Închis' : 'Closed'}
