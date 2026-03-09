@@ -144,13 +144,21 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                     EN
                   </button>
               </div>
-              <motion.button
+              <button
                 type="button"
                 onClick={() => openAppWithFallback()}
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold text-gray-300 hover:text-white bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-colors whitespace-nowrap flex-shrink-0"
+              >
+                <Smartphone className="w-4 h-4" />
+                <span>ThunderWOD App</span>
+              </button>
+              <motion.button
+                type="button"
+                onClick={handleBookClick}
                 animate={shouldReduceMotion ? {} : { boxShadow: ['0 0 0px #38bdf8', '0 0 18px #38bdf8', '0 0 0px #38bdf8'] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white transition-[background-color] duration-200 overflow-hidden whitespace-nowrap flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #0369a1 0%, #0ea5e9 50%, #0369a1 100%)', backgroundSize: '200% 100%' }}
+                className="relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white overflow-hidden whitespace-nowrap flex-shrink-0"
+                style={{ background: 'linear-gradient(135deg, #0369a1 0%, #0ea5e9 50%, #0369a1 100%)' }}
                 whileHover={{ scale: 1.05 }}
               >
                 <motion.span
@@ -159,23 +167,8 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                   transition={{ duration: 2, repeat: Infinity }}
                   style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
                 />
-                <Smartphone className="w-4 h-4 text-sky-200 relative z-10" />
-                <span className="relative z-10">ThunderWOD App</span>
-                <motion.span
-                  className="relative z-10 text-[10px] bg-white text-blue-700 font-black px-1.5 py-0.5 rounded-full leading-none"
-                  animate={shouldReduceMotion ? {} : { scale: [1, 1.1, 1] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                  NEW
-                  </motion.span>
-                  </motion.button>
-                  <Button
-                type="button"
-                onClick={handleBookClick}
-                className="bg-zinc-800 hover:bg-zinc-700 text-gray-200 font-semibold rounded-full px-5 border border-zinc-700"
-              >
-                {t("freeTrial")}
-              </Button>
+                <span className="relative z-10">{t("freeTrial")}</span>
+              </motion.button>
             </div>
 
 
