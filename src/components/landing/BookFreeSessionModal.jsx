@@ -142,7 +142,7 @@ ${fullMessage}`,
                           >
                             Orarul
                           </button>
-                          {' '}și alege o oră. Completează datele tale și te contactăm noi pentru a stabili ziua și ora.
+                          {' '}și alege o oră. Completează-ți datele tale și te așteptăm la sală!
                         </>
                       ) : (
                         <>
