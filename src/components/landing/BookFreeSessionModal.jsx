@@ -154,7 +154,7 @@ ${fullMessage}`,
                           >
                             Schedule
                           </button>
-                          {' '}and pick a time. Fill in your details and we'll reach out to schedule your session.
+                          {' '}and pick a time. Fill in your details and we'll be waiting for you at the box!
                         </>
                       )}
                     </p>
