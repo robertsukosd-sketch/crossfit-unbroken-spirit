@@ -26,7 +26,8 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
   const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
 
   const todayIndex = new Date().getDay();
-  const mappedIndex = todayIndex === 0 ? 6 : todayIndex - 1;
+  const rawIndex = todayIndex === 0 ? 6 : todayIndex - 1;
+  const mappedIndex = Math.min(rawIndex, 5);
   const [selectedDay, setSelectedDay] = useState(days[mappedIndex]);
 
   useEffect(() => {
