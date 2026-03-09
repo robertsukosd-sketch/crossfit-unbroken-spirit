@@ -20,7 +20,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
   const messageRef = useRef(null);
 
   const isRo = language === 'ro';
-  const canSend = form.name.trim() && form.email.trim();
+  const canSend = form.name.trim() && isValidEmail;
 
   // Build the auto-prefix for the message box
   const messagePrefix = selectedSlot && form.name.trim()
