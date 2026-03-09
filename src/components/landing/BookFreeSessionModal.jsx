@@ -170,6 +170,14 @@ ${fullMessage}`,
                     </p>
                   </div>
 
+                  {/* Inline schedule panel */}
+                  <MiniSchedulePopup
+                    isOpen={showSchedule}
+                    onClose={() => setShowSchedule(false)}
+                    selectedSlot={selectedSlot}
+                    onSlotSelect={handleSlotSelect}
+                  />
+
                   <form onSubmit={handleSubmit} className="space-y-3">
                     <div>
                       <label className="block text-sm font-semibold text-gray-300 mb-1.5">
