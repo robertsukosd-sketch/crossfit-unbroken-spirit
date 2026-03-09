@@ -20,6 +20,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
   const messageRef = useRef(null);
 
   const isRo = language === 'ro';
+  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email);
   const canSend = form.name.trim() && isValidEmail;
 
   // Build the auto-prefix for the message box
@@ -29,7 +30,6 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
       : `Hi! My name is ${form.name.trim()} and I would like to book a free session on ${selectedSlot.day} at ${selectedSlot.time}. `
     : '';
 
-  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email);
   const showMessageBox = selectedSlot && form.name.trim() && isValidEmail;
   const prevShowMessageBox = useRef(false);
 
