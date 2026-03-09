@@ -30,16 +30,18 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
     : '';
 
   const showMessageBox = selectedSlot && form.name.trim() && form.email.trim();
+  const prevShowMessageBox = useRef(false);
 
-  // When messagePrefix changes (name/slot updated), move cursor to end of prefix in textarea
+  // Only focus the textarea when the message box first appears (not on every keystroke)
   useEffect(() => {
-    if (showMessageBox && messageRef.current) {
+    if (showMessageBox && !prevShowMessageBox.current && messageRef.current) {
       const ta = messageRef.current;
       ta.focus();
       const pos = messagePrefix.length + userMessage.length;
       ta.setSelectionRange(pos, pos);
     }
-  }, [showMessageBox, messagePrefix]);
+    prevShowMessageBox.current = showMessageBox;
+  }, [showMessageBox]);
 
   const handleSlotSelect = (day, time) => {
     if (selectedSlot && selectedSlot.day === day && selectedSlot.time === time) {
