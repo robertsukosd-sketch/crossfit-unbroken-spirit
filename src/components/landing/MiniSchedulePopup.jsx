@@ -95,17 +95,13 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
                       type="button"
                       onClick={() => onSlotSelect(selectedDay, time)}
                       className={cn(
-                        "flex items-center gap-2 px-3 py-2 rounded-xl border transition-all text-left",
+                        "flex items-center justify-center px-3 py-2 rounded-xl border transition-all",
                         isSelected
                           ? "bg-blue-500 border-blue-400 shadow-lg shadow-blue-500/30"
                           : "bg-blue-500/10 border-blue-500/20 hover:bg-blue-500/25 hover:border-blue-500/50"
                       )}
                     >
-                      <Clock className={cn("w-3 h-3 flex-shrink-0", isSelected ? "text-white" : "text-blue-400")} />
                       <span className={cn("font-bold text-sm", isSelected ? "text-white" : "text-blue-300")}>{time}</span>
-                      <span className={cn("text-xs ml-auto flex items-center gap-0.5", isSelected ? "text-white/70" : "text-gray-500")}>
-                        <Users className="w-3 h-3" />16
-                      </span>
                     </button>
                   );
                 })
