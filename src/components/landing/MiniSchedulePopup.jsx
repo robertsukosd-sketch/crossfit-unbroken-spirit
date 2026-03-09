@@ -1,0 +1,114 @@
+import React, { useState, useEffect, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, Clock, Users } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { useLanguage } from '../LanguageProvider';
+
+const getCrossFitClasses = (t, language) => ({
+  [t("monday")]:    ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
+  [t("tuesday")]:   ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
+  [t("wednesday")]: ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
+  [t("thursday")]:  ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
+  [t("friday")]:    ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
+  [t("saturday")]:  ["10:00"],
+  [t("sunday")]:    [],
+});
+
+const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday"), t("friday"), t("saturday"), t("sunday")];
+
+const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin", "Sâm", "Dum"];
+const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+export default function MiniSchedulePopup({ isOpen, onClose }) {
+  const { t, language } = useLanguage();
+  const schedule = useMemo(() => getCrossFitClasses(t, language), [language]);
+  const days = useMemo(() => getDays(t), [language]);
+  const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
+
+  const todayIndex = new Date().getDay();
+  const mappedIndex = todayIndex === 0 ? 6 : todayIndex - 1;
+  const [selectedDay, setSelectedDay] = useState(days[mappedIndex]);
+
+  useEffect(() => {
+    setSelectedDay(days[mappedIndex]);
+  }, [days]);
+
+  const classes = schedule[selectedDay] || [];
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: -8 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.95, y: -8 }}
+          transition={{ type: 'spring', damping: 24, stiffness: 320 }}
+          className="absolute left-0 right-0 mt-2 z-50 bg-zinc-900 border border-zinc-700 rounded-2xl shadow-2xl p-4"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Header */}
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-white font-black text-sm">
+              {language === 'ro' ? 'Clase CrossFit' : 'CrossFit Classes'}
+            </span>
+            <button
+              onClick={onClose}
+              className="text-gray-400 hover:text-white transition-colors p-1 rounded-full hover:bg-zinc-700"
+              aria-label="Close"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+
+          {/* Day tabs */}
+          <div className="flex gap-1 mb-3 overflow-x-auto pb-1">
+            {days.map((day, i) => (
+              <button
+                key={day}
+                onClick={() => setSelectedDay(day)}
+                className={cn(
+                  "px-2 py-1 rounded-full text-xs font-semibold transition-colors flex-shrink-0",
+                  selectedDay === day
+                    ? "bg-blue-500 text-white"
+                    : "bg-zinc-800 text-gray-400 hover:text-white"
+                )}
+              >
+                {dayAbbrList[i]}
+              </button>
+            ))}
+          </div>
+
+          {/* Classes list */}
+          <div className="space-y-1.5">
+            {classes.length === 0 ? (
+              <div className="text-center py-4 text-gray-500 text-xs">
+                {language === 'ro' ? 'Închis' : 'Closed'}
+              </div>
+            ) : (
+              classes.map((time) => (
+                <div
+                  key={time}
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-blue-500/10 border border-blue-500/20"
+                >
+                  <Clock className="w-3 h-3 text-blue-400 flex-shrink-0" />
+                  <span className="text-blue-300 font-bold text-sm">{time}</span>
+                  <span className="text-gray-400 text-xs ml-auto">CrossFit</span>
+                  <span className="text-gray-500 text-xs flex items-center gap-1">
+                    <Users className="w-3 h-3" />16
+                  </span>
+                </div>
+              ))
+            )}
+          </div>
+
+          {/* Greyed out note */}
+          <div className="mt-3 pt-3 border-t border-zinc-800">
+            <p className="text-zinc-600 text-xs text-center">
+              {language === 'ro' ? 'Open Gym & alte clase nu sunt afișate' : 'Open Gym & other classes not shown'}
+            </p>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
