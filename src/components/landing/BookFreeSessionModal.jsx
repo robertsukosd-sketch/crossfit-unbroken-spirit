@@ -179,7 +179,7 @@ ${fullMessage}`,
                     </p>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-3">
                     <div>
                       <label className="block text-sm font-semibold text-gray-300 mb-1.5">
                         {t('fullName')} <span className="text-blue-400">*</span>
