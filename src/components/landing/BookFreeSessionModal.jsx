@@ -229,24 +229,21 @@ ${fullMessage}`,
                             {isRo ? 'Mesaj' : 'Message'}
                           </label>
                           <div className="relative w-full bg-zinc-800 border border-zinc-600 rounded-xl px-4 py-3 focus-within:border-blue-500 transition-colors">
-                            <div className="text-sm text-white whitespace-pre-wrap break-words">
-                              {messagePrefix}
-                              <textarea
-                                ref={messageRef}
-                                value={userMessage}
-                                onChange={(e) => setUserMessage(e.target.value)}
-                                rows={3}
-                                className="w-full bg-transparent text-white placeholder-transparent outline-none resize-none inline align-top"
-                                style={{ display: 'inline' }}
-                              />
-                            </div>
-                            {userMessage === '' && (
-                              <span className="pointer-events-none text-sm text-zinc-500 italic block mt-1">
-                                {isRo
+                            {/* Non-editable prefix shown as plain text */}
+                            <p className="text-sm text-white mb-1 leading-relaxed">{messagePrefix}</p>
+                            {/* Editable continuation */}
+                            <textarea
+                              ref={messageRef}
+                              value={userMessage}
+                              onChange={(e) => setUserMessage(e.target.value)}
+                              rows={2}
+                              placeholder={
+                                isRo
                                   ? 'Continuă să scrii dacă ai ceva de adăugat sau trimite cererea.'
-                                  : 'Continue writing if you have anything else to add, or send your request.'}
-                              </span>
-                            )}
+                                  : 'Continue writing if you have anything else to add, or send your request.'
+                              }
+                              className="w-full bg-transparent text-white placeholder-zinc-500 placeholder:italic outline-none resize-none text-sm"
+                            />
                           </div>
                         </motion.div>
                       )}
