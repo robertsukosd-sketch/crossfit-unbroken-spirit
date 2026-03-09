@@ -156,7 +156,7 @@ const getCategories = (language) => [
         featured: false,
       },
       {
-        name: 'Drop In 1 Week',
+        name: 'Trial/Drop In 1 Week',
         price: '200',
         period: language === 'ro' ? 'săptămână' : 'week',
         description: language === 'ro' ? 'Încearcă o săptămână completă' : 'Try a full week',
