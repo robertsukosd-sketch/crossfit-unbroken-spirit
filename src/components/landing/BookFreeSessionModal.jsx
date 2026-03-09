@@ -159,14 +159,6 @@ ${fullMessage}`,
                     </p>
                   </div>
 
-                  {/* Inline schedule panel */}
-                  <MiniSchedulePopup
-                    isOpen={showSchedule}
-                    onClose={() => setShowSchedule(false)}
-                    selectedSlot={selectedSlot}
-                    onSlotSelect={handleSlotSelect}
-                  />
-
                   {/* Motivational message box */}
                   <div className="mb-4 p-3 bg-blue-500/10 border border-blue-500/30 rounded-xl">
                     <p className="text-sm text-sky-300 leading-relaxed">
