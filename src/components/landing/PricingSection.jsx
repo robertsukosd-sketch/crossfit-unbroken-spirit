@@ -282,13 +282,13 @@ export default function PricingSection() {
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 leading-tight">
             {language === 'ro' ? (
-              <>Investește în Tine. Construiește un{' '}
+              <>Investește în Tine.<br />Construiește-ți{' '}
                 <span className="bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
-                  Spirit Unbroken.
+                  Reziliența.
                 </span>
               </>
             ) : (
-              <>Invest in Yourself. Build an{' '}
+              <>Invest in Yourself.<br />Build an{' '}
                 <span className="bg-gradient-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent">
                   Unbroken Spirit.
                 </span>
