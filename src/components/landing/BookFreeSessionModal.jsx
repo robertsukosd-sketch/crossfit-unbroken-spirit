@@ -20,7 +20,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
   const messageRef = useRef(null);
 
   const isRo = language === 'ro';
-  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email);
+  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email);
   const canSend = form.name.trim() && isValidEmail;
 
   // Build the auto-prefix for the message box
