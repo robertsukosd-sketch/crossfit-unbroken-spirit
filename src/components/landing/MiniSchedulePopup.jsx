@@ -19,7 +19,7 @@ const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday")
 const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin", "Sâm", "Dum"];
 const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-export default function MiniSchedulePopup({ isOpen, onClose }) {
+export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlotSelect }) {
   const { t, language } = useLanguage();
   const schedule = useMemo(() => getCrossFitClasses(t), [language]);
   const days = useMemo(() => getDays(t), [language]);
@@ -80,25 +80,35 @@ export default function MiniSchedulePopup({ isOpen, onClose }) {
               ))}
             </div>
 
-            {/* Classes list */}
+            {/* Classes grid */}
             <div className="grid grid-cols-2 gap-1.5">
               {classes.length === 0 ? (
                 <div className="col-span-2 text-center py-3 text-gray-500 text-xs">
                   {language === 'ro' ? 'Închis' : 'Closed'}
                 </div>
               ) : (
-                classes.map((time) => (
-                  <div
-                    key={time}
-                    className="flex items-center gap-2 px-3 py-2 rounded-xl bg-blue-500/10 border border-blue-500/20"
-                  >
-                    <Clock className="w-3 h-3 text-blue-400 flex-shrink-0" />
-                    <span className="text-blue-300 font-bold text-sm">{time}</span>
-                    <span className="text-gray-500 text-xs ml-auto flex items-center gap-0.5">
-                      <Users className="w-3 h-3" />16
-                    </span>
-                  </div>
-                ))
+                classes.map((time) => {
+                  const isSelected = selectedSlot?.day === selectedDay && selectedSlot?.time === time;
+                  return (
+                    <button
+                      key={time}
+                      type="button"
+                      onClick={() => onSlotSelect(selectedDay, time)}
+                      className={cn(
+                        "flex items-center gap-2 px-3 py-2 rounded-xl border transition-all text-left",
+                        isSelected
+                          ? "bg-blue-500 border-blue-400 shadow-lg shadow-blue-500/30"
+                          : "bg-blue-500/10 border-blue-500/20 hover:bg-blue-500/25 hover:border-blue-500/50"
+                      )}
+                    >
+                      <Clock className={cn("w-3 h-3 flex-shrink-0", isSelected ? "text-white" : "text-blue-400")} />
+                      <span className={cn("font-bold text-sm", isSelected ? "text-white" : "text-blue-300")}>{time}</span>
+                      <span className={cn("text-xs ml-auto flex items-center gap-0.5", isSelected ? "text-white/70" : "text-gray-500")}>
+                        <Users className="w-3 h-3" />16
+                      </span>
+                    </button>
+                  );
+                })
               )}
             </div>
 
