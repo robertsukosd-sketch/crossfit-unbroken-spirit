@@ -14,7 +14,7 @@ const getCrossFitClasses = (t) => ({
   [t("sunday")]:    [],
 });
 
-const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday"), t("friday"), t("saturday"), t("sunday")];
+const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday"), t("friday"), t("saturday")];
 
 const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin", "Sâm", "Dum"];
 const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
