@@ -240,11 +240,11 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
               >
                 <motion.button
                   type="button"
-                  onClick={() => { openAppWithFallback(); setIsMobileMenuOpen(false); }}
+                  onClick={handleBookClick}
                   animate={shouldReduceMotion ? {} : { boxShadow: ['0 0 0px #38bdf8', '0 0 12px #38bdf8', '0 0 0px #38bdf8'] }}
                   transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                   className="relative w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full text-base font-bold text-white overflow-hidden"
-                  style={{ background: 'linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 50%, #1e3a5f 100%)' }}
+                  style={{ background: 'linear-gradient(135deg, #0369a1 0%, #0ea5e9 50%, #0369a1 100%)' }}
                 >
                   <motion.span
                     className="absolute inset-0 rounded-full"
@@ -252,16 +252,16 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                     transition={{ duration: 2, repeat: Infinity }}
                     style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
                   />
-                  <Smartphone className="w-5 h-5 text-sky-300 relative z-10" />
-                  <span className="relative z-10">ThunderWOD App</span>
-                  <motion.span
-                    className="relative z-10 text-[10px] bg-sky-400 text-black font-black px-1.5 py-0.5 rounded-full leading-none"
-                    animate={shouldReduceMotion ? {} : { scale: [1, 1.1, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                    NEW
-                    </motion.span>
+                  <span className="relative z-10">{t("freeTrial")}</span>
                 </motion.button>
+                <button
+                  type="button"
+                  onClick={() => { openAppWithFallback(); setIsMobileMenuOpen(false); }}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full text-base font-semibold text-gray-300 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-colors"
+                >
+                  <Smartphone className="w-5 h-5" />
+                  <span>ThunderWOD App</span>
+                </button>
 
               </motion.div>
             </div>
