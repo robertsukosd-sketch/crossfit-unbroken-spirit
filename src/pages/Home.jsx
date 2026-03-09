@@ -13,7 +13,7 @@ import ContactSection from '@/components/landing/ContactSection';
 import Footer from '@/components/landing/Footer';
 import AccessibilityToolbar from '@/components/landing/AccessibilityToolbar';
 import CookieConsent from '@/components/landing/CookieConsent';
-import BookFreeSessionModal from '@/components/landing/BookFreeSessionModal';
+import BookFreeSessionModal from '@/components/landing/BookFreeSessionModal.jsx';
 import MobileFooterBar from '@/components/landing/MobileFooterBar';
 
 function SeoMeta() {
