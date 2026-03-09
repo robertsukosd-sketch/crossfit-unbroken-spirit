@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Clock, Users } from 'lucide-react';
+import { X } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
 
