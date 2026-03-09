@@ -14,8 +14,9 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [showSchedule, setShowSchedule] = useState(false);
-  const [selectedSlot, setSelectedSlot] = useState(null); // { day, time }
+  const [selectedSlot, setSelectedSlot] = useState(null);
   const [userMessage, setUserMessage] = useState('');
+  const [emailBlurred, setEmailBlurred] = useState(false);
   const nameRef = useRef(null);
   const messageRef = useRef(null);
 
@@ -30,10 +31,11 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
       : `Hi! My name is ${form.name.trim()} and I would like to book a free session on ${selectedSlot.day} at ${selectedSlot.time}. `
     : '';
 
-  const showMessageBox = selectedSlot && form.name.trim() && isValidEmail;
+  // Only show message box after email field is blurred AND valid
+  const showMessageBox = selectedSlot && form.name.trim() && isValidEmail && emailBlurred;
   const prevShowMessageBox = useRef(false);
 
-  // Only focus the textarea when the message box first appears (not on every keystroke)
+  // Only focus the textarea when the message box first appears
   useEffect(() => {
     if (showMessageBox && !prevShowMessageBox.current && messageRef.current) {
       const ta = messageRef.current;
@@ -49,7 +51,6 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
       setSelectedSlot(null);
     } else {
       setSelectedSlot({ day, time });
-      // Jump to Full Name if not filled
       setTimeout(() => {
         if (nameRef.current) nameRef.current.focus();
       }, 50);
@@ -93,6 +94,7 @@ ${fullMessage}`,
     setSelectedSlot(null);
     setUserMessage('');
     setShowSchedule(false);
+    setEmailBlurred(false);
     onClose();
   };
 
@@ -202,6 +204,7 @@ ${fullMessage}`,
                         placeholder={t('emailPlaceholder')}
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
+                        onBlur={() => setEmailBlurred(true)}
                         className="w-full bg-zinc-800 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors text-sm"
                       />
                     </div>
@@ -218,7 +221,7 @@ ${fullMessage}`,
                       />
                     </div>
 
-                    {/* Dynamic message box — only shown when slot + name + email filled */}
+                    {/* Dynamic message box — only shown when slot + name + email filled and email blurred */}
                     <AnimatePresence>
                       {showMessageBox && (
                         <motion.div
@@ -232,9 +235,7 @@ ${fullMessage}`,
                             {isRo ? 'Mesaj' : 'Message'}
                           </label>
                           <div className="relative w-full bg-zinc-800 border border-zinc-600 rounded-xl px-4 py-3 focus-within:border-blue-500 transition-colors">
-                            {/* Non-editable prefix shown as plain text */}
                             <p className="text-sm text-white mb-1 leading-relaxed">{messagePrefix}</p>
-                            {/* Editable continuation */}
                             <textarea
                               ref={messageRef}
                               value={userMessage}
