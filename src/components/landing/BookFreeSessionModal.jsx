@@ -159,17 +159,6 @@ ${fullMessage}`,
                     </p>
                   </div>
 
-                  {/* Motivational message box */}
-                  <div className="mb-4 p-3 bg-blue-500/10 border border-blue-500/30 rounded-xl">
-                    <p className="text-sm text-sky-300 leading-relaxed">
-                      {isRo ? (
-                        <><span className="italic">"Cel mai greu lucru din CrossFit nu e antrenamentul, ci să intri pe ușă pentru prima dată."</span> Nu mai sta pe gânduri! <strong>Prima ta ședință e gratuită.</strong></>
-                      ) : (
-                        <><span className="italic">"The hardest part of CrossFit isn't the workout, it's walking through the front door for the first time."</span> Stop overthinking it. Your future self will thank you for taking the first step today. <strong>Your first workout is on us.</strong></>
-                      )}
-                    </p>
-                  </div>
-
                   {/* Inline schedule panel */}
                   <MiniSchedulePopup
                     isOpen={showSchedule}
