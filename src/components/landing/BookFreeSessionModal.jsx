@@ -84,7 +84,7 @@ ${PREFILLED_MESSAGE[language]}`,
 
             {!submitted ? (
               <>
-                <div className="mb-6">
+                <div className="mb-4">
                   <h2 className="text-2xl font-black text-white mb-1">
                     {language === 'ro' ? 'Rezervă o Ședință Gratuită' : 'Book a Free Session'}
                   </h2>
@@ -92,36 +92,33 @@ ${PREFILLED_MESSAGE[language]}`,
                     {language === 'ro' ? (
                       <>
                         Verifică{' '}
-                        <span className="relative inline-block">
-                          <button
-                            type="button"
-                            onClick={() => setShowSchedule((v) => !v)}
-                            className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors"
-                          >
-                            Orarul
-                          </button>
-                          <MiniSchedulePopup isOpen={showSchedule} onClose={() => setShowSchedule(false)} />
-                        </span>
+                        <button
+                          type="button"
+                          onClick={() => setShowSchedule((v) => !v)}
+                          className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors"
+                        >
+                          Orarul
+                        </button>
                         {' '}și alege o oră. Completează datele tale și te contactăm noi pentru a stabili ziua și ora.
                       </>
                     ) : (
                       <>
                         Check our{' '}
-                        <span className="relative inline-block">
-                          <button
-                            type="button"
-                            onClick={() => setShowSchedule((v) => !v)}
-                            className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors"
-                          >
-                            Schedule
-                          </button>
-                          <MiniSchedulePopup isOpen={showSchedule} onClose={() => setShowSchedule(false)} />
-                        </span>
+                        <button
+                          type="button"
+                          onClick={() => setShowSchedule((v) => !v)}
+                          className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors"
+                        >
+                          Schedule
+                        </button>
                         {' '}and pick a time. Fill in your details and we'll reach out to schedule your session.
                       </>
                     )}
                   </p>
                 </div>
+
+                {/* Inline schedule panel */}
+                <MiniSchedulePopup isOpen={showSchedule} onClose={() => setShowSchedule(false)} />
 
                 {/* Motivational message box */}
                 <div className="mb-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-xl">
