@@ -167,6 +167,29 @@ ${fullMessage}`,
                     onSlotSelect={handleSlotSelect}
                   />
 
+                  {/* Motivational nudge — shown after slot selected */}
+                  <AnimatePresence>
+                    {selectedSlot && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ type: 'spring', damping: 26, stiffness: 300 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="mb-4 p-3 bg-blue-500/10 border border-blue-500/30 rounded-xl">
+                          <p className="text-sm text-sky-300 leading-relaxed">
+                            {isRo ? (
+                              <><span className="italic">"Cel mai greu lucru din CrossFit nu e antrenamentul, ci să intri pe ușă pentru prima dată."</span> Nu mai sta pe gânduri! <strong>Prima ta ședință e gratuită.</strong></>
+                            ) : (
+                              <><span className="italic">"The hardest part of CrossFit isn't the workout, it's walking through the front door for the first time."</span> Stop overthinking it. <strong>Your first workout is on us.</strong></>
+                            )}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
                   <form onSubmit={handleSubmit} className="space-y-3">
                     <div>
                       <label className="block text-sm font-semibold text-gray-300 mb-1.5">
