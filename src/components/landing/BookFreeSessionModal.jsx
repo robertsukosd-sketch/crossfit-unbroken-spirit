@@ -93,10 +93,14 @@ ${PREFILLED_MESSAGE[language]}`,
                   </p>
                 </div>
 
-                {/* Pre-filled message box */}
+                {/* Motivational message box */}
                 <div className="mb-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-xl">
-                  <p className="text-sm text-sky-300 leading-relaxed italic">
-                    "{PREFILLED_MESSAGE[language]}"
+                  <p className="text-sm text-sky-300 leading-relaxed">
+                    {language === 'ro' ? (
+                      <><span className="italic">"Cel mai greu lucru din CrossFit nu este antrenamentul, ci să treci pragul pentru prima oară."</span> Nu mai sta pe gânduri. Eu din viitor îți va mulțumi că ai făcut primul pas astăzi. <strong>Prima ta ședință este cadoul nostru.</strong></>
+                    ) : (
+                      <><span className="italic">"The hardest part of CrossFit isn't the workout, it's walking through the front door for the first time."</span> Stop overthinking it. Your future self will thank you for taking the first step today. <strong>Your first workout is on us.</strong></>
+                    )}
                   </p>
                 </div>
 
