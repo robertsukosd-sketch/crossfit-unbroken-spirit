@@ -16,8 +16,8 @@ const getCrossFitClasses = (t) => ({
 
 const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday"), t("friday"), t("saturday")];
 
-const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin", "Sâm", "Dum"];
-const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin", "Sâm"];
+const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlotSelect }) {
   const { t, language } = useLanguage();
