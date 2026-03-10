@@ -315,28 +315,27 @@ export default function PricingSection() {
         </motion.div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
-          {categories.map((cat) => {
-            const Icon = cat.icon;
-            const isActive = activeId === cat.id;
-            return (
-              <button
-                key={cat.id}
-                onClick={() => setActiveId(cat.id)}
-                className={cn(
-                  'flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-bold transition-all duration-200 border',
-                  isActive
-                    ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-500/25'
-                    : 'bg-zinc-900 border-zinc-700 text-gray-300 hover:border-blue-500/50 hover:text-white'
-                )}
-              >
-                <Icon className="w-4 h-4 flex-shrink-0" />
-                <span className="hidden sm:inline">{cat.label}</span>
-                <span className="sm:hidden">{cat.id.charAt(0).toUpperCase() + cat.id.slice(1)}</span>
-              </button>
-            );
-          })}
-        </div>
+         <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2 sm:gap-3 mb-10 max-w-md sm:max-w-none mx-auto">
+           {categories.map((cat) => {
+             const Icon = cat.icon;
+             const isActive = activeId === cat.id;
+             return (
+               <button
+                 key={cat.id}
+                 onClick={() => setActiveId(cat.id)}
+                 className={cn(
+                   'flex items-center justify-center sm:justify-start gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 border',
+                   isActive
+                     ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-500/25'
+                     : 'bg-zinc-900 border-zinc-700 text-gray-300 hover:border-blue-500/50 hover:text-white'
+                 )}
+               >
+                 <Icon className="w-4 h-4 flex-shrink-0" />
+                 <span className="hidden sm:inline">{cat.label}</span>
+               </button>
+             );
+           })}
+         </div>
 
         {/* Active Category Description */}
         <AnimatePresence mode="wait">
