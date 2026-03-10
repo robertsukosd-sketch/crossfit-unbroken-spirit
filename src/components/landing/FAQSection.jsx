@@ -53,7 +53,7 @@ export default function FAQSection({ onBookSession }) {
     {
       id: 'open-gym',
       q: 'Ce este Open Gym?',
-      a: 'Open Gym este un interval orar',
+      a: '',
       aOpenGym: true
     },
     {
