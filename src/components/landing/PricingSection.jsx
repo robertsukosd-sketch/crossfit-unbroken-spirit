@@ -104,7 +104,7 @@ const getCategories = (language) => [
   },
   {
     id: 'focus',
-    label: language === 'ro' ? 'Unbroken Focus' : 'Unbroken Focus',
+    label: language === 'ro' ? 'Personal Training' : 'Personal Training',
     sublabel: 'Personal Training',
     icon: User,
     description: language === 'ro'
