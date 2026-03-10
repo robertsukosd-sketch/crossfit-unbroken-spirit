@@ -198,7 +198,8 @@ export default function ScheduleSection() {
           ))}
         </div>
 
-        <div className="mt-8 flex flex-col items-center gap-4">
+        {/* Hidden: ThunderWOD app CTAs - kept for reference but hidden */}
+        <div className="mt-8 flex flex-col items-center gap-4 hidden">
           <div className="relative rounded-2xl px-6 py-4 text-center max-w-2xl w-full border border-sky-500/30 bg-sky-500/5">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600/10 to-sky-500/10" />
             <p className="relative text-gray-300 text-base">
