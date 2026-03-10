@@ -145,14 +145,6 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                     EN
                   </button>
               </div>
-              <button
-                type="button"
-                onClick={() => openAppWithFallback()}
-                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold text-gray-300 hover:text-white bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-colors whitespace-nowrap flex-shrink-0"
-              >
-                <Smartphone className="w-4 h-4" />
-                <span>ThunderWOD App</span>
-              </button>
               <motion.button
                 type="button"
                 onClick={handleBookClick}
