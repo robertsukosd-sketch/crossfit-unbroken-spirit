@@ -167,37 +167,45 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
 
 
             {/* Language Toggle Mobile + Menu Button */}
-            <div className="lg:hidden flex items-center gap-2 flex-shrink-0">
-              <div className="flex flex-row gap-0.5 bg-zinc-900 rounded-full p-1">
-                <button
-                    type="button"
-                    onClick={() => changeLanguage('ro')}
-                    aria-label="Switch to Romanian"
-                    className={cn(
-                      "min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-xs font-semibold transition-colors",
-                      language === 'ro' 
-                        ? "bg-blue-500 text-white" 
-                        : "text-gray-300 hover:text-white"
-                    )}
-                  >
-                    RO
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => changeLanguage('en')}
-                    aria-label="Switch to English"
-                    className={cn(
-                      "min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-xs font-semibold transition-colors",
-                      language === 'en' 
-                        ? "bg-blue-500 text-white" 
-                        : "text-gray-300 hover:text-white"
-                    )}
-                  >
-                    EN
-                  </button>
-              </div>
+             <div className="lg:hidden flex items-center gap-3 flex-shrink-0">
+               <div className="flex flex-row gap-0.5 bg-zinc-900 rounded-full p-1">
+                 <button
+                     type="button"
+                     onClick={() => changeLanguage('ro')}
+                     aria-label="Switch to Romanian"
+                     className={cn(
+                       "min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-xs font-semibold transition-colors",
+                       language === 'ro' 
+                         ? "bg-blue-500 text-white" 
+                         : "text-gray-300 hover:text-white"
+                     )}
+                   >
+                     RO
+                   </button>
+                   <button
+                     type="button"
+                     onClick={() => changeLanguage('en')}
+                     aria-label="Switch to English"
+                     className={cn(
+                       "min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-xs font-semibold transition-colors",
+                       language === 'en' 
+                         ? "bg-blue-500 text-white" 
+                         : "text-gray-300 hover:text-white"
+                     )}
+                   >
+                     EN
+                   </button>
+               </div>
 
-            </div>
+               <motion.button
+                 type="button"
+                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                 aria-label="Toggle menu"
+                 className="min-w-[52px] min-h-[52px] flex items-center justify-center rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-lg"
+               >
+                 {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+               </motion.button>
+             </div>
           </div>
         </div>
       </motion.nav>
