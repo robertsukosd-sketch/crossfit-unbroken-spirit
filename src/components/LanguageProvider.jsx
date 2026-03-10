@@ -380,6 +380,7 @@ At your first workouts, you might hear terms that sound like secret language. Do
 * **RX (As Prescribed):** When you manage to do the workout exactly as written on the board with the prescribed weights and movements. It's the original version, designed to challenge the most advanced athletes in the gym.
 * **Scaled (Adapted / Modified):** *This is the most important word for you!* Any CrossFit movement and any weight can be modified by the coach to fit your current fitness level, while still preserving the benefits of the original workout.`,
     startHereFullText3: ``,
+    faq: 'FAQ',
   }
 };
 
