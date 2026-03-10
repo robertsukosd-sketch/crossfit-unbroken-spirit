@@ -31,7 +31,7 @@ export const translations = {
     discoverThePrograms: "Descoperă Programele",
     aboutUs: "Despre Noi",
     moreThangym: "Mai mult decât un gym",
-    aboutDesc: "Indiferent în ce punct al vieții ești, vei întâlni la sală oameni care-ți vor succesul. Clasele au participanți în toate stadiile de formă fizică, iar antrenorul adaptează antrenamentul PENTRU TINE. Asta e diferența: nu te adaptezi tu la sală, ci sala se adaptează la tine.",
+    aboutDesc: "Indiferent în ce punct al vieții ești, vei întâlni la sală oameni care-ți vor succesul. Clasele au participanți în toate stadiile de formă fizică, iar antrenorul adaptează antrenamentul PENTRU TINE. Asta e diferența: nu te adaptezi tu la sală, ci sala se adaptează la tine. În plus, față de o sală comercială, în care ești nevoit să te descurci de unul singur, aici, ai parte de tot sprijinul unui antrenor și al comunității.",
     intenseTraining: "Antrenamente Intense",
     intenseTrainingDesc: "WOD-uri care evoluează cu tine.",
     strongCommunity: "Comunitate Puternică",
