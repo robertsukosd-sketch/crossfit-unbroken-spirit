@@ -111,9 +111,7 @@ export default function ContactSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-3 mb-6 leading-tight">
             {t("contactTitlePrefix")} <span className="text-blue-500">{t("contactTitleHighlight")}</span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto whitespace-pre-line leading-relaxed">
-            {t("contactSubtitle")}
-          </p>
+
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 h-auto">
