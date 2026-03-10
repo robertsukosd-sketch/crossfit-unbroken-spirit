@@ -78,17 +78,18 @@ const getCategories = (language) => [
         popular: true,
         featured: true,
       },
-      {
-        name: 'CrossFit Family',
-        price: '900',
-        period: language === 'ro' ? 'lună' : 'month',
-        description: language === 'ro' ? 'Abonament pentru familii/cupluri' : 'For families / couples',
-        features: language === 'ro'
-          ? ['Ședințe nelimitate (2 persoane)', 'Toate clasele incluse', 'Open Gym inclus', 'Prioritate înscriere', 'Loc de parcare inclus']
-          : ['Unlimited sessions (2 people)', 'All classes included', 'Open Gym included', 'Priority booking', 'Free parking spot'],
-        popular: false,
-        featured: false,
-      },
+      // CrossFit Family plan hidden
+      // {
+      //   name: 'CrossFit Family',
+      //   price: '900',
+      //   period: language === 'ro' ? 'lună' : 'month',
+      //   description: language === 'ro' ? 'Abonament pentru familii/cupluri' : 'For families / couples',
+      //   features: language === 'ro'
+      //     ? ['Ședințe nelimitate (2 persoane)', 'Toate clasele incluse', 'Open Gym inclus', 'Prioritate înscriere', 'Loc de parcare inclus']
+      //     : ['Unlimited sessions (2 people)', 'All classes included', 'Open Gym included', 'Priority booking', 'Free parking spot'],
+      //   popular: false,
+      //   featured: false,
+      // },
     ],
   },
   {
