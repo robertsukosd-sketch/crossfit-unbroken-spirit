@@ -3,7 +3,7 @@ import { Calendar } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
 import { scrollToSection } from '../config';
 
-export default function MobileFooterBar({ onBookSession, onBookSession: _, isMobileMenuOpen: __, setIsMobileMenuOpen: ___ }) {
+export default function MobileFooterBar({ onBookSession }) {
   const { t } = useLanguage();
 
   const handleScheduleClick = () => {
