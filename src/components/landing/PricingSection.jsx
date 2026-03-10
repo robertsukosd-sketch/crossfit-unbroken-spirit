@@ -137,7 +137,7 @@ const getCategories = (language) => [
   },
   {
     id: 'welcome',
-    label: language === 'ro' ? 'Unbroken Welcome' : 'Unbroken Welcome',
+    label: language === 'ro' ? 'Drop In / Trial' : 'Drop In / Trial',
     sublabel: language === 'ro' ? 'Vizitatori & Drop-In' : 'Visitors & Drop-In',
     icon: Globe,
     description: language === 'ro'
