@@ -112,7 +112,8 @@ export default function FAQSection({ onBookSession }) {
     {
       id: 'drop-in',
       q: 'Pot veni în vizită (drop-in) dacă sunt de la altă sală?',
-      a: 'Ne plac vizitatorii! Dacă ai cel puțin 3 luni de experiență în CrossFit, poți rezerva un drop-in prin site-ul nostru. Taxa este de 60 de lei.'
+      a: 'Ne plac vizitatorii! Dacă ai cel puțin 3 luni de experiență în CrossFit, poți rezerva un drop-in prin site-ul nostru. ',
+      aDropIn: true
     },
     {
       id: 'scores',
@@ -230,6 +231,17 @@ export default function FAQSection({ onBookSession }) {
                             </button>
                             {'\n* Cunoști antrenorii și sala\n* Participi la primul antrenament\nDupă aceea vei putea intra în programul normal de clase.'}
                           </>
+                        )}
+                        {faq.aDropIn && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleScrollToPricing();
+                            }}
+                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                          >
+                            Taxa este de 60 de lei.
+                          </button>
                         )}
                       </p>
                     </div>
