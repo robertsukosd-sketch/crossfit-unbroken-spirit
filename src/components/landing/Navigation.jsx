@@ -14,7 +14,7 @@ const getNavLinks = (t) => [
   { name: t("programs"), href: "#programs" },
   { name: t("pricing"), href: "#pricing" },
   { name: t("schedule"), href: "#schedule" },
-  { name: t("faq"), href: "#faq" },
+  { name: "FAQ", href: "#faq" },
   { name: t("contact"), href: "#contact" },
   { name: "ThunderWOD App", href: "#app-promo-section" },
 ];
