@@ -227,7 +227,7 @@ function PlanCard({ plan, index, t, onSignUpClick }) {
       </ul>
 
       <Button
-        asChild
+        onClick={onSignUpClick}
         className={cn(
           'w-full font-bold rounded-full',
           plan.featured
@@ -237,13 +237,7 @@ function PlanCard({ plan, index, t, onSignUpClick }) {
             : 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'
         )}
       >
-        <a
-          href={isDesktop() ? 'https://app.thunderwod.com/#/wod' : getAppStoreUrl()}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {t('startNowBtn')}
-        </a>
+        {t('startNowBtn')}
       </Button>
     </motion.div>
   );
