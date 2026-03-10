@@ -8,6 +8,13 @@ export default function FAQSection({ onBookSession }) {
   const { t, language } = useLanguage();
   const [openId, setOpenId] = useState(null);
 
+  const handleScrollToPricing = () => {
+    const pricingElement = document.getElementById('pricing');
+    if (pricingElement) {
+      pricingElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const faqs = [
     {
       id: 'what-is',
@@ -68,7 +75,8 @@ export default function FAQSection({ onBookSession }) {
     {
       id: 'pricing',
       q: 'Cât costă un abonament?',
-      a: 'Abonamentele noastre sunt structurate în funcție de frecvența antrenamentelor. Deși suntem mai scumpi decât o sală comercială, reține că fiecare clasă este gestionată de un antrenor certificat. Practic, e un antrenament personal la o fracțiune din preț. Aici poți vedea prețurile abonamentelor.'
+      a: 'Abonamentele noastre sunt structurate în funcție de frecvența antrenamentelor. Deși suntem mai scumpi decât o sală comercială, reține că fiecare clasă este gestionată de un antrenor certificat. Practic, e un antrenament personal la o fracțiune din preț. ',
+      aPricing: true
     },
     {
       id: 'safety',
@@ -197,6 +205,17 @@ export default function FAQSection({ onBookSession }) {
                           </button>
                         )}
                         {faq.aWithLink && '.'}
+                        {faq.aPricing && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleScrollToPricing();
+                            }}
+                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                          >
+                            Aici poți vedea prețurile abonamentelor.
+                          </button>
+                        )}
                       </p>
                     </div>
                   </motion.div>
