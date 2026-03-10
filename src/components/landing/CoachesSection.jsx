@@ -10,7 +10,7 @@ export default function CoachesSection() {
   const coaches = [
     {
       id: 1,
-      name: 'Alex Popescu',
+      name: 'Robert Sukosd',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
       certifications: ['CrossFit Level 2', 'Mobility Coach', 'Nutrition Specialist'],
       experience: language === 'ro' ? '8 ani în CrossFit' : '8 years in CrossFit',
@@ -19,7 +19,7 @@ export default function CoachesSection() {
     },
     {
       id: 2,
-      name: 'Maria Ionescu',
+      name: 'Dumitru Mîndrescu',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
       certifications: ['CrossFit Level 2', 'Movement Specialist', 'Gymnastics Coach'],
       experience: language === 'ro' ? '6 ani în fitness' : '6 years in fitness',
@@ -28,7 +28,7 @@ export default function CoachesSection() {
     },
     {
       id: 3,
-      name: 'Bogdan Marinescu',
+      name: 'Andrei Vârnav',
       image: 'https://images.unsplash.com/photo-1500595046891-ca72d3fef6f4?w=400&h=400&fit=crop',
       certifications: ['CrossFit Level 1', 'Strength & Conditioning', 'Olympic Lifting'],
       experience: language === 'ro' ? '5 ani în antrenament' : '5 years in training',
