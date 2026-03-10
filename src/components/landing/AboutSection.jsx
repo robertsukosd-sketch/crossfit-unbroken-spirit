@@ -91,7 +91,7 @@ export default function AboutSection() {
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-sky-400" />
                   </div>
-                  <div className="text-center sm:text-left">
+                  <div className="text-left">
                     <h3 className="text-white font-bold mb-1">{feature.title}</h3>
                     <p className="text-gray-300 text-sm sm:text-base">{feature.description}</p>
                   </div>
