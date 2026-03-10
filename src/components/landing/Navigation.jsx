@@ -252,16 +252,19 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="pt-6"
+                transition={{ delay: Math.min(navLinks.length * 0.1, 0.6) }}
+                className="pt-4 mt-2 border-t border-zinc-800"
               >
                 <motion.button
                   type="button"
                   onClick={() => scrollNavToSection('#app-promo-section')}
-                  className="w-full flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl text-base font-bold text-white border border-blue-400/40 bg-gradient-to-r from-blue-900/60 to-sky-900/40 hover:from-blue-800/70 hover:to-sky-800/50 transition-all"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: Math.min(navLinks.length * 0.1 + 0.1, 0.7) }}
+                  className="w-full flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl text-sm font-bold text-white border border-blue-400/40 bg-gradient-to-r from-blue-900/60 to-sky-900/40 hover:from-blue-800/70 hover:to-sky-800/50 transition-all"
                 >
-                  <Smartphone className="w-5 h-5 text-sky-400 flex-shrink-0" />
-                  <span>ThunderWOD App</span>
+                  <Smartphone className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                  <span>ThunderWOD</span>
                 </motion.button>
               </motion.div>
             </div>
