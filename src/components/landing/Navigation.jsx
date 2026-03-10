@@ -229,26 +229,16 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                className="pt-6 flex flex-col gap-3"
+                className="pt-6"
               >
                 <motion.button
                   type="button"
-                  onClick={handleBookClick}
-                  animate={shouldReduceMotion ? {} : { boxShadow: ['0 0 0px #38bdf8', '0 0 12px #38bdf8', '0 0 0px #38bdf8'] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                  className="relative w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full text-base font-bold text-white overflow-hidden"
-                  style={{ background: 'linear-gradient(135deg, #0369a1 0%, #0ea5e9 50%, #0369a1 100%)' }}
+                  onClick={() => scrollNavToSection('#app-promo-section')}
+                  className="w-full flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl text-base font-bold text-white border border-blue-400/40 bg-gradient-to-r from-blue-900/60 to-sky-900/40 hover:from-blue-800/70 hover:to-sky-800/50 transition-all"
                 >
-                  <motion.span
-                    className="absolute inset-0 rounded-full"
-                    animate={shouldReduceMotion ? { opacity: 0 } : { opacity: [0, 0.3, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
-                  />
-                  <span className="relative z-10">{t("freeTrial")}</span>
+                  <Smartphone className="w-5 h-5 text-sky-400 flex-shrink-0" />
+                  <span>ThunderWOD App</span>
                 </motion.button>
-
-
               </motion.div>
             </div>
           </motion.div>
