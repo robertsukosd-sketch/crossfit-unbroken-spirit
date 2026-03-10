@@ -39,8 +39,11 @@ export default function CoachesSection() {
 
   const coachTitle = language === 'ro' ? 'Antrenorii' : 'Meet Our Coaches';
   const coachSubtitle = language === 'ro' 
-    ? 'Echipa noastră e alcătuită din antrenori pasionați, care te vor ajuta să-ți atingi obiectivele.'
+    ? 'Echipa noastră e alcătuită din antrenori pasionați,'
     : 'Our team consists of coaches passionate about helping you reach your goals.';
+  const coachSubtitleSecond = language === 'ro' 
+    ? 'care te vor ajuta să-ți atingi obiectivele.'
+    : '';
 
   return (
     <section id="coaches" className="py-24 bg-zinc-950 relative overflow-hidden">
@@ -61,6 +64,8 @@ export default function CoachesSection() {
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
             {coachSubtitle}
+            {coachSubtitleSecond && <br className="hidden sm:block" />}
+            {coachSubtitleSecond}
           </p>
         </motion.div>
 
