@@ -60,7 +60,7 @@ const getCategories = (language) => [
   },
   {
     id: 'ascent',
-    label: language === 'ro' ? 'Unbroken Ascent' : 'Unbroken Ascent',
+    label: language === 'ro' ? 'Open Gym' : 'Open Gym',
     sublabel: language === 'ro' ? 'Servicii Extra' : 'Extra Services',
     icon: Sparkles,
     description: language === 'ro'
