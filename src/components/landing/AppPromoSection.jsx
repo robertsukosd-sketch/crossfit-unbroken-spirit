@@ -21,11 +21,9 @@ export default function AppPromoSection() {
   const { url, type } = getLink();
 
   const cta =
-    type === 'ios'
-      ? isRo ? 'Descarcă pe App Store' : 'Download on the App Store'
-      : type === 'android'
-      ? isRo ? 'Descarcă pe Google Play' : 'Get it on Google Play'
-      : isRo ? 'Deschide aplicația web' : 'Open the web app';
+    type === 'desktop'
+      ? isRo ? 'Deschide aplicația web' : 'Open the web app'
+      : isRo ? 'Descarcă Aplicația' : 'Download the App';
 
   const Icon = type === 'desktop' ? Monitor : Smartphone;
 
