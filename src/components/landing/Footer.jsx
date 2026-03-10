@@ -316,7 +316,7 @@ export default function Footer() {
             <ul className="space-y-3">
                <li className="flex items-center gap-3 text-gray-300">
                   <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                  <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">Splaiul Unirii 257-259, Sector 3, București</a>
+                  <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">{t("location")}</a>
                 </li>
                <li className="flex items-center gap-3 text-gray-200">
                  <Phone className="w-5 h-5 text-sky-400 flex-shrink-0" />
