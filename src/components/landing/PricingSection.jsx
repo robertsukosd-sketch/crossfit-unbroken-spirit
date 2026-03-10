@@ -172,7 +172,7 @@ const getCategories = (language) => [
   },
 ];
 
-function PlanCard({ plan, index, t }) {
+function PlanCard({ plan, index, t, onSignUpClick }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
