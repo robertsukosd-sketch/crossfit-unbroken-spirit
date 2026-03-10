@@ -28,7 +28,7 @@ const getCategories = (language) => [
         description: language === 'ro' ? '2 antrenamente pe săptămână' : '2 workouts per week',
         features: language === 'ro'
           ? ['8 clase pe lună', 'Flexibilitate program', 'Valabil o lună', 'Loc de parcare inclus']
-          : ['8 sessions per month', 'Schedule flexibility', 'Valid for one month', 'Free parking spot'],
+          : ['8 classes per month', 'Schedule flexibility', 'Valid for one month', 'Free parking spot'],
         popular: false,
         featured: false,
       },
