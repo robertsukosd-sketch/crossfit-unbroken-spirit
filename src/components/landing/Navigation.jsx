@@ -213,17 +213,17 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
           >
             <div className="px-6 py-8 space-y-6">
               {navLinks.map((link, index) => (
-                <motion.a
+                <motion.button
                    key={link.name}
-                   href={link.href}
-                   onClick={(e) => { e.preventDefault(); scrollNavToSection(link.href); }}
+                   type="button"
+                   onClick={() => scrollNavToSection(link.href)}
                    initial={{ opacity: 0, x: -20 }}
                    animate={{ opacity: 1, x: 0 }}
                    transition={{ delay: index * 0.1 }}
-                   className="block text-2xl font-bold text-white hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-3 py-2"
+                   className="block w-full text-left text-2xl font-bold text-white hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-3 py-2"
                  >
                    {link.name}
-                 </motion.a>
+                 </motion.button>
               ))}
               <motion.div
                 initial={{ opacity: 0 }}
