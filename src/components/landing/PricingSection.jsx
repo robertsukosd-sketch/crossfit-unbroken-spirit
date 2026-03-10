@@ -377,7 +377,7 @@ export default function PricingSection() {
                 return bScore - aScore;
               })
               .map((plan, index) => (
-              <PlanCard key={plan.name} plan={plan} index={index} t={t} />
+              <PlanCard key={plan.name} plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} />
             ))}
           </motion.div>
         </AnimatePresence>
