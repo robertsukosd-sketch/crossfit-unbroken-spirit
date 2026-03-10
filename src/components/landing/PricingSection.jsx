@@ -356,10 +356,11 @@ export default function PricingSection() {
             <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto whitespace-pre-line">
               {activeCategory.description}
             </p>
-          </motion.div>
-        </AnimatePresence>
+            </motion.div>
+            </AnimatePresence>
+            </div>
 
-        {/* Plans Grid */}
+            {/* Plans Grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeId + '-plans'}
