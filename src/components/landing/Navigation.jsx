@@ -16,7 +16,6 @@ const getNavLinks = (t) => [
   { name: t("schedule"), href: "#schedule" },
   { name: "FAQ", href: "#faq" },
   { name: t("contact"), href: "#contact" },
-  { name: "ThunderWOD App", href: "#app-promo-section" },
 ];
 
 export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobileMenuOpen }) {
