@@ -1,4 +1,3 @@
-
 export const CONTACT_EMAIL = 'train@unbrokenspirit.ro';
 export const PHONE_1 = '+40 748 838 767';
 export const PHONE_2 = '+40 740 269 769';
@@ -16,7 +15,9 @@ export const QUICK_FOOTER_LINKS = [
 export const scrollToSection = (id) => {
   const element = document.getElementById(id);
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+    const navbarHeight = 80;
+    const top = element.getBoundingClientRect().top + window.scrollY - navbarHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
   }
 };
 
