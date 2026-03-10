@@ -258,7 +258,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     pt12sessions: "PT 12 Sessions",
     pt12sessionsDesc: "Complete transformation",
     popular: "Popular",
-    startNowBtn: "Start Now",
+    startNowBtn: "Sign Up Now",
     ron: "RON",
     scheduleTitle: "Class Schedule",
     scheduleSubtitle: "Same workout, multiple times. Better fit means you won't skip.",
