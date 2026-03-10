@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
 import { getAppStoreUrl, isDesktop } from '../appStoreUtils';
+import SubscriptionConfirmModal from './SubscriptionConfirmModal';
 
 function scrollToDownloadApp() {
   const el = document.getElementById('thunderwod-app');
