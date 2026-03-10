@@ -40,7 +40,7 @@ export default function CoachesSection() {
   const coachTitle = language === 'ro' ? 'Antrenoriide Echipei Noastre' : 'Meet Our Coaches';
   const coachSubtitle = language === 'ro' 
     ? 'Echipa noastră este alcătuită din antrenori certificați cu pasiune pentru a te ajuta să atingi obiectivele tale.'
-    : 'Our team consists of certified coaches passionate about helping you reach your goals.';
+    : 'Our team consists of coaches passionate about helping you reach your goals.';
 
   return (
     <section id="coaches" className="py-24 bg-zinc-950 relative overflow-hidden">
