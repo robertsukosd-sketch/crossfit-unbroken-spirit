@@ -283,7 +283,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     contactTitle: "Let's Talk",
     contactTitlePrefix: "Let's",
     contactTitleHighlight: "Talk",
-    contactSubtitle: "Free first class. Zero judgment. Bring nothing but yourself. That's all we need.",
+    contactSubtitle: "",
     address: "Address",
     phone: "Phone",
     email: "E-mail",
