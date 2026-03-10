@@ -14,8 +14,8 @@ export default function CoachesSection() {
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
       certifications: ['CrossFit Level 2', 'Mobility Coach', 'Nutrition Specialist'],
       experience: language === 'ro' ? '8 ani în CrossFit' : '8 years in CrossFit',
-      bioRo: 'Alex este co-fondatorul Unbroken Spirit și are o pasiune pentru dezvoltarea atletică. Cu peste 8 ani de experiență, se specializează în optimizarea performanței și construirea unei comunități puternice.',
-      bioEn: 'Alex is the co-founder of Unbroken Spirit with a passion for athletic development. With over 8 years of experience, he specializes in performance optimization and building a strong community.'
+      bioRo: 'Robert este co-fondatorul Unbroken Spirit și are o pasiune pentru dezvoltarea atletică. Cu peste 8 ani de experiență, se specializează în optimizarea performanței și construirea unei comunități puternice.',
+      bioEn: 'Robert is the co-founder of Unbroken Spirit with a passion for athletic development. With over 8 years of experience, he specializes in performance optimization and building a strong community.'
     },
     {
       id: 2,
@@ -23,8 +23,8 @@ export default function CoachesSection() {
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
       certifications: ['CrossFit Level 2', 'Movement Specialist', 'Gymnastics Coach'],
       experience: language === 'ro' ? '6 ani în fitness' : '6 years in fitness',
-      bioRo: 'Maria se concentrează pe mecanica corectă a mișcării și este cunoscuta pentru abordarea sa pacientă cu noii membri. Specialitatea ei este gymnastica și mobilitate avansată.',
-      bioEn: 'Maria focuses on proper movement mechanics and is known for her patient approach with new members. Her specialty is gymnastics and advanced mobility.'
+      bioRo: 'Dumitru se concentrează pe mecanica corectă a mișcării și este cunoscut pentru abordarea sa pacientă cu noii membri. Specialitatea lui este gymnastica și mobilitate avansată.',
+      bioEn: 'Dumitru focuses on proper movement mechanics and is known for his patient approach with new members. His specialty is gymnastics and advanced mobility.'
     },
     {
       id: 3,
@@ -32,8 +32,8 @@ export default function CoachesSection() {
       image: 'https://images.unsplash.com/photo-1500595046891-ca72d3fef6f4?w=400&h=400&fit=crop',
       certifications: ['CrossFit Level 1', 'Strength & Conditioning', 'Olympic Lifting'],
       experience: language === 'ro' ? '5 ani în antrenament' : '5 years in training',
-      bioRo: 'Bogdan este specialistul în antrenamente cu greutăți și putere. Pasiunea lui pentru educație fitness face ca sesiunile sale să fie întotdeauna informative și motivante.',
-      bioEn: 'Bogdan is a specialist in weightlifting and strength training. His passion for fitness education makes his sessions always informative and motivating.'
+      bioRo: 'Andrei este specialistul în antrenamente cu greutăți și putere. Pasiunea lui pentru educație fitness face ca sesiunile sale să fie întotdeauna informative și motivante.',
+      bioEn: 'Andrei is a specialist in weightlifting and strength training. His passion for fitness education makes his sessions always informative and motivating.'
     }
   ];
 

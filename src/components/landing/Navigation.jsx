@@ -11,6 +11,7 @@ import { scrollToSection } from '../config';
 const getNavLinks = (t) => [
   { name: t("home"), href: "#hero" },
   { name: t("aboutUs"), href: "#about" },
+  { name: "Coaches", href: "#coaches" },
   { name: t("startHere"), href: "#starthere" },
   { name: t("programs"), href: "#programs" },
   { name: t("pricing"), href: "#pricing" },
@@ -26,7 +27,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
   const shouldReduceMotion = useReducedMotion();
   const navLinks = useMemo(() => getNavLinks(t), [language]);
 
-  const sectionIds = ['hero', 'starthere', 'programs', 'pricing', 'schedule', 'faq', 'contact', 'app-promo-section'];
+  const sectionIds = ['hero', 'about', 'coaches', 'starthere', 'programs', 'pricing', 'schedule', 'faq', 'contact', 'app-promo-section'];
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 50);
