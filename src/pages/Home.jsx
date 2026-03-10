@@ -104,10 +104,10 @@ export default function Home() {
             >
               <ChevronUp className="w-6 h-6" />
             </button>
-            {/* Mobile: below accessibility button on the left */}
+            {/* Mobile: right side above footer */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="lg:hidden fixed left-0 top-[calc(50%+3rem)] z-50 bg-blue-600 hover:bg-blue-500 text-white w-11 h-11 rounded-r-xl flex items-center justify-center shadow-lg transition-[background-color] duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="lg:hidden fixed bottom-20 right-4 z-50 w-11 h-11 rounded-full bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center shadow-lg transition-[background-color] duration-200 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
               aria-label="Back to top"
             >
               <ChevronUp className="w-5 h-5" />
