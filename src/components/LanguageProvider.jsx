@@ -138,7 +138,7 @@ export const translations = {
     copyright: "Toate drepturile rezervate.",
     tagline: "Comunitatea ta de fitness. Antrenamente funcționale de înaltă intensitate pentru rezultate reale.",
     startHereTitle: "De Unde Să Începi",
-    startHereSubtitle: "Toți termenii au fost neclari când i-am auzit prima oară.\nToți am fost în locul tău la un moment dat.",
+    startHereSubtitle: "Tuturor ne-au fost neclari termenii la început.\nToți am fost în locul tău la un moment dat.",
     startHerePreview: "**Ce înseamnă CrossFit?**\n\nDacă ai căutat pe Internet, probabil ai găsit definiția oficială: \"mișcări funcționale, constant variate, executate la intensitate ridicată\". Sună cam tehnic, nu? **Uite ce înseamnă de fapt:** CrossFit-ul este un antrenament conceput să te pregătească pentru viața reală. Nu te antrenezi doar ca să arăți bine în oglindă (deși asta va fi o consecință).",
     startHerePreviewFullWidth: "Te antrenezi ca să poți ridica o cutie grea fără să ți se blocheze spatele, să alergi după autobuz și să nu rămâi fără aer și să fii în cea mai bună formă fizică a vieții tale.\n\nCombinăm elemente de gimnastică, ridicări de greutăți și cardio, pe care le schimbăm în fiecare zi. La noi, rutina este inamicul, așa că n-o să te plictisești niciodată.",
     startHereFullText1: `## Mitul suprem: „Trebuie să fiu deja în formă ca să mă apuc de CrossFit"
