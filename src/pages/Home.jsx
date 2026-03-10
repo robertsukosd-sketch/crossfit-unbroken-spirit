@@ -16,6 +16,7 @@ import CookieConsent from '@/components/landing/CookieConsent';
 import BookFreeSessionModal from '@/components/landing/BookFreeSessionModal';
 import MobileFooterBar from '@/components/landing/MobileFooterBar';
 import AppPromoSection from '@/components/landing/AppPromoSection';
+import FAQSection from '@/components/landing/FAQSection';
 
 function SeoMeta() {
   const { language } = useLanguage();
@@ -78,6 +79,9 @@ export default function Home() {
         <AppPromoSection />
         <div id="schedule">
           <ScheduleSection />
+        </div>
+        <div id="faq">
+          <FAQSection />
         </div>
         <div id="contact">
           <ContactSection />

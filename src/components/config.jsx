@@ -9,6 +9,7 @@ export const QUICK_FOOTER_LINKS = [
   { label: 'programs', href: '#programs' },
   { label: 'pricing', href: '#pricing' },
   { label: 'schedule', href: '#schedule' },
+  { label: 'faq', href: '#faq' },
   { label: 'contact', href: '#contact' },
   { label: 'thunderwod', href: '#app-promo-section' },
 ];
