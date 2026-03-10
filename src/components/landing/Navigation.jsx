@@ -25,7 +25,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
   const shouldReduceMotion = useReducedMotion();
   const navLinks = useMemo(() => getNavLinks(t), [language]);
 
-  const sectionIds = ['hero', 'starthere', 'programs', 'pricing', 'schedule', 'contact'];
+  const sectionIds = ['hero', 'starthere', 'programs', 'pricing', 'app-promo-section', 'schedule', 'contact'];
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 50);
