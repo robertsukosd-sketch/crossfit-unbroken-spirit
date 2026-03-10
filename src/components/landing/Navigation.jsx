@@ -91,7 +91,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-4">
+             <div className="hidden lg:flex items-center gap-6">
               {navLinks.map((link) => {
                 const sectionId = link.href.replace('#', '');
                 const isActive = activeSection === sectionId;
@@ -113,6 +113,20 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                   </a>
                 );
               })}
+              <a
+                href="#app-promo-section"
+                onClick={(e) => { e.preventDefault(); scrollNavToSection('#app-promo-section'); }}
+                className={cn(
+                  "font-medium transition-colors relative group text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1",
+                  activeSection === 'app-promo-section' ? "text-blue-400" : "text-gray-200 hover:text-white"
+                )}
+              >
+                ThunderWOD App
+                <span className={cn(
+                  "absolute -bottom-1 left-0 h-0.5 bg-blue-500 transition-[width]",
+                  activeSection === 'app-promo-section' ? "w-full" : "w-0 group-hover:w-full"
+                )} />
+              </a>
             </div>
 
             {/* Language & CTA Button */}
