@@ -83,9 +83,9 @@ export default function AppPromoSection() {
                   Totul, într-o singură aplicație
                 </h2>
                 <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                  Gestionează plata abonamentelor, înscrierea la clase
+                  Gestionează <span className="text-white font-semibold">plata abonamentelor</span>, <span className="text-white font-semibold">înscrierea la clase</span>
                   <br className="hidden sm:block" />
-                  și istoricul rezultatelor tale în aplicația ThunderWOD.
+                  și <span className="text-white font-semibold">istoricul rezultatelor tale</span> în aplicația ThunderWOD.
                 </p>
               </>
             ) : (
