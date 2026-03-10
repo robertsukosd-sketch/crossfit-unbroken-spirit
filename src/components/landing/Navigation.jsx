@@ -14,6 +14,7 @@ const getNavLinks = (t) => [
   { name: t("programs"), href: "#programs" },
   { name: t("pricing"), href: "#pricing" },
   { name: t("schedule"), href: "#schedule" },
+  { name: t("faq"), href: "#faq" },
   { name: t("contact"), href: "#contact" },
   { name: "ThunderWOD App", href: "#app-promo-section" },
 ];
@@ -25,7 +26,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
   const shouldReduceMotion = useReducedMotion();
   const navLinks = useMemo(() => getNavLinks(t), [language]);
 
-  const sectionIds = ['hero', 'starthere', 'programs', 'pricing', 'app-promo-section', 'schedule', 'contact'];
+  const sectionIds = ['hero', 'starthere', 'programs', 'pricing', 'app-promo-section', 'schedule', 'faq', 'contact'];
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 50);
