@@ -95,10 +95,10 @@ export default function AppPromoSection() {
                   Everything in one app
                 </h2>
                 <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                  Manage your subscriptions, class registrations
-                  <br className="hidden sm:block" />
-                  and workout history in the ThunderWOD app.
-                </p>
+                   Manage your <span className="text-white font-semibold">subscriptions</span>, <span className="text-white font-semibold">class registrations</span>
+                   <br className="hidden sm:block" />
+                   and <span className="text-white font-semibold">workout history</span> in the ThunderWOD app.
+                 </p>
               </>
             )}
           </div>
