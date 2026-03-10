@@ -64,7 +64,7 @@ const getCategories = (language) => [
     sublabel: language === 'ro' ? 'Servicii Extra' : 'Extra Services',
     icon: Sparkles,
     description: language === 'ro'
-      ? 'Optimizează-ți performanța.\nServicii complementare pentru un progress accelerat.'
+      ? 'Optimizează-ți performanța.\nServiciu complementar pentru un progress accelerat.'
       : 'Optimize your performance.\nComplementary services for accelerated progress.',
     plans: [
       {
