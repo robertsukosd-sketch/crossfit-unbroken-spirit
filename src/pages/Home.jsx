@@ -81,7 +81,7 @@ export default function Home() {
           <ScheduleSection />
         </div>
         <div id="faq">
-          <FAQSection />
+          <FAQSection onBookSession={handleBookSession} />
         </div>
         <div id="contact">
           <ContactSection />

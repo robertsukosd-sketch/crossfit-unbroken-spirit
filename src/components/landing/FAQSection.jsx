@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
 import { cn } from '@/lib/utils';
 
-export default function FAQSection() {
+export default function FAQSection({ onBookSession }) {
   const { t, language } = useLanguage();
   const [openId, setOpenId] = useState(null);
 
@@ -57,7 +57,8 @@ export default function FAQSection() {
     {
       id: 'free-trial',
       q: 'Oferiți o clasă de probă gratuită?',
-      a: 'Da! Ne-ar plăcea să experimentezi comunitatea noastră direct. Poți să te înscrii prin acest formular.'
+      a: 'Da! Ne-ar plăcea să experimentezi comunitatea noastră direct. Poți să te înscrii prin ',
+      aWithLink: true
     },
     {
       id: 'class-duration',
@@ -184,6 +185,18 @@ export default function FAQSection() {
                     <div className="px-5 sm:px-6 py-4 bg-zinc-900/30 border-l-2 border-blue-500 mt-1 rounded-lg">
                       <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                         {faq.a}
+                        {faq.aWithLink && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onBookSession?.();
+                            }}
+                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                          >
+                            acest formular
+                          </button>
+                        )}
+                        {faq.aWithLink && '.'}
                       </p>
                     </div>
                   </motion.div>
