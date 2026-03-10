@@ -18,6 +18,7 @@ export const useLanguage = () => {
 export const translations = {
   ro: {
     home: "Acasă",
+    aboutUs: "Despre Noi",
     startHere: "Începători",
     programs: "Programe",
     pricing: "Prețuri",
@@ -202,6 +203,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
   },
   en: {
     home: "Home",
+    aboutUs: "About Us",
     startHere: "Beginners",
     programs: "Programs",
     pricing: "Pricing",
