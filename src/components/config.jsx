@@ -5,6 +5,8 @@ export const GYM_ADDRESS = 'Splaiul Unirii 257-259, Sector 3, București';
 
 export const QUICK_FOOTER_LINKS = [
   { label: 'home', href: '#hero' },
+  { label: 'aboutUs', href: '#about' },
+  { label: 'coaches', href: '#coaches' },
   { label: 'startHere', href: '#starthere' },
   { label: 'programs', href: '#programs' },
   { label: 'pricing', href: '#pricing' },
