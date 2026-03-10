@@ -335,7 +335,7 @@ export default function FAQSection({ onBookSession }) {
                             }}
                             className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                           >
-                            Aici poți vedea prețurile abonamentelor.
+                            {language === 'ro' ? 'Aici poți vedea prețurile abonamentelor.' : 'here.'}
                           </button>
                         )}
                         {faq.aHowToStart && (
