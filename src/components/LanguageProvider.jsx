@@ -76,7 +76,7 @@ export const translations = {
     pt12sessions: "PT 12 Ședințe",
     pt12sessionsDesc: "Transformare completă",
     popular: "Popular",
-    startNowBtn: "Începe Acum",
+    startNowBtn: "Înscrie-te Acum",
     ron: "RON",
     scheduleTitle: "Orarul Claselor",
     scheduleSubtitle: "Același WOD, ore diferite. Alege când vrei să vii.",
