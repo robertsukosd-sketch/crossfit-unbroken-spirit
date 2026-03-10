@@ -10,46 +10,104 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      id: 'beginner',
-      q: language === 'ro' ? 'Sunt complet nou în CrossFit. Pot să încep?' : 'I\'m completely new to CrossFit. Can I start?',
-      a: language === 'ro' 
-        ? 'Absolut! CrossFit este pentru oricine, indiferent de nivelul de fitness. Antrenamentele sunt scalabile - fiecare mișcare poate fi adaptată de către antrenor pentru a se potrivi nivelului tău actual.' 
-        : 'Absolutely! CrossFit is for everyone, regardless of fitness level. Workouts are scalable - each movement can be adapted by your coach to fit your current level.'
+      id: 'what-is',
+      q: 'Ce este CrossFit?',
+      a: 'CrossFit este un program de antrenament bazat pe mișcări funcționale, realizate la intensitate ridicată și variate constant. Acesta combină exerciții de forță, cardio și gimnastică pentru a îmbunătăți condiția fizică generală. Scopul este să dezvolți forță, rezistență, mobilitate și performanță pentru activitățile din viața reală.'
     },
     {
-      id: 'injury',
-      q: language === 'ro' ? 'Am o vânătare. Pot participa la antrenamente?' : 'I have an injury. Can I still train?',
-      a: language === 'ro'
-        ? 'Da, comunicați cu antrenorul dumneavoastră! Aproape orice se poate scala sau modifica. Antrenorul va crea alternative care vor menține intensitatea în timp ce vă protejează zona afectată.'
-        : 'Yes, communicate with your coach! Almost anything can be scaled or modified. Your coach will create alternatives that maintain intensity while protecting the affected area.'
+      id: 'fitness-required',
+      q: 'Trebuie să fiu în formă înainte de a începe CrossFit?',
+      a: 'Categoric nu. Acesta e cel mai mare mit! CrossFit este procesul prin care ajungi în formă. Membrii unei săli de CrossFit variază de la sportivi de elită la oameni obișnuiți care vor doar să facă mișcare.'
     },
     {
-      id: 'commitment',
-      q: language === 'ro' ? 'Cât de des trebuie să vin?' : 'How often do I need to come?',
-      a: language === 'ro'
-        ? 'Frecvența depinde de voi și de obiectivele voastre. Oferim abonamente de 8, 12 clase pe lună sau nelimitate. Chiar și 2 antrenamente pe săptămână vor aduce rezultate semnificative.'
-        : 'Frequency depends on you and your goals. We offer memberships for 8, 12 classes per month, or unlimited. Even 2 workouts per week will bring significant results.'
+      id: 'no-weights-before',
+      q: 'Ce se întâmplă dacă nu am mai făcut antrenamente cu greutăți până acum?',
+      a: 'Ești în locul potrivit. Fiecare membru nou are parte de îndrumare din partea unui antrenor, de la care va învăța mișcările de bază cu haltera, kettlebell-ul și gimnastica, în siguranță deplină.'
     },
     {
-      id: 'equipment',
-      q: language === 'ro' ? 'Trebuie să am echipament special?' : 'Do I need special equipment?',
-      a: language === 'ro'
-        ? 'Nu. Avem tot echipamentul necesar la sala de antrenament. Singurul lucru pe care l-ați putea dori sunt niște pantofi de sport buni și o ștergătoare. Totul altceva se furnizează.'
-        : 'No. We have all the equipment you need at the gym. The only thing you might want is good sneakers and a towel. Everything else is provided.'
+      id: 'bulk-up',
+      q: 'O să iau proporții de la CrossFit?',
+      a: 'Doar dacă e scopul tău specific și depui un efort uriaș în acest sens. Masa musculară excesivă vine dintr-o dietă hipercalorică și antrenamente de lifting specifice. CrossFitul se concentrează pe forță funcțională și condiționare. Vei deveni mai puternic/ă și mai tonifiat/ă, nu un culturist din greșeală!'
     },
     {
-      id: 'cost',
-      q: language === 'ro' ? 'De ce e CrossFit mai scump decât o sală de fitness obișnuită?' : 'Why is CrossFit more expensive than a regular gym?',
-      a: language === 'ro'
-        ? 'Plătiți pentru coaching expert, comunitate, programul structurat și rezultate. Antrenerii noștri sunt certificați și vor să vă vadă reușind. Investiția include planificare, progres monitorizat și suport real.'
-        : 'You\'re paying for expert coaching, community, structured programming, and results. Our coaches are certified and want to see you succeed. Your investment includes planning, monitored progress, and real support.'
+      id: 'benefits',
+      q: 'Ce beneficii are CrossFit?',
+      a: 'Printre principalele beneficii:\n• creșterea forței și rezistenței\n• arderea eficientă a caloriilor\n• îmbunătățirea mobilității\n• dezvoltarea disciplinei și consistenței\n• comunitate și motivație în antrenamente'
     },
     {
-      id: 'progression',
-      q: language === 'ro' ? 'Cum voi progresa?' : 'How will I progress?',
-      a: language === 'ro'
-        ? 'Progresul apare prin antrenament consistent. Antrenerii vor urări creșterea greutăților, micșorarea timpului de finalizare a WOD-urilor, sau executarea mișcărilor mai avansate. Veți vedea schimbări fizice în 4-6 săptămâni.'
-        : 'Progress comes from consistent training. Coaches will track increased weights, faster WOD completion times, or more advanced movement execution. You\'ll see physical changes in 4-6 weeks.'
+      id: 'weight-loss',
+      q: 'Pot slăbi făcând CrossFit?',
+      a: 'Da, dar cu nuanțe. Antrenamentele CrossFit sunt intense și pot arde un număr mare de calorii, contribuind la scăderea în greutate atunci când sunt combinate cu o alimentație echilibrată. Deși antrenamentele de orice fel ajuta în principal la menținerea masei musculare, vei slăbi tot în urma unui deficit caloric constant de-a lungul timpului.'
+    },
+    {
+      id: 'open-gym',
+      q: 'Ce este Open Gym?',
+      a: 'Open Gym este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'
+    },
+    {
+      id: 'vs-gym',
+      q: 'Prin ce diferă CrossFitul de o sală comercială?',
+      a: 'La o sală obișnuită, plătești pentru acces la aparate și ești pe cont propriu. La CrossFit Unbroken Spirit plătești pentru antrenorat profesional și un program structurat. Nu trebuie să te întrebi "ce fac azi?" – noi ne ocupăm de programare, și antrenamente, iar comunitatea, de sprijin și distracție.'
+    },
+    {
+      id: 'what-to-bring',
+      q: 'Ce ar trebui să aduc la prima clasă?',
+      a: 'Haine de sport confortabile și o pereche de încălțăminte sport (pantofii cu talpă plată sunt mai buni decât cei de alergat, cu talpă moale). Adu și o sticlă cu apă și o atitudine pozitivă.'
+    },
+    {
+      id: 'free-trial',
+      q: 'Oferiți o clasă de probă gratuită?',
+      a: 'Da! Ne-ar plăcea să experimentezi comunitatea noastră direct. Poți să te înscrii prin acest formular.'
+    },
+    {
+      id: 'class-duration',
+      q: 'Cât durează clasele?',
+      a: 'Toate clasele durează în jur de 60 de minute. Acestea includ instructajul, încălzirea ghidată, o sesiune de forță sau tehnică, antrenamentul zilei (WOD) și revenirea (stretching).'
+    },
+    {
+      id: 'pricing',
+      q: 'Cât costă un abonament?',
+      a: 'Abonamentele noastre sunt structurate în funcție de frecvența antrenamentelor. Deși suntem mai scumpi decât o sală comercială, reține că fiecare clasă este gestionată de un antrenor certificat. Practic, e un antrenament personal la o fracțiune din preț. Aici poți vedea prețurile abonamentelor.'
+    },
+    {
+      id: 'safety',
+      q: 'Este CrossFit-ul periculos? Mă voi accidenta?',
+      a: 'Orice activitate fizică implică riscuri, dar noi le reducem la minimum prin filozofia noastră: "Mecanică, Consistență, apoi Intensitate". Insistăm să te miști corect înainte de a te mișca repede sau greu.'
+    },
+    {
+      id: 'old-injury',
+      q: 'Ce fac dacă am o accidentare mai veche (genunchi, spate etc.)?',
+      a: 'Spune-i antrenorului tău! Fiecare mișcare din CrossFit poate fi adaptată (scalată). Dacă ai alergare în program, dar te dor genunchii, poți înlocui cu metri sau calorii pe bicicletă sau rower. Metodologia CrossFit prevede adaptarea oricăror mișcări pentru a te menține în siguranță.'
+    },
+    {
+      id: 'competitions',
+      q: 'Trebuie să particip la competiții?',
+      a: 'Deloc. Deși unora le plac competițiile, 90% din comunitatea noastră este aici pentru sănătate, aspect fizic și longevitate. Singura ta competiție este cu tine însuți.'
+    },
+    {
+      id: 'frequency',
+      q: 'De câte ori pe săptămână ar trebui să vin?',
+      a: 'Pentru începători, recomandăm 3 zile pe săptămână pentru a permite corpului să se recupereze. Pe măsură ce avansează, mulți membri aleg 4-5 zile pentru rezultate optime.'
+    },
+    {
+      id: 'how-to-start',
+      q: 'Cum pot începe?',
+      a: 'Cel mai simplu mod este să:\n* Programezi o ședință gratuită\n* Cunoști antrenorii și sala\n* Participi la primul antrenament\nDupă aceea vei putea intra în programul normal de clase.'
+    },
+    {
+      id: 'facilities',
+      q: 'Aveți dușuri și vestiare?',
+      a: 'Da! Avem vestiare complet echipate, astfel încât să poți merge direct la serviciu sau acasă după antrenament.'
+    },
+    {
+      id: 'drop-in',
+      q: 'Pot veni în vizită (drop-in) dacă sunt de la altă sală?',
+      a: 'Ne plac vizitatorii! Dacă ai cel puțin 3 luni de experiență în CrossFit, poți rezerva un drop-in prin site-ul nostru. Taxa este de 60 de lei.'
+    },
+    {
+      id: 'scores',
+      q: 'De ce notăm scorurile?',
+      a: 'Folosim aplicația ThunderWod pentru a monitoriza rezultatele. Nu facem asta pentru clasamente, ci pentru că datele nu mint. Să vezi la diverse intervale de timp că ai ridicat cu 5kg mai mult sau ai alergat mai repede decât în trecut e cea mai bună motivație pe termen lung!'
     }
   ];
 
