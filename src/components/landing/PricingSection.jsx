@@ -14,7 +14,7 @@ function scrollToDownloadApp() {
 const getCategories = (language) => [
   {
     id: 'core',
-    label: language === 'ro' ? 'Unbroken Core' : 'Unbroken Core',
+    label: language === 'ro' ? 'Clase de CrossFit' : 'Clase de CrossFit',
     sublabel: language === 'ro' ? 'Abonamente CrossFit' : 'CrossFit Memberships',
     icon: Dumbbell,
     description: language === 'ro'
