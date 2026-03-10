@@ -265,6 +265,7 @@ export default function FAQSection({ onBookSession }) {
                         )}
                         {faq.aOpenGym && (
                           <>
+                            {'în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul '}
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
@@ -272,9 +273,9 @@ export default function FAQSection({ onBookSession }) {
                               }}
                               className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                             >
-                              în care poți veni la sală pentru a te antrena pe cont propriu
+                              Open Gym
                             </button>
-                            {', folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'}
+                            {' nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'}
                           </>
                         )}
                       </p>
