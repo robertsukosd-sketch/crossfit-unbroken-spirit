@@ -15,10 +15,6 @@ const getNavLinks = (t) => [
   { name: t("pricing"), href: "#pricing" },
   { name: t("schedule"), href: "#schedule" },
   { name: t("contact"), href: "#contact" },
-];
-
-const getMobileNavLinks = (t) => [
-  ...getNavLinks(t),
   { name: "ThunderWOD App", href: "#app-promo-section" },
 ];
 
