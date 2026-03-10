@@ -323,7 +323,7 @@ export default function FAQSection({ onBookSession }) {
                             }}
                             className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                           >
-                            acest formular
+                            {language === 'ro' ? 'acest formular' : 'this form'}
                           </button>
                         )}
                         {faq.aWithLink && '.'}
