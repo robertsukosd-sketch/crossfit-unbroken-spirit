@@ -76,7 +76,7 @@ export default function HeroSection() {
             <Button 
               size="lg"
               onClick={() => scrollToSection('pricing')}
-              className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base md:text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
+              className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-4 sm:px-8 py-3 sm:py-6 text-xs sm:text-base md:text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
             >
               {language === 'ro' ? 'Alege-ți abonamentul' : 'Choose your subscription'}
             </Button>
@@ -84,7 +84,7 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('programs')}
-              className="bg-transparent text-white hover:bg-white/10 border-2 border-white/50 hover:border-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base md:text-lg font-bold rounded-full focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
+              className="bg-transparent text-white hover:bg-white/10 border-2 border-white/50 hover:border-white px-4 sm:px-8 py-3 sm:py-6 text-xs sm:text-base md:text-lg font-bold rounded-full focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
             >
               {t("discoverThePrograms")}
             </Button>
