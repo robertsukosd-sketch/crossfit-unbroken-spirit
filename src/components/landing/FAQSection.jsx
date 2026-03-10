@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
 import { cn } from '@/lib/utils';
+import { openAppWithFallback } from '../appStoreUtils';
 
 export default function FAQSection({ onBookSession }) {
   const { t, language } = useLanguage();
@@ -121,7 +122,8 @@ export default function FAQSection({ onBookSession }) {
     {
       id: 'scores',
       q: 'De ce notăm scorurile?',
-      a: 'Folosim aplicația ThunderWod pentru a monitoriza rezultatele. Nu facem asta pentru clasamente, ci pentru că datele nu mint. Să vezi la diverse intervale de timp că ai ridicat cu 5kg mai mult sau ai alergat mai repede decât în trecut e cea mai bună motivație pe termen lung!'
+      a: 'Folosim ',
+      aScores: true
     }
   ];
 
@@ -245,6 +247,20 @@ export default function FAQSection({ onBookSession }) {
                           >
                             Taxa este de 60 de lei.
                           </button>
+                        )}
+                        {faq.aScores && (
+                          <>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                openAppWithFallback();
+                              }}
+                              className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                            >
+                              aplicația ThunderWod
+                            </button>
+                            {' pentru a monitoriza rezultatele. Nu facem asta pentru clasamente, ci pentru că datele nu mint. Să vezi la diverse intervale de timp că ai ridicat cu 5kg mai mult sau ai alergat mai repede decât în trecut e cea mai bună motivație pe termen lung!'}
+                          </>
                         )}
                       </p>
                     </div>
