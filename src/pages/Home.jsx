@@ -75,6 +75,7 @@ export default function Home() {
         <div id="pricing">
           <PricingSection />
         </div>
+        <AppPromoSection />
         <div id="schedule">
           <ScheduleSection />
         </div>
