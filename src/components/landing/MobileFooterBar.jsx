@@ -32,17 +32,6 @@ export default function MobileFooterBar({ onBookSession, isMobileMenuOpen, setIs
       >
         {t("freeTrial")}
       </button>
-
-      {/* Menu */}
-      <button
-        type="button"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-        className="flex flex-col items-center gap-0.5 text-gray-300 hover:text-white transition-colors min-w-[52px] min-h-[44px] justify-center"
-      >
-        {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        <span className="text-[10px] font-semibold">{isMobileMenuOpen ? 'Close' : 'Menu'}</span>
-      </button>
     </div>
   );
 }
