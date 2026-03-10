@@ -107,8 +107,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? 'lună' : 'month',
         description: language === 'ro' ? 'Plan alimentar personalizat' : 'Personalized meal plan',
         features: language === 'ro'
-          ? ['Consultație inițială', 'Plan nutrițional', 'Monitorizare progres', 'Suport continuu', 'Loc de parcare inclus']
-          : ['Initial consultation', 'Nutrition plan', 'Progress monitoring', 'Ongoing support', 'Free parking spot'],
+          ? ['Consultație inițială', 'Plan nutrițional', 'Monitorizare progres', 'Suport continuu']
+          : ['Initial consultation', 'Nutrition plan', 'Progress monitoring', 'Ongoing support'],
         popular: false,
         featured: false,
       },
