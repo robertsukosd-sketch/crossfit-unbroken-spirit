@@ -338,15 +338,16 @@ export default function PricingSection() {
          </div>
 
         {/* Active Category Description */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeId + '-desc'}
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 8 }}
-            transition={{ duration: 0.2 }}
-            className="text-center mb-10"
-          >
+        <div className="min-h-[180px] mb-10 flex items-center justify-center">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeId + '-desc'}
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 8 }}
+              transition={{ duration: 0.2 }}
+              className="text-center w-full"
+            >
             <div className="inline-flex items-center gap-2 mb-2">
               {(() => { const Icon = activeCategory.icon; return <Icon className="w-5 h-5 text-sky-400" />; })()}
               <span className="text-white font-black text-xl sm:text-2xl">{activeCategory.label}</span>
