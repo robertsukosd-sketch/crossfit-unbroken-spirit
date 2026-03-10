@@ -7,7 +7,6 @@ export default function MobileFooterBar({ onBookSession }) {
   const { t } = useLanguage();
 
   const handleScheduleClick = () => {
-    setIsMobileMenuOpen(false);
     scrollToSection('schedule');
   };
 
