@@ -79,17 +79,6 @@ const getCategories = (language) => [
         featured: true,
       },
       {
-        name: language === 'ro' ? 'Nutriție' : 'Nutrition',
-        price: '350',
-        period: language === 'ro' ? 'lună' : 'month',
-        description: language === 'ro' ? 'Plan alimentar personalizat' : 'Personalized meal plan',
-        features: language === 'ro'
-          ? ['Consultație inițială', 'Plan nutrițional', 'Monitorizare progres', 'Suport continuu', 'Loc de parcare inclus']
-          : ['Initial consultation', 'Nutrition plan', 'Progress monitoring', 'Ongoing support', 'Free parking spot'],
-        popular: false,
-        featured: false,
-      },
-      {
         name: 'CrossFit Family',
         price: '900',
         period: language === 'ro' ? 'lună' : 'month',
