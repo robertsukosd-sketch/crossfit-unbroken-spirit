@@ -246,7 +246,14 @@ function PlanCard({ plan, index, t, onSignUpClick }) {
 export default function PricingSection() {
   const { t, language } = useLanguage();
   const categories = getCategories(language);
-  const [activeId, setActiveId] = useState('core');
+  const [activeId, setActiveId] = useState(() => {
+    const stored = sessionStorage.getItem('selectedPricingCategory');
+    if (stored) {
+      sessionStorage.removeItem('selectedPricingCategory');
+      return stored;
+    }
+    return 'core';
+  });
   const activeCategory = categories.find((c) => c.id === activeId);
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 640);
   const [isModalOpen, setIsModalOpen] = useState(false);
