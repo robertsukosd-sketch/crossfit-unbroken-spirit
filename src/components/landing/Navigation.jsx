@@ -11,7 +11,6 @@ import { scrollToSection } from '../config';
 const getNavLinks = (t) => [
   { name: t("home"), href: "#hero" },
   { name: t("aboutUs"), href: "#about" },
-  { name: "Coaches", href: "#coaches" },
   { name: t("startHere"), href: "#starthere" },
   { name: t("programs"), href: "#programs" },
   { name: t("pricing"), href: "#pricing" },
