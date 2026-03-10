@@ -53,7 +53,8 @@ export default function FAQSection({ onBookSession }) {
     {
       id: 'open-gym',
       q: 'Ce este Open Gym?',
-      a: 'Open Gym este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'
+      a: 'Open Gym este un interval orar',
+      aOpenGym: true
     },
     {
       id: 'vs-gym',
@@ -260,6 +261,20 @@ export default function FAQSection({ onBookSession }) {
                               aplicația ThunderWod
                             </button>
                             {' pentru a monitoriza rezultatele. Nu facem asta pentru clasamente, ci pentru că datele nu mint. Să vezi la diverse intervale de timp că ai ridicat cu 5kg mai mult sau ai alergat mai repede decât în trecut e cea mai bună motivație pe termen lung!'}
+                          </>
+                        )}
+                        {faq.aOpenGym && (
+                          <>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleScrollToPricing('ascent');
+                              }}
+                              className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                            >
+                              în care poți veni la sală pentru a te antrena pe cont propriu
+                            </button>
+                            {', folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'}
                           </>
                         )}
                       </p>
