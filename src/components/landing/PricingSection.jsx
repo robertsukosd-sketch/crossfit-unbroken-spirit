@@ -61,7 +61,7 @@ const getCategories = (language) => [
   },
   {
     id: 'ascent',
-    label: 'Ascent',
+    label: 'Open Gym',
     sublabel: language === 'ro' ? 'Servicii Extra' : 'Extra Services',
     icon: Sparkles,
     description: language === 'ro'
@@ -95,7 +95,7 @@ const getCategories = (language) => [
   },
   {
     id: 'focus',
-    label: 'Focus',
+    label: 'Personal Training',
     sublabel: language === 'ro' ? 'Personal Training' : 'Personal Training',
     icon: User,
     description: language === 'ro'
@@ -139,7 +139,7 @@ const getCategories = (language) => [
   },
   {
     id: 'welcome',
-    label: 'Welcome',
+    label: language === 'ro' ? 'Drop In/Trial' : 'Drop In/Trial',
     sublabel: language === 'ro' ? 'Vizitatori & Drop-In' : 'Visitors & Drop-In',
     icon: Globe,
     description: language === 'ro'
