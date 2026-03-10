@@ -123,7 +123,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                     onClick={() => changeLanguage('ro')}
                     aria-label="Switch to Romanian"
                     className={cn(
-                      "px-3 py-1 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500",
+                      "min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500",
                       language === 'ro' 
                         ? "bg-blue-500 text-white" 
                         : "text-gray-300 hover:text-white"
@@ -136,7 +136,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                     onClick={() => changeLanguage('en')}
                     aria-label="Switch to English"
                     className={cn(
-                      "px-3 py-1 rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500",
+                      "min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500",
                       language === 'en' 
                         ? "bg-blue-500 text-white" 
                         : "text-gray-300 hover:text-white"
