@@ -182,7 +182,7 @@ export default function FAQSection() {
                     className="overflow-hidden"
                   >
                     <div className="px-5 sm:px-6 py-4 bg-zinc-900/30 border-l-2 border-blue-500 mt-1 rounded-lg">
-                      <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                      <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                         {faq.a}
                       </p>
                     </div>
