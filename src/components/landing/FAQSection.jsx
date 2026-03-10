@@ -392,7 +392,9 @@ export default function FAQSection({ onBookSession }) {
                             >
                               Open Gym
                             </button>
-                            {' este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'}
+                            {language === 'ro'
+                              ? ' este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'
+                              : ' is a time slot when you can come to the gym to train on your own, using available equipment. Unlike regular CrossFit classes, during Open Gym there\'s no group-led training. It\'s typically used by members who want to practice specific movements, make up a missed workout, or work extra on certain skills.'}
                           </>
                         )}
                       </p>
