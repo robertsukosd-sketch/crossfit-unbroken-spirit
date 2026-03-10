@@ -213,7 +213,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     discoverThePrograms: "Discover the Programs",
     aboutUs: "About Us",
     moreThangym: "More than a gym",
-    aboutDesc: "New here or back from competitions? Same class, adapted programming. That's the point: you're not fighting to keep up. You're fighting against yourself.",
+    aboutDesc: "New here or back from competitions? Same class, adapted programming. That's the point: you're not fighting to keep up. You're fighting against yourself. Plus, unlike a commercial gym where you're on your own, here you get the full support of a coach and community.",
     intenseTraining: "High Intensity Training",
     intenseTrainingDesc: "Programming that grows with you.",
     strongCommunity: "Strong Community",
