@@ -216,7 +216,8 @@ ${fullMessage}`,
                         required
                         placeholder={t('emailPlaceholder')}
                         value={form.email}
-                        onChange={(e) => setForm({ ...form, email: e.target.value })}
+                        onChange={(e) => { setForm({ ...form, email: e.target.value }); setEmailBlurred(false); }}
+                        onBlur={() => setEmailBlurred(true)}
                         className="w-full bg-zinc-800 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-[border-color] duration-150 text-sm"
                       />
                     </div>
