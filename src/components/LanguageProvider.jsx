@@ -128,6 +128,7 @@ export const translations = {
     hoursSaturday: "S: 09:00 - 11:30",
     hoursSunday: "D: Închis",
     thunderwod: "ThunderWOD App",
+    faq: "FAQ",
     quickLinks: "Link-uri Rapide",
     footerContact: "Contact",
     terms: "Termeni și Condiții",
