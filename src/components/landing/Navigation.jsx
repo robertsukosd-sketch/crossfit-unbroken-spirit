@@ -102,7 +102,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                     href={link.href}
                     onClick={(e) => { e.preventDefault(); scrollNavToSection(link.href); }}
                     className={cn(
-                      "font-medium transition-colors relative group text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1",
+                      "font-medium transition-colors relative group text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1 whitespace-nowrap",
                       isActive ? "text-blue-400" : "text-gray-200 hover:text-white"
                     )}
                   >
@@ -122,7 +122,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                   activeSection === 'app-promo-section' ? "text-blue-400" : "text-gray-200 hover:text-white"
                 )}
               >
-                ThunderWOD App
+                ThunderWOD
                 <span className={cn(
                   "absolute -bottom-1 left-0 h-0.5 bg-blue-500 transition-[width]",
                   activeSection === 'app-promo-section' ? "w-full" : "w-0 group-hover:w-full"
@@ -175,7 +175,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                   transition={{ duration: 2, repeat: Infinity }}
                   style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
                 />
-                <span className="relative z-10">{t("freeTrial")}</span>
+                <span className="relative z-10 text-nowrap">{t("freeTrial")}</span>
               </motion.button>
             </div>
 

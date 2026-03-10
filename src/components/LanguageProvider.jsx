@@ -24,7 +24,7 @@ export const translations = {
     pricing: "Prețuri",
     schedule: "Orar",
     contact: "Contact",
-    freeTrial: "Prima Ședință Gratuită",
+    freeTrial: "O Ședință Gratuită",
     heroTag: "Pentru tine. Pentru PRs. Pentru comunitate.",
     heroTitle: "FORȚĂ. COMUNITATE. TRANSFORMĂRI REALE.",
     heroSubtitle: "Fie că începi de la zero, fie că ești avansat, găsești la noi tot ce-ți trebuie.",
