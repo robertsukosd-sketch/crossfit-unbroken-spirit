@@ -15,7 +15,7 @@ function scrollToDownloadApp() {
 const getCategories = (language) => [
   {
     id: 'core',
-    label: language === 'ro' ? 'Clase de CrossFit' : 'CrossFit Classes',
+    label: 'Core',
     sublabel: language === 'ro' ? 'Abonamente CrossFit' : 'CrossFit Memberships',
     icon: Dumbbell,
     description: language === 'ro'
@@ -61,7 +61,7 @@ const getCategories = (language) => [
   },
   {
     id: 'ascent',
-    label: language === 'ro' ? 'Open Gym' : 'Open Gym',
+    label: 'Ascent',
     sublabel: language === 'ro' ? 'Servicii Extra' : 'Extra Services',
     icon: Sparkles,
     description: language === 'ro'
@@ -95,8 +95,8 @@ const getCategories = (language) => [
   },
   {
     id: 'focus',
-    label: language === 'ro' ? 'Personal Training' : 'Personal Training',
-    sublabel: 'Personal Training',
+    label: 'Focus',
+    sublabel: language === 'ro' ? 'Personal Training' : 'Personal Training',
     icon: User,
     description: language === 'ro'
       ? 'Atenție 1-la-1 dedicată exclusiv ție.\nPrograme personalizate pentru obiectivele tale.'
@@ -139,7 +139,7 @@ const getCategories = (language) => [
   },
   {
     id: 'welcome',
-    label: language === 'ro' ? 'Drop In / Trial' : 'Drop In / Trial',
+    label: 'Welcome',
     sublabel: language === 'ro' ? 'Vizitatori & Drop-In' : 'Visitors & Drop-In',
     icon: Globe,
     description: language === 'ro'
@@ -315,7 +315,7 @@ export default function PricingSection() {
         </motion.div>
 
         {/* Category Tabs */}
-         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 mb-10 max-w-md sm:max-w-2xl lg:max-w-none mx-auto">
+         <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2 sm:gap-3 mb-10 max-w-md sm:max-w-none mx-auto">
            {categories.map((cat) => {
              const Icon = cat.icon;
              const isActive = activeId === cat.id;
@@ -324,14 +324,14 @@ export default function PricingSection() {
                  key={cat.id}
                  onClick={() => setActiveId(cat.id)}
                  className={cn(
-                   'flex items-center justify-center sm:justify-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 border',
+                   'flex items-center justify-center sm:justify-start gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 border',
                    isActive
                      ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-500/25'
                      : 'bg-zinc-900 border-zinc-700 text-gray-300 hover:border-blue-500/50 hover:text-white'
                  )}
                >
                  <Icon className="w-4 h-4 flex-shrink-0" />
-                 <span>{cat.label}</span>
+                 <span className="hidden sm:inline">{cat.label}</span>
                </button>
              );
            })}
