@@ -101,7 +101,8 @@ export default function FAQSection({ onBookSession }) {
     {
       id: 'how-to-start',
       q: 'Cum pot începe?',
-      a: 'Cel mai simplu mod este să:\n* Programezi o ședință gratuită\n* Cunoști antrenorii și sala\n* Participi la primul antrenament\nDupă aceea vei putea intra în programul normal de clase.'
+      a: 'Cel mai simplu mod este să:\n* ',
+      aHowToStart: true
     },
     {
       id: 'facilities',
@@ -215,6 +216,20 @@ export default function FAQSection({ onBookSession }) {
                           >
                             Aici poți vedea prețurile abonamentelor.
                           </button>
+                        )}
+                        {faq.aHowToStart && (
+                          <>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onBookSession?.();
+                              }}
+                              className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                            >
+                              Programezi o ședință gratuită
+                            </button>
+                            {'\n* Cunoști antrenorii și sala\n* Participi la primul antrenament\nDupă aceea vei putea intra în programul normal de clase.'}
+                          </>
                         )}
                       </p>
                     </div>
