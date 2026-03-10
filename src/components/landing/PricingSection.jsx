@@ -33,7 +33,7 @@ const getCategories = (language) => [
         featured: false,
       },
       {
-        name: language === 'ro' ? '12 Ședințe' : '12 Sessions',
+        name: language === 'ro' ? '12 Clase de CrossFit' : '12 CrossFit Classes',
         price: '400',
         period: language === 'ro' ? 'lună' : 'month',
         description: language === 'ro' ? '3 antrenamente pe săptămână' : '3 workouts per week',
