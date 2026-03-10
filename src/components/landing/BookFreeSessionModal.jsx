@@ -94,6 +94,7 @@ ${fullMessage}`,
     setForm({ name: '', email: '', phone: '' });
     setSelectedSlot(null);
     setUserMessage('');
+    setEmailBlurred(false);
     setShowSchedule(false);
     onClose();
   };
