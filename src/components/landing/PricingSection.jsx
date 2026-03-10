@@ -381,6 +381,12 @@ export default function PricingSection() {
             ))}
           </motion.div>
         </AnimatePresence>
+
+        <SubscriptionConfirmModal
+          isOpen={isModalOpen}
+          onConfirm={handleConfirm}
+          onCancel={handleCancel}
+        />
       </div>
     </section>
   );
