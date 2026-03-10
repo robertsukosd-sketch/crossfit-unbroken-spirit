@@ -247,14 +247,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                   />
                   <span className="relative z-10">{t("freeTrial")}</span>
                 </motion.button>
-                <button
-                  type="button"
-                  onClick={() => { openAppWithFallback(); setIsMobileMenuOpen(false); }}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full text-base font-semibold text-gray-300 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-colors"
-                >
-                  <Smartphone className="w-5 h-5" />
-                  <span>ThunderWOD App</span>
-                </button>
+
 
               </motion.div>
             </div>
