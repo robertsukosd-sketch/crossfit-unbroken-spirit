@@ -191,7 +191,7 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'pricing',
         q: 'How much does a membership cost?',
-        a: 'Our memberships are structured based on training frequency. While we\'re pricier than a commercial gym, remember that every class is led by a certified coach. Essentially, it\'s personal training at a fraction of the price. ',
+        a: 'Our memberships are structured based on training frequency. While we\'re pricier than a commercial gym, remember that every class is led by a certified coach. Basically, it\'s personal training for a fraction of the price. You can see the plan prices ',
         aPricing: true
       },
       {
