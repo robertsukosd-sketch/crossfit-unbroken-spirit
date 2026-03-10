@@ -31,7 +31,7 @@ export default function FAQSection({ onBookSession }) {
     },
     {
       id: 'benefits',
-      q: 'Ce beneficii are CrossFit?',
+      q: 'Ce beneficii are CrossFitul?',
       a: 'Printre principalele beneficii:\n• creșterea forței și rezistenței\n• arderea eficientă a caloriilor\n• îmbunătățirea mobilității\n• dezvoltarea disciplinei și consistenței\n• comunitate și motivație în antrenamente'
     },
     {
