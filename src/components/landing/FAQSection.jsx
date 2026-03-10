@@ -8,7 +8,10 @@ export default function FAQSection({ onBookSession }) {
   const { t, language } = useLanguage();
   const [openId, setOpenId] = useState(null);
 
-  const handleScrollToPricing = () => {
+  const handleScrollToPricing = (category = null) => {
+    if (category) {
+      sessionStorage.setItem('selectedPricingCategory', category);
+    }
     const pricingElement = document.getElementById('pricing');
     if (pricingElement) {
       pricingElement.scrollIntoView({ behavior: 'smooth' });
@@ -236,7 +239,7 @@ export default function FAQSection({ onBookSession }) {
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              handleScrollToPricing();
+                              handleScrollToPricing('drop-in');
                             }}
                             className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                           >
