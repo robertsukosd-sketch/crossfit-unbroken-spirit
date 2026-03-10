@@ -249,6 +249,21 @@ export default function PricingSection() {
   const [activeId, setActiveId] = useState('core');
   const activeCategory = categories.find((c) => c.id === activeId);
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 640);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleSignUpClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleConfirm = () => {
+    setIsModalOpen(false);
+    const url = isDesktop() ? 'https://app.thunderwod.com/#/wod' : getAppStoreUrl();
+    window.open(url, '_blank');
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 640);
