@@ -142,7 +142,7 @@ const getCategories = (language) => [
     sublabel: language === 'ro' ? 'Vizitatori & Drop-In' : 'Visitors & Drop-In',
     icon: Globe,
     description: language === 'ro'
-      ? `În vizită sau ești la început, dar vrei să încerci o săptămână de CrossFit?\nUna dintre cele două variante de mai jos ți s-ar potrivi.`
+      ? `Ești în vizită? Ești la început, dar vrei să încerci o săptămână întreagă de CrossFit?\nUna dintre cele două variante de mai jos ți s-ar potrivi.`
       : `Visiting or just starting out and want to try a week of CrossFit?\nOne of the two options below might be the right fit for you.`,
     plans: [
       {
