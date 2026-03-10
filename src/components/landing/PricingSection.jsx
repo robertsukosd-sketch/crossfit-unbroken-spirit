@@ -242,7 +242,7 @@ function PlanCard({ plan, index, t, onSignUpClick, isMobile }) {
             : 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'
         )}
       >
-        {t('startNowBtn')}
+        {isMobile ? (plan.shortName || plan.name) : t('startNowBtn')}
       </Button>
     </motion.div>
   );
