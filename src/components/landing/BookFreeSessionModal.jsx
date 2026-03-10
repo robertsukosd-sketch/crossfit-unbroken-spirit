@@ -32,8 +32,8 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
       : `Hi! My name is ${form.name.trim()} and I would like to book a free session on ${selectedSlot.day} at ${selectedSlot.time}. `
     : '';
 
-  // Show message box as soon as slot + name + valid email are present
-  const showMessageBox = selectedSlot && form.name.trim() && isValidEmail;
+  // Show message box only after email field is blurred with a valid email
+  const showMessageBox = selectedSlot && form.name.trim() && isValidEmail && emailBlurred;
   const prevShowMessageBox = useRef(false);
 
   // Only focus the textarea when the message box first appears
