@@ -347,9 +347,11 @@ export default function FAQSection({ onBookSession }) {
                               }}
                               className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                             >
-                              Programezi o ședință gratuită
+                              {language === 'ro' ? 'Programezi o ședință gratuită' : 'Book a free session'}
                             </button>
-                            {'\n* Cunoști antrenorii și sala\n* Participi la primul antrenament\nDupă aceea vei putea intra în programul normal de clase.'}
+                            {language === 'ro' 
+                              ? '\n* Cunoști antrenorii și sala\n* Participi la primul antrenament\nDupă aceea vei putea intra în programul normal de clase.'
+                              : '\n* Meet the coaches and gym\n* Participate in your first workout\nAfter that you can join the regular class program.'}
                           </>
                         )}
                         {faq.aDropIn && (
