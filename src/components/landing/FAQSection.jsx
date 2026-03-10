@@ -362,7 +362,7 @@ export default function FAQSection({ onBookSession }) {
                             }}
                             className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                           >
-                            Taxa este de 60 de lei.
+                            {language === 'ro' ? 'Taxa este de 60 de lei.' : 'The fee is 60 RON.'}
                           </button>
                         )}
                         {faq.aScores && (
