@@ -46,7 +46,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
           transition={{ type: 'spring', damping: 26, stiffness: 300 }}
           className="overflow-hidden mb-4"
         >
-          <div className="bg-zinc-800 border border-zinc-600 rounded-2xl p-4">
+          <div className="bg-zinc-800 border border-zinc-600 rounded-2xl p-4 min-w-0 w-full">
             {/* Header */}
             <div className="flex items-center justify-between mb-3">
               <span className="text-white font-black text-sm">
