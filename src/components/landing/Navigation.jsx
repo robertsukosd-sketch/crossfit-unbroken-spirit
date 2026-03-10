@@ -235,8 +235,8 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 z-40 bg-black/95 backdrop-blur-lg pt-24 lg:hidden overflow-y-auto"
           >
-            <div className="px-6 py-8 space-y-6 pb-32">
-              {navLinks.filter(l => l.href !== '#app-promo-section').map((link, index) => (
+            <div className="px-6 py-8 space-y-4 pb-32">
+              {navLinks.map((link, index) => (
                 <motion.button
                    key={link.name}
                    type="button"
