@@ -297,7 +297,7 @@ export default function PricingSection() {
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
             {language === 'ro'
-              ? <>Alege-ți calea. Fiecare opțiune poate fi un pas mai aproape<br className="hidden sm:block" /> spre cea mai bună versiune a ta.</>
+              ? (<>Alege-ți calea. Fiecare opțiune poate fi un pas mai aproape<br className="hidden sm:block" /> spre cea mai bună versiune a ta.</>)
               : 'Choose your path. Every option is a step toward the best version of yourself.'}
           </p>
         </motion.div>
