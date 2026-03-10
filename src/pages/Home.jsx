@@ -68,6 +68,9 @@ export default function Home() {
         <div id="about">
           <AboutSection />
         </div>
+        <div id="coaches">
+          <CoachesSection />
+        </div>
         <div id="starthere">
           <StartHereSection />
         </div>
@@ -80,9 +83,6 @@ export default function Home() {
         <AppPromoSection />
         <div id="schedule">
           <ScheduleSection />
-        </div>
-        <div id="coaches">
-          <CoachesSection />
         </div>
         <div id="faq">
           <FAQSection onBookSession={handleBookSession} />
