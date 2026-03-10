@@ -202,7 +202,7 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'old-injury',
         q: 'What if I have an old injury (knees, back, etc.)?',
-        a: 'Tell your coach! Every CrossFit movement can be adapted (scaled). If your programming includes running but your knees hurt, you can substitute with meters or calories on a bike or rower. CrossFit methodology provides modifications for any movement to keep you safe.'
+        a: 'Tell your coach! Every CrossFit movement can be adapted (scaled). If your programming includes running but your knees hurt, you can substitute with meters or calories on a bike or rower. The CrossFit methodology provides modifications for any movement to keep you safe.'
       },
       {
         id: 'competitions',
