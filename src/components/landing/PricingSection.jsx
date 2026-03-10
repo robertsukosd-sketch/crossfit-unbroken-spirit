@@ -23,11 +23,10 @@ const getCategories = (language) => [
       : 'The foundation of your transformation.\nGroup workouts guided by coaches, calibrated to your level.',
     plans: [
       {
-         name: language === 'ro' ? '8 Clase de CrossFit' : '8 CrossFit Classes',
-         shortName: language === 'ro' ? '8 Clase' : '8 Classes',
-         price: '320',
-         period: language === 'ro' ? 'lună' : 'month',
-         description: language === 'ro' ? '2 antrenamente pe săptămână' : '2 workouts per week',
+        name: language === 'ro' ? '8 Clase de CrossFit' : '8 CrossFit Classes',
+        price: '320',
+        period: language === 'ro' ? 'lună' : 'month',
+        description: language === 'ro' ? '2 antrenamente pe săptămână' : '2 workouts per week',
         features: language === 'ro'
           ? ['8 clase pe lună', 'Flexibilitate program', 'Valabil o lună', 'Loc de parcare inclus']
           : ['8 classes per month', 'Schedule flexibility', 'Valid for one month', 'Free parking spot'],
@@ -35,11 +34,10 @@ const getCategories = (language) => [
         featured: false,
       },
       {
-         name: language === 'ro' ? '12 Clase de CrossFit' : '12 CrossFit Classes',
-         shortName: language === 'ro' ? '12 Clase' : '12 Classes',
-         price: '400',
-         period: language === 'ro' ? 'lună' : 'month',
-         description: language === 'ro' ? '3 antrenamente pe săptămână' : '3 workouts per week',
+        name: language === 'ro' ? '12 Clase de CrossFit' : '12 CrossFit Classes',
+        price: '400',
+        period: language === 'ro' ? 'lună' : 'month',
+        description: language === 'ro' ? '3 antrenamente pe săptămână' : '3 workouts per week',
         features: language === 'ro'
           ? ['12 clase pe lună', 'Flexibilitate program', 'Valabil o lună', 'Loc de parcare inclus']
           : ['12 classes per month', 'Schedule flexibility', 'Valid for one month', 'Free parking spot'],
@@ -105,11 +103,10 @@ const getCategories = (language) => [
       : 'Undivided 1-on-1 attention dedicated exclusively to you.\nPersonalized training for your goals.',
     plans: [
       {
-         name: language === 'ro' ? 'Nutriție' : 'Nutrition',
-         shortName: language === 'ro' ? 'Nutriție' : 'Nutrition',
-         price: '350',
-         period: language === 'ro' ? 'lună' : 'month',
-         description: language === 'ro' ? 'Plan alimentar personalizat' : 'Personalized meal plan',
+        name: language === 'ro' ? 'Nutriție' : 'Nutrition',
+        price: '350',
+        period: language === 'ro' ? 'lună' : 'month',
+        description: language === 'ro' ? 'Plan alimentar personalizat' : 'Personalized meal plan',
         features: language === 'ro'
           ? ['Consultație inițială', 'Plan nutrițional', 'Monitorizare progres', 'Suport continuu']
           : ['Initial consultation', 'Nutrition plan', 'Progress monitoring', 'Ongoing support'],
@@ -117,11 +114,10 @@ const getCategories = (language) => [
         featured: false,
       },
       {
-         name: language === 'ro' ? 'PT 8 Ședințe' : 'PT 8 Sessions',
-         shortName: language === 'ro' ? 'PT 8' : 'PT 8',
-         price: '1300',
-         period: language === 'ro' ? '8 ședințe' : '8 sessions',
-         description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
+        name: language === 'ro' ? 'PT 8 Ședințe' : 'PT 8 Sessions',
+        price: '1300',
+        period: language === 'ro' ? '8 ședințe' : '8 sessions',
+        description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
         features: language === 'ro'
           ? ['8 sesiuni 1-la-1', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
           : ['8 one-on-one sessions', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
@@ -129,11 +125,10 @@ const getCategories = (language) => [
         featured: false,
       },
       {
-         name: language === 'ro' ? 'PT 12 Ședințe' : 'PT 12 Sessions',
-         shortName: language === 'ro' ? 'PT 12' : 'PT 12',
-         price: '1600',
-         period: language === 'ro' ? '12 ședințe' : '12 sessions',
-         description: language === 'ro' ? 'Transformare completă' : 'Complete transformation',
+        name: language === 'ro' ? 'PT 12 Ședințe' : 'PT 12 Sessions',
+        price: '1600',
+        period: language === 'ro' ? '12 ședințe' : '12 sessions',
+        description: language === 'ro' ? 'Transformare completă' : 'Complete transformation',
         features: language === 'ro'
           ? ['12 sesiuni 1-la-1', 'Program individualizat', 'Nutriție de bază', 'Suport WhatsApp', 'Monitorizare progres', 'Loc de parcare inclus']
           : ['12 one-on-one sessions', 'Individualized program', 'Basic nutrition', 'WhatsApp support', 'Progress monitoring', 'Free parking spot'],
@@ -177,7 +172,7 @@ const getCategories = (language) => [
   },
 ];
 
-function PlanCard({ plan, index, t, onSignUpClick, isMobile }) {
+function PlanCard({ plan, index, t, onSignUpClick }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -201,7 +196,7 @@ function PlanCard({ plan, index, t, onSignUpClick, isMobile }) {
 
       <div className="text-center mb-6">
         <div className="min-h-[4.5rem] mb-4">
-          <h4 className="text-lg font-bold text-white mb-1">{isMobile ? (plan.shortName || plan.name) : plan.name}</h4>
+          <h4 className="text-lg font-bold text-white mb-1">{plan.name}</h4>
           <p className={cn('text-sm', plan.featured ? 'text-white/80' : 'text-gray-400')}>
             {plan.description}
           </p>
@@ -242,7 +237,7 @@ function PlanCard({ plan, index, t, onSignUpClick, isMobile }) {
             : 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'
         )}
       >
-        {isMobile ? (plan.shortName || plan.name) : t('startNowBtn')}
+        {t('startNowBtn')}
       </Button>
     </motion.div>
   );
@@ -374,15 +369,15 @@ export default function PricingSection() {
             className={cn('grid gap-6', gridClass(activeCategory.plans.length))}
           >
             {[...activeCategory.plans]
-               .sort((a, b) => {
-                 if (!isMobile) return 0;
-                 const aScore = (a.featured ? 2 : 0) + (a.popular ? 1 : 0);
-                 const bScore = (b.featured ? 2 : 0) + (b.popular ? 1 : 0);
-                 return bScore - aScore;
-               })
-               .map((plan, index) => (
-               <PlanCard key={plan.name} plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} isMobile={isMobile} />
-             ))}
+              .sort((a, b) => {
+                if (!isMobile) return 0;
+                const aScore = (a.featured ? 2 : 0) + (a.popular ? 1 : 0);
+                const bScore = (b.featured ? 2 : 0) + (b.popular ? 1 : 0);
+                return bScore - aScore;
+              })
+              .map((plan, index) => (
+              <PlanCard key={plan.name} plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} />
+            ))}
           </motion.div>
         </AnimatePresence>
 
