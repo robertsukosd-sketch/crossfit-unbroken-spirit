@@ -51,8 +51,8 @@ const getCategories = (language) => [
         studentPrice: '300',
         studentNote: language === 'ro' ? '🎓 Elevi/Studenți până la 26 ani: 300 RON / lună' : '🎓 Students up to 26 years old: 300 RON / month',
         features: language === 'ro'
-          ? ['Ședințe nelimitate', 'Toate clasele incluse', 'Open Gym inclus', 'Prioritate înscriere', 'Loc de parcare inclus']
-          : ['Unlimited sessions', 'All classes included', 'Open Gym included', 'Priority booking', 'Free parking spot'],
+          ? ['Acces la toate clasele', 'Open Gym inclus', 'Prioritate înscriere', 'Loc de parcare inclus']
+          : ['Access to all classes', 'Open Gym included', 'Priority booking', 'Free parking spot'],
         popular: true,
         featured: true,
       },
