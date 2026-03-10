@@ -22,7 +22,7 @@ const getCategories = (language) => [
       : 'The foundation of your transformation.\nGroup workouts guided by coaches, calibrated to your level.',
     plans: [
       {
-        name: language === 'ro' ? '8 Ședințe' : '8 Sessions',
+        name: language === 'ro' ? '8 Clase de CrossFit' : '8 CrossFit Classes',
         price: '320',
         period: language === 'ro' ? 'lună' : 'month',
         description: language === 'ro' ? '2 antrenamente pe săptămână' : '2 workouts per week',
