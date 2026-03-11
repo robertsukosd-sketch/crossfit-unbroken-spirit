@@ -53,9 +53,10 @@ export default function FAQSection({ onBookSession }) {
     if (language === 'ro') {
       return [
         {
-          id: 'what-is',
-          q: 'Ce este CrossFit?',
-          a: 'CrossFit este un program de antrenament bazat pe mișcări funcționale, realizate la intensitate ridicată și variate constant. Acesta combină exerciții de forță, cardio și gimnastică pentru a îmbunătăți condiția fizică generală. Scopul este să dezvolți forță, rezistență, mobilitate și performanță pentru activitățile din viața reală.'
+           id: 'what-is',
+           q: 'Ce este CrossFit?',
+           a: 'CrossFit este un program de antrenament bazat pe mișcări funcționale, realizate la intensitate ridicată și variate constant. Acesta combină exerciții de forță, cardio și gimnastică pentru a îmbunătăți condiția fizică generală. Scopul este să dezvolți forță, rezistență, mobilitate și performanță pentru activitățile din viața reală.',
+           aImage: true
         },
         {
           id: 'vs-gym',
@@ -183,7 +184,8 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'what-is',
         q: 'What is CrossFit?',
-        a: 'CrossFit is a training program based on functional movements, performed at high intensity and constantly varied. It combines strength, cardio, and gymnastics exercises to improve overall fitness. The goal is to develop strength, endurance, mobility, and performance for real-life activities.'
+        a: 'CrossFit is a training program based on functional movements, performed at high intensity and constantly varied. It combines strength, cardio, and gymnastics exercises to improve overall fitness. The goal is to develop strength, endurance, mobility, and performance for real-life activities.',
+        aImage: true
       },
       {
         id: 'vs-gym',
@@ -568,7 +570,14 @@ export default function FAQSection({ onBookSession }) {
                                : ' is a time slot when you can come to the gym to train on your own, using available equipment. Unlike regular CrossFit classes, during Open Gym there\'s no group-led training. It\'s typically used by members who want to practice specific movements, make up a missed workout, or work extra on certain skills.'}
                            </>
                          )}
-                      </p>
+                        {faq.aImage && (
+                          <img
+                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/c02900e79_image.png"
+                            alt={language === 'ro' ? 'CrossFit - Fitness în 100 de cuvinte' : 'CrossFit - Fitness in 100 words'}
+                            className="mt-4 w-full rounded-xl border border-zinc-700"
+                          />
+                        )}
+                        </p>
                     </div>
                   </motion.div>
                 )}
