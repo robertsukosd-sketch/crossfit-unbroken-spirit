@@ -137,14 +137,14 @@ export default function FAQSection({ onBookSession }) {
         a: 'CrossFit is a training program based on functional movements, performed at high intensity and constantly varied. It combines strength, cardio, and gymnastics exercises to improve overall fitness. The goal is to develop strength, endurance, mobility, and performance for real-life activities.'
       },
       {
-        id: 'fitness-required',
-        q: 'Do I need to be in shape before starting CrossFit?',
-        a: 'Absolutely not. This is the biggest myth! CrossFit is the process of getting in shape. CrossFit box members range from elite athletes to regular people who just want to move.'
-      },
-      {
         id: 'vs-gym',
         q: 'How is CrossFit different from a regular gym?',
         a: 'At a regular gym, you pay for equipment access and you\'re on your own. At CrossFit Unbroken Spirit, you pay for professional coaching and a structured program. You don\'t have to ask "what do I do today?" – we handle programming and workouts, while the community provides support and fun.'
+      },
+      {
+        id: 'fitness-required',
+        q: 'Do I need to be in shape before starting CrossFit?',
+        a: 'Absolutely not. This is the biggest myth! CrossFit is the process of getting in shape. CrossFit box members range from elite athletes to regular people who just want to move.'
       },
       {
         id: 'no-weights-before',
