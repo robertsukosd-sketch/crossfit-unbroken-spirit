@@ -239,6 +239,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     personalTrainingDesc: "1-on-1 personalized training to achieve your goals at your own pace.",
     openGym: "Open Gym",
     openGymDesc: "Free access to equipment for independent workouts.",
+    pricingMobile: "Pricing and Plans",
     pricingTitle: "Pricing",
     pricingSubtitle: "Learn right from day one. No judgment. Real coaches, real progress.\nCompete with your past self.",
     crossfitMemberships: "CrossFit Memberships",
