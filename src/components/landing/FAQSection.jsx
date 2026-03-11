@@ -277,7 +277,8 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'frequency',
         q: 'How many times a week should I come?',
-        a: 'For beginners, we recommend 3 days a week to allow your body to recover. As you progress, many members choose 4-5 days for optimal results.'
+        a: 'For beginners, we recommend ',
+        aFrequency: true
       },
       {
         id: 'how-to-start',
