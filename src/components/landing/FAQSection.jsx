@@ -489,23 +489,19 @@ export default function FAQSection({ onBookSession }) {
                         {faq.aScores && (language === 'ro' ? ' pentru a monitoriza rezultatele. Nu facem asta pentru clasamente, ci pentru că datele nu mint. Să vezi la diverse intervale de timp că ai ridicat cu 5kg mai mult sau ai alergat mai repede decât în trecut e cea mai bună motivație pe termen lung!' : ' to track your results. We don\'t do this for rankings, but because the data doesn\'t lie. Seeing over time that you lifted 5kg more or ran faster than before is the best long-term motivation!')}
                       </p>
 
-                      {/* Parking section */}
                       {faq.aParking && (
-                        <>
-                          <img
-                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
-                            alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
-                            className="w-full rounded-xl border border-zinc-700"
-                          />
-                        </>
+                        <img
+                          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
+                          alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
+                          className="w-full rounded-xl border border-zinc-700 mt-3"
+                        />
                       )}
 
-                      {/* CrossFit info image */}
                       {faq.aImage && (
                         <img
                           src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/c02900e79_image.png"
                           alt={language === 'ro' ? 'CrossFit - Fitness în 100 de cuvinte' : 'CrossFit - Fitness in 100 words'}
-                          className="w-full rounded-xl border border-zinc-700"
+                          className="w-full rounded-xl border border-zinc-700 mt-3"
                         />
                       )}
                     </div>
