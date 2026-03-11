@@ -46,7 +46,7 @@ export default function CoachesSection() {
     : '';
 
   return (
-    <section id="coaches" className="py-24 bg-zinc-950 relative overflow-hidden">
+    <section className="py-16 bg-zinc-950 relative overflow-hidden border-t border-zinc-900">
       {/* Background accents */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-sky-600/5 rounded-full blur-3xl pointer-events-none" />
