@@ -518,6 +518,23 @@ export default function FAQSection({ onBookSession }) {
                                : ' to allow your body to recover. As you progress, many members choose 4-5 days for optimal results.'}
                            </>
                          )}
+                        {faq.aClassDuration && (
+                           <>
+                             <button
+                               onClick={(e) => {
+                                 e.stopPropagation();
+                                 sessionStorage.setItem('openFaqId', 'faq-wod-meaning');
+                                 window.dispatchEvent(new Event('openFaqEvent'));
+                               }}
+                               className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                             >
+                               {language === 'ro' ? 'antrenamentul zilei (WOD)' : 'Workout of the Day (WOD)'}
+                             </button>
+                             {language === 'ro'
+                               ? ' și revenirea (stretching).'
+                               : ' and cool-down (stretching).'}
+                           </>
+                         )}
                         {faq.aOpenGym && (
                            <>
                              <button
