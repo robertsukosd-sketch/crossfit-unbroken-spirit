@@ -99,7 +99,8 @@ export default function FAQSection({ onBookSession }) {
           q: 'Cum pot ajunge la sală? Există parcare?',
           a: 'Sala este ușor accesibilă, atât cu transportul în comun, cât și cu mașina.\nCea mai apropiată stație de metrou este Mihai Bravu, aflată la aproximativ 7–8 minute de mers pe jos. În același timp, cele mai apropiate stații STB sunt Pod Mihai Bravu pentru linia de autobuz 223 și Pod Mihai Bravu pentru liniile de tramvai 1 și 10.\nDacă vii cu mașina, ai un mare avantaj: parcare gratuită inclusă! Nu trebuie să îți faci griji pentru locul de parcare sau costuri suplimentare.',
           aParking: true,
-          aParkingRo: true
+          aParkingRo: true,
+          aHighlightParking: true
         },
         {
           id: 'thunderwod-app',
