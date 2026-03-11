@@ -424,7 +424,7 @@ export default function FAQSection({ onBookSession }) {
                             <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
                             {' pentru linia de autobuz 223 și '}
                             <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
-                            {' pentru linia de tramvai 10.\nDacă vii cu mașina, ai un mare avantaj: parcare gratuită inclusă! Nu trebuie să îți faci griji pentru locul de parcare sau costuri suplimentare.'}
+                            {' pentru liniile de tramvai 1 și 10.\nDacă vii cu mașina, ai un mare avantaj: parcare gratuită inclusă! Nu trebuie să îți faci griji pentru locul de parcare sau costuri suplimentare.'}
                           </span>
                         )}
                         {faq.aParkingEn && (
@@ -435,7 +435,7 @@ export default function FAQSection({ onBookSession }) {
                             <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
                             {' for bus line 223 and '}
                             <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
-                            {' for tram line 10.\nIf you\'re coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.'}
+                            {' for tram lines 1 and 10.\nIf you\'re coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.'}
                           </span>
                         )}
                         {faq.aParking && (
