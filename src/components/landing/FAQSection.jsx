@@ -28,14 +28,14 @@ export default function FAQSection({ onBookSession }) {
           a: 'CrossFit este un program de antrenament bazat pe mișcări funcționale, realizate la intensitate ridicată și variate constant. Acesta combină exerciții de forță, cardio și gimnastică pentru a îmbunătăți condiția fizică generală. Scopul este să dezvolți forță, rezistență, mobilitate și performanță pentru activitățile din viața reală.'
         },
         {
-          id: 'fitness-required',
-          q: 'Trebuie să fiu în formă înainte de a începe CrossFit?',
-          a: 'Categoric nu. Acesta e cel mai mare mit! CrossFit este procesul prin care ajungi în formă. Membrii unei săli de CrossFit variază de la sportivi de elită la oameni obișnuiți care vor doar să facă mișcare.'
-        },
-        {
           id: 'vs-gym',
           q: 'Prin ce diferă CrossFitul de o sală comercială?',
           a: 'La o sală obișnuită plătești pentru acces la aparate și te antrenezi pe cont propriu.\nLa CrossFit Unbroken Spirit, abonamentul presupune participarea la clase de grup ghidate de antrenor. Fiecare antrenament este deja programat și structurat, iar antrenorul te ghidează pe parcursul sesiunii.\nAsta înseamnă că nu trebuie să te întrebi „ce fac azi?" — noi ne ocupăm de programare și antrenamente, iar comunitatea oferă suport, motivație și energie la fiecare clasă.'
+        },
+        {
+          id: 'fitness-required',
+          q: 'Trebuie să fiu în formă înainte de a începe CrossFit?',
+          a: 'Categoric nu. Acesta e cel mai mare mit! CrossFit este procesul prin care ajungi în formă. Membrii unei săli de CrossFit variază de la sportivi de elită la oameni obișnuiți care vor doar să facă mișcare.'
         },
         {
           id: 'no-weights-before',
