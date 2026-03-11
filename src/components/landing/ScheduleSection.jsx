@@ -110,9 +110,10 @@ export default function ScheduleSection() {
               : <>Class <span className="text-blue-500">Schedule</span></>
             }
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            {t("scheduleSubtitle")}
-          </p>
+          <div className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p>{t("scheduleSubtitle")}</p>
+            <p className="text-sm text-gray-500 mt-2">{t("scheduleSubtitleLine2")}</p>
+          </div>
         </motion.div>
 
         {/* Day selector */}
