@@ -557,30 +557,37 @@ export default function FAQSection({ onBookSession }) {
                         </p>
                         )}
                         {faq.aParking && (
-                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                          {faq.aParkingRo && (
-                            <span>
-                              {'Sala este ușor accesibilă, atât cu transportul în comun, cât și cu mașina.\nCea mai apropiată stație de metrou este '}
-                              <span className="text-sky-400 font-semibold">Mihai Bravu</span>
-                              {', aflată la aproximativ 7–8 minute de mers pe jos. În același timp, cele mai apropiate stații STB sunt '}
-                              <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
-                              {' pentru linia de autobuz 223 și '}
-                              <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
-                              {' pentru liniile de tramvai 1 și 10.\nDacă vii cu mașina, ai un mare avantaj: parcare gratuită inclusă! Nu trebuie să îți faci griji pentru locul de parcare sau costuri suplimentare.'}
-                            </span>
-                          )}
-                          {faq.aParkingEn && (
-                            <span>
-                              {'The box is easily accessible by both public transport and car.\nThe nearest subway station is '}
-                              <span className="text-sky-400 font-semibold">Mihai Bravu</span>
-                              {', about a 7–8 minute walk away. The nearest STB stops are '}
-                              <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
-                              {' for bus line 223 and '}
-                              <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
-                              {' for tram lines 1 and 10.\nIf you\'re coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.'}
-                            </span>
-                          )}
-                        </p>
+                          <>
+                            <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                              {faq.aParkingRo && (
+                                <span>
+                                  {'Sala este ușor accesibilă, atât cu transportul în comun, cât și cu mașina.\nCea mai apropiată stație de metrou este '}
+                                  <span className="text-sky-400 font-semibold">Mihai Bravu</span>
+                                  {', aflată la aproximativ 7–8 minute de mers pe jos. În același timp, cele mai apropiate stații STB sunt '}
+                                  <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
+                                  {' pentru linia de autobuz 223 și '}
+                                  <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
+                                  {' pentru liniile de tramvai 1 și 10.\nDacă vii cu mașina, ai un mare avantaj: parcare gratuită inclusă! Nu trebuie să îți faci griji pentru locul de parcare sau costuri suplimentare.'}
+                                </span>
+                              )}
+                              {faq.aParkingEn && (
+                                <span>
+                                  {'The box is easily accessible by both public transport and car.\nThe nearest subway station is '}
+                                  <span className="text-sky-400 font-semibold">Mihai Bravu</span>
+                                  {', about a 7–8 minute walk away. The nearest STB stops are '}
+                                  <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
+                                  {' for bus line 223 and '}
+                                  <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
+                                  {' for tram lines 1 and 10.\nIf you\'re coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.'}
+                                </span>
+                              )}
+                            </p>
+                            <img
+                              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
+                              alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
+                              className="mt-4 w-full rounded-xl border border-zinc-700"
+                            />
+                          </>
                         )}
                         {faq.aImage && (
                         <img
