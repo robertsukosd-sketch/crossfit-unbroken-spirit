@@ -500,22 +500,38 @@ export default function FAQSection({ onBookSession }) {
                             className="mt-4 w-full rounded-xl border border-zinc-700"
                           />
                         )}
+                        {faq.aFrequency && (
+                           <>
+                             <button
+                               onClick={(e) => {
+                                 e.stopPropagation();
+                                 handleScrollToPricing('crossfit');
+                               }}
+                               className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                             >
+                               {language === 'ro' ? '3 zile pe săptămână' : '3 days a week'}
+                             </button>
+                             {language === 'ro'
+                               ? ' pentru a permite corpului să se recupereze. Pe măsură ce avansează, mulți membri aleg 4-5 zile pentru rezultate optime.'
+                               : ' to allow your body to recover. As you progress, many members choose 4-5 days for optimal results.'}
+                           </>
+                         )}
                         {faq.aOpenGym && (
-                          <>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleScrollToPricing('ascent');
-                              }}
-                              className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
-                            >
-                              Open Gym
-                            </button>
-                            {language === 'ro'
-                              ? ' este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'
-                              : ' is a time slot when you can come to the gym to train on your own, using available equipment. Unlike regular CrossFit classes, during Open Gym there\'s no group-led training. It\'s typically used by members who want to practice specific movements, make up a missed workout, or work extra on certain skills.'}
-                          </>
-                        )}
+                           <>
+                             <button
+                               onClick={(e) => {
+                                 e.stopPropagation();
+                                 handleScrollToPricing('ascent');
+                               }}
+                               className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                             >
+                               Open Gym
+                             </button>
+                             {language === 'ro'
+                               ? ' este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'
+                               : ' is a time slot when you can come to the gym to train on your own, using available equipment. Unlike regular CrossFit classes, during Open Gym there\'s no group-led training. It\'s typically used by members who want to practice specific movements, make up a missed workout, or work extra on certain skills.'}
+                           </>
+                         )}
                       </p>
                     </div>
                   </motion.div>
