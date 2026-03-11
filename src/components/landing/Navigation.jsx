@@ -245,7 +245,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                    transition={{ delay: index * 0.1 }}
                    className="block w-full text-left text-lg font-bold text-white hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-3 py-2"
                  >
-                   {link.name}
+                   {link.href === '#pricing' && language === 'ro' ? t("pricingMobile") : link.name}
                  </motion.button>
               ))}
               <motion.div
