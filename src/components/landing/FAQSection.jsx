@@ -413,6 +413,23 @@ export default function FAQSection({ onBookSession }) {
                               : part
                           )}
                         </p>
+                      ) : faq.aOpenGym ? (
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                          {faq.a.split('Open Gym').map((part, i, arr) => 
+                            i < arr.length - 1 
+                              ? [part, <button
+                                  key={`opengym-${i}`}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleScrollToPricing('open-gym');
+                                  }}
+                                  className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                                >
+                                  Open Gym
+                                </button>]
+                              : part
+                          )}
+                        </p>
                       ) : (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                           {faq.a}
