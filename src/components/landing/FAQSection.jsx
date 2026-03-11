@@ -178,6 +178,11 @@ export default function FAQSection({ onBookSession }) {
         aOpenGym: true
       },
       {
+        id: 'thunderwod-app',
+        q: 'Why do I need to download the ThunderWOD app?',
+        a: 'The ThunderWOD app is used to organize and manage your gym workouts. Through the app:\n• you can reserve your spot in classes\n• you can view the workout schedule\n• you can see the Workout of the Day (WOD) in advance\n• you can track your results and monitor your progress\n• you can pay for and manage your membership\nEssentially, it\'s one app for everything: bookings, workouts, and payments — making the whole process fast, simple, and easy to manage right from your phone.'
+      },
+      {
         id: 'what-to-bring',
         q: 'What should I bring to my first class?',
         a: 'Comfortable workout clothes and a pair of athletic shoes (flat-soled shoes are better than running shoes with soft soles). Also bring a water bottle and a positive attitude.'
