@@ -150,7 +150,8 @@ export default function FAQSection({ onBookSession }) {
         {
           id: 'frequency',
           q: 'De câte ori pe săptămână ar trebui să vin?',
-          a: 'Pentru începători, recomandăm 3 zile pe săptămână pentru a permite corpului să se recupereze. Pe măsură ce avansează, mulți membri aleg 4-5 zile pentru rezultate optime.'
+          a: 'Pentru începători, recomandăm ',
+          aFrequency: true
         },
         {
           id: 'how-to-start',
