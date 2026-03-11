@@ -130,7 +130,7 @@ export default function FAQSection({ onBookSession }) {
         {
           id: 'pricing',
           q: 'Cât costă un abonament?',
-          a: 'Abonamentele noastre sunt structurate în funcție de frecvența antrenamentelor. Deși suntem mai scumpi decât o sală comercială, reține că fiecare clasă este gestionată de un antrenor certificat. Practic, e un antrenament personal la o fracțiune din preț. ',
+          a: 'Abonamentele noastre sunt structurate în funcție de frecvența antrenamentelor. Deși suntem mai scumpi decât o sală comercială, reține că fiecare clasă este gestionată de un antrenor. Practic, e un antrenament personal la ',
           aPricing: true
         },
         {
@@ -261,7 +261,7 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'pricing',
         q: 'How much does a membership cost?',
-        a: 'Our memberships are structured based on training frequency. While we\'re pricier than a commercial gym, remember that every class is led by a certified coach. Basically, it\'s personal training for a fraction of the price. You can see the plan prices ',
+        a: 'Our memberships are structured based on training frequency. While we\'re pricier than a commercial gym, remember that every class is led by a coach. Basically, it\'s personal training for ',
         aPricing: true
       },
       {
