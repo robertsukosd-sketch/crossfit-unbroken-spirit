@@ -22,7 +22,7 @@ export default function CoachesSection() {
       name: 'Dumitru Mîndrescu',
       image: 'https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?w=400&h=400&fit=crop',
       certifications: ['CrossFit Level 2', 'Movement Specialist', 'Gymnastics Coach'],
-      experience: language === 'ro' ? '6 ani în fitness' : '6 years in fitness',
+      experience: language === 'ro' ? '7 ani în CrossFit' : '7 years in CrossFit',
       bioRo: 'Dumitru se concentrează pe mecanica corectă a mișcării și este cunoscut pentru abordarea sa pacientă cu noii membri. Specialitatea lui este gymnastica și mobilitate avansată.',
       bioEn: 'Dumitru focuses on proper movement mechanics and is known for his patient approach with new members. His specialty is gymnastics and advanced mobility.'
     },
@@ -109,12 +109,6 @@ export default function CoachesSection() {
 
                 {/* Certifications */}
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <Award className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                    <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">
-                      {language === 'ro' ? 'Certificări' : 'Certifications'}
-                    </span>
-                  </div>
                   <div className="space-y-2">
                     {coach.certifications.map((cert, idx) => (
                       <div
