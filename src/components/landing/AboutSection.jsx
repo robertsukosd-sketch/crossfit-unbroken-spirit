@@ -74,7 +74,7 @@ export default function AboutSection() {
                 : <>More than a <span className="text-blue-500">gym</span></>
               }
             </h2>
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 whitespace-pre-line">
               {t("aboutDesc")}
             </p>
             
