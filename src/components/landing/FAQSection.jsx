@@ -384,17 +384,17 @@ export default function FAQSection({ onBookSession }) {
                     <div className="px-5 sm:px-6 py-4 bg-zinc-900/30 border-l-2 border-blue-500 mt-1 rounded-lg space-y-3">
                       {/* Main answer text */}
                       {faq.aThunderWODStart ? (
-                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
                               openAppWithFallback();
                             }}
-                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold inline"
                           >
                             Aplicația ThunderWOD
                           </button>
-                          {' este folosită pentru organizarea și gestionarea antrenamentelor din sală. Prin aplicație:\n• poți să-ți rezervi locul la clase\n• poți să vezi programul antrenamentelor\n• poți să vezi în avans antrenamentul zilei (WOD)\n• îți poți urmări rezultatele și monitoriza progresul\n• îți poți plăti și gestiona abonamentul'}
+{' este folosită pentru organizarea și gestionarea antrenamentelor din sală. Prin aplicație:\n• poți să-ți rezervi locul la clase\n• poți să vezi programul antrenamentelor\n• poți să vezi în avans antrenamentul zilei (WOD)\n• îți poți urmări rezultatele și monitoriza progresul\n• îți poți plăți și gestiona abonamentul'}
                         </p>
                       ) : faq.aHighlightGym ? (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
