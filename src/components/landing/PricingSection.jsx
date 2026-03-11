@@ -271,11 +271,7 @@ export default function PricingSection() {
     setIsModalOpen(false);
   };
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 640);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+
 
   const gridClass = (count) => {
     if (count === 1) return 'grid-cols-1 max-w-sm mx-auto';
