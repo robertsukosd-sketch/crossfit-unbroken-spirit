@@ -416,6 +416,13 @@ export default function FAQSection({ onBookSession }) {
                               : ' to track your results. We don\'t do this for rankings, but because the data doesn\'t lie. Seeing over time that you lifted 5kg more or ran faster than before is the best long-term motivation!'}
                           </>
                         )}
+                        {faq.aParking && (
+                          <img
+                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
+                            alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
+                            className="mt-4 w-full rounded-xl border border-zinc-700"
+                          />
+                        )}
                         {faq.aOpenGym && (
                           <>
                             <button
