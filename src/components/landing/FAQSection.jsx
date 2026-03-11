@@ -173,11 +173,6 @@ export default function FAQSection({ onBookSession }) {
         aOpenGym: true
       },
       {
-        id: 'vs-gym',
-        q: 'How is CrossFit different from a regular gym?',
-        a: 'At a regular gym, you pay for equipment access and you\'re on your own. At CrossFit Unbroken Spirit, you pay for professional coaching and a structured program. You don\'t have to ask "what do I do today?" – we handle programming and workouts, while the community provides support and fun.'
-      },
-      {
         id: 'what-to-bring',
         q: 'What should I bring to my first class?',
         a: 'Comfortable workout clothes and a pair of athletic shoes (flat-soled shoes are better than running shoes with soft soles). Also bring a water bottle and a positive attitude.'
