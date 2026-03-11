@@ -228,7 +228,7 @@ export default function FAQSection({ onBookSession }) {
       },
       {
         id: 'parking',
-        q: 'How can I get to the gym? Do you have a parking lot?',
+        q: 'How can I get to the box? Do you have a parking lot?',
         aParking: true,
         aParkingEn: true
       },
@@ -486,7 +486,7 @@ export default function FAQSection({ onBookSession }) {
                         )}
                         {faq.aParkingEn && (
                           <span>
-                            {'The gym is easily accessible by both public transport and car.\nThe nearest metro station is '}
+                            {'The box is easily accessible by both public transport and car.\nThe nearest subway station is '}
                             <span className="text-sky-400 font-semibold">Mihai Bravu</span>
                             {', about a 7–8 minute walk away. The nearest STB stops are '}
                             <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
