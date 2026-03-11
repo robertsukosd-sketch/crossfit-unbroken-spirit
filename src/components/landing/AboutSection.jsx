@@ -32,9 +32,17 @@ export default function AboutSection() {
 
   const handleWODClick = () => {
     sessionStorage.setItem('openFaqId', 'faq-wod-meaning');
-    setTimeout(() => {
-      document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+    const faqSection = document.getElementById('faq');
+    if (faqSection) {
+      faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        const element = document.getElementById('faq-wod-meaning');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 600);
+    }
+    window.dispatchEvent(new Event('openFaqEvent'));
   };
 
   return (
