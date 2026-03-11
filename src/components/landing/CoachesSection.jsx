@@ -20,7 +20,7 @@ export default function CoachesSection() {
     {
       id: 2,
       name: 'Dumitru Mîndrescu',
-      image: 'https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?w=400&h=400&fit=crop',
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/1cc21e186_IMG_1206.jpg',
       certifications: language === 'ro'
         ? ['Antrenor de 7 ani', 'Atlet competitiv de 7 ani', 'Haltere & Gimnastică', 'Pregătire pentru competiții']
         : ['7 years as a coach', '7 years as a competitive athlete', 'Weightlifting & Gymnastics', 'Competition preparation'],
