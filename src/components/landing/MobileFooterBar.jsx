@@ -29,7 +29,7 @@ export default function MobileFooterBar({ onBookSession }) {
         onClick={onBookSession}
         className="flex-1 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white font-bold rounded-full py-3 text-sm transition-all shadow-lg shadow-blue-900/40"
       >
-        {t("freeTrial")}
+        {t("bookFreeClass")}
       </button>
     </div>
   );
