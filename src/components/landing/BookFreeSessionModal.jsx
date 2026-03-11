@@ -135,7 +135,18 @@ ${fullMessage}`,
                     <p className="text-gray-400 text-sm leading-relaxed">
                       {isRo ? (
                         <>
-                          Verifică{' '}
+                          Vezi{' '}
+                          <button
+                            type="button"
+                            onClick={() => {
+                              sessionStorage.setItem('openFaqId', 'parking');
+                              document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+                          >
+                            cum ajungi la noi
+                          </button>
+                          {', verifică '}
                           <button
                             type="button"
                             onClick={() => setShowSchedule((v) => !v)}
