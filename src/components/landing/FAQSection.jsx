@@ -10,19 +10,27 @@ export default function FAQSection({ onBookSession }) {
   const [openId, setOpenId] = useState(null);
 
   useEffect(() => {
-    const openFaqId = sessionStorage.getItem('openFaqId');
-    if (openFaqId) {
-      setOpenId(openFaqId);
-      sessionStorage.removeItem('openFaqId');
-      
-      // Scroll to the FAQ item after a brief delay for DOM to settle
-      setTimeout(() => {
-        const element = document.getElementById(openFaqId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 100);
-    }
+    const checkForOpenFaq = () => {
+      const openFaqId = sessionStorage.getItem('openFaqId');
+      if (openFaqId) {
+        setOpenId(openFaqId);
+        sessionStorage.removeItem('openFaqId');
+        
+        // Scroll to the FAQ item after a longer delay to ensure section is rendered
+        setTimeout(() => {
+          const element = document.getElementById(openFaqId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 500);
+      }
+    };
+    
+    // Check immediately and also after a delay in case section isn't mounted yet
+    checkForOpenFaq();
+    const timer = setTimeout(checkForOpenFaq, 300);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   const handleScrollToPricing = (category = null) => {
