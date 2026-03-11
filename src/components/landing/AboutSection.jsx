@@ -29,6 +29,11 @@ const getFeatures = (t) => [
 export default function AboutSection() {
   const { t, language } = useLanguage();
   const features = useMemo(() => getFeatures(t), [language]);
+
+  const handleWODClick = () => {
+    document.getElementById('faq-wod-meaning')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="about" className="py-24 bg-zinc-950 relative overflow-hidden">
       {/* Background accent */}
