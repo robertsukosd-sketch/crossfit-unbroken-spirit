@@ -339,7 +339,7 @@ export default function FAQSection({ onBookSession }) {
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-xl mx-auto">
            {language === 'ro'
-             ? 'Găsește răspunsurile la întrebări comune despre CrossFit și sala noastră.'
+             ? 'Răspunsuri la întrebări comune despre CrossFit și sala noastră.'
              : 'Find answers to common questions about CrossFit and our gym.'}
           </p>
         </motion.div>
