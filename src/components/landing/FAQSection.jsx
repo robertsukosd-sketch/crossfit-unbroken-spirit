@@ -13,25 +13,29 @@ export default function FAQSection({ onBookSession }) {
     const handleOpenFaq = () => {
       const openFaqId = sessionStorage.getItem('openFaqId');
       if (openFaqId) {
+        // First set the ID to open the accordion
         setOpenId(openFaqId);
         sessionStorage.removeItem('openFaqId');
         
-        // Scroll to the FAQ item after ensuring DOM is ready
+        // Then scroll
         setTimeout(() => {
           const element = document.getElementById(openFaqId);
-          if (element) {
-            document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const faqSection = document.getElementById('faq');
+          if (element && faqSection) {
+            faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             setTimeout(() => {
               element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 500);
+            }, 600);
           }
-        }, 100);
+        }, 200);
       }
     };
     
+    // Check on mount
     handleOpenFaq();
-    window.addEventListener('openFaqEvent', handleOpenFaq);
     
+    // Also listen for event
+    window.addEventListener('openFaqEvent', handleOpenFaq);
     return () => window.removeEventListener('openFaqEvent', handleOpenFaq);
   }, []);
 
