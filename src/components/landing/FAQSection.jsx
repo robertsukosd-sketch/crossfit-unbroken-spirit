@@ -59,9 +59,9 @@ export default function FAQSection({ onBookSession }) {
            aImage: true
         },
         {
-          id: 'vs-gym',
-          q: 'Prin ce diferă CrossFitul de o sală comercială?',
-          a: 'La o sală obișnuită plătești pentru acces la aparate și te antrenezi pe cont propriu.\nLa CrossFit Unbroken Spirit, abonamentul presupune participarea la clase de grup ghidate de antrenor. Fiecare antrenament este deja programat și structurat, iar antrenorul te ghidează pe parcursul sesiunii.\nAsta înseamnă că nu trebuie să te întrebi „ce fac azi?" — noi ne ocupăm de programare și antrenamente, iar comunitatea oferă suport, motivație și energie la fiecare clasă.'
+           id: 'vs-gym',
+           q: 'Prin ce diferă CrossFitul de o sală comercială?',
+           a: 'La o sală obișnuită plătești pentru acces la aparate și te antrenezi pe cont propriu.'
         },
         {
           id: 'faq-wod-meaning',
@@ -191,7 +191,8 @@ export default function FAQSection({ onBookSession }) {
         id: 'vs-gym',
         q: 'How is CrossFit different from a regular gym?',
         a: 'At a regular gym, you pay for equipment access and train on your own.',
-        aWithHighlight: true
+        aWithHighlight: true,
+        aHighlightRo: true
       },
       {
         id: 'faq-wod-meaning',
@@ -388,9 +389,21 @@ export default function FAQSection({ onBookSession }) {
                         <div className="text-gray-300 text-sm sm:text-base leading-relaxed space-y-3">
                           <p>{faq.a}</p>
                           <p>
-                            At <span className="text-blue-400 font-semibold">CrossFit Unbroken Spirit</span>, your membership means participating in group classes led by a coach. Every workout is already programmed and structured, and the coach guides you throughout the session.
+                            {faq.aHighlightRo ? (
+                              <>
+                                La <span className="text-blue-400 font-semibold">CrossFit Unbroken Spirit</span>, abonamentul presupune participarea la clase de grup ghidate de antrenor. Fiecare antrenament este deja programat și structurat, iar antrenorul te ghidează pe parcursul sesiunii.
+                              </>
+                            ) : (
+                              <>
+                                At <span className="text-blue-400 font-semibold">CrossFit Unbroken Spirit</span>, your membership means participating in group classes led by a coach. Every workout is already programmed and structured, and the coach guides you throughout the session.
+                              </>
+                            )}
                           </p>
-                          <p>That means you never have to wonder "what do I do today?" — we handle the programming and workouts, while the community provides support, motivation, and energy at every class.</p>
+                          <p>
+                            {faq.aHighlightRo 
+                              ? 'Asta înseamnă că nu trebuie să te întrebi „ce fac azi?" — noi ne ocupăm de programare și antrenamente, iar comunitatea oferă suport, motivație și energie la fiecare clasă.'
+                              : 'That means you never have to wonder "what do I do today?" — we handle the programming and workouts, while the community provides support, motivation, and energy at every class.'}
+                          </p>
                         </div>
                       ) : (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
