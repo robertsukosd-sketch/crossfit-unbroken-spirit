@@ -44,17 +44,14 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden">
-              <img 
-               src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80"
-               alt="Athletes training CrossFit at Unbroken Spirit gym"
-               width={800}
-               height={500}
-               loading="lazy"
-               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-               className="w-full h-64 sm:h-80 lg:h-[500px] object-cover"
+            <div className="relative rounded-2xl overflow-hidden aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/ot4MjvEGKec"
+                title="CrossFit Unbroken Spirit"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full absolute inset-0"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
           </motion.div>
           
