@@ -219,7 +219,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     discoverThePrograms: "Discover the Programs",
     aboutUs: "About Us",
     moreThangym: "More than a gym",
-    aboutDesc: "Your Best Hour of the Day Starts Here.\nTired of the same boring gym routine? At CrossFit Unbroken Spirit, we believe fitness should be the highlight of your day, not a chore. We combine expert coaching, a supportive community and functional workouts tailored to your level to help you move better, feel stronger, and live longer. Whether you're a seasoned athlete, whether you move rarely, or whether you haven't moved at all in a long time, your journey to a better you starts with a single step. No ego, no intimidation, just results. Performance is not the goal, but it can be one of the results.",
+    aboutDesc: "Your Best Hour of the Day Starts Here.\nTired of the same boring gym routine? At CrossFit Unbroken Spirit, we believe fitness should be the highlight of your day, not a chore. We combine expert coaching, a supportive community and functional workouts tailored to your level to help you move better, feel stronger, and live longer. Whether you're a seasoned athlete, whether you rarely workout or whether you haven't worked out at all in a long time, your journey to a better you starts with a single step. No ego, no intimidation, just results. Performance is not the goal, but it can be one of the results.",
     intenseTraining: "High Intensity Training",
     intenseTrainingDesc: "Programming that grows with you.",
     strongCommunity: "Strong Community",
