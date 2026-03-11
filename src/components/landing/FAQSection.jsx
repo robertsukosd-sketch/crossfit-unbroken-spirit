@@ -186,7 +186,7 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'vs-gym',
         q: 'How is CrossFit different from a regular gym?',
-        a: 'At a regular gym, you pay for equipment access and train on your own. At ',
+        a: 'At a regular gym, you pay for equipment access and train on your own. At CrossFit Unbroken Spirit, your membership means participating in group classes led by a coach. Every workout is already programmed and structured, and the coach guides you throughout the session. That means you never have to wonder "what do I do today?" — we handle the programming and workouts, while the community provides support, motivation, and energy at every class.',
         aHighlightGym: true
       },
       {
