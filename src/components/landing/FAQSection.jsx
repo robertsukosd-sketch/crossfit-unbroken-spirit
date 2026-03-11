@@ -387,7 +387,7 @@ export default function FAQSection({ onBookSession }) {
                     className="overflow-hidden"
                   >
                     <div className="px-5 sm:px-6 py-4 bg-zinc-900/30 border-l-2 border-blue-500 mt-1 rounded-lg">
-                      {faq.aThunderWODLink && (
+                      {faq.aThunderWODLink ? (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                           {faq.a}
                           <button
@@ -400,8 +400,7 @@ export default function FAQSection({ onBookSession }) {
                             {language === 'ro' ? 'Aplicatia ThunderWOD' : 'The ThunderWOD app'}
                           </button>
                         </p>
-                      )}
-                      {faq.aWithHighlight ? (
+                      ) : faq.aWithHighlight ? (
                         <div className="text-gray-300 text-sm sm:text-base leading-relaxed space-y-3">
                           <p>{faq.a}</p>
                           <p>
