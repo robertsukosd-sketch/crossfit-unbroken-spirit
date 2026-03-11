@@ -33,6 +33,11 @@ export default function FAQSection({ onBookSession }) {
           a: 'Categoric nu. Acesta e cel mai mare mit! CrossFit este procesul prin care ajungi în formă. Membrii unei săli de CrossFit variază de la sportivi de elită la oameni obișnuiți care vor doar să facă mișcare.'
         },
         {
+          id: 'vs-gym',
+          q: 'Prin ce diferă CrossFitul de o sală comercială?',
+          a: 'La o sală obișnuită, plătești pentru acces la aparate și ești pe cont propriu. La CrossFit Unbroken Spirit plătești pentru antrenorat profesional și un program structurat. Nu trebuie să te întrebi "ce fac azi?" – noi ne ocupăm de programare, și antrenamente, iar comunitatea, de sprijin și distracție.'
+        },
+        {
           id: 'no-weights-before',
           q: 'Ce se întâmplă dacă nu am mai făcut antrenamente cu greutăți până acum?',
           a: 'Ești în locul potrivit. Fiecare membru nou are parte de îndrumare din partea unui antrenor, de la care va învăța mișcările de bază cu haltera, kettlebell-ul și gimnastica, în siguranță deplină.'
