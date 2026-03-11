@@ -16,21 +16,25 @@ export default function FAQSection({ onBookSession }) {
         setOpenId(openFaqId);
         sessionStorage.removeItem('openFaqId');
         
-        // Scroll to the FAQ item after a longer delay to ensure section is rendered
+        // Scroll to the FAQ item after ensuring DOM is ready
         setTimeout(() => {
           const element = document.getElementById(openFaqId);
           if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Scroll section into view first
+            document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Then scroll to specific item
+            setTimeout(() => {
+              element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 500);
           }
-        }, 500);
+        }, 100);
       }
     };
     
-    // Check immediately and also after a delay in case section isn't mounted yet
+    // Check immediately
     checkForOpenFaq();
-    const timer = setTimeout(checkForOpenFaq, 300);
     
-    return () => clearTimeout(timer);
+    return () => {};
   }, []);
 
   const handleScrollToPricing = (category = null) => {
