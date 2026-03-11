@@ -103,28 +103,6 @@ const getCategories = (language) => [
       : 'Undivided 1-on-1 attention dedicated exclusively to you.\nPersonalized training for your goals.',
     plans: [
       {
-        name: language === 'ro' ? 'Nutriție' : 'Nutrition',
-        price: '350',
-        period: language === 'ro' ? 'lună' : 'month',
-        description: language === 'ro' ? 'Plan alimentar personalizat' : 'Personalized meal plan',
-        features: language === 'ro'
-          ? ['Consultație inițială', 'Plan nutrițional', 'Monitorizare progres', 'Suport continuu']
-          : ['Initial consultation', 'Nutrition plan', 'Progress monitoring', 'Ongoing support'],
-        popular: false,
-        featured: false,
-      },
-      {
-        name: language === 'ro' ? 'PT 8 Ședințe' : 'PT 8 Sessions',
-        price: '1300',
-        period: language === 'ro' ? '8 ședințe' : '8 sessions',
-        description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
-        features: language === 'ro'
-          ? ['8 sesiuni 1-la-1', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
-          : ['8 one-on-one sessions', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
-        popular: false,
-        featured: false,
-      },
-      {
         name: language === 'ro' ? 'PT 12 Ședințe' : 'PT 12 Sessions',
         price: '1600',
         period: language === 'ro' ? '12 ședințe' : '12 sessions',
