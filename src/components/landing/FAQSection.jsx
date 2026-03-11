@@ -142,6 +142,11 @@ export default function FAQSection({ onBookSession }) {
         a: 'Absolutely not. This is the biggest myth! CrossFit is the process of getting in shape. CrossFit box members range from elite athletes to regular people who just want to move.'
       },
       {
+        id: 'vs-gym',
+        q: 'How is CrossFit different from a regular gym?',
+        a: 'At a regular gym, you pay for equipment access and you\'re on your own. At CrossFit Unbroken Spirit, you pay for professional coaching and a structured program. You don\'t have to ask "what do I do today?" – we handle programming and workouts, while the community provides support and fun.'
+      },
+      {
         id: 'no-weights-before',
         q: 'What if I\'ve never done weightlifting before?',
         a: 'You\'re in the right place. Every new member gets guidance from a coach who will teach you basic movements with barbells, kettlebells, and gymnastics in a completely safe environment.'
