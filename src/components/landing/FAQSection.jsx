@@ -77,7 +77,7 @@ export default function FAQSection({ onBookSession }) {
         {
           id: 'bulk-up',
           q: 'O să iau proporții de la CrossFit?',
-          a: 'Doar dacă e scopul tău specific și depui un efort uriaș în acest sens. Masa musculară excesivă vine dintr-o dietă hipercalorică și antrenamente de lifting specifice. CrossFitul se concentrează pe forță funcțională și condiționare. Vei deveni mai puternic/ă și mai tonifiat/ă, nu un culturist din greșeală!'
+          a: 'Doar dacă e scopul tău specific și depui un efort uriaș în acest sens. Masa musculară excesivă vine dintr-o dietă hipercalorică și antrenamente de lifting specifice. CrossFitul se concentrează pe forță funcțională și condiționare. Vei deveni mai puternic/ă și mai tonifiat/ă, nu vei arăta ca un culturist.'
         },
         {
           id: 'benefits',
