@@ -252,7 +252,8 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'class-duration',
         q: 'How long are the classes?',
-        a: 'All classes last about 60 minutes. They include a walkthrough, a guided warm-up, a strength or technique session, the Workout of the Day (WOD) and cool-down (stretching).'
+        a: 'All classes last about 60 minutes. They include a walkthrough, a guided warm-up, a strength or technique session, ',
+        aClassDuration: true
       },
       {
         id: 'pricing',
