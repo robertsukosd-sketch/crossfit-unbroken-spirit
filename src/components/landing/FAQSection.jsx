@@ -415,10 +415,11 @@ export default function FAQSection({ onBookSession }) {
                         </p>
                       ) : faq.aOpenGym ? (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                          {faq.a.split('Open Gym').map((part, i, arr) => 
-                            i < arr.length - 1 
-                              ? [part, <button
-                                  key={`opengym-${i}`}
+                          {faq.a.split('Open Gym').map((part, i, arr) => (
+                            <React.Fragment key={`opengym-${i}`}>
+                              {part}
+                              {i < arr.length - 1 && (
+                                <button
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     handleScrollToPricing('open-gym');
@@ -426,9 +427,10 @@ export default function FAQSection({ onBookSession }) {
                                   className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                                 >
                                   Open Gym
-                                </button>]
-                              : part
-                          )}
+                                </button>
+                              )}
+                            </React.Fragment>
+                          ))}
                         </p>
                       ) : (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
