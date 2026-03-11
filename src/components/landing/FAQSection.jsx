@@ -423,7 +423,7 @@ export default function FAQSection({ onBookSession }) {
                                 <button
                                   onClick={(e) => {
                                     e.stopPropagation();
-                                    handleScrollToPricing('open-gym');
+                                    handleScrollToPricing('ascent');
                                   }}
                                   className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                                 >
