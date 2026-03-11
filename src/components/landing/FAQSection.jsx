@@ -65,7 +65,7 @@ export default function FAQSection({ onBookSession }) {
         },
         {
           id: 'parking',
-          q: 'Există parcare? Cum pot ajunge la sală?',
+          q: 'Cum pot ajunge la sală? Există parcare?',
           a: 'Sala este ușor accesibilă, atât cu transportul în comun, cât și cu mașina.\nCea mai apropiată stație de metrou este Mihai Bravu, aflată la aproximativ 7–8 minute de mers pe jos. În același timp, cele mai apropiate stații STB sunt Pod Mihai Bravu pentru linia de autobuz 223 și Pod Mihai Bravu pentru linia de tramvai 10.\nDacă vii cu mașina, ai un mare avantaj: parcare gratuită inclusă! Nu trebuie să îți faci griji pentru locul de parcare sau costuri suplimentare.',
           aParking: true
         },
@@ -186,7 +186,7 @@ export default function FAQSection({ onBookSession }) {
       },
       {
         id: 'parking',
-        q: 'Is there parking? How do I get to the gym?',
+        q: 'How do I get to the gym? Is there parking?',
         a: 'The gym is easily accessible by both public transport and car.\nThe nearest metro station is Mihai Bravu, about a 7–8 minute walk away. The nearest STB stops are Pod Mihai Bravu for bus line 223 and Pod Mihai Bravu for tram line 10.\nIf you\'re coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.',
         aParking: true
       },
