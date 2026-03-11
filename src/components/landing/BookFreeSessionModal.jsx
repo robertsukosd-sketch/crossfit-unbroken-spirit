@@ -140,13 +140,13 @@ ${fullMessage}`,
                             onClick={() => {
                               handleClose();
                               setTimeout(() => {
-                                const aboutEl = document.getElementById('about');
-                                if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
+                                sessionStorage.setItem('openFaqId', 'parking');
+                                window.dispatchEvent(new Event('openFaqEvent'));
                               }, 50);
                             }}
                             className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
                           >
-                            Cunoști antrenorii și sala
+                            Vezi cum ajungi la sală
                           </button>
                           {', verifică '}
                           <button
@@ -156,7 +156,7 @@ ${fullMessage}`,
                           >
                             Orarul
                           </button>
-                          {' '}și alege o oră. Completează-ți datele și te așteptăm la sală!
+                          {' '}și alege un interval orar.
                         </>
                       ) : (
                         <>
@@ -165,15 +165,15 @@ ${fullMessage}`,
                             onClick={() => {
                               handleClose();
                               setTimeout(() => {
-                                const aboutEl = document.getElementById('about');
-                                if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
+                                sessionStorage.setItem('openFaqId', 'parking');
+                                window.dispatchEvent(new Event('openFaqEvent'));
                               }, 50);
                             }}
                             className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
                           >
-                            Meet the coaches
+                            See how you can get to the box
                           </button>
-                          {', check our '}
+                          {', check the '}
                           <button
                             type="button"
                             onClick={() => setShowSchedule((v) => !v)}
@@ -181,7 +181,7 @@ ${fullMessage}`,
                           >
                             Schedule
                           </button>
-                          {' '}and pick a time. Fill in your details and we\'ll be waiting for you at the box!
+                          {' '}and pick a time slot.
                         </>
                       )}
                     </p>
