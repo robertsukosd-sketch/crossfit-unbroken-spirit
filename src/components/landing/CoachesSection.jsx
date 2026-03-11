@@ -31,7 +31,7 @@ export default function CoachesSection() {
     {
       id: 3,
       name: 'Andrei Vârnav',
-      image: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400&h=400&fit=crop',
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/dd8f42d8f_IMG_9074.jpg',
       certifications: language === 'ro'
         ? ['8 ani înot de performanță\n& medaliat național', '7 ani handbal de performanță\n& campion național', '4 ani Head Judge at OMBC Throwdown', 'Strength & Conditioning']
         : ['8 years competitive swimming\n& national medalist', '7 years competitive handball\n& national champion', '4 years Head Judge at OMBC Throwdown', 'Strength & Conditioning'],
