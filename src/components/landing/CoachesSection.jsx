@@ -20,7 +20,7 @@ export default function CoachesSection() {
     {
       id: 2,
       name: 'Dumitru Mîndrescu',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?w=400&h=400&fit=crop',
       certifications: ['CrossFit Level 2', 'Movement Specialist', 'Gymnastics Coach'],
       experience: language === 'ro' ? '6 ani în fitness' : '6 years in fitness',
       bioRo: 'Dumitru se concentrează pe mecanica corectă a mișcării și este cunoscut pentru abordarea sa pacientă cu noii membri. Specialitatea lui este gymnastica și mobilitate avansată.',
