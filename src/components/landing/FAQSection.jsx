@@ -383,17 +383,26 @@ export default function FAQSection({ onBookSession }) {
                       {/* Main answer text */}
                       <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                         {faq.a}
-                        {faq.aThunderWODLink && (
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              openAppWithFallback();
-                            }}
-                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
-                          >
-                            {language === 'ro' ? 'Aplicatia ThunderWOD' : 'The ThunderWOD app'}
-                          </button>
+                        {faq.aHighlightGym && (
+                          <>
+                            <span className="font-bold text-sky-300">CrossFit Unbroken Spirit</span>
+                            {language === 'ro' 
+                              ? ', abonamentul presupune participarea la clase de grup ghidate de antrenor. Fiecare antrenament este deja programat și structurat, iar antrenorul te ghidează pe parcursul sesiunii. Asta înseamnă că nu trebuie să te întrebi „ce fac azi?" — noi ne ocupăm de programare și antrenamente, iar comunitatea oferă suport, motivație și energie la fiecare clasă.'
+                              : ', your membership means participating in group classes led by a coach. Every workout is already programmed and structured, and the coach guides you throughout the session. That means you never have to wonder "what do I do today?" — we handle the programming and workouts, while the community provides support, motivation, and energy at every class.'
+                            }
+                          </>
                         )}
+                        {faq.aThunderWODLink && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                openAppWithFallback();
+                              }}
+                              className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                            >
+                              {language === 'ro' ? 'Aplicatia ThunderWOD' : 'The ThunderWOD app'}
+                            </button>
+                          )}
                         {faq.aWithLink && (
                           <button
                             onClick={(e) => {
