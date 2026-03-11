@@ -10,7 +10,7 @@ export default function ThunderWodBox({ className = '' }) {
   return (
     <div className={`bg-zinc-900/50 rounded-xl p-6 border border-zinc-800 flex flex-col gap-4 h-full ${className}`}>
       <h4 className="text-white font-bold text-center">{title}</h4>
-      <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 flex-1">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 flex-1">
         {/* Logo */}
         <a href="https://thunderwod.com/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2">
           <img
