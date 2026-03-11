@@ -413,8 +413,8 @@ export default function FAQSection({ onBookSession }) {
                         </p>
                       )}
                       {faq.aWithHighlight && (
-                      <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                        {faq.aThunderWOD && (
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                          {faq.aThunderWOD && (
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
@@ -590,7 +590,8 @@ export default function FAQSection({ onBookSession }) {
                           />
                         )}
                         </p>
-                    </div>
+                        )}
+                        </div>
                   </motion.div>
                 )}
               </AnimatePresence>
