@@ -74,7 +74,6 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      await base44.entities.ContactSubmission.create(formData);
       const isRo = language === 'ro';
       await base44.integrations.Core.SendEmail({
         to: CONTACT_EMAIL,
