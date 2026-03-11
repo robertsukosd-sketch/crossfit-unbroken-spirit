@@ -92,7 +92,8 @@ export default function FAQSection({ onBookSession }) {
         {
           id: 'open-gym',
           q: 'Ce este Open Gym?',
-          a: 'Open Gym este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'
+          a: 'Open Gym este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.',
+          aOpenGym: true
         },
         {
           id: 'parking',
