@@ -152,7 +152,7 @@ export default function ScheduleSection() {
               </div>
             </div>
           ) : selectedDay && schedule[selectedDay] ? (
-            schedule[selectedDay].map((item, index) => (
+            schedule[selectedDay].filter(item => item.class !== 'CrossFit Kids').map((item, index) => (
               item.time === null ? (
                 <div key={`empty-${index}`} className="hidden sm:block" />
               ) : (
