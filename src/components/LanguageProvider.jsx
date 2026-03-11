@@ -317,6 +317,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     hours: "Mon-Fri: 07:00 - 20:30",
     hoursSaturday: "Sat: 09:00 - 11:30",
     hoursSunday: "Sun: Closed",
+    bookFreeClass: "Book a Free Class",
     thunderwod: "ThunderWOD App",
     quickLinks: "Quick Links",
     footerContact: "Contact",
