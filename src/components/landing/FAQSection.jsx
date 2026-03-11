@@ -469,9 +469,10 @@ export default function FAQSection({ onBookSession }) {
                             }}
                             className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                           >
-                            {language === 'ro' ? 'aici' : 'here'}
+                            {language === 'ro' ? 'o fracțiune din preț' : 'a fraction of the price'}
                           </button>
                         )}
+                        {faq.aPricing && (language === 'ro' ? '.' : '.')}
                         {faq.aFrequency && (
                           <button
                             onClick={(e) => {
