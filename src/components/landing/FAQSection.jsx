@@ -382,6 +382,18 @@ export default function FAQSection({ onBookSession }) {
                     className="overflow-hidden"
                   >
                     <div className="px-5 sm:px-6 py-4 bg-zinc-900/30 border-l-2 border-blue-500 mt-1 rounded-lg">
+                      {faq.aWithHighlight ? (
+                        <div className="text-gray-300 text-sm sm:text-base leading-relaxed space-y-3">
+                          <p>{faq.a}</p>
+                          <p>
+                            At <span className="text-blue-400 font-semibold">CrossFit Unbroken Spirit</span>, your membership means participating in group classes led by a coach. Every workout is already programmed and structured, and the coach guides you throughout the session.
+                          </p>
+                          <p>That means you never have to wonder "what do I do today?" — we handle the programming and workouts, while the community provides support, motivation, and energy at every class.</p>
+                        </div>
+                      ) : (
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                          {faq.a}</p>
+                      )}
                       <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                         {faq.aThunderWOD && (
                           <button
