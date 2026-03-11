@@ -58,12 +58,12 @@ export default function AppPromoSection() {
         className="relative max-w-5xl mx-auto"
       >
         {/* Wide horizontal card on desktop, stacked on mobile */}
-        <div className="relative bg-gradient-to-br from-[#0f172a] via-zinc-900 to-[#0c1a2e] border border-blue-400/40 rounded-3xl shadow-2xl shadow-blue-900/40 px-8 py-10 flex flex-col lg:flex-row lg:items-center lg:gap-10 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-[#0f172a] via-zinc-900 to-[#0c1a2e] border border-blue-400/40 rounded-3xl shadow-2xl shadow-blue-900/40 px-8 py-10 flex flex-col overflow-hidden">
           {/* Subtle top highlight line */}
           <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-blue-400/60 to-transparent" />
 
           {/* Logo + label */}
-          <div className="flex lg:flex-col items-center gap-4 lg:gap-3 mb-6 lg:mb-0 lg:flex-shrink-0">
+          <div className="flex flex-col items-center gap-3 mb-6 lg:mb-0">
             <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl overflow-hidden border-2 border-blue-400/40 shadow-xl shadow-blue-500/20">
               <img
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/892734e42_logothunderwod.jpeg"
