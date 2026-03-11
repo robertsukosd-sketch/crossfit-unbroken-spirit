@@ -115,7 +115,20 @@ export default function ProgramsSection({ onBookSession }) {
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed [text-wrap:pretty]">
                   {program.title === (language === 'ro' ? 'Antrenamente Intense' : 'Intense Workouts') 
-                    ? program.description.replace(/WOD/g, (match) => `${match}`)
+                    ? (() => {
+                        const parts = program.description.split(/(WOD)/);
+                        return parts.map((part, idx) => 
+                          part === 'WOD' 
+                            ? <button
+                                key={idx}
+                                onClick={handleScrollToWOD}
+                                className="font-bold text-sky-400 hover:text-sky-300 underline cursor-pointer transition-colors"
+                              >
+                                {part}
+                              </button>
+                            : part
+                        );
+                      })()
                     : program.description
                   }
                 </p>
