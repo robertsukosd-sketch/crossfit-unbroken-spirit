@@ -500,6 +500,7 @@ export default function FAQSection({ onBookSession }) {
                         {faq.aScores && (language === 'ro' ? ' pentru a monitoriza rezultatele. Nu facem asta pentru clasamente, ci pentru că datele nu mint. Să vezi la diverse intervale de timp că ai ridicat cu 5kg mai mult sau ai alergat mai repede decât în trecut e cea mai bună motivație pe termen lung!' : ' to track your results. We don\'t do this for rankings, but because the data doesn\'t lie. Seeing over time that you lifted 5kg more or ran faster than before is the best long-term motivation!')}
                         </p>
                       )}
+                      </div>
 
                       {faq.aParking && (
                         <img
