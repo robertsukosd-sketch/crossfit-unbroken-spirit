@@ -130,7 +130,7 @@ export const translations = {
     hours: "L-V: 07:00 - 20:30",
     hoursSaturday: "S: 09:00 - 11:30",
     hoursSunday: "D: Închis",
-    bookFreeClass: "Rezervă o Clasă",
+    bookFreeClass: "Rezerva o clasa gratuita",
      thunderwod: "ThunderWOD App",
     faq: "FAQ",
     quickLinks: "Link-uri Rapide",
