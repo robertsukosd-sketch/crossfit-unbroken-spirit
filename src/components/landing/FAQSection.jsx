@@ -392,7 +392,7 @@ export default function FAQSection({ onBookSession }) {
                       ) : (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                           {faq.a}
-                        {!faq.aHighlightGym && faq.aThunderWODLink && (
+                        {faq.aThunderWODLink && (
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
