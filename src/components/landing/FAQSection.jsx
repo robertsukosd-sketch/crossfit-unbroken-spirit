@@ -582,15 +582,15 @@ export default function FAQSection({ onBookSession }) {
                                : ' is a time slot when you can come to the gym to train on your own, using available equipment. Unlike regular CrossFit classes, during Open Gym there\'s no group-led training. It\'s typically used by members who want to practice specific movements, make up a missed workout, or work extra on certain skills.'}
                            </>
                          )}
-                        {faq.aImage && (
-                          <img
-                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/c02900e79_image.png"
-                            alt={language === 'ro' ? 'CrossFit - Fitness în 100 de cuvinte' : 'CrossFit - Fitness in 100 words'}
-                            className="mt-4 w-full rounded-xl border border-zinc-700"
-                          />
-                        )}
                         </p>
-                        )}
+                      )}
+                      {faq.aImage && (
+                        <img
+                          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/c02900e79_image.png"
+                          alt={language === 'ro' ? 'CrossFit - Fitness în 100 de cuvinte' : 'CrossFit - Fitness in 100 words'}
+                          className="mt-4 w-full rounded-xl border border-zinc-700"
+                        />
+                      )}
                         </div>
                         </motion.div>
                 )}
