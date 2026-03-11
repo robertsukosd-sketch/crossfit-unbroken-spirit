@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, Dumbbell, Sparkles, User, Globe } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -246,16 +247,18 @@ function PlanCard({ plan, index, t, onSignUpClick }) {
 export default function PricingSection() {
   const { t, language } = useLanguage();
   const categories = getCategories(language);
-  const [activeId, setActiveId] = useState(() => {
+  const [activeId, setActiveId] = useState('core');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
     const stored = sessionStorage.getItem('selectedPricingCategory');
     if (stored) {
+      setActiveId(stored);
       sessionStorage.removeItem('selectedPricingCategory');
-      return stored;
     }
-    return 'core';
-  });
+  }, []);
+
   const activeCategory = categories.find((c) => c.id === activeId);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSignUpClick = () => {
     setIsModalOpen(true);
