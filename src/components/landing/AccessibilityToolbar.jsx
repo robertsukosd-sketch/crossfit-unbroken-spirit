@@ -83,7 +83,7 @@ export default function AccessibilityToolbar() {
       {/* Toggle button */}
       <button
         onClick={() => setOpen(o => !o)}
-        className="fixed left-0 top-1/2 -translate-y-1/2 z-40 bg-blue-600 hover:bg-blue-500 text-white w-11 h-11 rounded-r-xl flex items-center justify-center shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+        className="fixed right-0 top-28 sm:left-0 sm:right-auto sm:top-1/2 sm:-translate-y-1/2 z-40 bg-blue-600 hover:bg-blue-500 text-white w-11 h-11 rounded-l-xl sm:rounded-l-none sm:rounded-r-xl flex items-center justify-center shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
         aria-label={t.title}
       >
         <Accessibility className="w-5 h-5" />
@@ -91,7 +91,7 @@ export default function AccessibilityToolbar() {
 
       {/* Panel */}
       {open && (
-        <div className="fixed left-10 top-1/2 -translate-y-1/2 z-50 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl p-4 w-52 max-h-[80vh] overflow-y-auto">
+        <div className="fixed right-10 top-28 sm:left-10 sm:right-auto sm:top-1/2 sm:-translate-y-1/2 z-50 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl p-4 w-52 max-h-[80vh] overflow-y-auto">
           <div className="flex items-center justify-between mb-3">
             <span className="text-white font-semibold text-sm">{t.title}</span>
             <button onClick={() => setOpen(false)} className="text-gray-400 hover:text-white">
