@@ -31,8 +31,8 @@ export default function CoachesSection() {
       name: 'Andrei Vârnav',
       image: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400&h=400&fit=crop',
       certifications: language === 'ro'
-        ? ['8 ani înot de performanță\n& medaliat național', '7 ani handbal de performanță\n& campion național', '4 ani Head Judge & OMBC Throwdown', 'Strength & Conditioning']
-        : ['8 years competitive swimming\n& national medalist', '7 years competitive handball\n& national champion', '4 years Head Judge & OMBC Throwdown', 'Strength & Conditioning'],
+        ? ['8 ani înot de performanță\n& medaliat național', '7 ani handbal de performanță\n& campion național', '4 ani Head Judge at OMBC Throwdown', 'Strength & Conditioning']
+        : ['8 years competitive swimming\n& national medalist', '7 years competitive handball\n& national champion', '4 years Head Judge at OMBC Throwdown', 'Strength & Conditioning'],
       experience: language === 'ro' ? '8 ani în CrossFit' : '8 years in CrossFit',
       bioRo: 'Andrei este specialistul în antrenamente cu greutăți și putere. Pasiunea lui pentru educație fitness face ca sesiunile sale să fie întotdeauna informative și motivante.',
       bioEn: 'Andrei is a specialist in weightlifting and strength training. His passion for fitness education makes his sessions always informative and motivating.'
