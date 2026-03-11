@@ -48,7 +48,7 @@ export default function HeroSection() {
         >
           <span className="inline-block px-4 py-2 mb-6 text-sm font-semibold tracking-widest text-sky-400 uppercase bg-sky-500/10 rounded-full border border-sky-500/30">
             {language === 'ro' ? (
-              <>PENTRU TINE. PENTRU COMUNITATE.<br />RIDICĂ ȘTACHETA.</>
+              <>PENTRU TINE. PENTRU COMUNITATE.<br />PENTRU PROGRES.</>
             ) : (
               <>BUILD STRENGTH.<br className="sm:hidden" /> <span className="sm:inline">FIND COMMUNITY. SET PRs.</span></>
             )}
