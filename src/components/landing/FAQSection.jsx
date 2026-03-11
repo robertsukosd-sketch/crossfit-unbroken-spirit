@@ -397,7 +397,7 @@ export default function FAQSection({ onBookSession }) {
                             }}
                             className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                           >
-                            {language === 'ro' ? 'Descarcă ThunderWOD' : 'Download ThunderWOD'}
+                            {language === 'ro' ? 'Aplicatia ThunderWOD' : 'The ThunderWOD app'}
                           </button>
                         </p>
                       )}
