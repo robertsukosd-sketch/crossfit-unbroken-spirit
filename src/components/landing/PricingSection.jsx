@@ -255,7 +255,7 @@ export default function PricingSection() {
     return 'core';
   });
   const activeCategory = categories.find((c) => c.id === activeId);
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 640);
+  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 640);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSignUpClick = () => {
