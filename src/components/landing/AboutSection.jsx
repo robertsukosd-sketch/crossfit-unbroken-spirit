@@ -31,7 +31,8 @@ export default function AboutSection() {
   const features = useMemo(() => getFeatures(t), [language]);
 
   const handleWODClick = () => {
-    document.getElementById('faq-wod-meaning')?.scrollIntoView({ behavior: 'smooth' });
+    sessionStorage.setItem('openFaqId', 'faq-wod-meaning');
+    document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
