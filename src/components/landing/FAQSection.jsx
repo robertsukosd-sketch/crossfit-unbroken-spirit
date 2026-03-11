@@ -419,14 +419,7 @@ export default function FAQSection({ onBookSession }) {
                               ? 'Asta înseamnă că nu trebuie să te întrebi „ce fac azi?" — noi ne ocupăm de programare și antrenamente, iar comunitatea oferă suport, motivație și energie la fiecare clasă.'
                               : 'That means you never have to wonder "what do I do today?" — we handle the programming and workouts, while the community provides support, motivation, and energy at every class.'}
                           </p>
-                        </div>
-                      ) : (
-                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                          {faq.a}
-                        </p>
-                      )}
-                      {faq.aWithHighlight && (
-                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                           {faq.aThunderWOD && (
                           <button
                             onClick={(e) => {
