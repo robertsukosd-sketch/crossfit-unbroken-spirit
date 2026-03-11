@@ -12,7 +12,7 @@ export default function CoachesSection() {
       id: 1,
       name: 'Robert Sukosd',
       image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=400&fit=crop',
-      certifications: ['CrossFit Level 2', 'Mobility Coach', 'Nutrition Specialist'],
+      certifications: ['CrossFit Level 2', 'The Gymnastics Course Level 1', 'Movement Specialist'],
       experience: language === 'ro' ? '13 ani în CrossFit' : '13 years in CrossFit',
       bioRo: 'Robert este co-fondatorul Unbroken Spirit și are o pasiune pentru dezvoltarea atletică. Cu peste 13 ani de experiență, se specializează în optimizarea performanței și construirea unei comunități puternice.',
       bioEn: 'Robert is the co-founder of Unbroken Spirit with a passion for athletic development. With over 13 years of experience, he specializes in performance optimization and building a strong community.'
