@@ -428,17 +428,6 @@ export default function FAQSection({ onBookSession }) {
                       )}
                       {faq.aWithHighlight && (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                          {faq.aThunderWODLink && (
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              openAppWithFallback();
-                            }}
-                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
-                          >
-                            {language === 'ro' ? 'Descarcă ThunderWOD' : 'Download ThunderWOD'}
-                          </button>
-                        )}
                           {faq.aThunderWOD && (
                           <button
                             onClick={(e) => {
