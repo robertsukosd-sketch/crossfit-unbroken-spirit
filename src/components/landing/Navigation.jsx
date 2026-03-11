@@ -17,7 +17,6 @@ const getNavLinks = (t) => [
   { name: t("schedule"), href: "#schedule" },
   { name: "FAQ", href: "#faq" },
   { name: t("contact"), href: "#contact" },
-  { name: t("faq"), href: "#faq" },
 ];
 
 export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobileMenuOpen }) {
@@ -123,7 +122,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                   activeSection === 'app-promo-section' ? "text-blue-400" : "text-gray-200 hover:text-white"
                 )}
               >
-                {t("thunderwod")}
+                ThunderWOD
                 <span className={cn(
                   "absolute -bottom-1 left-0 h-0.5 bg-blue-500 transition-[width]",
                   activeSection === 'app-promo-section' ? "w-full" : "w-0 group-hover:w-full"
@@ -252,9 +251,9 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: Math.min(navLinks.length * 0.1 + 0.1, 0.7) }}
                   className="w-full flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl text-sm font-bold text-white border border-blue-400/40 bg-gradient-to-r from-blue-900/60 to-sky-900/40 hover:from-blue-800/70 hover:to-sky-800/50 transition-all"
-                  >
+                >
                   <Smartphone className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                  <span>{t("thunderwod")}</span>
+                  <span>ThunderWOD</span>
                 </motion.button>
               </motion.div>
             </div>
