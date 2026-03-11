@@ -387,6 +387,20 @@ export default function FAQSection({ onBookSession }) {
                     className="overflow-hidden"
                   >
                     <div className="px-5 sm:px-6 py-4 bg-zinc-900/30 border-l-2 border-blue-500 mt-1 rounded-lg">
+                      {faq.aThunderWODLink && (
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                          {faq.a}
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              openAppWithFallback();
+                            }}
+                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                          >
+                            {language === 'ro' ? 'Descarcă ThunderWOD' : 'Download ThunderWOD'}
+                          </button>
+                        </p>
+                      )}
                       {faq.aWithHighlight ? (
                         <div className="text-gray-300 text-sm sm:text-base leading-relaxed space-y-3">
                           <p>{faq.a}</p>
