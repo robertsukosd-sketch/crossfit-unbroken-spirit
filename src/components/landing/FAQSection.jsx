@@ -186,7 +186,7 @@ export default function FAQSection({ onBookSession }) {
       },
       {
         id: 'parking',
-        q: 'How do I get to the gym? Is there parking?',
+        q: 'How can I get to the gym? Do you have a parking lot?',
         aParking: true,
         aParkingEn: true
       },
