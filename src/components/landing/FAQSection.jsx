@@ -390,6 +390,14 @@ export default function FAQSection({ onBookSession }) {
                               : part
                           ))}
                         </p>
+                      ) : faq.aHighlightParking ? (
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                          {faq.a.split(/(Mihai Bravu|Pod Mihai Bravu)/g).map((part, i) => 
+                            (part === 'Mihai Bravu' || part === 'Pod Mihai Bravu') 
+                              ? <span key={`parking-${i}`} className="font-bold text-sky-300">{part}</span>
+                              : part
+                          )}
+                        </p>
                       ) : (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                           {faq.a}
