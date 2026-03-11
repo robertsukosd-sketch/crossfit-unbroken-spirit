@@ -124,7 +124,8 @@ export default function FAQSection({ onBookSession }) {
         {
           id: 'class-duration',
           q: 'Cât durează clasele?',
-          a: 'Toate clasele durează în jur de 60 de minute. Acestea includ instructajul, încălzirea ghidată, o sesiune de forță sau tehnică, antrenamentul zilei (WOD) și revenirea (stretching).'
+          a: 'Toate clasele durează în jur de 60 de minute. Acestea includ instructajul, încălzirea ghidată, o sesiune de forță sau tehnică, ',
+          aClassDuration: true
         },
         {
           id: 'pricing',
