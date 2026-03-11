@@ -159,6 +159,11 @@ export default function FAQSection({ onBookSession }) {
         a: 'At a regular gym, you pay for equipment access and train on your own.\nAt CrossFit Unbroken Spirit, your membership means participating in group classes led by a coach. Every workout is already programmed and structured, and the coach guides you throughout the session.\nThat means you never have to wonder "what do I do today?" — we handle the programming and workouts, while the community provides support, motivation, and energy at every class.'
       },
       {
+        id: 'wod-meaning',
+        q: 'What does WOD mean?',
+        a: 'In the world of CrossFit, WOD (pronounced as a word, like "wad") is the most common acronym you\'ll hear.\nIt stands for Workout of the Day.\n\nWhy is it called a WOD?\nThe philosophy behind CrossFit is "constantly varied functional movement." Instead of having a "Leg Day" or "Cardio Day," the workout changes every single day.\n• Universality: Everyone in the gym—from the coached athlete to the beginner—does the same WOD on the same day (scaled to their individual fitness level).\n• The "Unknown": Part of the fun (and the nerves!) is checking the gym\'s app or whiteboard to see what the WOD is for that day.\n• Tracking: Because it\'s a specific "prescribed" workout, you can record your score and compare it to how you do when that same WOD comes up again months later.\n\nWhat does a WOD look like?\nA WOD is usually the high-intensity portion of the class. It typically lasts anywhere from 5 to 20 minutes and can follow different formats, such as:\n• AMRAP: As Many Rounds As Possible (in a set time).\n• EMOM: Every Minute on the Minute.\n• For Time: Complete the work as fast as possible.\n• Chipper: A long list of movements you "chip away" at until finished.'
+      },
+      {
         id: 'fitness-required',
         q: 'Do I need to be in shape before starting CrossFit?',
         a: 'Absolutely not. This is the biggest myth! CrossFit is the process of getting in shape. CrossFit box members range from elite athletes to regular people who just want to move.'
