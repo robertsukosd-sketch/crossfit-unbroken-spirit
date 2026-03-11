@@ -95,7 +95,29 @@ export default function AboutSection() {
                   </div>
                   <div className="text-left">
                     <h3 className="text-white font-bold mb-1">{feature.title}</h3>
-                    <p className="text-gray-300 text-sm sm:text-base">{feature.description}</p>
+                    <p className="text-gray-300 text-sm sm:text-base">
+                      {index === 0 ? (
+                        <>
+                          {language === 'ro' ? (
+                            <>
+                              <button
+                                onClick={handleWODClick}
+                                className="text-sky-400 hover:text-sky-300 font-semibold underline transition-colors"
+                              >
+                                WOD
+                              </button>
+                              {'-uri care evoluează cu tine.'}
+                            </>
+                          ) : (
+                            <>
+                              {'Programming that grows with you.'}
+                            </>
+                          )}
+                        </>
+                      ) : (
+                        feature.description
+                      )}
+                    </p>
                   </div>
                 </motion.div>
               ))}
