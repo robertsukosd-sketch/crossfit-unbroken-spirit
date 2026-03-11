@@ -377,8 +377,8 @@ export default function PricingSection() {
               const total = activeCategory.plans.length;
               const mobileOrder = reverseOnMobile ? total - 1 - index : index;
               return (
-                <div key={plan.name} className="contents sm:block" style={{ '--mobile-order': mobileOrder }}>
-                  <PlanCard plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} mobileOrder={mobileOrder} />
+                <div key={plan.name} style={{ order: mobileOrder }} className="[order:unset] sm:[order:unset] h-full">
+                  <PlanCard plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} />
                 </div>
               );
             })}
