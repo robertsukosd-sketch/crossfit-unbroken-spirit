@@ -56,7 +56,7 @@ export default function FAQSection({ onBookSession }) {
         {
            id: 'vs-gym',
            q: 'Prin ce diferă CrossFitul de o sală comercială?',
-           a: 'La o sală obișnuită plătești pentru acces la aparate și te antrenezi pe cont propriu. La ',
+           a: 'La o sală obișnuită plătești pentru acces la aparate și te antrenezi pe cont propriu. La CrossFit Unbroken Spirit, abonamentul presupune participarea la clase de grup ghidate de antrenor. Fiecare antrenament este deja programat și structurat, iar antrenorul te ghidează pe parcursul sesiunii. Asta înseamnă că nu trebuie să te întrebi „ce fac azi?" — noi ne ocupăm de programare și antrenamente, iar comunitatea oferă suport, motivație și energie la fiecare clasă.',
            aHighlightGym: true
         },
         {
