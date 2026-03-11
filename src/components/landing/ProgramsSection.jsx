@@ -114,7 +114,10 @@ export default function ProgramsSection({ onBookSession }) {
                   {program.title}
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed [text-wrap:pretty]">
-                  {program.description}
+                  {program.title === (language === 'ro' ? 'Antrenamente Intense' : 'Intense Workouts') 
+                    ? program.description.replace(/WOD/g, (match) => `${match}`)
+                    : program.description
+                  }
                 </p>
               </div>
               
