@@ -64,11 +64,6 @@ export default function FAQSection({ onBookSession }) {
           aOpenGym: true
         },
         {
-          id: 'vs-gym',
-          q: 'Prin ce diferă CrossFitul de o sală comercială?',
-          a: 'La o sală obișnuită, plătești pentru acces la aparate și ești pe cont propriu. La CrossFit Unbroken Spirit plătești pentru antrenorat profesional și un program structurat. Nu trebuie să te întrebi "ce fac azi?" – noi ne ocupăm de programare, și antrenamente, iar comunitatea, de sprijin și distracție.'
-        },
-        {
           id: 'what-to-bring',
           q: 'Ce ar trebui să aduc la prima clasă?',
           a: 'Haine de sport confortabile și o pereche de încălțăminte sport (pantofii cu talpă plată sunt mai buni decât cei de alergat, cu talpă moale). Adu și o sticlă cu apă și o atitudine pozitivă.'
