@@ -409,13 +409,10 @@ export default function FAQSection({ onBookSession }) {
                         </div>
                       ) : (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                          {faq.a}</p>
-                      )}
-                      {!faq.aWithHighlight && (
-                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                           {faq.a}
                         </p>
                       )}
+                      {faq.aWithHighlight && (
                       <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                         {faq.aThunderWOD && (
                           <button
