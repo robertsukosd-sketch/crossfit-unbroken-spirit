@@ -22,13 +22,13 @@ export default function ThunderWodBox({ className = '' }) {
         </a>
 
         {/* iOS */}
-        <a href={IOS_URL} target="_blank" rel="noopener noreferrer" className="hidden sm:flex flex-col items-center justify-center gap-2">
+        <a href={IOS_URL} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2">
           <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className="w-16 h-16 object-contain" style={{filter: 'invert(1)'}} />
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-8 object-contain" />
         </a>
 
         {/* Android */}
-        <a href={ANDROID_URL} target="_blank" rel="noopener noreferrer" className="hidden sm:flex flex-col items-center justify-center gap-2">
+        <a href={ANDROID_URL} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-2">
           <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play" className="w-16 h-16 object-contain" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="h-8 object-contain" />
         </a>
