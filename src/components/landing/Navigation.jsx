@@ -160,23 +160,13 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                     EN
                   </button>
               </div>
-              <motion.button
+              <button
                 type="button"
                 onClick={handleBookClick}
-                animate={shouldReduceMotion ? {} : { boxShadow: ['0 0 0px #38bdf8', '0 0 18px #38bdf8', '0 0 0px #38bdf8'] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white overflow-hidden whitespace-nowrap flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #0369a1 0%, #0ea5e9 50%, #0369a1 100%)' }}
-                whileHover={{ scale: 1.05 }}
+                className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white font-bold px-6 py-3 rounded-full text-sm transition-all shadow-lg shadow-blue-900/40 whitespace-nowrap flex-shrink-0"
               >
-                <motion.span
-                  className="absolute inset-0 rounded-full"
-                  animate={shouldReduceMotion ? { opacity: 0 } : { opacity: [0, 0.4, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  style={{ background: 'radial-gradient(circle, #7dd3fc 0%, transparent 70%)' }}
-                />
-                <span className="relative z-10 text-nowrap">{t("freeTrial")}</span>
-              </motion.button>
+                {t("bookFreeClass")}
+              </button>
             </div>
 
 
