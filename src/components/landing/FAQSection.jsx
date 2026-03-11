@@ -64,6 +64,11 @@ export default function FAQSection({ onBookSession }) {
           aOpenGym: true
         },
         {
+          id: 'thunderwod-app',
+          q: 'De ce trebuie să descarc aplicația ThunderWOD?',
+          a: 'Aplicația ThunderWOD este folosită pentru organizarea și gestionarea antrenamentelor din sală. Prin aplicație:\n• poți să-ți rezervi locul la clase\n• poți să vezi programul antrenamentelor\n• poți să vezi în avans antrenamentul zilei (WOD)\n• îți poți urmări rezultatele și monitoriza progresul\n• îți poți plăti și gestiona abonamentul\nPractic, ai o singură aplicație pentru tot: programări, antrenamente și plăți. Astfel, procesul este rapid, simplu și ușor de gestionat direct de pe telefon.'
+        },
+        {
           id: 'what-to-bring',
           q: 'Ce ar trebui să aduc la prima clasă?',
           a: 'Haine de sport confortabile și o pereche de încălțăminte sport (pantofii cu talpă plată sunt mai buni decât cei de alergat, cu talpă moale). Adu și o sticlă cu apă și o atitudine pozitivă.'
