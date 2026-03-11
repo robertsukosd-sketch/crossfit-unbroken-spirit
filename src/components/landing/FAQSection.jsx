@@ -381,17 +381,17 @@ export default function FAQSection({ onBookSession }) {
                   >
                     <div className="px-5 sm:px-6 py-4 bg-zinc-900/30 border-l-2 border-blue-500 mt-1 rounded-lg space-y-3">
                       {/* Main answer text */}
-                      <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                        {faq.a}
-                        {faq.aHighlightGym && (
-                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                            {faq.a.split('CrossFit Unbroken Spirit').map((part, i, arr) => (
-                              i < arr.length - 1 
-                                ? [part, <span key={`gym-${i}`} className="font-bold text-sky-300">CrossFit Unbroken Spirit</span>]
-                                : part
-                            ))}
-                          </p>
-                        )}
+                      {faq.aHighlightGym ? (
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                          {faq.a.split('CrossFit Unbroken Spirit').map((part, i, arr) => (
+                            i < arr.length - 1 
+                              ? [part, <span key={`gym-${i}`} className="font-bold text-sky-300">CrossFit Unbroken Spirit</span>]
+                              : part
+                          ))}
+                        </p>
+                      ) : (
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                          {faq.a}
                         {!faq.aHighlightGym && faq.aThunderWODLink && (
                             <button
                               onClick={(e) => {
