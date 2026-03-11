@@ -309,6 +309,7 @@ export default function FAQSection({ onBookSession }) {
           {faqs.map((faq, index) => (
             <motion.div
               key={faq.id}
+              id={faq.id}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
