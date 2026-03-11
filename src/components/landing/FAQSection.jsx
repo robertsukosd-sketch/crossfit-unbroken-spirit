@@ -415,17 +415,7 @@ export default function FAQSection({ onBookSession }) {
                       ) : (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                           {faq.a}
-                        {faq.aThunderWODLink && (
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                openAppWithFallback();
-                              }}
-                              className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
-                            >
-                              {language === 'ro' ? 'Aplicatia ThunderWOD' : 'The ThunderWOD app'}
-                            </button>
-                          )}
+
                         {faq.aWithLink && (
                           <button
                             onClick={(e) => {
