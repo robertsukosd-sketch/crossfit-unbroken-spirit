@@ -394,9 +394,14 @@ export default function FAQSection({ onBookSession }) {
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                           {faq.a}</p>
                       )}
+                      {!faq.aWithHighlight && (
+                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                          {faq.a}
+                        </p>
+                      )}
                       <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                         {faq.aThunderWOD && (
-                            <button
+                          <button
                             onClick={(e) => {
                               e.stopPropagation();
                               openAppWithFallback();
@@ -406,7 +411,6 @@ export default function FAQSection({ onBookSession }) {
                             {language === 'ro' ? 'Aplicația ThunderWOD' : 'The ThunderWOD app'}
                           </button>
                         )}
-                        {faq.a}
                         {faq.aWithLink && (
                           <button
                             onClick={(e) => {
