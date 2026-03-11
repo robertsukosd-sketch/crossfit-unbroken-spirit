@@ -10,7 +10,7 @@ export default function FAQSection({ onBookSession }) {
   const [openId, setOpenId] = useState(null);
 
   useEffect(() => {
-    const checkForOpenFaq = () => {
+    const handleOpenFaq = () => {
       const openFaqId = sessionStorage.getItem('openFaqId');
       if (openFaqId) {
         setOpenId(openFaqId);
@@ -20,9 +20,7 @@ export default function FAQSection({ onBookSession }) {
         setTimeout(() => {
           const element = document.getElementById(openFaqId);
           if (element) {
-            // Scroll section into view first
             document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Then scroll to specific item
             setTimeout(() => {
               element.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }, 500);
@@ -31,10 +29,10 @@ export default function FAQSection({ onBookSession }) {
       }
     };
     
-    // Check immediately
-    checkForOpenFaq();
+    handleOpenFaq();
+    window.addEventListener('openFaqEvent', handleOpenFaq);
     
-    return () => {};
+    return () => window.removeEventListener('openFaqEvent', handleOpenFaq);
   }, []);
 
   const handleScrollToPricing = (category = null) => {
