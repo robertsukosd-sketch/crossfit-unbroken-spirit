@@ -47,7 +47,9 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block px-4 py-2 mb-6 text-sm font-semibold tracking-widest text-sky-400 uppercase bg-sky-500/10 rounded-full border border-sky-500/30">
-            {t("heroTag")}
+            {language === 'ro' ? (
+              <>PENTRU TINE. PENTRU COMUNITATE.<br />RIDICĂ ȘTACHETA.</>
+            ) : t("heroTag")}
           </span>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-0 leading-tight break-words overflow-hidden [text-wrap:balance]">
