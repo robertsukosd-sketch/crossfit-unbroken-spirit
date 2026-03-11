@@ -14,6 +14,14 @@ export default function FAQSection({ onBookSession }) {
     if (openFaqId) {
       setOpenId(openFaqId);
       sessionStorage.removeItem('openFaqId');
+      
+      // Scroll to the FAQ item after a brief delay for DOM to settle
+      setTimeout(() => {
+        const element = document.getElementById(openFaqId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
     }
   }, []);
 
