@@ -337,8 +337,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800"
-            style={{ minHeight: '400px' }}
+            className="rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800 h-[400px] lg:h-auto lg:min-h-[400px]"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.8341894651926!2d26.100449!3d44.394874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff3e1f1f1f1f%3A0x1f1f1f1f1f1f1f1f!2sSplaiul%20Unirii%20257-259%2C%20Bucuresti!5e0!3m2!1sro!2sro!4v1699999999999!5m2!1sro!2sro"
