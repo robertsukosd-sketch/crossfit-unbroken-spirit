@@ -58,67 +58,70 @@ export default function AppPromoSection() {
         className="relative max-w-5xl mx-auto"
       >
         {/* Wide horizontal card on desktop, stacked on mobile */}
-        <div className="relative bg-gradient-to-br from-[#0f172a] via-zinc-900 to-[#0c1a2e] border border-blue-400/40 rounded-3xl shadow-2xl shadow-blue-900/40 px-8 py-10 flex flex-col overflow-hidden">
+        <div className="relative bg-gradient-to-br from-[#0f172a] via-zinc-900 to-[#0c1a2e] border border-blue-400/40 rounded-3xl shadow-2xl shadow-blue-900/40 overflow-hidden">
           {/* Subtle top highlight line */}
           <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-blue-400/60 to-transparent" />
 
-          {/* Logo + label */}
-          <div className="flex flex-col items-center gap-3 mb-6 lg:mb-0">
-            <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl overflow-hidden border-2 border-blue-400/40 shadow-xl shadow-blue-500/20">
-              <img
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/892734e42_logothunderwod.jpeg"
-                alt="ThunderWOD"
-                className="w-full h-full object-contain"
-              />
+          <div className="lg:grid lg:grid-cols-[auto_1fr] lg:gap-12 lg:items-center px-8 py-10 lg:py-12">
+            {/* Logo + label */}
+            <div className="flex flex-col items-center gap-3 mb-8 lg:mb-0">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden border-2 border-blue-400/40 shadow-xl shadow-blue-500/20">
+                <img
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/892734e42_logothunderwod.jpeg"
+                  alt="ThunderWOD"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <p className="text-xs font-black uppercase tracking-widest text-blue-400">ThunderWOD</p>
             </div>
-            <p className="text-xs font-black uppercase tracking-widest text-blue-400">ThunderWOD</p>
-          </div>
 
-          {/* Text block */}
-          <div className="flex-1 text-center lg:text-left mb-8 lg:mb-0">
-            {isRo ? (
-              <>
-                <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Aplicația oficială</p>
-                <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-3">
-                  Totul, într-o singură aplicație
-                </h2>
-                <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                  Gestionează <span className="text-white font-semibold">plata abonamentelor</span>, <span className="text-white font-semibold">înscrierea la clase</span>{' '}
-                  <br className="hidden sm:block" />
-                  și <span className="text-white font-semibold">istoricul rezultatelor tale</span> în aplicația ThunderWOD.
-                </p>
-              </>
-            ) : (
-              <>
-                <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Official app</p>
-                <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-3">
-                  Everything in one app
-                </h2>
-                <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                   Manage your <span className="text-white font-semibold">subscriptions</span>, <span className="text-white font-semibold">class registrations</span>
-                   <br className="hidden sm:block" />
-                   and <span className="text-white font-semibold">workout history</span> in the ThunderWOD app.
-                 </p>
-              </>
-            )}
-          </div>
+            {/* Right column - Text + CTA */}
+            <div>
+              {/* Text block */}
+              <div className="text-center lg:text-left mb-6">
+                {isRo ? (
+                  <>
+                    <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Aplicația oficială</p>
+                    <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-3">
+                      Totul, într-o singură aplicație
+                    </h2>
+                    <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                      Gestionează <span className="text-white font-semibold">plata abonamentelor</span>, <span className="text-white font-semibold">înscrierea la clase</span>{' '}
+                      și <span className="text-white font-semibold">istoricul rezultatelor tale</span> în aplicația ThunderWOD.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Official app</p>
+                    <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-3">
+                      Everything in one app
+                    </h2>
+                    <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                       Manage your <span className="text-white font-semibold">subscriptions</span>, <span className="text-white font-semibold">class registrations</span>
+                        and <span className="text-white font-semibold">workout history</span> in the ThunderWOD app.
+                      </p>
+                  </>
+                )}
+              </div>
 
-          {/* CTA block */}
-          <div className="flex flex-col items-center gap-3">
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 active:scale-95 text-white font-bold px-8 py-4 rounded-xl transition-all duration-150 text-sm sm:text-base shadow-xl shadow-blue-600/40 whitespace-nowrap"
-            >
-              <Icon className="w-5 h-5 flex-shrink-0" />
-              {cta}
-            </a>
-            {badge && (
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                {badge}
-              </a>
-            )}
+              {/* CTA block */}
+              <div className="flex flex-col items-center lg:items-start gap-3">
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 active:scale-95 text-white font-bold px-8 py-4 rounded-xl transition-all duration-150 text-sm sm:text-base shadow-xl shadow-blue-600/40 whitespace-nowrap"
+                >
+                  <Icon className="w-5 h-5 flex-shrink-0" />
+                  {cta}
+                </a>
+                {badge && (
+                  <a href={url} target="_blank" rel="noopener noreferrer">
+                    {badge}
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
 
         </div>
