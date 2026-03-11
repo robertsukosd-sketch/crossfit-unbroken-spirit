@@ -9,6 +9,14 @@ export default function FAQSection({ onBookSession }) {
   const { t, language } = useLanguage();
   const [openId, setOpenId] = useState(null);
 
+  useEffect(() => {
+    const openFaqId = sessionStorage.getItem('openFaqId');
+    if (openFaqId) {
+      setOpenId(openFaqId);
+      sessionStorage.removeItem('openFaqId');
+    }
+  }, []);
+
   const handleScrollToPricing = (category = null) => {
     if (category) {
       sessionStorage.setItem('selectedPricingCategory', category);
