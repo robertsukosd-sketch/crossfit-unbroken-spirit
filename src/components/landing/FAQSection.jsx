@@ -61,7 +61,9 @@ export default function FAQSection({ onBookSession }) {
         {
            id: 'vs-gym',
            q: 'Prin ce diferă CrossFitul de o sală comercială?',
-           a: 'La o sală obișnuită plătești pentru acces la aparate și te antrenezi pe cont propriu.'
+           a: 'La o sală obișnuită plătești pentru acces la aparate și te antrenezi pe cont propriu.',
+           aWithHighlight: true,
+           aHighlightRo: true
         },
         {
           id: 'faq-wod-meaning',
@@ -192,7 +194,7 @@ export default function FAQSection({ onBookSession }) {
         q: 'How is CrossFit different from a regular gym?',
         a: 'At a regular gym, you pay for equipment access and train on your own.',
         aWithHighlight: true,
-        aHighlightRo: true
+        aHighlightEn: true
       },
       {
         id: 'faq-wod-meaning',
@@ -389,7 +391,7 @@ export default function FAQSection({ onBookSession }) {
                         <div className="text-gray-300 text-sm sm:text-base leading-relaxed space-y-3">
                           <p>{faq.a}</p>
                           <p>
-                            {faq.aHighlightRo ? (
+                            {language === 'ro' ? (
                               <>
                                 La <span className="text-blue-400 font-semibold">CrossFit Unbroken Spirit</span>, abonamentul presupune participarea la clase de grup ghidate de antrenor. Fiecare antrenament este deja programat și structurat, iar antrenorul te ghidează pe parcursul sesiunii.
                               </>
@@ -400,7 +402,7 @@ export default function FAQSection({ onBookSession }) {
                             )}
                           </p>
                           <p>
-                            {faq.aHighlightRo 
+                            {language === 'ro' 
                               ? 'Asta înseamnă că nu trebuie să te întrebi „ce fac azi?" — noi ne ocupăm de programare și antrenamente, iar comunitatea oferă suport, motivație și energie la fiecare clasă.'
                               : 'That means you never have to wonder "what do I do today?" — we handle the programming and workouts, while the community provides support, motivation, and energy at every class.'}
                           </p>
