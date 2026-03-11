@@ -29,7 +29,7 @@ export default function CoachesSection() {
     {
       id: 3,
       name: 'Andrei Vârnav',
-      image: 'https://images.unsplash.com/photo-1500595046891-ca72d3fef6f4?w=400&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400&h=400&fit=crop',
       certifications: ['CrossFit Level 1', 'Strength & Conditioning', 'Olympic Lifting'],
       experience: language === 'ro' ? '5 ani în antrenament' : '5 years in training',
       bioRo: 'Andrei este specialistul în antrenamente cu greutăți și putere. Pasiunea lui pentru educație fitness face ca sesiunile sale să fie întotdeauna informative și motivante.',
