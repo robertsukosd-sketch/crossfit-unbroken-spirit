@@ -131,7 +131,7 @@ export default function CookieConsent() {
   return (
     <>
       {/* Cookie Banner */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-zinc-900 border-t border-zinc-800 p-4 md:p-6">
+      <div className="fixed bottom-16 sm:bottom-0 left-0 right-0 z-40 bg-zinc-900 border-t border-zinc-800 p-4 md:p-6">
         <div className="max-w-7xl mx-auto">
           {!showSettings ? (
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
