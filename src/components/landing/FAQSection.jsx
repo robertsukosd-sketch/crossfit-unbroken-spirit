@@ -425,8 +425,21 @@ export default function FAQSection({ onBookSession }) {
                               {language === 'ro' ? 'Programezi o ședință gratuită' : 'Book a free session'}
                             </button>
                             {language === 'ro' 
-                              ? '\n* Cunoști antrenorii și sala\n* Participi la primul antrenament\nDupă aceea vei putea intra în programul normal de clase.'
-                              : '\n* Meet the coaches and gym\n* Participate in your first workout\nAfter that you can join the regular class program.'}
+                              ? '\n* '
+                              : '\n* '}
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                const aboutEl = document.getElementById('about');
+                                if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
+                              }}
+                              className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                            >
+                              {language === 'ro' ? 'Cunoști antrenorii și sala' : 'Meet the coaches and gym'}
+                            </button>
+                            {language === 'ro' 
+                              ? '\n* Participi la primul antrenament\nDupă aceea vei putea intra în programul normal de clase.'
+                              : '\n* Participate in your first workout\nAfter that you can join the regular class program.'}
                           </>
                         )}
                         {faq.aDropIn && (
