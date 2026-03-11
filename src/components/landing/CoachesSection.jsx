@@ -105,11 +105,6 @@ export default function CoachesSection() {
                   <span className="text-sm font-semibold">{coach.experience}</span>
                 </div>
 
-                {/* Bio */}
-                <p className="text-gray-300 text-sm leading-relaxed mb-5">
-                  {language === 'ro' ? coach.bioRo : coach.bioEn}
-                </p>
-
                 {/* Certifications */}
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
