@@ -190,7 +190,7 @@ export default function ScheduleSection() {
 
         {/* Legend */}
         <div className="flex flex-wrap justify-center gap-4 mt-10">
-          {Object.entries(classColors).map(([className, colors]) => (
+          {Object.entries(classColors).filter(([className]) => className !== 'CrossFit Kids').map(([className, colors]) => (
             <div key={className} className="flex items-center gap-2">
               <div className={cn("w-3 h-3 rounded-full", colors.split(' ')[0])} />
               <span className="text-gray-300 text-sm">{className}</span>
