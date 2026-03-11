@@ -138,7 +138,7 @@ export default function FAQSection({ onBookSession }) {
         },
         {
           id: 'safety',
-          q: 'Este CrossFit-ul periculos? Mă voi accidenta?',
+          q: 'Este CrossFitul periculos? Există riscuri să mă accidentez?',
           a: 'Orice activitate fizică implică riscuri, dar noi le reducem la minimum prin filozofia noastră: "Mecanică, Consistență, apoi Intensitate". Insistăm să te miști corect înainte de a te mișca repede sau cu greutăți mari.'
         },
         {
