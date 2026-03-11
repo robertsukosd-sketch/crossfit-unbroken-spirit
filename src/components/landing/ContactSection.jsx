@@ -139,15 +139,15 @@ export default function ContactSection() {
                     <h4 className="text-white font-bold text-xs sm:text-sm mb-1">{info.title}</h4>
                     {info.details.map((detail, i) => {
                       if (detail.startsWith('+')) {
-                        return <a key={i} href={`tel:${detail.replace(/\s/g, '')}`} className="text-gray-400 text-xs truncate hover:text-sky-400 transition-colors block">{detail}</a>;
+                        return <a key={i} href={`tel:${detail.replace(/\s/g, '')}`} className="text-gray-400 text-xs hover:text-sky-400 transition-colors block break-words">{detail}</a>;
                       }
                       if (detail.includes('@')) {
-                        return <a key={i} href={`mailto:${detail}`} className="text-gray-400 text-xs truncate hover:text-sky-400 transition-colors block">{detail}</a>;
+                        return <a key={i} href={`mailto:${detail}`} className="text-gray-400 text-xs hover:text-sky-400 transition-colors block break-words">{detail}</a>;
                       }
                       if (info.isAddress) {
-                        return <a key={i} href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 text-xs truncate hover:text-sky-400 transition-colors block">{detail}</a>;
+                        return <a key={i} href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 text-xs hover:text-sky-400 transition-colors block break-words">{detail}</a>;
                       }
-                      return <p key={i} className="text-gray-400 text-xs truncate">{detail}</p>;
+                      return <p key={i} className="text-gray-400 text-xs break-words">{detail}</p>;
                     })}
                   </div>
                 </motion.div>
