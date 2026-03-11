@@ -122,7 +122,7 @@ export default function CoachesSection() {
                         className="flex items-center gap-2 px-3 py-2 bg-blue-600/10 border border-blue-500/20 rounded-lg"
                       >
                         <div className="h-1.5 w-1.5 rounded-full bg-blue-400" />
-                        <span className="text-sm text-gray-300">{cert}</span>
+                        <span className="text-sm text-gray-300 whitespace-pre-line">{cert}</span>
                       </div>
                     ))}
                   </div>
