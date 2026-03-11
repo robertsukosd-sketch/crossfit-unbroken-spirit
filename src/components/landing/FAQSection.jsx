@@ -185,6 +185,12 @@ export default function FAQSection({ onBookSession }) {
         aOpenGym: true
       },
       {
+        id: 'parking',
+        q: 'Is there parking? How do I get to the gym?',
+        a: 'The gym is easily accessible by both public transport and car.\nThe nearest metro station is Mihai Bravu, about a 7–8 minute walk away. The nearest STB stops are Pod Mihai Bravu for bus line 223 and Pod Mihai Bravu for tram line 10.\nIf you\'re coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.',
+        aParking: true
+      },
+      {
         id: 'thunderwod-app',
         q: 'Why do I need to download the ThunderWOD app?',
         a: ' is used to organize and manage your gym workouts. Through the app:\n• you can reserve your spot in classes\n• you can view the workout schedule\n• you can see the Workout of the Day (WOD) in advance\n• you can track your results and monitor your progress\n• you can pay for and manage your membership\nEssentially, it\'s one app for everything: bookings, workouts, and payments — making the whole process fast, simple, and easy to manage right from your phone.',
