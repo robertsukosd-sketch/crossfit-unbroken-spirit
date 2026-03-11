@@ -66,7 +66,8 @@ export default function FAQSection({ onBookSession }) {
         {
           id: 'thunderwod-app',
           q: 'De ce trebuie să descarc aplicația ThunderWOD?',
-          a: 'Aplicația ThunderWOD este folosită pentru organizarea și gestionarea antrenamentelor din sală. Prin aplicație:\n• poți să-ți rezervi locul la clase\n• poți să vezi programul antrenamentelor\n• poți să vezi în avans antrenamentul zilei (WOD)\n• îți poți urmări rezultatele și monitoriza progresul\n• îți poți plăti și gestiona abonamentul\nPractic, ai o singură aplicație pentru tot: programări, antrenamente și plăți. Astfel, procesul este rapid, simplu și ușor de gestionat direct de pe telefon.'
+          a: ' este folosită pentru organizarea și gestionarea antrenamentelor din sală. Prin aplicație:\n• poți să-ți rezervi locul la clase\n• poți să vezi programul antrenamentelor\n• poți să vezi în avans antrenamentul zilei (WOD)\n• îți poți urmări rezultatele și monitoriza progresul\n• îți poți plăti și gestiona abonamentul\nPractic, ai o singură aplicație pentru tot: programări, antrenamente și plăți. Astfel, procesul este rapid, simplu și ușor de gestionat direct de pe telefon.',
+          aThunderWOD: true
         },
         {
           id: 'what-to-bring',
