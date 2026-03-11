@@ -372,15 +372,13 @@ export default function PricingSection() {
             transition={{ duration: 0.2 }}
             className={cn('flex flex-col sm:grid gap-6', gridClass(activeCategory.plans.length))}
           >
-            {activeCategory.plans.map((plan, index) => {
+            {(() => {
               const reverseOnMobile = activeId === 'core' || activeId === 'welcome';
-              const mobileOrder = reverseOnMobile ? activeCategory.plans.length - 1 - index : index;
-              return (
-                <div key={plan.name} style={{ order: mobileOrder }} className="sm:!order-none h-full">
-                  <PlanCard plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} />
-                </div>
-              );
-            })}
+              const mobilePlans = reverseOnMobile ? [...activeCategory.plans].reverse() : activeCategory.plans;
+              return mobilePlans.map((plan, index) => (
+                <PlanCard key={plan.name} plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} />
+              ));
+            })()}
           </motion.div>
         </AnimatePresence>
 
