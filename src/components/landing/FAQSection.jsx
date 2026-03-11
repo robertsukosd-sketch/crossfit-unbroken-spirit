@@ -13,11 +13,9 @@ export default function FAQSection({ onBookSession }) {
     const handleOpenFaq = () => {
       const openFaqId = sessionStorage.getItem('openFaqId');
       if (openFaqId) {
-        // First set the ID to open the accordion
         setOpenId(openFaqId);
         sessionStorage.removeItem('openFaqId');
         
-        // Then scroll
         setTimeout(() => {
           const element = document.getElementById(openFaqId);
           const faqSection = document.getElementById('faq');
@@ -31,10 +29,7 @@ export default function FAQSection({ onBookSession }) {
       }
     };
     
-    // Check on mount
     handleOpenFaq();
-    
-    // Also listen for event
     window.addEventListener('openFaqEvent', handleOpenFaq);
     return () => window.removeEventListener('openFaqEvent', handleOpenFaq);
   }, []);
@@ -61,9 +56,7 @@ export default function FAQSection({ onBookSession }) {
         {
            id: 'vs-gym',
            q: 'Prin ce diferă CrossFitul de o sală comercială?',
-           a: 'La o sală obișnuită plătești pentru acces la aparate și te antrenezi pe cont propriu.',
-           aWithHighlight: true,
-           aHighlightRo: true
+           a: 'La o sală obișnuită plătești pentru acces la aparate și te antrenezi pe cont propriu. La CrossFit Unbroken Spirit, abonamentul presupune participarea la clase de grup ghidate de antrenor. Fiecare antrenament este deja programat și structurat, iar antrenorul te ghidează pe parcursul sesiunii. Asta înseamnă că nu trebuie să te întrebi „ce fac azi?" — noi ne ocupăm de programare și antrenamente, iar comunitatea oferă suport, motivație și energie la fiecare clasă.'
         },
         {
           id: 'faq-wod-meaning',
@@ -98,19 +91,19 @@ export default function FAQSection({ onBookSession }) {
         {
           id: 'open-gym',
           q: 'Ce este Open Gym?',
-          a: '',
-          aOpenGym: true
+          a: 'Open Gym este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'
         },
         {
           id: 'parking',
           q: 'Cum pot ajunge la sală? Există parcare?',
+          a: 'Sala este ușor accesibilă, atât cu transportul în comun, cât și cu mașina.\nCea mai apropiată stație de metrou este Mihai Bravu, aflată la aproximativ 7–8 minute de mers pe jos. În același timp, cele mai apropiate stații STB sunt Pod Mihai Bravu pentru linia de autobuz 223 și Pod Mihai Bravu pentru liniile de tramvai 1 și 10.\nDacă vii cu mașina, ai un mare avantaj: parcare gratuită inclusă! Nu trebuie să îți faci griji pentru locul de parcare sau costuri suplimentare.',
           aParking: true,
           aParkingRo: true
         },
         {
           id: 'thunderwod-app',
           q: 'De ce trebuie să descarc aplicația ThunderWOD?',
-          a: 'Aplicația ThunderWOD este folosită pentru organizarea și gestionarea antrenamentelor din sală. Prin aplicație:\n• poți să-ți rezervi locul la clase\n• poți să vezi programul antrenamentelor\n• poți să vezi în avans antrenamentul zilei (WOD)\n• îți poți urmări rezultatele și monitoriza progresul\n• îți poți plăti și gestiona abonamentul\nPractic, ai o singură aplicație pentru tot: programări, antrenamente și plăți. Astfel, procesul este rapid, simplu și ușor de gestionat direct de pe telefon.',
+          a: 'Aplicația ThunderWOD este folosită pentru organizarea și gestionarea antrenamentelor din sală. Prin aplicație:\n• poți să-ți rezervi locul la clase\n• poți să vezi programul antrenamentelor\n• poți să vezi în avans antrenamentul zilei (WOD)\n• îți poți urmări rezultatele și monitoriza progresul\n• îți poți plăti și gestiona abonamentul\nPractic, ai o singură aplicație pentru tot: programări, antrenamente și plăți. Astfel, procesul este rapid, simplu și ușor de gestionat direct de pe telefon. Pentru a o descărca, apasă pe ',
           aThunderWODLink: true
         },
         {
@@ -192,9 +185,7 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'vs-gym',
         q: 'How is CrossFit different from a regular gym?',
-        a: 'At a regular gym, you pay for equipment access and train on your own.',
-        aWithHighlight: true,
-        aHighlightEn: true
+        a: 'At a regular gym, you pay for equipment access and train on your own. At CrossFit Unbroken Spirit, your membership means participating in group classes led by a coach. Every workout is already programmed and structured, and the coach guides you throughout the session. That means you never have to wonder "what do I do today?" — we handle the programming and workouts, while the community provides support, motivation, and energy at every class.'
       },
       {
         id: 'faq-wod-meaning',
@@ -229,19 +220,19 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'open-gym',
         q: 'What is Open Gym?',
-        a: '',
-        aOpenGym: true
+        a: 'Open Gym is a time slot when you can come to the gym to train on your own, using available equipment. Unlike regular CrossFit classes, during Open Gym there\'s no group-led training. It\'s typically used by members who want to practice specific movements, make up a missed workout, or work extra on certain skills.'
       },
       {
         id: 'parking',
         q: 'How can I get to the box? Do you have a parking lot?',
+        a: 'The box is easily accessible by both public transport and car.\nThe nearest subway station is Mihai Bravu, about a 7–8 minute walk away. The nearest STB stops are Pod Mihai Bravu for bus line 223 and Pod Mihai Bravu for tram lines 1 and 10.\nIf you\'re coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.',
         aParking: true,
         aParkingEn: true
       },
       {
         id: 'thunderwod-app',
         q: 'Why do I need to download the ThunderWOD app?',
-        a: 'The ThunderWOD app is used to organize and manage your gym workouts. Through the app:\n• you can reserve your spot in classes\n• you can view the workout schedule\n• you can see the Workout of the Day (WOD) in advance\n• you can track your results and monitor your progress\n• you can pay for and manage your membership\nEssentially, it\'s one app for everything: bookings, workouts, and payments — making the whole process fast, simple, and easy to manage right from your phone.',
+        a: 'The ThunderWOD app is used to organize and manage your gym workouts. Through the app:\n• you can reserve your spot in classes\n• you can view the workout schedule\n• you can see the Workout of the Day (WOD) in advance\n• you can track your results and monitor your progress\n• you can pay for and manage your membership\nEssentially, it\'s one app for everything: bookings, workouts, and payments — making the whole process fast, simple, and easy to manage right from your phone. To download it, click on ',
         aThunderWODLink: true
       },
       {
@@ -386,10 +377,11 @@ export default function FAQSection({ onBookSession }) {
                     transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-5 sm:px-6 py-4 bg-zinc-900/30 border-l-2 border-blue-500 mt-1 rounded-lg">
-                      {faq.aThunderWODLink ? (
-                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                          {faq.a}
+                    <div className="px-5 sm:px-6 py-4 bg-zinc-900/30 border-l-2 border-blue-500 mt-1 rounded-lg space-y-3">
+                      {/* Main answer text */}
+                      <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                        {faq.a}
+                        {faq.aThunderWODLink && (
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
@@ -398,37 +390,6 @@ export default function FAQSection({ onBookSession }) {
                             className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                           >
                             {language === 'ro' ? 'Aplicatia ThunderWOD' : 'The ThunderWOD app'}
-                          </button>
-                        </p>
-                      ) : faq.aWithHighlight ? (
-                        <div className="text-gray-300 text-sm sm:text-base leading-relaxed space-y-3">
-                          <p>{faq.a}</p>
-                          <p>
-                            {language === 'ro' ? (
-                              <>
-                                La <span className="text-blue-400 font-semibold">CrossFit Unbroken Spirit</span>, abonamentul presupune participarea la clase de grup ghidate de antrenor. Fiecare antrenament este deja programat și structurat, iar antrenorul te ghidează pe parcursul sesiunii.
-                              </>
-                            ) : (
-                              <>
-                                At <span className="text-blue-400 font-semibold">CrossFit Unbroken Spirit</span>, your membership means participating in group classes led by a coach. Every workout is already programmed and structured, and the coach guides you throughout the session.
-                              </>
-                            )}
-                          </p>
-                          <p>
-                            {language === 'ro' 
-                              ? 'Asta înseamnă că nu trebuie să te întrebi „ce fac azi?" — noi ne ocupăm de programare și antrenamente, iar comunitatea oferă suport, motivație și energie la fiecare clasă.'
-                              : 'That means you never have to wonder "what do I do today?" — we handle the programming and workouts, while the community provides support, motivation, and energy at every class.'}
-                          </p>
-                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                          {faq.aThunderWOD && (
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              openAppWithFallback();
-                            }}
-                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
-                          >
-                            {language === 'ro' ? 'Aplicația ThunderWOD' : 'The ThunderWOD app'}
                           </button>
                         )}
                         {faq.aWithLink && (
@@ -442,7 +403,19 @@ export default function FAQSection({ onBookSession }) {
                             {language === 'ro' ? 'acest formular' : 'this form'}
                           </button>
                         )}
-                        {faq.aWithLink && '.'}
+                        {faq.aClassDuration && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              sessionStorage.setItem('openFaqId', 'faq-wod-meaning');
+                              window.dispatchEvent(new Event('openFaqEvent'));
+                            }}
+                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                          >
+                            {language === 'ro' ? 'antrenamentul zilei (WOD)' : 'Workout of the Day (WOD)'}
+                          </button>
+                        )}
+                        {faq.aClassDuration && (language === 'ro' ? ' și revenirea (stretching).' : ' and cool-down (stretching).')}
                         {faq.aPricing && (
                           <button
                             onClick={(e) => {
@@ -451,38 +424,46 @@ export default function FAQSection({ onBookSession }) {
                             }}
                             className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                           >
-                            {language === 'ro' ? 'Aici poți vedea prețurile abonamentelor.' : 'here.'}
+                            {language === 'ro' ? 'aici' : 'here'}
                           </button>
                         )}
-                        {faq.aHowToStart && (
-                          <>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                onBookSession?.();
-                              }}
-                              className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
-                            >
-                              {language === 'ro' ? 'Programezi o ședință gratuită' : 'Book a free session'}
-                            </button>
-                            {language === 'ro' 
-                              ? '\n* '
-                              : '\n* '}
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                const aboutEl = document.getElementById('about');
-                                if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
-                              }}
-                              className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
-                            >
-                              {language === 'ro' ? 'Cunoști antrenorii și sala' : 'Meet the coaches and gym'}
-                            </button>
-                            {language === 'ro' 
-                              ? '\n* Participi la primul antrenament\nDupă aceea vei putea intra în programul normal de clase.'
-                              : '\n* Participate in your first workout\nAfter that you can join the regular class program.'}
-                          </>
+                        {faq.aFrequency && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleScrollToPricing('crossfit');
+                            }}
+                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                          >
+                            {language === 'ro' ? '3 zile pe săptămână' : '3 days a week'}
+                          </button>
                         )}
+                        {faq.aFrequency && (language === 'ro' ? ' pentru a permite corpului să se recupereze. Pe măsură ce avansează, mulți membri aleg 4-5 zile pentru rezultate optime.' : ' to allow your body to recover. As you progress, many members choose 4-5 days for optimal results.')}
+                        {faq.aHowToStart && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onBookSession?.();
+                            }}
+                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                          >
+                            {language === 'ro' ? 'Programezi o ședință gratuită' : 'Book a free session'}
+                          </button>
+                        )}
+                        {faq.aHowToStart && (language === 'ro' ? '\n* ' : '\n* ')}
+                        {faq.aHowToStart && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              const aboutEl = document.getElementById('about');
+                              if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
+                          >
+                            {language === 'ro' ? 'Cunoști antrenorii și sala' : 'Meet the coaches and gym'}
+                          </button>
+                        )}
+                        {faq.aHowToStart && (language === 'ro' ? '\n* Participi la primul antrenament\nDupă aceea vei putea intra în programul normal de clase.' : '\n* Participate in your first workout\nAfter that you can join the regular class program.')}
                         {faq.aDropIn && (
                           <button
                             onClick={(e) => {
@@ -491,119 +472,44 @@ export default function FAQSection({ onBookSession }) {
                             }}
                             className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                           >
-                            {language === 'ro' ? 'Taxa este de 60 de lei.' : 'The fee is 60 RON.'}
+                            {language === 'ro' ? 'Taxa este de 60 de lei' : 'The fee is 60 RON'}
                           </button>
                         )}
                         {faq.aScores && (
-                          <>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                openAppWithFallback();
-                              }}
-                              className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
-                            >
-                              {language === 'ro' ? 'aplicația ThunderWod' : 'the ThunderWod app'}
-                            </button>
-                            {language === 'ro'
-                              ? ' pentru a monitoriza rezultatele. Nu facem asta pentru clasamente, ci pentru că datele nu mint. Să vezi la diverse intervale de timp că ai ridicat cu 5kg mai mult sau ai alergat mai repede decât în trecut e cea mai bună motivație pe termen lung!'
-                              : ' to track your results. We don\'t do this for rankings, but because the data doesn\'t lie. Seeing over time that you lifted 5kg more or ran faster than before is the best long-term motivation!'}
-                          </>
-                        )}
-
-                        {faq.aFrequency && (
-                           <>
-                             <button
-                               onClick={(e) => {
-                                 e.stopPropagation();
-                                 handleScrollToPricing('crossfit');
-                               }}
-                               className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
-                             >
-                               {language === 'ro' ? '3 zile pe săptămână' : '3 days a week'}
-                             </button>
-                             {language === 'ro'
-                               ? ' pentru a permite corpului să se recupereze. Pe măsură ce avansează, mulți membri aleg 4-5 zile pentru rezultate optime.'
-                               : ' to allow your body to recover. As you progress, many members choose 4-5 days for optimal results.'}
-                           </>
-                         )}
-                        {faq.aClassDuration && (
-                           <>
-                             <button
-                               onClick={(e) => {
-                                 e.stopPropagation();
-                                 sessionStorage.setItem('openFaqId', 'faq-wod-meaning');
-                                 window.dispatchEvent(new Event('openFaqEvent'));
-                               }}
-                               className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
-                             >
-                               {language === 'ro' ? 'antrenamentul zilei (WOD)' : 'Workout of the Day (WOD)'}
-                             </button>
-                             {language === 'ro'
-                               ? ' și revenirea (stretching).'
-                               : ' and cool-down (stretching).'}
-                           </>
-                         )}
-                        </p>
-                        )}
-                        {faq.aOpenGym && (
-                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              handleScrollToPricing('ascent');
+                              openAppWithFallback();
                             }}
                             className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold"
                           >
-                            Open Gym
+                            {language === 'ro' ? 'aplicația ThunderWod' : 'the ThunderWod app'}
                           </button>
-                          {language === 'ro'
-                            ? ' este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul Open Gym nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.'
-                            : ' is a time slot when you can come to the gym to train on your own, using available equipment. Unlike regular CrossFit classes, during Open Gym there\'s no group-led training. It\'s typically used by members who want to practice specific movements, make up a missed workout, or work extra on certain skills.'}
-                        </p>
                         )}
-                        {faq.aParking && (
-                          <>
-                            <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                              {faq.aParkingRo && (
-                                <span>
-                                  {'Sala este ușor accesibilă, atât cu transportul în comun, cât și cu mașina.\nCea mai apropiată stație de metrou este '}
-                                  <span className="text-sky-400 font-semibold">Mihai Bravu</span>
-                                  {', aflată la aproximativ 7–8 minute de mers pe jos. În același timp, cele mai apropiate stații STB sunt '}
-                                  <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
-                                  {' pentru linia de autobuz 223 și '}
-                                  <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
-                                  {' pentru liniile de tramvai 1 și 10.\nDacă vii cu mașina, ai un mare avantaj: parcare gratuită inclusă! Nu trebuie să îți faci griji pentru locul de parcare sau costuri suplimentare.'}
-                                </span>
-                              )}
-                              {faq.aParkingEn && (
-                                <span>
-                                  {'The box is easily accessible by both public transport and car.\nThe nearest subway station is '}
-                                  <span className="text-sky-400 font-semibold">Mihai Bravu</span>
-                                  {', about a 7–8 minute walk away. The nearest STB stops are '}
-                                  <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
-                                  {' for bus line 223 and '}
-                                  <span className="text-sky-400 font-semibold">Pod Mihai Bravu</span>
-                                  {' for tram lines 1 and 10.\nIf you\'re coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.'}
-                                </span>
-                              )}
-                            </p>
-                            <img
-                              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
-                              alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
-                              className="mt-4 w-full rounded-xl border border-zinc-700"
-                            />
-                          </>
-                        )}
-                        {faq.aImage && (
+                        {faq.aScores && (language === 'ro' ? ' pentru a monitoriza rezultatele. Nu facem asta pentru clasamente, ci pentru că datele nu mint. Să vezi la diverse intervale de timp că ai ridicat cu 5kg mai mult sau ai alergat mai repede decât în trecut e cea mai bună motivație pe termen lung!' : ' to track your results. We don\'t do this for rankings, but because the data doesn\'t lie. Seeing over time that you lifted 5kg more or ran faster than before is the best long-term motivation!')}
+                      </p>
+
+                      {/* Parking section */}
+                      {faq.aParking && (
+                        <>
+                          <img
+                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
+                            alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
+                            className="w-full rounded-xl border border-zinc-700"
+                          />
+                        </>
+                      )}
+
+                      {/* CrossFit info image */}
+                      {faq.aImage && (
                         <img
                           src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/c02900e79_image.png"
                           alt={language === 'ro' ? 'CrossFit - Fitness în 100 de cuvinte' : 'CrossFit - Fitness in 100 words'}
-                          className="mt-4 w-full rounded-xl border border-zinc-700"
+                          className="w-full rounded-xl border border-zinc-700"
                         />
                       )}
-                        </div>
-                        </motion.div>
+                    </div>
+                  </motion.div>
                 )}
               </AnimatePresence>
             </motion.div>
