@@ -135,19 +135,18 @@ ${fullMessage}`,
                     <p className="text-gray-400 text-sm leading-relaxed">
                       {isRo ? (
                         <>
-                          Vezi{' '}
                           <button
                             type="button"
                             onClick={() => {
-                              sessionStorage.setItem('openFaqId', 'parking');
                               handleClose();
                               setTimeout(() => {
-                                window.dispatchEvent(new Event('openFaqEvent'));
+                                const aboutEl = document.getElementById('about');
+                                if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
                               }, 50);
                             }}
                             className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
                           >
-                            cum ajungi la noi
+                            Cunoști antrenorii și sala
                           </button>
                           {', verifică '}
                           <button
@@ -161,7 +160,20 @@ ${fullMessage}`,
                         </>
                       ) : (
                         <>
-                          Check our{' '}
+                          <button
+                            type="button"
+                            onClick={() => {
+                              handleClose();
+                              setTimeout(() => {
+                                const aboutEl = document.getElementById('about');
+                                if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
+                              }, 50);
+                            }}
+                            className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+                          >
+                            Meet the coaches
+                          </button>
+                          {', check our '}
                           <button
                             type="button"
                             onClick={() => setShowSchedule((v) => !v)}
@@ -169,7 +181,7 @@ ${fullMessage}`,
                           >
                             Schedule
                           </button>
-                          {' '}and pick a time. Fill in your details and we'll be waiting for you at the box!
+                          {' '}and pick a time. Fill in your details and we\'ll be waiting for you at the box!
                         </>
                       )}
                     </p>
