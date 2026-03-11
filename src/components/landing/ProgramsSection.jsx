@@ -56,6 +56,13 @@ export default function ProgramsSection({ onBookSession }) {
   const programs = useMemo(() => getPrograms(t, language), [language]);
   const shouldReduceMotion = useReducedMotion();
 
+  const handleScrollToWOD = () => {
+    const wodFaq = document.getElementById('faq-wod-meaning');
+    if (wodFaq) {
+      wodFaq.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
   return (
     <section id="programs" className="py-24 bg-black relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900 via-black to-black" />
