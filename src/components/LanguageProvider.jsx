@@ -22,6 +22,7 @@ export const translations = {
     startHere: "Începători",
     programs: "Programe",
     pricing: "Prețuri",
+    pricingMobile: "Prețuri și Abonamente",
     schedule: "Orar",
     contact: "Contact",
     freeTrial: "O Ședință Gratuită",
