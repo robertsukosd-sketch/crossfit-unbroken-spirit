@@ -104,7 +104,7 @@ export default function AppPromoSection() {
           </div>
 
           {/* CTA block */}
-          <div className="flex flex-col items-center lg:items-end gap-3 lg:flex-shrink-0">
+          <div className="flex flex-col items-center gap-3">
             <a
               href={url}
               target="_blank"
