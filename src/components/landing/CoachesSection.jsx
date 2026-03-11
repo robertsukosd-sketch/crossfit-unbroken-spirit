@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Dumbbell, Users } from 'lucide-react';
+import { Dumbbell } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
 import { cn } from '@/lib/utils';
 
