@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, Dumbbell, Sparkles, User, Globe } from 'lucide-react';
