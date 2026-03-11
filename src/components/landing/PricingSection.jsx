@@ -370,7 +370,7 @@ export default function PricingSection() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className={cn('flex flex-col sm:grid gap-6', gridClass(activeCategory.plans.length))}
+            className={cn('grid gap-6', gridClass(activeCategory.plans.length))}
           >
             {(() => {
               const reverseOnMobile = activeId === 'core' || activeId === 'welcome';
