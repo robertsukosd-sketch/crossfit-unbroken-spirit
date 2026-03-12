@@ -70,44 +70,69 @@ const getPrivacyContent = (language) => {
   if (language === 'ro') {
     return (
       <>
-        <p><strong>1. Introducere și Responsabil de Prelucrare</strong></p>
-        <p>Conform Regulamentului General privind Protecția Datelor (GDPR) nr. 2016/679 și legislației românești privind protecția datelor, S.C. UNBROKEN CLUB S.R.L. (denumit în continuare "noi" sau "compania") este responsabilă pentru prelucrarea datelor dumneavoastră cu caracter personal. Pentru orice întrebări privind confidențialitatea, contactați-ne la train@unbrokenspirit.ro sau +40 748 838 767.</p>
-        
-        <p><strong>2. Ce Date Colectăm</strong></p>
-        <p>Colectăm următoarele categorii de date: date de identificare (nume, prenume, e-mail, telefon), date de localizare (adresă), date de sănătate (antecedente medicale în scopuri de siguranță la antrenament), date de plată (informații bancare sau de card, doar pentru procesare securizată), date de urmărire (adresa IP, cookie-uri, dispozitiv).</p>
-        
-        <p><strong>3. Bazele Juridice pentru Prelucrare</strong></p>
-        <p>Prelucrarea datelor dumneavoastră se bazează pe: consimțământul explicit (pentru comunicări de marketing), contractul de prestare de servicii (pentru a vă oferi serviciile de antrenament), obligații legale (pentru conformitate cu legislația munca și sănătate), interesul legitim (pentru securitate și prevenirea fraudei).</p>
-        
-        <p><strong>4. Scopurile Prelucrării Datelor</strong></p>
-        <p>Datele dumneavoastră sunt utilizate pentru: prestarea serviciilor de antrenament și fitness, gestionarea abonamentelor și plăților, comunicări administrative și legate de servicii, marketing și promovare (cu consimțământul explicit), îmbunătățirea serviciilor și site-ului, respectarea obligațiilor legale și de reglementare, prevenirea fraudelor și a activităților ilegale.</p>
-        
-        <p><strong>5. Partajarea Datelor cu Terți</strong></p>
-        <p>Nu vândutm și nu partajăm datele dumneavoastră cu terți fără consimțământul explicit, cu excepția cazurilor în care suntem obligați legal. Partenerii noștri (procesatori de plăți, furnizori de cloud) sunt obligați prin contracte să respecte confidențialitatea și securitatea.</p>
-        
-        <p><strong>6. Transferuri Internaționale</strong></p>
-        <p>Datele dumneavoastră sunt stocate în principal în Uniunea Europeană. Orice transfer în afara UE se face cu mecanisme de protecție adecvate, conform GDPR.</p>
-        
-        <p><strong>7. Retenția Datelor</strong></p>
-        <p>Păstrăm datele dumneavoastră doar cât timp este necesar: datele contractuale sunt reținute pentru durata abonamentului și 6 ani după (conform legii fiscale), datele de marketing sunt șterse la retragerea consimțământului, datele de securitate sunt reținute conform legislației.</p>
-        
-        <p><strong>8. Drepturile Dumneavoastră</strong></p>
-        <p>Aveți următoarele drepturi conform GDPR: dreptul de acces (să aflați ce date avem despre dumneavoastră), dreptul de rectificare (să corectați datele inexacte), dreptul la ștergere (dreptul de a fi uitat), dreptul la restricționarea prelucrării, dreptul la portabilitate (să primiți datele într-un format structurat), dreptul de a vă opune prelucrării, dreptul de a nu fi supus unor decizii automatizate. Pentru a exercita aceste drepturi, contactați-ne la train@unbrokenspirit.ro.</p>
-        
-        <p><strong>9. Securitatea Datelor</strong></p>
-        <p>Implementăm măsuri de securitate tehnice și organizatorice pentru a proteja datele dumneavoastră împotriva accesului neautorizat, modificării, pierderii sau utilizării abuzive. Utilizăm criptare (SSL/TLS), acces restricționat și testare regulată a sistemelor de securitate.</p>
-        
-        <p><strong>10. Incidente de Securitate</strong></p>
-        <p>În cazul unei breșe de date care ar putea afecta drepturile dumneavoastră, vom notifica autoritățile competente și, dacă este cazul, pe dumneavoastră, conform GDPR.</p>
-        
-        <p><strong>11. Cookie-uri și Tehnologii de Urmărire</strong></p>
-        <p>Utilizăm cookie-uri și alte tehnologii de urmărire conform politicii noastre separate de cookie-uri. Puteți controla aceste tehnologii prin setările browserului.</p>
-        
-        <p><strong>12. Contact cu Autoritatea de Protecție a Datelor</strong></p>
-        <p>Dacă considerați că prelucrarea datelor dumneavoastră încalcă GDPR, puteți depune o plângere la Autoritatea Națională pentru Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), strada Dem. I. Dobrescu nr. 22-24, sector 1, București, sau online pe www.dataprotection.ro.</p>
-        
-        <p><strong>13. Modificări ale Politicii</strong></p>
-        <p>Avem dreptul de a actualiza această politică periodic. Versiunea actualizată va fi disponibilă pe site-ul nostru cu data ultimei modificări evident marcată.</p>
+        <p><strong>1. Introducere și Operatorul de Date</strong></p>
+        <p>În conformitate cu Regulamentul General privind Protecția Datelor (GDPR - UE 2016/679) și legislația română în vigoare, S.C. UNBROKEN CLUB S.R.L. (denumită în continuare "noi", "societatea" sau "Operatorul") este responsabilă pentru prelucrarea datelor dumneavoastră cu caracter personal.</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Sediul social: București, Sector 1, Str. Pitar Moș, Nr. 27, la cabinet Av. Stanciu-Burileanu Bogdan, et. 5, ap. 17.</li>
+          <li>Punct de lucru (locația sălii): București, Sector 3, Splaiul Unirii 257-259.</li>
+          <li>Date de identificare: C.U.I. RO52691871, Reg. Com. J2025078440006.</li>
+        </ul>
+        <p>Pentru orice solicitări privind confidențialitatea, ne puteți contacta la train@unbrokenspirit.ro sau +40 748 838 767, +40 740 269 769.</p>
+
+        <p><strong>2. Ce date colectăm și prin ce metode</strong></p>
+        <p>Colectăm datele dumneavoastră în două moduri distincte, în funcție de interacțiunea cu noi:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>A. Direct prin site-ul www.unbrokenspirit.ro:</strong> Colectăm date de identificare (nume, prenume, e-mail, număr de telefon) exclusiv prin formularele de contact. Notă importantă: Aceste mesaje nu sunt stocate pe serverul site-ului, ci sunt transmise direct și securizat în căsuța noastră de e-mail oficială. De asemenea, colectăm date tehnice de navigare (adresa IP, tipul dispozitivului) prin module cookie.</li>
+          <li><strong>B. Prin platforma terță ThunderWOD și la punctul de lucru:</strong> Pentru a beneficia de serviciile noastre de antrenament, este necesară crearea unui cont în aplicația ThunderWOD (pe web sau pe mobil). Acolo veți furniza date de identificare, date privind starea de sănătate (declarația de aptitudine pentru efort fizic) și date de plată (informații bancare). Procesarea plăților se face strict prin infrastructura securizată a ThunderWOD și a procesatorilor săi parteneri.</li>
+        </ul>
+
+        <p><strong>3. Temeiurile Juridice și Scopurile Prelucrării</strong></p>
+        <p>Prelucrăm datele dumneavoastră pe baza următoarelor temeiuri:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>Executarea unui contract / Demersuri pre-contractuale:</strong> Pentru a vă răspunde la solicitările de pe site, pentru a vă crea profilul de membru în ThunderWOD, a gestiona abonamentele, programările la clase și accesul în sală.</li>
+          <li><strong>Obligație legală:</strong> Pentru emiterea facturilor fiscale și conformarea cu legislația financiar-contabilă, precum și respectarea normelor privind protecția muncii și a sănătății publice în incinta sălii.</li>
+          <li><strong>Interesul legitim:</strong> Pentru securitatea cibernetică a site-ului nostru, prevenirea fraudelor și protejarea drepturilor societății în cazul unor litigii.</li>
+          <li><strong>Consimțământ:</strong> Pentru trimiterea de comunicări de marketing (newsletter), fotografierea/filmarea în timpul claselor în scop de promovare, sau utilizarea cookie-urilor neesențiale. Consimțământul poate fi retras în orice moment.</li>
+        </ul>
+
+        <p><strong>4. Partajarea Datelor cu Terți și Transferuri Internaționale</strong></p>
+        <p>Nu vindem și nu închiriem datele dumneavoastră. Partajăm datele strict în scopurile menționate, cu parteneri care au obligații contractuale de confidențialitate:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Furnizorul platformei de management al sălii (ThunderWOD) și procesatorii de plăți integrați de acesta.</li>
+          <li>Firma de contabilitate (pentru datele de facturare).</li>
+          <li>Furnizorii de servicii IT și găzduire web.</li>
+          <li>Autorități publice, la solicitarea legală a acestora.</li>
+        </ul>
+        <p>Datele sunt stocate cu precădere în Uniunea Europeană. Orice transfer în afara UE se face în baza unor clauze contractuale standard aprobate de Comisia Europeană.</p>
+
+        <p><strong>5. Perioada de Păstrare a Datelor</strong></p>
+        <p>Păstrăm datele doar cât este necesar:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Datele din formularele de contact (care nu se concretizează într-un abonament): maximum 12 luni.</li>
+          <li>Datele fiscale și facturile: conform legislației românești, până la 10 ani.</li>
+          <li>Istoricul de membru și declarațiile medicale: pe durata activității contului și o perioadă ulterioară justificată pentru apărarea intereselor noastre legale.</li>
+        </ul>
+
+        <p><strong>6. Securitatea Datelor</strong></p>
+        <p>Implementăm măsuri tehnice și organizatorice adecvate pentru a proteja datele împotriva accesului neautorizat, pierderii sau alterării. Acestea includ utilizarea certificatelor SSL pe site, direcționarea mesajelor de contact strict către e-mailul securizat al firmei și delegarea procesării plăților către platforme certificate (ThunderWOD).</p>
+
+        <p><strong>7. Drepturile Dumneavoastră</strong></p>
+        <p>Conform GDPR, aveți următoarele drepturi:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>Dreptul de acces:</strong> de a obține confirmarea prelucrării și acces la date.</li>
+          <li><strong>Dreptul la rectificare:</strong> de a corecta datele inexacte sau incomplete.</li>
+          <li><strong>Dreptul la ștergere („dreptul de a fi uitat"):</strong> în condițiile legii.</li>
+          <li><strong>Dreptul la restricționarea prelucrării</strong> și <strong>Dreptul la portabilitatea datelor.</strong></li>
+          <li><strong>Dreptul la opoziție:</strong> de a vă opune prelucrării (ex. pentru marketing).</li>
+          <li><strong>Dreptul de a nu face obiectul unei decizii exclusiv automate.</strong></li>
+        </ul>
+        <p>Pentru exercitarea acestor drepturi, ne puteți scrie la train@unbrokenspirit.ro.</p>
+
+        <p><strong>8. Reclamații</strong></p>
+        <p>Dacă considerați că v-am încălcat drepturile privind protecția datelor, aveți dreptul de a depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP): B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, București, www.dataprotection.ro.</p>
+
+        <p><strong>9. Actualizarea Politicii</strong></p>
+        <p>Ne rezervăm dreptul de a modifica această politică. Orice actualizare va fi publicată pe această pagină.</p>
       </>
     );
   }
