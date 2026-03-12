@@ -62,32 +62,16 @@ export default function Home() {
       <SeoMeta />
       <div className="min-h-screen bg-black pb-20 lg:pb-0">
         <Navigation onBookSession={handleBookSession} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
-        <div id="hero">
-          <HeroSection />
-        </div>
-        <div id="about">
-          <AboutSection />
-          <CoachesSection />
-        </div>
-        <div id="starthere">
-          <StartHereSection />
-        </div>
-        <div id="programs">
-          <ProgramsSection onBookSession={handleBookSession} />
-        </div>
-        <div id="pricing">
-          <PricingSection />
-        </div>
+        <HeroSection />
+        <AboutSection />
+        <CoachesSection />
+        <StartHereSection />
+        <ProgramsSection onBookSession={handleBookSession} />
+        <PricingSection />
         <AppPromoSection />
-        <div id="schedule">
-          <ScheduleSection />
-        </div>
-        <div id="faq">
-          <FAQSection onBookSession={handleBookSession} />
-        </div>
-        <div id="contact">
-          <ContactSection />
-        </div>
+        <ScheduleSection />
+        <FAQSection onBookSession={handleBookSession} />
+        <ContactSection />
         <Footer />
 
         <BookFreeSessionModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />

@@ -31,7 +31,6 @@ export const translations = {
     heroSubtitle: "Fie că începi de la zero, fie că ești avansat, găsești la noi tot ce-ți trebuie.",
     startNow: "Începe Acum",
     discoverThePrograms: "Descoperă Programele",
-    aboutUs: "Despre Noi",
     moreThangym: "Mai mult decât un gym",
     aboutDesc: "Cea mai bună oră din ziua ta începe aici.\nTe-ai săturat de rutina plictisitoare de la sală? La CrossFit Unbroken Spirit, credem că fitnessul ar trebui să fie momentul tău preferat al zilei, nu o corvoadă. Combinăm antrenamentele profesionale, o comunitate prietenoasă și exerciții funcționale adaptate nivelului tău, pentru a te ajuta să te miști mai bine, să fii mai puternic și să trăiești mai sănătos. Fie că ești un sportiv experimentat, fie că faci mișcare rar sau n-ai mai făcut mișcare deloc de mult timp, drumul tău către o versiune mai bună începe cu un singur pas. Fără orgolii, fără intimidare, doar rezultate. Performanța nu este scopul, însă poate fi unul dintre rezultate.",
     intenseTraining: "Antrenamente Intense",
@@ -409,7 +408,11 @@ export default function LanguageProvider({ children }) {
   };
 
   const t = (key) => {
-    return translations[language][key] || translations['ro'][key] || key;
+    const val = translations[language][key];
+    if (val !== undefined && val !== null) return val;
+    const roVal = translations['ro'][key];
+    if (roVal !== undefined && roVal !== null) return roVal;
+    return key;
   };
 
   return (

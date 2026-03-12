@@ -54,7 +54,6 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
 
   const scrollNavToSection = useCallback((href) => {
     const id = href.replace('#', '');
-    setActiveSection(id);
     scrollToSection(id);
     setIsMobileMenuOpen(false);
   }, []);

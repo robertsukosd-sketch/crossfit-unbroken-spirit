@@ -73,23 +73,18 @@ export default function ContactSection() {
     
     setIsSubmitting(true);
     
-    try {
-      const isRo = language === 'ro';
-      await base44.integrations.Core.SendEmail({
-        to: CONTACT_EMAIL,
-        subject: isRo ? `Mesaj nou de la ${formData.name}` : `New message from ${formData.name}`,
-        body: `${isRo ? 'Nume' : 'Name'}: ${formData.name}\n${isRo ? 'Email' : 'Email'}: ${formData.email}\n${isRo ? 'Telefon' : 'Phone'}: ${formData.phone || '-'}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${formData.message}`
-      });
-      
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      setErrors({});
-      toast.success(isRo ? 'Mesajul a fost trimis cu succes!' : 'Message sent successfully!');
-      setIsSubmitting(false);
-    } catch (error) {
-      setIsSubmitting(false);
-      toast.error(language === 'ro' ? 'Eroare la trimitere. Încercați din nou.' : 'Error sending message. Please try again.');
-    }
+    const isRo = language === 'ro';
+    await base44.integrations.Core.SendEmail({
+      to: CONTACT_EMAIL,
+      subject: isRo ? `Mesaj nou de la ${formData.name}` : `New message from ${formData.name}`,
+      body: `${isRo ? 'Nume' : 'Name'}: ${formData.name}\n${isRo ? 'Email' : 'Email'}: ${formData.email}\n${isRo ? 'Telefon' : 'Phone'}: ${formData.phone || '-'}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${formData.message}`
+    });
+    
+    setIsSubmitted(true);
+    setFormData({ name: '', email: '', phone: '', message: '' });
+    setErrors({});
+    toast.success(isRo ? 'Mesajul a fost trimis cu succes!' : 'Message sent successfully!');
+    setIsSubmitting(false);
   };
 
   return (
