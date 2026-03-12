@@ -233,7 +233,8 @@ export default function FAQSection({ onBookSession }) {
         q: 'How can I get to the box? Do you have a parking lot?',
         a: 'The box is easily accessible by both public transport and car.\nThe nearest subway station is Mihai Bravu, about a 7–8 minute walk away. The nearest STB stops are Pod Mihai Bravu for bus line 223 and Pod Mihai Bravu for tram lines 1 and 10.\nIf you\'re coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.',
         aParking: true,
-        aParkingEn: true
+          aParkingEn: true,
+          aHighlightParking: true
       },
       {
         id: 'thunderwod-app',
