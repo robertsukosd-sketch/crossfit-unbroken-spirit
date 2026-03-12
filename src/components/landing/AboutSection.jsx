@@ -69,6 +69,19 @@ export default function AboutSection() {
                 className="w-full h-full absolute inset-0"
               />
             </div>
+            <div className="mt-6 space-y-3">
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                {language === 'ro'
+                  ? <>Sala este ușor accesibilă, atât cu transportul în comun, cât și cu mașina.{'\n'}Cea mai apropiată stație de metrou este <span className="font-bold text-sky-300">Mihai Bravu</span>, aflată la aproximativ 7–8 minute de mers pe jos. În același timp, cele mai apropiate stații STB sunt <span className="font-bold text-sky-300">Pod Mihai Bravu</span> pentru linia de autobuz 223 și <span className="font-bold text-sky-300">Pod Mihai Bravu</span> pentru liniile de tramvai 1 și 10.{'\n'}Dacă vii cu mașina, ai un mare avantaj: parcare gratuită inclusă! Nu trebuie să îți faci griji pentru locul de parcare sau costuri suplimentare.</>
+                  : <>The box is easily accessible by both public transport and car.{'\n'}The nearest subway station is <span className="font-bold text-sky-300">Mihai Bravu</span>, about a 7–8 minute walk away. The nearest STB stops are <span className="font-bold text-sky-300">Pod Mihai Bravu</span> for bus line 223 and <span className="font-bold text-sky-300">Pod Mihai Bravu</span> for tram lines 1 and 10.{'\n'}If you're coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.</>
+                }
+              </p>
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
+                alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
+                className="w-full rounded-xl border border-zinc-700"
+              />
+            </div>
           </motion.div>
           
           {/* Right side - Content */}
