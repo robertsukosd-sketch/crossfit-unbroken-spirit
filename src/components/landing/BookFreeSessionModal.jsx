@@ -315,18 +315,20 @@ ${fullMessage}`,
 
                     {/* WhatsApp deeplink — enabled only when canSend and not during unavailable hours */}
                     {isUnavailable ? (
-                      <TooltipProvider>
+                      <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger asChild>
-                            <button
-                              disabled
-                              className="flex items-center justify-center gap-2 w-full border font-bold rounded-lg py-2 text-sm transition-all duration-150 mt-1 bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed"
-                            >
-                              <MessageCircle className="w-4 h-4 flex-shrink-0" />
-                              {isRo ? 'Rezervă mai rapid pe WhatsApp' : 'Book faster via WhatsApp'}
-                            </button>
+                            <div className="w-full">
+                              <button
+                                disabled
+                                className="w-full flex items-center justify-center gap-2 border font-bold rounded-lg py-2 text-sm transition-all duration-150 mt-1 bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed"
+                              >
+                                <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                                {isRo ? 'Rezervă mai rapid pe WhatsApp' : 'Book faster via WhatsApp'}
+                              </button>
+                            </div>
                           </TooltipTrigger>
-                          <TooltipContent side="right" sideOffset={8} className="bg-zinc-800 border border-zinc-700 text-zinc-300">
+                          <TooltipContent side="top" sideOffset={4} className="z-[200] bg-zinc-800 border border-zinc-700 text-zinc-300 text-xs">
                             {isRo ? 'Indisponibil între 22:30-6:00' : 'Unavailable between 22:30-6:00'}
                           </TooltipContent>
                         </Tooltip>
