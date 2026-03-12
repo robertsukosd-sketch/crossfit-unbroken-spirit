@@ -227,9 +227,9 @@ ${fullMessage}`,
                     )}
                   </AnimatePresence>
 
-                  <form onSubmit={handleSubmit} className="space-y-3">
+                  <form onSubmit={handleSubmit} className="space-y-2">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-1.5">
+                      <label className="block text-xs font-semibold text-gray-300 mb-1">
                         {t('fullName')} <span className="text-blue-400">*</span>
                       </label>
                       <input
@@ -239,11 +239,11 @@ ${fullMessage}`,
                         placeholder={t('fullNamePlaceholder')}
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full bg-zinc-800 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-[border-color] duration-150 text-sm"
+                        className="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-3 py-2 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-[border-color] duration-150 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-1.5">
+                      <label className="block text-xs font-semibold text-gray-300 mb-1">
                         {t('email')} <span className="text-blue-400">*</span>
                       </label>
                       <input
@@ -253,11 +253,11 @@ ${fullMessage}`,
                         value={form.email}
                         onChange={(e) => { setForm({ ...form, email: e.target.value }); setEmailBlurred(false); }}
                         onBlur={() => setEmailBlurred(true)}
-                        className="w-full bg-zinc-800 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-[border-color] duration-150 text-sm"
+                        className="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-3 py-2 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-[border-color] duration-150 text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-gray-300 mb-1.5">
+                      <label className="block text-xs font-semibold text-gray-300 mb-1">
                         {t('phone')}
                       </label>
                       <input
@@ -265,11 +265,11 @@ ${fullMessage}`,
                         placeholder={t('phonePlaceholder')}
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full bg-zinc-800 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-[border-color] duration-150 text-sm"
+                        className="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-3 py-2 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-[border-color] duration-150 text-sm"
                       />
                     </div>
 
-                    {/* Dynamic message box — only shown when slot + name + email filled and email blurred */}
+                    {/* Dynamic message box */}
                     <AnimatePresence>
                       {showMessageBox && (
                         <motion.div
@@ -279,22 +279,22 @@ ${fullMessage}`,
                           transition={{ type: 'spring', damping: 26, stiffness: 300 }}
                           className="overflow-hidden"
                         >
-                          <label className="block text-sm font-semibold text-gray-300 mb-1.5">
+                          <label className="block text-xs font-semibold text-gray-300 mb-1">
                             {isRo ? 'Mesaj' : 'Message'}
                           </label>
-                          <div className="relative w-full bg-zinc-800 border border-zinc-600 rounded-xl px-4 py-3 focus-within:border-blue-500 transition-colors">
-                            <p className="text-sm text-white mb-1 leading-relaxed">{messagePrefix}</p>
+                          <div className="relative w-full bg-zinc-800 border border-zinc-600 rounded-lg px-3 py-2 focus-within:border-blue-500 transition-colors">
+                            <p className="text-xs text-white mb-1 leading-relaxed">{messagePrefix}</p>
                             <textarea
                               ref={messageRef}
                               value={userMessage}
                               onChange={(e) => setUserMessage(e.target.value)}
-                              rows={2}
+                              rows={1}
                               placeholder={
                                 isRo
-                                  ? 'Continuă să scrii dacă ai ceva de adăugat sau trimite cererea.'
-                                  : 'Continue writing if you have anything else to add, or send your request.'
+                                  ? 'Adaugă detalii suplimentare...'
+                                  : 'Add any extra details...'
                               }
-                              className="w-full bg-transparent text-white placeholder-zinc-500 placeholder:italic outline-none resize-none text-sm"
+                              className="w-full bg-transparent text-white placeholder-zinc-500 placeholder:italic outline-none resize-none text-xs"
                             />
                           </div>
                         </motion.div>
@@ -308,20 +308,20 @@ ${fullMessage}`,
                       rel="noopener noreferrer"
                       aria-disabled={!canSend}
                       onClick={canSend ? undefined : (e) => e.preventDefault()}
-                      className={`flex items-center justify-center gap-2.5 w-full border font-bold rounded-xl py-3 text-sm transition-all duration-150 mt-2 ${
+                      className={`flex items-center justify-center gap-2 w-full border font-bold rounded-lg py-2 text-sm transition-all duration-150 mt-1 ${
                         canSend
                           ? 'bg-[#25D366]/10 hover:bg-[#25D366]/20 border-[#25D366]/40 hover:border-[#25D366]/70 text-[#25D366] cursor-pointer'
                           : 'bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed'
                       }`}
                     >
-                      <MessageCircle className="w-5 h-5 flex-shrink-0" />
-                      {isRo ? 'Rezervă pe WhatsApp' : 'Book via WhatsApp'}
+                      <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                      {isRo ? 'Rezervă mai rapid pe WhatsApp' : 'Book faster via WhatsApp'}
                     </a>
 
                     <Button
                       type="submit"
                       disabled={sending || !canSend}
-                      className="w-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-xl py-3 text-base mt-2 disabled:opacity-40 disabled:cursor-not-allowed disabled:pointer-events-none"
+                      className="w-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-lg py-2 text-sm mt-1 disabled:opacity-40 disabled:cursor-not-allowed disabled:pointer-events-none"
                     >
                       {sending
                         ? t('sending')
