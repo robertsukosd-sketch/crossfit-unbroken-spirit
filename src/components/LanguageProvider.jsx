@@ -229,7 +229,7 @@ La primele antrenamente, s-ar putea să auzi niște termeni care sună a limbaj 
     professionalCoachingDesc: "Real-time coaching designed for YOU, not the class.",
     visibleResults: "Visible Results",
     visibleResultsDesc: "You'll PR within 4 weeks. Guaranteed.",
-    everyoneUnique: "We are all different,",
+    everyoneUnique: "We are all different",
     everyoneUniqueDesc: "and our programs are scalable to any fitness level.",
     crossfitTitle: "CrossFit",
     crossfitDesc: "High-intensity functional workouts combining gymnastics, weightlifting and conditioning.",
