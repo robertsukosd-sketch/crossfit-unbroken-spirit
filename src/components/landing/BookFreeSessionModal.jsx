@@ -301,6 +301,23 @@ ${fullMessage}`,
                       )}
                     </AnimatePresence>
 
+                    {/* WhatsApp deeplink — enabled only when canSend */}
+                    <a
+                      href={canSend ? whatsappUrl : undefined}
+                      target={canSend ? '_blank' : undefined}
+                      rel="noopener noreferrer"
+                      aria-disabled={!canSend}
+                      onClick={canSend ? undefined : (e) => e.preventDefault()}
+                      className={`flex items-center justify-center gap-2.5 w-full border font-bold rounded-xl py-3 text-sm transition-all duration-150 mt-2 ${
+                        canSend
+                          ? 'bg-[#25D366]/10 hover:bg-[#25D366]/20 border-[#25D366]/40 hover:border-[#25D366]/70 text-[#25D366] cursor-pointer'
+                          : 'bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed'
+                      }`}
+                    >
+                      <MessageCircle className="w-5 h-5 flex-shrink-0" />
+                      {isRo ? 'Rezervă pe WhatsApp' : 'Book via WhatsApp'}
+                    </a>
+
                     <Button
                       type="submit"
                       disabled={sending || !canSend}
@@ -308,7 +325,7 @@ ${fullMessage}`,
                     >
                       {sending
                         ? t('sending')
-                        : isRo ? 'Trimite Cererea' : 'Send My Request'}
+                        : isRo ? 'Rezervă pe E-Mail' : 'Send My Request by E-Mail'}
                     </Button>
                   </form>
                 </>
