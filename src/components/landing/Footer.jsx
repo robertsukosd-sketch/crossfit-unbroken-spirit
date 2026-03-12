@@ -199,50 +199,45 @@ const getTermsContent = (language) => {
     );
   }
   return (
-    <>
-      <p><strong>1. Acceptance of Terms and Conditions</strong></p>
-      <p>By using our website and participating in activities offered by CrossFit Unbroken Spirit, you declare that you have read, understood, and accepted these Terms and Conditions. If you do not agree with any of these terms, please do not register and do not participate in our activities.</p>
-      
-      <p><strong>2. Description of Services</strong></p>
-      <p>CrossFit Unbroken Spirit offers fitness services, CrossFit training, weightlifting, and other related sports activities. Services are offered only to persons who have completed and signed a medical declaration and are medically fit to participate in intense physical activities.</p>
-      
-      <p><strong>3. Health Declaration and Assumption of Risk</strong></p>
-      <p>By participating in any of our services, you accept that physical exercise carries inherent risks, including but not limited to muscle injuries, fractures, heart attacks, or in extreme cases, death. You declare that you are in good health and have consulted a doctor before participating. We are not responsible for accidents or illnesses that occur as a result of participating in our activities.</p>
-      
-      <p><strong>4. Age and Legal Capacity</strong></p>
-      <p>You declare that you are at least 18 years old and have full legal capacity to engage in these terms. For persons under 18, participation requires written authorization signed by a parent or legal guardian.</p>
-      
-      <p><strong>5. Gym Rules and Conduct</strong></p>
-      <p>Members must respect the gym's internal regulations, not smoke, not consume alcohol or other prohibited substances, maintain appropriate behavior, and not disturb other members. Incorrect use of equipment or violation of rules may result in suspension or termination of membership without refund.</p>
-      
-      <p><strong>6. Member Responsibility</strong></p>
-      <p>You are responsible for your own safety and for choosing an appropriate level of exercise. Our instructors provide guidance, but you have final responsibility for correctly executing exercises and requesting help when necessary. Never move equipment without permission and ensure it is closed/secured after use.</p>
-      
-      <p><strong>7. Payment Policy and Memberships</strong></p>
-      <p>Memberships are paid in advance according to the selected period (monthly, quarterly, or annual). Late payments may result in suspension of facility access. Refunds depend on the reason for cancellation and are governed by our detailed refund policy.</p>
-      
-      <p><strong>8. Cancellation and Termination</strong></p>
-      <p>You have the right to cancel your membership with a written notice of at least 30 days. Cancellation without prior notice may result in loss of contributions. In case of serious violation of regulations, we reserve the right to terminate the membership without refund.</p>
-      
-      <p><strong>9. Intellectual Property and Image Rights</strong></p>
-      <p>All content on our website is the intellectual property of CrossFit Unbroken Spirit. You may use photographs, videos, and other materials only for personal use. We reserve the right to use images of members in marketing materials with their explicit consent.</p>
-      
-      <p><strong>10. Confidentiality and Data Protection</strong></p>
-      <p>In accordance with the General Data Protection Regulation (GDPR) and Romanian legislation, your personal information is protected and used only for declared purposes. We will not sell or transmit data to third parties without your explicit consent.</p>
-      
-      <p><strong>11. Limitation of Liability</strong></p>
-      <p>CrossFit Unbroken Spirit is not responsible for loss, theft, or damage to personal items left in the gym. We recommend that you do not leave valuable items unattended. We are not responsible for service interruptions due to unforeseen circumstances.</p>
-      
-      <p><strong>12. Modification of Terms</strong></p>
-      <p>We reserve the right to modify these Terms and Conditions at any time, with or without prior notice. Continued use of our services after modifications constitutes acceptance of the new terms.</p>
-      
-      <p><strong>13. Law and Jurisdiction</strong></p>
-      <p>These Terms and Conditions are governed by the laws of Romania. Any dispute will be resolved in accordance with Romanian legislation and will be subject to the jurisdiction of competent courts in Bucharest, Sector 3.</p>
-      
-      <p><strong>14. Contact</strong></p>
-      <p>For any questions or clarifications regarding these terms, please contact us at train@unbrokenspirit.ro or call +40 748 838 767.</p>
-    </>
-  );
+      <>
+        <p><strong>1. General Information and Acceptance of Terms</strong></p>
+        <p>The website www.unbrokenspirit.ro is owned and operated by S.C. UNBROKEN CLUB S.R.L., having its registered office in Bucharest, District 1, 27 Pitar Moș St., at the law office of Av. Stanciu-Burileanu Bogdan, 5th floor, apt. 17, and its working point (physical gym location) at 257-259 Splaiul Unirii, District 3, Bucharest. The company is registered with the Trade Register under no. J2025078440006, VAT/C.U.I. RO52691871, share capital 500 RON.</p>
+        <p>By using this website and participating in the activities offered by CrossFit Unbroken Spirit, you declare that you have read, understood, and accepted these Terms and Conditions. If you do not agree with any of these terms, please do not use our services.</p>
+
+        <p><strong>2. Description of Services and ThunderWOD Integration</strong></p>
+        <p>CrossFit Unbroken Spirit provides fitness services, CrossFit training, weightlifting, gymnastics and related sports activities at its physical location.</p>
+        <p>The website www.unbrokenspirit.ro serves as a presentation platform. Purchasing memberships, processing payments, and booking classes are done exclusively online via the third-party application ThunderWOD (https://thunderwod.com). By creating an account and making payments in ThunderWOD, you also accept the terms and policies of that platform.</p>
+
+        <p><strong>3. Health Declaration and Assumption of Risk</strong></p>
+        <p>By participating in any of our services, you acknowledge that high-intensity physical exercise carries inherent risks (including, but not limited to, muscle/joint injuries or cardiovascular events). You declare that you are in good medical condition and have consulted a physician prior to participating. UNBROKEN CLUB S.R.L. is not liable for any injuries or medical conditions resulting from your participation in our activities.</p>
+
+        <p><strong>4. Age and Legal Capacity</strong></p>
+        <p>You declare that you are at least 18 years old and possess full legal capacity. For individuals under 18, participation requires a written and signed authorization from a parent or legal guardian.</p>
+
+        <p><strong>5. Payment Policy, Memberships, and Cancellation</strong></p>
+        <p>Memberships are paid in advance according to the selected billing cycle via the ThunderWOD app. Late or failed payments will result in the automatic suspension of your ability to book classes. You may cancel your membership renewal directly in the app or via written notice sent by email. Partial refunds are only granted in exceptional, documented medical cases, in accordance with the gym's internal refund policy.</p>
+
+        <p><strong>6. Gym Rules and Member Responsibility</strong></p>
+        <p>You are responsible for your own safety and for executing exercises correctly under the coaches' guidance. Members must:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Follow the gym's Internal Rules (ROI) displayed at the location.</li>
+          <li>Not use equipment without permission, and ensure it is cleaned and properly stored after use.</li>
+          <li>Maintain respectful behavior. The use of alcohol, illegal substances, or aggressive behavior will lead to immediate membership termination without a refund.</li>
+        </ul>
+
+        <p><strong>7. Intellectual Property and Image Rights</strong></p>
+        <p>All content on www.unbrokenspirit.ro is the intellectual property of UNBROKEN CLUB S.R.L. We reserve the right to capture and use photos/videos of members during classes for marketing purposes on social media, in compliance with GDPR. If you prefer not to be featured, please inform the coach or reception.</p>
+
+        <p><strong>8. Limitation of Liability</strong></p>
+        <p>S.C. UNBROKEN CLUB S.R.L. is not responsible for the loss, theft, or damage of personal belongings left in the locker rooms or anywhere on the premises. We are also not liable for service interruptions due to unforeseen circumstances or force majeure.</p>
+
+        <p><strong>9. Modifications and Jurisdiction</strong></p>
+        <p>We reserve the right to modify these Terms and Conditions at any time. Continued use of our services constitutes acceptance of the updated terms. Any disputes will be governed by Romanian law and submitted to the competent courts of Bucharest.</p>
+
+        <p><strong>10. Contact</strong></p>
+        <p>For any questions or concerns, please contact us at train@unbrokenspirit.ro or by phone at +40 748 838 767.</p>
+      </>
+    );
 };
 
 export default function Footer() {
