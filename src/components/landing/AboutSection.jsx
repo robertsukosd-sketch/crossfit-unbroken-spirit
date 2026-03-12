@@ -58,7 +58,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative lg:pt-[7.5rem]"
           >
             <div className="relative rounded-2xl overflow-hidden aspect-video">
               <iframe
