@@ -326,7 +326,7 @@ ${fullMessage}`,
                               {isRo ? 'Rezervă mai rapid pe WhatsApp' : 'Book faster via WhatsApp'}
                             </button>
                           </TooltipTrigger>
-                          <TooltipContent className="bg-zinc-800 border border-zinc-700 text-zinc-300">
+                          <TooltipContent side="right" sideOffset={8} className="bg-zinc-800 border border-zinc-700 text-zinc-300">
                             {isRo ? 'Indisponibil între 22:30-6:00' : 'Unavailable between 22:30-6:00'}
                           </TooltipContent>
                         </Tooltip>
