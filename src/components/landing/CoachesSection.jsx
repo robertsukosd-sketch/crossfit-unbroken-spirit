@@ -24,7 +24,7 @@ export default function CoachesSection() {
       name: 'Dumitru Mîndrescu',
       image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/1cc21e186_IMG_1206.jpg',
       certifications: language === 'ro'
-        ? ['Antrenor de 7 ani', 'Atlet CrossFit competitiv de 7 ani', 'Haltere & Gimnastică', 'Pregătire pentru competiții']
+        ? ['Antrenor de 7 ani', 'Atlet competitiv CrossFit de 7 ani', 'Haltere & Gimnastică', 'Pregătire pentru competiții']
         : ['7 years as a coach', '7 years CrossFit competitive athlete', 'Weightlifting & Gymnastics', 'Competition preparation'],
       experience: language === 'ro' ? '7 ani în CrossFit' : '7 years in CrossFit',
       bioRo: 'Dumitru se concentrează pe mecanica corectă a mișcării și este cunoscut pentru abordarea sa pacientă cu noii membri. Specialitatea lui este gymnastica și mobilitate avansată.',
