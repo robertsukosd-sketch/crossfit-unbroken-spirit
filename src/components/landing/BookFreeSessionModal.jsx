@@ -24,6 +24,15 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
 
   const isRo = language === 'ro';
 
+  // Check if current time is within unavailable window (22:30 - 6:00)
+  const now = new Date();
+  const currentHour = now.getHours();
+  const currentMinute = now.getMinutes();
+  const currentTimeInMinutes = currentHour * 60 + currentMinute;
+  const unavailableStart = 22 * 60 + 30; // 22:30
+  const unavailableEnd = 6 * 60; // 6:00
+  const isUnavailable = currentTimeInMinutes >= unavailableStart || currentTimeInMinutes < unavailableEnd;
+
   const whatsappPhone = '40748838767';
   const whatsappText = encodeURIComponent(
     isRo
