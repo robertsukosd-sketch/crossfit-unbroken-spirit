@@ -191,6 +191,7 @@ ${fullMessage}`,
                           >
                             Schedule
                           </button>
+                          <span className="text-white font-bold"> *</span>
                           {' '}and pick a time slot.
                         </>
                       )}
