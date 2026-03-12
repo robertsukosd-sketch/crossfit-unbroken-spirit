@@ -350,18 +350,17 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="text-white font-bold mb-4">{t("quickLinks")}</h4>
-            <ul className="space-y-1">
+            <div className="flex flex-col gap-0">
               {QUICK_FOOTER_LINKS.map((link) => (
-                <li key={link.href}>
-                  <button 
-                    onClick={() => scrollToSection(link.href.replace('#', ''))}
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-left text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-1 py-0.5"
-                  >
-                    {t(link.label)}
-                  </button>
-                </li>
+                <button
+                  key={link.href}
+                  onClick={() => scrollToSection(link.href.replace('#', ''))}
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-left text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 rounded px-1 py-px leading-5"
+                >
+                  {t(link.label)}
+                </button>
               ))}
-            </ul>
+            </div>
           </div>
           
           {/* Contact */}
