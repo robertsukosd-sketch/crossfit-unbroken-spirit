@@ -46,29 +46,36 @@ const getCookieContent = (language) => {
   }
   return (
     <>
-      <p><strong>1. What Are Cookies?</strong></p>
-      <p>Cookies are small text files stored on your device (computer, phone, tablet) when you visit our website. They contain information about your preferences and browsing behavior, allowing the website to recognize you and provide a personalized experience.</p>
-      
-      <p><strong>2. Types of Cookies We Use</strong></p>
-      <p><strong>Essential (Necessary) Cookies:</strong> These are critical for website functionality. Without them, basic functions such as authentication and security will not work. They do not require explicit consent under the law.</p>
-      <p><strong>Performance Cookies:</strong> They help us understand how users interact with our website by collecting anonymous data about visits, pages viewed, and errors. We use this information to improve website performance.</p>
-      <p><strong>Functional Cookies:</strong> Remember your preferences (language, area, etc.) to personalize your browsing experience.</p>
-      <p><strong>Marketing Cookies:</strong> Used to track your behavior and display relevant advertisements. These cookies are shared with advertising partners and require explicit consent.</p>
-      
-      <p><strong>3. Third-Party Cookies</strong></p>
-      <p>Our website may contain cookies from third parties, such as Google Analytics, to analyze traffic and user behavior. Third parties may use this information to display advertisements on other websites.</p>
-      
-      <p><strong>4. How You Can Control Cookies</strong></p>
-      <p>You can control and delete cookies through your browser settings. Most modern browsers allow you to block cookies or receive notifications before they are stored. Note that disabling certain cookies may affect website functionality.</p>
-      
-      <p><strong>5. Consent for Cookies</strong></p>
-      <p>In accordance with Romanian legislation and GDPR, we will request your consent for non-essential cookies. You can withdraw consent at any time from privacy settings.</p>
-      
-      <p><strong>6. Retention and Deletion</strong></p>
-      <p>Essential cookies are deleted when you close your browser or after a certain period. Functional and marketing cookies may persist longer. You can manually delete cookies at any time.</p>
-      
-      <p><strong>7. Contact and Opt-Out Options</strong></p>
-      <p>For more information or to opt-out of marketing cookies, contact us at train@unbrokenspirit.ro.</p>
+      <p><strong>1. Introduction</strong></p>
+      <p>This document explains how the website www.unbrokenspirit.ro, operated by S.C. UNBROKEN CLUB S.R.L., uses cookies and similar tracking technologies. Our goal is to provide you with a secure, personalized, and transparent browsing experience in accordance with Romanian legislation and the General Data Protection Regulation (GDPR).</p>
+
+      <p><strong>2. What Are Cookies?</strong></p>
+      <p>Cookies are small text files stored on your device (computer, phone, tablet) when you visit our website. They contain information about your preferences and browsing behavior, allowing the website to recognize you and function efficiently.</p>
+
+      <p><strong>3. Types of Cookies We Use</strong></p>
+      <p>We use the following categories of cookies on our website:</p>
+      <ul className="list-disc pl-5 space-y-1">
+        <li><strong>Strictly Necessary (Essential) Cookies:</strong> These are critical for the basic functionality of the website (e.g., contact form security, page navigation). Without them, the website cannot function properly. Under the law, these do not require your explicit consent.</li>
+        <li><strong>Performance and Analytics Cookies:</strong> They help us understand how users interact with our website by collecting anonymous data about visits, pages viewed, and potential errors (e.g., Google Analytics). We use this information solely to improve website performance.</li>
+        <li><strong>Functional Cookies:</strong> These allow the website to remember choices you make (such as your preferred language) to provide a personalised browsing experience.</li>
+        <li><strong>Marketing / Advertising Cookies:</strong> Used to track visitor behaviour across multiple websites to display relevant and engaging advertisements. These cookies are shared with our advertising partners (e.g., Meta/Facebook Pixel, Google Ads) and require your explicit consent.</li>
+      </ul>
+
+      <p><strong>4. Third-Party Cookies</strong></p>
+      <p>Our website may contain cookies set by third parties (such as Google or social media platforms) to analyze traffic or display advertisements to you on other websites. These third parties may use the collected data in accordance with their own privacy policies.</p>
+
+      <p><strong>5. Connection with the ThunderWOD Platform</strong></p>
+      <p>Please note that www.unbrokenspirit.ro serves as a presentation website. To create a member account, purchase memberships, and book classes, you will be redirected to the third-party application ThunderWOD (https://thunderwod.com). Browsing and transactions performed on that platform are subject to ThunderWOD's Cookie Policy and Privacy Policy.</p>
+
+      <p><strong>6. Consent, Control, and Deletion of Cookies</strong></p>
+      <ul className="list-disc pl-5 space-y-1">
+        <li><strong>Consent:</strong> We will request your consent for non-essential cookies via the cookie banner displayed during your first visit to the site. You can withdraw your consent at any time.</li>
+        <li><strong>Retention Period:</strong> Session cookies are automatically deleted when you close your browser. Persistent cookies (functional, marketing) remain on your device until their set expiration date or until you manually delete them.</li>
+        <li><strong>Browser Control:</strong> You can control, block, or delete cookies directly through your browser settings. Please note that disabling essential cookies may affect the website's functionality.</li>
+      </ul>
+
+      <p><strong>7. Contact</strong></p>
+      <p>For more information, to change your cookie preferences, or to opt-out of marketing cookies, please contact us at train@unbrokenspirit.ro.</p>
     </>
   );
 };
