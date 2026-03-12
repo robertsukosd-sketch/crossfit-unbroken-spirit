@@ -410,7 +410,7 @@ export default function FAQSection({ onBookSession }) {
                         </p>
                       ) : faq.aHighlightParking ? (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                          {faq.a.split(/(Mihai Bravu|Pod Mihai Bravu)/g).map((part, i) => 
+                          {faq.a.split(/(Pod Mihai Bravu|Mihai Bravu)/g).map((part, i) => 
                             (part === 'Mihai Bravu' || part === 'Pod Mihai Bravu') 
                               ? <span key={`parking-${i}`} className="font-bold text-sky-300">{part}</span>
                               : part
@@ -418,10 +418,13 @@ export default function FAQSection({ onBookSession }) {
                         </p>
                       ) : faq.aOpenGym ? (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                          {faq.a.split('Open Gym').map((part, i, arr) => (
-                            <React.Fragment key={`opengym-${i}`}>
-                              {part}
-                              {i < arr.length - 1 && (
+                          {(() => {
+                            const text = faq.a;
+                            const firstIdx = text.indexOf('Open Gym');
+                            if (firstIdx === -1) return text;
+                            return (
+                              <React.Fragment>
+                                {text.slice(0, firstIdx)}
                                 <button
                                   onClick={(e) => {
                                     e.stopPropagation();
@@ -431,9 +434,10 @@ export default function FAQSection({ onBookSession }) {
                                 >
                                   Open Gym
                                 </button>
-                              )}
-                            </React.Fragment>
-                          ))}
+                                {text.slice(firstIdx + 'Open Gym'.length)}
+                              </React.Fragment>
+                            );
+                          })()}
                         </p>
                       ) : (
                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
