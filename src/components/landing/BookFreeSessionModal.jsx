@@ -23,11 +23,11 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
 
   const isRo = language === 'ro';
 
-  const whatsappPhone = '40748838767'; // PHONE_1 without + and spaces
+  const whatsappPhone = '40748838767';
   const whatsappText = encodeURIComponent(
     isRo
-      ? 'Bună! Aș dori să rezerv o ședință gratuită la CrossFit Unbroken Spirit.'
-      : 'Hi! I would like to book a free session at CrossFit Unbroken Spirit.'
+      ? `Bună! Mă numesc ${form.name.trim() || '...'} și aș dori să rezerv o ședință gratuită${selectedSlot ? ` ${selectedSlot.day} la ${selectedSlot.time}` : ''}. Email: ${form.email}${form.phone ? `. Telefon: ${form.phone}` : ''}.`
+      : `Hi! My name is ${form.name.trim() || '...'} and I would like to book a free session${selectedSlot ? ` on ${selectedSlot.day} at ${selectedSlot.time}` : ''}. Email: ${form.email}${form.phone ? `. Phone: ${form.phone}` : ''}.`
   );
   const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${whatsappText}`;
 
