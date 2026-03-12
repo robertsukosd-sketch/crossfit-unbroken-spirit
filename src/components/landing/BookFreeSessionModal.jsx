@@ -126,22 +126,22 @@ ${fullMessage}`,
             className="relative w-full sm:max-w-md bg-zinc-900 border border-zinc-700 rounded-t-2xl sm:rounded-2xl shadow-2xl max-h-[92vh] overflow-y-auto overflow-x-hidden min-w-0"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-4 sm:p-8">
-              <button
-                onClick={handleClose}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-150 p-1 rounded-full hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 cursor-pointer"
-                aria-label="Close"
-              >
-                <X className="w-5 h-5" />
-              </button>
+            <div className="p-3 sm:p-5">
+             <button
+               onClick={handleClose}
+               className="absolute top-3 right-3 text-gray-400 hover:text-white transition-colors duration-150 p-1 rounded-full hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 cursor-pointer"
+               aria-label="Close"
+             >
+               <X className="w-4 h-4" />
+             </button>
 
-              {!submitted ? (
-                <>
-                  <div className="mb-3">
-                    <h2 className="text-xl sm:text-2xl font-black text-white mb-1">
-                      {isRo ? 'Rezervă o Clasă Gratuită' : 'Book a Free Class'}
-                    </h2>
-                    <p className="text-gray-400 text-sm leading-relaxed">
+             {!submitted ? (
+               <>
+                 <div className="mb-2">
+                   <h2 className="text-lg font-black text-white mb-0.5">
+                     {isRo ? 'Rezervă o Clasă Gratuită' : 'Book a Free Class'}
+                   </h2>
+                   <p className="text-gray-400 text-xs leading-relaxed">
                       {isRo ? (
                         <>
                           <button
