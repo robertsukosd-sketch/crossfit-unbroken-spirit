@@ -165,6 +165,7 @@ ${fullMessage}`,
                           >
                             Orarul
                           </button>
+                          <span className="text-white font-bold"> *</span>
                           {' '}și alege un interval orar.
                         </>
                       ) : (
