@@ -122,7 +122,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col justify-end h-full"
+            className="flex flex-col justify-start"
           >
             <div className="grid sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
