@@ -35,7 +35,7 @@ export default function CoachesSection() {
       name: 'Robert Sukosd',
       image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/29f37936f_WhatsAppImage2026-03-11at100703.jpg',
       certifications: language === 'ro'
-        ? ['Antrenor de 1 an', 'CrossFit Level 2', 'The Gymnastics Course Level 1', 'Movement Specialist']
+        ? ['CrossFit Level 2', 'The Gymnastics Course Level 1', 'Movement Specialist']
         : ['CrossFit Level 2', 'The Gymnastics Course Level 1', 'Movement Specialist'],
       experience: language === 'ro' ? '13 ani în CrossFit' : '13 years in CrossFit',
       bioRo: 'Robert este co-fondatorul Unbroken Spirit și are o pasiune pentru dezvoltarea atletică. Cu peste 13 ani de experiență, se specializează în optimizarea performanței și construirea unei comunități puternice.',
