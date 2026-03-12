@@ -22,6 +22,15 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
   const messageRef = useRef(null);
 
   const isRo = language === 'ro';
+
+  const whatsappPhone = '40748838767'; // PHONE_1 without + and spaces
+  const whatsappText = encodeURIComponent(
+    isRo
+      ? 'Bună! Aș dori să rezerv o ședință gratuită la CrossFit Unbroken Spirit.'
+      : 'Hi! I would like to book a free session at CrossFit Unbroken Spirit.'
+  );
+  const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${whatsappText}`;
+
   const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email);
   const canSend = form.name.trim() && isValidEmail && selectedSlot;
 
