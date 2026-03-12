@@ -107,20 +107,25 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
                 </div>
               ) : (
                 classes.map((time) => {
+                  const dayIndex = days.indexOf(selectedDay);
+                  const isPast = isSlotInPast(dayIndex, time);
                   const isSelected = selectedSlot?.day === selectedDay && selectedSlot?.time === time;
                   return (
                     <button
                       key={time}
                       type="button"
-                      onClick={() => onSlotSelect(selectedDay, time)}
+                      disabled={isPast}
+                      onClick={() => !isPast && onSlotSelect(selectedDay, time)}
                       className={cn(
-                        "flex items-center justify-center px-3 py-2.5 rounded-xl border transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400",
-                        isSelected
-                          ? "bg-blue-500 border-blue-400 shadow-md shadow-blue-500/30"
-                          : "bg-blue-500/10 border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500/40"
+                        "flex items-center justify-center px-3 py-2.5 rounded-xl border transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400",
+                        isPast
+                          ? "bg-zinc-800 border-zinc-700 cursor-not-allowed opacity-40"
+                          : isSelected
+                            ? "bg-blue-500 border-blue-400 shadow-md shadow-blue-500/30 cursor-pointer"
+                            : "bg-blue-500/10 border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500/40 cursor-pointer"
                       )}
                     >
-                      <span className={cn("font-bold text-sm tabular-nums", isSelected ? "text-white" : "text-blue-300")}>{time}</span>
+                      <span className={cn("font-bold text-sm tabular-nums", isPast ? "text-zinc-600" : isSelected ? "text-white" : "text-blue-300")}>{time}</span>
                     </button>
                   );
                 })
