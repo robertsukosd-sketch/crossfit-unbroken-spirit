@@ -105,7 +105,7 @@ export default function AboutSection() {
               {t("aboutDesc")}
             </p>
             
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-6 lg:mt-[22rem]">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
