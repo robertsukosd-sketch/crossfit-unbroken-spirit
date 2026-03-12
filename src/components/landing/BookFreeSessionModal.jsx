@@ -227,6 +227,23 @@ ${fullMessage}`,
                     )}
                   </AnimatePresence>
 
+                  {/* WhatsApp deeplink — faster contact option */}
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2.5 w-full bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/40 hover:border-[#25D366]/70 text-[#25D366] font-bold rounded-xl py-3 text-sm transition-all duration-150 mb-3"
+                  >
+                    <MessageCircle className="w-5 h-5 flex-shrink-0" />
+                    {isRo ? 'Rezervă rapid pe WhatsApp' : 'Book quickly via WhatsApp'}
+                  </a>
+
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="flex-1 h-px bg-zinc-700" />
+                    <span className="text-xs text-zinc-500 font-medium">{isRo ? 'sau completează formularul' : 'or fill in the form'}</span>
+                    <div className="flex-1 h-px bg-zinc-700" />
+                  </div>
+
                   <form onSubmit={handleSubmit} className="space-y-3">
                     <div>
                       <label className="block text-sm font-semibold text-gray-300 mb-1.5">
