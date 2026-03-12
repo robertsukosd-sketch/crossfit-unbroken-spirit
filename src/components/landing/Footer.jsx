@@ -360,7 +360,7 @@ export default function Footer() {
             </button>
             <span className="text-gray-600">|</span>
             <button onClick={() => setOpenModal('gdpr')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
-              {language === 'ro' ? 'Confidențialitate și GDPR' : 'Privacy'}
+              {language === 'ro' ? 'Confidențialitate și GDPR' : 'Privacy Policy'}
             </button>
             <span className="text-gray-600">|</span>
             <button onClick={() => setOpenModal('terms')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
