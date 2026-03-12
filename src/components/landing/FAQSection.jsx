@@ -98,7 +98,7 @@ export default function FAQSection({ onBookSession }) {
         {
           id: 'parking',
           q: 'Cum pot ajunge la sală? Există parcare?',
-          a: 'Sala este ușor accesibilă, atât cu transportul în comun, cât și cu mașina.\nCea mai apropiată stație de metrou este Mihai Bravu, aflată la aproximativ 7–8 minute de mers pe jos. În același timp, cele mai apropiate stații STB sunt Pod Mihai Bravu pentru linia de autobuz 223 și Pod Mihai Bravu pentru liniile de tramvai 1 și 10.\nDacă vii cu mașina, ai un mare avantaj: parcare gratuită inclusă! Nu trebuie să îți faci griji pentru locul de parcare sau costuri suplimentare.',
+          a: 'Sala este ușor accesibilă atât cu transportul în comun, cât și cu mașina.\nCea mai apropiată stație de metrou este Mihai Bravu, la 7–8 minute de mers pe jos, iar stațiile STB din apropiere sunt Pod Mihai Bravu (autobuz 223 și tramvaie 1 și 10).\nPentru cei care vin cu mașina, există parcare gratuită inclusă!',
           aParking: true,
           aParkingRo: true,
           aHighlightParking: true
@@ -231,7 +231,7 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'parking',
         q: 'How can I get to the box? Do you have a parking lot?',
-        a: 'The box is easily accessible by both public transport and car.\nThe nearest subway station is Mihai Bravu, about a 7–8 minute walk away. The nearest STB stops are Pod Mihai Bravu for bus line 223 and Pod Mihai Bravu for tram lines 1 and 10.\nIf you\'re coming by car, you have a great advantage: free parking included! No need to worry about finding a spot or extra costs.',
+        a: 'The box is easily accessible by both public transport and car.\nThe nearest subway station is Mihai Bravu, a 7–8 minute walk away, and the nearby STB stops are Pod Mihai Bravu (bus 223 and trams 1 and 10).\nFor those coming by car, free parking is included!',
         aParking: true,
           aParkingEn: true,
           aHighlightParking: true
