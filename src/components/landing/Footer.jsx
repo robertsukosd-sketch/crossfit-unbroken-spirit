@@ -235,7 +235,7 @@ const getTermsContent = (language) => {
         <p>We reserve the right to modify these Terms and Conditions at any time. Continued use of our services constitutes acceptance of the updated terms. Any disputes will be governed by Romanian law and submitted to the competent courts of Bucharest.</p>
 
         <p><strong>10. Contact</strong></p>
-        <p>For any questions or concerns, please contact us at train@unbrokenspirit.ro or by phone at +40 748 838 767.</p>
+        <p>For any questions or concerns, please contact us at train@unbrokenspirit.ro or by phone at 0748 838 767, 0740 269 769.</p>
       </>
     );
 };
