@@ -11,29 +11,36 @@ const getCookieContent = (language) => {
   if (language === 'ro') {
     return (
       <>
-        <p><strong>1. Ce sunt Cookie-urile?</strong></p>
-        <p>Cookie-urile sunt fișiere mici text stocate pe dispozitivul dumneavoastră (computer, telefon, tabletă) atunci când vizitați site-ul nostru. Acestea conțin informații despre preferințele și comportamentul de navigare, permițând site-ului să vă recunoască și să ofere o experiență personalizată.</p>
-        
-        <p><strong>2. Tipuri de Cookie-uri pe Care le Folosim</strong></p>
-        <p><strong>Cookie-uri Esențiale (Necesare):</strong> Acestea sunt critice pentru funcționarea site-ului. Fără ele, funcții de bază cum ar fi autentificarea și securitatea nu vor funcționa. Nu necesită consimțământul explicit conform legii.</p>
-        <p><strong>Cookie-uri de Performanță:</strong> Ne ajută să înțelegem cum utilizatorii interacționează cu site-ul nostru prin colectarea de date anonime despre vizite, pagini vizitate și erori. Utilizăm această informație pentru a îmbunătăți performanța site-ului.</p>
-        <p><strong>Cookie-uri Funcționale:</strong> Memorizează preferințele dumneavoastră (limba, zona, etc.) pentru a personaliza experiența de navigare.</p>
-        <p><strong>Cookie-uri de Marketing:</strong> Utilizate pentru a urmări comportamentul dumneavoastră și a afișa publicități relevante. Aceste cookie-uri sunt partajate cu parteneri de advertising și necesită consimțământul explicit.</p>
-        
-        <p><strong>3. Cookie-uri Terților</strong></p>
-        <p>Site-ul nostru poate conține cookie-uri terților, cum ar fi de la Google Analytics, pentru a analiza traficul și comportamentul utilizatorilor. Terții pot utiliza aceste informații pentru a afișa publicități pe alte site-uri.</p>
-        
-        <p><strong>4. Cum Poți Controla Cookie-urile</strong></p>
-        <p>Poți controla și șterge cookie-urile prin setările browserului tău. Majoritatea browserelor moderne permit să blochezi cookie-urile sau să primești notificări înainte ca acestea să fie stocate. Rețineți că dezactivarea anumitor cookie-uri poate afecta funcția site-ului.</p>
-        
-        <p><strong>5. Consimțământul pentru Cookie-uri</strong></p>
-        <p>Conform legislației românești și GDPR, te vom cere consimțământul pentru cookie-urile non-esențiale. Poți retrage consimțământul în orice moment din setările de confidențialitate.</p>
-        
-        <p><strong>6. Retenție și Ștergere</strong></p>
-        <p>Cookie-urile esențiale sunt șterse atunci când închizi browserul sau după un anumit período. Cookie-urile funcționale și de marketing pot persista mai mult. Poți șterge manual cookie-urile în orice moment.</p>
-        
-        <p><strong>7. Contact și Opțiuni de Opt-Out</strong></p>
-        <p>Pentru mai multe informații sau pentru a opta din cookie-urile de marketing, contactează-ne la train@unbrokenspirit.ro.</p>
+        <p><strong>1. Introducere</strong></p>
+        <p>Acest document explică modul în care site-ul www.unbrokenspirit.ro, administrat de S.C. UNBROKEN CLUB S.R.L., utilizează modulele cookie și tehnologiile similare de urmărire. Scopul nostru este să vă oferim o experiență de navigare sigură, personalizată și transparentă, în conformitate cu legislația din România și Regulamentul General privind Protecția Datelor (GDPR).</p>
+
+        <p><strong>2. Ce sunt cookie-urile?</strong></p>
+        <p>Cookie-urile sunt fișiere text de mici dimensiuni care sunt stocate pe dispozitivul dumneavoastră (computer, telefon, tabletă) atunci când vizitați site-ul nostru. Acestea conțin informații despre preferințele și comportamentul dumneavoastră de navigare, permițând site-ului să vă recunoască și să funcționeze eficient.</p>
+
+        <p><strong>3. Tipurile de cookie-uri pe care le utilizăm</strong></p>
+        <p>Pe site-ul nostru folosim următoarele categorii de cookie-uri:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>Cookie-uri Strict Necesare (Esențiale):</strong> Sunt critice pentru funcționarea de bază a site-ului (ex: securitatea formularelor de contact, navigarea pe pagini). Fără acestea, site-ul nu poate funcționa corect. Conform legii, acestea nu necesită consimțământul dumneavoastră explicit.</li>
+          <li><strong>Cookie-uri de Performanță și Analiză:</strong> Ne ajută să înțelegem cum interacționează vizitatorii cu site-ul nostru, colectând date anonime despre vizite, pagini accesate și eventuale erori (ex. Google Analytics). Folosim aceste informații exclusiv pentru a îmbunătăți performanța site-ului.</li>
+          <li><strong>Cookie-uri Funcționale:</strong> Permit site-ului să rețină alegerile pe care le faceți (de exemplu, limba preferată) pentru a vă oferi o experiență personalizată.</li>
+          <li><strong>Cookie-uri de Marketing / Publicitate:</strong> Sunt utilizate pentru a urmări comportamentul vizitatorilor pe mai multe site-uri, cu scopul de a afișa reclame relevante și atractive. Aceste cookie-uri sunt partajate cu partenerii de publicitate (ex. Meta/Facebook Pixel, Google Ads) și necesită consimțământul dumneavoastră explicit.</li>
+        </ul>
+
+        <p><strong>4. Cookie-uri aparținând Terțelor Părți (Third-Party)</strong></p>
+        <p>Site-ul nostru poate conține cookie-uri setate de terțe părți (precum Google sau platformele de social media) pentru a analiza traficul sau pentru a vă afișa reclame pe alte site-uri. Aceste terțe părți pot utiliza datele colectate conform propriilor politici de confidențialitate.</p>
+
+        <p><strong>5. Legătura cu platforma ThunderWOD</strong></p>
+        <p>Vă reamintim că site-ul www.unbrokenspirit.ro are rol de prezentare. Pentru crearea contului de membru, achiziționarea abonamentelor și programarea la clase, veți fi redirecționat către aplicația terță ThunderWOD (https://thunderwod.com). Navigarea și operațiunile efectuate pe acea platformă sunt supuse Politicii de Cookie-uri și Politicii de Confidențialitate ale furnizorului ThunderWOD.</p>
+
+        <p><strong>6. Consimțământul, Controlul și Ștergerea Cookie-urilor</strong></p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>Consimțământ:</strong> Vă vom solicita acordul pentru utilizarea cookie-urilor care nu sunt strict necesare prin intermediul banner-ului afișat la prima vizită pe site. Vă puteți retrage consimțământul în orice moment.</li>
+          <li><strong>Durata de stocare:</strong> Cookie-urile de sesiune sunt șterse automat când închideți browserul. Cookie-urile persistente (funcționale, de marketing) rămân pe dispozitivul dumneavoastră până la expirarea duratei lor setate sau până când le ștergeți manual.</li>
+          <li><strong>Controlul din browser:</strong> Puteți controla, bloca sau șterge cookie-urile direct din setările browserului pe care îl utilizați. Rețineți că dezactivarea cookie-urilor esențiale poate afecta funcționalitatea site-ului.</li>
+        </ul>
+
+        <p><strong>7. Contact</strong></p>
+        <p>Pentru mai multe informații, pentru a vă modifica opțiunile privind cookie-urile sau pentru a vă retrage consimțământul pentru cookie-urile de marketing, ne puteți contacta la train@unbrokenspirit.ro.</p>
       </>
     );
   }
