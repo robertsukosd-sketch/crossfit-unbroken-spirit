@@ -350,12 +350,12 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="text-white font-bold mb-4">{t("quickLinks")}</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-1">
               {QUICK_FOOTER_LINKS.map((link) => (
                 <li key={link.href}>
                   <button 
                     onClick={() => scrollToSection(link.href.replace('#', ''))}
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-left focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-left text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-1 py-0.5"
                   >
                     {t(link.label)}
                   </button>
