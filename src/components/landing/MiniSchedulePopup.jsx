@@ -19,6 +19,24 @@ const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday")
 const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin", "Sâm"];
 const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
+// Map day index (0=Mon..5=Sat) to a JS Date for this week
+const getDateForDayIndex = (dayIndex) => {
+  const now = new Date();
+  const jsDay = now.getDay(); // 0=Sun, 1=Mon...
+  const todayMon0 = jsDay === 0 ? 6 : jsDay - 1; // Mon=0..Sat=5
+  const diff = dayIndex - todayMon0;
+  const d = new Date(now);
+  d.setDate(now.getDate() + diff);
+  return d;
+};
+
+const isSlotInPast = (dayIndex, time) => {
+  const slotDate = getDateForDayIndex(dayIndex);
+  const [h, m] = time.split(':').map(Number);
+  slotDate.setHours(h, m, 0, 0);
+  return slotDate < new Date();
+};
+
 export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlotSelect }) {
   const { t, language } = useLanguage();
   const schedule = useMemo(() => getCrossFitClasses(t), [language]);
