@@ -9,15 +9,15 @@ export default function CoachesSection() {
 
   const coaches = [
     {
-      id: 1,
-      name: 'Robert Sukosd',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/29f37936f_WhatsAppImage2026-03-11at100703.jpg',
+      id: 3,
+      name: 'Andrei Vârnav',
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/ea9853219_WhatsAppImage2026-03-12at071043.jpg',
       certifications: language === 'ro'
-        ? ['Antrenor de 1 an', 'CrossFit Level 2', 'The Gymnastics Course Level 1', 'Movement Specialist']
-        : ['1 year as a coach', 'CrossFit Level 2', 'The Gymnastics Course Level 1', 'Movement Specialist'],
-      experience: language === 'ro' ? '13 ani în CrossFit' : '13 years in CrossFit',
-      bioRo: 'Robert este co-fondatorul Unbroken Spirit și are o pasiune pentru dezvoltarea atletică. Cu peste 13 ani de experiență, se specializează în optimizarea performanței și construirea unei comunități puternice.',
-      bioEn: 'Robert is the co-founder of Unbroken Spirit with a passion for athletic development. With over 13 years of experience, he specializes in performance optimization and building a strong community.'
+        ? ['8 ani înot de performanță\n& medaliat național', '7 ani handbal de performanță\n& campion național', '4 ani Head Judge la OMBC Throwdown', 'Strength & Conditioning']
+        : ['8 years competitive swimming\n& national medalist', '7 years competitive handball\n& national champion', '4 years Head Judge at OMBC Throwdown', 'Strength & Conditioning'],
+      experience: language === 'ro' ? '8 ani în CrossFit' : '8 years in CrossFit',
+      bioRo: 'Andrei este specialistul în antrenamente cu greutăți și putere. Pasiunea lui pentru educație fitness face ca sesiunile sale să fie întotdeauna informative și motivante.',
+      bioEn: 'Andrei is a specialist in weightlifting and strength training. His passion for fitness education makes his sessions always informative and motivating.'
     },
     {
       id: 2,
@@ -31,15 +31,15 @@ export default function CoachesSection() {
       bioEn: 'Dumitru focuses on proper movement mechanics and is known for his patient approach with new members. His specialty is gymnastics and advanced mobility.'
     },
     {
-      id: 3,
-      name: 'Andrei Vârnav',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/ea9853219_WhatsAppImage2026-03-12at071043.jpg',
+      id: 1,
+      name: 'Robert Sukosd',
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/29f37936f_WhatsAppImage2026-03-11at100703.jpg',
       certifications: language === 'ro'
-        ? ['8 ani înot de performanță\n& medaliat național', '7 ani handbal de performanță\n& campion național', '4 ani Head Judge la OMBC Throwdown', 'Strength & Conditioning']
-        : ['8 years competitive swimming\n& national medalist', '7 years competitive handball\n& national champion', '4 years Head Judge at OMBC Throwdown', 'Strength & Conditioning'],
-      experience: language === 'ro' ? '8 ani în CrossFit' : '8 years in CrossFit',
-      bioRo: 'Andrei este specialistul în antrenamente cu greutăți și putere. Pasiunea lui pentru educație fitness face ca sesiunile sale să fie întotdeauna informative și motivante.',
-      bioEn: 'Andrei is a specialist in weightlifting and strength training. His passion for fitness education makes his sessions always informative and motivating.'
+        ? ['Antrenor de 1 an', 'CrossFit Level 2', 'The Gymnastics Course Level 1', 'Movement Specialist']
+        : ['1 year as a coach', 'CrossFit Level 2', 'The Gymnastics Course Level 1', 'Movement Specialist'],
+      experience: language === 'ro' ? '13 ani în CrossFit' : '13 years in CrossFit',
+      bioRo: 'Robert este co-fondatorul Unbroken Spirit și are o pasiune pentru dezvoltarea atletică. Cu peste 13 ani de experiență, se specializează în optimizarea performanței și construirea unei comunități puternice.',
+      bioEn: 'Robert is the co-founder of Unbroken Spirit with a passion for athletic development. With over 13 years of experience, he specializes in performance optimization and building a strong community.'
     }
   ];
 
