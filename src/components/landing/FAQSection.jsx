@@ -225,7 +225,7 @@ export default function FAQSection({ onBookSession }) {
       {
         id: 'open-gym',
         q: 'What is Open Gym?',
-        a: ' is a time slot when you can come to the gym to train on your own, using available equipment. Unlike regular CrossFit classes, during this time there\'s no group-led training. It\'s typically used by members who want to practice specific movements, make up a missed workout, or work extra on certain skills.',
+        a: 'Open Gym is a time slot when you can come to the gym to train on your own, using available equipment. Unlike regular CrossFit classes, during this time there\'s no group-led training. It\'s typically used by members who want to practice specific movements, make up a missed workout, or work extra on certain skills.',
         aOpenGym: true
       },
       {
