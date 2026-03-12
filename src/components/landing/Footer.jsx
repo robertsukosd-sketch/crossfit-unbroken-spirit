@@ -159,47 +159,42 @@ const getTermsContent = (language) => {
   if (language === 'ro') {
     return (
       <>
-        <p><strong>1. Acceptarea Termenilor și Condiţiilor</strong></p>
-        <p>Prin utilizarea site-ului nostru și prin participarea la activitățile oferite de CrossFit Unbroken Spirit, declară că ați citit, înțeles și acceptat acești Termeni și Condiții. Dacă nu sunteți de acord cu oricare dintre acești termeni, vă rugăm să nu vă înregistrați și să nu participați la activitățile noastre.</p>
-        
-        <p><strong>2. Descrierea Serviciilor</strong></p>
-        <p>CrossFit Unbroken Spirit oferă servicii de fitness, antrenament CrossFit, ridică de greutăți și alte activități sportive conexe. Serviciile sunt oferite doar persoanelor care au completat și semnat o declarație medicală și sunt apte din punct de vedere medical să participe la activități fizice intense.</p>
-        
-        <p><strong>3. Declarația de Sănătate și Asumare de Risc</strong></p>
-        <p>Prin participarea la oricare dintre serviciile noastre, acceptați că exercițiul fizic comportă riscuri inerente, inclusiv dar nu limitat la răniri musculare, fracturi, atacuri de cord sau, în cazuri extreme, deces. Declară că sunteți în stare bună de sănătate și că ați consultat un medic înainte de a participa. Nu suntem responsabili pentru accidentele sau bolile care apar în urma participării la activitățile noastre.</p>
-        
-        <p><strong>4. Vârsta și Capacitate Juridică</strong></p>
-        <p>Declarați că sunteți cu vârsta de cel puțin 18 ani și că aveți capacitate juridică deplină pentru a vă angaja în acești termeni. Pentru persoanele sub 18 ani, participarea necesită o autorizație scrisă și semnată de un părent sau tutore legal.</p>
-        
-        <p><strong>5. Regulile Sălii și Comportament</strong></p>
-        <p>Membrii sunt obligați să respecte regulamentul intern al sălii, să nu fumeze, să nu consume alcool sau alte substanțe interzise, să mențină o comportare corespunzătoare și să nu deranjeze alți membri. Utilizarea incorectă a echipamentului sau încălcarea regulilor poate duce la suspendarea sau rezilierea abonamentului fără rambursare.</p>
-        
-        <p><strong>6. Responsabilitatea Membrilor</strong></p>
-        <p>Sunteți responsabil pentru siguranța dumneavoastră și pentru alegerea unui nivel potrivit de exercițiu. Instructorii noștri oferă îndrumări, dar voi aveți responsabilitatea finală de a executa corect exercițiile și de a solicita ajutor atunci când este necesar. Nu vă deplasați niciodată echipamentul fără permisiune și asigurați-vă că este închis/securizat după utilizare.</p>
-        
-        <p><strong>7. Politica de Plată și Abonamente</strong></p>
-        <p>Abonamentele sunt plătite în avans conform perioadei selectate (lunar, trimestrial sau anual). Plățile întârziate pot duce la suspendarea accesului la facilități. Returnarea și rambursarea depind de motivul anulării și sunt reglementate de politica noastră de rambursare detaliată.</p>
-        
-        <p><strong>8. Anulare și Reziliere</strong></p>
-        <p>Aveți dreptul să vă anulați abonamentul cu o notificare scrisă de minimum 30 de zile. Anularea fără notificare prealabilă poate duce la pierderea contribuțiilor. În cazul încălcării grave a regulamentului, ne rezervăm dreptul de a rescinde abonamentul fără rambursare.</p>
-        
-        <p><strong>9. Proprietatea Intelectuală și Dreptul de Imagine</strong></p>
-        <p>Tot conținutul de pe site-ul nostru este proprietate intelectuală a CrossFit Unbroken Spirit. Vă puteți folosi fotografiile, videoclipurile și alte materiale doar pentru uz personal. Ne rezervăm dreptul de a utiliza imagini ale membrilor în materiale de marketing, cu acordul lor explicit.</p>
-        
-        <p><strong>10. Confidențialitatea și Protecția Datelor</strong></p>
-        <p>Conform Regulamentului General privind Protecția Datelor (GDPR) și legislației românești, informațiile dumneavoastră personale sunt protejate și utilizate doar pentru scopurile declarate. Nu vă vom vinde sau transmite date terților fără consimțământul explicit.</p>
-        
-        <p><strong>11. Limitarea Răspunderii</strong></p>
-        <p>CrossFit Unbroken Spirit nu este responsabil pentru pierderi, furturilor, deteriorări ale bunurilor personale lăsate în sală. Vă recomandăm să nu lăsați obiecte de valoare nesupraveghate. Nu suntem responsabili pentru întreruperile serviciilor datorită circumstanțelor neprevăzute.</p>
-        
-        <p><strong>12. Modificarea Termenilor</strong></p>
-        <p>Ne rezervăm dreptul de a modifica acești Termeni și Condiții în orice moment, cu sau fără notificare prealabilă. Utilizarea continuă a serviciilor noastre după modificări constituie acceptarea noilor termeni.</p>
-        
-        <p><strong>13. Legea și Jurisdicția</strong></p>
-        <p>Acești Termeni și Condiții sunt reglementați de legile României. Orice dispută va fi rezolvată conform legislației române și va fi supusă jurisdicției instanțelor competente din București, Sector 3.</p>
-        
-        <p><strong>14. Contactare</strong></p>
-        <p>Pentru orice întrebări sau nelămuriri privind acești termeni, vă rugăm să ne contactați la train@unbrokenspirit.ro sau la telefonul +40 748 838 767.</p>
+        <p><strong>1. Informații Generale și Acceptarea Termenilor</strong></p>
+        <p>Site-ul www.unbrokenspirit.ro este deținut și administrat de S.C. UNBROKEN CLUB S.R.L., având sediul social în București, Sector 1, Str. Pitar Moș, Nr. 27, la cabinet Av. Stanciu-Burileanu Bogdan, et. 5, ap. 17, și punctul de lucru (locația fizică a sălii) în București, Sector 3, Splaiul Unirii 257-259. Societatea este înregistrată la Registrul Comerțului sub nr. J2025078440006, C.U.I. RO52691871, capital social 500 RON.</p>
+        <p>Prin utilizarea acestui site și prin participarea la activitățile oferite de CrossFit Unbroken Spirit, declarați că ați citit, înțeles și acceptat acești Termeni și Condiții. Dacă nu sunteți de acord cu acești termeni, vă rugăm să nu utilizați serviciile noastre.</p>
+
+        <p><strong>2. Descrierea Serviciilor și Platforma ThunderWOD</strong></p>
+        <p>CrossFit Unbroken Spirit oferă servicii de fitness, antrenamente de tip CrossFit, haltere (ridicare de greutăți), gimnastică și activități sportive conexe la punctul său de lucru.</p>
+        <p>Site-ul www.unbrokenspirit.ro are rol de prezentare. Achiziționarea abonamentelor, plățile și programările la clase se efectuează exclusiv online, prin intermediul aplicației terțe ThunderWOD (https://thunderwod.com). Prin crearea unui cont și efectuarea plăților în ThunderWOD, acceptați implicit și termenii platformei respective.</p>
+
+        <p><strong>3. Declarația de Sănătate și Asumarea Riscului</strong></p>
+        <p>Prin participarea la oricare dintre antrenamentele noastre, acceptați faptul că exercițiul fizic de intensitate ridicată comportă riscuri inerente (inclusiv, dar fără a se limita la: leziuni musculare, articulare sau afecțiuni cardiovasculare). Declarați pe proprie răspundere că sunteți apt din punct de vedere medical și că ați consultat un medic înainte de a începe acest program de antrenamente. UNBROKEN CLUB S.R.L. nu este responsabilă pentru accidentările sau afecțiunile medicale survenite în urma participării la activitățile noastre.</p>
+
+        <p><strong>4. Vârsta și Capacitatea Juridică</strong></p>
+        <p>Declarați că aveți cel puțin 18 ani și capacitate juridică deplină. Pentru persoanele sub 18 ani, participarea la antrenamente este permisă exclusiv în baza unui acord scris și semnat de către un părinte sau tutore legal.</p>
+
+        <p><strong>5. Politica de Plăți, Abonamente și Anulare</strong></p>
+        <p>Abonamentele se achită în avans, integral, conform perioadei selectate, prin intermediul aplicației ThunderWOD. Neplata la termen duce la suspendarea automată a accesului la programări. Puteți solicita anularea reînnoirii abonamentului direct din aplicație sau printr-o notificare scrisă trimisă pe e-mail. Returnarea parțială a fondurilor se face doar în cazuri medicale excepționale (dovedite cu acte) și conform politicii interne de rambursare a sălii.</p>
+
+        <p><strong>6. Regulile Sălii și Responsabilitatea Membrilor</strong></p>
+        <p>Sunteți responsabil pentru siguranța dumneavoastră și pentru executarea corectă a exercițiilor conform indicațiilor antrenorului. Membrii sunt obligați:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Să respecte regulamentul de ordine interioară (ROI) afișat în sală.</li>
+          <li>Să nu utilizeze echipamentul fără permisiune și să îl igienizeze/așeze la loc după utilizare.</li>
+          <li>Să mențină un comportament respectuos. Consumul de alcool, substanțe interzise sau comportamentul agresiv atrag rezilierea imediată a abonamentului, fără drept de rambursare.</li>
+        </ul>
+
+        <p><strong>7. Proprietatea Intelectuală și Dreptul de Imagine</strong></p>
+        <p>Tot conținutul site-ului www.unbrokenspirit.ro este proprietatea intelectuală a UNBROKEN CLUB S.R.L. Ne rezervăm dreptul de a realiza și utiliza fotografii/videoclipuri din timpul antrenamentelor în scopuri de marketing pe rețelele sociale, cu respectarea normelor GDPR. Dacă nu doriți să apăreți în aceste materiale, vă rugăm să notificați antrenorul sau recepția.</p>
+
+        <p><strong>8. Limitarea Răspunderii</strong></p>
+        <p>S.C. UNBROKEN CLUB S.R.L. nu este responsabilă pentru pierderea, furtul sau deteriorarea bunurilor personale lăsate în vestiare sau în incinta sălii. De asemenea, nu suntem responsabili pentru întreruperile serviciilor cauzate de forță majoră sau circumstanțe neprevăzute.</p>
+
+        <p><strong>9. Modificarea Termenilor și Jurisdicția</strong></p>
+        <p>Ne rezervăm dreptul de a actualiza acești Termeni și Condiții. Continuarea utilizării serviciilor noastre reprezintă acceptarea modificărilor. Orice litigiu va fi guvernat de legislația din România și va fi soluționat de instanțele judecătorești competente din București.</p>
+
+        <p><strong>10. Contact</strong></p>
+        <p>Pentru întrebări, ne puteți contacta la e-mail: train@unbrokenspirit.ro sau telefon: 0748 838 767, 0740 269 769.</p>
       </>
     );
   }
