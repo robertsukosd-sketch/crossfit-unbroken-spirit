@@ -101,7 +101,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-3"
+            className="flex flex-col gap-3"
           >
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
               {language === 'ro'
@@ -116,12 +116,13 @@ export default function AboutSection() {
             />
           </motion.div>
 
-          {/* Right: Features grid */}
+          {/* Right: Features grid — flex col so we can push content to align with map top */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col justify-end h-full"
           >
             <div className="grid sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
