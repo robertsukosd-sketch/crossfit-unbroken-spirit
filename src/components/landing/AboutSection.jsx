@@ -90,6 +90,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="lg:pt-[11rem]"
           >
             <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
               {t("aboutUs")}
