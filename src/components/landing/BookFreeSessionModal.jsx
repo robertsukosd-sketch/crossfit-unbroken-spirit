@@ -314,32 +314,40 @@ ${fullMessage}`,
                     </AnimatePresence>
 
                     {/* WhatsApp deeplink — enabled only when canSend and not during unavailable hours */}
-                    <TooltipProvider>
-                      <Tooltip open={isUnavailable ? undefined : false}>
-                        <TooltipTrigger asChild>
-                          <a
-                            href={canSend && !isUnavailable ? whatsappUrl : undefined}
-                            target={canSend && !isUnavailable ? '_blank' : undefined}
-                            rel="noopener noreferrer"
-                            aria-disabled={!canSend || isUnavailable}
-                            onClick={canSend && !isUnavailable ? undefined : (e) => e.preventDefault()}
-                            className={`flex items-center justify-center gap-2 w-full border font-bold rounded-lg py-2 text-sm transition-all duration-150 mt-1 ${
-                              canSend && !isUnavailable
-                                ? 'bg-[#25D366]/10 hover:bg-[#25D366]/20 border-[#25D366]/40 hover:border-[#25D366]/70 text-[#25D366] cursor-pointer'
-                                : 'bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed'
-                            }`}
-                          >
-                            <MessageCircle className="w-4 h-4 flex-shrink-0" />
-                            {isRo ? 'Rezervă mai rapid pe WhatsApp' : 'Book faster via WhatsApp'}
-                          </a>
-                        </TooltipTrigger>
-                        {isUnavailable && (
+                    {isUnavailable ? (
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <button
+                              disabled
+                              className="flex items-center justify-center gap-2 w-full border font-bold rounded-lg py-2 text-sm transition-all duration-150 mt-1 bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed"
+                            >
+                              <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                              {isRo ? 'Rezervă mai rapid pe WhatsApp' : 'Book faster via WhatsApp'}
+                            </button>
+                          </TooltipTrigger>
                           <TooltipContent className="bg-zinc-800 border border-zinc-700 text-zinc-300">
                             {isRo ? 'Indisponibil între 22:30-6:00' : 'Unavailable between 22:30-6:00'}
                           </TooltipContent>
-                        )}
-                      </Tooltip>
-                    </TooltipProvider>
+                        </Tooltip>
+                      </TooltipProvider>
+                    ) : (
+                      <a
+                        href={canSend ? whatsappUrl : undefined}
+                        target={canSend ? '_blank' : undefined}
+                        rel="noopener noreferrer"
+                        aria-disabled={!canSend}
+                        onClick={canSend ? undefined : (e) => e.preventDefault()}
+                        className={`flex items-center justify-center gap-2 w-full border font-bold rounded-lg py-2 text-sm transition-all duration-150 mt-1 ${
+                          canSend
+                            ? 'bg-[#25D366]/10 hover:bg-[#25D366]/20 border-[#25D366]/40 hover:border-[#25D366]/70 text-[#25D366] cursor-pointer'
+                            : 'bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed'
+                        }`}
+                      >
+                        <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                        {isRo ? 'Rezervă mai rapid pe WhatsApp' : 'Book faster via WhatsApp'}
+                      </a>
+                    )}
 
                     <Button
                       type="submit"
