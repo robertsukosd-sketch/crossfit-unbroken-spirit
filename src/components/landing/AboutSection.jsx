@@ -95,13 +95,13 @@ export default function AboutSection() {
 
         {/* Bottom row: map (left) + features grid (right), aligned at top */}
         <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start mt-6">
-          {/* Left: Transport text + Map */}
+          {/* Left: Transport text + Map — shown second on mobile */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col gap-3"
+            className="flex flex-col gap-3 order-2 lg:order-1"
           >
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
               {language === 'ro'
