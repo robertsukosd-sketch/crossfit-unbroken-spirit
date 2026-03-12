@@ -137,48 +137,73 @@ const getPrivacyContent = (language) => {
     );
   }
   return (
-    <>
-      <p><strong>1. Introduction and Data Controller</strong></p>
-      <p>In accordance with the General Data Protection Regulation (GDPR) no. 2016/679 and Romanian data protection legislation, S.C. UNBROKEN CLUB S.R.L. (hereinafter "we" or "the company") is responsible for processing your personal data. For any privacy-related questions, contact us at train@unbrokenspirit.ro or +40 748 838 767.</p>
-      
-      <p><strong>2. What Data We Collect</strong></p>
-      <p>We collect the following categories of data: identification data (name, surname, email, phone), location data (address), health data (medical history for training safety purposes), payment data (bank or card information, only for secure processing), tracking data (IP address, cookies, device).</p>
-      
-      <p><strong>3. Legal Bases for Processing</strong></p>
-      <p>The processing of your data is based on: explicit consent (for marketing communications), service provision contract (to provide you training and fitness services), legal obligations (for labor and health law compliance), legitimate interest (for security and fraud prevention).</p>
-      
-      <p><strong>4. Purposes of Data Processing</strong></p>
-      <p>Your data is used for: providing training and fitness services, managing memberships and payments, administrative and service-related communications, marketing and promotion (with explicit consent), improving services and website, complying with legal and regulatory obligations, preventing fraud and illegal activities.</p>
-      
-      <p><strong>5. Sharing Data with Third Parties</strong></p>
-      <p>We do not sell or share your data with third parties without explicit consent, except where legally required. Our partners (payment processors, cloud providers) are contractually obligated to maintain confidentiality and security.</p>
-      
-      <p><strong>6. International Transfers</strong></p>
-      <p>Your data is stored primarily within the European Union. Any transfer outside the EU is done with appropriate safeguards under GDPR.</p>
-      
-      <p><strong>7. Data Retention</strong></p>
-      <p>We keep your data only as long as necessary: contract data is retained for the duration of membership and 6 years after (according to tax law), marketing data is deleted upon consent withdrawal, security data is retained according to legislation.</p>
-      
-      <p><strong>8. Your Rights</strong></p>
-      <p>You have the following rights under GDPR: right of access (to know what data we have about you), right of rectification (to correct inaccurate data), right to erasure (right to be forgotten), right to restrict processing, right to data portability (to receive data in structured format), right to object to processing, right not to be subject to automated decision-making. To exercise these rights, contact us at train@unbrokenspirit.ro.</p>
-      
-      <p><strong>9. Data Security</strong></p>
-      <p>We implement technical and organizational security measures to protect your data against unauthorized access, modification, loss, or misuse. We use encryption (SSL/TLS), restricted access, and regular security testing.</p>
-      
-      <p><strong>10. Security Breaches</strong></p>
-      <p>In the event of a data breach that could affect your rights, we will notify competent authorities and, if necessary, you, in accordance with GDPR.</p>
-      
-      <p><strong>11. Cookies and Tracking Technologies</strong></p>
-      <p>We use cookies and other tracking technologies in accordance with our separate cookie policy. You can control these technologies through your browser settings.</p>
-      
-      <p><strong>12. Contact Data Protection Authority</strong></p>
-      <p>If you believe that processing of your data violates GDPR, you can file a complaint with the National Authority for Supervision of Personal Data Processing (ANSPDCP), str. Dem. I. Dobrescu no. 22-24, sector 1, Bucharest, or online at www.dataprotection.ro.</p>
-      
-      <p><strong>13. Policy Changes</strong></p>
-      <p>We have the right to update this policy periodically. The updated version will be available on our website with the date of last modification clearly marked.</p>
-    </>
-  );
-};
+      <>
+        <p><strong>1. Introduction and Data Controller</strong></p>
+        <p>In accordance with the General Data Protection Regulation (GDPR - EU 2016/679) and applicable Romanian data protection legislation, S.C. UNBROKEN CLUB S.R.L. (hereinafter "we", "the company", or "the Controller") is responsible for processing your personal data.</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>Registered Office:</strong> Bucharest, District 1, 27 Pitar Moș St., at the law office of Av. Stanciu-Burileanu Bogdan, 5th floor, apt. 17.</li>
+          <li><strong>Working Point (Gym Location):</strong> Bucharest, District 3, 257-259 Splaiul Unirii.</li>
+          <li><strong>Identification Data:</strong> VAT/C.U.I. RO52691871, Trade Reg. J2025078440006.</li>
+        </ul>
+        <p>For any privacy-related questions, contact us at train@unbrokenspirit.ro or +40 748 838 767, +40 740 269 769.</p>
+
+        <p><strong>2. What Data We Collect and How</strong></p>
+        <p>We collect your data through two distinct channels, depending on your interaction with us:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>A. Directly via www.unbrokenspirit.ro:</strong> We collect identification data (name, email, phone number) exclusively through contact forms. Important note: These messages are not stored on the website's server but are transmitted directly and securely to our official email inbox. We also collect technical browsing data (IP address, device type) via cookies.</li>
+          <li><strong>B. Via the ThunderWOD platform and at the gym:</strong> To access our training services, you must create an account on the ThunderWOD app/platform. There, you will provide identification data, health data (fitness-to-train declaration), and payment data (bank details). Payment processing is conducted strictly through ThunderWOD's secure infrastructure and its payment processing partners.</li>
+        </ul>
+
+        <p><strong>3. Legal Bases and Purposes for Processing</strong></p>
+        <p>We process your data based on the following legal grounds:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>Contract Execution / Pre-contractual steps:</strong> To answer your inquiries from the website, create your ThunderWOD member profile, manage memberships, class bookings, and gym access.</li>
+          <li><strong>Legal Obligation:</strong> To issue invoices, comply with financial-accounting legislation, and adhere to health and safety regulations at our physical location.</li>
+          <li><strong>Legitimate Interest:</strong> To ensure our website's cybersecurity, prevent fraud, and protect the company's legal rights in case of disputes.</li>
+          <li><strong>Consent:</strong> For sending marketing communications (newsletters), capturing photos/videos during classes for promotional purposes, or using non-essential cookies. Consent can be withdrawn at any time.</li>
+        </ul>
+
+        <p><strong>4. Sharing Data with Third Parties and International Transfers</strong></p>
+        <p>We do not sell or rent your data. We share your data strictly for the aforementioned purposes with partners bound by confidentiality agreements:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Our gym management software provider (ThunderWOD) and their integrated payment processors.</li>
+          <li>Our accounting firm (for billing data).</li>
+          <li>The IT and web hosting providers.</li>
+          <li>Public authorities, upon legal request.</li>
+        </ul>
+        <p>Your data is primarily stored within the European Union. Any transfer outside the EU is subject to standard contractual clauses approved by the European Commission.</p>
+
+        <p><strong>5. Data Retention</strong></p>
+        <p>We retain your data only for as long as necessary:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Contact form data (if it does not result in a membership): maximum 12 months.</li>
+          <li>Financial data and invoices: up to 10 years, according to Romanian law.</li>
+          <li>Membership history and medical waivers: for the duration of your active account and a subsequent period justified for defending our legal interests.</li>
+        </ul>
+
+        <p><strong>6. Data Security</strong></p>
+        <p>We implement appropriate technical and organizational measures to protect your data against unauthorized access, loss, or alteration. These include using SSL certificates on our website, routing contact messages exclusively to our secure email, and delegating payment processing to certified platforms (ThunderWOD).</p>
+
+        <p><strong>7. Your Rights</strong></p>
+        <p>Under GDPR, you have the following rights:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>The right of access:</strong> to confirm processing and access your data.</li>
+          <li><strong>The right to rectification:</strong> to correct inaccurate or incomplete data.</li>
+          <li><strong>The right to erasure ('right to be forgotten'):</strong> under legal conditions.</li>
+          <li><strong>The right to restriction of processing</strong> and the <strong>right to data portability.</strong></li>
+          <li><strong>The right to object:</strong> to object to processing (e.g., for marketing).</li>
+          <li><strong>Right not to be subject to automated decision-making.</strong></li>
+        </ul>
+        <p>To exercise these rights, email us at train@unbrokenspirit.ro.</p>
+
+        <p><strong>8. Complaints</strong></p>
+        <p>If you believe your data protection rights have been violated, you have the right to file a complaint with the National Supervisory Authority for Personal Data Processing (ANSPDCP): 28-30 G-ral. Gheorghe Magheru Blvd., District 1, Bucharest, www.dataprotection.ro.</p>
+
+        <p><strong>9. Policy Updates</strong></p>
+        <p>We reserve the right to modify this policy. Any updates will be published on this page.</p>
+      </>
+    );
+  };
 
 const getTermsContent = (language) => {
   if (language === 'ro') {
