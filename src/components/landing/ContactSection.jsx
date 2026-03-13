@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, Instagram, Facebook, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Instagram, Facebook, CheckCircle, MessageCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { base44 } from '@/api/base44Client';
 import { toast } from "sonner";
 import { useLanguage } from '../LanguageProvider';
