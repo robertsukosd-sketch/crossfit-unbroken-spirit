@@ -90,15 +90,14 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
         message: fullMessage,
         status: 'new',
       });
-      await base44.integrations.Core.SendEmail({
-        to: CONTACT_EMAIL,
-        subject: isRo ? `Rezervare Ședință Gratuită - ${form.name}` : `Free Session Booking - ${form.name}`,
-        body: `${isRo ? 'Nume' : 'Name'}: ${form.name}
-${isRo ? 'Email' : 'Email'}: ${form.email}
-${isRo ? 'Telefon' : 'Phone'}: ${form.phone || (isRo ? 'Necompletat' : 'Not provided')}
-
-${isRo ? 'Mesaj' : 'Message'}:
-${fullMessage}`,
+      await fetch('https://api.unbrokenspirit.ro/email/send/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          to: CONTACT_EMAIL,
+          subject: isRo ? `Rezervare Ședință Gratuită - ${form.name}` : `Free Session Booking - ${form.name}`,
+          body: `${isRo ? 'Nume' : 'Name'}: ${form.name}\n${isRo ? 'Email' : 'Email'}: ${form.email}\n${isRo ? 'Telefon' : 'Phone'}: ${form.phone || (isRo ? 'Necompletat' : 'Not provided')}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${fullMessage}`
+        })
       });
       setSending(false);
       setSubmitted(true);
