@@ -75,10 +75,14 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     const isRo = language === 'ro';
-    await base44.integrations.Core.SendEmail({
-      to: CONTACT_EMAIL,
-      subject: isRo ? `Mesaj nou de la ${formData.name}` : `New message from ${formData.name}`,
-      body: `${isRo ? 'Nume' : 'Name'}: ${formData.name}\n${isRo ? 'Email' : 'Email'}: ${formData.email}\n${isRo ? 'Telefon' : 'Phone'}: ${formData.phone || '-'}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${formData.message}`
+    await fetch('https://api.unbrokenspirit.ro/email/send/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        to: CONTACT_EMAIL,
+        subject: isRo ? `Mesaj nou de la ${formData.name}` : `New message from ${formData.name}`,
+        body: `${isRo ? 'Nume' : 'Name'}: ${formData.name}\n${isRo ? 'Email' : 'Email'}: ${formData.email}\n${isRo ? 'Telefon' : 'Phone'}: ${formData.phone || '-'}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${formData.message}`
+      })
     });
     
     setIsSubmitted(true);
