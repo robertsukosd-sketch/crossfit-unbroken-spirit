@@ -33,7 +33,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
   const unavailableEnd = 6 * 60; // 6:00
   const isUnavailable = currentTimeInMinutes >= unavailableStart || currentTimeInMinutes < unavailableEnd;
 
-  const whatsappPhone = '40748838767';
+  const whatsappPhone = '40744798429';
   const whatsappText = encodeURIComponent(
     isRo
       ? `Bună! Mă numesc ${form.name.trim() || '...'} și aș dori să rezerv o ședință gratuită${selectedSlot ? ` ${selectedSlot.day} la ${selectedSlot.time}` : ''}. Email: ${form.email}${form.phone ? `. Telefon: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
