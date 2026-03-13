@@ -274,6 +274,59 @@ export default function ContactSection() {
                       </span>
                     )}
                   </Button>
+
+                  {/* WhatsApp quick contact */}
+                  {(() => {
+                    const now = new Date();
+                    const mins = now.getHours() * 60 + now.getMinutes();
+                    const isUnavailable = mins >= 22 * 60 + 30 || mins < 6 * 60;
+                    const isRo = language === 'ro';
+                    const whatsappText = encodeURIComponent(
+                      isRo
+                        ? `Bună! Mă numesc ${formData.name.trim() || '...'} și aș dori să vă contactez. Email: ${formData.email}${formData.phone ? `. Telefon: ${formData.phone}` : ''}.${formData.message.trim() ? ` ${formData.message.trim()}` : ''}`
+                        : `Hi! My name is ${formData.name.trim() || '...'} and I'd like to get in touch. Email: ${formData.email}${formData.phone ? `. Phone: ${formData.phone}` : ''}.${formData.message.trim() ? ` ${formData.message.trim()}` : ''}`
+                    );
+                    const whatsappUrl = `https://wa.me/40744798429?text=${whatsappText}`;
+                    const canSend = formData.name.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
+
+                    if (isUnavailable) {
+                      return (
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <div className="w-full">
+                                <button disabled className="w-full flex items-center justify-center gap-2 border font-bold rounded-full py-3 text-sm bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed">
+                                  <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                                  {isRo ? 'Contactează-ne pe WhatsApp' : 'Contact us on WhatsApp'}
+                                </button>
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent side="top" sideOffset={4} className="z-[200] bg-zinc-800 border border-zinc-700 text-zinc-300 text-xs">
+                              {isRo ? 'Indisponibil între 22:30-6:00' : 'Unavailable between 22:30-6:00'}
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      );
+                    }
+
+                    return (
+                      <a
+                        href={canSend ? whatsappUrl : undefined}
+                        target={canSend ? '_blank' : undefined}
+                        rel="noopener noreferrer"
+                        aria-disabled={!canSend}
+                        onClick={canSend ? undefined : (e) => e.preventDefault()}
+                        className={`flex items-center justify-center gap-2 w-full border font-bold rounded-full py-3 text-sm transition-all duration-150 ${
+                          canSend
+                            ? 'bg-[#25D366]/10 hover:bg-[#25D366]/20 border-[#25D366]/40 hover:border-[#25D366]/70 text-[#25D366] cursor-pointer'
+                            : 'bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed'
+                        }`}
+                      >
+                        <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                        {isRo ? 'Contactează-ne pe WhatsApp' : 'Contact us on WhatsApp'}
+                      </a>
+                    );
+                  })()}
                 </form>
               )}
             </div>
