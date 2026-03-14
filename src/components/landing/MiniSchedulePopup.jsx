@@ -147,7 +147,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
                     type="button"
                     onClick={() => setSelectedDayIndex(i)}
                     className={cn(
-                      "px-2.5 py-1.5 rounded-full text-xs font-semibold transition-colors duration-150 flex-shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 flex flex-col items-center leading-tight",
+                      "px-2.5 py-1.5 rounded-full text-xs font-semibold transition-colors duration-150 flex-shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 flex flex-col items-center justify-center leading-tight text-center",
                       selectedDayIndex === i
                         ? "bg-blue-500 text-white"
                         : "bg-zinc-700 text-gray-400 hover:bg-zinc-600 hover:text-white"
