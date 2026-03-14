@@ -44,11 +44,34 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
   const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email);
   const canSend = form.name.trim() && isValidEmail && selectedSlot;
 
+  // Compute the actual date for the selected slot
+  const getSlotDate = (slot) => {
+    if (!slot) return null;
+    const now = new Date();
+    const jsDay = now.getDay();
+    const diffToMon = jsDay === 0 ? -6 : 1 - jsDay;
+    const mon = new Date(now);
+    mon.setDate(now.getDate() + diffToMon + (slot.weekOffset || 0) * 7);
+    mon.setHours(0, 0, 0, 0);
+    const dayNames = isRo
+      ? ['Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri', 'Sâmbătă']
+      : ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayIndex = dayNames.findIndex(d => d.toLowerCase() === slot.day.toLowerCase());
+    const slotDate = new Date(mon);
+    slotDate.setDate(mon.getDate() + (dayIndex >= 0 ? dayIndex : 0));
+    return slotDate;
+  };
+
+  const slotDate = getSlotDate(selectedSlot);
+  const slotDateStr = slotDate
+    ? `${slotDate.getDate().toString().padStart(2, '0')}.${(slotDate.getMonth() + 1).toString().padStart(2, '0')}`
+    : '';
+
   // Build the auto-prefix for the message box
   const messagePrefix = selectedSlot && form.name.trim()
     ? isRo
-      ? `Bună! Mă numesc ${form.name.trim()} și aș dori să rezerv o ședință gratuită ${selectedSlot.day} la ${selectedSlot.time}. `
-      : `Hi! My name is ${form.name.trim()} and I would like to book a free session on ${selectedSlot.day} at ${selectedSlot.time}. `
+      ? `Bună! Mă numesc ${form.name.trim()} și aș dori să rezerv o ședință gratuită ${selectedSlot.day}${slotDateStr ? ` (${slotDateStr})` : ''} la ${selectedSlot.time}. `
+      : `Hi! My name is ${form.name.trim()} and I would like to book a free session on ${selectedSlot.day}${slotDateStr ? ` (${slotDateStr})` : ''} at ${selectedSlot.time}. `
     : '';
 
   // Show message box only after email field is blurred with a valid email
