@@ -66,11 +66,11 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
     prevShowMessageBox.current = showMessageBox;
   }, [showMessageBox]);
 
-  const handleSlotSelect = (day, time) => {
-    if (selectedSlot && selectedSlot.day === day && selectedSlot.time === time) {
+  const handleSlotSelect = (day, time, weekOffset) => {
+    if (selectedSlot && selectedSlot.day === day && selectedSlot.time === time && selectedSlot.weekOffset === weekOffset) {
       setSelectedSlot(null);
     } else {
-      setSelectedSlot({ day, time });
+      setSelectedSlot({ day, time, weekOffset });
       setTimeout(() => {
         if (nameRef.current) nameRef.current.focus();
       }, 50);
