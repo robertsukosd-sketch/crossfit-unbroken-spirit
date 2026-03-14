@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
 
@@ -19,19 +19,26 @@ const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday")
 const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin", "Sâm"];
 const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-// Map day index (0=Mon..5=Sat) to a JS Date for this week
-const getDateForDayIndex = (dayIndex) => {
+// Returns the Monday of the current week
+const getWeekMonday = (weekOffset = 0) => {
   const now = new Date();
-  const jsDay = now.getDay(); // 0=Sun, 1=Mon...
-  const todayMon0 = jsDay === 0 ? 6 : jsDay - 1; // Mon=0..Sat=5
-  const diff = dayIndex - todayMon0;
-  const d = new Date(now);
-  d.setDate(now.getDate() + diff);
+  const jsDay = now.getDay(); // 0=Sun..6=Sat
+  const diffToMon = jsDay === 0 ? -6 : 1 - jsDay;
+  const mon = new Date(now);
+  mon.setDate(now.getDate() + diffToMon + weekOffset * 7);
+  mon.setHours(0, 0, 0, 0);
+  return mon;
+};
+
+// Returns a Date for dayIndex (0=Mon..5=Sat) within a given week's Monday
+const getDateForDayInWeek = (weekMonday, dayIndex) => {
+  const d = new Date(weekMonday);
+  d.setDate(weekMonday.getDate() + dayIndex);
   return d;
 };
 
-const isSlotInPast = (dayIndex, time) => {
-  const slotDate = getDateForDayIndex(dayIndex);
+const isSlotInPast = (weekMonday, dayIndex, time) => {
+  const slotDate = getDateForDayInWeek(weekMonday, dayIndex);
   const [h, m] = time.split(':').map(Number);
   slotDate.setHours(h, m, 0, 0);
   return slotDate < new Date();
@@ -43,16 +50,29 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
   const days = useMemo(() => getDays(t), [language]);
   const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
 
+  const [weekOffset, setWeekOffset] = useState(0); // 0 = this week, 1 = next week
+
   const todayIndex = new Date().getDay();
   const rawIndex = todayIndex === 0 ? 6 : todayIndex - 1;
   const mappedIndex = Math.min(rawIndex, 5);
-  const [selectedDay, setSelectedDay] = useState(days[mappedIndex]);
+  const [selectedDayIndex, setSelectedDayIndex] = useState(mappedIndex);
 
   useEffect(() => {
-    setSelectedDay(days[mappedIndex]);
+    setSelectedDayIndex(mappedIndex);
   }, [days]);
 
+  const weekMonday = useMemo(() => getWeekMonday(weekOffset), [weekOffset]);
+
+  const selectedDay = days[selectedDayIndex];
   const classes = schedule[selectedDay] || [];
+
+  const weekLabel = () => {
+    const mon = weekMonday;
+    const sat = new Date(mon);
+    sat.setDate(mon.getDate() + 5);
+    const fmt = (d) => `${d.getDate().toString().padStart(2, '0')}.${(d.getMonth() + 1).toString().padStart(2, '0')}`;
+    return `${fmt(mon)} – ${fmt(sat)}`;
+  };
 
   return (
     <AnimatePresence>
@@ -80,23 +100,64 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
               </button>
             </div>
 
-            {/* Day tabs */}
+            {/* Week navigation */}
+            <div className="flex items-center justify-between mb-3">
+              <button
+                type="button"
+                onClick={() => setWeekOffset(0)}
+                disabled={weekOffset === 0}
+                className={cn(
+                  "p-1 rounded-full transition-colors",
+                  weekOffset === 0
+                    ? "text-zinc-700 cursor-not-allowed"
+                    : "text-gray-400 hover:text-white hover:bg-zinc-700 cursor-pointer"
+                )}
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <span className="text-xs text-gray-400 font-semibold tabular-nums">
+                {weekOffset === 0
+                  ? (language === 'ro' ? 'Săptămâna aceasta' : 'This week')
+                  : (language === 'ro' ? 'Săptămâna viitoare' : 'Next week')}
+                {' · '}{weekLabel()}
+              </span>
+              <button
+                type="button"
+                onClick={() => setWeekOffset(1)}
+                disabled={weekOffset === 1}
+                className={cn(
+                  "p-1 rounded-full transition-colors",
+                  weekOffset === 1
+                    ? "text-zinc-700 cursor-not-allowed"
+                    : "text-gray-400 hover:text-white hover:bg-zinc-700 cursor-pointer"
+                )}
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Day tabs with dates */}
             <div className="flex gap-1 mb-3 overflow-x-auto pb-1 scrollbar-none">
-              {days.map((day, i) => (
-                <button
-                  key={day}
-                  type="button"
-                  onClick={() => setSelectedDay(day)}
-                  className={cn(
-                    "px-2.5 py-1.5 rounded-full text-xs font-semibold transition-colors duration-150 flex-shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400",
-                    selectedDay === day
-                      ? "bg-blue-500 text-white"
-                      : "bg-zinc-700 text-gray-400 hover:bg-zinc-600 hover:text-white"
-                  )}
-                >
-                  {dayAbbrList[i]}
-                </button>
-              ))}
+              {days.map((day, i) => {
+                const d = getDateForDayInWeek(weekMonday, i);
+                const dateLabel = `${d.getDate().toString().padStart(2, '0')}.${(d.getMonth() + 1).toString().padStart(2, '0')}`;
+                return (
+                  <button
+                    key={day}
+                    type="button"
+                    onClick={() => setSelectedDayIndex(i)}
+                    className={cn(
+                      "px-2.5 py-1.5 rounded-full text-xs font-semibold transition-colors duration-150 flex-shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 flex flex-col items-center leading-tight",
+                      selectedDayIndex === i
+                        ? "bg-blue-500 text-white"
+                        : "bg-zinc-700 text-gray-400 hover:bg-zinc-600 hover:text-white"
+                    )}
+                  >
+                    <span>{dayAbbrList[i]}</span>
+                    <span className={cn("text-[9px] font-normal", selectedDayIndex === i ? "text-blue-100" : "text-zinc-500")}>{dateLabel}</span>
+                  </button>
+                );
+              })}
             </div>
 
             {/* Classes grid */}
@@ -107,15 +168,14 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
                 </div>
               ) : (
                 classes.map((time) => {
-                  const dayIndex = days.indexOf(selectedDay);
-                  const isPast = isSlotInPast(dayIndex, time);
-                  const isSelected = selectedSlot?.day === selectedDay && selectedSlot?.time === time;
+                  const isPast = isSlotInPast(weekMonday, selectedDayIndex, time);
+                  const isSelected = selectedSlot?.day === selectedDay && selectedSlot?.time === time && selectedSlot?.weekOffset === weekOffset;
                   return (
                     <button
                       key={time}
                       type="button"
                       disabled={isPast}
-                      onClick={() => !isPast && onSlotSelect(selectedDay, time)}
+                      onClick={() => !isPast && onSlotSelect(selectedDay, time, weekOffset)}
                       className={cn(
                         "flex items-center justify-center px-3 py-2.5 rounded-xl border transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400",
                         isPast
