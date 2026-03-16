@@ -200,7 +200,7 @@ function PlanCard({ plan, index, t, onSignUpClick, daysLeft }) {
         >
           <div className="text-center">
             <div className="text-sm font-black text-black">-10%</div>
-            <div className="text-xs font-bold text-black/80 px-1 leading-tight">{daysLeft > 0 ? `${daysLeft} dias` : 'Offer expired'}</div>
+            <div className="text-xs font-bold text-black/80 px-1 leading-tight">{daysLeft > 0 ? `${daysLeft} ${language === 'ro' ? 'zile' : 'days'}` : 'Expired'}</div>
           </div>
         </motion.div>
       )}
@@ -241,14 +241,7 @@ function PlanCard({ plan, index, t, onSignUpClick, daysLeft }) {
         {/* Savings callout */}
         {plan.discount && (
           <div className="mt-2 px-3 py-1.5 rounded-lg bg-amber-400/20 border border-amber-400/40 inline-block">
-            <span className="text-xs font-bold text-amber-300">💰 {plan.discount} discount for 6 months</span>
-          </div>
-        )}
-
-        {plan.offerNote && (
-          <div className="mt-3 px-3 py-2 rounded-xl bg-white/15 border border-white/25 text-white/90 text-xs font-semibold flex items-center justify-center gap-1">
-            <Clock className="w-3 h-3" />
-            {plan.offerNote}
+            <span className="text-xs font-bold text-amber-300">💰 {plan.discount} off</span>
           </div>
         )}
 
