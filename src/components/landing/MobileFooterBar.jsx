@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calendar } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
 import { scrollToSection } from '../config';
 
 export default function MobileFooterBar({ onBookSession }) {
   const { t } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleScheduleClick = () => {
     scrollToSection('schedule');
   };
+
+  if (!isVisible) return null;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-black/90 backdrop-blur-lg border-t border-zinc-800 px-4 py-3 flex items-center gap-3">
