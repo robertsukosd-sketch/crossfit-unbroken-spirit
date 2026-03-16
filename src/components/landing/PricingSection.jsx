@@ -229,7 +229,7 @@ function PlanCard({ plan, index, t, onSignUpClick, daysLeft, language }) {
             {t('ron')}
           </span>
           {plan.originalPrice && (
-            <span className={cn('text-lg line-through ml-1', plan.featured ? 'text-white/40' : 'text-gray-500')}>
+            <span className={cn('text-lg line-through ml-1 font-semibold', plan.featured ? 'text-white/70' : 'text-gray-400')}>
               {plan.originalPrice}
             </span>
           )}
