@@ -7,7 +7,7 @@ export default function SubscriptionConfirmModal({ isOpen, onConfirm, onCancel }
   const isRo = language === 'ro';
 
   const message = isRo
-    ? 'Plata abonamentelor se face prin intermediul aplicației ThunderWOD.'
+    ? 'Plata abonamentelor se face numai prin intermediul aplicației de mobil ThunderWOD.'
     : 'Plan payments are made through the ThunderWOD mobile app.';
 
   const confirmText = isRo ? 'OK' : 'OK';
