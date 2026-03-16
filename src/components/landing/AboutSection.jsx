@@ -102,7 +102,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="mt-6"
         >
-          <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start" style={{alignItems: 'start'}}>
             {/* Text + Map stacked */}
             <div className="flex flex-col gap-3">
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
