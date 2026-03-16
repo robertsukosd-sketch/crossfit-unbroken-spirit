@@ -44,9 +44,11 @@ export default function SubscriptionConfirmModal({ isOpen, onConfirm, onCancel }
 
               {/* Content */}
               <div className="px-6 py-6">
-                <p className="text-gray-300 text-center text-base leading-relaxed">
-                  {message}
-                </p>
+                <div className="px-4 py-3 rounded-lg bg-blue-500/15 border border-blue-400/40">
+                  <p className="text-white text-center text-base font-semibold leading-relaxed">
+                    {message}
+                  </p>
+                </div>
               </div>
 
               {/* Footer with buttons */}
