@@ -32,7 +32,7 @@ export default function CoachesSection() {
     {
       id: 1,
       name: 'Robert Sukosd',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/29f37936f_WhatsAppImage2026-03-11at100703.jpg',
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/18d3ab544_CrossFit_US-148A.jpg',
       certifications: language === 'ro'
         ? ['CrossFit Level 2 Trainer', 'The Gymnastics Course Level 1', 'Movement Specialist']
         : ['CrossFit Level 2 Trainer', 'The Gymnastics Course Level 1', 'Movement Specialist'],
