@@ -13,9 +13,9 @@ const getNavLinks = (t) => [
   { name: t("aboutUs"), href: "#about" },
   { name: t("startHere"), href: "#starthere" },
   { name: t("programs"), href: "#programs" },
+  { name: "FAQ", href: "#faq" },
   { name: t("pricing"), href: "#pricing" },
   { name: t("schedule"), href: "#schedule" },
-  { name: "FAQ", href: "#faq" },
   { name: t("contact"), href: "#contact" },
 ];
 
@@ -26,7 +26,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
   const shouldReduceMotion = useReducedMotion();
   const navLinks = useMemo(() => getNavLinks(t), [language]);
 
-  const sectionIds = ['hero', 'about', 'starthere', 'programs', 'pricing', 'schedule', 'faq', 'contact', 'app-promo-section'];
+  const sectionIds = ['hero', 'about', 'starthere', 'programs', 'faq', 'pricing', 'schedule', 'contact', 'app-promo-section'];
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 50);

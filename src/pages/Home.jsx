@@ -67,10 +67,10 @@ export default function Home() {
         <CoachesSection />
         <StartHereSection />
         <ProgramsSection onBookSession={handleBookSession} />
+        <FAQSection onBookSession={handleBookSession} />
         <PricingSection onOpenFreeClass={handleBookSession} />
         <ScheduleSection />
         <AppPromoSection />
-        <FAQSection onBookSession={handleBookSession} />
         <ContactSection />
         <Footer />
 
