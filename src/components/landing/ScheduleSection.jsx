@@ -182,7 +182,7 @@ export default function ScheduleSection() {
                   )}
                 </div>
                 <h4 className="text-white font-bold text-xl">{item.class}</h4>
-                {item.spotsNote && (
+                {item.spotsNote && item.class !== "Open Gym" && (
                   <span className="text-xs font-semibold opacity-70 mt-1 block">{item.spotsNote}</span>
                 )}
               </motion.div>
