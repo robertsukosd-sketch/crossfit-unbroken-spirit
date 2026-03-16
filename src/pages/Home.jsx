@@ -18,7 +18,6 @@ import MobileFooterBar from '@/components/landing/MobileFooterBar';
 import AppPromoSection from '@/components/landing/AppPromoSection';
 import FAQSection from '@/components/landing/FAQSection';
 import CoachesSection from '@/components/landing/CoachesSection';
-import ScheduleCtaSection from '@/components/landing/ScheduleCtaSection';
 
 function SeoMeta() {
   const { language } = useLanguage();
@@ -71,7 +70,7 @@ export default function Home() {
         <PricingSection onOpenFreeClass={handleBookSession} />
         <AppPromoSection />
         <ScheduleSection />
-        <ScheduleCtaSection />
+        <AppPromoSection />
         <FAQSection onBookSession={handleBookSession} />
         <ContactSection />
         <Footer />
