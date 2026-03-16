@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Target, Users, Flame, Trophy } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
+import GymGallery from './GymGallery';
 
 const getFeatures = (t) => [
   {
