@@ -37,13 +37,9 @@ export default function AboutSection() {
     if (faqSection) {
       faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setTimeout(() => {
-        const element = document.getElementById('faq-wod-meaning');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 600);
+        window.dispatchEvent(new Event('openFaqEvent'));
+      }, 100);
     }
-    window.dispatchEvent(new Event('openFaqEvent'));
   };
 
   return (
