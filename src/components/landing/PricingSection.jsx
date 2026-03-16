@@ -53,7 +53,7 @@ const getCategories = (language) => [
         description: language === 'ro' ? 'Acces complet fără restricții' : 'Full access, no restrictions',
         studentPrice: '270',
         studentOriginalPrice: '300',
-        studentNote: language === 'ro' ? '🎓 Elevi/Studenți până la 26 ani: 270 RON / lună (era 300 RON)' : '🎓 Students up to 26 years old: 270 RON / month (was 300 RON)',
+        studentNote: language === 'ro' ? '🎓 Elevi/Studenți până la 26 ani: 270 RON / lună (era 300 RON)' : '🎓 Students up to 26 years old: 270 RON / month (used to be 300 RON)',
         offerNote: language === 'ro' ? '⏰ Ofertă limitată: 10% reducere pentru 6 luni' : '⏰ Limited offer: 10% discount for 6 months',
         features: language === 'ro'
           ? ['Acces la toate clasele', 'Open Gym inclus', 'Prioritate înscriere', 'Loc de parcare inclus']
@@ -196,11 +196,11 @@ function PlanCard({ plan, index, t, onSignUpClick, daysLeft, language }) {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-amber-400 to-orange-400 rounded-full shadow-2xl shadow-amber-500/30 flex items-center justify-center"
+          className="absolute -top-8 -right-4 w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-400 rounded-full shadow-2xl shadow-amber-500/30 flex items-center justify-center"
         >
           <div className="text-center">
-            <div className="text-sm font-black text-black">-10%</div>
-            <div className="text-xs font-bold text-black/80 px-1 leading-tight">{daysLeft > 0 ? `${daysLeft} ${language === 'ro' ? 'zile' : 'days'}` : 'Expired'}</div>
+            <div className="text-lg font-black text-black">-10%</div>
+            <div className="text-sm font-bold text-black/80 px-1 leading-tight">{daysLeft > 0 ? `${daysLeft} ${language === 'ro' ? 'zile' : 'days'}` : 'Expired'}</div>
           </div>
         </motion.div>
       )}
