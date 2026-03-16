@@ -159,13 +159,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
                     EN
                   </button>
               </div>
-              <button
-                type="button"
-                onClick={handleBookClick}
-                className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white font-bold px-6 py-3 rounded-full text-sm transition-all shadow-lg shadow-blue-900/40 whitespace-nowrap flex-shrink-0"
-              >
-                {t("bookFreeClass")}
-              </button>
+
             </div>
 
 
