@@ -73,7 +73,7 @@ export default function HeroSection({ onOpenFreeClass }) {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection('startHere')}
+              onClick={() => scrollToSection('starthere')}
               className="bg-transparent text-white hover:bg-white/35 border-2 border-white/50 hover:border-white px-4 sm:px-8 py-3 sm:py-6 text-xs sm:text-base md:text-lg font-bold rounded-full focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
             >
               {language === 'ro' ? 'Ce este CrossFitul?' : 'What is CrossFit?'}
