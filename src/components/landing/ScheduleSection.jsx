@@ -177,7 +177,7 @@ export default function ScheduleSection() {
                       <span className="text-xs font-semibold opacity-80 flex items-center gap-1">
                         <Users className="w-3 h-3" />{item.spots} {language === 'ro' ? 'locuri' : 'spots'}
                       </span>
-                      <span className="text-xs opacity-40 text-right">{language === 'ro' ? '(cap. max indicativă)' : '(indicative max cap.)'}</span>
+                      <span className="text-xs opacity-40 text-right">{language === 'ro' ? '(cap. max orientativă)' : '(indicative max cap.)'}</span>
                     </div>
                   )}
                 </div>
