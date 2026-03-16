@@ -173,8 +173,8 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
                    <h2 className="text-lg font-black text-white mb-0.5 leading-snug">
                      {isRo ? (
                        <>
-                         <span className="text-amber-400">Dacă NU ai mai făcut CrossFit până acum</span>
-                         {', rezervă o '}
+                         <span className="text-amber-400">Dacă NU ai mai făcut CrossFit până acum,</span>
+                         {' rezervă o '}
                          <span className="font-black">Clasă Gratuită</span>
                        </>
                      ) : (
