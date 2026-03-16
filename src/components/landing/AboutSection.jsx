@@ -181,7 +181,7 @@ export default function AboutSection() {
             </h2>
             <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
               {language === 'ro' 
-                ? 'Echipa noastră e alcătuită din antrenori pasionați, care te vor ajuta să-ți atingi obiectivele.'
+                ? <>Echipa noastră e alcătuită din antrenori pasionați,<br />care te vor ajuta să-ți atingi obiectivele.</>
                 : 'Our team consists of coaches passionate about helping you reach your goals.'}
             </p>
           </div>
