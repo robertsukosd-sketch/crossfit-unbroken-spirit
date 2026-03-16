@@ -82,6 +82,23 @@ export default function HeroSection() {
         </motion.div>
       </div>
       
+      {/* Floating video - bottom left */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.6 }}
+        className="absolute bottom-20 left-6 z-20 w-48 sm:w-64 rounded-2xl overflow-hidden shadow-2xl border border-white/20"
+      >
+        <div className="relative aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/ot4MjvEGKec?autoplay=1&mute=1&loop=1&playlist=ot4MjvEGKec&controls=0&modestbranding=1&playsinline=1"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
+      </motion.div>
+
       {/* Scroll indicator */}
       <motion.button
         type="button"
