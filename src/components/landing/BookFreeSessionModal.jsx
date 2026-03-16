@@ -14,7 +14,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
   const [form, setForm] = useState({ name: '', email: '', phone: '' });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
-  const [showSchedule, setShowSchedule] = useState(false);
+  const [showSchedule, setShowSchedule] = useState(true);
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [userMessage, setUserMessage] = useState('');
   const [emailBlurred, setEmailBlurred] = useState(false);
