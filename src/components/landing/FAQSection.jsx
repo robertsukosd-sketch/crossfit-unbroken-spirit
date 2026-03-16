@@ -565,7 +565,7 @@ export default function FAQSection({ onBookSession }) {
                 )}
               </AnimatePresence>
             </motion.div>
-          );
+            );
           })}
         </div>
 
