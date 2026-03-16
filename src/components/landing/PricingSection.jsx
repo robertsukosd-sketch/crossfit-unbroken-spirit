@@ -285,10 +285,10 @@ export default function PricingSection({ onOpenFreeClass }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [daysLeft, setDaysLeft] = useState(0);
 
-  // Calculate days until April 25, 2026
+  // Calculate days until April 15, 2026
   useEffect(() => {
     const today = new Date();
-    const offerEndDate = new Date(2026, 3, 25); // April 25, 2026
+    const offerEndDate = new Date(2026, 3, 15); // April 15, 2026
     const diff = Math.ceil((offerEndDate - today) / (1000 * 60 * 60 * 24));
     setDaysLeft(Math.max(0, diff));
   }, []);
