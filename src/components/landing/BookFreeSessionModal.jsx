@@ -128,7 +128,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
     setSelectedSlot(null);
     setUserMessage('');
     setEmailBlurred(false);
-    setShowSchedule(false);
+    setShowSchedule(true);
     onClose();
   };
 
