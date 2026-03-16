@@ -3,22 +3,18 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const GYM_IMAGES = [
-  {
-    src: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80',
-    alt: 'CrossFit gym interior with barbells and equipment'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80',
-    alt: 'Athletes training in CrossFit box'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80',
-    alt: 'CrossFit workout with kettlebells'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1546483875-ad9014c88eba?w=800&q=80',
-    alt: 'Group fitness class at CrossFit gym'
-  }
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/3f7c1702a_CrossFit_US-003.jpg', alt: 'CrossFit Unbroken Spirit gym' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/7bf0bb8c4_CrossFit_US-004.jpg', alt: 'CrossFit Unbroken Spirit equipment' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/d2ebb21a7_CrossFit_US-007.jpg', alt: 'CrossFit Unbroken Spirit rig' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/e53f3a916_CrossFit_US-013.jpg', alt: 'CrossFit Unbroken Spirit box interior' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/24bd3546f_CrossFit_US-206.jpg', alt: 'CrossFit Unbroken Spirit wall balls' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/455f79116_CrossFit_US-207.jpg', alt: 'CrossFit Unbroken Spirit rig detail' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/3f48705e1_CrossFit_US-209.jpg', alt: 'CrossFit Unbroken Spirit Rogue wall ball' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/cdce7ff04_CrossFit_US-210.jpg', alt: 'CrossFit Unbroken Spirit dumbbells' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/cc65f02d2_CrossFit_US-221.jpg', alt: 'CrossFit Unbroken Spirit rowers' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/8346a8ac8_CrossFit_US-222.jpg', alt: 'CrossFit Unbroken Spirit rowers side view' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/e532acb84_CrossFit_US-224.jpg', alt: 'CrossFit Unbroken Spirit entrance' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/0d7ea80a2_CrossFit_US-227.jpg', alt: 'CrossFit Unbroken Spirit location' },
 ];
 
 export default function GymGallery() {
