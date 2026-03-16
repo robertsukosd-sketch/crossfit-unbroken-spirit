@@ -17,7 +17,7 @@ import BookFreeSessionModal from '@/components/landing/BookFreeSessionModal';
 import MobileFooterBar from '@/components/landing/MobileFooterBar';
 import AppPromoSection from '@/components/landing/AppPromoSection';
 import FAQSection from '@/components/landing/FAQSection';
-import CoachesSection from '@/components/landing/CoachesSection';
+
 
 function SeoMeta() {
   const { language } = useLanguage();
@@ -64,7 +64,6 @@ export default function Home() {
         <Navigation onBookSession={handleBookSession} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
         <HeroSection onOpenFreeClass={handleBookSession} />
         <AboutSection />
-        <CoachesSection />
         <StartHereSection />
         <ProgramsSection onBookSession={handleBookSession} />
         <FAQSection onBookSession={handleBookSession} />
