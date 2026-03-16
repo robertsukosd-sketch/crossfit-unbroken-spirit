@@ -346,7 +346,9 @@ export default function FAQSection({ onBookSession }) {
 
         {/* FAQ Items */}
         <div className="space-y-3 sm:space-y-4">
-          {faqs.map((faq, index) => (
+          {faqs.map((faq, index) => {
+            if (!isExpanded && index > 2) return null;
+            return (
             <motion.div
               key={faq.id}
               id={faq.id}
