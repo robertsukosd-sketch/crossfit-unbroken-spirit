@@ -95,7 +95,7 @@ export default function AboutSection() {
         </div>
 
         {/* Bottom row: map (left) + features grid (right), aligned at top */}
-        <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start mt-6">
+        <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-end mt-6">
           {/* Left: Transport text + Map */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
