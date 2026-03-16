@@ -106,13 +106,6 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
     setSending(true);
     const fullMessage = messagePrefix + userMessage;
     try {
-      await base44.entities.ContactSubmission.create({
-        name: form.name,
-        email: form.email,
-        phone: form.phone,
-        message: fullMessage,
-        status: 'new',
-      });
       await fetch('https://api.unbrokenspirit.ro/email/send/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
