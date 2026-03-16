@@ -10,7 +10,7 @@ export default function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-x-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with overlay */}
       <img
         src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/b2dc11465_CrossFit_US-058.jpg"
