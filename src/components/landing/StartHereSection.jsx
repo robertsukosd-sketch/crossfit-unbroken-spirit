@@ -7,6 +7,7 @@ import { scrollToSectionWithDelay } from '../config';
 
 export default function StartHereSection() {
   const { t, language } = useLanguage();
+  const sectionId = 'startHere';
   const [isExpanded, setIsExpanded] = useState(false);
   const [isSectionVisible, setIsSectionVisible] = useState(false);
   const sectionRef = React.useRef(null);
