@@ -169,6 +169,9 @@ export default function AboutSection() {
             </div>
           </motion.div>
         </div>
+
+        {/* Gallery */}
+        <GymGallery />
       </div>
     </section>
   );
