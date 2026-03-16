@@ -167,20 +167,18 @@ export default function ScheduleSection() {
                   classColors[item.class] || "bg-zinc-900/50 border-zinc-800"
                 )}
               >
-                <div className="flex items-start justify-between gap-2 mb-3">
-                  <div className="flex items-center gap-2 min-w-0">
-                    <Clock className="w-4 h-4 flex-shrink-0" />
-                    <span className="font-bold text-lg">{item.time}</span>
-                  </div>
-                  {item.spots && (
-                    <div className="flex flex-col items-end gap-0 flex-shrink-0">
-                      <span className="text-xs font-semibold opacity-80 flex items-center gap-1">
-                        <Users className="w-3 h-3" />{item.spots} {language === 'ro' ? 'locuri' : 'spots'}
-                      </span>
-                      <span className="text-xs opacity-40 text-right">{language === 'ro' ? '(cap. max orientativă)' : '(indicative max cap.)'}</span>
-                    </div>
-                  )}
+                <div className="flex items-center gap-2 mb-3">
+                  <Clock className="w-4 h-4 flex-shrink-0" />
+                  <span className="font-bold text-lg">{item.time}</span>
                 </div>
+                {item.spots && (
+                  <div className="flex flex-col items-start gap-0 mb-2">
+                    <span className="text-xs font-semibold opacity-80 flex items-center gap-1">
+                      <Users className="w-3 h-3" />{item.spots} {language === 'ro' ? 'locuri' : 'spots'}
+                    </span>
+                    <span className="text-xs opacity-40">{language === 'ro' ? '(cap. max orientativă)' : '(indicative max cap.)'}</span>
+                  </div>
+                )}
                 <h4 className="text-white font-bold text-xl">{item.class}</h4>
                 {item.spotsNote && item.class !== "Open Gym" && (
                   <span className="text-xs font-semibold opacity-70 mt-1 block">{item.spotsNote}</span>
