@@ -8,7 +8,7 @@ export default function SubscriptionConfirmModal({ isOpen, onConfirm, onCancel }
 
   const message = isRo
     ? 'Plata abonamentelor se face prin intermediul aplicației ThunderWOD.'
-    : 'Subscription payments are made through the ThunderWOD app.';
+    : 'Plan payments are made through the ThunderWOD mobile app.';
 
   const confirmText = isRo ? 'OK' : 'OK';
   const cancelText = isRo ? 'Renunț' : 'Cancel';
