@@ -51,7 +51,7 @@ export default function HeroSection() {
             )}
           </span>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-none">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-tight [text-wrap:balance]">
             {language === 'ro'
               ? <>FORȚĂ. <span className="text-blue-500">COMUNITATE</span>. TRANSFORMĂRI REALE.</>
               : <>STRONG. <span className="text-blue-500">SUPPORTED</span>. STRONGER.</>
