@@ -170,8 +170,17 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
              {!submitted ? (
                <>
                  <div className="mb-2">
+                   {isRo ? (
+                     <p className="text-xs font-semibold text-amber-400 bg-amber-400/10 border border-amber-400/30 rounded-lg px-2.5 py-1.5 mb-1.5 leading-snug">
+                       Dacă NU ai mai făcut CrossFit până acum
+                     </p>
+                   ) : (
+                     <p className="text-xs font-semibold text-amber-400 bg-amber-400/10 border border-amber-400/30 rounded-lg px-2.5 py-1.5 mb-1.5 leading-snug">
+                       If you have NEVER done CrossFit before
+                     </p>
+                   )}
                    <h2 className="text-lg font-black text-white mb-0.5">
-                     {isRo ? 'Rezervă o Clasă Gratuită' : 'Book a Free Class'}
+                     {isRo ? <>Rezervă o <span className="text-blue-400">Clasă Gratuită</span></> : <>Book a <span className="text-blue-400">Free Class</span></>}
                    </h2>
                    <p className="text-gray-400 text-xs leading-relaxed">
                       {isRo ? (
