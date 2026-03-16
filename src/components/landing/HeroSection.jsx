@@ -65,10 +65,10 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button
               size="lg"
-              onClick={() => scrollToSection('pricing')}
+              onClick={() => {/* TODO: trigger free class modal */}}
               className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-4 sm:px-8 py-3 sm:py-6 text-xs sm:text-base md:text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
             >
-              {language === 'ro' ? 'Alege-ți abonamentul' : 'Choose your subscription'}
+              {language === 'ro' ? 'Rezervă o Clasă Gratuită' : 'Book a Free Class'}
             </Button>
             <Button
               size="lg"
