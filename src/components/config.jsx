@@ -8,11 +8,11 @@ export const QUICK_FOOTER_LINKS = [
   { label: 'aboutUs', href: '#about' },
   { label: 'startHere', href: '#starthere' },
   { label: 'programs', href: '#programs' },
+  { label: 'faq', href: '#faq' },
   { label: 'pricing', href: '#pricing' },
   { label: 'schedule', href: '#schedule' },
-  { label: 'faq', href: '#faq' },
-  { label: 'contact', href: '#contact' },
   { label: 'thunderwod', href: '#app-promo-section' },
+  { label: 'contact', href: '#contact' },
 ];
 
 export const scrollToSection = (id) => {
