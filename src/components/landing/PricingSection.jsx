@@ -287,10 +287,15 @@ export default function PricingSection({ onOpenFreeClass }) {
 
   // Calculate days until April 15, 2026
   useEffect(() => {
-    const today = new Date();
-    const offerEndDate = new Date(2026, 3, 15); // April 15, 2026
-    const diff = Math.ceil((offerEndDate - today) / (1000 * 60 * 60 * 24));
-    setDaysLeft(Math.max(0, diff));
+    const calculateDays = () => {
+      const today = new Date();
+      const offerEndDate = new Date(2026, 3, 15); // April 15, 2026
+      const diff = Math.ceil((offerEndDate - today) / (1000 * 60 * 60 * 24));
+      setDaysLeft(Math.max(0, diff));
+    };
+    calculateDays();
+    const interval = setInterval(calculateDays, 1000 * 60 * 60); // Recalculate hourly
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
