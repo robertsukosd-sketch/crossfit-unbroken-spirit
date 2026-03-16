@@ -110,12 +110,20 @@ export default function AboutSection() {
           </p>
 
           <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start">
-            {/* Map */}
-            <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
-              alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
-              className="w-full rounded-xl border border-zinc-700"
-            />
+            {/* Text + Map stacked */}
+            <div className="flex flex-col gap-3">
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                {language === 'ro'
+                  ? <>Sala este ușor accesibilă atât cu transportul în comun, cât și cu mașina.{'\n'}Cea mai apropiată stație de metrou este <span className="font-bold text-sky-300">Mihai Bravu</span>, la 7–8 minute de mers pe jos, iar stațiile STB din apropiere sunt <span className="font-bold text-sky-300">Pod Mihai Bravu</span> (autobuz 223 și tramvaie 1 și 10).{'\n'}Pentru cei care vin cu mașina, există parcare gratuită inclusă!</>
+                  : <>The box is easily accessible by both public transport and car.{'\n'}The nearest subway station is <span className="font-bold text-sky-300">Mihai Bravu</span>, a 7–8 minute walk away, and the nearby STB stops are <span className="font-bold text-sky-300">Pod Mihai Bravu</span> (bus 223 and trams 1 and 10).{'\n'}For those coming by car, free parking is included!</>
+                }
+              </p>
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
+                alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
+                className="w-full rounded-xl border border-zinc-700"
+              />
+            </div>
 
             {/* Features grid — aligned with top of map */}
             <div className="grid sm:grid-cols-2 gap-6">
