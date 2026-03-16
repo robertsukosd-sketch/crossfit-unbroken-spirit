@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
       
       {/* Logo overlay */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-20">
+      <div className="absolute inset-0 flex items-center justify-center opacity-20 hidden">
         <img 
           src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/6f20a4dfe_image.png"
           alt="CrossFit Unbroken Spirit"
