@@ -179,8 +179,9 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
                        </>
                      ) : (
                        <>
-                         <span className="text-amber-400">If you have NEVER done CrossFit before</span>
-                         {', book a '}
+                         <span className="text-amber-400">If you have NEVER done CrossFit before,</span>
+                         <br />
+                         {'book a '}
                          <span className="font-black">Free Class</span>
                        </>
                      )}
