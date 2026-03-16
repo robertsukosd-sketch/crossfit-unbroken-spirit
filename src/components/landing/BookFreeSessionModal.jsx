@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { useLanguage } from '../LanguageProvider';
 import { CONTACT_EMAIL } from '../config';
 import MiniSchedulePopup from './MiniSchedulePopup';
+import ParkingInfoPopup from './ParkingInfoPopup';
 
 export default function BookFreeSessionModal({ isOpen, onClose }) {
   const { t, language } = useLanguage();
@@ -14,6 +15,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [showSchedule, setShowSchedule] = useState(true);
+  const [showParking, setShowParking] = useState(false);
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [userMessage, setUserMessage] = useState('');
   const [emailBlurred, setEmailBlurred] = useState(false);
@@ -129,6 +131,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
     setUserMessage('');
     setEmailBlurred(false);
     setShowSchedule(true);
+    setShowParking(false);
     onClose();
   };
 
@@ -183,13 +186,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
                         <>
                           <button
                             type="button"
-                            onClick={() => {
-                              handleClose();
-                              setTimeout(() => {
-                                sessionStorage.setItem('openFaqId', 'parking');
-                                window.dispatchEvent(new Event('openFaqEvent'));
-                              }, 400);
-                            }}
+                            onClick={() => setShowParking(true)}
                             className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
                             >
                             Vezi cum ajungi la sală
@@ -209,14 +206,8 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
                         <>
                           <button
                             type="button"
-                            onClick={() => {
-                               handleClose();
-                               setTimeout(() => {
-                                 sessionStorage.setItem('openFaqId', 'parking');
-                                 window.dispatchEvent(new Event('openFaqEvent'));
-                               }, 400);
-                             }}
-                             className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+                            onClick={() => setShowParking(true)}
+                            className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
                             >
                              See how you can get to the box
                           </button>
@@ -408,6 +399,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
           </motion.div>
         </motion.div>
       )}
+      <ParkingInfoPopup isOpen={showParking} onClose={() => setShowParking(false)} />
     </AnimatePresence>
   );
 }
