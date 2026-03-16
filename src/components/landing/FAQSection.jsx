@@ -565,8 +565,23 @@ export default function FAQSection({ onBookSession }) {
                 )}
               </AnimatePresence>
             </motion.div>
-          ))}
+          );
+          })}
         </div>
+
+        {/* Expand/Collapse Button */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="flex justify-center mt-8"
+        >
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
+          >
+            {isExpanded ? (language === 'ro' ? 'Arată mai puțin' : 'Show Less') : (language === 'ro' ? 'Arată mai mult' : 'Show More')}
+          </button>
+        </motion.div>
       </div>
     </section>
   );
