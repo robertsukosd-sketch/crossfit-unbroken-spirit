@@ -387,6 +387,28 @@ export default function PricingSection({ onOpenFreeClass }) {
           </motion.div>
         </AnimatePresence>
 
+        {/* Free class nudge — shown only on CrossFit Classes tab */}
+        {activeId === 'core' && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 text-center"
+          >
+            <p className="text-gray-400 text-sm">
+              {language === 'ro'
+                ? 'Nu ești sigur ce să alegi? Încearcă o clasă gratuită mai întâi →'
+                : 'Not sure? Try a free class first →'}
+            </p>
+            <button
+              onClick={onOpenFreeClass}
+              className="px-5 py-2 rounded-full text-sm font-bold border border-amber-400/50 text-amber-400 bg-amber-400/10 hover:bg-amber-400/20 transition-colors duration-150 whitespace-nowrap"
+            >
+              {language === 'ro' ? '🎁 Rezervă o Clasă Gratuită' : '🎁 Book a Free Class'}
+            </button>
+          </motion.div>
+        )}
+
         <SubscriptionConfirmModal
           isOpen={isModalOpen}
           onConfirm={handleConfirm}
