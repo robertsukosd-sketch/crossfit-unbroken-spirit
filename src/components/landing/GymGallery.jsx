@@ -73,6 +73,7 @@ export default function GymGallery() {
             />
           </motion.div>
         ))}
+        </AnimatePresence>
       </div>
 
       {/* Mobile Lightbox */}
