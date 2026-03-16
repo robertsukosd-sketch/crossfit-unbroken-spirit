@@ -21,7 +21,7 @@ export default function CoachesSection() {
     {
       id: 2,
       name: 'Dumitru Mîndrescu',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/1cc21e186_IMG_1206.jpg',
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/02fa5e0e6_CrossFit_US-140R.jpg',
       certifications: language === 'ro'
         ? ['Atlet competitiv CrossFit de 7 ani', 'Weightlifting & Gymnastics', 'Competition training']
         : ['7 years competitive CrossFit athlete', 'Weightlifting & Gymnastics', 'Competition training'],
