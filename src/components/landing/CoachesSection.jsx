@@ -8,9 +8,22 @@ export default function CoachesSection() {
 
   const coaches = [
     {
+      id: 1,
+      name: 'Robert Sukosd',
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/18d3ab544_CrossFit_US-148A.jpg',
+      objectPosition: '50% 5%',
+      certifications: language === 'ro'
+        ? ['CrossFit Level 2 Trainer', 'The Gymnastics Course Level 1', 'Movement Specialist']
+        : ['CrossFit Level 2 Trainer', 'The Gymnastics Course Level 1', 'Movement Specialist'],
+      experience: language === 'ro' ? '13 ani în CrossFit' : '13 years in CrossFit',
+      bioRo: 'Robert este co-fondatorul Unbroken Spirit și are o pasiune pentru dezvoltarea atletică. Cu peste 13 ani de experiență, se specializează în optimizarea performanței și construirea unei comunități puternice.',
+      bioEn: 'Robert is the co-founder of Unbroken Spirit with a passion for athletic development. With over 13 years of experience, he specializes in performance optimization and building a strong community.'
+    },
+    {
       id: 3,
       name: 'Andrei Vârnav',
       image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/9884b0a50_CrossFit_US-138M.jpg',
+      objectPosition: '50% 5%',
       certifications: language === 'ro'
         ? ['8 ani înot de performanță\n& medaliat național', '7 ani handbal de performanță\n& campion național', '4 ani Head Judge la OMBC Throwdown', 'Strength & Conditioning']
         : ['8 years competitive swimming\n& national medalist', '7 years competitive handball\n& national champion', '4 years Head Judge at OMBC Throwdown', 'Strength & Conditioning'],
@@ -22,23 +35,13 @@ export default function CoachesSection() {
       id: 2,
       name: 'Dumitru Mîndrescu',
       image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/02fa5e0e6_CrossFit_US-140R.jpg',
+      objectPosition: '50% 5%',
       certifications: language === 'ro'
         ? ['Atlet competitiv CrossFit de 7 ani', 'Weightlifting & Gymnastics', 'Competition training']
         : ['7 years competitive CrossFit athlete', 'Weightlifting & Gymnastics', 'Competition training'],
       experience: language === 'ro' ? '7 ani în CrossFit' : '7 years in CrossFit',
       bioRo: 'Dumitru se concentrează pe mecanica corectă a mișcării și este cunoscut pentru abordarea sa pacientă cu noii membri. Specialitatea lui este gymnastica și mobilitate avansată.',
       bioEn: 'Dumitru focuses on proper movement mechanics and is known for his patient approach with new members. His specialty is gymnastics and advanced mobility.'
-    },
-    {
-      id: 1,
-      name: 'Robert Sukosd',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/18d3ab544_CrossFit_US-148A.jpg',
-      certifications: language === 'ro'
-        ? ['CrossFit Level 2 Trainer', 'The Gymnastics Course Level 1', 'Movement Specialist']
-        : ['CrossFit Level 2 Trainer', 'The Gymnastics Course Level 1', 'Movement Specialist'],
-      experience: language === 'ro' ? '13 ani în CrossFit' : '13 years in CrossFit',
-      bioRo: 'Robert este co-fondatorul Unbroken Spirit și are o pasiune pentru dezvoltarea atletică. Cu peste 13 ani de experiență, se specializează în optimizarea performanței și construirea unei comunități puternice.',
-      bioEn: 'Robert is the co-founder of Unbroken Spirit with a passion for athletic development. With over 13 years of experience, he specializes in performance optimization and building a strong community.'
     }
   ];
 
