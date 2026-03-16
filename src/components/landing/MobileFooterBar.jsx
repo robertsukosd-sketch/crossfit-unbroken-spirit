@@ -16,7 +16,7 @@ export default function MobileFooterBar({ onBookSession }) {
       <button
         type="button"
         onClick={handleScheduleClick}
-        className="flex flex-col items-center gap-0.5 text-gray-300 hover:text-white transition-colors min-w-[52px] min-h-[44px] justify-center"
+        className="flex flex-col items-center gap-0.5 text-gray-400 hover:text-gray-200 transition-colors min-w-[52px] min-h-[44px] justify-center"
         aria-label={t("schedule")}
       >
         <Calendar className="w-5 h-5" />
@@ -27,7 +27,7 @@ export default function MobileFooterBar({ onBookSession }) {
       <button
         type="button"
         onClick={onBookSession}
-        className="flex-1 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white font-bold rounded-full py-3 text-sm transition-all shadow-lg shadow-blue-900/40"
+        className="flex-1 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-black rounded-full py-3.5 text-base transition-all shadow-lg shadow-blue-500/50 scale-[1.02] active:scale-100"
       >
         {t("bookFreeClass")}
       </button>
