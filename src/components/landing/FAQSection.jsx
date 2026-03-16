@@ -583,6 +583,28 @@ export default function FAQSection({ onBookSession }) {
           </button>
         </motion.div>
       </div>
+
+      {/* Sticky Close Button */}
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            onClick={() => {
+              setIsExpanded(false);
+              const faqElement = document.getElementById('faq');
+              if (faqElement) faqElement.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="fixed bottom-6 left-4 md:left-1/2 md:-translate-x-1/2 z-40 flex items-center gap-1 md:gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors bg-zinc-950 px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-zinc-800 hover:border-sky-400 text-sm md:text-base"
+          >
+            <span>{language === 'ro' ? 'Închide' : 'Show Less'}</span>
+            <motion.div animate={{ rotate: 180 }} transition={{ duration: 0.3 }}>
+              <ChevronDown className="w-5 h-5" />
+            </motion.div>
+          </motion.button>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
