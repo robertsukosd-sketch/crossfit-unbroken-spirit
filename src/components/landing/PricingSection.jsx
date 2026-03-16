@@ -243,7 +243,7 @@ function PlanCard({ plan, index, t, onSignUpClick }) {
   );
 }
 
-export default function PricingSection() {
+export default function PricingSection({ onOpenFreeClass }) {
   const { t, language } = useLanguage();
   const categories = getCategories(language);
   const [activeId, setActiveId] = useState('core');
