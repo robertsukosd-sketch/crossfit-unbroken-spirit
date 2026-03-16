@@ -444,7 +444,7 @@ export default function PricingSection({ onOpenFreeClass }) {
               <p className="text-sm sm:text-base font-bold text-white">
                 {language === 'ro' 
                   ? <>⏰ Ai doar {daysLeft} zile să profiți de 10% reducere la abonamentul Nelimitat<br />timp de șase luni!</>
-                  : `⏰ Only ${daysLeft} days left to grab 10% off the Unlimited plan!`}
+                  : `⏰ Only ${daysLeft} days left to grab 10% off the Unlimited plan for six months!`}
               </p>
               <Zap className="w-5 h-5 text-amber-400 flex-shrink-0" />
             </div>
