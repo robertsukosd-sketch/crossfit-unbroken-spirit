@@ -13,13 +13,11 @@ export default function HeroSection() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-x-hidden">
       {/* Background with overlay */}
       <img
-        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80"
-        srcSet="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=640&q=80 640w, https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1280&q=80 1280w, https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80 1920w"
-        sizes="100vw"
+        src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/b2dc11465_CrossFit_US-058.jpg"
         alt=""
         aria-hidden="true"
         fetchpriority="high"
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center blur-md scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
       
