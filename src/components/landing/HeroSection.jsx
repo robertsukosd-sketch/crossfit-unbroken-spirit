@@ -17,7 +17,7 @@ export default function HeroSection() {
         alt=""
         aria-hidden="true"
         fetchpriority="high"
-        className="absolute inset-0 w-full h-full object-cover object-center blur-md scale-105"
+        className="absolute inset-0 w-full h-full object-cover object-center blur-sm scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
       
