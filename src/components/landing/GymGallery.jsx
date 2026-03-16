@@ -32,7 +32,6 @@ export default function GymGallery() {
     if (window.innerWidth < 768) setLightboxIndex(imgIndex);
   };
 
-  // Close on escape key
   useEffect(() => {
     const handleKey = (e) => {
       if (lightboxIndex === null) return;
@@ -44,7 +43,6 @@ export default function GymGallery() {
     return () => window.removeEventListener('keydown', handleKey);
   }, [lightboxIndex]);
 
-  // Prevent body scroll when lightbox open
   useEffect(() => {
     document.body.style.overflow = lightboxIndex !== null ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
@@ -56,23 +54,23 @@ export default function GymGallery() {
     <div className="relative mt-10">
       <div className="flex gap-4 overflow-hidden">
         <AnimatePresence mode="sync">
-        {visible.map((img, i) => (
-          <motion.div
-            key={img.src}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className="flex-1 rounded-2xl overflow-hidden aspect-video cursor-pointer md:cursor-default"
-            onClick={() => openLightbox((index + i) % GYM_IMAGES.length)}
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-        ))}
+          {visible.map((img, i) => (
+            <motion.div
+              key={img.src}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              className="flex-1 rounded-2xl overflow-hidden aspect-video cursor-pointer md:cursor-default"
+              onClick={() => openLightbox((index + i) % GYM_IMAGES.length)}
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          ))}
         </AnimatePresence>
       </div>
 
@@ -86,7 +84,6 @@ export default function GymGallery() {
             className="fixed inset-0 z-[200] bg-black/95 flex items-center justify-center md:hidden"
             onClick={() => setLightboxIndex(null)}
           >
-            {/* Close button */}
             <button
               className="absolute top-4 right-4 w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-white z-10"
               onClick={() => setLightboxIndex(null)}
@@ -94,25 +91,24 @@ export default function GymGallery() {
               <X className="w-5 h-5" />
             </button>
 
-            {/* Counter */}
             <div className="absolute top-4 left-1/2 -translate-x-1/2 text-white/60 text-sm">
               {lightboxIndex + 1} / {GYM_IMAGES.length}
             </div>
 
-            {/* Image */}
-            <motion.img
-              key={lightboxIndex}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              src={GYM_IMAGES[lightboxIndex].src}
-              alt={GYM_IMAGES[lightboxIndex].alt}
-              className="max-w-full max-h-[80vh] object-contain px-12"
-              onClick={(e) => e.stopPropagation()}
-            />
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={lightboxIndex}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                src={GYM_IMAGES[lightboxIndex].src}
+                alt={GYM_IMAGES[lightboxIndex].alt}
+                className="max-w-full max-h-[80vh] object-contain px-12"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </AnimatePresence>
 
-            {/* Prev / Next */}
             <button
               className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-white"
               onClick={(e) => { e.stopPropagation(); lightboxPrev(); }}
