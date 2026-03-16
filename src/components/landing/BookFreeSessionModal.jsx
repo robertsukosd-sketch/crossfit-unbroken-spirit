@@ -210,15 +210,15 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
                           <button
                             type="button"
                             onClick={() => {
-                              handleClose();
-                              setTimeout(() => {
-                                sessionStorage.setItem('openFaqId', 'parking');
-                                window.dispatchEvent(new Event('openFaqEvent'));
-                              }, 50);
-                            }}
-                            className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
-                          >
-                            See how you can get to the box
+                               handleClose();
+                               setTimeout(() => {
+                                 sessionStorage.setItem('openFaqId', 'faq-parking');
+                                 window.dispatchEvent(new Event('openFaqEvent'));
+                               }, 50);
+                             }}
+                             className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+                            >
+                             See how you can get to the box
                           </button>
                           {', check the '}
                           <button
