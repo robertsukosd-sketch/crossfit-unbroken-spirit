@@ -68,7 +68,6 @@ export default function Home() {
         <StartHereSection />
         <ProgramsSection onBookSession={handleBookSession} />
         <PricingSection onOpenFreeClass={handleBookSession} />
-        <AppPromoSection />
         <ScheduleSection />
         <AppPromoSection />
         <FAQSection onBookSession={handleBookSession} />
