@@ -57,10 +57,11 @@ export default function GymGallery() {
       <div className="flex gap-4 overflow-hidden">
         {visible.map((img, i) => (
           <motion.div
-            key={index + i}
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.35 }}
+            key={img.src}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
             className="flex-1 rounded-2xl overflow-hidden aspect-video cursor-pointer md:cursor-default"
             onClick={() => openLightbox((index + i) % GYM_IMAGES.length)}
           >
