@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Dumbbell, Sparkles, User, Globe } from 'lucide-react';
+import { Check, Dumbbell, Sparkles, User, Globe, Zap, Clock } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
 import { getAppStoreUrl, isDesktop } from '../appStoreUtils';
 import SubscriptionConfirmModal from './SubscriptionConfirmModal';
+import { useState, useEffect } from 'react';
 
 function scrollToDownloadApp() {
   const el = document.getElementById('thunderwod-app');
@@ -46,16 +47,21 @@ const getCategories = (language) => [
       },
       {
         name: language === 'ro' ? 'Nelimitat' : 'Unlimited',
-        price: '500',
+        price: '450',
+        originalPrice: '500',
+        discount: '10%',
         period: language === 'ro' ? 'lună' : 'month',
         description: language === 'ro' ? 'Acces complet fără restricții' : 'Full access, no restrictions',
-        studentPrice: '300',
-        studentNote: language === 'ro' ? '🎓 Elevi/Studenți până la 26 ani: 300 RON / lună' : '🎓 Students up to 26 years old: 300 RON / month',
+        studentPrice: '270',
+        studentOriginalPrice: '300',
+        studentNote: language === 'ro' ? '🎓 Elevi/Studenți până la 26 ani: 270 RON / lună (era 300 RON)' : '🎓 Students up to 26 years old: 270 RON / month (was 300 RON)',
+        offerNote: language === 'ro' ? '⏰ Ofertă limitată: 10% reducere pentru 6 luni' : '⏰ Limited offer: 10% discount for 6 months',
         features: language === 'ro'
           ? ['Acces la toate clasele', 'Open Gym inclus', 'Prioritate înscriere', 'Loc de parcare inclus']
           : ['Access to all classes', 'Open Gym included', 'Priority booking', 'Free parking spot'],
         popular: true,
         featured: true,
+        isLimitedOffer: true,
       },
     ],
   },
@@ -172,7 +178,7 @@ const getCategories = (language) => [
   },
 ];
 
-function PlanCard({ plan, index, t, onSignUpClick }) {
+function PlanCard({ plan, index, t, onSignUpClick, daysLeft }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -181,13 +187,28 @@ function PlanCard({ plan, index, t, onSignUpClick }) {
       className={cn(
         'relative rounded-2xl p-6 flex flex-col h-full transition-colors duration-300 overflow-visible',
         plan.featured
-          ? 'bg-gradient-to-br from-blue-600 to-sky-500 shadow-2xl shadow-blue-500/25'
+          ? 'bg-gradient-to-br from-blue-600 to-sky-500 shadow-2xl shadow-blue-500/25 ring-2 ring-amber-400/40'
           : 'bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/40'
       )}
     >
+      {/* Limited offer badge — top left, high visibility */}
+      {plan.isLimitedOffer && (
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-amber-400 to-orange-400 rounded-full shadow-2xl shadow-amber-500/30 flex items-center justify-center"
+        >
+          <div className="text-center">
+            <div className="text-sm font-black text-black">-10%</div>
+            <div className="text-xs font-bold text-black/80 px-1 leading-tight">{daysLeft > 0 ? `${daysLeft} dias` : 'Offer expired'}</div>
+          </div>
+        </motion.div>
+      )}
+
       {plan.popular && (
         <div className={cn(
-          'absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-bold uppercase tracking-wider rounded-full whitespace-nowrap',
+          'absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-bold uppercase tracking-wider rounded-full whitespace-nowrap z-20',
           plan.featured ? 'bg-white text-blue-600' : 'bg-blue-500 text-white'
         )}>
           {t('popular')}
@@ -201,15 +222,37 @@ function PlanCard({ plan, index, t, onSignUpClick }) {
             {plan.description}
           </p>
         </div>
-        <div className="flex items-baseline justify-center gap-1">
+        
+        {/* Pricing with original price strikethrough for limited offers */}
+        <div className="flex items-baseline justify-center gap-2 mb-2">
           <span className="text-4xl font-black text-white">{plan.price}</span>
           <span className={cn('text-lg', plan.featured ? 'text-white/80' : 'text-gray-300')}>
             {t('ron')}
           </span>
+          {plan.originalPrice && (
+            <span className={cn('text-lg line-through ml-1', plan.featured ? 'text-white/40' : 'text-gray-500')}>
+              {plan.originalPrice}
+            </span>
+          )}
         </div>
         <span className={cn('text-sm', plan.featured ? 'text-white/70' : 'text-gray-400')}>
           / {plan.period}
         </span>
+
+        {/* Savings callout */}
+        {plan.discount && (
+          <div className="mt-2 px-3 py-1.5 rounded-lg bg-amber-400/20 border border-amber-400/40 inline-block">
+            <span className="text-xs font-bold text-amber-300">💰 {plan.discount} discount for 6 months</span>
+          </div>
+        )}
+
+        {plan.offerNote && (
+          <div className="mt-3 px-3 py-2 rounded-xl bg-white/15 border border-white/25 text-white/90 text-xs font-semibold flex items-center justify-center gap-1">
+            <Clock className="w-3 h-3" />
+            {plan.offerNote}
+          </div>
+        )}
+
         {plan.studentNote && (
           <div className="mt-3 px-3 py-2 rounded-xl bg-white/15 border border-white/25 text-white/90 text-xs font-semibold">
             {plan.studentNote}
@@ -248,6 +291,15 @@ export default function PricingSection({ onOpenFreeClass }) {
   const categories = getCategories(language);
   const [activeId, setActiveId] = useState('core');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [daysLeft, setDaysLeft] = useState(0);
+
+  // Calculate days until April 25, 2026
+  useEffect(() => {
+    const today = new Date();
+    const offerEndDate = new Date(2026, 3, 25); // April 25, 2026
+    const diff = Math.ceil((offerEndDate - today) / (1000 * 60 * 60 * 24));
+    setDaysLeft(Math.max(0, diff));
+  }, []);
 
   useEffect(() => {
     const stored = sessionStorage.getItem('selectedPricingCategory');
@@ -380,19 +432,39 @@ export default function PricingSection({ onOpenFreeClass }) {
               const mobileOrder = reverseOnMobile ? total - 1 - index : index;
               return (
                 <div key={plan.name} style={{ order: mobileOrder }} className="h-full">
-                  <PlanCard plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} />
+                  <PlanCard plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} daysLeft={daysLeft} />
                 </div>
               );
             })}
           </motion.div>
         </AnimatePresence>
 
+        {/* Limited offer urgency banner */}
+        {activeId === 'core' && daysLeft > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.25 }}
+            className="mt-12 mx-auto max-w-2xl p-4 rounded-2xl bg-gradient-to-r from-amber-500/15 to-orange-500/15 border-2 border-amber-400/50 shadow-lg shadow-amber-500/20"
+          >
+            <div className="flex items-center justify-center gap-3 text-center flex-wrap">
+              <Zap className="w-5 h-5 text-amber-400 flex-shrink-0" />
+              <p className="text-sm sm:text-base font-bold text-white">
+                {language === 'ro' 
+                  ? `⏰ Ai doar ${daysLeft} zile să profiti de 10% reducere pe planul Nelimitat!`
+                  : `⏰ Only ${daysLeft} days left to grab 10% off the Unlimited plan!`}
+              </p>
+              <Zap className="w-5 h-5 text-amber-400 flex-shrink-0" />
+            </div>
+          </motion.div>
+        )}
+
         {/* Free class nudge — shown only on CrossFit Classes tab */}
         {activeId === 'core' && (
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 text-center"
           >
             <p className="text-gray-400 text-sm">
