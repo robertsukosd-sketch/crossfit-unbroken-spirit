@@ -62,7 +62,7 @@ export default function Home() {
       <SeoMeta />
       <div className="min-h-screen bg-black pb-20 lg:pb-0">
         <Navigation onBookSession={handleBookSession} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
-        <HeroSection />
+        <HeroSection onOpenFreeClass={handleBookSession} />
         <AboutSection />
         <CoachesSection />
         <StartHereSection />
