@@ -55,6 +55,7 @@ export default function GymGallery() {
   return (
     <div className="relative mt-10">
       <div className="flex gap-4 overflow-hidden">
+        <AnimatePresence mode="sync">
         {visible.map((img, i) => (
           <motion.div
             key={img.src}
