@@ -86,7 +86,7 @@ export default function CoachesSection() {
               className="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300 group"
             >
               {/* Coach Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-96 overflow-hidden">
                 <img
                   src={coach.image}
                   alt={`${coach.name} - CrossFit Unbroken Spirit coach`}
