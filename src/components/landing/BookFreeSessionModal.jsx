@@ -186,7 +186,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
                             onClick={() => {
                               handleClose();
                               setTimeout(() => {
-                                sessionStorage.setItem('openFaqId', 'faq-parking');
+                                sessionStorage.setItem('openFaqId', 'parking');
                                 window.dispatchEvent(new Event('openFaqEvent'));
                               }, 50);
                             }}
