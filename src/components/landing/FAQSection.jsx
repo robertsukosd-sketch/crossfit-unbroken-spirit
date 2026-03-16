@@ -8,6 +8,7 @@ import { openAppWithFallback } from '../appStoreUtils';
 export default function FAQSection({ onBookSession }) {
   const { t, language } = useLanguage();
   const [openId, setOpenId] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const handleOpenFaq = () => {
