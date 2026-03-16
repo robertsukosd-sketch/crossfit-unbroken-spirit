@@ -177,7 +177,7 @@ const getCategories = (language) => [
   },
 ];
 
-function PlanCard({ plan, index, t, onSignUpClick, daysLeft }) {
+function PlanCard({ plan, index, t, onSignUpClick, daysLeft, language }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -424,7 +424,7 @@ export default function PricingSection({ onOpenFreeClass }) {
               const mobileOrder = reverseOnMobile ? total - 1 - index : index;
               return (
                 <div key={plan.name} style={{ order: mobileOrder }} className="h-full">
-                  <PlanCard plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} daysLeft={daysLeft} />
+                  <PlanCard plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} daysLeft={daysLeft} language={language} />
                 </div>
               );
             })}
