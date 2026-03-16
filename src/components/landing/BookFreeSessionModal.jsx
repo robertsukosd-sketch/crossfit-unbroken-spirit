@@ -188,7 +188,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
                               setTimeout(() => {
                                 sessionStorage.setItem('openFaqId', 'parking');
                                 window.dispatchEvent(new Event('openFaqEvent'));
-                              }, 50);
+                              }, 400);
                             }}
                             className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
                             >
@@ -214,7 +214,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
                                setTimeout(() => {
                                  sessionStorage.setItem('openFaqId', 'parking');
                                  window.dispatchEvent(new Event('openFaqEvent'));
-                               }, 50);
+                               }, 400);
                              }}
                              className="text-blue-400 font-semibold underline underline-offset-2 hover:text-blue-300 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
                             >
