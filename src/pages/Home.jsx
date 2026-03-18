@@ -59,14 +59,12 @@ export default function Home() {
       }
     };
     checkHash();
+    setTimeout(checkHash, 300);
     window.addEventListener('hashchange', checkHash);
-    // Also check after a short delay in case hash is set late
-    const t = setTimeout(checkHash, 300);
 
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('hashchange', checkHash);
-      clearTimeout(t);
     };
 
 
