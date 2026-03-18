@@ -56,7 +56,7 @@ export default function Home() {
     };
   }, []);
 
-  const hashTriggered = React.useRef(false);
+  const hashTriggered = useRef(false);
   useEffect(() => {
     const checkHash = () => {
       if (!hashTriggered.current && window.location.hash === '#book-free-session') {
