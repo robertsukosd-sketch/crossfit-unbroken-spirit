@@ -74,10 +74,12 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
   const [selectedDayIndex, setSelectedDayIndex] = useState(initial.dayIndex);
 
   useEffect(() => {
-    const { dayIndex, weekOffset: wo } = getInitialDayAndWeek();
-    setSelectedDayIndex(dayIndex);
-    setWeekOffset(wo);
-  }, [days]);
+    if (isOpen) {
+      const { dayIndex, weekOffset: wo } = getInitialDayAndWeek();
+      setSelectedDayIndex(dayIndex);
+      setWeekOffset(wo);
+    }
+  }, [isOpen, days]);
 
   const weekMonday = useMemo(() => getWeekMonday(weekOffset), [weekOffset]);
 
