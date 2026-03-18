@@ -399,7 +399,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
           </motion.div>
         </motion.div>
       )}
-      <ParkingInfoPopup isOpen={showParking} onClose={() => setShowParking(false)} />
+      {showParking && <ParkingInfoPopup isOpen={showParking} onClose={() => setShowParking(false)} />}
     </AnimatePresence>
   );
 }
