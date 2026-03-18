@@ -56,21 +56,15 @@ export default function Home() {
     };
   }, []);
 
+  const isDeepLink = useRef(false);
+
   useEffect(() => {
-    if (window.location.hash === '#book-free-session') {
-      history.replaceState(null, '', window.location.pathname + window.location.search);
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('book') === '1' || window.location.hash === '#book-free-session') {
+      isDeepLink.current = true;
+      history.replaceState(null, '', window.location.pathname);
       setIsBookingModalOpen(true);
     }
-
-    const onHashChange = () => {
-      if (window.location.hash === '#book-free-session') {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
-        setIsBookingModalOpen(true);
-      }
-    };
-
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
   const handleBookSession = () => {
