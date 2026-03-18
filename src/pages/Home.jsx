@@ -55,9 +55,6 @@ export default function Home() {
     const checkHash = () => {
       if (window.location.hash === '#book-free-session') {
         setIsBookingModalOpen(true);
-        setTimeout(() => {
-          history.replaceState(null, '', window.location.pathname + window.location.search);
-        }, 100);
       }
     };
     checkHash();
