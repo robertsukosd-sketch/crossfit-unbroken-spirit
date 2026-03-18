@@ -377,6 +377,14 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
                         ? t('sending')
                         : isRo ? 'Rezervă pe E-Mail' : 'Send My Request by E-Mail'}
                     </Button>
+
+                    <button
+                      type="button"
+                      onClick={handleClose}
+                      className="w-full text-center text-xs text-zinc-500 hover:text-zinc-300 transition-colors py-2"
+                    >
+                      {isRo ? 'Anulează' : 'Cancel'}
+                    </button>
                   </form>
                 </>
               ) : (
