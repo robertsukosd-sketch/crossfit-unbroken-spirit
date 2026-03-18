@@ -60,6 +60,7 @@ export default function Home() {
     const checkHash = () => {
       if (window.location.hash === '#book-free-session') {
         setIsBookingModalOpen(true);
+        history.replaceState(null, '', window.location.pathname);
       }
     };
     checkHash();
