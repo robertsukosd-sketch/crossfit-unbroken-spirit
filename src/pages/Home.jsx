@@ -66,8 +66,6 @@ export default function Home() {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('hashchange', checkHash);
     };
-
-
   }, []);
 
   const handleBookSession = () => {
