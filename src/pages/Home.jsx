@@ -59,14 +59,14 @@ export default function Home() {
   useEffect(() => {
     const checkHash = () => {
       if (window.location.hash === '#book-free-session') {
-        setIsBookingModalOpen(true);
         history.replaceState(null, '', window.location.pathname);
+        setIsBookingModalOpen(true);
+        clearInterval(interval);
       }
     };
     checkHash();
     window.addEventListener('hashchange', checkHash);
     window.addEventListener('popstate', checkHash);
-    // Poll as fallback for cases where neither event fires (SPA navigation)
     const interval = setInterval(checkHash, 500);
     return () => {
       window.removeEventListener('hashchange', checkHash);
