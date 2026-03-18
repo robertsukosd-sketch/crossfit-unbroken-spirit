@@ -51,7 +51,12 @@ export default function Home() {
     const onScroll = () => setVisible(window.scrollY > 300);
     window.addEventListener('scroll', onScroll);
 
-    // Open booking modal if URL hash is #book-free-session
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     const checkHash = () => {
       if (window.location.hash === '#book-free-session') {
         setIsBookingModalOpen(true);
@@ -59,10 +64,10 @@ export default function Home() {
     };
     checkHash();
     window.addEventListener('hashchange', checkHash);
-
+    window.addEventListener('popstate', checkHash);
     return () => {
-      window.removeEventListener('scroll', onScroll);
       window.removeEventListener('hashchange', checkHash);
+      window.removeEventListener('popstate', checkHash);
     };
   }, []);
 
