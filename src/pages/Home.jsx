@@ -69,7 +69,7 @@ export default function Home() {
       clearTimeout(t);
     };
 
-    return () => window.removeEventListener('scroll', onScroll);
+
   }, []);
 
   const handleBookSession = () => {
