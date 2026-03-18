@@ -87,7 +87,16 @@ export default function Home() {
         <ContactSection />
         <Footer />
 
-        <BookFreeSessionModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
+        <BookFreeSessionModal
+          isOpen={isBookingModalOpen}
+          onClose={() => {
+            setIsBookingModalOpen(false);
+            if (isDeepLink.current) {
+              isDeepLink.current = false;
+              window.location.href = window.location.pathname;
+            }
+          }}
+        />
         <AccessibilityToolbar />
         <CookieConsent />
 
