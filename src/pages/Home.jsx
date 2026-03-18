@@ -56,12 +56,9 @@ export default function Home() {
     };
   }, []);
 
-  const isDeepLink = useRef(false);
-
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get('book') === '1' || window.location.hash === '#book-free-session') {
-      isDeepLink.current = true;
       history.replaceState(null, '', window.location.pathname);
       setIsBookingModalOpen(true);
     }
