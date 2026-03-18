@@ -57,11 +57,12 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    let triggered = false;
     const checkHash = () => {
-      if (window.location.hash === '#book-free-session') {
+      if (!triggered && window.location.hash === '#book-free-session') {
+        triggered = true;
         history.replaceState(null, '', window.location.pathname);
         setIsBookingModalOpen(true);
-        clearInterval(interval);
       }
     };
     checkHash();
