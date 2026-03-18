@@ -65,9 +65,12 @@ export default function Home() {
     checkHash();
     window.addEventListener('hashchange', checkHash);
     window.addEventListener('popstate', checkHash);
+    // Poll as fallback for cases where neither event fires (SPA navigation)
+    const interval = setInterval(checkHash, 500);
     return () => {
       window.removeEventListener('hashchange', checkHash);
       window.removeEventListener('popstate', checkHash);
+      clearInterval(interval);
     };
   }, []);
 
