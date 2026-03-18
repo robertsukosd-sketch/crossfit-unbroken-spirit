@@ -381,7 +381,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
                     <button
                       type="button"
                       onClick={handleClose}
-                      className="w-full text-center text-xs text-zinc-500 hover:text-zinc-300 transition-colors py-2"
+                      className="w-full text-center text-sm font-semibold text-zinc-400 hover:text-white transition-colors py-2 border border-zinc-700 rounded-lg hover:border-zinc-500"
                     >
                       {isRo ? 'Anulează' : 'Cancel'}
                     </button>
