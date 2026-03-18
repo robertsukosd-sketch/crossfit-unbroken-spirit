@@ -53,9 +53,10 @@ export default function Home() {
 
     // Open booking modal if URL hash is #book-free-session
     if (window.location.hash === '#book-free-session') {
-      setIsBookingModalOpen(true);
-      // Clean up the hash without triggering a reload
-      history.replaceState(null, '', window.location.pathname);
+      setTimeout(() => {
+        setIsBookingModalOpen(true);
+        history.replaceState(null, '', window.location.pathname);
+      }, 300);
     }
 
     return () => window.removeEventListener('scroll', onScroll);
