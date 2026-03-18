@@ -54,12 +54,13 @@ export default function Home() {
     // Open booking modal if URL hash is #book-free-session
     const checkHash = () => {
       if (window.location.hash === '#book-free-session') {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
         setIsBookingModalOpen(true);
+        setTimeout(() => {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }, 100);
       }
     };
     checkHash();
-    setTimeout(checkHash, 300);
     window.addEventListener('hashchange', checkHash);
 
     return () => {
