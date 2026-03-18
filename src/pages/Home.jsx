@@ -56,24 +56,21 @@ export default function Home() {
     };
   }, []);
 
-  const hashTriggered = useRef(false);
   useEffect(() => {
-    const checkHash = () => {
-      if (!hashTriggered.current && window.location.hash === '#book-free-session') {
-        hashTriggered.current = true;
-        history.replaceState(null, '', window.location.pathname);
+    if (window.location.hash === '#book-free-session') {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+      setIsBookingModalOpen(true);
+    }
+
+    const onHashChange = () => {
+      if (window.location.hash === '#book-free-session') {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
         setIsBookingModalOpen(true);
       }
     };
-    checkHash();
-    window.addEventListener('hashchange', checkHash);
-    window.addEventListener('popstate', checkHash);
-    const interval = setInterval(checkHash, 500);
-    return () => {
-      window.removeEventListener('hashchange', checkHash);
-      window.removeEventListener('popstate', checkHash);
-      clearInterval(interval);
-    };
+
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
   const handleBookSession = () => {
