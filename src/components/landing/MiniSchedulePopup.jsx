@@ -50,15 +50,33 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
   const days = useMemo(() => getDays(t), [language]);
   const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
 
-  const [weekOffset, setWeekOffset] = useState(0); // 0 = this week, 1 = next week
+  // Determine initial day/week: after 19:30, start on next available day
+  const getInitialDayAndWeek = () => {
+    const now = new Date();
+    const timeInMin = now.getHours() * 60 + now.getMinutes();
+    const afterCutoff = timeInMin >= 19 * 60 + 30;
 
-  const todayIndex = new Date().getDay();
-  const rawIndex = todayIndex === 0 ? 6 : todayIndex - 1;
-  const mappedIndex = Math.min(rawIndex, 5);
-  const [selectedDayIndex, setSelectedDayIndex] = useState(mappedIndex);
+    let jsDay = now.getDay();
+    let week = 0;
+
+    if (afterCutoff) {
+      jsDay = jsDay === 6 ? 0 : jsDay + 1; // advance to tomorrow
+      if (jsDay === 0) { jsDay = 1; week = 1; } // Sunday → Monday next week
+    }
+
+    // Convert JS day (0=Sun) to our index (0=Mon..5=Sat), clamp to Sat
+    const raw = jsDay === 0 ? 6 : jsDay - 1;
+    return { dayIndex: Math.min(raw, 5), weekOffset: week };
+  };
+
+  const initial = getInitialDayAndWeek();
+  const [weekOffset, setWeekOffset] = useState(initial.weekOffset);
+  const [selectedDayIndex, setSelectedDayIndex] = useState(initial.dayIndex);
 
   useEffect(() => {
-    setSelectedDayIndex(mappedIndex);
+    const { dayIndex, weekOffset: wo } = getInitialDayAndWeek();
+    setSelectedDayIndex(dayIndex);
+    setWeekOffset(wo);
   }, [days]);
 
   const weekMonday = useMemo(() => getWeekMonday(weekOffset), [weekOffset]);
