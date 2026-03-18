@@ -56,11 +56,11 @@ export default function Home() {
     };
   }, []);
 
+  const hashTriggered = React.useRef(false);
   useEffect(() => {
-    let triggered = false;
     const checkHash = () => {
-      if (!triggered && window.location.hash === '#book-free-session') {
-        triggered = true;
+      if (!hashTriggered.current && window.location.hash === '#book-free-session') {
+        hashTriggered.current = true;
         history.replaceState(null, '', window.location.pathname);
         setIsBookingModalOpen(true);
       }
