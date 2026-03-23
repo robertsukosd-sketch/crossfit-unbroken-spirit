@@ -16,7 +16,7 @@ import CookieConsent from '@/components/landing/CookieConsent';
 import BookFreeSessionModal from '@/components/landing/BookFreeSessionModal';
 import MobileFooterBar from '@/components/landing/MobileFooterBar';
 import AppPromoSection from '@/components/landing/AppPromoSection';
-import FAQSection from '@/components/landing/FAQSection.jsx';
+import FAQSection from '@/components/landing/FAQSection';
 
 
 function SeoMeta() {
