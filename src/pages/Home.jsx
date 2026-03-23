@@ -58,7 +58,7 @@ export default function Home() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    if (params.get('book') === '1' || window.location.hash === '#book-free-session') {
+    if (params.get('book') === '1' || window.location.hash === '#book-free-session' || window.location.hash === '#clasa-gratis') {
       history.replaceState(null, '', window.location.pathname);
       setIsBookingModalOpen(true);
     }
