@@ -245,7 +245,7 @@ export default function FAQSection({ onBookSession }) {
           </>
         )}
         {faq.aDropIn && (
-          <button onClick={(e) => { e.stopPropagation(); handleScrollToPricing('welcome'); }} className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold">
+          <button onClick={(e) => { e.stopPropagation(); sessionStorage.setItem('selectedPricingCategory', 'welcome'); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold">
             {language === 'ro' ? 'Taxa este de 60 de lei' : 'The fee is 60 RON'}
           </button>
         )}
