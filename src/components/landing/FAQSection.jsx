@@ -69,7 +69,10 @@ export default function FAQSection({ onBookSession }) {
   };
 
   const handleScrollToPricing = (category = null) => {
-    if (category) sessionStorage.setItem('selectedPricingCategory', category);
+    if (category) {
+      sessionStorage.setItem('selectedPricingCategory', category);
+      window.dispatchEvent(new Event('selectPricingCategory'));
+    }
     document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
   };
 
