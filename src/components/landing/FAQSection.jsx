@@ -225,7 +225,7 @@ export default function FAQSection({ onBookSession }) {
         )}
         {faq.aClassDuration && (
           <>
-            <button onClick={(e) => { e.stopPropagation(); sessionStorage.setItem('openFaqId', 'faq-wod-meaning'); setActiveCategory('crossfit'); setOpenId('faq-wod-meaning'); }} className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold">
+            <button onClick={(e) => { e.stopPropagation(); setActiveCategory('crossfit'); setOpenId('faq-wod-meaning'); setTimeout(() => { document.getElementById('faq-wod-meaning')?.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100); }} className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold">
               {language === 'ro' ? 'antrenamentul zilei (WOD)' : 'Workout of the Day (WOD)'}
             </button>
             {language === 'ro' ? ' și revenirea (stretching).' : ' and cool-down (stretching).'}
