@@ -299,11 +299,16 @@ export default function PricingSection({ onOpenFreeClass }) {
   }, []);
 
   useEffect(() => {
-    const stored = sessionStorage.getItem('selectedPricingCategory');
-    if (stored) {
-      setActiveId(stored);
-      sessionStorage.removeItem('selectedPricingCategory');
-    }
+    const handleSelectCategory = () => {
+      const stored = sessionStorage.getItem('selectedPricingCategory');
+      if (stored) {
+        setActiveId(stored);
+        sessionStorage.removeItem('selectedPricingCategory');
+      }
+    };
+    handleSelectCategory();
+    window.addEventListener('selectPricingCategory', handleSelectCategory);
+    return () => window.removeEventListener('selectPricingCategory', handleSelectCategory);
   }, []);
 
   const activeCategory = categories.find((c) => c.id === activeId);
