@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 import { openAppWithFallback } from '../appStoreUtils';
 
 const CATEGORIES_RO = [
-  { id: 'crossfit', label: 'Ce este CrossFit?', icon: Dumbbell },
+  { id: 'crossfit', label: 'Ce este CrossFitul?', icon: Dumbbell },
   { id: 'beginners', label: 'Începători', icon: Users },
   { id: 'box', label: 'Sală & Facilități', icon: Building2 },
   { id: 'pricing', label: 'Abonamente & Prețuri', icon: CreditCard },
