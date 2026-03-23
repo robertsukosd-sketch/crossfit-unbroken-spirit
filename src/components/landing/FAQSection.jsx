@@ -233,7 +233,7 @@ export default function FAQSection({ onBookSession }) {
         )}
         {faq.aPricing && (
           <>
-            <button onClick={(e) => { e.stopPropagation(); handleScrollToPricing(); }} className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold">
+            <button onClick={(e) => { e.stopPropagation(); handleScrollToPricing('core'); }} className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold">
               {language === 'ro' ? 'o fracțiune din preț' : 'a fraction of the price'}
             </button>
             {'.'}
@@ -241,7 +241,7 @@ export default function FAQSection({ onBookSession }) {
         )}
         {faq.aFrequency && (
           <>
-            <button onClick={(e) => { e.stopPropagation(); handleScrollToPricing('crossfit'); }} className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold">
+            <button onClick={(e) => { e.stopPropagation(); handleScrollToPricing('core'); }} className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold">
               {language === 'ro' ? '3 zile pe săptămână' : '3 days a week'}
             </button>
             {language === 'ro' ? ' pentru a permite corpului să se recupereze. Pe măsură ce avansează, mulți membri aleg 4-5 zile pentru rezultate optime.' : ' to allow your body to recover. As you progress, many members choose 4-5 days for optimal results.'}
