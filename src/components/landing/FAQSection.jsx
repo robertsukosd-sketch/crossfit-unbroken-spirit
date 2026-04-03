@@ -99,7 +99,7 @@ export default function FAQSection({ onBookSession }) {
         { id: 'facilities', q: 'Aveți dușuri și vestiare?', a: 'Da! Avem vestiare complet echipate, astfel încât să poți merge direct la serviciu sau acasă după antrenament.' },
         { id: 'drop-in', q: 'Pot veni în vizită (drop-in) dacă sunt de la altă sală?', a: 'Ne plac vizitatorii! Dacă ai cel puțin 3 luni de experiență în CrossFit, poți rezerva un drop-in prin site-ul nostru. ', aDropIn: true },
         { id: 'pricing', q: 'Cât costă un abonament?', a: 'Abonamentele noastre sunt structurate în funcție de frecvența antrenamentelor. Deși suntem mai scumpi decât o sală comercială, reține că fiecare clasă este gestionată de un antrenor. Practic, e un antrenament personal la ', aPricing: true },
-        { id: 'class-duration', q: 'Cât durează clasele?', a: 'Toate clasele durează în jur de 60 de minute. Acestea includ instructajul, încălzirea ghidată, o sesiune de forță sau tehnică, ', aClassDuration: true },
+        { id: 'class-duration', q: 'Cât durează clasele?', a: 'Toate clasele durează în jur de 60 de minute. Acestea includ instructajul, încălzirea ghidată, o sesiune de forță sau tehnică, ', aClassDuration: true, aClassDurationExtra: true },
         { id: 'frequency', q: 'De câte ori pe săptămână ar trebui să vin?', a: 'Pentru începători, recomandăm ', aFrequency: true },
         { id: 'competitions', q: 'Trebuie să particip la competiții?', a: 'Deloc. Deși unora le plac competițiile, 90% din comunitatea noastră este aici pentru sănătate, aspect fizic și longevitate. Singura ta competiție este cu tine însuți.' },
         { id: 'thunderwod-app', q: 'De ce trebuie să descarc aplicația ThunderWOD?', a: ' este folosită pentru organizarea și gestionarea antrenamentelor din sală. Prin aplicație:\n• poți să-ți rezervi locul la clase\n• poți să vezi programul antrenamentelor\n• poți să vezi în avans antrenamentul zilei (WOD)\n• îți poți urmări rezultatele și monitoriza progresul\n• îți poți plăți și gestiona abonamentul\nPractic, ai o singură aplicație pentru tot: programări, antrenamente și plăți. Astfel, procesul este rapid, simplu și ușor de gestionat direct de pe telefon.', aThunderWODLink: true, aThunderWODStart: true },
@@ -230,7 +230,7 @@ export default function FAQSection({ onBookSession }) {
             <button onClick={(e) => { e.stopPropagation(); setActiveCategory('crossfit'); setOpenId('faq-wod-meaning'); setTimeout(() => { document.getElementById('faq-wod-meaning')?.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100); }} className="text-blue-400 hover:text-blue-300 underline transition-colors font-semibold">
               {language === 'ro' ? 'antrenamentul zilei (WOD)' : 'Workout of the Day (WOD)'}
             </button>
-            {language === 'ro' ? ' și revenirea (stretching).' : ' and cool-down (stretching).'}
+            {language === 'ro' ? ' și revenirea (stretching). Asta nu înseamnă că, dacă vrei să stai mai mult de o oră în sală, nu poți s-o faci. Ești binevenit să stai cât vrei în limita programului.' : ' and cool-down (stretching).'}
           </>
         )}
         {faq.aPricing && (
