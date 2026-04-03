@@ -74,7 +74,11 @@ export default function FAQSection({ onBookSession }) {
       window.dispatchEvent(new Event('selectPricingCategory'));
     }
     setTimeout(() => {
-      document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+      const el = document.getElementById('pricing');
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
     }, 50);
   };
 
