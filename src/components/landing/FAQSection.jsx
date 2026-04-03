@@ -73,7 +73,9 @@ export default function FAQSection({ onBookSession }) {
       sessionStorage.setItem('selectedPricingCategory', category);
       window.dispatchEvent(new Event('selectPricingCategory'));
     }
-    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
   };
 
   const getFAQs = () => {
