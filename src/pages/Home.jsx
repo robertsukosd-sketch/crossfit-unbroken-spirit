@@ -52,6 +52,7 @@ export default function Home() {
       setIsBookingModalOpen(true);
     } else if (window.location.hash) {
       // Deep-link to section via hash (English and Romanian aliases)
+      // All deep-links force Romanian language
       const RO_HASH_MAP = {
         'faq-ro': 'faq',
         'despre-noi': 'about',
@@ -61,6 +62,7 @@ export default function Home() {
       };
       const raw = window.location.hash.replace('#', '');
       const sectionId = RO_HASH_MAP[raw] || raw;
+      localStorage.setItem('language', 'ro');
       setTimeout(() => {
         const el = document.getElementById(sectionId);
         if (el) {
