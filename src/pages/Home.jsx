@@ -50,6 +50,16 @@ export default function Home() {
     if (params.get('book') === '1' || window.location.hash === '#book-free-session' || window.location.hash === '#clasa-gratis') {
       history.replaceState(null, '', window.location.pathname);
       setIsBookingModalOpen(true);
+    } else if (window.location.hash) {
+      // Deep-link to section via hash, e.g. /#faq, /#about
+      const sectionId = window.location.hash.replace('#', '');
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }, 300);
     }
   }, []);
 
