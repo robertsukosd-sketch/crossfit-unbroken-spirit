@@ -48,6 +48,7 @@ const QUICK_LINKS = [
 export default function ContactSection() {
   const { t, language } = useLanguage();
   const contactInfo = getContactInfo(t);
+  const gclid = sessionStorage.getItem('gclid') || '';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -82,7 +83,7 @@ export default function ContactSection() {
         body: JSON.stringify({
           to: CONTACT_EMAIL,
           subject: isRo ? `Mesaj nou de la ${formData.name}` : `New message from ${formData.name}`,
-          body: `${isRo ? 'Nume' : 'Name'}: ${formData.name}\n${isRo ? 'Email' : 'Email'}: ${formData.email}\n${isRo ? 'Telefon' : 'Phone'}: ${formData.phone || '-'}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${formData.message}`
+          body: `${isRo ? 'Nume' : 'Name'}: ${formData.name}\n${isRo ? 'Email' : 'Email'}: ${formData.email}\n${isRo ? 'Telefon' : 'Phone'}: ${formData.phone || '-'}${gclid ? `\nGCLID: ${gclid}` : ''}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${formData.message}`
         })
       });
       

@@ -39,6 +39,7 @@ export default function Home() {
   const [visible, setVisible] = useState(false);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [gclid, setGclid] = useState('');
 
   useEffect(() => {
     // Add meta description tag if it doesn't exist
@@ -58,6 +59,17 @@ export default function Home() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+
+    // Capture GCLID and persist it in sessionStorage
+    const gclidParam = params.get('gclid');
+    if (gclidParam) {
+      sessionStorage.setItem('gclid', gclidParam);
+      setGclid(gclidParam);
+    } else {
+      const stored = sessionStorage.getItem('gclid');
+      if (stored) setGclid(stored);
+    }
+
     if (params.get('book') === '1' || window.location.hash === '#book-free-session' || window.location.hash === '#clasa-gratis') {
       history.replaceState(null, '', window.location.pathname);
       setIsBookingModalOpen(true);
@@ -84,7 +96,7 @@ export default function Home() {
         <ContactSection />
         <Footer />
 
-        <BookFreeSessionModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
+        <BookFreeSessionModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} gclid={gclid} />
         <AccessibilityToolbar />
         <CookieConsent />
 

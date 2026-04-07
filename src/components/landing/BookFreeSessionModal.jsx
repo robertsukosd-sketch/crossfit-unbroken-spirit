@@ -9,7 +9,7 @@ import { CONTACT_EMAIL } from '../config';
 import MiniSchedulePopup from './MiniSchedulePopup';
 import ParkingInfoPopup from './ParkingInfoPopup';
 
-export default function BookFreeSessionModal({ isOpen, onClose }) {
+export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
   const { t, language } = useLanguage();
   const [form, setForm] = useState({ name: '', email: '', phone: '' });
   const [submitted, setSubmitted] = useState(false);
@@ -113,7 +113,7 @@ export default function BookFreeSessionModal({ isOpen, onClose }) {
         body: JSON.stringify({
           to: CONTACT_EMAIL,
           subject: isRo ? `Rezervare Ședință Gratuită - ${form.name}` : `Free Session Booking - ${form.name}`,
-          body: `${isRo ? 'Nume' : 'Name'}: ${form.name}\n${isRo ? 'Email' : 'Email'}: ${form.email}\n${isRo ? 'Telefon' : 'Phone'}: ${form.phone || (isRo ? 'Necompletat' : 'Not provided')}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${fullMessage}`
+          body: `${isRo ? 'Nume' : 'Name'}: ${form.name}\n${isRo ? 'Email' : 'Email'}: ${form.email}\n${isRo ? 'Telefon' : 'Phone'}: ${form.phone || (isRo ? 'Necompletat' : 'Not provided')}${gclid ? `\nGCLID: ${gclid}` : ''}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${fullMessage}`
         })
       });
       setSending(false);
