@@ -51,8 +51,16 @@ export default function Home() {
       history.replaceState(null, '', window.location.pathname);
       setIsBookingModalOpen(true);
     } else if (window.location.hash) {
-      // Deep-link to section via hash, e.g. /#faq, /#about
-      const sectionId = window.location.hash.replace('#', '');
+      // Deep-link to section via hash (English and Romanian aliases)
+      const RO_HASH_MAP = {
+        'faq-ro': 'faq',
+        'despre-noi': 'about',
+        'incepatori': 'starthere',
+        'programe': 'programs',
+        'orar': 'schedule',
+      };
+      const raw = window.location.hash.replace('#', '');
+      const sectionId = RO_HASH_MAP[raw] || raw;
       setTimeout(() => {
         const el = document.getElementById(sectionId);
         if (el) {
