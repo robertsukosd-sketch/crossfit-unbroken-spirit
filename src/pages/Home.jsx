@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronUp } from 'lucide-react';
 import { motion } from 'framer-motion';
-import LanguageProvider, { useLanguage } from '@/components/LanguageProvider';
+import LanguageProvider from '@/components/LanguageProvider';
 import Navigation from '@/components/landing/Navigation';
 import HeroSection from '@/components/landing/HeroSection';
 import AboutSection from '@/components/landing/AboutSection';
@@ -17,23 +17,7 @@ import BookFreeSessionModal from '@/components/landing/BookFreeSessionModal';
 import MobileFooterBar from '@/components/landing/MobileFooterBar';
 import AppPromoSection from '@/components/landing/AppPromoSection';
 import FAQSection from '@/components/landing/FAQSection';
-
-
-function SeoMeta() {
-  const { language } = useLanguage();
-  useEffect(() => {
-    if (language === 'ro') {
-      document.title = 'CrossFit Unbroken Spirit - Forță. Comunitate. Rezultate.';
-      document.querySelector('meta[name="description"]')?.setAttribute('content', 'Descoperă potențialul tău maxim la CrossFit Unbroken Spirit. Antrenamente funcționale de înaltă intensitate, coaching dedicat și o comunitate puternică. CrossFit pentru toate nivelurile de fitness.');
-      document.documentElement.lang = 'ro';
-    } else {
-      document.title = 'CrossFit Unbroken Spirit - Strength. Community. Results.';
-      document.querySelector('meta[name="description"]')?.setAttribute('content', 'Discover your maximum potential at CrossFit Unbroken Spirit. High-intensity functional training, dedicated coaching, and a strong community for real results. CrossFit for all fitness levels.');
-      document.documentElement.lang = 'en';
-    }
-  }, [language]);
-  return null;
-}
+import SeoMeta from '@/components/landing/SeoMeta';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -42,13 +26,6 @@ export default function Home() {
   const [gclid, setGclid] = useState('');
 
   useEffect(() => {
-    // Add meta description tag if it doesn't exist
-    if (!document.querySelector('meta[name="description"]')) {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = 'CrossFit Unbroken Spirit - Forță. Comunitate. Rezultate.';
-      document.head.appendChild(meta);
-    }
     const onScroll = () => setVisible(window.scrollY > 300);
     window.addEventListener('scroll', onScroll);
 
