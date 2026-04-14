@@ -88,7 +88,7 @@ export default function ParkingInfoPopup({ isOpen, onClose }) {
                 className="relative w-full group cursor-pointer"
               >
                 <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
+                  src="https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/c3e5ef236_new_map_how_to.png"
                   alt={isRo ? 'Hartă traseu spre sală' : 'Map route to the gym'}
                   className="w-full rounded-lg border border-zinc-700 group-hover:border-sky-400 transition-colors"
                 />
@@ -126,7 +126,7 @@ export default function ParkingInfoPopup({ isOpen, onClose }) {
                 <ZoomOut className="w-5 h-5" />
               </button>
               <img
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
+                src="https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/c3e5ef236_new_map_how_to.png"
                 alt={isRo ? 'Hartă traseu spre sală' : 'Map route to the gym'}
                 className="w-full rounded-lg border-2 border-sky-400"
               />
