@@ -178,7 +178,7 @@ export default function GoogleReviewsSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center mt-8"
+          className="text-center mt-8 lg:hidden"
         >
           <a
             href={GOOGLE_REVIEW_URL}
