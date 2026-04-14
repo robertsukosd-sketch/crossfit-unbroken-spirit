@@ -90,12 +90,42 @@ export default function GoogleReviewsSection() {
             </div>
           ) : data ? (
             <>
-              {/* Mobile / Tablet: compact centered card */}
-              <div className="lg:hidden inline-block">
+              {/* Mobile only: compact centered card */}
+              <div className="sm:hidden inline-block">
                 <div className="relative bg-zinc-900 border border-yellow-400/30 rounded-3xl px-10 py-8 shadow-2xl shadow-yellow-500/10 mb-6">
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-yellow-400/5 to-transparent pointer-events-none" />
                   <div className="flex items-center justify-center gap-2 mb-5">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-6 opacity-90" />
+                    <span className="text-zinc-300 text-base font-semibold">
+                      {language === 'ro' ? 'Recenzii' : 'Reviews'}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center gap-5 mb-4">
+                    <span className="text-8xl font-black text-white leading-none">{data.rating}</span>
+                    <div className="flex flex-col gap-2">
+                      <div className="flex gap-1">
+                        {[1,2,3,4,5].map((i) => (
+                          <Star key={i} className="w-7 h-7 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                      <p className="text-zinc-400 text-sm text-left">
+                        {data.user_ratings_total} {language === 'ro' ? 'recenzii' : 'reviews'}
+                      </p>
+                    </div>
+                  </div>
+                  <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 text-sm font-semibold transition-colors">
+                    {language === 'ro' ? 'Vezi pe Google Maps' : 'View on Google Maps'}
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Tablet: same layout but larger Google logo */}
+              <div className="hidden sm:block lg:hidden w-full">
+                <div className="relative bg-zinc-900 border border-yellow-400/30 rounded-3xl px-10 py-8 shadow-2xl shadow-yellow-500/10 mb-6">
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-yellow-400/5 to-transparent pointer-events-none" />
+                  <div className="flex items-center justify-center gap-2 mb-5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-14 opacity-90" />
                     <span className="text-zinc-300 text-base font-semibold">
                       {language === 'ro' ? 'Recenzii' : 'Reviews'}
                     </span>
