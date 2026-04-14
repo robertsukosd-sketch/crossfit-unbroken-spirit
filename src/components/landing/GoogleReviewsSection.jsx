@@ -4,7 +4,9 @@ import { Star, ExternalLink } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 import { useLanguage } from '../LanguageProvider';
 
-const GOOGLE_MAPS_URL = 'https://www.google.com/maps/place/CrossFit+Unbroken+Spirit/@44.4280,26.1163,17z/data=!4m8!3m7!1s0x40b1ff2ad7df97999:!8m2!3d44.428!4d26.1163!9m1!1b1';
+const PLACE_ID = 'ChIJmZfffd8y_UARSCUa9HjLknA';
+const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=CrossFit+Unbroken+Spirit&query_place_id=${PLACE_ID}`;
+const GOOGLE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${PLACE_ID}`;
 
 function StarRating({ rating }) {
   return (
@@ -132,7 +134,7 @@ export default function GoogleReviewsSection() {
           className="text-center mt-8"
         >
           <a
-            href={GOOGLE_MAPS_URL}
+            href={GOOGLE_REVIEW_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-yellow-400/40 text-yellow-400 bg-yellow-400/10 hover:bg-yellow-400/20 font-bold text-sm transition-colors duration-150"
