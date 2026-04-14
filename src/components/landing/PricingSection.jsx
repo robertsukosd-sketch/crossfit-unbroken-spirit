@@ -241,7 +241,7 @@ function PlanCard({ plan, index, t, onSignUpClick, daysLeft, language }) {
         {/* Savings callout */}
         {plan.discount && (
           <div className="mt-2 px-3 py-1.5 rounded-lg bg-amber-400/20 border border-amber-400/40 inline-block">
-            <span className="text-xs font-bold text-amber-300">💰 {plan.discount} off</span>
+            <span className="text-xs font-bold text-amber-300">💰 {language === 'ro' ? `${plan.discount} reducere` : `${plan.discount} off`}</span>
           </div>
         )}
 
