@@ -82,40 +82,51 @@ export default function GoogleReviewsSection() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-12"
         >
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-5 opacity-80" />
-            <span className="text-zinc-400 text-sm font-medium">
-              {language === 'ro' ? 'Recenzii' : 'Reviews'}
-            </span>
-          </div>
-
           {loading ? (
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <div className="w-5 h-5 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin" />
+            <div className="flex items-center justify-center py-10">
+              <div className="w-6 h-6 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin" />
             </div>
           ) : data ? (
-            <>
-              <div className="flex items-center justify-center gap-3 mb-2">
-                <span className="text-5xl font-black text-white">{data.rating}</span>
-                <div>
-                  <StarRating rating={Math.round(data.rating)} />
-                  <p className="text-zinc-400 text-xs mt-1">
-                    {data.user_ratings_total} {language === 'ro' ? 'recenzii' : 'reviews'}
-                  </p>
+            <div className="inline-block">
+              {/* Glowing card */}
+              <div className="relative bg-zinc-900 border border-yellow-400/30 rounded-3xl px-10 py-8 shadow-2xl shadow-yellow-500/10 mb-6">
+                {/* Subtle glow behind */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-yellow-400/5 to-transparent pointer-events-none" />
+
+                <div className="flex items-center justify-center gap-2 mb-5">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-6 opacity-90" />
+                  <span className="text-zinc-300 text-base font-semibold">
+                    {language === 'ro' ? 'Recenzii' : 'Reviews'}
+                  </span>
                 </div>
+
+                <div className="flex items-center justify-center gap-5 mb-4">
+                  <span className="text-8xl font-black text-white leading-none">{data.rating}</span>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex gap-1">
+                      {[1,2,3,4,5].map((i) => (
+                        <Star key={i} className="w-7 h-7 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-zinc-400 text-sm text-left">
+                      {data.user_ratings_total} {language === 'ro' ? 'recenzii' : 'reviews'}
+                    </p>
+                  </div>
+                </div>
+
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 text-sm font-semibold transition-colors"
+                >
+                  {language === 'ro' ? 'Vezi pe Google Maps' : 'View on Google Maps'}
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
               </div>
-              <a
-                href={GOOGLE_MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 text-sm font-semibold transition-colors"
-              >
-                {language === 'ro' ? 'Vezi pe Google Maps' : 'View on Google Maps'}
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-            </>
+            </div>
           ) : null}
         </motion.div>
 
