@@ -126,9 +126,9 @@ export default function GoogleReviewsSection() {
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-yellow-400/5 via-transparent to-yellow-400/5 pointer-events-none" />
                   <div className="flex items-center justify-between gap-12">
                     {/* Left: logo + label */}
-                    <div className="flex flex-col items-start gap-1 flex-shrink-0">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-8 opacity-90" />
-                      <span className="text-zinc-400 text-sm font-medium">
+                    <div className="flex flex-col items-start gap-2 flex-shrink-0">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-14 opacity-90" />
+                      <span className="text-zinc-400 text-base font-medium">
                         {language === 'ro' ? 'Recenzii verificate' : 'Verified Reviews'}
                       </span>
                     </div>
