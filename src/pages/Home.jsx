@@ -17,6 +17,7 @@ import BookFreeSessionModal from '@/components/landing/BookFreeSessionModal';
 import MobileFooterBar from '@/components/landing/MobileFooterBar';
 import AppPromoSection from '@/components/landing/AppPromoSection';
 import FAQSection from '@/components/landing/FAQSection';
+import GoogleReviewsSection from '@/components/landing/GoogleReviewsSection';
 import SeoMeta from '@/components/landing/SeoMeta';
 
 export default function Home() {
@@ -87,6 +88,7 @@ export default function Home() {
         <StartHereSection />
         <ProgramsSection onBookSession={handleBookSession} />
         <FAQSection onBookSession={handleBookSession} />
+        <GoogleReviewsSection />
         <PricingSection onOpenFreeClass={handleBookSession} />
         <ScheduleSection />
         <AppPromoSection />
