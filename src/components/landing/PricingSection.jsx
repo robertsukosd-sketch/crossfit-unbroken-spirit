@@ -54,7 +54,7 @@ const getCategories = (language) => [
         studentPrice: '270',
         studentOriginalPrice: '300',
         studentNote: language === 'ro' ? '🎓 Elevi/Studenți până la 26 ani: 270 RON / lună (era 300 RON)' : '🎓 Students up to 26 years old: 270 RON / month (used to be 300 RON)',
-        offerNote: language === 'ro' ? '⏰ Ofertă limitată: 10% reducere pentru 6 luni' : '⏰ Limited offer: 10% discount for 6 months',
+        offerNote: language === 'ro' ? '⏰ Ofertă valabilă până la 1 Mai: 10% reducere pentru 6 luni' : '⏰ Offer valid until May 1st: 10% discount for 6 months',
         features: language === 'ro'
           ? ['Acces la toate clasele', 'Open Gym inclus', 'Prioritate înscriere', 'Loc de parcare inclus']
           : ['Access to all classes', 'Open Gym included', 'Priority booking', 'Free parking spot'],
@@ -198,9 +198,9 @@ function PlanCard({ plan, index, t, onSignUpClick, daysLeft, language }) {
           transition={{ delay: 0.2 }}
           className="absolute -top-8 -right-4 w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-400 rounded-full shadow-2xl shadow-amber-500/30 flex items-center justify-center"
         >
-          <div className="text-center">
+          <div className="text-center px-1">
             <div className="text-lg font-black text-black">-10%</div>
-            <div className="text-sm font-bold text-black/80 px-1 leading-tight">{daysLeft > 0 ? `${daysLeft} ${language === 'ro' ? 'zile' : 'days'}` : 'Expired'}</div>
+            <div className="text-[10px] font-bold text-black/80 leading-tight">{language === 'ro' ? 'PÂNĂ LA 1 MAI' : 'UNTIL MAY 1ST'}</div>
           </div>
         </motion.div>
       )}
@@ -285,11 +285,11 @@ export default function PricingSection({ onOpenFreeClass }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [daysLeft, setDaysLeft] = useState(0);
 
-  // Calculate days until April 15, 2026
+  // Calculate days until May 1, 2026
   useEffect(() => {
     const calculateDays = () => {
       const today = new Date();
-      const offerEndDate = new Date(2026, 3, 15); // April 15, 2026
+      const offerEndDate = new Date(2026, 4, 1); // May 1, 2026
       const diff = Math.ceil((offerEndDate - today) / (1000 * 60 * 60 * 24));
       setDaysLeft(Math.max(0, diff));
     };
@@ -453,8 +453,8 @@ export default function PricingSection({ onOpenFreeClass }) {
               <Zap className="w-5 h-5 text-amber-400 flex-shrink-0" />
               <p className="text-sm sm:text-base font-bold text-white">
                 {language === 'ro' 
-                  ? <>⏰ Ai doar {daysLeft} zile să profiți de 10% reducere la abonamentul Nelimitat<br />timp de șase luni!</>
-                  : `⏰ Only ${daysLeft} days left to grab 10% off the Unlimited plan for six months!`}
+                  ? <>⏰ Ofertă valabilă până la 1 Mai — 10% reducere la abonamentul Nelimitat timp de șase luni!</>
+                  : <>⏰ Offer valid until May 1st — 10% off the Unlimited plan for six months!</>}
               </p>
               <Zap className="w-5 h-5 text-amber-400 flex-shrink-0" />
             </div>
