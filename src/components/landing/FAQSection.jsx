@@ -278,7 +278,7 @@ export default function FAQSection({ onBookSession }) {
         </motion.div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
+        <div className="flex justify-center gap-2 mb-8 overflow-x-auto pb-1 no-scrollbar">
           {categories.map((cat) => {
             const Icon = cat.icon;
             const isActive = activeCategory === cat.id;
@@ -287,7 +287,7 @@ export default function FAQSection({ onBookSession }) {
                 key={cat.id}
                 onClick={() => handleCategoryChange(cat.id)}
                 className={cn(
-                  'flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-bold transition-all duration-200 border',
+                  'flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-bold transition-all duration-200 border whitespace-nowrap flex-shrink-0',
                   isActive
                     ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-500/25'
                     : 'bg-zinc-900 border-zinc-700 text-gray-300 hover:border-blue-500/50 hover:text-white'
