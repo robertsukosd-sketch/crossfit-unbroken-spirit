@@ -453,8 +453,8 @@ export default function PricingSection({ onOpenFreeClass }) {
               <Zap className="w-5 h-5 text-amber-400 flex-shrink-0" />
               <p className="text-sm sm:text-base font-bold text-white">
                 {language === 'ro' 
-                  ? <>⏰ Ofertă valabilă până la 1 Mai — 10% reducere la abonamentul Nelimitat timp de șase luni!</>
-                  : <>⏰ Offer valid until May 1st — 10% off the Unlimited plan for six months!</>}
+                  ? <>⏰ Ofertă valabilă până la 1 Mai — 10% reducere la abonamentul Nelimitat!</>
+                  : <>⏰ Offer valid until May 1st — 10% off the Unlimited plan!</>}
               </p>
               <Zap className="w-5 h-5 text-amber-400 flex-shrink-0" />
             </div>
