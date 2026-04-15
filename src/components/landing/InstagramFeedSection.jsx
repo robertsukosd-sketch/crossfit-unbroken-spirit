@@ -18,12 +18,12 @@ export default function InstagramFeedSection() {
         <div className="text-center mb-8">
           <h2 className="text-2xl sm:text-3xl font-black text-white mb-2">{language === 'ro' ? 'Urmărește-ne pe Instagram' : 'Follow us on Instagram'}</h2>
           <a
-            href="https://www.instagram.com/crossfitunbrokenspirit"
+            href="https://www.instagram.com/crossfit.unbroken.spirit"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky-400 hover:text-sky-300 text-sm font-semibold transition-colors"
           >
-            @crossfitunbrokenspirit
+            @crossfit.unbroken.spirit
           </a>
         </div>
         <div className="elfsight-app-b0e50953-eaca-44c2-bdcf-370800c6e9c5" data-elfsight-app-lazy="true"></div>
