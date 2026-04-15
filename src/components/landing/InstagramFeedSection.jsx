@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { useLanguage } from '../LanguageProvider';
 
 export default function InstagramFeedSection() {
+  const { language } = useLanguage();
+
   useEffect(() => {
     if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) return;
     const script = document.createElement('script');
@@ -13,7 +16,7 @@ export default function InstagramFeedSection() {
     <section className="py-16 bg-black">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-black text-white mb-2">Urmărește-ne pe Instagram</h2>
+          <h2 className="text-2xl sm:text-3xl font-black text-white mb-2">{language === 'ro' ? 'Urmărește-ne pe Instagram' : 'Follow us on Instagram'}</h2>
           <a
             href="https://www.instagram.com/crossfitunbrokenspirit"
             target="_blank"
