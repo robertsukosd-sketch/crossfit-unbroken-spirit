@@ -4,6 +4,95 @@ import { useLanguage } from '../LanguageProvider';
 const OG_IMAGE = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/b2dc11465_CrossFit_US-058.jpg';
 const SITE_URL = 'https://www.unbrokenspirit.ro';
 
+const WEBSITE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CrossFit Unbroken Spirit",
+  "url": "https://www.unbrokenspirit.ro",
+  "description": "Sală de CrossFit în București cu antrenamente funcționale de înaltă intensitate, Personal Training și Open Gym.",
+  "inLanguage": ["ro", "en"],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.unbrokenspirit.ro/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "SportsActivityLocation",
+    "name": "CrossFit Unbroken Spirit",
+    "url": "https://www.unbrokenspirit.ro"
+  }
+};
+
+const WEBPAGE_SCHEMAS = [
+  { id: 'hero', name: 'CrossFit Unbroken Spirit București', url: 'https://www.unbrokenspirit.ro/#hero', description: 'Forță. Comunitate. Rezultate. Descoperă cel mai bun CrossFit din București.' },
+  { id: 'about', name: 'Despre CrossFit Unbroken Spirit', url: 'https://www.unbrokenspirit.ro/#about', description: 'Antrenorii și facilități CrossFit Unbroken Spirit - Splaiul Unirii 257-259, București.' },
+  { id: 'faq', name: 'Întrebări Frecvente CrossFit', url: 'https://www.unbrokenspirit.ro/#faq', description: 'Răspunsuri la toate întrebările despre CrossFit, abonamente și sala Unbroken Spirit.' },
+  { id: 'pricing', name: 'Abonamente CrossFit Unbroken Spirit', url: 'https://www.unbrokenspirit.ro/#pricing', description: 'Abonamente CrossFit de la 320 RON/lună. Prima ședință gratuită.' },
+  { id: 'schedule', name: 'Orar Clase CrossFit', url: 'https://www.unbrokenspirit.ro/#schedule', description: 'Orarul complet al claselor CrossFit, Open Gym și CrossFit Kids la Unbroken Spirit.' },
+  { id: 'contact', name: 'Contact CrossFit Unbroken Spirit', url: 'https://www.unbrokenspirit.ro/#contact', description: 'Contactează CrossFit Unbroken Spirit - Splaiul Unirii 257-259, București.' },
+];
+
+// Recurring CrossFit class events (Mon-Fri times)
+const WEEKDAY_CLASS_TIMES = ['07:00', '08:00', '12:30', '17:30', '18:30', '19:30'];
+const SATURDAY_TIMES = ['10:00'];
+
+function buildEventSchemas() {
+  const events = [];
+  const baseDate = new Date('2026-04-21'); // next Monday as anchor
+  const days = [0,1,2,3,4]; // Mon-Fri
+  days.forEach(dayOffset => {
+    WEEKDAY_CLASS_TIMES.forEach(time => {
+      const d = new Date(baseDate);
+      d.setDate(d.getDate() + dayOffset);
+      const [h, m] = time.split(':');
+      d.setHours(parseInt(h), parseInt(m), 0, 0);
+      const end = new Date(d);
+      end.setHours(end.getHours() + 1);
+      events.push({
+        "@type": "Event",
+        "name": "Clasă CrossFit - CrossFit Unbroken Spirit",
+        "startDate": d.toISOString(),
+        "endDate": end.toISOString(),
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "CrossFit Unbroken Spirit",
+          "address": { "@type": "PostalAddress", "streetAddress": "Splaiul Unirii 257-259", "addressLocality": "București", "addressCountry": "RO" }
+        },
+        "organizer": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit", "url": "https://www.unbrokenspirit.ro" },
+        "description": "Clasă de CrossFit ghidată de antrenor, 60 de minute. Adaptată oricărui nivel. Prima clasă gratuită.",
+        "isAccessibleForFree": false,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RON", "description": "Prima clasă gratuită pentru începători", "url": "https://www.unbrokenspirit.ro" }
+      });
+    });
+  });
+  SATURDAY_TIMES.forEach(time => {
+    const sat = new Date('2026-04-25');
+    const [h, m] = time.split(':');
+    sat.setHours(parseInt(h), parseInt(m), 0, 0);
+    const end = new Date(sat);
+    end.setHours(end.getHours() + 1, 30);
+    events.push({
+      "@type": "Event",
+      "name": "Clasă CrossFit Sâmbătă - CrossFit Unbroken Spirit",
+      "startDate": sat.toISOString(),
+      "endDate": end.toISOString(),
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "CrossFit Unbroken Spirit",
+        "address": { "@type": "PostalAddress", "streetAddress": "Splaiul Unirii 257-259", "addressLocality": "București", "addressCountry": "RO" }
+      },
+      "organizer": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit", "url": "https://www.unbrokenspirit.ro" },
+      "description": "Clasă de CrossFit de sâmbătă, ghidată de antrenor. Adaptată oricărui nivel.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RON", "description": "Prima clasă gratuită pentru începători", "url": "https://www.unbrokenspirit.ro" }
+    });
+  });
+  return { "@context": "https://schema.org", "@graph": events };
+}
+
 const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "SportsActivityLocation",
@@ -298,6 +387,21 @@ function applyMeta(lang, sectionId) {
   setMeta('twitter:description', meta.description);
   setMeta('twitter:image', OG_IMAGE);
 
+  // og:locale — language aware
+  setOgMeta('og:locale', lang === 'en' ? 'en_US' : 'ro_RO');
+
+  // WebPage schema for current section
+  const wpData = WEBPAGE_SCHEMAS.find(w => w.id === sectionId) || WEBPAGE_SCHEMAS[0];
+  injectSchema('schema-webpage', {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": wpData.name,
+    "url": wpData.url,
+    "description": wpData.description,
+    "inLanguage": lang === 'en' ? 'en' : 'ro',
+    "isPartOf": { "@type": "WebSite", "name": "CrossFit Unbroken Spirit", "url": "https://www.unbrokenspirit.ro" }
+  });
+
   // FAQ Schema — only on FAQ section, language-aware
   if (sectionId === 'faq') {
     injectSchema('schema-faq', lang === 'en' ? FAQ_SCHEMA_EN : FAQ_SCHEMA_RO);
@@ -314,6 +418,8 @@ export default function SeoMeta() {
     injectSchema('schema-local-business', LOCAL_BUSINESS_SCHEMA);
     injectSchema('schema-coaches', COACHES_SCHEMA);
     injectSchema('schema-reviews', REVIEWS_SCHEMA);
+    injectSchema('schema-website', WEBSITE_SCHEMA);
+    injectSchema('schema-events', buildEventSchemas());
 
     // Apply default (hero) meta on mount
     applyMeta(language, 'hero');
@@ -342,6 +448,9 @@ export default function SeoMeta() {
       removeSchema('schema-faq');
       removeSchema('schema-coaches');
       removeSchema('schema-reviews');
+      removeSchema('schema-website');
+      removeSchema('schema-events');
+      removeSchema('schema-webpage');
     };
   }, [language]);
 
