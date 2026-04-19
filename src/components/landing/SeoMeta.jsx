@@ -42,17 +42,111 @@ const LOCAL_BUSINESS_SCHEMA = {
   }
 };
 
+const COACHES_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "CrossFit Unbroken Spirit Coaches",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Person",
+        "name": "Andrei Vârnav",
+        "jobTitle": "CrossFit Coach",
+        "worksFor": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" },
+        "description": "8 ani în CrossFit. Medaliat național la înot, campion național la handbal, 4 ani Head Judge la OMBC Throwdown, Strength & Conditioning specialist.",
+        "knowsAbout": ["CrossFit", "Strength & Conditioning", "Swimming", "Handball"],
+        "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/18d3ab544_CrossFit_US-148A.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Person",
+        "name": "Dumitru Mîndrescu",
+        "jobTitle": "CrossFit Coach",
+        "worksFor": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" },
+        "description": "7 ani în CrossFit competitiv. Specialist în Weightlifting, Gymnastics și Competition training.",
+        "knowsAbout": ["CrossFit", "Weightlifting", "Gymnastics", "Competition Training"],
+        "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/9884b0a50_CrossFit_US-138M.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Person",
+        "name": "Robert Sukosd",
+        "jobTitle": "CrossFit Level 2 Trainer",
+        "worksFor": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" },
+        "description": "13 ani în CrossFit. CrossFit Level 2 Trainer, The Gymnastics Course Level 1, Movement Specialist.",
+        "hasCredential": ["CrossFit Level 2 Trainer", "The Gymnastics Course Level 1"],
+        "knowsAbout": ["CrossFit", "Gymnastics", "Movement", "Mobility"],
+        "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/02fa5e0e6_CrossFit_US-140R.jpg"
+      }
+    }
+  ]
+};
+
+const REVIEWS_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "CrossFit Unbroken Spirit",
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Ana Maria Onuta" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Super frumoasă sală și dotată!! Foarte curat și Dumitru pregătește niște antrenamente super bune. Recomand această sală!!"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Alina C." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Recomand cu drag! Antrenorii știu cum să te ajute să îți atingi obiectivele și să îți depășești limitele, indiferent de nivelul la care ești. Echipamentele sunt în stare impecabilă, sala este curată și muzica bună."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Cosmin M." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Cea mai nouă sală de CrossFit din București! Echipamente de calitate, antrenori dedicați și o comunitate super primitoare. Recomand cu căldură!"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Mihai D." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Am venit pentru prima dată fără experiență în CrossFit și am fost primit extraordinar. Antrenorii sunt răbdători și profesioniști. Recomand tuturor!"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Elena P." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Sală de top! Comunitate extraordinară, antrenori profesioniști și echipamente de calitate. Cel mai bun loc pentru CrossFit din București!"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Andrei V." },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "reviewBody": "Experiență de 5 stele! Atmosferă fantastică, WOD-uri bine programate și antrenori care chiar îți pasă de progresul tău."
+    }
+  ]
+};
+
 const FAQ_SCHEMA_RO = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Ce înseamnă CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit este un program de antrenament bazat pe mișcări funcționale, realizate la intensitate ridicată și variate constant. Combină exerciții de forță, cardio și gimnastică pentru a îmbunătăți condiția fizică generală." } },
-    { "@type": "Question", "name": "Trebuie să fiu în formă înainte de a începe CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Categoric nu. CrossFit este procesul prin care ajungi în formă. Membrii variază de la sportivi de elită la oameni obișnuiți care vor doar să facă mișcare." } },
-    { "@type": "Question", "name": "Cât costă un abonament la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Abonamentele încep de la 320 RON/lună pentru 8 clase. Abonamentul de 12 clase costă 400 RON/lună, iar cel nelimitat 450 RON/lună. Există și opțiuni de Personal Training și Open Gym." } },
-    { "@type": "Question", "name": "Cât durează o clasă de CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Toate clasele durează aproximativ 60 de minute și includ instructaj, încălzire, o sesiune de forță sau tehnică, antrenamentul zilei (WOD) și stretching." } },
-    { "@type": "Question", "name": "Este CrossFitul periculos?", "acceptedAnswer": { "@type": "Answer", "text": "Orice activitate fizică implică riscuri, dar le reducem la minimum prin filozofia: 'Mecanică, Consistență, apoi Intensitate'. Insistăm să te miști corect înainte de a te mișca repede sau cu greutăți mari." } },
-    { "@type": "Question", "name": "Cum pot ajunge la sală? Există parcare?", "acceptedAnswer": { "@type": "Answer", "text": "Sala este la Splaiul Unirii 257-259, București. Cea mai apropiată stație de metrou este Mihai Bravu (7-8 minute pe jos). Există parcare gratuită inclusă." } },
-    { "@type": "Question", "name": "Oferiți o clasă de probă gratuită?", "acceptedAnswer": { "@type": "Answer", "text": "Da! Oferim o primă clasă gratuită pentru începători. Te poți înscrie prin formularul de pe site." } }
+    { "@type": "Question", "name": "Ce înseamnă CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit este un program de antrenament bazat pe mișcări funcționale, variate constant și realizate la intensitate ridicată. Combină exerciții de forță, cardio și gimnastică pentru a îmbunătăți condiția fizică generală și performanța în activitățile din viața reală." } },
+    { "@type": "Question", "name": "Trebuie să fiu în formă înainte de a începe CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Nu trebuie să fii în formă înainte de a începe CrossFit — CrossFit este exact procesul prin care ajungi în formă. Membrii CrossFit Unbroken Spirit variază de la sportivi de elită la persoane care fac mișcare pentru prima dată." } },
+    { "@type": "Question", "name": "Cât costă un abonament la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Abonamentele la CrossFit Unbroken Spirit încep de la 320 RON/lună pentru 8 clase. Abonamentul de 12 clase costă 400 RON/lună, iar abonamentul nelimitat 450 RON/lună. Există și opțiuni de Personal Training și Open Gym." } },
+    { "@type": "Question", "name": "Cât durează o clasă de CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "O clasă de CrossFit la Unbroken Spirit durează 60 de minute și include instructaj, încălzire ghidată, o sesiune de forță sau tehnică, antrenamentul zilei (WOD) și stretching." } },
+    { "@type": "Question", "name": "Este CrossFitul periculos?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit nu este periculos când este predat corect. La Unbroken Spirit folosim filozofia 'Mecanică, Consistență, apoi Intensitate' — te înveți să te miști corect înainte de a crește viteza sau greutatea." } },
+    { "@type": "Question", "name": "Cum pot ajunge la sală? Există parcare?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit se află la Splaiul Unirii 257-259, București, la 7-8 minute de mers pe jos de stația de metrou Mihai Bravu. Există parcare gratuită inclusă pentru toți membrii." } },
+    { "@type": "Question", "name": "Oferiți o clasă de probă gratuită?", "acceptedAnswer": { "@type": "Answer", "text": "Da, CrossFit Unbroken Spirit oferă prima clasă gratuită pentru toți noii membri. Te poți înscrie direct prin formularul de pe site-ul unbrokenspirit.ro." } },
+    { "@type": "Question", "name": "De câte ori pe săptămână ar trebui să vin la CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Pentru începători, recomandăm 3 antrenamente pe săptămână pentru a permite corpului să se recupereze. Pe măsură ce progresezi, mulți membri aleg 4-5 zile pe săptămână pentru rezultate optime." } },
+    { "@type": "Question", "name": "Pot slăbi făcând CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Da, CrossFit ajută la slăbire prin antrenamente intense care ard un număr mare de calorii. Combinat cu o alimentație echilibrată și un deficit caloric consistent, CrossFit este eficient pentru pierderea în greutate." } }
   ]
 };
 
@@ -60,13 +154,15 @@ const FAQ_SCHEMA_EN = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "What is CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit is a training program based on functional movements performed at high intensity and constantly varied. It combines strength, cardio, and gymnastics exercises to improve overall fitness." } },
-    { "@type": "Question", "name": "Do I need to be in shape before starting CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely not. CrossFit is the process of getting in shape. Members range from elite athletes to regular people who just want to move." } },
-    { "@type": "Question", "name": "How much does a CrossFit Unbroken Spirit membership cost?", "acceptedAnswer": { "@type": "Answer", "text": "Memberships start from 320 RON/month for 8 classes. The 12-class plan costs 400 RON/month, and the unlimited plan is 450 RON/month. Personal Training and Open Gym options are also available." } },
-    { "@type": "Question", "name": "How long are CrossFit classes?", "acceptedAnswer": { "@type": "Answer", "text": "All classes last about 60 minutes and include a walkthrough, warm-up, a strength or technique session, the Workout of the Day (WOD), and a cool-down." } },
-    { "@type": "Question", "name": "Is CrossFit dangerous?", "acceptedAnswer": { "@type": "Answer", "text": "Any physical activity carries risks, but we minimize them through our philosophy: 'Mechanics, Consistency, then Intensity'. We insist on moving correctly before moving fast or with heavy weights." } },
-    { "@type": "Question", "name": "How can I get to the gym? Is there parking?", "acceptedAnswer": { "@type": "Answer", "text": "The gym is at Splaiul Unirii 257-259, Bucharest. The nearest subway station is Mihai Bravu (7-8 min walk). Free parking is included." } },
-    { "@type": "Question", "name": "Do you offer a free trial class?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! We offer a first free class for newcomers. You can sign up through the form on our website." } }
+    { "@type": "Question", "name": "What is CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit is a training program based on constantly varied functional movements performed at high intensity. It combines strength, cardio, and gymnastics to improve overall fitness and real-life performance." } },
+    { "@type": "Question", "name": "Do I need to be in shape before starting CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "You do not need to be in shape before starting CrossFit — CrossFit is the process of getting in shape. CrossFit Unbroken Spirit members range from elite athletes to complete beginners." } },
+    { "@type": "Question", "name": "How much does a CrossFit Unbroken Spirit membership cost?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit memberships start from 320 RON/month for 8 classes. The 12-class plan costs 400 RON/month, and the unlimited plan is 450 RON/month. Personal Training and Open Gym options are also available." } },
+    { "@type": "Question", "name": "How long are CrossFit classes?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit classes at Unbroken Spirit last 60 minutes and include a walkthrough, guided warm-up, a strength or technique session, the Workout of the Day (WOD), and a cool-down stretch." } },
+    { "@type": "Question", "name": "Is CrossFit dangerous?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit is not dangerous when taught correctly. At Unbroken Spirit we follow the principle of 'Mechanics, Consistency, then Intensity' — you learn to move correctly before increasing speed or weight." } },
+    { "@type": "Question", "name": "How can I get to the gym? Is there parking?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit is located at Splaiul Unirii 257-259, Bucharest, a 7-8 minute walk from Mihai Bravu metro station. Free parking is included for all members." } },
+    { "@type": "Question", "name": "Do you offer a free trial class?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CrossFit Unbroken Spirit offers a free first class for all new members. You can sign up through the form on unbrokenspirit.ro." } },
+    { "@type": "Question", "name": "How many times a week should I do CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "For beginners, we recommend 3 CrossFit sessions per week to allow recovery. As you progress, many members train 4-5 days per week for optimal results." } },
+    { "@type": "Question", "name": "Can I lose weight doing CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CrossFit is effective for weight loss. The high-intensity workouts burn a large number of calories, and combined with a balanced diet and consistent caloric deficit, CrossFit produces measurable fat loss results." } }
   ]
 };
 
@@ -214,8 +310,10 @@ export default function SeoMeta() {
   const { language } = useLanguage();
 
   useEffect(() => {
-    // Inject LocalBusiness schema once (always present)
+    // Inject always-present schemas
     injectSchema('schema-local-business', LOCAL_BUSINESS_SCHEMA);
+    injectSchema('schema-coaches', COACHES_SCHEMA);
+    injectSchema('schema-reviews', REVIEWS_SCHEMA);
 
     // Apply default (hero) meta on mount
     applyMeta(language, 'hero');
@@ -242,6 +340,8 @@ export default function SeoMeta() {
     return () => {
       observers.forEach((o) => o.disconnect());
       removeSchema('schema-faq');
+      removeSchema('schema-coaches');
+      removeSchema('schema-reviews');
     };
   }, [language]);
 
