@@ -400,7 +400,7 @@ export default function ContactSection() {
             className="rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800 h-[400px] lg:h-auto lg:min-h-[400px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.123456789!2d26.1042!3d44.3933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff5a5a5a5a5b%3A0x1a2b3c4d5e6f7a8b!2sSplaiul%20Unirii%20257-259%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1710000000000!5m2!1sro!2sro"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1026m!2d26.126472!3d44.408234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff2ad7df5f99%3A0x83693788dcfc4734!2sCrossFit%20Unbroken%20Spirit!5e0!3m2!1sro!2sro!4v1713523200000"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)', minHeight: '400px' }}
