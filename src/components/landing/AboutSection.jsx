@@ -1,6 +1,6 @@
-import React, { useMemo, useState, useRef } from 'react';
+import React, { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Target, Users, Flame, Trophy, Dumbbell, Play } from 'lucide-react';
+import { Target, Users, Flame, Trophy, Dumbbell, Play, MapPin } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
 import GymGallery from './GymGallery';
 
@@ -27,10 +27,16 @@ const getFeatures = (t) => [
   }
 ];
 
+// Static map thumbnail (Google Maps Static API - no JS, lightweight)
+const MAP_STATIC_PREVIEW = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png';
+// Interactive embed — only loaded on click
+const MAP_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.3!2d26.1025!3d44.4268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff2aeadf9f99%3A0x8b6937881bc47344!2sCrossFit%20Unbroken%20Spirit!5e0!3m2!1sro!2sro!4v1';
+
 export default function AboutSection() {
   const { t, language } = useLanguage();
   const features = useMemo(() => getFeatures(t), [language]);
   const [videoActive, setVideoActive] = useState(false);
+  const [mapActive, setMapActive] = useState(false);
 
   const handleWODClick = () => {
     sessionStorage.setItem('openFaqId', 'faq-wod-meaning');
@@ -132,11 +138,39 @@ export default function AboutSection() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start mt-3">
-            <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png"
-              alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
-              className="w-full rounded-xl border border-zinc-700"
-            />
+            {/* Interactive map — loads iframe only on click */}
+            <div className="relative w-full rounded-xl overflow-hidden border border-zinc-700 aspect-[4/3] bg-zinc-900">
+              {mapActive ? (
+                <iframe
+                  src={MAP_EMBED_URL}
+                  title={language === 'ro' ? 'Hartă CrossFit Unbroken Spirit' : 'CrossFit Unbroken Spirit Map'}
+                  className="w-full h-full absolute inset-0 border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              ) : (
+                <button
+                  onClick={() => setMapActive(true)}
+                  className="w-full h-full absolute inset-0 group"
+                  aria-label={language === 'ro' ? 'Deschide harta interactivă' : 'Open interactive map'}
+                >
+                  <img
+                    src={MAP_STATIC_PREVIEW}
+                    alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-200 flex items-center justify-center">
+                    <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white text-zinc-900 font-bold text-sm shadow-xl group-hover:scale-105 transition-transform duration-200">
+                      <MapPin className="w-4 h-4 text-red-500" />
+                      {language === 'ro' ? 'Deschide harta' : 'Open map'}
+                    </div>
+                  </div>
+                </button>
+              )}
+            </div>
 
             {/* Features grid — top aligned with map */}
             <div className="grid sm:grid-cols-2 gap-6">

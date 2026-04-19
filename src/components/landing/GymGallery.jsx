@@ -67,6 +67,9 @@ export default function GymGallery() {
               <img
                 src={img.src}
                 alt={img.alt}
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 640px) 100vw, 50vw"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -104,6 +107,8 @@ export default function GymGallery() {
                 transition={{ duration: 0.2 }}
                 src={GYM_IMAGES[lightboxIndex].src}
                 alt={GYM_IMAGES[lightboxIndex].alt}
+                loading="lazy"
+                decoding="async"
                 className="max-w-full max-h-[80vh] object-contain px-12"
                 onClick={(e) => e.stopPropagation()}
               />
