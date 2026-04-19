@@ -30,7 +30,7 @@ const getFeatures = (t) => [
 // Static map thumbnail (Google Maps Static API - no JS, lightweight)
 const MAP_STATIC_PREVIEW = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4054d6144_image.png';
 // Interactive embed — only loaded on click
-const MAP_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.384540509339!2d26.099766376972655!3d44.41913537107298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff2aeadf9f99%3A0x8b6937881bc47344!2sCrossFit%20Unbroken%20Spirit!5e0!3m2!1sro!2sro!4v1713523200000';
+const MAP_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1026m!2d26.126472!3d44.408234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff2ad7df5f99%3A0x83693788dcfc4734!2sCrossFit%20Unbroken%20Spirit!5e0!3m2!1sro!2sro!4v1713523200000';
 
 export default function AboutSection() {
   const { t, language } = useLanguage();
