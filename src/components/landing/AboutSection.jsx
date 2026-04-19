@@ -139,7 +139,7 @@ export default function AboutSection() {
 
           <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start mt-3">
             {/* Interactive map — loads iframe only on click */}
-            <div className="relative w-full rounded-xl overflow-hidden border border-zinc-700 aspect-[4/3] bg-zinc-900">
+            <div className="relative w-full rounded-xl overflow-hidden border border-zinc-700 aspect-[8/3] bg-zinc-900">
               {mapActive ? (
                 <iframe
                   src={MAP_EMBED_URL}
