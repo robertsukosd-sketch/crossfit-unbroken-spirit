@@ -4,6 +4,8 @@ import { Star, ExternalLink } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 import { useLanguage } from '../LanguageProvider';
 
+
+
 const PLACE_ID = 'ChIJmV_f1yr_sUARNEf83Ig3aYM';
 const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=CrossFit+Unbroken+Spirit&query_place_id=${PLACE_ID}`;
 const GOOGLE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${PLACE_ID}`;
