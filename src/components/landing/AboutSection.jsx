@@ -35,7 +35,6 @@ const MAP_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102
 export default function AboutSection() {
   const { t, language } = useLanguage();
   const features = useMemo(() => getFeatures(t), [language]);
-  const [videoActive, setVideoActive] = useState(false);
   const [mapActive, setMapActive] = useState(false);
 
   const handleWODClick = () => {
@@ -65,33 +64,25 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="relative rounded-2xl overflow-hidden aspect-video bg-zinc-900">
-              {videoActive ? (
-                <iframe
-                  src="https://www.youtube.com/embed/ot4MjvEGKec?autoplay=1"
-                  title="CrossFit Unbroken Spirit"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full absolute inset-0"
+              <a
+                href="https://www.youtube.com/watch?v=ot4MjvEGKec"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full h-full absolute inset-0 group"
+                aria-label="Redă videoclipul CrossFit Unbroken Spirit pe YouTube"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/ot4MjvEGKec/maxresdefault.jpg"
+                  alt="CrossFit Unbroken Spirit - video preview"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
                 />
-              ) : (
-                <button
-                  onClick={() => setVideoActive(true)}
-                  className="w-full h-full absolute inset-0 group"
-                  aria-label="Redă videoclipul CrossFit Unbroken Spirit"
-                >
-                  <img
-                    src="https://i.ytimg.com/vi/ot4MjvEGKec/maxresdefault.jpg"
-                    alt="CrossFit Unbroken Spirit - video preview"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-200 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-red-600 group-hover:bg-red-500 transition-colors duration-200 flex items-center justify-center shadow-2xl">
-                      <Play className="w-7 h-7 text-white ml-1" fill="white" />
-                    </div>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-200 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-red-600 group-hover:bg-red-500 transition-colors duration-200 flex items-center justify-center shadow-2xl">
+                    <Play className="w-7 h-7 text-white ml-1" fill="white" />
                   </div>
-                </button>
-              )}
+                </div>
+              </a>
             </div>
           </motion.div>
 
