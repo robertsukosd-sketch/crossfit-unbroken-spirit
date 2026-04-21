@@ -20,6 +20,7 @@ import FAQSection from '@/components/landing/FAQSection';
 import GoogleReviewsSection from '@/components/landing/GoogleReviewsSection';
 import InstagramFeedSection from '@/components/landing/InstagramFeedSection';
 import SeoMeta from '@/components/landing/SeoMeta';
+import WhatsAppChatButton from '@/components/landing/WhatsAppChatButton';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -103,6 +104,8 @@ export default function Home() {
         <BookFreeSessionModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} gclid={gclid} />
         <AccessibilityToolbar />
         <CookieConsent />
+
+        <WhatsAppChatButton />
 
         <MobileFooterBar
           onBookSession={handleBookSession}
