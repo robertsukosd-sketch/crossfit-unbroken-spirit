@@ -225,7 +225,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
 
             {/* Greyed out note */}
             <p className="mt-3 text-zinc-600 text-xs text-center">
-              {language === 'ro' ? 'Open Gym & alte clase nu sunt afișate' : 'Open Gym & other classes not shown'}
+              {language === 'ro' ? 'Sunt afișate doar clasele potrivite pentru începători.' : 'Only classes suitable for beginners are shown.'}
             </p>
           </div>
         </motion.div>
