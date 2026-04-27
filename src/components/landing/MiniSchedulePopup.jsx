@@ -168,7 +168,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
             </div>
 
             {/* Day tabs with dates */}
-            <div className="flex gap-1 mb-3 overflow-x-auto pb-1 scrollbar-none">
+            <div className="grid grid-cols-5 gap-1 mb-3">
               {days.map((day, i) => {
                 const d = getDateForDayInWeek(weekMonday, i);
                 const dateLabel = `${d.getDate().toString().padStart(2, '0')}.${(d.getMonth() + 1).toString().padStart(2, '0')}`;
@@ -178,14 +178,14 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
                     type="button"
                     onClick={() => setSelectedDayIndex(i)}
                     className={cn(
-                      "px-2.5 py-1.5 rounded-full text-xs font-semibold transition-colors duration-150 flex-shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 flex flex-col items-center justify-center leading-tight text-center",
+                      "py-2 rounded-xl text-xs font-semibold transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 flex flex-col items-center justify-center leading-tight text-center w-full",
                       selectedDayIndex === i
                         ? "bg-blue-500 text-white"
                         : "bg-zinc-700 text-gray-400 hover:bg-zinc-600 hover:text-white"
                     )}
                   >
                     <span>{dayAbbrList[i]}</span>
-                    <span className={cn("text-[9px] font-normal", selectedDayIndex === i ? "text-blue-100" : "text-zinc-500")}>{dateLabel}</span>
+                    <span className={cn("text-[9px] font-normal mt-0.5", selectedDayIndex === i ? "text-blue-100" : "text-zinc-500")}>{dateLabel}</span>
                   </button>
                 );
               })}
