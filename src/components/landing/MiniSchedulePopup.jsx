@@ -10,14 +10,12 @@ const getCrossFitClasses = (t) => ({
   [t("wednesday")]: ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
   [t("thursday")]:  ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
   [t("friday")]:    ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
-  [t("saturday")]:  ["10:00"],
-  [t("sunday")]:    [],
 });
 
-const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday"), t("friday"), t("saturday")];
+const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday"), t("friday")];
 
-const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin", "Sâm"];
-const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin"];
+const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 
 // Returns the Monday of the current week
 const getWeekMonday = (weekOffset = 0) => {
@@ -50,33 +48,42 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
   const days = useMemo(() => getDays(t), [language]);
   const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
 
-  // Determine initial day/week: after 19:30, start on next available day
+  // Determine initial day/week and min/max week offset
   const getInitialDayAndWeek = () => {
     const now = new Date();
+    const jsDay = now.getDay(); // 0=Sun..6=Sat
     const timeInMin = now.getHours() * 60 + now.getMinutes();
-    const afterCutoff = timeInMin >= 19 * 60 + 30;
+    const isFridayAfterCutoff = jsDay === 5 && timeInMin >= 20 * 60 + 31;
+    const isWeekendOrAfterFridayCutoff = jsDay === 0 || jsDay === 6 || isFridayAfterCutoff;
 
-    let jsDay = now.getDay();
+    if (isWeekendOrAfterFridayCutoff) {
+      // Start on Monday of next week
+      return { dayIndex: 0, weekOffset: 1, minWeek: 1, maxWeek: 2 };
+    }
+
+    // Normal weekday logic: after 19:30, advance to next available day
+    const afterCutoff = timeInMin >= 19 * 60 + 30;
+    let dayIndex = jsDay === 0 ? 0 : jsDay - 1; // convert to 0=Mon..4=Fri
     let week = 0;
 
     if (afterCutoff) {
-      jsDay = jsDay === 6 ? 0 : jsDay + 1; // advance to tomorrow
-      if (jsDay === 0) { jsDay = 1; week = 1; } // Sunday → Monday next week
+      dayIndex = dayIndex + 1;
+      if (dayIndex >= 5) { dayIndex = 0; week = 1; } // past Friday → Monday next week
     }
 
-    // Convert JS day (0=Sun) to our index (0=Mon..5=Sat), clamp to Sat
-    const raw = jsDay === 0 ? 6 : jsDay - 1;
-    return { dayIndex: Math.min(raw, 5), weekOffset: week };
+    return { dayIndex: Math.min(dayIndex, 4), weekOffset: week, minWeek: 0, maxWeek: 1 };
   };
 
   const initial = getInitialDayAndWeek();
   const [weekOffset, setWeekOffset] = useState(initial.weekOffset);
   const [selectedDayIndex, setSelectedDayIndex] = useState(initial.dayIndex);
+  const minWeek = initial.minWeek;
+  const maxWeek = initial.maxWeek;
 
   useEffect(() => {
     if (isOpen) {
       const { dayIndex, weekOffset: wo } = getInitialDayAndWeek();
-      setSelectedDayIndex(dayIndex);
+      setSelectedDayIndex(Math.min(dayIndex, 4));
       setWeekOffset(wo);
     }
   }, [isOpen, days]);
@@ -88,10 +95,17 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
 
   const weekLabel = () => {
     const mon = weekMonday;
-    const sat = new Date(mon);
-    sat.setDate(mon.getDate() + 5);
+    const fri = new Date(mon);
+    fri.setDate(mon.getDate() + 4);
     const fmt = (d) => `${d.getDate().toString().padStart(2, '0')}.${(d.getMonth() + 1).toString().padStart(2, '0')}`;
-    return `${fmt(mon)} – ${fmt(sat)}`;
+    return `${fmt(mon)} – ${fmt(fri)}`;
+  };
+
+  const weekLabelText = () => {
+    if (weekOffset === minWeek && minWeek === 0) return language === 'ro' ? 'Săptămâna aceasta' : 'This week';
+    if (weekOffset === minWeek && minWeek === 1) return language === 'ro' ? 'Săptămâna viitoare' : 'Next week';
+    if (weekOffset === minWeek + 1) return language === 'ro' ? 'Săptămâna viitoare' : 'Next week';
+    return language === 'ro' ? 'Peste 2 săptămâni' : 'In 2 weeks';
   };
 
   return (
@@ -124,11 +138,11 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
             <div className="flex items-center justify-between mb-3">
               <button
                 type="button"
-                onClick={() => setWeekOffset(0)}
-                disabled={weekOffset === 0}
+                onClick={() => setWeekOffset(w => Math.max(minWeek, w - 1))}
+                disabled={weekOffset === minWeek}
                 className={cn(
                   "p-1 rounded-full transition-colors",
-                  weekOffset === 0
+                  weekOffset === minWeek
                     ? "text-zinc-700 cursor-not-allowed"
                     : "text-gray-400 hover:text-white hover:bg-zinc-700 cursor-pointer"
                 )}
@@ -136,18 +150,15 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <span className="text-xs text-gray-400 font-semibold tabular-nums">
-                {weekOffset === 0
-                  ? (language === 'ro' ? 'Săptămâna aceasta' : 'This week')
-                  : (language === 'ro' ? 'Săptămâna viitoare' : 'Next week')}
-                {' · '}{weekLabel()}
+                {weekLabelText()}{' · '}{weekLabel()}
               </span>
               <button
                 type="button"
-                onClick={() => setWeekOffset(1)}
-                disabled={weekOffset === 1}
+                onClick={() => setWeekOffset(w => Math.min(maxWeek, w + 1))}
+                disabled={weekOffset === maxWeek}
                 className={cn(
                   "p-1 rounded-full transition-colors",
-                  weekOffset === 1
+                  weekOffset === maxWeek
                     ? "text-zinc-700 cursor-not-allowed"
                     : "text-gray-400 hover:text-white hover:bg-zinc-700 cursor-pointer"
                 )}

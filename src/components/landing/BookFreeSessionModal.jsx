@@ -338,7 +338,7 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
                             <div className="w-full">
                               <button
                                 disabled
-                                className="w-full flex items-center justify-center gap-2 border font-bold rounded-lg py-2 text-sm transition-all duration-150 mt-1 bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed"
+                                className="w-full flex items-center justify-center gap-2 border font-bold rounded-lg py-2.5 text-sm transition-all duration-150 mt-1 bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed"
                               >
                                 <MessageCircle className="w-4 h-4 flex-shrink-0" />
                                 {isRo ? 'Rezervă mai rapid pe WhatsApp' : 'Book faster via WhatsApp'}
@@ -357,9 +357,9 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
                         rel="noopener noreferrer"
                         aria-disabled={!canSend}
                         onClick={canSend ? undefined : (e) => e.preventDefault()}
-                        className={`flex items-center justify-center gap-2 w-full border font-bold rounded-lg py-2 text-sm transition-all duration-150 mt-1 ${
+                        className={`flex items-center justify-center gap-2 w-full border-2 font-bold rounded-lg py-2.5 text-sm transition-all duration-150 mt-1 ${
                           canSend
-                            ? 'bg-[#25D366]/10 hover:bg-[#25D366]/20 border-[#25D366]/40 hover:border-[#25D366]/70 text-[#25D366] cursor-pointer'
+                            ? 'bg-[#25D366] hover:bg-[#1ebe5d] border-[#25D366] text-white shadow-lg shadow-[#25D366]/30 cursor-pointer'
                             : 'bg-zinc-800 border-zinc-700 text-zinc-600 cursor-not-allowed'
                         }`}
                       >
