@@ -97,11 +97,25 @@ const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "SportsActivityLocation",
   "name": "CrossFit Unbroken Spirit",
-  "description": "Sală de CrossFit în București, oferind antrenamente funcționale de înaltă intensitate, Personal Training și Open Gym.",
+  "description": "Cea mai nouă sală de CrossFit din București. Antrenamente de grup, clase de fitness, personal training și open gym. Echipamente Rogue, rower, assault bike, ski erg. Prima clasă gratuită.",
   "url": "https://www.unbrokenspirit.ro",
   "logo": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/6f20a4dfe_image.png",
   "image": OG_IMAGE,
-  "telephone": "+40722345678",
+  "telephone": "+40748838767",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Echipamente Rogue", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Rowing Machines (Rower)", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Assault Bike (Bike)", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Ski Erg", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Haltere Olimpice", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Gymnastic Rings", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Pull-up Bars", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Vestiare & Dușuri", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Parcare Gratuită", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Antrenamente de Grup", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Personal Training", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Open Gym", "value": true }
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Splaiul Unirii 257-259",
@@ -247,7 +261,12 @@ const FAQ_SCHEMA_RO = {
     { "@type": "Question", "name": "De câte ori pe săptămână ar trebui să vin la CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Începătorii ar trebui să vină la CrossFit de 3 ori pe săptămână pentru a permite corpului să se recupereze. Pe măsură ce progresezi, mulți membri aleg 4-5 zile pe săptămână pentru rezultate optime." } },
     { "@type": "Question", "name": "Pot slăbi făcând CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Da, CrossFit te ajută să slăbești. Antrenamentele intense ard un număr mare de calorii, iar combinate cu o alimentație echilibrată și un deficit caloric consistent, CrossFit este eficient pentru pierderea în greutate." } },
     { "@type": "Question", "name": "Este CrossFit potrivit pentru începători?", "acceptedAnswer": { "@type": "Answer", "text": "Da, CrossFit este potrivit pentru începători. Fiecare mișcare poate fi adaptată (scalată) la nivelul tău, iar antrenorii te ghidează pas cu pas. La CrossFit Unbroken Spirit, prima clasă este gratuită tocmai pentru a-ți permite să testezi fără niciun angajament." } },
-    { "@type": "Question", "name": "Cum pot începe CrossFit la București?", "acceptedAnswer": { "@type": "Answer", "text": "Ca să începi CrossFit în București, rezervă o clasă gratuită la CrossFit Unbroken Spirit pe unbrokenspirit.ro. Sala se află la Splaiul Unirii 257-259, lângă metroul Mihai Bravu, cu parcare gratuită inclusă." } }
+    { "@type": "Question", "name": "Cum pot începe CrossFit la București?", "acceptedAnswer": { "@type": "Answer", "text": "Ca să începi CrossFit în București, rezervă o clasă gratuită la CrossFit Unbroken Spirit pe unbrokenspirit.ro. Sala se află la Splaiul Unirii 257-259, lângă metroul Mihai Bravu, cu parcare gratuită inclusă." } },
+    { "@type": "Question", "name": "Ce echipamente are sala CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit este dotată complet cu echipamente Rogue: haltere olimpice, kettlebells, rowing machines (rower), assault bike, ski erg, inele de gimnastică, bare de tracțiuni și platforme de haltere. Este una dintre cele mai bine dotate săli CrossFit din București." } },
+    { "@type": "Question", "name": "Ce este Hyrox și pot să mă pregătesc pentru Hyrox la Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Hyrox este o competiție de fitness funcțional care combină alergarea cu 8 stații de lucru: rowing, ski erg, assault bike, sled push/pull și altele. La CrossFit Unbroken Spirit avem rower, assault bike și ski erg, deci te poți pregăti excelent pentru Hyrox în antrenamentele noastre de condiționare." } },
+    { "@type": "Question", "name": "Există antrenamente de grup la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Da, toate clasele CrossFit sunt antrenamente de grup ghidate de antrenor. Fiecare clasă durează 60 de minute și se desfășoară în grupe mici, ceea ce garantează atenție individuală și o atmosferă de echipă motivantă. Există clase dimineața, la prânz și seara, de luni până sâmbătă." } },
+    { "@type": "Question", "name": "Este CrossFit Unbroken Spirit o sală de fitness sau o sală CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit este o sală de fitness specializată în CrossFit, cu antrenamente de grup ghidate de antrenori certificați. Spre deosebire de o sală de fitness clasică, oferim programare zilnică, coaching inclus în abonament, echipamente profesionale (Rogue, rower, bike, ski erg) și o comunitate puternică." } },
+    { "@type": "Question", "name": "Pot face rower, bike sau ski la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Da. CrossFit Unbroken Spirit este dotată cu rowing machines (rower), assault bike și ski erg, care sunt folosite în antrenamentele de condiționare și WOD-uri. Aceste echipamente sunt disponibile atât în clasele de grup, cât și în sesiunile de Open Gym." } }
   ]
 };
 
@@ -363,6 +382,20 @@ function removeSchema(id) {
   if (el) el.remove();
 }
 
+const SERVICES_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Servicii CrossFit Unbroken Spirit București",
+  "description": "Servicii și programe disponibile la CrossFit Unbroken Spirit, sală de fitness și CrossFit în București.",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Clase CrossFit de Grup", "description": "Antrenamente de grup ghidate de antrenor certificat, 60 de minute, pentru toate nivelurile. WOD zilnic variat, incluzând gimnastică, haltere și condiționare.", "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" } } },
+    { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Antrenamente de Condiționare (Rower, Bike, Ski)", "description": "Sesiuni de condiționare cardiovasculară folosind rowing machines, assault bike și ski erg. Ideale pentru pregătire Hyrox și ardere de calorii.", "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" } } },
+    { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Personal Training", "description": "Antrenament 1-la-1 personalizat cu antrenor certificat. Adaptat obiectivelor tale: slăbit, forță, condiționare sau pregătire competițională.", "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" } } },
+    { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "Open Gym", "description": "Acces liber la toate echipamentele sălii: haltere Rogue, rower, assault bike, ski erg, inele, bare de tracțiuni. Ideal pentru antrenamente independente.", "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" } } },
+    { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "Haltere Olimpice (Weightlifting)", "description": "Antrenamente de halterofilie olimpică pentru dezvoltarea forței și puterii explozive. Tehnici de smuls și aruncat cu haltera.", "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" } } }
+  ]
+};
+
 const SPEAKABLE_SCHEMA_RO = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -377,36 +410,36 @@ const SPEAKABLE_SCHEMA_RO = {
 const SECTION_META = {
   ro: {
     hero: {
-      title: 'CrossFit București | CrossFit Unbroken Spirit - Prima Clasă Gratuită',
-      description: 'Cea mai bine dotată sală CrossFit din București. Antrenamente funcționale de înaltă intensitate, antrenori certificați și parcare gratuită. Prima clasă gratuită — rezervă acum!',
+      title: 'CrossFit București | Sală de Fitness Dotată - CrossFit Unbroken Spirit',
+      description: 'CrossFit Unbroken Spirit — cea mai nouă sală CrossFit din București. Antrenamente de grup, clase de fitness, rower, bike, ski erg, echipamente Rogue. Prima clasă gratuită!',
     },
     about: {
-      title: 'Sală CrossFit București - Antrenori & Facilități | Unbroken Spirit',
-      description: 'Cunoaște antrenorii CrossFit de la Unbroken Spirit București. Echipamente Rogue, parcare gratuită, vestiare complete. Splaiul Unirii 257-259, lângă metroul Mihai Bravu.',
+      title: 'Sală CrossFit & Fitness București | Antrenori Certificați - Unbroken Spirit',
+      description: 'Sală de fitness CrossFit în București dotată cu echipamente Rogue, rower, assault bike, ski erg. Antrenori certificați, vestiare, parcare gratuită. Splaiul Unirii 257-259.',
     },
     starthere: {
-      title: 'Ce este CrossFit? Ghid Complet pentru Începători | Unbroken Spirit București',
-      description: 'Vrei să începi CrossFit în București dar nu știi de unde? Ghidul nostru explică ce este CrossFit, cum funcționează și de ce prima clasă la Unbroken Spirit este gratuită.',
+      title: 'Ce este CrossFit? Ghid pentru Începători | Sală Fitness București - Unbroken Spirit',
+      description: 'Vrei să începi CrossFit în București? Ghidul nostru complet explică antrenamentele de grup, clasele de fitness, echipamentele și de ce prima clasă la Unbroken Spirit este gratuită.',
     },
     programs: {
-      title: 'Programe CrossFit București: Clase, Open Gym, Personal Training | Unbroken Spirit',
-      description: 'Descoperă programele CrossFit Unbroken Spirit: clase de grup ghidate de antrenor, Open Gym, Personal Training și nutriție. Adaptate oricărui nivel de fitness din București.',
+      title: 'Antrenamente de Grup & Clase de Fitness București | Unbroken Spirit',
+      description: 'Clase de fitness și antrenamente de grup la CrossFit Unbroken Spirit: CrossFit, haltere, condiționare (rower, bike, ski), Open Gym și Personal Training. Toate nivelurile binevenite.',
     },
     faq: {
-      title: 'Întrebări despre CrossFit București - Răspunsuri Complete | Unbroken Spirit',
-      description: 'Ce este CrossFit? Cât costă? Este periculos? Răspunsuri complete la toate întrebările despre CrossFit București, abonamente și prima clasă gratuită la Unbroken Spirit.',
+      title: 'Întrebări CrossFit București: Echipamente, Clase, Prețuri | Unbroken Spirit',
+      description: 'Ce echipamente are sala? Ce este Hyrox? Cât costă? Răspunsuri la toate întrebările despre sală de CrossFit București, antrenamente de grup și prima clasă gratuită.',
     },
     pricing: {
-      title: 'Prețuri & Abonamente CrossFit București | Unbroken Spirit - de la 320 RON/lună',
-      description: 'Abonamente CrossFit București de la 320 RON/lună cu 8 clase. Open Gym, Personal Training și prima ședință gratuită disponibile. Parcare gratuită inclusă.',
+      title: 'Prețuri Sală Fitness & CrossFit București | Unbroken Spirit - de la 320 RON/lună',
+      description: 'Abonamente CrossFit și clase de fitness în București de la 320 RON/lună. Open Gym, Personal Training și prima ședință gratuită. Cea mai nouă sală CrossFit dotată din București.',
     },
     schedule: {
-      title: 'Orar Clase CrossFit București | Unbroken Spirit - Luni-Sâmbătă',
-      description: 'Orarul complet al claselor CrossFit la Unbroken Spirit București: Luni-Vineri 07:00-19:30 și Sâmbătă 10:00. Rezervă locul tău prin aplicația ThunderWOD.',
+      title: 'Orar Clase CrossFit & Antrenamente de Grup București | Unbroken Spirit',
+      description: 'Orarul claselor de fitness și antrenamentelor de grup la CrossFit Unbroken Spirit București. Luni-Vineri 07:00-19:30, Sâmbătă 10:00. Rezervă prin ThunderWOD.',
     },
     contact: {
-      title: 'Contact Sală CrossFit București | Unbroken Spirit - Splaiul Unirii 257-259',
-      description: 'Contactează CrossFit Unbroken Spirit București: Splaiul Unirii 257-259, lângă metroul Mihai Bravu. Program Luni-Vineri 6:00-21:00, Sâmbătă 9:00-13:00. Parcare gratuită.',
+      title: 'Contact Sală CrossFit & Fitness București | Unbroken Spirit - Splaiul Unirii 257-259',
+      description: 'Contactează CrossFit Unbroken Spirit, sală de fitness în București: Splaiul Unirii 257-259, lângă metroul Mihai Bravu. Luni-Vineri 6:00-21:00, Sâmbătă 9:00-13:00.',
     },
   },
   en: {
@@ -527,6 +560,7 @@ export default function SeoMeta() {
     injectSchema('schema-website', WEBSITE_SCHEMA);
     injectSchema('schema-events', buildEventSchemas());
     injectSchema('schema-howto', language === 'en' ? HOWTO_SCHEMA_EN : HOWTO_SCHEMA_RO);
+    injectSchema('schema-services', SERVICES_SCHEMA);
     // FAQ always present for Romanian (primary language) — helps AI Overviews
     if (language !== 'en') {
       injectSchema('schema-faq', FAQ_SCHEMA_RO);
@@ -567,6 +601,7 @@ export default function SeoMeta() {
       removeSchema('schema-events');
       removeSchema('schema-webpage');
       removeSchema('schema-howto');
+      removeSchema('schema-services');
       removeSchema('schema-speakable');
     };
   }, [language]);

@@ -30,8 +30,8 @@ const getPrograms = (t, language) => [
     icon: Flame,
     title: language === 'ro' ? "Condiționare" : "Conditioning",
     description: language === 'ro'
-      ? "Dacă obosești prea repede, nu e vorba de voință — e vorba de motor. Sesiunile noastre de condiționare îți construiesc capacitatea cardiovasculară mai multă putere, mai mult timp, mai puțin efort resimțit. Fii cel care dă ritmul, nu cel care se luptă să țină pasul."
-      : "If you're gassing out before the workout ends, willpower isn't the problem — your engine is. Our conditioning sessions build the cardiovascular capacity that powers everything else. More output. Longer. Easier. Stop surviving workouts. Start owning them.",
+      ? "Rower, assault bike, ski erg — condiționarea la noi e serioasă. Sesiunile de antrenament cardiovascular îți construiesc motorul pentru toate celelalte. Ideal și pentru pregătire Hyrox."
+      : "Rower, assault bike, ski erg — conditioning at Unbroken Spirit is serious. These sessions build the cardiovascular engine that powers every other workout. Great for Hyrox prep too.",
     color: "from-orange-600 to-red-500",
     image: "https://media.giphy.com/media/xUOwGkdSnU89ib4FnW/giphy.gif"
   },
