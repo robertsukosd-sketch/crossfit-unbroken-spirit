@@ -126,7 +126,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "21",
+    "reviewCount": "22",
     "bestRating": "5"
   }
 };

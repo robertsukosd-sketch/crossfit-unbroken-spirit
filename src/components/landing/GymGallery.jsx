@@ -3,19 +3,19 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const GYM_IMAGES = [
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/3f7c1702a_CrossFit_US-003.jpg', alt: 'CrossFit Unbroken Spirit gym' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/7bf0bb8c4_CrossFit_US-004.jpg', alt: 'CrossFit Unbroken Spirit equipment' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/d2ebb21a7_CrossFit_US-007.jpg', alt: 'CrossFit Unbroken Spirit rig' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/e53f3a916_CrossFit_US-013.jpg', alt: 'CrossFit Unbroken Spirit box interior' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/24bd3546f_CrossFit_US-206.jpg', alt: 'CrossFit Unbroken Spirit wall balls' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/455f79116_CrossFit_US-207.jpg', alt: 'CrossFit Unbroken Spirit rig detail' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/3f48705e1_CrossFit_US-209.jpg', alt: 'CrossFit Unbroken Spirit Rogue wall ball' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/cdce7ff04_CrossFit_US-210.jpg', alt: 'CrossFit Unbroken Spirit dumbbells' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/cc65f02d2_CrossFit_US-221.jpg', alt: 'CrossFit Unbroken Spirit rowers' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/8346a8ac8_CrossFit_US-222.jpg', alt: 'CrossFit Unbroken Spirit rowers side view' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4ba37c863_CrossFit_US-008.jpg', alt: 'CrossFit Unbroken Spirit Rogue barbells' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/e532acb84_CrossFit_US-224.jpg', alt: 'CrossFit Unbroken Spirit entrance' },
-  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/0d7ea80a2_CrossFit_US-227.jpg', alt: 'CrossFit Unbroken Spirit location' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/3f7c1702a_CrossFit_US-003.jpg', alt: 'Sală CrossFit București - CrossFit Unbroken Spirit interior' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/7bf0bb8c4_CrossFit_US-004.jpg', alt: 'Echipamente CrossFit Rogue - CrossFit Unbroken Spirit București' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/d2ebb21a7_CrossFit_US-007.jpg', alt: 'Rig CrossFit profesional - CrossFit Unbroken Spirit Splaiul Unirii' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/e53f3a916_CrossFit_US-013.jpg', alt: 'Interior box CrossFit București - CrossFit Unbroken Spirit' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/24bd3546f_CrossFit_US-206.jpg', alt: 'Wall balls CrossFit - antrenament funcțional București' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/455f79116_CrossFit_US-207.jpg', alt: 'Rig CrossFit Rogue - sala CrossFit Unbroken Spirit București' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/3f48705e1_CrossFit_US-209.jpg', alt: 'Wall ball Rogue CrossFit - CrossFit Unbroken Spirit sector 3 București' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/cdce7ff04_CrossFit_US-210.jpg', alt: 'Gantere CrossFit Rogue - echipamente sală CrossFit București' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/cc65f02d2_CrossFit_US-221.jpg', alt: 'Rowing machines CrossFit - antrenament cardio CrossFit Unbroken Spirit' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/8346a8ac8_CrossFit_US-222.jpg', alt: 'Concept2 rowers - sala CrossFit Mihai Bravu București' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/4ba37c863_CrossFit_US-008.jpg', alt: 'Bare olimpice Rogue CrossFit - CrossFit Unbroken Spirit București' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/e532acb84_CrossFit_US-224.jpg', alt: 'Intrare CrossFit Unbroken Spirit - sală CrossFit Splaiul Unirii 257-259 București' },
+  { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/0d7ea80a2_CrossFit_US-227.jpg', alt: 'Locație CrossFit Unbroken Spirit - CrossFit lângă metrou Mihai Bravu București' },
 ];
 
 export default function GymGallery() {

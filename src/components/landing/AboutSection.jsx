@@ -232,9 +232,9 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {(() => {
               const images = [
-                { id: 1, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/18d3ab544_CrossFit_US-148A.jpg', objectPosition: '50% 5%' },
-                { id: 2, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/9884b0a50_CrossFit_US-138M.jpg', objectPosition: '50% 5%' },
-                { id: 3, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/02fa5e0e6_CrossFit_US-140R.jpg', objectPosition: '50% 5%' },
+                { id: 1, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/18d3ab544_CrossFit_US-148A.jpg', objectPosition: '50% 5%', altText: 'Andrei Vârnav - antrenor CrossFit București, CrossFit Unbroken Spirit' },
+                { id: 2, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/9884b0a50_CrossFit_US-138M.jpg', objectPosition: '50% 5%', altText: 'Dumitru Mîndrescu - antrenor CrossFit și weightlifting București' },
+                { id: 3, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/02fa5e0e6_CrossFit_US-140R.jpg', objectPosition: '50% 5%', altText: 'Robert Sukosd - CrossFit Level 2 Trainer, antrenor CrossFit Unbroken Spirit București' },
               ];
 
               const coaches = [
@@ -277,7 +277,7 @@ export default function AboutSection() {
                   <div className="relative h-96 overflow-hidden">
                     <img
                       src={images[index].src}
-                      alt={`${coach.name} - CrossFit Unbroken Spirit coach`}
+                      alt={images[index].altText || `${coach.name} - CrossFit Unbroken Spirit coach`}
                       width={400}
                       height={256}
                       loading="lazy"
