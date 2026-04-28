@@ -122,7 +122,11 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://www.instagram.com/crossfit.unbroken.spirit",
     "https://www.facebook.com/crossfitunbrokenspirit"
   ],
-  "priceRange": "320-450 RON/lună",
+  "priceRange": "320-450 RON",
+  "currenciesAccepted": "RON",
+  "paymentAccepted": "Cash, Card",
+  "areaServed": { "@type": "City", "name": "București" },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=CrossFit+Unbroken+Spirit&query_place_id=ChIJmV_f1yr_sUARNEf83Ig3aYM",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
@@ -186,38 +190,44 @@ const REVIEWS_SCHEMA = {
   "review": [
     {
       "@type": "Review",
+      "author": { "@type": "Person", "name": "Alexandra Radutu" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "datePublished": "2025-04-01",
+      "reviewBody": "CrossFit Unbroken Spirit — hottest CF affiliate box in town! Echipamente noi Rogue, antrenamente cu o structură clară și o progresie vizibilă. Antrenorii sunt implicați și știu exact cum să adapteze exercițiile. Bonus: parcare inclusă și aproape de metroul Mihai Bravu. Una dintre cele mai bune experiențe de CrossFit!"
+    },
+    {
+      "@type": "Review",
       "author": { "@type": "Person", "name": "Ana Maria Onuta" },
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "datePublished": "2025-04-01",
       "reviewBody": "Super frumoasă sală și dotată!! Foarte curat și Dumitru pregătește niște antrenamente super bune. Recomand această sală!!"
     },
     {
       "@type": "Review",
       "author": { "@type": "Person", "name": "Alina C." },
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "datePublished": "2025-03-28",
       "reviewBody": "Recomand cu drag! Antrenorii știu cum să te ajute să îți atingi obiectivele și să îți depășești limitele, indiferent de nivelul la care ești. Echipamentele sunt în stare impecabilă, sala este curată și muzica bună."
     },
     {
       "@type": "Review",
       "author": { "@type": "Person", "name": "Cosmin M." },
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "datePublished": "2025-03-25",
       "reviewBody": "Cea mai nouă sală de CrossFit din București! Echipamente de calitate, antrenori dedicați și o comunitate super primitoare. Recomand cu căldură!"
     },
     {
       "@type": "Review",
-      "author": { "@type": "Person", "name": "Mihai D." },
+      "author": { "@type": "Person", "name": "Mihai Banica" },
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "datePublished": "2025-03-20",
       "reviewBody": "Am venit pentru prima dată fără experiență în CrossFit și am fost primit extraordinar. Antrenorii sunt răbdători și profesioniști. Recomand tuturor!"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Elena P." },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "Sală de top! Comunitate extraordinară, antrenori profesioniști și echipamente de calitate. Cel mai bun loc pentru CrossFit din București!"
     },
     {
       "@type": "Review",
       "author": { "@type": "Person", "name": "Andrei V." },
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "datePublished": "2025-03-15",
       "reviewBody": "Experiență de 5 stele! Atmosferă fantastică, WOD-uri bine programate și antrenori care chiar îți pasă de progresul tău."
     }
   ]
@@ -353,39 +363,50 @@ function removeSchema(id) {
   if (el) el.remove();
 }
 
+const SPEAKABLE_SCHEMA_RO = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "CrossFit Unbroken Spirit București",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "h2", ".speakable"]
+  },
+  "url": "https://www.unbrokenspirit.ro"
+};
+
 const SECTION_META = {
   ro: {
     hero: {
-      title: 'CrossFit Unbroken Spirit București - Forță. Comunitate. Rezultate.',
-      description: 'Descoperă potențialul tău maxim la CrossFit Unbroken Spirit. Antrenamente funcționale de înaltă intensitate, coaching dedicat și o comunitate puternică în București.',
+      title: 'CrossFit București | CrossFit Unbroken Spirit - Prima Clasă Gratuită',
+      description: 'Cea mai bine dotată sală CrossFit din București. Antrenamente funcționale de înaltă intensitate, antrenori certificați și parcare gratuită. Prima clasă gratuită — rezervă acum!',
     },
     about: {
-      title: 'Despre Noi - CrossFit Unbroken Spirit București',
-      description: 'Cunoaște antrenorii și sala CrossFit Unbroken Spirit. Facilități moderne, parcare gratuită, vestiare complete. Metrou Mihai Bravu, Splaiul Unirii 257-259.',
+      title: 'Sală CrossFit București - Antrenori & Facilități | Unbroken Spirit',
+      description: 'Cunoaște antrenorii CrossFit de la Unbroken Spirit București. Echipamente Rogue, parcare gratuită, vestiare complete. Splaiul Unirii 257-259, lângă metroul Mihai Bravu.',
     },
     starthere: {
-      title: 'Ce este CrossFit? Ghid pentru Începători - Unbroken Spirit',
-      description: 'Vrei să începi CrossFit dar nu știi de unde? Citește ghidul nostru complet despre ce este CrossFit, cum funcționează și de ce e perfect pentru tine.',
+      title: 'Ce este CrossFit? Ghid Complet pentru Începători | Unbroken Spirit București',
+      description: 'Vrei să începi CrossFit în București dar nu știi de unde? Ghidul nostru explică ce este CrossFit, cum funcționează și de ce prima clasă la Unbroken Spirit este gratuită.',
     },
     programs: {
-      title: 'Programe CrossFit București - Unbroken Spirit',
-      description: 'Explorează programele noastre CrossFit: clase de grup, Open Gym, Personal Training și Nutriție. Antrenamente adaptate oricărui nivel de fitness.',
+      title: 'Programe CrossFit București: Clase, Open Gym, Personal Training | Unbroken Spirit',
+      description: 'Descoperă programele CrossFit Unbroken Spirit: clase de grup ghidate de antrenor, Open Gym, Personal Training și nutriție. Adaptate oricărui nivel de fitness din București.',
     },
     faq: {
-      title: 'Întrebări Frecvente CrossFit - Unbroken Spirit București',
-      description: 'Răspunsuri la toate întrebările tale despre CrossFit, sala noastră, abonamente și prețuri. Află tot ce trebuie să știi înainte de prima clasă.',
+      title: 'Întrebări despre CrossFit București - Răspunsuri Complete | Unbroken Spirit',
+      description: 'Ce este CrossFit? Cât costă? Este periculos? Răspunsuri complete la toate întrebările despre CrossFit București, abonamente și prima clasă gratuită la Unbroken Spirit.',
     },
     pricing: {
-      title: 'Abonamente și Prețuri CrossFit - Unbroken Spirit București',
-      description: 'Abonamente CrossFit de la 320 RON/lună. Clase de grup, Open Gym, Personal Training. Prima ședință gratuită pentru începători. Parcare inclusă.',
+      title: 'Prețuri & Abonamente CrossFit București | Unbroken Spirit - de la 320 RON/lună',
+      description: 'Abonamente CrossFit București de la 320 RON/lună cu 8 clase. Open Gym, Personal Training și prima ședință gratuită disponibile. Parcare gratuită inclusă.',
     },
     schedule: {
-      title: 'Orar CrossFit București - Unbroken Spirit',
-      description: 'Orarul complet al claselor CrossFit la Unbroken Spirit. Clase în fiecare zi, dimineața și seara. Rezervă locul tău prin aplicația ThunderWOD.',
+      title: 'Orar Clase CrossFit București | Unbroken Spirit - Luni-Sâmbătă',
+      description: 'Orarul complet al claselor CrossFit la Unbroken Spirit București: Luni-Vineri 07:00-19:30 și Sâmbătă 10:00. Rezervă locul tău prin aplicația ThunderWOD.',
     },
     contact: {
-      title: 'Contact CrossFit Unbroken Spirit - Splaiul Unirii 257-259 București',
-      description: 'Contactează CrossFit Unbroken Spirit: Splaiul Unirii 257-259, București. Luni-Vineri 6:00-21:00, Sâmbătă 9:00-13:00. Metrou Mihai Bravu, parcare gratuită.',
+      title: 'Contact Sală CrossFit București | Unbroken Spirit - Splaiul Unirii 257-259',
+      description: 'Contactează CrossFit Unbroken Spirit București: Splaiul Unirii 257-259, lângă metroul Mihai Bravu. Program Luni-Vineri 6:00-21:00, Sâmbătă 9:00-13:00. Parcare gratuită.',
     },
   },
   en: {
@@ -484,12 +505,15 @@ function applyMeta(lang, sectionId) {
     "isPartOf": { "@type": "WebSite", "name": "CrossFit Unbroken Spirit", "url": "https://www.unbrokenspirit.ro" }
   });
 
-  // FAQ Schema — only on FAQ section, language-aware
-  if (sectionId === 'faq') {
-    injectSchema('schema-faq', lang === 'en' ? FAQ_SCHEMA_EN : FAQ_SCHEMA_RO);
-  } else {
-    removeSchema('schema-faq');
+  // FAQ Schema — always present for RO (primary language); for EN only when FAQ section visible
+  if (lang === 'en') {
+    if (sectionId === 'faq') {
+      injectSchema('schema-faq', FAQ_SCHEMA_EN);
+    } else {
+      removeSchema('schema-faq');
+    }
   }
+  // RO FAQ is already injected always in useEffect — no need to remove/re-inject per section
 }
 
 export default function SeoMeta() {
@@ -503,6 +527,14 @@ export default function SeoMeta() {
     injectSchema('schema-website', WEBSITE_SCHEMA);
     injectSchema('schema-events', buildEventSchemas());
     injectSchema('schema-howto', language === 'en' ? HOWTO_SCHEMA_EN : HOWTO_SCHEMA_RO);
+    // FAQ always present for Romanian (primary language) — helps AI Overviews
+    if (language !== 'en') {
+      injectSchema('schema-faq', FAQ_SCHEMA_RO);
+    }
+    // Speakable for Romanian — helps Google Assistant / AI read key content
+    if (language !== 'en') {
+      injectSchema('schema-speakable', SPEAKABLE_SCHEMA_RO);
+    }
 
     // Apply default (hero) meta on mount
     applyMeta(language, 'hero');
@@ -535,6 +567,7 @@ export default function SeoMeta() {
       removeSchema('schema-events');
       removeSchema('schema-webpage');
       removeSchema('schema-howto');
+      removeSchema('schema-speakable');
     };
   }, [language]);
 
