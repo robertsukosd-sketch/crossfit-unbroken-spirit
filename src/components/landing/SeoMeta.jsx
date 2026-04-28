@@ -228,14 +228,16 @@ const FAQ_SCHEMA_RO = {
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "Ce înseamnă CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit este un program de antrenament bazat pe mișcări funcționale, variate constant și realizate la intensitate ridicată. Combină exerciții de forță, cardio și gimnastică pentru a îmbunătăți condiția fizică generală și performanța în activitățile din viața reală." } },
-    { "@type": "Question", "name": "Trebuie să fiu în formă înainte de a începe CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Nu trebuie să fii în formă înainte de a începe CrossFit — CrossFit este exact procesul prin care ajungi în formă. Membrii CrossFit Unbroken Spirit variază de la sportivi de elită la persoane care fac mișcare pentru prima dată." } },
-    { "@type": "Question", "name": "Cât costă un abonament la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Abonamentele la CrossFit Unbroken Spirit încep de la 320 RON/lună pentru 8 clase. Abonamentul de 12 clase costă 400 RON/lună, iar abonamentul nelimitat 450 RON/lună. Există și opțiuni de Personal Training și Open Gym." } },
-    { "@type": "Question", "name": "Cât durează o clasă de CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "O clasă de CrossFit la Unbroken Spirit durează 60 de minute și include instructaj, încălzire ghidată, o sesiune de forță sau tehnică, antrenamentul zilei (WOD) și stretching." } },
-    { "@type": "Question", "name": "Este CrossFitul periculos?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit nu este periculos când este predat corect. La Unbroken Spirit folosim filozofia 'Mecanică, Consistență, apoi Intensitate' — te înveți să te miști corect înainte de a crește viteza sau greutatea." } },
-    { "@type": "Question", "name": "Cum pot ajunge la sală? Există parcare?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit se află la Splaiul Unirii 257-259, București, la 7-8 minute de mers pe jos de stația de metrou Mihai Bravu. Există parcare gratuită inclusă pentru toți membrii." } },
-    { "@type": "Question", "name": "Oferiți o clasă de probă gratuită?", "acceptedAnswer": { "@type": "Answer", "text": "Da, CrossFit Unbroken Spirit oferă prima clasă gratuită pentru toți noii membri. Te poți înscrie direct prin formularul de pe site-ul unbrokenspirit.ro." } },
-    { "@type": "Question", "name": "De câte ori pe săptămână ar trebui să vin la CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Pentru începători, recomandăm 3 antrenamente pe săptămână pentru a permite corpului să se recupereze. Pe măsură ce progresezi, mulți membri aleg 4-5 zile pe săptămână pentru rezultate optime." } },
-    { "@type": "Question", "name": "Pot slăbi făcând CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Da, CrossFit ajută la slăbire prin antrenamente intense care ard un număr mare de calorii. Combinat cu o alimentație echilibrată și un deficit caloric consistent, CrossFit este eficient pentru pierderea în greutate." } }
+    { "@type": "Question", "name": "Trebuie să fiu în formă înainte de a începe CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Nu trebuie să fii în formă înainte de a începe CrossFit. CrossFit este exact procesul prin care ajungi în formă — membrii variază de la sportivi de elită la persoane care fac mișcare pentru prima dată." } },
+    { "@type": "Question", "name": "Cât costă un abonament la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Un abonament la CrossFit Unbroken Spirit costă de la 320 RON/lună pentru 8 clase. Abonamentul de 12 clase costă 400 RON/lună, iar cel nelimitat 450 RON/lună. Există și Personal Training și Open Gym." } },
+    { "@type": "Question", "name": "Cât durează o clasă de CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "O clasă de CrossFit durează 60 de minute. Clasa include instructaj, încălzire ghidată, o sesiune de forță sau tehnică, antrenamentul zilei (WOD) și stretching." } },
+    { "@type": "Question", "name": "Este CrossFitul periculos?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit nu este periculos când este predat corect. La CrossFit Unbroken Spirit folosim filozofia 'Mecanică, Consistență, apoi Intensitate' — înveți să te miști corect înainte de a crește viteza sau greutatea." } },
+    { "@type": "Question", "name": "Cum pot ajunge la CrossFit Unbroken Spirit? Există parcare?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit se află la Splaiul Unirii 257-259, București. Există parcare gratuită inclusă. Cea mai apropiată stație de metrou este Mihai Bravu, la 7-8 minute de mers pe jos." } },
+    { "@type": "Question", "name": "Oferiți o clasă de probă gratuită?", "acceptedAnswer": { "@type": "Answer", "text": "Da, prima clasă este gratuită la CrossFit Unbroken Spirit pentru toți noii membri. Te poți înscrie direct prin formularul de pe unbrokenspirit.ro — nu ai nevoie de experiență anterioară." } },
+    { "@type": "Question", "name": "De câte ori pe săptămână ar trebui să vin la CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Începătorii ar trebui să vină la CrossFit de 3 ori pe săptămână pentru a permite corpului să se recupereze. Pe măsură ce progresezi, mulți membri aleg 4-5 zile pe săptămână pentru rezultate optime." } },
+    { "@type": "Question", "name": "Pot slăbi făcând CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Da, CrossFit te ajută să slăbești. Antrenamentele intense ard un număr mare de calorii, iar combinate cu o alimentație echilibrată și un deficit caloric consistent, CrossFit este eficient pentru pierderea în greutate." } },
+    { "@type": "Question", "name": "Este CrossFit potrivit pentru începători?", "acceptedAnswer": { "@type": "Answer", "text": "Da, CrossFit este potrivit pentru începători. Fiecare mișcare poate fi adaptată (scalată) la nivelul tău, iar antrenorii te ghidează pas cu pas. La CrossFit Unbroken Spirit, prima clasă este gratuită tocmai pentru a-ți permite să testezi fără niciun angajament." } },
+    { "@type": "Question", "name": "Cum pot începe CrossFit la București?", "acceptedAnswer": { "@type": "Answer", "text": "Ca să începi CrossFit în București, rezervă o clasă gratuită la CrossFit Unbroken Spirit pe unbrokenspirit.ro. Sala se află la Splaiul Unirii 257-259, lângă metroul Mihai Bravu, cu parcare gratuită inclusă." } }
   ]
 };
 
@@ -244,14 +246,94 @@ const FAQ_SCHEMA_EN = {
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "What is CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit is a training program based on constantly varied functional movements performed at high intensity. It combines strength, cardio, and gymnastics to improve overall fitness and real-life performance." } },
-    { "@type": "Question", "name": "Do I need to be in shape before starting CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "You do not need to be in shape before starting CrossFit — CrossFit is the process of getting in shape. CrossFit Unbroken Spirit members range from elite athletes to complete beginners." } },
-    { "@type": "Question", "name": "How much does a CrossFit Unbroken Spirit membership cost?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit memberships start from 320 RON/month for 8 classes. The 12-class plan costs 400 RON/month, and the unlimited plan is 450 RON/month. Personal Training and Open Gym options are also available." } },
-    { "@type": "Question", "name": "How long are CrossFit classes?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit classes at Unbroken Spirit last 60 minutes and include a walkthrough, guided warm-up, a strength or technique session, the Workout of the Day (WOD), and a cool-down stretch." } },
-    { "@type": "Question", "name": "Is CrossFit dangerous?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit is not dangerous when taught correctly. At Unbroken Spirit we follow the principle of 'Mechanics, Consistency, then Intensity' — you learn to move correctly before increasing speed or weight." } },
-    { "@type": "Question", "name": "How can I get to the gym? Is there parking?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit is located at Splaiul Unirii 257-259, Bucharest, a 7-8 minute walk from Mihai Bravu metro station. Free parking is included for all members." } },
-    { "@type": "Question", "name": "Do you offer a free trial class?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CrossFit Unbroken Spirit offers a free first class for all new members. You can sign up through the form on unbrokenspirit.ro." } },
-    { "@type": "Question", "name": "How many times a week should I do CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "For beginners, we recommend 3 CrossFit sessions per week to allow recovery. As you progress, many members train 4-5 days per week for optimal results." } },
-    { "@type": "Question", "name": "Can I lose weight doing CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CrossFit is effective for weight loss. The high-intensity workouts burn a large number of calories, and combined with a balanced diet and consistent caloric deficit, CrossFit produces measurable fat loss results." } }
+    { "@type": "Question", "name": "Do I need to be in shape before starting CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "No, you do not need to be in shape before starting CrossFit. CrossFit is the process of getting in shape — members at CrossFit Unbroken Spirit range from elite athletes to complete beginners." } },
+    { "@type": "Question", "name": "How much does a CrossFit Unbroken Spirit membership cost?", "acceptedAnswer": { "@type": "Answer", "text": "A CrossFit Unbroken Spirit membership starts from 320 RON/month for 8 classes. The 12-class plan costs 400 RON/month and the unlimited plan is 450 RON/month. Personal Training and Open Gym are also available." } },
+    { "@type": "Question", "name": "How long are CrossFit classes?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit classes at Unbroken Spirit last 60 minutes. Each class includes a walkthrough, guided warm-up, a strength or technique session, the Workout of the Day (WOD), and a cool-down stretch." } },
+    { "@type": "Question", "name": "Is CrossFit dangerous?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit is not dangerous when taught correctly. At CrossFit Unbroken Spirit we follow the principle of 'Mechanics, Consistency, then Intensity' — you learn to move correctly before increasing speed or weight." } },
+    { "@type": "Question", "name": "How can I get to CrossFit Unbroken Spirit? Is there parking?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit is located at Splaiul Unirii 257-259, Bucharest. Free parking is included. The nearest metro station is Mihai Bravu, a 7-8 minute walk away." } },
+    { "@type": "Question", "name": "Do you offer a free trial class?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, the first class is free at CrossFit Unbroken Spirit for all new members. You can sign up through the form on unbrokenspirit.ro — no prior experience required." } },
+    { "@type": "Question", "name": "How many times a week should I do CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Beginners should do CrossFit 3 times a week to allow the body to recover. As you progress, many members train 4-5 days per week for optimal results." } },
+    { "@type": "Question", "name": "Can I lose weight doing CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CrossFit helps with weight loss. The high-intensity workouts burn a large number of calories, and combined with a balanced diet and consistent caloric deficit, CrossFit produces measurable fat loss results." } },
+    { "@type": "Question", "name": "Is CrossFit suitable for beginners?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, CrossFit is suitable for beginners. Every movement can be scaled to your level and coaches guide you step by step. At CrossFit Unbroken Spirit, the first class is free so you can try it with no commitment." } },
+    { "@type": "Question", "name": "How can I start CrossFit in Bucharest?", "acceptedAnswer": { "@type": "Answer", "text": "To start CrossFit in Bucharest, book a free class at CrossFit Unbroken Spirit at unbrokenspirit.ro. The gym is at Splaiul Unirii 257-259, near Mihai Bravu metro station, with free parking included." } }
+  ]
+};
+
+const HOWTO_SCHEMA_RO = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cum să începi CrossFit la CrossFit Unbroken Spirit București",
+  "description": "Ghid pas cu pas pentru a începe CrossFit la CrossFit Unbroken Spirit. Prima clasă este gratuită și nu ai nevoie de experiență anterioară.",
+  "totalTime": "PT30M",
+  "estimatedCost": { "@type": "MonetaryAmount", "currency": "RON", "value": "0" },
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Rezervă prima ta clasă gratuită",
+      "text": "Completează formularul de pe unbrokenspirit.ro pentru a-ți rezerva prima clasă CrossFit gratuită. Nu ai nevoie de experiență anterioară — clasa este adaptată oricărui nivel.",
+      "url": "https://www.unbrokenspirit.ro"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Ajungi la sală",
+      "text": "Sala se află la Splaiul Unirii 257-259, București, la 7-8 minute de mers pe jos de metroul Mihai Bravu. Există parcare gratuită. Îmbracă-te confortabil și adu o sticlă cu apă.",
+      "url": "https://www.unbrokenspirit.ro/#about"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Participă la clasă cu antrenorul",
+      "text": "Antrenorul te va ghida prin toate mișcările, adaptate la nivelul tău. Clasa durează 60 de minute și include încălzire, forță și WOD (antrenamentul zilei).",
+      "url": "https://www.unbrokenspirit.ro/#schedule"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Alege un abonament și descarcă ThunderWOD",
+      "text": "Dacă ți-a plăcut experiența, alege un abonament de la 320 RON/lună și descarcă aplicația ThunderWOD pentru rezervări și urmărirea progresului.",
+      "url": "https://www.unbrokenspirit.ro/#pricing"
+    }
+  ]
+};
+
+const HOWTO_SCHEMA_EN = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Start CrossFit at CrossFit Unbroken Spirit Bucharest",
+  "description": "Step-by-step guide to starting CrossFit at CrossFit Unbroken Spirit. Your first class is free and no prior experience is needed.",
+  "totalTime": "PT30M",
+  "estimatedCost": { "@type": "MonetaryAmount", "currency": "RON", "value": "0" },
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Book your free first class",
+      "text": "Fill in the form on unbrokenspirit.ro to reserve your free CrossFit class. No prior experience is required — the class is adapted to any level.",
+      "url": "https://www.unbrokenspirit.ro"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Get to the gym",
+      "text": "The gym is at Splaiul Unirii 257-259, Bucharest, a 7-8 minute walk from Mihai Bravu metro station. Free parking available. Wear comfortable workout clothes and bring a water bottle.",
+      "url": "https://www.unbrokenspirit.ro/#about"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Train with a coach",
+      "text": "Your coach will guide you through all movements, scaled to your level. The class lasts 60 minutes and includes a warm-up, strength work, and the WOD (Workout of the Day).",
+      "url": "https://www.unbrokenspirit.ro/#schedule"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Choose a membership and download ThunderWOD",
+      "text": "If you loved the experience, choose a membership starting from 320 RON/month and download the ThunderWOD app to book classes and track your progress.",
+      "url": "https://www.unbrokenspirit.ro/#pricing"
+    }
   ]
 };
 
@@ -420,6 +502,7 @@ export default function SeoMeta() {
     injectSchema('schema-reviews', REVIEWS_SCHEMA);
     injectSchema('schema-website', WEBSITE_SCHEMA);
     injectSchema('schema-events', buildEventSchemas());
+    injectSchema('schema-howto', language === 'en' ? HOWTO_SCHEMA_EN : HOWTO_SCHEMA_RO);
 
     // Apply default (hero) meta on mount
     applyMeta(language, 'hero');
@@ -451,6 +534,7 @@ export default function SeoMeta() {
       removeSchema('schema-website');
       removeSchema('schema-events');
       removeSchema('schema-webpage');
+      removeSchema('schema-howto');
     };
   }, [language]);
 
