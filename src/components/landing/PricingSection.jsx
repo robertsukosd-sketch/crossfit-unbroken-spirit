@@ -46,7 +46,7 @@ const getCategories = (language) => [
       },
       {
         name: language === 'ro' ? 'Nelimitat' : 'Unlimited',
-        price: '450',
+        price: '500',
         period: language === 'ro' ? 'lună' : 'month',
         description: language === 'ro' ? 'Acces complet fără restricții' : 'Full access, no restrictions',
         features: language === 'ro'
