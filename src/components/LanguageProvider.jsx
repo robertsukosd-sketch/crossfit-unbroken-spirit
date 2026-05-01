@@ -28,7 +28,7 @@ export const translations = {
     freeTrial: "O Clasă Gratuită",
     heroTag: "Pentru tine. Pentru PRs. Pentru comunitate.",
     heroTitle: "FORȚĂ. COMUNITATE. TRANSFORMĂRI REALE.",
-    heroSubtitle: "Antrenamente de grup, clase de fitness și echipamente Rogue, rower, bike, ski erg. Fie că începi de la zero, fie că ești avansat, găsești la noi tot ce-ți trebuie.",
+    heroSubtitle: "Fie că începi de la zero, fie că ești avansat, găsești la noi tot ce-ți trebuie.",
     startNow: "Începe Acum",
     discoverThePrograms: "Descoperă Programele",
     moreThangym: "Mai mult decât un gym",
