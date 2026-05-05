@@ -222,10 +222,10 @@ const PARTNERS = [
     website: 'https://www.edenred.ro',
     tagRo: 'Plătit din bugetul de beneficii',
     tagEn: 'Paid from your benefits budget',
-    descRo: 'Angajații cu card Edenred Benefit pot achiziționa abonamentele noastre direct din platforma Edenred. Abonamentul se activează automat în aplicația [ThunderWOD], de unde te înscrii la ore.',
-    descEn: 'Employees with an Edenred Benefit card can purchase our memberships directly from the Edenred platform. The membership activates automatically in the [ThunderWOD] app, where you can book your classes.',
-    howRo: ['Accesează platforma sau aplicația Edenred', 'Caută CrossFit Unbroken Spirit și cumpără abonamentul', 'Abonamentul se activează automat în ThunderWOD', 'Înscrie-te la ore din ThunderWOD'],
-    howEn: ['Access the Edenred platform or app', 'Find CrossFit Unbroken Spirit and purchase your membership', 'The membership activates automatically in ThunderWOD', 'Book your classes via ThunderWOD'],
+    descRo: 'Angajații cu card Edenred Benefit pot achiziționa abonamentele noastre direct din platforma Edenred. Abonamentul va fi activat în cel mult 24 de ore în aplicația [ThunderWOD], de unde te înscrii la ore.',
+    descEn: 'Employees with an Edenred Benefit card can purchase our memberships directly from the Edenred platform. The membership will be activated within 24 hours in the [ThunderWOD] app, where you can book your classes.',
+    howRo: ['Accesează platforma sau aplicația Edenred', 'Caută CrossFit Unbroken Spirit și cumpără abonamentul', 'Abonamentul va fi activat în cel mult 24 de ore în ThunderWOD', 'Înscrie-te la ore din ThunderWOD'],
+    howEn: ['Access the Edenred platform or app', 'Find CrossFit Unbroken Spirit and purchase your membership', 'The membership will be activated within 24 hours in ThunderWOD', 'Book your classes via ThunderWOD'],
   },
 ];
 
