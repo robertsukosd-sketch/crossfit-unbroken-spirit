@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Dumbbell, Sparkles, User, Globe } from 'lucide-react';
+import { Check, Dumbbell, Sparkles, User, Globe, Handshake } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
@@ -168,7 +168,164 @@ const getCategories = (language) => [
       },
     ],
   },
+  {
+    id: 'partners',
+    label: language === 'ro' ? 'Parteneri' : 'Partners',
+    sublabel: language === 'ro' ? 'Beneficii Angajați' : 'Employee Benefits',
+    icon: Handshake,
+    description: language === 'ro'
+      ? 'Ai abonament SanoPass, 7Card by WellHub sau Edenred?\nPoți veni la noi fără să cumperi un abonament separat.'
+      : 'Have a SanoPass, 7Card by WellHub or Edenred?\nYou can train with us without buying a separate membership.',
+    plans: [],
+    isPartnersTab: true,
+  },
 ];
+
+const PARTNERS = [
+  {
+    id: 'sanopass',
+    name: 'SanoPass',
+    logo: 'https://sanopass.ro/wp-content/uploads/2022/10/sanopass-logo.png',
+    fallbackInitials: 'SP',
+    fallbackColor: 'from-green-600 to-emerald-500',
+    website: 'https://sanopass.ro',
+    tagRo: 'Drop-in cu taxă redusă',
+    tagEn: 'Drop-in with reduced fee',
+    descRo: 'Ai abonament SanoPass FIT? Vino la orice clasă de CrossFit sau Open Gym cu o taxă de drop-in redusă, direct din aplicație.',
+    descEn: 'Have a SanoPass FIT plan? Come to any CrossFit class or Open Gym session with a reduced drop-in fee, directly through the app.',
+    howRo: ['Descarcă aplicația SanoPass FIT', 'Caută CrossFit Unbroken Spirit', 'Rezervă și plătește taxa de drop-in', 'Vino la antrenament!'],
+    howEn: ['Download the SanoPass FIT app', 'Search for CrossFit Unbroken Spirit', 'Book and pay the drop-in fee', 'Show up and train!'],
+  },
+  {
+    id: 'wellhub',
+    name: '7Card by Wellhub',
+    logo: 'https://7card.ro/wp-content/uploads/2023/09/logo-7card-wellhub.png',
+    fallbackInitials: '7C',
+    fallbackColor: 'from-blue-600 to-sky-500',
+    website: 'https://7card.ro',
+    tagRo: 'Drop-in cu taxă redusă',
+    tagEn: 'Drop-in with reduced fee',
+    descRo: 'Utilizatori 7Card by Wellhub pot accesa sala cu o taxă minimă de drop-in per vizită, fără abonament separat la noi.',
+    descEn: '7Card by Wellhub users can access the gym with a small drop-in fee per visit, no separate membership needed.',
+    howRo: ['Autentifică-te în aplicația 7Card/Wellhub', 'Caută CrossFit Unbroken Spirit', 'Check-in la intrare prin aplicație', 'Antrenează-te!'],
+    howEn: ['Log in to the 7Card/Wellhub app', 'Find CrossFit Unbroken Spirit', 'Check in at the door via the app', 'Train!'],
+  },
+  {
+    id: 'edenred',
+    name: 'Edenred Benefit',
+    logo: 'https://www.edenred.ro/sites/default/files/styles/thumbnail/public/2023-01/Logo%20edenred.png',
+    fallbackInitials: 'ER',
+    fallbackColor: 'from-red-600 to-rose-500',
+    website: 'https://www.edenred.ro',
+    tagRo: 'Plătit din bugetul de beneficii',
+    tagEn: 'Paid from your benefits budget',
+    descRo: 'Angajații cu card Edenred Benefit pot achiziționa abonamentele noastre direct din platforma Edenred, folosind bugetul de beneficii oferit de angajator.',
+    descEn: 'Employees with an Edenred Benefit card can purchase our memberships directly from the Edenred platform using their employer-provided benefit budget.',
+    howRo: ['Accesează platforma sau aplicația Edenred', 'Caută CrossFit Unbroken Spirit în lista de parteneri', 'Cumpără abonamentul dorit din bugetul tău', 'Prezintă confirmarea la sală'],
+    howEn: ['Access the Edenred platform or app', 'Find CrossFit Unbroken Spirit in the partner list', 'Purchase your chosen membership from your budget', 'Show confirmation at the gym'],
+  },
+];
+
+function PartnerLogo({ partner }) {
+  const [imgError, setImgError] = useState(false);
+  if (imgError) {
+    return (
+      <div className={cn('w-14 h-14 rounded-2xl bg-gradient-to-br flex items-center justify-center text-white font-black text-lg shadow-lg', partner.fallbackColor)}>
+        {partner.fallbackInitials}
+      </div>
+    );
+  }
+  return (
+    <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg overflow-hidden p-1.5">
+      <img
+        src={partner.logo}
+        alt={partner.name}
+        className="w-full h-full object-contain"
+        onError={() => setImgError(true)}
+      />
+    </div>
+  );
+}
+
+function PartnersContent({ language, t }) {
+  return (
+    <div className="max-w-5xl mx-auto space-y-4">
+      {/* Intro banner */}
+      <div className="text-center mb-8 p-5 rounded-2xl bg-zinc-900/60 border border-zinc-700">
+        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+          {language === 'ro'
+            ? '🤝 Suntem parteneri cu platformele de beneficii pentru angajați de mai jos. Dacă ai un abonament activ prin angajatorul tău, poți antrena cu noi fără costuri suplimentare mari.'
+            : '🤝 We are partners with the employee benefit platforms below. If you have an active plan through your employer, you can train with us at no extra or minimal cost.'}
+        </p>
+      </div>
+
+      {/* Partner cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {PARTNERS.map((partner, index) => (
+          <motion.div
+            key={partner.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.08 }}
+            className="bg-zinc-900/80 border border-zinc-800 hover:border-blue-500/40 rounded-2xl p-6 flex flex-col gap-4 transition-colors duration-300"
+          >
+            {/* Header */}
+            <div className="flex items-center gap-3">
+              <PartnerLogo partner={partner} />
+              <div>
+                <h4 className="text-white font-bold text-base leading-tight">{partner.name}</h4>
+                <span className="inline-block mt-1 px-2.5 py-0.5 text-xs font-semibold rounded-full bg-sky-500/15 text-sky-400 border border-sky-500/20">
+                  {language === 'ro' ? partner.tagRo : partner.tagEn}
+                </span>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-gray-400 text-sm leading-relaxed">
+              {language === 'ro' ? partner.descRo : partner.descEn}
+            </p>
+
+            {/* How it works */}
+            <div>
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                {language === 'ro' ? 'Cum funcționează' : 'How it works'}
+              </p>
+              <ul className="space-y-1.5">
+                {(language === 'ro' ? partner.howRo : partner.howEn).map((step, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs flex items-center justify-center font-bold mt-0.5">
+                      {i + 1}
+                    </span>
+                    <span className="text-gray-300 text-xs leading-relaxed">{step}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* CTA */}
+            <a
+              href={partner.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto w-full text-center py-2.5 rounded-full text-sm font-bold border border-zinc-600 text-gray-300 hover:border-blue-500/60 hover:text-white hover:bg-blue-500/10 transition-all duration-200"
+            >
+              {language === 'ro' ? `Vizitează ${partner.name}` : `Visit ${partner.name}`} →
+            </a>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Bottom nudge */}
+      <div className="mt-8 text-center p-4 rounded-xl bg-amber-400/5 border border-amber-400/20">
+        <p className="text-amber-300/80 text-sm">
+          {language === 'ro'
+            ? '❓ Nu ești sigur dacă angajatorul tău oferă aceste beneficii? Întreabă departamentul HR — mulți angajatori din România acoperă costul unui abonament fitness prin aceste platforme.'
+            : "❓ Not sure if your employer offers these benefits? Ask your HR department — many Romanian companies cover fitness membership costs through these platforms."}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 function PlanCard({ plan, index, t, onSignUpClick, language }) {
   return (
@@ -368,7 +525,7 @@ export default function PricingSection({ onOpenFreeClass }) {
             </AnimatePresence>
             </div>
 
-            {/* Plans Grid */}
+            {/* Plans Grid or Partners Tab */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeId + '-plans'}
@@ -376,18 +533,23 @@ export default function PricingSection({ onOpenFreeClass }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className={cn('flex flex-col sm:grid gap-6', gridClass(activeCategory.plans.length))}
           >
-            {activeCategory.plans.map((plan, index) => {
-              const reverseOnMobile = activeId === 'core' || activeId === 'welcome';
-              const total = activeCategory.plans.length;
-              const mobileOrder = reverseOnMobile ? total - 1 - index : index;
-              return (
-                <div key={plan.name} style={{ order: mobileOrder }} className="h-full">
-                  <PlanCard plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} language={language} />
-                </div>
-              );
-            })}
+            {activeCategory.isPartnersTab ? (
+              <PartnersContent language={language} t={t} />
+            ) : (
+              <div className={cn('flex flex-col sm:grid gap-6', gridClass(activeCategory.plans.length))}>
+                {activeCategory.plans.map((plan, index) => {
+                  const reverseOnMobile = activeId === 'core' || activeId === 'welcome';
+                  const total = activeCategory.plans.length;
+                  const mobileOrder = reverseOnMobile ? total - 1 - index : index;
+                  return (
+                    <div key={plan.name} style={{ order: mobileOrder }} className="h-full">
+                      <PlanCard plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} language={language} />
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
 
