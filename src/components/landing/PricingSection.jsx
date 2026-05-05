@@ -254,8 +254,8 @@ function PartnersContent({ language, t }) {
       <div className="text-center mb-8 p-5 rounded-2xl bg-zinc-900/60 border border-zinc-700">
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
           {language === 'ro'
-            ? '🤝 Suntem parteneri cu platformele de beneficii pentru angajați de mai jos. Dacă ai un abonament activ prin angajatorul tău, poți antrena cu noi fără costuri suplimentare mari.'
-            : '🤝 We are partners with the employee benefit platforms below. If you have an active plan through your employer, you can train with us at no extra or minimal cost.'}
+            ? <>🤝 Suntem parteneri cu platformele de beneficii pentru angajați de mai jos.<br />Dacă ai un abonament activ prin angajatorul tău, te poți antrena cu noi fără costuri suplimentare mari.</>
+            : <>🤝 We are partners with the employee benefit platforms below.<br />If you have an active plan through your employer, you can train with us at no extra or minimal cost.</>}
         </p>
       </div>
 
