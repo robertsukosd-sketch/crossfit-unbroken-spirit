@@ -194,8 +194,8 @@ const PARTNERS = [
     tagEn: 'Drop-in with reduced fee',
     descRo: 'Ai abonament SanoPass FIT? Vino la orice clasă de CrossFit sau Open Gym cu o taxă de drop-in redusă. Coplata și înscrierea la ore se fac direct din aplicația [ThunderWOD].',
     descEn: 'Have a SanoPass FIT plan? Come to any CrossFit class or Open Gym session with a reduced drop-in fee. The co-payment and class booking are done directly through the [ThunderWOD] app.',
-    howRo: ['Descarcă aplicația SanoPass FIT', 'Deschide [ThunderWOD] și efectuează coplata', 'Înscrie-te la ora dorită din [ThunderWOD]', 'Vino la antrenament!'],
-    howEn: ['Download the SanoPass FIT app', 'Open [ThunderWOD] and pay the co-payment', 'Book your class in [ThunderWOD]', 'Show up and train!'],
+    howRo: ['Descarcă aplicația SanoPass FIT', 'Deschide ThunderWOD și efectuează coplata', 'Înscrie-te la ora dorită din ThunderWOD', 'Vino la antrenament!'],
+    howEn: ['Download the SanoPass FIT app', 'Open ThunderWOD and pay the co-payment', 'Book your class in ThunderWOD', 'Show up and train!'],
   },
   {
     id: 'wellhub',
@@ -209,8 +209,8 @@ const PARTNERS = [
     tagEn: 'Drop-in with reduced fee',
     descRo: 'Utilizatori 7Card by Wellhub pot accesa sala cu o taxă minimă de drop-in per vizită. Coplata și înscrierea la ore se fac direct din aplicația [ThunderWOD].',
     descEn: '7Card by Wellhub users can access the gym with a small drop-in fee per visit. The co-payment and class booking are done directly through the [ThunderWOD] app.',
-    howRo: ['Autentifică-te în aplicația 7Card/Wellhub', 'Deschide [ThunderWOD] și efectuează coplata', 'Înscrie-te la ora dorită din [ThunderWOD]', 'Vino la antrenament!'],
-    howEn: ['Log in to the 7Card/Wellhub app', 'Open [ThunderWOD] and pay the co-payment', 'Book your class in [ThunderWOD]', 'Show up and train!'],
+    howRo: ['Autentifică-te în aplicația 7Card/Wellhub', 'Deschide ThunderWOD și efectuează coplata', 'Înscrie-te la ora dorită din ThunderWOD', 'Vino la antrenament!'],
+    howEn: ['Log in to the 7Card/Wellhub app', 'Open ThunderWOD and pay the co-payment', 'Book your class in ThunderWOD', 'Show up and train!'],
   },
   {
     id: 'edenred',
@@ -224,8 +224,8 @@ const PARTNERS = [
     tagEn: 'Paid from your benefits budget',
     descRo: 'Angajații cu card Edenred Benefit pot achiziționa abonamentele noastre direct din platforma Edenred. Abonamentul se activează automat în aplicația [ThunderWOD], de unde te înscrii la ore.',
     descEn: 'Employees with an Edenred Benefit card can purchase our memberships directly from the Edenred platform. The membership activates automatically in the [ThunderWOD] app, where you can book your classes.',
-    howRo: ['Accesează platforma sau aplicația Edenred', 'Caută CrossFit Unbroken Spirit și cumpără abonamentul', 'Abonamentul se activează automat în [ThunderWOD]', 'Înscrie-te la ore din [ThunderWOD]'],
-    howEn: ['Access the Edenred platform or app', 'Find CrossFit Unbroken Spirit and purchase your membership', 'The membership activates automatically in [ThunderWOD]', 'Book your classes via [ThunderWOD]'],
+    howRo: ['Accesează platforma sau aplicația Edenred', 'Caută CrossFit Unbroken Spirit și cumpără abonamentul', 'Abonamentul se activează automat în ThunderWOD', 'Înscrie-te la ore din ThunderWOD'],
+    howEn: ['Access the Edenred platform or app', 'Find CrossFit Unbroken Spirit and purchase your membership', 'The membership activates automatically in ThunderWOD', 'Book your classes via ThunderWOD'],
   },
 ];
 
@@ -295,7 +295,7 @@ function PartnersContent({ language, t }) {
             </div>
 
             {/* Description */}
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed flex-grow">
               {renderWithThunderWODLink(language === 'ro' ? partner.descRo : partner.descEn)}
             </p>
 
@@ -310,7 +310,7 @@ function PartnersContent({ language, t }) {
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs flex items-center justify-center font-bold mt-0.5">
                       {i + 1}
                     </span>
-                    <span className="text-gray-300 text-xs leading-relaxed">{renderWithThunderWODLink(step)}</span>
+                    <span className="text-gray-300 text-xs leading-relaxed">{step}</span>
                   </li>
                 ))}
               </ul>
