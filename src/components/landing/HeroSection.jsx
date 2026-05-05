@@ -118,7 +118,7 @@ export default function HeroSection({ onOpenFreeClass }) {
                   key={p.name}
                   src={p.logo}
                   alt={p.name}
-                  className="h-7 object-contain grayscale opacity-50 group-hover:opacity-90 group-hover:grayscale-0 transition-all duration-300"
+                  className="h-10 object-contain grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
                 />
               ))}
             </button>
