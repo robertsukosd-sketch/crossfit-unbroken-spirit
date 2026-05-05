@@ -174,8 +174,8 @@ const getCategories = (language) => [
     sublabel: language === 'ro' ? 'Beneficii Angajați' : 'Employee Benefits',
     icon: Handshake,
     description: language === 'ro'
-      ? 'Ai abonament SanoPass, 7Card by WellHub sau Edenred?\nPoți veni la noi fără să cumperi un abonament separat.'
-      : 'Have a SanoPass, 7Card by WellHub or Edenred?\nYou can train with us without buying a separate membership.',
+      ? 'Ai abonament SanoPass, 7Card by WellHub sau buget Edenred Benefit?\nPoți veni la noi fără să cumperi un abonament separat.'
+      : 'Have a SanoPass, 7Card by WellHub or Edenred Benefit budget?\nYou can train with us without buying a separate membership.',
     plans: [],
     isPartnersTab: true,
   },
