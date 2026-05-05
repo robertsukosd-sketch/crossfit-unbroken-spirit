@@ -215,7 +215,7 @@ const PARTNERS = [
   {
     id: 'edenred',
     name: 'Edenred Benefit',
-    logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/bb0182896_image.png',
+    logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/2decb96e6_generated_image.png',
     fallbackInitials: 'ER',
     fallbackColor: 'from-red-600 to-rose-500',
     logoStyle: 'contain',
