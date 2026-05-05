@@ -295,7 +295,7 @@ function PartnersContent({ language, t }) {
             </div>
 
             {/* Description */}
-            <p className="text-gray-400 text-sm leading-relaxed flex-grow min-h-[80px]">
+            <p className="text-gray-400 text-sm leading-relaxed flex-grow min-h-[112px]">
               {renderWithThunderWODLink(language === 'ro' ? partner.descRo : partner.descEn)}
             </p>
 
