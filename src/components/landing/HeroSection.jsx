@@ -62,11 +62,8 @@ export default function HeroSection({ onOpenFreeClass }) {
             {t("heroSubtitle")}
           </p>
 
-          {/* Free class CTA with nudge text + pulse */}
+          {/* Free class CTA with pulse */}
           <div className="flex flex-col items-center gap-2">
-            <p className="text-amber-300/80 text-sm font-medium">
-              {language === 'ro' ? '🎁 Nu ești sigur? Încearcă gratuit, fără niciun angajament!' : '🎁 Not sure? Try it free, no commitment!'}
-            </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <motion.div
                 animate={shouldReduceMotion ? {} : { scale: [1, 1.04, 1] }}
