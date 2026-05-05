@@ -185,9 +185,10 @@ const PARTNERS = [
   {
     id: 'sanopass',
     name: 'SanoPass',
-    logo: 'https://sanopass.ro/wp-content/uploads/2022/10/sanopass-logo.png',
+    logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/f9c38259e_image.png',
     fallbackInitials: 'SP',
-    fallbackColor: 'from-green-600 to-emerald-500',
+    fallbackColor: 'from-orange-600 to-orange-500',
+    logoStyle: 'contain',
     website: 'https://sanopass.ro',
     tagRo: 'Drop-in cu taxă redusă',
     tagEn: 'Drop-in with reduced fee',
@@ -199,9 +200,10 @@ const PARTNERS = [
   {
     id: 'wellhub',
     name: '7Card by Wellhub',
-    logo: 'https://7card.ro/wp-content/uploads/2023/09/logo-7card-wellhub.png',
+    logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/db3f5886f_image.png',
     fallbackInitials: '7C',
-    fallbackColor: 'from-blue-600 to-sky-500',
+    fallbackColor: 'from-pink-500 to-rose-400',
+    logoStyle: 'cover',
     website: 'https://7card.ro',
     tagRo: 'Drop-in cu taxă redusă',
     tagEn: 'Drop-in with reduced fee',
@@ -213,9 +215,10 @@ const PARTNERS = [
   {
     id: 'edenred',
     name: 'Edenred Benefit',
-    logo: 'https://www.edenred.ro/sites/default/files/styles/thumbnail/public/2023-01/Logo%20edenred.png',
+    logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/bb0182896_image.png',
     fallbackInitials: 'ER',
     fallbackColor: 'from-red-600 to-rose-500',
+    logoStyle: 'contain',
     website: 'https://www.edenred.ro',
     tagRo: 'Plătit din bugetul de beneficii',
     tagEn: 'Paid from your benefits budget',
@@ -230,17 +233,18 @@ function PartnerLogo({ partner }) {
   const [imgError, setImgError] = useState(false);
   if (imgError) {
     return (
-      <div className={cn('w-14 h-14 rounded-2xl bg-gradient-to-br flex items-center justify-center text-white font-black text-lg shadow-lg', partner.fallbackColor)}>
+      <div className={cn('w-16 h-16 rounded-2xl bg-gradient-to-br flex items-center justify-center text-white font-black text-lg shadow-lg flex-shrink-0', partner.fallbackColor)}>
         {partner.fallbackInitials}
       </div>
     );
   }
+  const isCover = partner.logoStyle === 'cover';
   return (
-    <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg overflow-hidden p-1.5">
+    <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-lg overflow-hidden flex-shrink-0">
       <img
         src={partner.logo}
         alt={partner.name}
-        className="w-full h-full object-contain"
+        className={cn('w-full h-full', isCover ? 'object-cover' : 'object-contain p-2')}
         onError={() => setImgError(true)}
       />
     </div>
