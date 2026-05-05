@@ -396,6 +396,76 @@ const SERVICES_SCHEMA = {
   ]
 };
 
+const PARTNERS_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Parteneri CrossFit Unbroken Spirit — Beneficii Angajați",
+  "description": "CrossFit Unbroken Spirit este partener cu SanoPass, 7Card by WellHub și Edenred Benefit. Angajații pot accesa sala cu abonamentul de beneficii oferit de angajator.",
+  "url": "https://www.unbrokenspirit.ro/#pricing",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Organization",
+        "name": "SanoPass",
+        "url": "https://sanopass.ro",
+        "description": "Platformă de beneficii pentru sănătate și fitness. CrossFit Unbroken Spirit este disponibil în rețeaua SanoPass Gold — angajații pot accesa sala cu o taxă de drop-in redusă.",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "CrossFit Unbroken Spirit",
+          "url": "https://www.unbrokenspirit.ro"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Organization",
+        "name": "7Card by WellHub",
+        "alternateName": "Wellhub",
+        "url": "https://7card.ro",
+        "description": "Platformă de beneficii pentru wellness și fitness. Utilizatorii 7Card by WellHub pot accesa CrossFit Unbroken Spirit cu o taxă minimă de drop-in per vizită.",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "CrossFit Unbroken Spirit",
+          "url": "https://www.unbrokenspirit.ro"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Organization",
+        "name": "Edenred Benefit",
+        "url": "https://www.edenred.ro",
+        "description": "Platformă de beneficii flexibile pentru angajați. Angajații cu card Edenred Benefit pot achiziționa abonamente CrossFit Unbroken Spirit direct din platforma Edenred.",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "CrossFit Unbroken Spirit",
+          "url": "https://www.unbrokenspirit.ro"
+        }
+      }
+    }
+  ]
+};
+
+const PARTNERS_FAQ_RO = [
+  { "@type": "Question", "name": "Poate un angajat cu SanoPass să vină la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Da. CrossFit Unbroken Spirit este partener SanoPass și disponibil în rețeaua Gold. Angajații cu abonament SanoPass Gold pot accesa orice clasă de CrossFit sau Open Gym cu o taxă de drop-in redusă, fără să cumpere un abonament separat. Coplata se face direct din aplicația ThunderWOD." } },
+  { "@type": "Question", "name": "Poate un angajat cu 7Card sau WellHub să vină la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Da. CrossFit Unbroken Spirit este partener 7Card by WellHub. Utilizatorii 7Card by Wellhub pot accesa sala cu o taxă minimă de drop-in per vizită. Coplata și înscrierea la ore se fac direct din aplicația ThunderWOD." } },
+  { "@type": "Question", "name": "Pot plăti abonamentul CrossFit cu Edenred Benefit?", "acceptedAnswer": { "@type": "Answer", "text": "Da. Angajații cu card Edenred Benefit pot achiziționa abonamentele CrossFit Unbroken Spirit direct din platforma sau aplicația Edenred. Abonamentul se activează în cel mult 24 de ore în aplicația ThunderWOD, de unde te poți înscrie la ore." } },
+  { "@type": "Question", "name": "Ce platforme de beneficii pentru angajați acceptă CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit acceptă SanoPass (Gold), 7Card by WellHub și Edenred Benefit. Dacă ai un abonament activ prin angajatorul tău pe una dintre aceste platforme, te poți antrena la noi cu costuri reduse sau acoperite integral. Întreabă departamentul HR dacă beneficiezi de aceste platforme." } }
+];
+
+const PARTNERS_FAQ_EN = [
+  { "@type": "Question", "name": "Can an employee with SanoPass come to CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. CrossFit Unbroken Spirit is a SanoPass partner, available under the Gold plan. Employees with a SanoPass Gold membership can access any CrossFit class or Open Gym session with a reduced drop-in fee — no need to buy a separate membership. The co-payment is made directly through the ThunderWOD app." } },
+  { "@type": "Question", "name": "Can an employee with 7Card or WellHub come to CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. CrossFit Unbroken Spirit is a 7Card by WellHub partner. Users can access the gym with a small drop-in fee per visit. The co-payment and class booking are done directly through the ThunderWOD app." } },
+  { "@type": "Question", "name": "Can I pay for a CrossFit membership with Edenred Benefit?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Employees with an Edenred Benefit card can purchase CrossFit Unbroken Spirit memberships directly from the Edenred platform or app. The membership is activated within 24 hours in the ThunderWOD app, where you can book your classes." } },
+  { "@type": "Question", "name": "Which employee benefit platforms does CrossFit Unbroken Spirit accept?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit accepts SanoPass (Gold), 7Card by WellHub, and Edenred Benefit. If you have an active employer-provided subscription on any of these platforms, you can train with us at reduced or fully covered costs. Ask your HR department if you qualify." } }
+];
+
 const SPEAKABLE_SCHEMA_RO = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -430,8 +500,8 @@ const SECTION_META = {
       description: 'Ce echipamente are sala? Ce este Hyrox? Cât costă? Răspunsuri la toate întrebările despre sală de CrossFit București, antrenamente de grup și prima clasă gratuită.',
     },
     pricing: {
-      title: 'Prețuri Sală Fitness & CrossFit București | Unbroken Spirit - de la 320 RON/lună',
-      description: 'Abonamente CrossFit și clase de fitness în București de la 320 RON/lună. Open Gym, Personal Training și prima ședință gratuită. Cea mai nouă sală CrossFit dotată din București.',
+      title: 'Prețuri CrossFit București | SanoPass, 7Card, Edenred - Unbroken Spirit de la 320 RON/lună',
+      description: 'Abonamente CrossFit de la 320 RON/lună. Acceptăm SanoPass Gold, 7Card by WellHub și Edenred Benefit. Open Gym, Personal Training, prima ședință gratuită. Parcare inclusă.',
     },
     schedule: {
       title: 'Orar Clase CrossFit & Antrenamente de Grup București | Unbroken Spirit',
@@ -464,8 +534,8 @@ const SECTION_META = {
       description: 'Answers to all your questions about CrossFit, our gym, memberships and pricing. Find out everything you need to know before your first class.',
     },
     pricing: {
-      title: 'CrossFit Memberships & Pricing - Unbroken Spirit Bucharest',
-      description: 'CrossFit memberships from 320 RON/month. Group classes, Open Gym, Personal Training. First session FREE for beginners. Parking included.',
+      title: 'CrossFit Memberships Bucharest | SanoPass, 7Card, Edenred - Unbroken Spirit from 320 RON/mo',
+      description: 'CrossFit memberships from 320 RON/month. We accept SanoPass Gold, 7Card by WellHub and Edenred Benefit employee benefits. Open Gym, Personal Training. First class FREE.',
     },
     schedule: {
       title: 'CrossFit Schedule Bucharest - Unbroken Spirit',
@@ -540,8 +610,9 @@ function applyMeta(lang, sectionId) {
 
   // FAQ Schema — always present for RO (primary language); for EN only when FAQ section visible
   if (lang === 'en') {
-    if (sectionId === 'faq') {
-      injectSchema('schema-faq', FAQ_SCHEMA_EN);
+    if (sectionId === 'faq' || sectionId === 'pricing') {
+      const mergedFaqEn = { ...FAQ_SCHEMA_EN, mainEntity: [...FAQ_SCHEMA_EN.mainEntity, ...PARTNERS_FAQ_EN] };
+      injectSchema('schema-faq', mergedFaqEn);
     } else {
       removeSchema('schema-faq');
     }
@@ -561,9 +632,12 @@ export default function SeoMeta() {
     injectSchema('schema-events', buildEventSchemas());
     injectSchema('schema-howto', language === 'en' ? HOWTO_SCHEMA_EN : HOWTO_SCHEMA_RO);
     injectSchema('schema-services', SERVICES_SCHEMA);
+    injectSchema('schema-partners', PARTNERS_SCHEMA);
     // FAQ always present for Romanian (primary language) — helps AI Overviews
+    // Include partners FAQ merged into main FAQ
     if (language !== 'en') {
-      injectSchema('schema-faq', FAQ_SCHEMA_RO);
+      const mergedFaqRo = { ...FAQ_SCHEMA_RO, mainEntity: [...FAQ_SCHEMA_RO.mainEntity, ...PARTNERS_FAQ_RO] };
+      injectSchema('schema-faq', mergedFaqRo);
     }
     // Speakable for Romanian — helps Google Assistant / AI read key content
     if (language !== 'en') {
@@ -602,6 +676,7 @@ export default function SeoMeta() {
       removeSchema('schema-webpage');
       removeSchema('schema-howto');
       removeSchema('schema-services');
+      removeSchema('schema-partners');
       removeSchema('schema-speakable');
     };
   }, [language]);
