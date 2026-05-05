@@ -62,23 +62,67 @@ export default function HeroSection({ onOpenFreeClass }) {
             {t("heroSubtitle")}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button
-              size="lg"
-              onClick={onOpenFreeClass}
-              className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white px-4 sm:px-8 py-3 sm:py-6 text-xs sm:text-base md:text-lg font-bold rounded-full shadow-lg shadow-blue-500/30 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
-            >
-              {language === 'ro' ? 'Rezervă o Clasă Gratuită' : 'Book a Free Class'}
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => scrollToSection('starthere')}
-              className="bg-transparent text-white hover:bg-white/35 border-2 border-white/50 hover:border-white px-4 sm:px-8 py-3 sm:py-6 text-xs sm:text-base md:text-lg font-bold rounded-full focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
-            >
-              {language === 'ro' ? 'Ce este CrossFitul?' : 'What is CrossFit?'}
-            </Button>
+          {/* Free class CTA with nudge text + pulse */}
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-amber-300/80 text-sm font-medium">
+              {language === 'ro' ? '🎁 Nu ești sigur? Încearcă gratuit, fără niciun angajament!' : '🎁 Not sure? Try it free, no commitment!'}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <motion.div
+                animate={shouldReduceMotion ? {} : { scale: [1, 1.04, 1] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+              >
+                <Button
+                  size="lg"
+                  onClick={onOpenFreeClass}
+                  className="bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-500 hover:to-yellow-400 text-black px-6 sm:px-10 py-3 sm:py-6 text-sm sm:text-base md:text-lg font-black rounded-full shadow-xl shadow-amber-400/40 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 focus:ring-offset-black"
+                >
+                  {language === 'ro' ? 'Rezervă o Clasă Gratuită' : 'Book a Free Class'}
+                </Button>
+              </motion.div>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => scrollToSection('starthere')}
+                className="bg-transparent text-white hover:bg-white/35 border-2 border-white/50 hover:border-white px-4 sm:px-8 py-3 sm:py-6 text-xs sm:text-base md:text-lg font-bold rounded-full focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
+              >
+                {language === 'ro' ? 'Ce este CrossFitul?' : 'What is CrossFit?'}
+              </Button>
+            </div>
           </div>
+
+          {/* Partners strip */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0, duration: 0.6 }}
+            className="mt-2 flex flex-col items-center gap-3"
+          >
+            <p className="text-gray-400 text-xs uppercase tracking-widest">
+              {language === 'ro' ? 'Acceptăm beneficii angajați de la' : 'We accept employee benefits from'}
+            </p>
+            <button
+              onClick={() => {
+                sessionStorage.setItem('selectedPricingCategory', 'partners');
+                window.dispatchEvent(new Event('selectPricingCategory'));
+                scrollToSection('pricing');
+              }}
+              className="flex flex-wrap items-center justify-center gap-6 group"
+            >
+              {[
+                { name: 'SanoPass', logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/f9c38259e_image.png' },
+                { name: '7Card by Wellhub', logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/db3f5886f_image.png' },
+                { name: 'Edenred Benefit', logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/ffda322b0_image.png' },
+              ].map((p) => (
+                <img
+                  key={p.name}
+                  src={p.logo}
+                  alt={p.name}
+                  className="h-7 object-contain grayscale opacity-50 group-hover:opacity-90 group-hover:grayscale-0 transition-all duration-300"
+                />
+              ))}
+            </button>
+          </motion.div>
         </motion.div>
       </div>
       
