@@ -229,12 +229,13 @@ export default function AboutSection() {
           </div>
 
           {/* Coaches Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {(() => {
               const images = [
                 { id: 1, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/18d3ab544_CrossFit_US-148A.jpg', objectPosition: '50% 5%', altText: 'Andrei Vârnav - antrenor CrossFit București, CrossFit Unbroken Spirit' },
                 { id: 2, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/9884b0a50_CrossFit_US-138M.jpg', objectPosition: '50% 5%', altText: 'Dumitru Mîndrescu - antrenor CrossFit și weightlifting București' },
                 { id: 3, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/02fa5e0e6_CrossFit_US-140R.jpg', objectPosition: '50% 5%', altText: 'Robert Sukosd - CrossFit Level 2 Trainer, antrenor CrossFit Unbroken Spirit București' },
+                { id: 4, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/02fa5e0e6_CrossFit_US-140R.jpg', objectPosition: '50% 5%', altText: 'Al patrulea antrenor - CrossFit Unbroken Spirit București' },
               ];
 
               const coaches = [
@@ -261,6 +262,15 @@ export default function AboutSection() {
                     ? ['CrossFit Level 2 Trainer', 'The Gymnastics Course Level 1', 'Movement Specialist']
                     : ['CrossFit Level 2 Trainer', 'The Gymnastics Course Level 1', 'Movement Specialist'],
                   experience: language === 'ro' ? '13 ani în CrossFit' : '13 years in CrossFit',
+                },
+                {
+                  id: 4,
+                  name: language === 'ro' ? 'Antrenor 4 — În curând' : 'Coach 4 — Coming Soon',
+                  certifications: language === 'ro'
+                    ? ['Certificări în curând']
+                    : ['Certifications coming soon'],
+                  experience: language === 'ro' ? 'Experiență în curând' : 'Experience coming soon',
+                  placeholder: true,
                 }
               ];
 
@@ -271,7 +281,7 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300 group"
+                  className={`bg-zinc-900/50 border rounded-2xl overflow-hidden transition-all duration-300 group ${coach.placeholder ? 'border-zinc-700 border-dashed opacity-50' : 'border-zinc-800 hover:border-blue-500/30'}`}
                 >
                   {/* Coach Image */}
                   <div className="relative h-96 overflow-hidden">
