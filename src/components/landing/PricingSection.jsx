@@ -331,10 +331,10 @@ function PartnersContent({ language, t }) {
 
       {/* Bottom nudge */}
       <div className="mt-8 text-center p-4 rounded-xl bg-amber-400/5 border border-amber-400/20">
-        <p className="text-amber-300/80 text-sm">
+        <p className="text-amber-300/80 text-base">
           {language === 'ro'
-            ? '❓ Nu ești sigur dacă angajatorul tău oferă aceste beneficii? Întreabă departamentul HR — mulți angajatori din România acoperă costul unui abonament fitness prin aceste platforme.'
-            : "❓ Not sure if your employer offers these benefits? Ask your HR department — many Romanian companies cover fitness membership costs through these platforms."}
+            ? <><span>❓ Nu ești sigur dacă angajatorul tău oferă aceste beneficii?</span><br /><span>Întreabă departamentul HR — mulți angajatori din România acoperă costul unui abonament fitness prin aceste platforme.</span></>
+            : <><span>❓ Not sure if your employer offers these benefits?</span><br /><span>Ask your HR department — many Romanian companies cover fitness membership costs through these platforms.</span></>}
         </p>
       </div>
     </div>
