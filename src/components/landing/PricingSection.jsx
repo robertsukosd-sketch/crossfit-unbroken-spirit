@@ -254,7 +254,7 @@ function PartnerLogo({ partner }) {
       <img
         src={partner.logo}
         alt={partner.name}
-        className={cn('w-full h-full', isCover ? 'object-cover' : 'object-contain p-2')}
+        className={cn('w-full h-full', isCover ? 'object-cover' : 'object-contain p-1')}
         onError={() => setImgError(true)}
       />
     </div>
