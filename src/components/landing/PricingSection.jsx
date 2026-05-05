@@ -294,37 +294,48 @@ function PartnersContent({ language, t }) {
               </div>
             </div>
 
-            {/* Description */}
-            <p className="text-gray-400 text-sm leading-relaxed flex-grow min-h-[112px]">
-              {renderWithThunderWODLink(language === 'ro' ? partner.descRo : partner.descEn)}
-            </p>
-
-            {/* How it works */}
-            <div>
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
-                {language === 'ro' ? 'Cum funcționează' : 'How it works'}
+            {/* Description + How it works + CTA — blurred for inactive partners */}
+            <div className={cn('relative flex flex-col gap-4 flex-grow', (partner.id === 'wellhub' || partner.id === 'edenred') && 'pointer-events-none')}>
+              <p className="text-gray-400 text-sm leading-relaxed min-h-[112px]">
+                {renderWithThunderWODLink(language === 'ro' ? partner.descRo : partner.descEn)}
               </p>
-              <ul className="space-y-1.5">
-                {(language === 'ro' ? partner.howRo : partner.howEn).map((step, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs flex items-center justify-center font-bold mt-0.5">
-                      {i + 1}
-                    </span>
-                    <span className="text-gray-300 text-xs leading-relaxed">{step}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
-            {/* CTA */}
-            <a
-              href={partner.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-auto w-full text-center py-2.5 rounded-full text-sm font-bold border border-zinc-600 text-gray-300 hover:border-blue-500/60 hover:text-white hover:bg-blue-500/10 transition-all duration-200"
-            >
-              {language === 'ro' ? `Vizitează ${partner.name}` : `Visit ${partner.name}`} →
-            </a>
+              {/* How it works */}
+              <div>
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                  {language === 'ro' ? 'Cum funcționează' : 'How it works'}
+                </p>
+                <ul className="space-y-1.5">
+                  {(language === 'ro' ? partner.howRo : partner.howEn).map((step, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs flex items-center justify-center font-bold mt-0.5">
+                        {i + 1}
+                      </span>
+                      <span className="text-gray-300 text-xs leading-relaxed">{step}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* CTA */}
+              <a
+                href={partner.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto w-full text-center py-2.5 rounded-full text-sm font-bold border border-zinc-600 text-gray-300 hover:border-blue-500/60 hover:text-white hover:bg-blue-500/10 transition-all duration-200"
+              >
+                {language === 'ro' ? `Vizitează ${partner.name}` : `Visit ${partner.name}`} →
+              </a>
+
+              {/* "În curând" overlay for inactive partners */}
+              {(partner.id === 'wellhub' || partner.id === 'edenred') && (
+                <div className="absolute inset-0 rounded-xl backdrop-blur-sm bg-zinc-950/60 flex items-center justify-center">
+                  <span className="text-white font-black text-lg tracking-widest uppercase px-4 py-2 rounded-full border border-white/20 bg-white/5">
+                    {language === 'ro' ? '🕐 În curând' : '🕐 Coming soon'}
+                  </span>
+                </div>
+              )}
+            </div>
           </motion.div>
         ))}
       </div>
