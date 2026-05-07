@@ -295,7 +295,7 @@ function PartnersContent({ language, t }) {
             </div>
 
             {/* Description + How it works + CTA — blurred for inactive partners */}
-            <div className={cn('relative flex flex-col gap-4 flex-grow', (partner.id === 'wellhub' || partner.id === 'edenred') && 'pointer-events-none')}>
+            <div className={cn('relative flex flex-col gap-4 flex-grow', partner.id === 'wellhub' && 'pointer-events-none')}>
               <p className="text-gray-400 text-sm leading-relaxed min-h-[112px]">
                 {renderWithThunderWODLink(language === 'ro' ? partner.descRo : partner.descEn)}
               </p>
@@ -328,7 +328,7 @@ function PartnersContent({ language, t }) {
               </a>
 
               {/* "În curând" overlay for inactive partners */}
-              {(partner.id === 'wellhub' || partner.id === 'edenred') && (
+              {partner.id === 'wellhub' && (
                 <div className="absolute inset-0 rounded-xl backdrop-blur-sm bg-zinc-950/60 flex items-center justify-center">
                   <span className="text-white font-black text-lg tracking-widest uppercase px-4 py-2 rounded-full border border-white/20 bg-white/5">
                     {language === 'ro' ? '🕐 În curând' : '🕐 Coming soon'}
