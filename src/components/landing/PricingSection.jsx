@@ -205,12 +205,12 @@ const PARTNERS = [
     fallbackColor: 'from-pink-500 to-rose-400',
     logoStyle: 'cover',
     website: 'https://7card.ro',
-    tagRo: 'Drop-in cu taxă redusă',
-    tagEn: 'Drop-in with reduced fee',
-    descRo: 'Utilizatori 7Card by Wellhub pot accesa sala cu o taxă minimă de drop-in per vizită. Coplata și înscrierea la ore se fac direct din aplicația [ThunderWOD].',
-    descEn: '7Card by Wellhub users can access the gym with a small drop-in fee per visit. The co-payment and class booking are done directly through the [ThunderWOD] app.',
-    howRo: ['Autentifică-te în aplicația 7Card/Wellhub', 'Deschide ThunderWOD și efectuează coplata', 'Înscrie-te la ora dorită din ThunderWOD', 'Vino la antrenament!'],
-    howEn: ['Log in to the 7Card/Wellhub app', 'Open ThunderWOD and pay the co-payment', 'Book your class in ThunderWOD', 'Show up and train!'],
+    tagRo: 'Acces inclus în abonament',
+    tagEn: 'Included in your membership',
+    descRo: 'Ai abonament 7Card by Wellhub? Ne găsești în rețea. Vino la orice clasă de CrossFit sau Open Gym fără nicio taxă suplimentară. Înscrierea la ore se face direct din aplicația [ThunderWOD].',
+    descEn: 'Have a 7Card by Wellhub membership? You can find us in the network. Come to any CrossFit class or Open Gym session with no extra fee. Class booking is done directly through the [ThunderWOD] app.',
+    howRo: ['Autentifică-te în aplicația 7Card/Wellhub', 'Deschide ThunderWOD și înscrie-te la ora dorită', 'Vino la antrenament — fără taxă suplimentară!'],
+    howEn: ['Log in to the 7Card/Wellhub app', 'Open ThunderWOD and book your class', 'Show up and train — no extra fee!'],
   },
   {
     id: 'edenred',
@@ -268,8 +268,8 @@ function PartnersContent({ language, t }) {
       <div className="text-center mb-8 p-5 rounded-2xl bg-zinc-900/60 border border-zinc-700">
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
           {language === 'ro'
-            ? <>🤝 Suntem parteneri cu platformele de beneficii pentru angajați de mai jos.<br />Dacă ai un abonament activ prin angajatorul tău, te poți antrena cu noi fără costuri suplimentare mari.</>
-            : <>🤝 We are partners with the employee benefit platforms below.<br />If you have an active plan through your employer, you can train with us at no extra or minimal cost.</>}
+            ? <>🤝 Suntem parteneri cu platformele de beneficii pentru angajați de mai jos.<br />Dacă ai un abonament activ prin angajatorul tău, te poți antrena cu noi fără costuri suplimentare.</>
+            : <>🤝 We are partners with the employee benefit platforms below.<br />If you have an active plan through your employer, you can train with us at no extra cost.</>}
         </p>
       </div>
 
@@ -294,8 +294,8 @@ function PartnersContent({ language, t }) {
               </div>
             </div>
 
-            {/* Description + How it works + CTA — blurred for inactive partners */}
-            <div className={cn('relative flex flex-col gap-4 flex-grow', partner.id === 'wellhub' && 'pointer-events-none')}>
+            {/* Description + How it works + CTA */}
+            <div className="relative flex flex-col gap-4 flex-grow">
               <p className="text-gray-400 text-sm leading-relaxed min-h-[112px]">
                 {renderWithThunderWODLink(language === 'ro' ? partner.descRo : partner.descEn)}
               </p>
@@ -327,14 +327,7 @@ function PartnersContent({ language, t }) {
                 {language === 'ro' ? `Vizitează ${partner.name}` : `Visit ${partner.name}`} →
               </a>
 
-              {/* "În curând" overlay for inactive partners */}
-              {partner.id === 'wellhub' && (
-                <div className="absolute inset-0 rounded-xl backdrop-blur-sm bg-zinc-950/60 flex items-center justify-center">
-                  <span className="text-white font-black text-lg tracking-widest uppercase px-4 py-2 rounded-full border border-white/20 bg-white/5">
-                    {language === 'ro' ? '🕐 În curând' : '🕐 Coming soon'}
-                  </span>
-                </div>
-              )}
+
             </div>
           </motion.div>
         ))}
