@@ -184,7 +184,7 @@ const getCategories = (language) => [
 const PARTNERS = [
   {
     id: 'sanopass',
-    name: 'SanoPass',
+    name: 'SanoPass FIT',
     logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/f9c38259e_image.png',
     fallbackInitials: 'SP',
     fallbackColor: 'from-orange-600 to-orange-500',
@@ -192,8 +192,8 @@ const PARTNERS = [
     website: 'https://sanopass.ro',
     tagRo: 'Drop-in cu taxă redusă',
     tagEn: 'Drop-in with reduced fee',
-    descRo: 'Ai abonament SanoPass Gold? Ne găsești în aplicație la abonamentele Gold. Vino la orice clasă de CrossFit sau Open Gym cu o taxă de drop-in redusă. Coplata și înscrierea la ore se fac direct din aplicația [ThunderWOD].',
-    descEn: 'Have a SanoPass Gold plan? You can find us in the app under Gold memberships. Come to any CrossFit class or Open Gym session with a reduced drop-in fee. The co-payment and class booking are done directly through the [ThunderWOD] app.',
+    descRo: 'Ai abonament SanoPass FIT Gold? Ne găsești în aplicație la abonamentele Gold. Vino la orice clasă de CrossFit sau Open Gym cu o taxă de drop-in redusă. Coplata și înscrierea la ore se fac direct din aplicația [ThunderWOD].',
+    descEn: 'Have a SanoPass FIT Gold plan? You can find us in the app under Gold memberships. Come to any CrossFit class or Open Gym session with a reduced drop-in fee. The co-payment and class booking are done directly through the [ThunderWOD] app.',
     howRo: ['Descarcă aplicația SanoPass FIT', 'Deschide ThunderWOD și efectuează coplata', 'Înscrie-te la ora dorită din ThunderWOD', 'Vino la antrenament!'],
     howEn: ['Download the SanoPass FIT app', 'Open ThunderWOD and pay the co-payment', 'Book your class in ThunderWOD', 'Show up and train!'],
   },

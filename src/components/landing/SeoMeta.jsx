@@ -408,9 +408,9 @@ const PARTNERS_SCHEMA = {
       "position": 1,
       "item": {
         "@type": "Organization",
-        "name": "SanoPass",
+        "name": "SanoPass FIT",
         "url": "https://sanopass.ro",
-        "description": "Platformă de beneficii pentru sănătate și fitness. CrossFit Unbroken Spirit este disponibil în rețeaua SanoPass Gold — angajații pot accesa sala cu o taxă de drop-in redusă.",
+        "description": "Platformă de beneficii pentru sănătate și fitness. CrossFit Unbroken Spirit este disponibil în rețeaua SanoPass FIT Gold — angajații pot accesa sala cu o taxă de drop-in redusă.",
         "memberOf": {
           "@type": "Organization",
           "name": "CrossFit Unbroken Spirit",
