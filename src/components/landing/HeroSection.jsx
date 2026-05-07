@@ -108,7 +108,7 @@ export default function HeroSection({ onOpenFreeClass }) {
             >
               {[
                 { name: 'SanoPass', logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/f9c38259e_image.png' },
-                { name: '7Card by Wellhub', logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/db3f5886f_image.png' },
+                { name: '7Card by Wellhub', logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/ba1690e6f_image.png' },
                 { name: 'Edenred Benefit', logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/ffda322b0_image.png' },
               ].map((p) => (
                 <img

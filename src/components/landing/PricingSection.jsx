@@ -200,7 +200,7 @@ const PARTNERS = [
   {
     id: 'wellhub',
     name: '7Card by Wellhub',
-    logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/db3f5886f_image.png',
+    logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/ba1690e6f_image.png',
     fallbackInitials: '7C',
     fallbackColor: 'from-pink-500 to-rose-400',
     logoStyle: 'cover',
