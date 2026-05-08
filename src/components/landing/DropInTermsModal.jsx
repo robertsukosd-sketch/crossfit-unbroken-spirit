@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
@@ -84,6 +84,15 @@ Consimțământ foto/video: Sunt de acord de acord ca imaginea minorului (foto/v
 
 export default function DropInTermsModal({ isOpen, onClose }) {
   const [accepted, setAccepted] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isOpen]);
 
   return (
     <AnimatePresence>
