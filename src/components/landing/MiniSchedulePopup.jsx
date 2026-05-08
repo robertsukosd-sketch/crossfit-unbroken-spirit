@@ -10,12 +10,13 @@ const getCrossFitClasses = (t) => ({
   [t("wednesday")]: ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
   [t("thursday")]:  ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
   [t("friday")]:    ["07:00", "08:00", "12:30", "17:30", "18:30", "19:30"],
+  [t("saturday")]:  ["08:00-10:00", "10:00-11:30"],
 });
 
-const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday"), t("friday")];
+const getDays = (t) => [t("monday"), t("tuesday"), t("wednesday"), t("thursday"), t("friday"), t("saturday")];
 
-const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin"];
-const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+const DAY_ABBR_RO = ["Lun", "Mar", "Mie", "Joi", "Vin", "Sâm"];
+const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 // Returns the Monday of the current week
 const getWeekMonday = (weekOffset = 0) => {
@@ -68,10 +69,10 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
 
     if (afterCutoff) {
       dayIndex = dayIndex + 1;
-      if (dayIndex >= 5) { dayIndex = 0; week = 1; } // past Friday → Monday next week
+      if (dayIndex >= 6) { dayIndex = 0; week = 1; } // past Saturday → Monday next week
     }
 
-    return { dayIndex: Math.min(dayIndex, 4), weekOffset: week, minWeek: 0, maxWeek: 1 };
+    return { dayIndex: Math.min(dayIndex, 5), weekOffset: week, minWeek: 0, maxWeek: 1 };
   };
 
   const initial = getInitialDayAndWeek();
@@ -83,7 +84,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
   useEffect(() => {
     if (isOpen) {
       const { dayIndex, weekOffset: wo } = getInitialDayAndWeek();
-      setSelectedDayIndex(Math.min(dayIndex, 4));
+      setSelectedDayIndex(Math.min(dayIndex, 5));
       setWeekOffset(wo);
     }
   }, [isOpen, days]);
@@ -95,10 +96,10 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
 
   const weekLabel = () => {
     const mon = weekMonday;
-    const fri = new Date(mon);
-    fri.setDate(mon.getDate() + 4);
+    const sat = new Date(mon);
+    sat.setDate(mon.getDate() + 5);
     const fmt = (d) => `${d.getDate().toString().padStart(2, '0')}.${(d.getMonth() + 1).toString().padStart(2, '0')}`;
-    return `${fmt(mon)} – ${fmt(fri)}`;
+    return `${fmt(mon)} – ${fmt(sat)}`;
   };
 
   const weekLabelText = () => {
@@ -168,7 +169,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
             </div>
 
             {/* Day tabs with dates */}
-            <div className="grid grid-cols-5 gap-1 mb-3">
+            <div className="grid grid-cols-6 gap-1 mb-3">
               {days.map((day, i) => {
                 const d = getDateForDayInWeek(weekMonday, i);
                 const dateLabel = `${d.getDate().toString().padStart(2, '0')}.${(d.getMonth() + 1).toString().padStart(2, '0')}`;
@@ -225,7 +226,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
 
             {/* Greyed out note */}
             <p className="mt-3 text-zinc-600 text-xs text-center">
-              {language === 'ro' ? 'Sunt afișate doar clasele potrivite pentru începători.' : 'Only classes suitable for beginners are shown.'}
+              {language === 'ro' ? 'Alege clasa sau intervalul de Open Gym în care vrei să vii.' : 'Choose the class or Open Gym interval you plan to attend.'}
             </p>
           </div>
         </motion.div>
