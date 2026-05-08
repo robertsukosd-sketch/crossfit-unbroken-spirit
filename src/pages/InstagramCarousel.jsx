@@ -27,7 +27,7 @@ const SLIDES = [
     logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/f9c38259e_image.png',
     tag: 'ABONAMENT GOLD',
     headline: ['SANOPASS', 'FIT'],
-    subheadline: 'Drop-in cu taxă redusă',
+    subheadline: 'Acces cu coplată',
     body: 'Ai abonament SanoPass FIT Gold? Ne găsești în aplicație la abonamentele Gold.',
     steps: ['Descarcă aplicația SanoPass FIT', 'Deschide ThunderWOD și efectuează coplata', 'Înscrie-te la ora dorită', 'Vino la antrenament!'],
     cta: null,

@@ -190,7 +190,7 @@ const PARTNERS = [
     fallbackColor: 'from-orange-600 to-orange-500',
     logoStyle: 'contain',
     website: 'https://sanopass.ro',
-    tagRo: 'Drop-in cu taxă redusă',
+    tagRo: 'Acces cu coplată',
     tagEn: 'Drop-in with reduced fee',
     descRo: 'Ai abonament SanoPass FIT Gold? Ne găsești în aplicație la abonamentele Gold. Vino la orice clasă de CrossFit sau Open Gym cu o taxă de drop-in redusă. Coplata și înscrierea la ore se fac direct din aplicația [ThunderWOD].',
     descEn: 'Have a SanoPass FIT Gold plan? You can find us in the app under Gold memberships. Come to any CrossFit class or Open Gym session with a reduced drop-in fee. The co-payment and class booking are done directly through the [ThunderWOD] app.',
