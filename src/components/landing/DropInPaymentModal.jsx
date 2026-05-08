@@ -54,11 +54,11 @@ export default function DropInPaymentModal({ isOpen, onClose }) {
                 <X className="h-4 w-4" />
               </button>
 
-              <div className="pr-10">
-                <h3 className="text-xl font-black text-white">
+              <div className="text-center">
+                <h3 className="px-10 text-xl font-black text-white">
                   {isRo ? 'Plătește Drop-In Acum' : 'Pay Drop-In Now'}
                 </h3>
-                <p className="mt-4 rounded-xl border border-blue-400/30 bg-blue-500/10 p-4 text-sm font-semibold leading-relaxed text-white">
+                <p className="mx-auto mt-4 rounded-xl border border-blue-400/30 bg-blue-500/10 p-4 text-center text-sm font-semibold leading-relaxed text-white">
                   {isRo
                     ? <>{'Prin abonarea la acest pachet,'}<br />{'accepți termenii și condițiile sălii!'}</>
                     : <>By subscribing to this package,<br />you accept the gym&apos;s terms and conditions!</>}
