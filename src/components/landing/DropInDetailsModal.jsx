@@ -97,7 +97,7 @@ export default function DropInDetailsModal({ isOpen, onClose, onSubmitted }) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative max-h-[92vh] w-full overflow-y-auto rounded-t-2xl border border-zinc-700 bg-zinc-900 p-4 shadow-2xl sm:max-w-md sm:rounded-2xl sm:p-5"
+            className="relative flex max-h-[88dvh] w-full flex-col overflow-y-auto rounded-t-2xl border border-zinc-700 bg-zinc-900 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] shadow-2xl sm:max-h-[92vh] sm:max-w-md sm:rounded-2xl sm:p-5"
             onClick={(e) => e.stopPropagation()}
           >
             <button
