@@ -113,11 +113,11 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          transition={{ type: 'spring', damping: 26, stiffness: 300 }}
-          className="overflow-hidden mb-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="mb-4"
         >
           <div className="bg-zinc-800 border border-zinc-600 rounded-2xl p-4 min-w-0 w-full">
             {/* Header */}
