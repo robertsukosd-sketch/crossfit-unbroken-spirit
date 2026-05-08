@@ -201,6 +201,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
               ) : (
                 classes.map((time) => {
                   const isPast = isSlotInPast(weekMonday, selectedDayIndex, time);
+                  const isOpenGym = time.includes('-');
                   const isSelected = selectedSlot?.day === selectedDay && selectedSlot?.time === time && selectedSlot?.weekOffset === weekOffset;
                   return (
                     <button
@@ -213,19 +214,33 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
                         isPast
                           ? "bg-zinc-800 border-zinc-700 cursor-not-allowed opacity-40"
                           : isSelected
-                            ? "bg-blue-500 border-blue-400 shadow-md shadow-blue-500/30 cursor-pointer"
-                            : "bg-blue-500/10 border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500/40 cursor-pointer"
+                            ? isOpenGym
+                              ? "bg-cyan-500 border-cyan-400 shadow-md shadow-cyan-500/30 cursor-pointer"
+                              : "bg-blue-500 border-blue-400 shadow-md shadow-blue-500/30 cursor-pointer"
+                            : isOpenGym
+                              ? "bg-cyan-500/20 border-cyan-500/30 hover:bg-cyan-500/30 hover:border-cyan-500/50 cursor-pointer"
+                              : "bg-blue-500/10 border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500/40 cursor-pointer"
                       )}
                     >
-                      <span className={cn("font-bold text-sm tabular-nums", isPast ? "text-zinc-600" : isSelected ? "text-white" : "text-blue-300")}>{time}</span>
+                      <span className={cn("font-bold text-sm tabular-nums", isPast ? "text-zinc-600" : isSelected ? "text-white" : isOpenGym ? "text-cyan-300" : "text-blue-300")}>{time}</span>
                     </button>
                   );
                 })
               )}
             </div>
 
-            {/* Greyed out note */}
-            <p className="mt-3 text-zinc-600 text-xs text-center">
+            <div className="mt-3 flex items-center justify-center gap-4 text-xs">
+              <div className="flex items-center gap-1.5 text-blue-300">
+                <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
+                <span>CrossFit</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-cyan-300">
+                <span className="h-2.5 w-2.5 rounded-full bg-cyan-500" />
+                <span>Open Gym</span>
+              </div>
+            </div>
+
+            <p className="mt-2 text-zinc-600 text-xs text-center">
               {language === 'ro' ? 'Alege clasa sau intervalul de Open Gym în care vrei să vii.' : 'Choose the class or Open Gym interval you plan to attend.'}
             </p>
           </div>
