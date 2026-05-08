@@ -44,7 +44,19 @@ const GALLERY_GROUPS = [
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/e2c87a790__STX0605.jpg', alt: 'Bănci și cuiere vestiar CrossFit Unbroken Spirit București' },
     ],
   },
-  { id: 'exterior', labelRo: 'Exterior', labelEn: 'Exterior', images: [] },
+  {
+    id: 'exterior',
+    labelRo: 'Exterior',
+    labelEn: 'Exterior',
+    images: [
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/f80150a75__STX0696.jpg', alt: 'Drum de acces CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/a715292a7__STX0697.jpg', alt: 'Intrare CrossFit Unbroken Spirit București cu rastel biciclete' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/ce6542888__STX0700.jpg', alt: 'Fațadă CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/4afc8b5a2__STX0702.jpg', alt: 'Exterior sală CrossFit Unbroken Spirit Splaiul Unirii' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/8c76452a3__STX0705.jpg', alt: 'Poartă acces CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/6cf107ea9__STX0708.jpg', alt: 'Acces exterior CrossFit Unbroken Spirit București' },
+    ],
+  },
 ];
 
 export default function GymGallery() {
