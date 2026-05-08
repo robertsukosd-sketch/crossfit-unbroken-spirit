@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
@@ -83,16 +83,25 @@ Respectarea Regulamentului: confirmă că minorul va respecta indicațiile antre
 Consimțământ foto/video: Sunt de acord de acord ca imaginea minorului (foto/video) realizată în timpul activităților să fie utilizată de Unbroken Spirit exclusiv în scop de promovare, după caz.`;
 
 export default function DropInTermsModal({ isOpen, onClose, onAccept }) {
-  const [accepted, setAccepted] = useState(false);
+  const [canContinue, setCanContinue] = useState(false);
+  const contentRef = useRef(null);
 
   useEffect(() => {
     if (!isOpen) return;
+    setCanContinue(false);
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => {
       document.body.style.overflow = previousOverflow;
     };
   }, [isOpen]);
+
+  const handleTermsScroll = () => {
+    const el = contentRef.current;
+    if (!el) return;
+    const reachedBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 8;
+    if (reachedBottom) setCanContinue(true);
+  };
 
   return (
     <AnimatePresence>
@@ -114,26 +123,20 @@ export default function DropInTermsModal({ isOpen, onClose, onAccept }) {
               <p className="mt-1 text-sm text-gray-400">Te rugăm să citești regulile înainte de a continua.</p>
             </div>
 
-            <div className="overflow-y-auto p-5 text-sm leading-relaxed text-gray-300 whitespace-pre-line">
+            <div
+              ref={contentRef}
+              onScroll={handleTermsScroll}
+              className="overflow-y-auto p-5 text-sm leading-relaxed text-gray-300 whitespace-pre-line"
+            >
               {TERMS_TEXT}
             </div>
 
             <div className="border-t border-zinc-700 bg-zinc-950/80 p-5">
-              <label className="flex cursor-pointer items-start gap-3 text-sm text-gray-200">
-                <input
-                  type="checkbox"
-                  checked={accepted}
-                  onChange={(e) => setAccepted(e.target.checked)}
-                  className="mt-1 h-4 w-4 rounded border-zinc-600 accent-blue-600"
-                />
-                <span>Am citit și sunt de acord cu termenii și condițiile.</span>
-              </label>
-
               <Button
                 type="button"
-                disabled={!accepted}
+                disabled={!canContinue}
                 onClick={onAccept || onClose}
-                className="mt-4 w-full bg-blue-600 text-white hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full bg-blue-600 text-white hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Acceptă și continuă către plată
               </Button>
