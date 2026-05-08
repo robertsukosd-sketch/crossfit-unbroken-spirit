@@ -269,7 +269,7 @@ function PartnersContent({ language, t }) {
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
           {language === 'ro'
             ? <>🤝 Suntem parteneri cu platformele de beneficii pentru angajați de mai jos.<br />Dacă ai un abonament activ prin angajatorul tău, te poți antrena cu noi fără costuri suplimentare.</>
-            : <>🤝 We are partners with the employee benefit platforms below.<br />If you have an active plan through your employer, you can train with us at no extra cost.</>}
+            : <>🤝 We are partners with the employee benefit platforms below.<br />If you have an active plan through your employer, you can train with us for no extra costs.</>}
         </p>
       </div>
 
