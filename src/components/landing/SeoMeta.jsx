@@ -26,6 +26,7 @@ const WEBSITE_SCHEMA = {
 const WEBPAGE_SCHEMAS = [
   { id: 'hero', name: 'CrossFit Unbroken Spirit București', url: 'https://www.unbrokenspirit.ro/#hero', description: 'Forță. Comunitate. Rezultate. Descoperă cel mai bun CrossFit din București.' },
   { id: 'about', name: 'Despre CrossFit Unbroken Spirit', url: 'https://www.unbrokenspirit.ro/#about', description: 'Antrenorii și facilități CrossFit Unbroken Spirit - Splaiul Unirii 257-259, București.' },
+  { id: 'gallery', name: 'Galerie foto CrossFit Unbroken Spirit București', url: 'https://www.unbrokenspirit.ro/#gallery', description: 'Galerie foto cu echipamente Rogue, zona de antrenament, vestiare și exterior la CrossFit Unbroken Spirit București.' },
   { id: 'faq', name: 'Întrebări Frecvente CrossFit', url: 'https://www.unbrokenspirit.ro/#faq', description: 'Răspunsuri la toate întrebările despre CrossFit, abonamente și sala Unbroken Spirit.' },
   { id: 'pricing', name: 'Abonamente CrossFit Unbroken Spirit', url: 'https://www.unbrokenspirit.ro/#pricing', description: 'Abonamente CrossFit de la 320 RON/lună. Prima ședință gratuită.' },
   { id: 'schedule', name: 'Orar Clase CrossFit', url: 'https://www.unbrokenspirit.ro/#schedule', description: 'Orarul complet al claselor CrossFit, Open Gym și CrossFit Kids la Unbroken Spirit.' },
@@ -382,6 +383,59 @@ function removeSchema(id) {
   if (el) el.remove();
 }
 
+const GALLERY_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Galerie foto CrossFit Unbroken Spirit București",
+  "alternateName": "Poze sală CrossFit București — echipamente, vestiare și exterior",
+  "description": "Galerie foto cu sala CrossFit Unbroken Spirit din București: echipamente Rogue, rower, bike, ski erg, rig, haltere, discuri bumper, vestiare moderne și acces exterior pe Splaiul Unirii 257-259.",
+  "url": "https://www.unbrokenspirit.ro/#gallery",
+  "inLanguage": "ro",
+  "about": [
+    "CrossFit București",
+    "sală fitness București",
+    "echipamente Rogue",
+    "rower bike ski erg",
+    "vestiare sală CrossFit",
+    "Splaiul Unirii 257-259"
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "CrossFit Unbroken Spirit",
+    "url": "https://www.unbrokenspirit.ro"
+  },
+  "provider": {
+    "@type": "SportsActivityLocation",
+    "name": "CrossFit Unbroken Spirit",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Splaiul Unirii 257-259",
+      "addressLocality": "București",
+      "addressCountry": "RO"
+    }
+  },
+  "associatedMedia": [
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/74846832a__STX0680.jpg",
+      "name": "Echipamente CrossFit Unbroken Spirit București",
+      "caption": "Echipamente Rogue, ski erg, rig și zona de antrenament la CrossFit Unbroken Spirit București."
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/41e836c8c__STX0573.jpg",
+      "name": "Vestiare CrossFit Unbroken Spirit București",
+      "caption": "Vestiare moderne cu dulapuri și dușuri pentru membrii CrossFit Unbroken Spirit."
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/8c76452a3__STX0705.jpg",
+      "name": "Exterior CrossFit Unbroken Spirit București",
+      "caption": "Acces exterior către sala CrossFit Unbroken Spirit de pe Splaiul Unirii 257-259."
+    }
+  ]
+};
+
 const SERVICES_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "ItemList",
@@ -487,6 +541,10 @@ const SECTION_META = {
       title: 'Sală CrossFit & Fitness București | Antrenori Certificați - Unbroken Spirit',
       description: 'Sală de fitness CrossFit în București dotată cu echipamente Rogue, rower, assault bike, ski erg. Antrenori certificați, vestiare, parcare gratuită. Splaiul Unirii 257-259.',
     },
+    gallery: {
+      title: 'Galerie Foto CrossFit București | Echipamente Rogue, Vestiare & Exterior - Unbroken Spirit',
+      description: 'Vezi galeria foto CrossFit Unbroken Spirit București: echipamente Rogue, rower, bike, ski erg, rig, haltere, vestiare moderne și acces exterior pe Splaiul Unirii 257-259.',
+    },
     starthere: {
       title: 'Ce este CrossFit? Ghid pentru Începători | Sală Fitness București - Unbroken Spirit',
       description: 'Vrei să începi CrossFit în București? Ghidul nostru complet explică antrenamentele de grup, clasele de fitness, echipamentele și de ce prima clasă la Unbroken Spirit este gratuită.',
@@ -521,6 +579,10 @@ const SECTION_META = {
       title: 'About Us - CrossFit Unbroken Spirit Bucharest',
       description: 'Meet the coaches and gym at CrossFit Unbroken Spirit. Modern facilities, free parking, fully equipped changing rooms. Near Mihai Bravu metro station.',
     },
+    gallery: {
+      title: 'Photo Gallery CrossFit Bucharest | Rogue Equipment & Facilities - Unbroken Spirit',
+      description: 'Explore CrossFit Unbroken Spirit Bucharest in photos: Rogue equipment, training area, locker rooms and exterior access on Splaiul Unirii 257-259.',
+    },
     starthere: {
       title: 'What is CrossFit? Beginner\'s Guide - Unbroken Spirit',
       description: 'Want to start CrossFit but don\'t know where to begin? Read our complete guide on what CrossFit is, how it works and why it\'s perfect for you.',
@@ -549,7 +611,7 @@ const SECTION_META = {
 };
 
 // Ordered list of section IDs as they appear on the page
-const SECTION_ORDER = ['hero', 'about', 'starthere', 'programs', 'faq', 'pricing', 'schedule', 'contact'];
+const SECTION_ORDER = ['hero', 'about', 'gallery', 'starthere', 'programs', 'faq', 'pricing', 'schedule', 'contact'];
 
 function setMeta(name, content) {
   let el = document.querySelector(`meta[name="${name}"]`);
@@ -632,6 +694,7 @@ export default function SeoMeta() {
     injectSchema('schema-events', buildEventSchemas());
     injectSchema('schema-howto', language === 'en' ? HOWTO_SCHEMA_EN : HOWTO_SCHEMA_RO);
     injectSchema('schema-services', SERVICES_SCHEMA);
+    injectSchema('schema-gallery', GALLERY_SCHEMA);
     injectSchema('schema-partners', PARTNERS_SCHEMA);
     // FAQ always present for Romanian (primary language) — helps AI Overviews
     // Include partners FAQ merged into main FAQ
@@ -676,6 +739,7 @@ export default function SeoMeta() {
       removeSchema('schema-webpage');
       removeSchema('schema-howto');
       removeSchema('schema-services');
+      removeSchema('schema-gallery');
       removeSchema('schema-partners');
       removeSchema('schema-speakable');
     };

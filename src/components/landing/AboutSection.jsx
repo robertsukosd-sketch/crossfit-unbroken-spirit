@@ -208,7 +208,7 @@ export default function AboutSection() {
         </motion.div>
 
         {/* Gallery */}
-        <div id="gallery">
+        <div id="gallery" className="scroll-mt-24">
           <GymGallery />
         </div>
 

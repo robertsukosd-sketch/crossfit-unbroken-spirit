@@ -117,14 +117,31 @@ export default function GymGallery() {
     : [];
 
   return (
-    <div className="relative mt-10">
-      <div className="flex flex-wrap justify-center gap-2 mb-6">
+    <div className="relative mt-10" aria-labelledby="gallery-title">
+      <div className="text-center max-w-3xl mx-auto mb-8">
+        <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
+          {language === 'ro' ? 'Galerie foto' : 'Photo Gallery'}
+        </span>
+        <h2 id="gallery-title" className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-3 mb-4 leading-tight">
+          {language === 'ro' ? 'Vezi sala CrossFit Unbroken Spirit din București' : 'Explore CrossFit Unbroken Spirit Bucharest'}
+        </h2>
+        <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
+          {language === 'ro'
+            ? 'Descoperă echipamentele Rogue, zona de antrenament, vestiarele și accesul exterior al sălii noastre de CrossFit din București, pe Splaiul Unirii 257-259.'
+            : 'See our Rogue equipment, training space, locker rooms and exterior access at our CrossFit gym in Bucharest.'}
+        </p>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-2 mb-6" role="tablist" aria-label={language === 'ro' ? 'Categorii galerie foto' : 'Photo gallery categories'}>
         {GALLERY_GROUPS.map((group) => {
           const isActive = activeGallery === group.id;
           return (
             <button
               key={group.id}
               onClick={() => selectGallery(group.id)}
+              role="tab"
+              aria-selected={isActive}
+              aria-controls={`gallery-panel-${group.id}`}
               className={`px-4 py-2 rounded-full text-sm font-bold border transition-all ${
                 isActive
                   ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-500/25'
@@ -138,14 +155,14 @@ export default function GymGallery() {
       </div>
 
       {activeImages.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-zinc-700 bg-zinc-900/50 p-10 text-center text-gray-400">
+        <div id={`gallery-panel-${activeGroup.id}`} role="tabpanel" className="rounded-2xl border border-dashed border-zinc-700 bg-zinc-900/50 p-10 text-center text-gray-400">
           {language === 'ro' ? 'Fotografiile vor fi adăugate în curând.' : 'Photos will be added soon.'}
         </div>
       ) : (
-      <div className="flex gap-4 overflow-hidden">
+      <div id={`gallery-panel-${activeGroup.id}`} role="tabpanel" className="flex gap-4 overflow-hidden">
         <AnimatePresence mode="sync">
           {visible.map((img, i) => (
-            <motion.div
+            <motion.figure
               key={img.src}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -162,7 +179,8 @@ export default function GymGallery() {
                 sizes="(max-width: 640px) 100vw, 50vw"
                 className="w-full h-full object-cover"
               />
-            </motion.div>
+              <figcaption className="sr-only">{img.alt}</figcaption>
+            </motion.figure>
           ))}
         </AnimatePresence>
       </div>
