@@ -16,6 +16,7 @@ const GALLERY_GROUPS = [
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/817e9eed8__STX0679.jpg', alt: 'Interior sală CrossFit Unbroken Spirit București' },
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/9d3e4fe75__STX0678.jpg', alt: 'Inele gimnastică CrossFit Unbroken Spirit' },
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/8cbe3ba28__STX0676.jpg', alt: 'Rig albastru CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/909efe9d3__STX0673.jpg', alt: 'Discuri bumper CrossFit Unbroken Spirit București' },
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/00310abb7__STX0670.jpg', alt: 'Bară olimpică încărcată CrossFit București' },
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/a52f9db8d__STX0667.jpg', alt: 'Magnesium bucket CrossFit Unbroken Spirit București' },
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/60f225d34__STX0653.jpg', alt: 'Wall balls și gantere Rogue CrossFit București' },
