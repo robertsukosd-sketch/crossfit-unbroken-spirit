@@ -208,7 +208,9 @@ export default function AboutSection() {
         </motion.div>
 
         {/* Gallery */}
-        <GymGallery />
+        <div id="gallery">
+          <GymGallery />
+        </div>
 
         {/* Coaches Section */}
         <motion.div
