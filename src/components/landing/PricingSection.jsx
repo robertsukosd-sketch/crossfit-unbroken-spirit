@@ -627,7 +627,6 @@ export default function PricingSection({ onOpenFreeClass }) {
         <DropInPaymentModal
           isOpen={isDropInModalOpen}
           onClose={() => setIsDropInModalOpen(false)}
-          onAccept={handleDropInAccept}
         />
       </div>
     </section>
