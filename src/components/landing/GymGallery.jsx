@@ -10,7 +10,6 @@ const GALLERY_GROUPS = [
     labelEn: 'Equipment',
     images: [
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/74846832a__STX0680.jpg', alt: 'Echipamente CrossFit Unbroken Spirit București - ski erg Rogue' },
-      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/e9236ba2c__STX0703.jpg', alt: 'Discuri Rogue CrossFit Unbroken Spirit București' },
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/107bc8b5e__STX0693.jpg', alt: 'Rig CrossFit și bare olimpice Rogue București' },
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/b4c10b148__STX0690.jpg', alt: 'Rowere Concept2 și benzi elastice CrossFit București' },
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/00cbf4801__STX0682.jpg', alt: 'Bike erg Rogue și box-uri CrossFit Unbroken Spirit' },
@@ -32,6 +31,7 @@ const GALLERY_GROUPS = [
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/5baf29a21__STX0623.jpg', alt: 'Echo bike Rogue în sala CrossFit București' },
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/b5ca66296__STX0619.jpg', alt: 'Ski erg Rogue CrossFit Unbroken Spirit' },
       { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/e9ae44f08__STX0618.jpg', alt: 'Monitor ski erg Rogue CrossFit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/e9236ba2c__STX0703.jpg', alt: 'Discuri Rogue CrossFit Unbroken Spirit București' },
     ],
   },
   {
