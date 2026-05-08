@@ -24,7 +24,26 @@ const GALLERY_GROUPS = [
       { src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/0d7ea80a2_CrossFit_US-227.jpg', alt: 'Locație CrossFit Unbroken Spirit - CrossFit lângă metrou Mihai Bravu București' },
     ],
   },
-  { id: 'locker', labelRo: 'Vestiare', labelEn: 'Locker Rooms', images: [] },
+  {
+    id: 'locker',
+    labelRo: 'Vestiare',
+    labelEn: 'Locker Rooms',
+    images: [
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/41e836c8c__STX0573.jpg', alt: 'Vestiare CrossFit Unbroken Spirit București - dulapuri și cabine' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/38327f35b__STX0577.jpg', alt: 'Dulapuri vestiar CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/25de67b3d__STX0579.jpg', alt: 'Bănci vestiar CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/ff0ed1cd4__STX0583.jpg', alt: 'Dușuri vestiar CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/f7c178167__STX0584.jpg', alt: 'Chiuvetă și oglindă vestiar CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/e9614b28f__STX0589.jpg', alt: 'Zonă baie vestiar CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/04c8f45a0__STX0590.jpg', alt: 'Cabine vestiar CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/a483175f3__STX0595.jpg', alt: 'Vestiar luminos CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/1a9145e48__STX0599.jpg', alt: 'Chiuvetă baie vestiar CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/cae2c0664__STX0601.jpg', alt: 'Oglindă și uscător vestiar CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/2b479a80b__STX0602.jpg', alt: 'Spațiu vestiar CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/c57fe914e__STX0603.jpg', alt: 'Dulapuri albastre vestiar CrossFit Unbroken Spirit București' },
+      { src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/e2c87a790__STX0605.jpg', alt: 'Bănci și cuiere vestiar CrossFit Unbroken Spirit București' },
+    ],
+  },
   { id: 'exterior', labelRo: 'Exterior', labelEn: 'Exterior', images: [] },
 ];
 
