@@ -118,7 +118,7 @@ export default function GymGallery() {
 
   return (
     <div className="relative mt-10" aria-labelledby="gallery-title">
-      <div className="text-center max-w-3xl mx-auto mb-8">
+      <div className="text-center max-w-5xl mx-auto mb-8">
         <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">
           {language === 'ro' ? 'Galerie foto' : 'Photo Gallery'}
         </span>
