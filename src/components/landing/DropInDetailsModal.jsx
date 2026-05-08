@@ -97,7 +97,7 @@ export default function DropInDetailsModal({ isOpen, onClose, onSubmitted }) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative flex max-h-[88dvh] w-full flex-col overflow-y-auto rounded-t-2xl border border-zinc-700 bg-zinc-900 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] shadow-2xl sm:max-h-[92vh] sm:max-w-md sm:rounded-2xl sm:p-5"
+            className="relative flex max-h-[82dvh] w-full flex-col overflow-y-auto rounded-t-2xl border border-zinc-700 bg-zinc-900 p-4 pb-32 shadow-2xl sm:max-h-[92vh] sm:max-w-md sm:rounded-2xl sm:p-5"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -126,7 +126,7 @@ export default function DropInDetailsModal({ isOpen, onClose, onSubmitted }) {
               onSlotSelect={handleSlotSelect}
             />
 
-            <form onSubmit={handleSubmit} className="mt-3 space-y-2">
+            <form onSubmit={handleSubmit} className="mt-3 space-y-2 pb-10 sm:pb-0">
               <div>
                 <label className="mb-1 block text-xs font-semibold text-gray-300">
                   {t('fullName')} <span className="text-blue-400">*</span>
