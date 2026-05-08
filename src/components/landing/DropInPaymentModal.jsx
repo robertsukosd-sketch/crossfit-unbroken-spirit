@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +12,15 @@ export default function DropInPaymentModal({ isOpen, onClose }) {
   const [showTerms, setShowTerms] = useState(false);
   const [showCheckout, setShowCheckout] = useState(false);
   const isRo = language === 'ro';
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isOpen]);
 
   return (
     <>
