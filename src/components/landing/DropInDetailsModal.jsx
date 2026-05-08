@@ -61,7 +61,9 @@ export default function DropInDetailsModal({ isOpen, onClose, onSubmitted }) {
     setSending(true);
 
     const slotDate = getSlotDate(selectedSlot);
-    const interval = `${selectedSlot.day}${slotDate ? ` (${slotDate})` : ''} la ${selectedSlot.time}`;
+    const isSaturdayCrossFit = selectedSlot.day === t("saturday") && selectedSlot.time === "10:00-11:30";
+    const sessionType = selectedSlot.time.includes('-') && !isSaturdayCrossFit ? 'Open Gym' : 'CrossFit';
+    const interval = `${selectedSlot.day}${slotDate ? ` (${slotDate})` : ''} la ${selectedSlot.time} - ${sessionType}`;
 
     try {
       await fetch('https://api.unbrokenspirit.ro/email/send/', {
