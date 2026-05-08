@@ -127,7 +127,7 @@ export default function GymGallery() {
         </h2>
         <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
           {language === 'ro'
-            ? 'Descoperă echipamentele Rogue, zona de antrenament, vestiarele și accesul exterior al sălii noastre de CrossFit din București, pe Splaiul Unirii 257-259.'
+            ? 'Descoperă echipamentele Rogue și ThunderWOD, zona de antrenament, vestiarele și drumul de acces la sala noastră de CrossFit din București, Splaiul Unirii 257-259.'
             : 'See our Rogue equipment, training space, locker rooms and exterior access at our CrossFit gym in Bucharest.'}
         </p>
       </div>
