@@ -3,26 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '../LanguageProvider';
-import PolicyModal from './PolicyModal';
+import DropInTermsModal from './DropInTermsModal';
 
 const DROP_IN_CHECKOUT_URL = 'https://checkout.stripe.com/c/pay/cs_live_a17Kbu8l647AcVvFqCkhQQYdGKuCOn3lJAR0xtl7M6WJOSMFW8qWhg6h2k#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdicGRmZGhqaWBTZHdsZGtxJz8nZmprcXdqaScpJ3Zxd2x1YERmZmpwa3EnPydkZmZxWjRRMDR2QUNzXDZmRkw2RHYnKSdkdWxOYHwnPyd1blppbHNgWjA0TjxrTEhDd2RfTGxwPUlfYmNKaTJtVXxidlZJNjFEYF9XVDF8PU88d1Vhd2ZHNk5uS2xUM3BDV3VwUzRmVkZxX111fHNgbWJzQ2lQcmpmYU1ERl9KaXFuNTV8dW98Rn9UcScpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjY2NjY2MnKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSdga2RnaWBVaWRmYG1qaWFgd3YnP3F3cGB4JSUl';
-
-function TermsContent({ language }) {
-  return (
-    <div className="space-y-4">
-      <p>
-        {language === 'ro'
-          ? 'Prin achiziționarea unui pachet Drop-In, confirmi că ai citit și accepți termenii și condițiile sălii CrossFit Unbroken Spirit.'
-          : "By purchasing a Drop-In package, you confirm that you have read and accept CrossFit Unbroken Spirit's gym terms and conditions."}
-      </p>
-      <p>
-        {language === 'ro'
-          ? 'Participarea la antrenamente presupune respectarea indicațiilor antrenorilor, folosirea corespunzătoare a echipamentelor și asumarea responsabilității pentru propria stare de sănătate.'
-          : 'Training participation requires following coaches’ instructions, using equipment properly, and taking responsibility for your own health condition.'}
-      </p>
-    </div>
-  );
-}
 
 export default function DropInPaymentModal({ isOpen, onClose }) {
   const { language } = useLanguage();
@@ -108,14 +91,10 @@ export default function DropInPaymentModal({ isOpen, onClose }) {
         )}
       </AnimatePresence>
 
-      {showTerms && (
-        <PolicyModal
-          title={isRo ? 'Termeni și Condiții' : 'Terms & Conditions'}
-          content={<TermsContent language={language} />}
-          closeLabel={isRo ? 'Închide' : 'Close'}
-          onClose={() => setShowTerms(false)}
-        />
-      )}
+      <DropInTermsModal
+        isOpen={showTerms}
+        onClose={() => setShowTerms(false)}
+      />
     </>
   );
 }
