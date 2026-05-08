@@ -98,7 +98,8 @@ export default function DropInPaymentModal({ isOpen, onClose }) {
         onClose={() => setShowTerms(false)}
         onAccept={() => {
           setShowTerms(false);
-          setShowCheckout(true);
+          onClose();
+          window.open(DROP_IN_CHECKOUT_URL, '_blank', 'noopener,noreferrer');
         }}
       />
     </>
