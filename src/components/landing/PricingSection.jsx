@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
 import { getMobileOrDesktopUrl } from '../appStoreUtils';
 import SubscriptionConfirmModal from './SubscriptionConfirmModal';
+import DropInPaymentModal from './DropInPaymentModal';
 
 function scrollToDownloadApp() {
   const el = document.getElementById('thunderwod-app');
@@ -154,6 +155,7 @@ const getCategories = (language) => [
           : ['1 CrossFit or Open Gym session', 'Full access to facilities', 'For experienced CrossFit athletes', '🎁 First session FREE for newcomers', 'Free parking spot'],
         popular: false,
         featured: false,
+        isDropIn: true,
       },
       {
         name: 'Trial/Drop In 1 Week',
@@ -345,7 +347,7 @@ function PartnersContent({ language, t }) {
   );
 }
 
-function PlanCard({ plan, index, t, onSignUpClick, language }) {
+function PlanCard({ plan, index, t, onSignUpClick, onDropInClick, language }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -401,7 +403,7 @@ function PlanCard({ plan, index, t, onSignUpClick, language }) {
       </ul>
 
       <Button
-        onClick={onSignUpClick}
+        onClick={plan.isDropIn ? onDropInClick : onSignUpClick}
         className={cn(
           'w-full font-bold rounded-full',
           plan.featured
@@ -411,7 +413,9 @@ function PlanCard({ plan, index, t, onSignUpClick, language }) {
             : 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'
         )}
       >
-        {t('startNowBtn')}
+        {plan.isDropIn
+          ? (language === 'ro' ? 'Plătește Drop-In Acum' : 'Pay Drop-In Now')
+          : t('startNowBtn')}
       </Button>
     </motion.div>
   );
@@ -422,6 +426,7 @@ export default function PricingSection({ onOpenFreeClass }) {
   const categories = getCategories(language);
   const [activeId, setActiveId] = useState('core');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDropInModalOpen, setIsDropInModalOpen] = useState(false);
 
   useEffect(() => {
     const handleSelectCategory = () => {
@@ -459,6 +464,10 @@ export default function PricingSection({ onOpenFreeClass }) {
 
   const handleCancel = () => {
     setIsModalOpen(false);
+  };
+
+  const handleDropInAccept = () => {
+    setIsDropInModalOpen(false);
   };
 
 
@@ -571,7 +580,14 @@ export default function PricingSection({ onOpenFreeClass }) {
                   const mobileOrder = reverseOnMobile ? total - 1 - index : index;
                   return (
                     <div key={plan.name} style={{ order: mobileOrder }} className="h-full">
-                      <PlanCard plan={plan} index={index} t={t} onSignUpClick={handleSignUpClick} language={language} />
+                      <PlanCard
+                        plan={plan}
+                        index={index}
+                        t={t}
+                        onSignUpClick={handleSignUpClick}
+                        onDropInClick={() => setIsDropInModalOpen(true)}
+                        language={language}
+                      />
                     </div>
                   );
                 })}
@@ -607,6 +623,11 @@ export default function PricingSection({ onOpenFreeClass }) {
           isOpen={isModalOpen}
           onConfirm={handleConfirm}
           onCancel={handleCancel}
+        />
+        <DropInPaymentModal
+          isOpen={isDropInModalOpen}
+          onClose={() => setIsDropInModalOpen(false)}
+          onAccept={handleDropInAccept}
         />
       </div>
     </section>

@@ -1,0 +1,100 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useLanguage } from '../LanguageProvider';
+import PolicyModal from './PolicyModal';
+
+function TermsContent({ language }) {
+  return (
+    <div className="space-y-4">
+      <p>
+        {language === 'ro'
+          ? 'Prin achiziționarea unui pachet Drop-In, confirmi că ai citit și accepți termenii și condițiile sălii CrossFit Unbroken Spirit.'
+          : "By purchasing a Drop-In package, you confirm that you have read and accept CrossFit Unbroken Spirit's gym terms and conditions."}
+      </p>
+      <p>
+        {language === 'ro'
+          ? 'Participarea la antrenamente presupune respectarea indicațiilor antrenorilor, folosirea corespunzătoare a echipamentelor și asumarea responsabilității pentru propria stare de sănătate.'
+          : 'Training participation requires following coaches’ instructions, using equipment properly, and taking responsibility for your own health condition.'}
+      </p>
+    </div>
+  );
+}
+
+export default function DropInPaymentModal({ isOpen, onClose, onAccept }) {
+  const { language } = useLanguage();
+  const [showTerms, setShowTerms] = useState(false);
+  const isRo = language === 'ro';
+
+  return (
+    <>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+            onClick={onClose}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ duration: 0.2 }}
+              className="relative w-full max-w-md rounded-2xl border border-blue-400/30 bg-zinc-900 p-6 shadow-2xl shadow-blue-900/30"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={onClose}
+                className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-zinc-800 text-white transition-colors hover:bg-zinc-700"
+                aria-label={isRo ? 'Închide' : 'Close'}
+              >
+                <X className="h-4 w-4" />
+              </button>
+
+              <div className="pr-10">
+                <h3 className="text-xl font-black text-white">
+                  {isRo ? 'Plătește Drop-In Acum' : 'Pay Drop-In Now'}
+                </h3>
+                <p className="mt-4 rounded-xl border border-blue-400/30 bg-blue-500/10 p-4 text-sm font-semibold leading-relaxed text-white">
+                  {isRo
+                    ? 'Prin abonarea la acest pachet, accepți termenii și condițiile sălii!'
+                    : "By subscribing to this package, you accept the gym's terms and conditions!"}
+                </p>
+              </div>
+
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => setShowTerms(true)}
+                  className="flex-1 border-zinc-600 bg-zinc-800 text-white hover:bg-zinc-700 hover:text-white"
+                >
+                  {isRo ? 'Termeni și Condiții' : 'Terms & Conditions'}
+                </Button>
+                <Button
+                  type="button"
+                  onClick={onAccept}
+                  className="flex-1 bg-blue-600 text-white hover:bg-blue-500"
+                >
+                  {isRo ? 'Accept' : 'Accept'}
+                </Button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {showTerms && (
+        <PolicyModal
+          title={isRo ? 'Termeni și Condiții' : 'Terms & Conditions'}
+          content={<TermsContent language={language} />}
+          closeLabel={isRo ? 'Închide' : 'Close'}
+          onClose={() => setShowTerms(false)}
+        />
+      )}
+    </>
+  );
+}
