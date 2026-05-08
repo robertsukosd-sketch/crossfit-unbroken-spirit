@@ -123,7 +123,7 @@ export default function GymGallery() {
           {language === 'ro' ? 'Galerie foto' : 'Photo Gallery'}
         </span>
         <h2 id="gallery-title" className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-3 mb-4 leading-tight">
-          {language === 'ro' ? 'Vezi sala CrossFit Unbroken Spirit din București' : 'Explore CrossFit Unbroken Spirit Bucharest'}
+          {language === 'ro' ? <>Vezi sala CrossFit Unbroken Spirit<br />din București</> : 'Explore CrossFit Unbroken Spirit Bucharest'}
         </h2>
         <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
           {language === 'ro'
