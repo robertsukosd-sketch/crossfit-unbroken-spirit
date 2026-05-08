@@ -201,7 +201,8 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
               ) : (
                 classes.map((time) => {
                   const isPast = isSlotInPast(weekMonday, selectedDayIndex, time);
-                  const isOpenGym = time.includes('-');
+                  const isSaturdayCrossFit = selectedDay === t("saturday") && time === "10:00-11:30";
+                  const isOpenGym = time.includes('-') && !isSaturdayCrossFit;
                   const isSelected = selectedSlot?.day === selectedDay && selectedSlot?.time === time && selectedSlot?.weekOffset === weekOffset;
                   return (
                     <button
