@@ -82,7 +82,7 @@ Intervenție de urgență: autorizează solicitarea serviciilor medicale de urge
 Respectarea Regulamentului: confirmă că minorul va respecta indicațiile antrenorilor și regulile clubului; nerespectarea acestora poate conduce la suspendarea accesului minorului la activități.
 Consimțământ foto/video: Sunt de acord de acord ca imaginea minorului (foto/video) realizată în timpul activităților să fie utilizată de Unbroken Spirit exclusiv în scop de promovare, după caz.`;
 
-export default function DropInTermsModal({ isOpen, onClose }) {
+export default function DropInTermsModal({ isOpen, onClose, onAccept }) {
   const [accepted, setAccepted] = useState(false);
 
   useEffect(() => {
@@ -132,10 +132,10 @@ export default function DropInTermsModal({ isOpen, onClose }) {
               <Button
                 type="button"
                 disabled={!accepted}
-                onClick={onClose}
+                onClick={onAccept || onClose}
                 className="mt-4 w-full bg-blue-600 text-white hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-50"
               >
-                Închide
+                Acceptă și continuă către plată
               </Button>
             </div>
           </motion.div>

@@ -65,21 +65,14 @@ export default function DropInPaymentModal({ isOpen, onClose }) {
                     </p>
                   </div>
 
-                  <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <div className="mt-6">
                     <Button
                       type="button"
                       variant="outline"
                       onClick={() => setShowTerms(true)}
-                      className="flex-1 border-zinc-600 bg-zinc-800 text-white hover:bg-zinc-700 hover:text-white"
+                      className="w-full border-zinc-600 bg-zinc-800 text-white hover:bg-zinc-700 hover:text-white"
                     >
                       {isRo ? 'Termeni și Condiții' : 'Terms & Conditions'}
-                    </Button>
-                    <Button
-                      type="button"
-                      onClick={() => setShowCheckout(true)}
-                      className="flex-1 bg-blue-600 text-white hover:bg-blue-500"
-                    >
-                      {isRo ? 'Accept' : 'Accept'}
                     </Button>
                   </div>
                 </>
@@ -103,6 +96,10 @@ export default function DropInPaymentModal({ isOpen, onClose }) {
       <DropInTermsModal
         isOpen={showTerms}
         onClose={() => setShowTerms(false)}
+        onAccept={() => {
+          setShowTerms(false);
+          setShowCheckout(true);
+        }}
       />
     </>
   );
