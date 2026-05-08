@@ -60,8 +60,8 @@ export default function DropInPaymentModal({ isOpen, onClose }) {
                     </h3>
                     <p className="mt-4 rounded-xl border border-blue-400/30 bg-blue-500/10 p-4 text-sm font-semibold leading-relaxed text-white">
                       {isRo
-                        ? 'Prin abonarea la acest pachet, accepți termenii și condițiile sălii!'
-                        : "By subscribing to this package, you accept the gym's terms and conditions!"}
+                        ? <>{'Prin abonarea la acest pachet,'}<br />{'accepți termenii și condițiile sălii!'}</>
+                        : <>By subscribing to this package,<br />you accept the gym&apos;s terms and conditions!</>}
                     </p>
                   </div>
 
