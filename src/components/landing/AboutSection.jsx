@@ -229,7 +229,7 @@ export default function AboutSection() {
           </div>
 
           {/* Coaches Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {(() => {
               const images = [
                 { id: 1, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/18d3ab544_CrossFit_US-148A.jpg', objectPosition: '50% 5%', altText: 'Andrei Vârnav - antrenor CrossFit București, CrossFit Unbroken Spirit' },
@@ -274,7 +274,7 @@ export default function AboutSection() {
                 }
               ];
 
-              return coaches.map((coach, index) => (
+              return coaches.filter((coach) => !coach.placeholder).map((coach, index) => (
                 <motion.div
                   key={coach.id}
                   initial={{ opacity: 0, y: 20 }}
