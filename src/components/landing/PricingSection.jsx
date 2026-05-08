@@ -207,7 +207,7 @@ const PARTNERS = [
     website: 'https://7card.ro',
     tagRo: 'Acces inclus în abonament',
     tagEn: 'Included in your membership',
-    descRo: 'Ai abonament 7Card by Wellhub? Ne găsești în rețea. Vino la orice clasă de CrossFit sau Open Gym fără nicio taxă suplimentară. Înscrierea la ore se face direct din aplicația [ThunderWOD].',
+    descRo: 'Ai abonament 7Card by Wellhub? Ne găsești în rețea, la planul Diamond. Vino la orice clasă de CrossFit sau Open Gym, în limita a 12 intrări pe lună, fără nicio taxă suplimentară. Înscrierea la ore se face direct din aplicația [ThunderWOD].',
     descEn: 'Have a 7Card by Wellhub membership? You can find us in the network. Come to any CrossFit class or Open Gym session with no extra fee. Class booking is done directly through the [ThunderWOD] app.',
     howRo: ['Autentifică-te în aplicația 7Card/Wellhub', 'Deschide ThunderWOD și înscrie-te la ora dorită', 'Vino la antrenament — fără taxă suplimentară!'],
     howEn: ['Log in to the 7Card/Wellhub app', 'Open ThunderWOD and book your class', 'Show up and train — no extra fee!'],
