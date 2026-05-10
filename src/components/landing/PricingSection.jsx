@@ -6,7 +6,8 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
 import { getMobileOrDesktopUrl } from '../appStoreUtils';
 import SubscriptionConfirmModal from './SubscriptionConfirmModal';
-import DropInPaymentModal from './DropInPaymentModal';
+// Drop-In payment flow temporarily disabled
+// import DropInPaymentModal from './DropInPaymentModal';
 
 function scrollToDownloadApp() {
   const el = document.getElementById('thunderwod-app');
@@ -347,7 +348,7 @@ function PartnersContent({ language, t }) {
   );
 }
 
-function PlanCard({ plan, index, t, onSignUpClick, onDropInClick, language }) {
+function PlanCard({ plan, index, t, onSignUpClick, language }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -403,7 +404,7 @@ function PlanCard({ plan, index, t, onSignUpClick, onDropInClick, language }) {
       </ul>
 
       <Button
-        onClick={plan.isDropIn ? onDropInClick : onSignUpClick}
+        onClick={plan.isDropIn ? undefined : onSignUpClick}
         className={cn(
           'w-full font-bold rounded-full',
           plan.featured
@@ -413,9 +414,7 @@ function PlanCard({ plan, index, t, onSignUpClick, onDropInClick, language }) {
             : 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'
         )}
       >
-        {plan.isDropIn
-          ? (language === 'ro' ? 'Plătește Drop-In Acum' : 'Pay Drop-In Now')
-          : t('startNowBtn')}
+        {t('startNowBtn')}
       </Button>
     </motion.div>
   );
@@ -426,7 +425,8 @@ export default function PricingSection({ onOpenFreeClass }) {
   const categories = getCategories(language);
   const [activeId, setActiveId] = useState('core');
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isDropInModalOpen, setIsDropInModalOpen] = useState(false);
+  // Drop-In payment flow temporarily disabled
+  // const [isDropInModalOpen, setIsDropInModalOpen] = useState(false);
 
   useEffect(() => {
     const handleSelectCategory = () => {
@@ -466,9 +466,10 @@ export default function PricingSection({ onOpenFreeClass }) {
     setIsModalOpen(false);
   };
 
-  const handleDropInAccept = () => {
-    setIsDropInModalOpen(false);
-  };
+  // Drop-In payment flow temporarily disabled
+  // const handleDropInAccept = () => {
+  //   setIsDropInModalOpen(false);
+  // };
 
 
 
@@ -585,7 +586,6 @@ export default function PricingSection({ onOpenFreeClass }) {
                         index={index}
                         t={t}
                         onSignUpClick={handleSignUpClick}
-                        onDropInClick={() => setIsDropInModalOpen(true)}
                         language={language}
                       />
                     </div>
@@ -624,10 +624,12 @@ export default function PricingSection({ onOpenFreeClass }) {
           onConfirm={handleConfirm}
           onCancel={handleCancel}
         />
+        {/* Drop-In payment flow temporarily disabled
         <DropInPaymentModal
           isOpen={isDropInModalOpen}
           onClose={() => setIsDropInModalOpen(false)}
         />
+        */}
       </div>
     </section>
   );
