@@ -93,7 +93,7 @@ export default function GymGallery() {
   const lightboxNext = () => setLightboxIndex((i) => (i === activeImages.length - 1 ? 0 : i + 1));
 
   const openLightbox = (imgIndex) => {
-    if (window.innerWidth < 768 && activeImages.length > 0) setLightboxIndex(imgIndex);
+    if (activeImages.length > 0) setLightboxIndex(imgIndex);
   };
 
   useEffect(() => {
@@ -168,7 +168,7 @@ export default function GymGallery() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
-              className="flex-1 rounded-2xl overflow-hidden aspect-video cursor-pointer md:cursor-default"
+              className="flex-1 rounded-2xl overflow-hidden aspect-video cursor-pointer"
               onClick={() => openLightbox((index + i) % activeImages.length)}
             >
               <img
@@ -186,14 +186,14 @@ export default function GymGallery() {
       </div>
       )}
 
-      {/* Mobile Lightbox */}
+      {/* Image Lightbox */}
       <AnimatePresence>
         {lightboxIndex !== null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[200] bg-black/95 flex items-center justify-center md:hidden"
+            className="fixed inset-0 z-[200] bg-black/95 flex items-center justify-center"
             onClick={() => setLightboxIndex(null)}
           >
             <button
@@ -218,7 +218,7 @@ export default function GymGallery() {
                 alt={activeImages[lightboxIndex].alt}
                 loading="lazy"
                 decoding="async"
-                className="max-w-full max-h-[80vh] object-contain px-12"
+                className="max-w-[96vw] max-h-[88vh] object-contain px-4 sm:px-12"
                 onClick={(e) => e.stopPropagation()}
               />
             </AnimatePresence>
