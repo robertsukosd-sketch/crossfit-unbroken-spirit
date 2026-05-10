@@ -207,7 +207,7 @@ const PARTNERS = [
     fallbackInitials: '7C',
     fallbackColor: 'from-pink-500 to-rose-400',
     logoStyle: 'cover',
-    website: 'https://7card.ro',
+    website: 'https://wellhub.com/ro-ro/plans-pricing/#plan_carrousel',
     tagRo: 'Acces inclus în abonament',
     tagEn: 'Included in your membership',
     descRo: 'Ai abonament 7Card by Wellhub? Ne găsești în rețea, la planul Diamond. Vino la orice clasă de CrossFit sau Open Gym, în limita a 12 intrări pe lună, fără nicio taxă suplimentară. Înscrierea la ore se face direct din aplicația [ThunderWOD].',
