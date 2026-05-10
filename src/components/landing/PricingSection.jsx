@@ -192,7 +192,7 @@ const PARTNERS = [
     fallbackInitials: 'SP',
     fallbackColor: 'from-orange-600 to-orange-500',
     logoStyle: 'contain',
-    website: 'https://sanopass.ro',
+    website: 'https://sanopass.ro/abonamentesala/gold',
     tagRo: 'Acces cu coplată',
     tagEn: 'Drop-in with reduced fee',
     descRo: 'Ai abonament SanoPass FIT Gold? Ne găsești în aplicație la abonamentele Gold. Vino la orice clasă de CrossFit sau Open Gym cu o taxă de drop-in redusă. Coplata și înscrierea la ore se fac direct din aplicația [ThunderWOD].',
