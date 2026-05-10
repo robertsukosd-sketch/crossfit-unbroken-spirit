@@ -159,30 +159,51 @@ export default function GymGallery() {
           {language === 'ro' ? 'Fotografiile vor fi adăugate în curând.' : 'Photos will be added soon.'}
         </div>
       ) : (
-      <div id={`gallery-panel-${activeGroup.id}`} role="tabpanel" className="flex gap-4 overflow-hidden">
-        <AnimatePresence mode="sync">
-          {visible.map((img, i) => (
-            <motion.figure
-              key={img.src}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
-              className="flex-1 rounded-2xl overflow-hidden aspect-video cursor-pointer"
-              onClick={() => openLightbox((index + i) % activeImages.length)}
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                loading="lazy"
-                decoding="async"
-                sizes="(max-width: 640px) 100vw, 50vw"
-                className="w-full h-full object-cover"
-              />
-              <figcaption className="sr-only">{img.alt}</figcaption>
-            </motion.figure>
-          ))}
-        </AnimatePresence>
+      <div id={`gallery-panel-${activeGroup.id}`} role="tabpanel" className="relative overflow-hidden rounded-2xl">
+        <div className="flex gap-4 overflow-hidden">
+          <AnimatePresence mode="sync">
+            {visible.map((img, i) => (
+              <motion.figure
+                key={img.src}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                className="flex-1 rounded-2xl overflow-hidden aspect-video cursor-pointer"
+                onClick={() => openLightbox((index + i) % activeImages.length)}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="w-full h-full object-cover"
+                />
+                <figcaption className="sr-only">{img.alt}</figcaption>
+              </motion.figure>
+            ))}
+          </AnimatePresence>
+        </div>
+
+        <button
+          onClick={prev}
+          className="absolute inset-y-0 left-0 z-10 w-14 bg-gradient-to-r from-black/45 to-transparent text-white opacity-70 transition-opacity hover:opacity-100 focus-visible:opacity-100 sm:w-24"
+          aria-label="Previous"
+        >
+          <span className="flex h-full items-center justify-start pl-3 sm:pl-5">
+            <ChevronLeft className="h-7 w-7 drop-shadow-lg" />
+          </span>
+        </button>
+        <button
+          onClick={next}
+          className="absolute inset-y-0 right-0 z-10 w-14 bg-gradient-to-l from-black/45 to-transparent text-white opacity-70 transition-opacity hover:opacity-100 focus-visible:opacity-100 sm:w-24"
+          aria-label="Next"
+        >
+          <span className="flex h-full items-center justify-end pr-3 sm:pr-5">
+            <ChevronRight className="h-7 w-7 drop-shadow-lg" />
+          </span>
+        </button>
       </div>
       )}
 
@@ -224,16 +245,18 @@ export default function GymGallery() {
             </AnimatePresence>
 
             <button
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-white"
+              className="absolute inset-y-0 left-0 flex w-1/4 items-center justify-start bg-gradient-to-r from-black/55 to-transparent pl-3 text-white opacity-80 transition-opacity hover:opacity-100 sm:pl-8"
               onClick={(e) => { e.stopPropagation(); lightboxPrev(); }}
+              aria-label="Previous image"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="h-8 w-8 drop-shadow-lg" />
             </button>
             <button
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-white"
+              className="absolute inset-y-0 right-0 flex w-1/4 items-center justify-end bg-gradient-to-l from-black/55 to-transparent pr-3 text-white opacity-80 transition-opacity hover:opacity-100 sm:pr-8"
               onClick={(e) => { e.stopPropagation(); lightboxNext(); }}
+              aria-label="Next image"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="h-8 w-8 drop-shadow-lg" />
             </button>
           </motion.div>
         )}
@@ -241,22 +264,6 @@ export default function GymGallery() {
 
       {activeImages.length > 0 && (
         <>
-          {/* Nav buttons */}
-          <button
-            onClick={prev}
-            className="absolute left-0 top-[58%] -translate-y-1/2 -translate-x-4 w-9 h-9 rounded-full bg-zinc-800 border border-zinc-700 text-white flex items-center justify-center hover:bg-zinc-700 transition-colors"
-            aria-label="Previous"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={next}
-            className="absolute right-0 top-[58%] -translate-y-1/2 translate-x-4 w-9 h-9 rounded-full bg-zinc-800 border border-zinc-700 text-white flex items-center justify-center hover:bg-zinc-700 transition-colors"
-            aria-label="Next"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-
           {/* Dots */}
           <div className="flex justify-center gap-2 mt-4">
             {Array.from({ length: totalSlides }).map((_, i) => (
