@@ -300,7 +300,7 @@ export default function FAQSection({ onBookSession }) {
         </motion.div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap lg:flex-nowrap justify-center gap-2 mb-8 lg:overflow-x-auto lg:pb-1 lg:no-scrollbar">
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
           {categories.map((cat) => {
             const Icon = cat.icon;
             const isActive = activeCategory === cat.id;
