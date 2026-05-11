@@ -104,7 +104,7 @@ export default function HeroSection({ onOpenFreeClass }) {
                 window.dispatchEvent(new Event('selectPricingCategory'));
                 scrollToSection('pricing');
               }}
-              className="flex flex-wrap items-center justify-center gap-6 group"
+              className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 rounded-2xl border border-white/15 bg-white/10 px-5 py-3 shadow-2xl shadow-blue-500/20 backdrop-blur-md transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/35"
             >
               {[
                 { name: 'SanoPass', logo: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/f9c38259e_image.png' },
@@ -115,7 +115,7 @@ export default function HeroSection({ onOpenFreeClass }) {
                   key={p.name}
                   src={p.logo}
                   alt={p.name}
-                  className="h-10 object-contain grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
+                  className="h-11 sm:h-12 object-contain opacity-100 drop-shadow-lg transition-transform duration-300 hover:scale-110 hover:animate-pulse"
                 />
               ))}
             </button>
