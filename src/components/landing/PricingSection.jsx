@@ -99,8 +99,8 @@ const getCategories = (language) => [
     sublabel: language === 'ro' ? 'Personal Training' : 'Personal Training',
     icon: User,
     description: language === 'ro'
-      ? 'Ședințe de antrenament în grup privat, de cel mult 3 persoane.\nPrograme personalizate pentru obiectivele tale.'
-      : 'Private group training sessions.\nPersonalized training for your goals.',
+      ? 'Personal Training în București pentru forță, slăbit, mobilitate și tehnică.\nȘedințe de antrenament în grup privat, de cel mult 3 persoane, cu program personalizat pentru obiectivele tale.'
+      : 'Personal Training in Bucharest for strength, weight loss, mobility and technique.\nPrivate group training sessions with up to 3 people, personalized for your goals.',
     plans: [
       {
         name: language === 'ro' ? 'PT - 12 ședințe' : 'PT - 12 sessions',

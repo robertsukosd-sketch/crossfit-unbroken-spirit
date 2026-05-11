@@ -28,7 +28,7 @@ const WEBPAGE_SCHEMAS = [
   { id: 'about', name: 'Despre CrossFit Unbroken Spirit', url: 'https://www.unbrokenspirit.ro/#about', description: 'Antrenorii și facilități CrossFit Unbroken Spirit - Splaiul Unirii 257-259, București.' },
   { id: 'gallery', name: 'Galerie foto CrossFit Unbroken Spirit București', url: 'https://www.unbrokenspirit.ro/#gallery', description: 'Galerie foto cu echipamente Rogue, zona de antrenament, vestiare și exterior la CrossFit Unbroken Spirit București.' },
   { id: 'faq', name: 'Întrebări Frecvente CrossFit', url: 'https://www.unbrokenspirit.ro/#faq', description: 'Răspunsuri la toate întrebările despre CrossFit, abonamente și sala Unbroken Spirit.' },
-  { id: 'pricing', name: 'Abonamente CrossFit Unbroken Spirit', url: 'https://www.unbrokenspirit.ro/#pricing', description: 'Abonamente CrossFit de la 320 RON/lună. Prima ședință gratuită.' },
+  { id: 'pricing', name: 'Abonamente CrossFit și Personal Training București', url: 'https://www.unbrokenspirit.ro/#pricing', description: 'Abonamente CrossFit, Open Gym și Personal Training în București. PT în grup privat de cel mult 3 persoane, cu programe personalizate pentru forță, slăbit, mobilitate și tehnică.' },
   { id: 'schedule', name: 'Orar Clase CrossFit', url: 'https://www.unbrokenspirit.ro/#schedule', description: 'Orarul complet al claselor CrossFit, Open Gym și CrossFit Kids la Unbroken Spirit.' },
   { id: 'contact', name: 'Contact CrossFit Unbroken Spirit', url: 'https://www.unbrokenspirit.ro/#contact', description: 'Contactează CrossFit Unbroken Spirit - Splaiul Unirii 257-259, București.' },
 ];
@@ -444,7 +444,7 @@ const SERVICES_SCHEMA = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Clase CrossFit de Grup", "description": "Antrenamente de grup ghidate de antrenor certificat, 60 de minute, pentru toate nivelurile. WOD zilnic variat, incluzând gimnastică, haltere și condiționare.", "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" } } },
     { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Antrenamente de Condiționare (Rower, Bike, Ski)", "description": "Sesiuni de condiționare cardiovasculară folosind rowing machines, assault bike și ski erg. Ideale pentru pregătire Hyrox și ardere de calorii.", "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" } } },
-    { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Personal Training", "description": "Antrenament 1-la-1 personalizat cu antrenor certificat. Adaptat obiectivelor tale: slăbit, forță, condiționare sau pregătire competițională.", "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" } } },
+    { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Personal Training București", "alternateName": ["PT București", "antrenor personal București", "antrenamente personalizate București"], "description": "Personal Training în București, în grup privat de cel mult 3 persoane, cu program personalizat pentru forță, slăbit, mobilitate, condiție fizică și corectarea tehnicii. Pachete PT de 8, 10 și 12 ședințe la CrossFit Unbroken Spirit.", "areaServed": { "@type": "City", "name": "București" }, "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" }, "offers": [{ "@type": "Offer", "name": "PT - 8 ședințe", "price": "1300", "priceCurrency": "RON" }, { "@type": "Offer", "name": "PT - 10 ședințe", "price": "1400", "priceCurrency": "RON" }, { "@type": "Offer", "name": "PT - 12 ședințe", "price": "1600", "priceCurrency": "RON" }] } },
     { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "Open Gym", "description": "Acces liber la toate echipamentele sălii: haltere Rogue, rower, assault bike, ski erg, inele, bare de tracțiuni. Ideal pentru antrenamente independente.", "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" } } },
     { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "Haltere Olimpice (Weightlifting)", "description": "Antrenamente de halterofilie olimpică pentru dezvoltarea forței și puterii explozive. Tehnici de smuls și aruncat cu haltera.", "provider": { "@type": "SportsActivityLocation", "name": "CrossFit Unbroken Spirit" } } }
   ]
@@ -520,6 +520,18 @@ const PARTNERS_FAQ_EN = [
   { "@type": "Question", "name": "Which employee benefit platforms does CrossFit Unbroken Spirit accept?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit accepts SanoPass (Gold), 7Card by WellHub, and Edenred Benefit. If you have an active employer-provided subscription on any of these platforms, you can train with us at reduced or fully covered costs. Ask your HR department if you qualify." } }
 ];
 
+const PERSONAL_TRAINING_FAQ_RO = [
+  { "@type": "Question", "name": "Ce este Personal Training la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Personal Training la CrossFit Unbroken Spirit înseamnă antrenamente personalizate în București, în grup privat de cel mult 3 persoane. Fiecare ședință este adaptată obiectivelor tale: forță, slăbit, mobilitate, condiție fizică sau corectarea tehnicii." } },
+  { "@type": "Question", "name": "Cât costă Personal Training în București la Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Pachetele de Personal Training la CrossFit Unbroken Spirit costă 1300 RON pentru PT - 8 ședințe, 1400 RON pentru PT - 10 ședințe și 1600 RON pentru PT - 12 ședințe." } },
+  { "@type": "Question", "name": "Pentru cine este potrivit Personal Trainingul?", "acceptedAnswer": { "@type": "Answer", "text": "Personal Trainingul este potrivit pentru începători, persoane care vor să slăbească, să crească forța, să își îmbunătățească mobilitatea sau să învețe mișcările de CrossFit corect și în siguranță." } }
+];
+
+const PERSONAL_TRAINING_FAQ_EN = [
+  { "@type": "Question", "name": "What is Personal Training at CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Personal Training at CrossFit Unbroken Spirit means personalized training in Bucharest, in private groups of up to 3 people. Each session is adapted to your goals: strength, weight loss, mobility, conditioning or technique correction." } },
+  { "@type": "Question", "name": "How much does Personal Training cost at Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Personal Training packages at CrossFit Unbroken Spirit cost 1300 RON for PT - 8 sessions, 1400 RON for PT - 10 sessions and 1600 RON for PT - 12 sessions." } },
+  { "@type": "Question", "name": "Who is Personal Training suitable for?", "acceptedAnswer": { "@type": "Answer", "text": "Personal Training is suitable for beginners, people who want to lose weight, build strength, improve mobility or learn CrossFit movements correctly and safely." } }
+];
+
 const SPEAKABLE_SCHEMA_RO = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -558,8 +570,8 @@ const SECTION_META = {
       description: 'Ce echipamente are sala? Ce este Hyrox? Cât costă? Răspunsuri la toate întrebările despre sală de CrossFit București, antrenamente de grup și prima clasă gratuită.',
     },
     pricing: {
-      title: 'Prețuri CrossFit București | SanoPass, 7Card, Edenred - Unbroken Spirit de la 320 RON/lună',
-      description: 'Abonamente CrossFit de la 320 RON/lună. Acceptăm SanoPass Gold, 7Card by WellHub și Edenred Benefit. Open Gym, Personal Training, prima ședință gratuită. Parcare inclusă.',
+      title: 'Personal Training București & Prețuri CrossFit | Unbroken Spirit',
+      description: 'Personal Training în București în grup privat de cel mult 3 persoane: PT 8, 10 și 12 ședințe. Antrenamente personalizate pentru forță, slăbit, mobilitate și tehnică.',
     },
     schedule: {
       title: 'Orar Clase CrossFit & Antrenamente de Grup București | Unbroken Spirit',
@@ -596,8 +608,8 @@ const SECTION_META = {
       description: 'Answers to all your questions about CrossFit, our gym, memberships and pricing. Find out everything you need to know before your first class.',
     },
     pricing: {
-      title: 'CrossFit Memberships Bucharest | SanoPass, 7Card, Edenred - Unbroken Spirit from 320 RON/mo',
-      description: 'CrossFit memberships from 320 RON/month. We accept SanoPass Gold, 7Card by WellHub and Edenred Benefit employee benefits. Open Gym, Personal Training. First class FREE.',
+      title: 'Personal Training Bucharest & CrossFit Pricing | Unbroken Spirit',
+      description: 'Personal Training in Bucharest in private groups of up to 3 people: PT 8, 10 and 12 sessions. Personalized workouts for strength, weight loss, mobility and technique.',
     },
     schedule: {
       title: 'CrossFit Schedule Bucharest - Unbroken Spirit',
@@ -673,7 +685,7 @@ function applyMeta(lang, sectionId) {
   // FAQ Schema — always present for RO (primary language); for EN only when FAQ section visible
   if (lang === 'en') {
     if (sectionId === 'faq' || sectionId === 'pricing') {
-      const mergedFaqEn = { ...FAQ_SCHEMA_EN, mainEntity: [...FAQ_SCHEMA_EN.mainEntity, ...PARTNERS_FAQ_EN] };
+      const mergedFaqEn = { ...FAQ_SCHEMA_EN, mainEntity: [...FAQ_SCHEMA_EN.mainEntity, ...PARTNERS_FAQ_EN, ...PERSONAL_TRAINING_FAQ_EN] };
       injectSchema('schema-faq', mergedFaqEn);
     } else {
       removeSchema('schema-faq');
@@ -699,7 +711,7 @@ export default function SeoMeta() {
     // FAQ always present for Romanian (primary language) — helps AI Overviews
     // Include partners FAQ merged into main FAQ
     if (language !== 'en') {
-      const mergedFaqRo = { ...FAQ_SCHEMA_RO, mainEntity: [...FAQ_SCHEMA_RO.mainEntity, ...PARTNERS_FAQ_RO] };
+      const mergedFaqRo = { ...FAQ_SCHEMA_RO, mainEntity: [...FAQ_SCHEMA_RO.mainEntity, ...PARTNERS_FAQ_RO, ...PERSONAL_TRAINING_FAQ_RO] };
       injectSchema('schema-faq', mergedFaqRo);
     }
     // Speakable for Romanian — helps Google Assistant / AI read key content
