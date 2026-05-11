@@ -231,13 +231,13 @@ export default function AboutSection() {
           </div>
 
           {/* Coaches Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {(() => {
               const images = [
                 { id: 1, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/18d3ab544_CrossFit_US-148A.jpg', objectPosition: '50% 5%', altText: 'Andrei Vârnav - antrenor CrossFit București, CrossFit Unbroken Spirit' },
                 { id: 2, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/9884b0a50_CrossFit_US-138M.jpg', objectPosition: '50% 5%', altText: 'Dumitru Mîndrescu - antrenor CrossFit și weightlifting București' },
                 { id: 3, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/02fa5e0e6_CrossFit_US-140R.jpg', objectPosition: '50% 5%', altText: 'Robert Sukosd - CrossFit Level 2 Trainer, antrenor CrossFit Unbroken Spirit București' },
-                { id: 4, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/02fa5e0e6_CrossFit_US-140R.jpg', objectPosition: '50% 5%', altText: 'Al patrulea antrenor - CrossFit Unbroken Spirit București' },
+                { id: 4, src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/4dbbe9a34_image.png', objectPosition: '50% 12%', altText: 'Alexandra Răduțu - kinetoterapeut și CrossFit Level 1 Trainer la CrossFit Unbroken Spirit București' },
               ];
 
               const coaches = [
@@ -267,12 +267,11 @@ export default function AboutSection() {
                 },
                 {
                   id: 4,
-                  name: language === 'ro' ? 'Antrenor 4 — În curând' : 'Coach 4 — Coming Soon',
+                  name: 'Alexandra Răduțu',
                   certifications: language === 'ro'
-                    ? ['Certificări în curând']
-                    : ['Certifications coming soon'],
-                  experience: language === 'ro' ? 'Experiență în curând' : 'Experience coming soon',
-                  placeholder: true,
+                    ? ['Kinetoterapeut', 'CrossFit Level 1 Trainer', 'Antrenor Personal de 8 ani', 'Functional Movement & Rehabilitation Specialist']
+                    : ['Physiotherapist', 'CrossFit Level 1 Trainer', 'Personal Trainer for 8 years', 'Functional Movement & Rehabilitation Specialist'],
+                  experience: language === 'ro' ? '2 ani în CrossFit' : '2 years in CrossFit',
                 }
               ];
 
