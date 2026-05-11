@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Dumbbell, Users, Building2, CreditCard, Smartphone, Handshake } from 'lucide-react';
+import { ChevronDown, Dumbbell, Users, Building2, CreditCard, Smartphone, Handshake, MapPin } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
 import { cn } from '@/lib/utils';
 import { openAppWithFallback } from '../appStoreUtils';
@@ -9,6 +9,7 @@ const CATEGORIES_RO = [
   { id: 'crossfit', label: 'Ce este CrossFitul?', icon: Dumbbell },
   { id: 'beginners', label: 'Începători', icon: Users },
   { id: 'box', label: 'Sală & Facilități', icon: Building2 },
+  { id: 'local', label: 'Locație & Zone', icon: MapPin },
   { id: 'pricing', label: 'Abonamente & Prețuri', icon: CreditCard },
   { id: 'partnerships', label: 'Parteneriate', icon: Handshake },
   { id: 'app', label: 'ThunderWOD App', icon: Smartphone },
@@ -18,6 +19,7 @@ const CATEGORIES_EN = [
   { id: 'crossfit', label: 'What is CrossFit?', icon: Dumbbell },
   { id: 'beginners', label: 'For Beginners', icon: Users },
   { id: 'box', label: 'Box & Facilities', icon: Building2 },
+  { id: 'local', label: 'Location & Areas', icon: MapPin },
   { id: 'pricing', label: 'Memberships & Pricing', icon: CreditCard },
   { id: 'partnerships', label: 'Partnerships', icon: Handshake },
   { id: 'app', label: 'ThunderWOD App', icon: Smartphone },
@@ -27,6 +29,7 @@ const FAQ_CATEGORIES = {
   crossfit: ['what-is', 'vs-gym', 'faq-wod-meaning', 'benefits', 'weight-loss', 'bulk-up'],
   beginners: ['fitness-required', 'no-weights-before', 'safety', 'old-injury', 'what-to-bring', 'free-trial', 'how-to-start'],
   box: ['parking', 'open-gym', 'facilities', 'drop-in'],
+  local: ['crossfit-sector-4', 'functional-training-bucharest', 'sector-3-4-access', 'pt-bucharest-local', 'local-benefit-cards'],
   pricing: ['pricing', 'class-duration', 'frequency', 'competitions'],
   partnerships: ['partner-7card', 'partner-sanopass', 'partner-edenred'],
   app: ['thunderwod-app', 'scores'],
@@ -105,6 +108,11 @@ export default function FAQSection({ onBookSession }) {
         { id: 'open-gym', q: 'Ce este Open Gym?', a: 'Open Gym este un interval orar în care poți veni la sală pentru a te antrena pe cont propriu, folosind echipamentul disponibil. Spre deosebire de clasele obișnuite de CrossFit, în timpul acestui interval nu există un antrenament ghidat de grup. De obicei, este folosit de membrii care vor să exerseze anumite mișcări, să recupereze un antrenament sau să lucreze suplimentar la anumite skill-uri.', aOpenGym: true },
         { id: 'facilities', q: 'Aveți dușuri și vestiare?', a: 'Da! Avem vestiare complet echipate, astfel încât să poți merge direct la serviciu sau acasă după antrenament.' },
         { id: 'drop-in', q: 'Pot veni în vizită (drop-in) dacă sunt de la altă sală?', a: 'Ne plac vizitatorii! Dacă ai cel puțin 3 luni de experiență în CrossFit, poți rezerva un drop-in prin site-ul nostru. ', aDropIn: true },
+        { id: 'crossfit-sector-4', q: 'Există CrossFit aproape de Sector 4 București?', a: 'Da. CrossFit Unbroken Spirit este pe Splaiul Unirii 257-259, foarte accesibil din Sector 4, zona Timpuri Noi, Tineretului, Văcărești și Berceni. Ai parcare gratuită și acces rapid de la metrou Mihai Bravu.' },
+        { id: 'functional-training-bucharest', q: 'Unde pot face antrenament funcțional în București?', a: 'La CrossFit Unbroken Spirit faci antrenament funcțional ghidat de antrenori, cu exerciții de forță, cardio, gimnastică, haltere, rower, bike și ski erg, adaptate nivelului tău.' },
+        { id: 'sector-3-4-access', q: 'Este sala potrivită dacă locuiesc în Sector 3 sau Sector 4?', a: 'Da. Sala este poziționată între Sector 3 și Sector 4, pe Splaiul Unirii, aproape de Mihai Bravu, Timpuri Noi, Vitan, Tineretului și zona Văcărești.' },
+        { id: 'pt-bucharest-local', q: 'Oferiți Personal Training în București?', a: 'Da. Oferim Personal Training în grup privat de maximum 3 persoane, pentru slăbit, forță, mobilitate, tehnică și condiție fizică generală.' },
+        { id: 'local-benefit-cards', q: 'Acceptați carduri de beneficii precum 7Card, SanoPass sau Edenred?', a: 'Da. Acceptăm 7Card by Wellhub, SanoPass FIT și Edenred Benefit, în funcție de planul tău de beneficii oferit de angajator.' },
         { id: 'pricing', q: 'Cât costă un abonament?', a: 'Abonamentele noastre sunt structurate în funcție de frecvența antrenamentelor. Deși suntem mai scumpi decât o sală comercială, reține că fiecare clasă este gestionată de un antrenor. Practic, e un antrenament personal la ', aPricing: true },
         { id: 'class-duration', q: 'Cât durează clasele?', a: 'Toate clasele durează în jur de 60 de minute. Acestea includ instructajul, încălzirea ghidată, o sesiune de forță sau tehnică, ', aClassDuration: true, aClassDurationExtra: true },
         { id: 'frequency', q: 'De câte ori pe săptămână ar trebui să vin?', a: 'Pentru începători, recomandăm ', aFrequency: true },
@@ -134,6 +142,11 @@ export default function FAQSection({ onBookSession }) {
       { id: 'open-gym', q: 'What is Open Gym?', a: 'Open Gym is a time slot when you can come to the gym to train on your own, using available equipment. Unlike regular CrossFit classes, during this time there\'s no group-led training. It\'s typically used by members who want to practice specific movements, make up a missed workout, or work extra on certain skills.', aOpenGym: true },
       { id: 'facilities', q: 'Do you have showers and lockers?', a: 'Yes! We have fully equipped changing rooms so you can go straight to work or home after training.' },
       { id: 'drop-in', q: 'Can I visit (drop-in) if I\'m from another gym?', a: 'We love visitors! If you have at least 3 months of CrossFit experience, you can book a drop-in through our website. ', aDropIn: true },
+      { id: 'crossfit-sector-4', q: 'Is there CrossFit near Bucharest Sector 4?', a: 'Yes. CrossFit Unbroken Spirit is located on Splaiul Unirii 257-259, easily accessible from Sector 4, Timpuri Noi, Tineretului, Văcărești and Berceni, with free parking and quick access from Mihai Bravu metro.' },
+      { id: 'functional-training-bucharest', q: 'Where can I do functional training in Bucharest?', a: 'At CrossFit Unbroken Spirit you can do coach-led functional training with strength, cardio, gymnastics, weightlifting, rower, bike and ski erg, scaled to your level.' },
+      { id: 'sector-3-4-access', q: 'Is the gym suitable if I live in Sector 3 or Sector 4?', a: 'Yes. The gym is positioned between Sector 3 and Sector 4, on Splaiul Unirii, close to Mihai Bravu, Timpuri Noi, Vitan, Tineretului and Văcărești.' },
+      { id: 'pt-bucharest-local', q: 'Do you offer Personal Training in Bucharest?', a: 'Yes. We offer Personal Training in private groups of up to 3 people, for weight loss, strength, mobility, technique and general conditioning.' },
+      { id: 'local-benefit-cards', q: 'Do you accept benefit cards like 7Card, SanoPass or Edenred?', a: 'Yes. We accept 7Card by Wellhub, SanoPass FIT and Edenred Benefit, depending on your employer benefits plan.' },
       { id: 'pricing', q: 'How much does a membership cost?', a: 'Our memberships are structured based on training frequency. While we\'re pricier than a commercial gym, remember that every class is led by a coach. Basically, it\'s personal training for ', aPricing: true },
       { id: 'class-duration', q: 'How long are the classes?', a: 'All classes last about 60 minutes. They include a walkthrough, a guided warm-up, a strength or technique session, ', aClassDuration: true },
       { id: 'frequency', q: 'How many times a week should I come?', a: 'For beginners, we recommend ', aFrequency: true },
