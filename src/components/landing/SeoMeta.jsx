@@ -37,9 +37,17 @@ const WEBPAGE_SCHEMAS = [
 const WEEKDAY_CLASS_TIMES = ['07:00', '08:00', '12:30', '17:30', '18:30', '19:30'];
 const SATURDAY_TIMES = ['10:00'];
 
+function getUpcomingWeekday(targetDay) {
+  const date = new Date();
+  date.setHours(0, 0, 0, 0);
+  const daysUntilTarget = (targetDay - date.getDay() + 7) % 7;
+  date.setDate(date.getDate() + daysUntilTarget);
+  return date;
+}
+
 function buildEventSchemas() {
   const events = [];
-  const baseDate = new Date('2026-04-21'); // next Monday as anchor
+  const baseDate = getUpcomingWeekday(1);
   const days = [0,1,2,3,4]; // Mon-Fri
   days.forEach(dayOffset => {
     WEEKDAY_CLASS_TIMES.forEach(time => {
@@ -69,7 +77,7 @@ function buildEventSchemas() {
     });
   });
   SATURDAY_TIMES.forEach(time => {
-    const sat = new Date('2026-04-25');
+    const sat = getUpcomingWeekday(6);
     const [h, m] = time.split(':');
     sat.setHours(parseInt(h), parseInt(m), 0, 0);
     const end = new Date(sat);
@@ -137,7 +145,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://www.instagram.com/crossfit.unbroken.spirit",
     "https://www.facebook.com/crossfitunbrokenspirit"
   ],
-  "priceRange": "320-450 RON",
+  "priceRange": "320-500 RON",
   "currenciesAccepted": "RON",
   "paymentAccepted": "Cash, Card",
   "areaServed": { "@type": "City", "name": "București" },
@@ -254,7 +262,7 @@ const FAQ_SCHEMA_RO = {
   "mainEntity": [
     { "@type": "Question", "name": "Ce înseamnă CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit este un program de antrenament bazat pe mișcări funcționale, variate constant și realizate la intensitate ridicată. Combină exerciții de forță, cardio și gimnastică pentru a îmbunătăți condiția fizică generală și performanța în activitățile din viața reală." } },
     { "@type": "Question", "name": "Trebuie să fiu în formă înainte de a începe CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "Nu trebuie să fii în formă înainte de a începe CrossFit. CrossFit este exact procesul prin care ajungi în formă — membrii variază de la sportivi de elită la persoane care fac mișcare pentru prima dată." } },
-    { "@type": "Question", "name": "Cât costă un abonament la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Un abonament la CrossFit Unbroken Spirit costă de la 320 RON/lună pentru 8 clase. Abonamentul de 12 clase costă 400 RON/lună, iar cel nelimitat 450 RON/lună. Există și Personal Training și Open Gym." } },
+    { "@type": "Question", "name": "Cât costă un abonament la CrossFit Unbroken Spirit?", "acceptedAnswer": { "@type": "Answer", "text": "Un abonament la CrossFit Unbroken Spirit costă de la 320 RON/lună pentru 8 clase. Abonamentul de 12 clase costă 400 RON/lună, iar cel nelimitat 500 RON/lună. Există și Personal Training și Open Gym." } },
     { "@type": "Question", "name": "Cât durează o clasă de CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "O clasă de CrossFit durează 60 de minute. Clasa include instructaj, încălzire ghidată, o sesiune de forță sau tehnică, antrenamentul zilei (WOD) și stretching." } },
     { "@type": "Question", "name": "Este CrossFitul periculos?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit nu este periculos când este predat corect. La CrossFit Unbroken Spirit folosim filozofia 'Mecanică, Consistență, apoi Intensitate' — înveți să te miști corect înainte de a crește viteza sau greutatea." } },
     { "@type": "Question", "name": "Cum pot ajunge la CrossFit Unbroken Spirit? Există parcare?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit se află la Splaiul Unirii 257-259, București. Există parcare gratuită inclusă. Cea mai apropiată stație de metrou este Mihai Bravu, la 7-8 minute de mers pe jos." } },
@@ -277,7 +285,7 @@ const FAQ_SCHEMA_EN = {
   "mainEntity": [
     { "@type": "Question", "name": "What is CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit is a training program based on constantly varied functional movements performed at high intensity. It combines strength, cardio, and gymnastics to improve overall fitness and real-life performance." } },
     { "@type": "Question", "name": "Do I need to be in shape before starting CrossFit?", "acceptedAnswer": { "@type": "Answer", "text": "No, you do not need to be in shape before starting CrossFit. CrossFit is the process of getting in shape — members at CrossFit Unbroken Spirit range from elite athletes to complete beginners." } },
-    { "@type": "Question", "name": "How much does a CrossFit Unbroken Spirit membership cost?", "acceptedAnswer": { "@type": "Answer", "text": "A CrossFit Unbroken Spirit membership starts from 320 RON/month for 8 classes. The 12-class plan costs 400 RON/month and the unlimited plan is 450 RON/month. Personal Training and Open Gym are also available." } },
+    { "@type": "Question", "name": "How much does a CrossFit Unbroken Spirit membership cost?", "acceptedAnswer": { "@type": "Answer", "text": "A CrossFit Unbroken Spirit membership starts from 320 RON/month for 8 classes. The 12-class plan costs 400 RON/month and the unlimited plan is 500 RON/month. Personal Training and Open Gym are also available." } },
     { "@type": "Question", "name": "How long are CrossFit classes?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit classes at Unbroken Spirit last 60 minutes. Each class includes a walkthrough, guided warm-up, a strength or technique session, the Workout of the Day (WOD), and a cool-down stretch." } },
     { "@type": "Question", "name": "Is CrossFit dangerous?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit is not dangerous when taught correctly. At CrossFit Unbroken Spirit we follow the principle of 'Mechanics, Consistency, then Intensity' — you learn to move correctly before increasing speed or weight." } },
     { "@type": "Question", "name": "How can I get to CrossFit Unbroken Spirit? Is there parking?", "acceptedAnswer": { "@type": "Answer", "text": "CrossFit Unbroken Spirit is located at Splaiul Unirii 257-259, Bucharest. Free parking is included. The nearest metro station is Mihai Bravu, a 7-8 minute walk away." } },
