@@ -237,7 +237,7 @@ export default function AboutSection() {
                 { id: 1, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/18d3ab544_CrossFit_US-148A.jpg', objectPosition: '50% 5%', altText: 'Andrei Vârnav - antrenor CrossFit București, CrossFit Unbroken Spirit' },
                 { id: 2, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/9884b0a50_CrossFit_US-138M.jpg', objectPosition: '50% 5%', altText: 'Dumitru Mîndrescu - antrenor CrossFit și weightlifting București' },
                 { id: 3, src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/02fa5e0e6_CrossFit_US-140R.jpg', objectPosition: '50% 5%', altText: 'Robert Sukosd - CrossFit Level 2 Trainer, antrenor CrossFit Unbroken Spirit București' },
-                { id: 4, src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/4dbbe9a34_image.png', objectPosition: '50% 12%', altText: 'Alexandra Răduțu - kinetoterapeut și CrossFit Level 1 Trainer la CrossFit Unbroken Spirit București' },
+                { id: 4, src: 'https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/21f2b5a42_image.png', objectPosition: '50% 12%', altText: 'Alexandra Răduțu - kinetoterapeut și CrossFit Level 1 Trainer la CrossFit Unbroken Spirit București' },
               ];
 
               const coaches = [
