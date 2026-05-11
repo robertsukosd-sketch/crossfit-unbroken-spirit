@@ -111,7 +111,7 @@ const getCategories = (language) => [
           ? ['12 sesiuni 1-la-1', 'Program individualizat', 'Nutriție de bază', 'Suport WhatsApp', 'Monitorizare progres', 'Loc de parcare inclus']
           : ['12 one-on-one sessions', 'Individualized program', 'Basic nutrition', 'WhatsApp support', 'Progress monitoring', 'Free parking spot'],
         popular: false,
-        featured: true,
+        featured: false,
       },
       {
         name: language === 'ro' ? 'PT 10 Ședințe' : 'PT 10 Sessions',
@@ -122,7 +122,7 @@ const getCategories = (language) => [
           ? ['10 sesiuni 1-la-1', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
           : ['10 one-on-one sessions', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
         popular: true,
-        featured: false,
+        featured: true,
       },
       {
         name: language === 'ro' ? 'PT 8 Ședințe' : 'PT 8 Sessions',
