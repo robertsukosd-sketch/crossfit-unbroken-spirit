@@ -231,6 +231,7 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
                     onClose={() => setShowSchedule(false)}
                     selectedSlot={selectedSlot}
                     onSlotSelect={handleSlotSelect}
+                    crossFitOnly
                   />
 
                   {/* Motivational nudge — shown after slot selected */}

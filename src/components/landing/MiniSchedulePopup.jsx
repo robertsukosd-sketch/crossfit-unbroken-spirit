@@ -44,18 +44,20 @@ const isSlotInPast = (weekMonday, dayIndex, time) => {
   return slotDate <= new Date();
 };
 
-export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlotSelect }) {
+export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlotSelect, crossFitOnly = false }) {
   const { t, language } = useLanguage();
   const schedule = useMemo(() => getCrossFitClasses(t), [language]);
-  const days = useMemo(() => getDays(t), [language]);
-  const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
+  const days = useMemo(() => crossFitOnly ? getDays(t).slice(0, 5) : getDays(t), [language, crossFitOnly]);
+  const dayAbbrList = crossFitOnly
+    ? (language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN).slice(0, 5)
+    : (language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN);
 
   // Determine initial day/week and min/max week offset
   const getInitialDayAndWeek = () => {
     const now = new Date();
     const jsDay = now.getDay(); // 0=Sun..6=Sat
     const timeInMin = now.getHours() * 60 + now.getMinutes();
-    const isFridayAfterCutoff = jsDay === 5 && timeInMin >= 20 * 60 + 31;
+    const isFridayAfterCutoff = jsDay === 5 && timeInMin >= (crossFitOnly ? 19 * 60 + 30 : 20 * 60 + 31);
     const isWeekendOrAfterFridayCutoff = jsDay === 0 || jsDay === 6 || isFridayAfterCutoff;
 
     if (isWeekendOrAfterFridayCutoff) {
@@ -73,7 +75,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
       if (dayIndex >= 6) { dayIndex = 0; week = 1; } // past Saturday → Monday next week
     }
 
-    return { dayIndex: Math.min(dayIndex, 5), weekOffset: week, minWeek: 0, maxWeek: 1 };
+    return { dayIndex: Math.min(dayIndex, crossFitOnly ? 4 : 5), weekOffset: week, minWeek: 0, maxWeek: 1 };
   };
 
   const initial = getInitialDayAndWeek();
@@ -93,7 +95,9 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
   const weekMonday = useMemo(() => getWeekMonday(weekOffset), [weekOffset]);
 
   const selectedDay = days[selectedDayIndex];
-  const classes = schedule[selectedDay] || [];
+  const classes = crossFitOnly
+    ? (schedule[selectedDay] || []).filter((time) => !time.includes('-'))
+    : (schedule[selectedDay] || []);
 
   const weekLabel = () => {
     const mon = weekMonday;
@@ -170,7 +174,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
             </div>
 
             {/* Day tabs with dates */}
-            <div className="grid grid-cols-6 gap-1 mb-3">
+            <div className={cn(crossFitOnly ? "grid grid-cols-5 gap-1 mb-3" : "grid grid-cols-6 gap-1 mb-3")}>
               {days.map((day, i) => {
                 const d = getDateForDayInWeek(weekMonday, i);
                 const dateLabel = `${d.getDate().toString().padStart(2, '0')}.${(d.getMonth() + 1).toString().padStart(2, '0')}`;
@@ -236,14 +240,18 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
                 <span>CrossFit</span>
               </div>
-              <div className="flex items-center gap-1.5 text-cyan-300">
-                <span className="h-2.5 w-2.5 rounded-full bg-cyan-500" />
-                <span>Open Gym</span>
-              </div>
+              {!crossFitOnly && (
+                <div className="flex items-center gap-1.5 text-cyan-300">
+                  <span className="h-2.5 w-2.5 rounded-full bg-cyan-500" />
+                  <span>Open Gym</span>
+                </div>
+              )}
             </div>
 
             <p className="mt-2 text-zinc-600 text-xs text-center">
-              {language === 'ro' ? 'Alege clasa sau intervalul de Open Gym în care vrei să vii.' : 'Choose the class or Open Gym interval you plan to attend.'}
+              {crossFitOnly
+                ? (language === 'ro' ? 'Alege clasa CrossFit la care vrei să vii.' : 'Choose the CrossFit class you plan to attend.')
+                : (language === 'ro' ? 'Alege clasa sau intervalul de Open Gym în care vrei să vii.' : 'Choose the class or Open Gym interval you plan to attend.')}
             </p>
           </div>
         </motion.div>
