@@ -107,7 +107,7 @@ const getCategories = (language) => [
         name: language === 'ro' ? 'PT - 12 ședințe' : 'PT - 12 sessions',
         price: '1600',
         period: language === 'ro' ? '12 ședințe' : '12 sessions',
-        description: language === 'ro' ? 'Transformare completă, progres accelerat.' : 'Complete transformation and accelerated progress.',
+        description: language === 'ro' ? 'Progres accelerat.' : 'Accelerated progress.',
         features: language === 'ro'
           ? ['Antrenamente 100% personalizate.', 'Corectarea tehnicii la fiecare ședință.', 'Monitorizare constantă și motivație.', 'Ideal pentru rezultate pe termen lung.', 'Grup privat de maxim 3 persoane']
           : ['100% personalized workouts.', 'Technique correction in every session.', 'Constant monitoring and motivation.', 'Ideal for long-term results.', 'Private group of maximum 3 people'],
