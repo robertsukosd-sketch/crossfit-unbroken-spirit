@@ -294,9 +294,23 @@ function PartnersContent({ language, t }) {
         </p>
       </div>
 
+      <div className="mb-8 rounded-2xl border border-blue-500/20 bg-blue-500/10 p-5 text-center">
+        <h3 className="text-xl font-black text-white">
+          {language === 'ro' ? 'CrossFit cu 7Card, SanoPass și Edenred Benefit în București' : 'CrossFit with 7Card, SanoPass and Edenred Benefit in Bucharest'}
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-gray-300 sm:text-base">
+          {language === 'ro'
+            ? 'Cauți 7Card CrossFit, SanoPass CrossFit, Benefit CrossFit sau antrenamente de grup prin beneficiile de la angajator? La CrossFit Unbroken Spirit poți participa la clase CrossFit și Open Gym prin partenerii disponibili, în funcție de abonamentul tău.'
+            : 'Looking for 7Card CrossFit, SanoPass CrossFit, Benefit CrossFit or group training through your employee benefits? At CrossFit Unbroken Spirit you can join CrossFit classes and Open Gym through available partner platforms, depending on your plan.'}
+        </p>
+      </div>
+
       {/* Partner cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {PARTNERS.map((partner, index) => (
+        {[...PARTNERS].sort((a, b) => {
+          const order = { wellhub: 0, sanopass: 1, edenred: 2 };
+          return order[a.id] - order[b.id];
+        }).map((partner, index) => (
           <motion.div
             key={partner.id}
             initial={{ opacity: 0, y: 20 }}
@@ -351,6 +365,34 @@ function PartnersContent({ language, t }) {
 
             </div>
           </motion.div>
+        ))}
+      </div>
+
+      <div className="mt-8 grid gap-4 md:grid-cols-3">
+        {[
+          {
+            qRo: 'Pot face CrossFit cu 7Card by Wellhub?',
+            aRo: 'Da, dacă abonamentul tău include accesul la locația noastră, poți participa la antrenamente de grup CrossFit și Open Gym conform condițiilor Wellhub.',
+            qEn: 'Can I do CrossFit with 7Card by Wellhub?',
+            aEn: 'Yes, if your plan includes access to our location, you can join CrossFit group classes and Open Gym according to Wellhub conditions.',
+          },
+          {
+            qRo: 'Pot veni la CrossFit cu SanoPass?',
+            aRo: 'Da, pentru planurile eligibile SanoPass FIT poți veni la clase CrossFit sau Open Gym cu coplată redusă, direct prin aplicațiile partenere.',
+            qEn: 'Can I train CrossFit with SanoPass?',
+            aEn: 'Yes, eligible SanoPass FIT plans allow you to attend CrossFit classes or Open Gym with a reduced co-payment through the partner apps.',
+          },
+          {
+            qRo: 'Pot folosi Edenred Benefit pentru CrossFit?',
+            aRo: 'Da, poți achiziționa abonamente CrossFit Unbroken Spirit prin Edenred Benefit, iar activarea se face în ThunderWOD.',
+            qEn: 'Can I use Edenred Benefit for CrossFit?',
+            aEn: 'Yes, you can purchase CrossFit Unbroken Spirit memberships through Edenred Benefit, then access is activated in ThunderWOD.',
+          },
+        ].map((item) => (
+          <div key={item.qRo} className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5">
+            <h4 className="text-sm font-bold text-white">{language === 'ro' ? item.qRo : item.qEn}</h4>
+            <p className="mt-2 text-xs leading-relaxed text-gray-400">{language === 'ro' ? item.aRo : item.aEn}</p>
+          </div>
         ))}
       </div>
 
