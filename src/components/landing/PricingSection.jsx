@@ -103,7 +103,7 @@ const getCategories = (language) => [
       : 'Private group training sessions.\nPersonalized training for your goals.',
     plans: [
       {
-        name: language === 'ro' ? 'Personal Training – 12 ședințe' : 'Personal Training – 12 sessions',
+        name: language === 'ro' ? 'PT - 12 ședințe' : 'PT - 12 sessions',
         price: '1600',
         period: language === 'ro' ? '12 ședințe' : '12 sessions',
         description: language === 'ro' ? 'Transformare completă și progres accelerat.' : 'Complete transformation and accelerated progress.',
@@ -114,7 +114,7 @@ const getCategories = (language) => [
         featured: false,
       },
       {
-        name: language === 'ro' ? 'Personal Training – 10 ședințe' : 'Personal Training – 10 sessions',
+        name: language === 'ro' ? 'PT - 10 ședințe' : 'PT - 10 sessions',
         price: '1400',
         period: language === 'ro' ? '10 ședințe' : '10 sessions',
         description: language === 'ro' ? 'Construiești forță și condiție fizică.' : 'Build strength and physical conditioning.',
@@ -125,7 +125,7 @@ const getCategories = (language) => [
         featured: true,
       },
       {
-        name: language === 'ro' ? 'Personal Training – 8 ședințe' : 'Personal Training – 8 sessions',
+        name: language === 'ro' ? 'PT - 8 ședințe' : 'PT - 8 sessions',
         price: '1300',
         period: language === 'ro' ? '8 ședințe' : '8 sessions',
         description: language === 'ro' ? 'Perfect pentru începători.' : 'Perfect for beginners.',
