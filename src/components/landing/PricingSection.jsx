@@ -110,7 +110,7 @@ const getCategories = (language) => [
         features: language === 'ro'
           ? ['12 sesiuni 1-la-1', 'Program individualizat', 'Nutriție de bază', 'Suport WhatsApp', 'Monitorizare progres', 'Loc de parcare inclus']
           : ['12 one-on-one sessions', 'Individualized program', 'Basic nutrition', 'WhatsApp support', 'Progress monitoring', 'Free parking spot'],
-        popular: true,
+        popular: false,
         featured: true,
       },
       {
@@ -121,7 +121,7 @@ const getCategories = (language) => [
         features: language === 'ro'
           ? ['10 sesiuni 1-la-1', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
           : ['10 one-on-one sessions', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
-        popular: false,
+        popular: true,
         featured: false,
       },
       {
