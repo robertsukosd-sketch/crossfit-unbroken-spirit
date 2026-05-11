@@ -172,6 +172,7 @@ const getCategories = (language) => [
           : ['1 CrossFit or Open Gym session', 'Full access to facilities', 'For experienced CrossFit athletes', '🎁 First session FREE for newcomers', 'Free parking spot'],
         popular: false,
         featured: false,
+        contactOnly: true,
         isDropIn: true,
       },
       {
@@ -184,6 +185,7 @@ const getCategories = (language) => [
           : ['Unlimited 7-day access', 'All classes included', 'Ideal for travelers & visitors', 'Free parking spot'],
         popular: true,
         featured: true,
+        contactOnly: true,
       },
     ],
   },
