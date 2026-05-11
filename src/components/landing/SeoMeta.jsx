@@ -532,6 +532,20 @@ const PERSONAL_TRAINING_FAQ_EN = [
   { "@type": "Question", "name": "Who is Personal Training suitable for?", "acceptedAnswer": { "@type": "Answer", "text": "Personal Training is suitable for beginners, people who want to lose weight, build strength, improve mobility or learn CrossFit movements correctly and safely." } }
 ];
 
+const LOCAL_SEO_FAQ_RO = [
+  { "@type": "Question", "name": "Există CrossFit aproape de Sector 4 București?", "acceptedAnswer": { "@type": "Answer", "text": "Da. CrossFit Unbroken Spirit este pe Splaiul Unirii 257-259, foarte accesibil din Sector 4, zona Timpuri Noi, Tineretului, Văcărești și Berceni. Ai parcare gratuită și acces rapid de la metrou Mihai Bravu." } },
+  { "@type": "Question", "name": "Unde pot face antrenament funcțional în București?", "acceptedAnswer": { "@type": "Answer", "text": "La CrossFit Unbroken Spirit faci antrenament funcțional ghidat de antrenori, cu exerciții de forță, cardio, gimnastică, haltere, rower, bike și ski erg, adaptate nivelului tău." } },
+  { "@type": "Question", "name": "Este sala potrivită dacă locuiesc în Sector 3 sau Sector 4?", "acceptedAnswer": { "@type": "Answer", "text": "Da. Sala este poziționată între Sector 3 și Sector 4, pe Splaiul Unirii, aproape de Mihai Bravu, Timpuri Noi, Vitan, Tineretului și zona Văcărești." } },
+  { "@type": "Question", "name": "Oferiți Personal Training în București?", "acceptedAnswer": { "@type": "Answer", "text": "Da. Oferim Personal Training în grup privat de maximum 3 persoane, pentru slăbit, forță, mobilitate, tehnică și condiție fizică generală." } }
+];
+
+const LOCAL_SEO_FAQ_EN = [
+  { "@type": "Question", "name": "Is there CrossFit near Bucharest Sector 4?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. CrossFit Unbroken Spirit is located on Splaiul Unirii 257-259, easily accessible from Sector 4, Timpuri Noi, Tineretului, Văcărești and Berceni, with free parking and quick access from Mihai Bravu metro." } },
+  { "@type": "Question", "name": "Where can I do functional training in Bucharest?", "acceptedAnswer": { "@type": "Answer", "text": "At CrossFit Unbroken Spirit you can do coach-led functional training with strength, cardio, gymnastics, weightlifting, rower, bike and ski erg, scaled to your level." } },
+  { "@type": "Question", "name": "Is the gym suitable if I live in Sector 3 or Sector 4?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The gym is positioned between Sector 3 and Sector 4, on Splaiul Unirii, close to Mihai Bravu, Timpuri Noi, Vitan, Tineretului and Văcărești." } },
+  { "@type": "Question", "name": "Do you offer Personal Training in Bucharest?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer Personal Training in private groups of up to 3 people, for weight loss, strength, mobility, technique and general conditioning." } }
+];
+
 const SPEAKABLE_SCHEMA_RO = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -685,7 +699,7 @@ function applyMeta(lang, sectionId) {
   // FAQ Schema — always present for RO (primary language); for EN only when FAQ section visible
   if (lang === 'en') {
     if (sectionId === 'faq' || sectionId === 'pricing') {
-      const mergedFaqEn = { ...FAQ_SCHEMA_EN, mainEntity: [...FAQ_SCHEMA_EN.mainEntity, ...PARTNERS_FAQ_EN, ...PERSONAL_TRAINING_FAQ_EN] };
+      const mergedFaqEn = { ...FAQ_SCHEMA_EN, mainEntity: [...FAQ_SCHEMA_EN.mainEntity, ...PARTNERS_FAQ_EN, ...PERSONAL_TRAINING_FAQ_EN, ...LOCAL_SEO_FAQ_EN] };
       injectSchema('schema-faq', mergedFaqEn);
     } else {
       removeSchema('schema-faq');
@@ -711,7 +725,7 @@ export default function SeoMeta() {
     // FAQ always present for Romanian (primary language) — helps AI Overviews
     // Include partners FAQ merged into main FAQ
     if (language !== 'en') {
-      const mergedFaqRo = { ...FAQ_SCHEMA_RO, mainEntity: [...FAQ_SCHEMA_RO.mainEntity, ...PARTNERS_FAQ_RO, ...PERSONAL_TRAINING_FAQ_RO] };
+      const mergedFaqRo = { ...FAQ_SCHEMA_RO, mainEntity: [...FAQ_SCHEMA_RO.mainEntity, ...PARTNERS_FAQ_RO, ...PERSONAL_TRAINING_FAQ_RO, ...LOCAL_SEO_FAQ_RO] };
       injectSchema('schema-faq', mergedFaqRo);
     }
     // Speakable for Romanian — helps Google Assistant / AI read key content

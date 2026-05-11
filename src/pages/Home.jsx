@@ -18,6 +18,7 @@ import MobileFooterBar from '@/components/landing/MobileFooterBar';
 import AppPromoSection from '@/components/landing/AppPromoSection';
 import FAQSection from '@/components/landing/FAQSection';
 import GoogleReviewsSection from '@/components/landing/GoogleReviewsSection';
+import LocalSeoFAQSection from '@/components/landing/LocalSeoFAQSection';
 import InstagramFeedSection from '@/components/landing/InstagramFeedSection';
 import SeoMeta from '@/components/landing/SeoMeta';
 import WhatsAppChatButton from '@/components/landing/WhatsAppChatButton';
@@ -90,6 +91,7 @@ export default function Home() {
         <StartHereSection />
         <ProgramsSection onBookSession={handleBookSession} />
         <FAQSection onBookSession={handleBookSession} />
+        <LocalSeoFAQSection />
         <GoogleReviewsSection />
 
         {/* Instagram Feed */}
