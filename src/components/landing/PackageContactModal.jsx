@@ -28,7 +28,8 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
   }, [form, isRo, packageName, selectedSlot]);
 
   const emailUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(isRo ? `Interes ${packageName || 'PT / Nutriție'}` : `Interested in ${packageName || 'PT / Nutrition'}`)}&body=${encodeURIComponent(contactText)}`;
-  const whatsappUrl = `https://wa.me/${PHONE_1.replace(/\D/g, '')}?text=${encodeURIComponent(contactText)}`;
+  const whatsappNumber = isDropInPackage ? '40744798429' : PHONE_1.replace(/\D/g, '');
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(contactText)}`;
 
   const resetAndClose = () => {
     setForm({ name: '', email: '', phone: '', message: '' });
