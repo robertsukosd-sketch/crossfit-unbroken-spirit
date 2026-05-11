@@ -9,7 +9,7 @@ Deno.serve(async (req) => {
       return Response.json({ error: 'Missing API key' }, { status: 500 });
     }
 
-    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=name,rating,user_ratings_total,reviews&key=${apiKey}&language=ro`;
+    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=name,rating,user_ratings_total,reviews&reviews_sort=newest&key=${apiKey}&language=ro`;
 
     const res = await fetch(url);
     const data = await res.json();
@@ -20,7 +20,10 @@ Deno.serve(async (req) => {
 
     const { name, rating, user_ratings_total, reviews } = data.result;
 
-    return Response.json({ name, rating, user_ratings_total, reviews: reviews || [] });
+    return Response.json(
+      { name, rating, user_ratings_total, reviews: reviews || [] },
+      { headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0' } }
+    );
   } catch (error) {
     return Response.json({ error: error.message }, { status: 500 });
   }

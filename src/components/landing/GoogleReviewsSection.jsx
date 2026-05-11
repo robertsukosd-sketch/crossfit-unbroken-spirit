@@ -82,9 +82,11 @@ export default function GoogleReviewsSection() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    base44.functions.invoke('getGoogleReviews', {})
+    setLoading(true);
+    base44.functions.invoke('getGoogleReviews', { refreshedAt: Date.now() })
       .then((res) => { if (res.data && res.data.reviews) setData(res.data); })
-      .catch(() => {}); // silently keep fallback data
+      .catch(() => {})
+      .finally(() => setLoading(false));
   }, []);
 
   return (
