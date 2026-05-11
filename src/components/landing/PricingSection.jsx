@@ -103,35 +103,35 @@ const getCategories = (language) => [
       : 'Private group training sessions.\nPersonalized training for your goals.',
     plans: [
       {
-        name: language === 'ro' ? 'PT 12 Ședințe' : 'PT 12 Sessions',
+        name: language === 'ro' ? 'Personal Training – 12 ședințe' : 'Personal Training – 12 sessions',
         price: '1600',
         period: language === 'ro' ? '12 ședințe' : '12 sessions',
-        description: language === 'ro' ? 'Transformare completă' : 'Complete transformation',
+        description: language === 'ro' ? 'Transformare completă și progres accelerat.' : 'Complete transformation and accelerated progress.',
         features: language === 'ro'
-          ? ['Program individualizat', 'Nutriție de bază', 'Suport WhatsApp', 'Monitorizare progres', 'Loc de parcare inclus']
-          : ['Individualized program', 'Basic nutrition', 'WhatsApp support', 'Progress monitoring', 'Free parking spot'],
+          ? ['Antrenamente 100% personalizate.', 'Corectarea tehnicii la fiecare ședință.', 'Monitorizare constantă și motivație.', 'Ideal pentru rezultate pe termen lung.']
+          : ['100% personalized workouts.', 'Technique correction in every session.', 'Constant monitoring and motivation.', 'Ideal for long-term results.'],
         popular: false,
         featured: false,
       },
       {
-        name: language === 'ro' ? 'PT 10 Ședințe' : 'PT 10 Sessions',
+        name: language === 'ro' ? 'Personal Training – 10 ședințe' : 'Personal Training – 10 sessions',
         price: '1400',
         period: language === 'ro' ? '10 ședințe' : '10 sessions',
-        description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
+        description: language === 'ro' ? 'Construiești forță și condiție fizică.' : 'Build strength and physical conditioning.',
         features: language === 'ro'
-          ? ['Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
-          : ['Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
+          ? ['Înveți mișcările de bază corect.', 'Antrenamente variate și eficiente.', 'Atenție individuală permanentă.', 'Rezultate vizibile într-un timp scurt.']
+          : ['Learn the basic movements correctly.', 'Varied and efficient workouts.', 'Constant individual attention.', 'Visible results in a short time.'],
         popular: true,
         featured: true,
       },
       {
-        name: language === 'ro' ? 'PT 8 Ședințe' : 'PT 8 Sessions',
+        name: language === 'ro' ? 'Personal Training – 8 ședințe' : 'Personal Training – 8 sessions',
         price: '1300',
         period: language === 'ro' ? '8 ședințe' : '8 sessions',
-        description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
+        description: language === 'ro' ? 'Perfect pentru începători.' : 'Perfect for beginners.',
         features: language === 'ro'
-          ? ['Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
-          : ['Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
+          ? ['Adaptat nivelului tău.', 'Crești energia și mobilitatea.', 'Suport individual la fiecare pas.', 'Start ideal în lumea CrossFit.']
+          : ['Adapted to your level.', 'Increase your energy and mobility.', 'Individual support at every step.', 'The ideal start in the CrossFit world.'],
         popular: false,
         featured: false,
       },
