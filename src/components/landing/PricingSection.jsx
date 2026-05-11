@@ -114,6 +114,17 @@ const getCategories = (language) => [
         featured: true,
       },
       {
+        name: language === 'ro' ? 'PT 10 Ședințe' : 'PT 10 Sessions',
+        price: '1400',
+        period: language === 'ro' ? '10 ședințe' : '10 sessions',
+        description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
+        features: language === 'ro'
+          ? ['10 sesiuni 1-la-1', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
+          : ['10 one-on-one sessions', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
+        popular: false,
+        featured: false,
+      },
+      {
         name: language === 'ro' ? 'PT 8 Ședințe' : 'PT 8 Sessions',
         price: '1300',
         period: language === 'ro' ? '8 ședințe' : '8 sessions',
