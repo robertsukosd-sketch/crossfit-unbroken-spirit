@@ -38,9 +38,10 @@ const getDateForDayInWeek = (weekMonday, dayIndex) => {
 
 const isSlotInPast = (weekMonday, dayIndex, time) => {
   const slotDate = getDateForDayInWeek(weekMonday, dayIndex);
-  const [h, m] = time.split(':').map(Number);
-  slotDate.setHours(h, m, 0, 0);
-  return slotDate < new Date();
+  const startTime = time.split('-')[0];
+  const [h, m] = startTime.split(':').map(Number);
+  slotDate.setHours(h, m + 1, 0, 0);
+  return slotDate <= new Date();
 };
 
 export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlotSelect }) {
