@@ -109,8 +109,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '12 ședințe' : '12 sessions',
         description: language === 'ro' ? 'Transformare completă și progres accelerat.' : 'Complete transformation and accelerated progress.',
         features: language === 'ro'
-          ? ['Antrenamente 100% personalizate.', 'Corectarea tehnicii la fiecare ședință.', 'Monitorizare constantă și motivație.', 'Ideal pentru rezultate pe termen lung.']
-          : ['100% personalized workouts.', 'Technique correction in every session.', 'Constant monitoring and motivation.', 'Ideal for long-term results.'],
+          ? ['Antrenamente 100% personalizate.', 'Corectarea tehnicii la fiecare ședință.', 'Monitorizare constantă și motivație.', 'Ideal pentru rezultate pe termen lung.', 'Grup privat de maxim 3 persoane']
+          : ['100% personalized workouts.', 'Technique correction in every session.', 'Constant monitoring and motivation.', 'Ideal for long-term results.', 'Private group of maximum 3 people'],
         popular: false,
         featured: false,
         contactOnly: true,
@@ -121,8 +121,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '10 ședințe' : '10 sessions',
         description: language === 'ro' ? 'Construiești forță și condiție fizică.' : 'Build strength and physical conditioning.',
         features: language === 'ro'
-          ? ['Înveți mișcările de bază corect.', 'Antrenamente variate și eficiente.', 'Atenție individuală permanentă.', 'Rezultate vizibile într-un timp scurt.']
-          : ['Learn the basic movements correctly.', 'Varied and efficient workouts.', 'Constant individual attention.', 'Visible results in a short time.'],
+          ? ['Înveți mișcările de bază corect.', 'Antrenamente variate și eficiente.', 'Atenție individuală permanentă.', 'Rezultate vizibile într-un timp scurt.', 'Grup privat de maxim 3 persoane']
+          : ['Learn the basic movements correctly.', 'Varied and efficient workouts.', 'Constant individual attention.', 'Visible results in a short time.', 'Private group of maximum 3 people'],
         popular: true,
         featured: true,
         contactOnly: true,
@@ -133,8 +133,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '8 ședințe' : '8 sessions',
         description: language === 'ro' ? 'Perfect pentru începători.' : 'Perfect for beginners.',
         features: language === 'ro'
-          ? ['Adaptat nivelului tău.', 'Crești energia și mobilitatea.', 'Suport individual la fiecare pas.', 'Start ideal în lumea CrossFit.']
-          : ['Adapted to your level.', 'Increase your energy and mobility.', 'Individual support at every step.', 'The ideal start in the CrossFit world.'],
+          ? ['Adaptat nivelului tău.', 'Crești energia și mobilitatea.', 'Suport individual la fiecare pas.', 'Start ideal în lumea CrossFit.', 'Grup privat de maxim 3 persoane']
+          : ['Adapted to your level.', 'Increase your energy and mobility.', 'Individual support at every step.', 'The ideal start in the CrossFit world.', 'Private group of maximum 3 people'],
         popular: false,
         featured: false,
         contactOnly: true,
