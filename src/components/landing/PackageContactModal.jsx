@@ -116,7 +116,7 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
               <Textarea
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                placeholder={isRo ? 'Spune-ne ce obiectiv ai sau ce program te interesează.' : 'Tell us your goal or what package interests you.'}
+                placeholder={isDropInPackage ? 'Scrie-ne dacă ai întrebări suplimentare sau nu ai găsit informații relevante pe site.' : isRo ? 'Spune-ne ce obiectiv ai sau ce program te interesează.' : 'Tell us your goal or what package interests you.'}
                 rows={4}
                 className="resize-none border-zinc-600 bg-zinc-800 text-white placeholder:text-gray-500"
               />
