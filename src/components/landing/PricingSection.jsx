@@ -99,8 +99,8 @@ const getCategories = (language) => [
     sublabel: language === 'ro' ? 'Personal Training' : 'Personal Training',
     icon: User,
     description: language === 'ro'
-      ? 'Atenție 1-la-1 dedicată exclusiv ție.\nPrograme personalizate pentru obiectivele tale.'
-      : 'Undivided 1-on-1 attention dedicated exclusively to you.\nPersonalized training for your goals.',
+      ? 'Ședințe de antrenament în grup privat.\nPrograme personalizate pentru obiectivele tale.'
+      : 'Private group training sessions.\nPersonalized training for your goals.',
     plans: [
       {
         name: language === 'ro' ? 'PT 12 Ședințe' : 'PT 12 Sessions',
@@ -108,8 +108,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '12 ședințe' : '12 sessions',
         description: language === 'ro' ? 'Transformare completă' : 'Complete transformation',
         features: language === 'ro'
-          ? ['12 Private Group Sessions', 'Grup restrâns de maxim 3 persoane', 'Program individualizat', 'Nutriție de bază', 'Suport WhatsApp', 'Monitorizare progres', 'Loc de parcare inclus']
-          : ['12 Private Group Sessions', 'Small group of up to 3 people', 'Individualized program', 'Basic nutrition', 'WhatsApp support', 'Progress monitoring', 'Free parking spot'],
+          ? ['Grup restrâns de maxim 3 persoane', 'Program individualizat', 'Nutriție de bază', 'Suport WhatsApp', 'Monitorizare progres', 'Loc de parcare inclus']
+          : ['Small group of up to 3 people', 'Individualized program', 'Basic nutrition', 'WhatsApp support', 'Progress monitoring', 'Free parking spot'],
         popular: false,
         featured: false,
       },
@@ -119,8 +119,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '10 ședințe' : '10 sessions',
         description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
         features: language === 'ro'
-          ? ['10 Private Group Sessions', 'Grup restrâns de maxim 3 persoane', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
-          : ['10 Private Group Sessions', 'Small group of up to 3 people', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
+          ? ['Grup restrâns de maxim 3 persoane', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
+          : ['Small group of up to 3 people', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
         popular: true,
         featured: true,
       },
@@ -130,8 +130,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '8 ședințe' : '8 sessions',
         description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
         features: language === 'ro'
-          ? ['8 Private Group Sessions', 'Grup restrâns de maxim 3 persoane', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
-          : ['8 Private Group Sessions', 'Small group of up to 3 people', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
+          ? ['Grup restrâns de maxim 3 persoane', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
+          : ['Small group of up to 3 people', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
         popular: false,
         featured: false,
       },
