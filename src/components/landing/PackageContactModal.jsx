@@ -12,6 +12,7 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
   const { language } = useLanguage();
   const isRo = language === 'ro';
   const isDropInPackage = packageName === 'Drop In';
+  const isPtPackage = packageName?.startsWith('PT - ');
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
   const [selectedSlot, setSelectedSlot] = useState(null);
 
@@ -28,7 +29,7 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
   }, [form, isRo, packageName, selectedSlot]);
 
   const emailUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(isRo ? `Interes ${packageName || 'PT / Nutriție'}` : `Interested in ${packageName || 'PT / Nutrition'}`)}&body=${encodeURIComponent(contactText)}`;
-  const whatsappNumber = isDropInPackage ? '40744798429' : PHONE_1.replace(/\D/g, '');
+  const whatsappNumber = isPtPackage ? '40726622011' : isDropInPackage ? '40744798429' : PHONE_1.replace(/\D/g, '');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(contactText)}`;
 
   const resetAndClose = () => {
