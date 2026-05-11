@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Dumbbell, Users, Building2, CreditCard, Smartphone } from 'lucide-react';
+import { ChevronDown, Dumbbell, Users, Building2, CreditCard, Smartphone, Handshake } from 'lucide-react';
 import { useLanguage } from '../LanguageProvider';
 import { cn } from '@/lib/utils';
 import { openAppWithFallback } from '../appStoreUtils';
@@ -10,6 +10,7 @@ const CATEGORIES_RO = [
   { id: 'beginners', label: 'Începători', icon: Users },
   { id: 'box', label: 'Sală & Facilități', icon: Building2 },
   { id: 'pricing', label: 'Abonamente & Prețuri', icon: CreditCard },
+  { id: 'partnerships', label: 'Parteneriate', icon: Handshake },
   { id: 'app', label: 'ThunderWOD App', icon: Smartphone },
 ];
 
@@ -18,6 +19,7 @@ const CATEGORIES_EN = [
   { id: 'beginners', label: 'For Beginners', icon: Users },
   { id: 'box', label: 'Box & Facilities', icon: Building2 },
   { id: 'pricing', label: 'Memberships & Pricing', icon: CreditCard },
+  { id: 'partnerships', label: 'Partnerships', icon: Handshake },
   { id: 'app', label: 'ThunderWOD App', icon: Smartphone },
 ];
 
@@ -26,6 +28,7 @@ const FAQ_CATEGORIES = {
   beginners: ['fitness-required', 'no-weights-before', 'safety', 'old-injury', 'what-to-bring', 'free-trial', 'how-to-start'],
   box: ['parking', 'open-gym', 'facilities', 'drop-in'],
   pricing: ['pricing', 'class-duration', 'frequency', 'competitions'],
+  partnerships: ['partner-7card', 'partner-sanopass', 'partner-edenred'],
   app: ['thunderwod-app', 'scores'],
 };
 
@@ -106,6 +109,9 @@ export default function FAQSection({ onBookSession }) {
         { id: 'class-duration', q: 'Cât durează clasele?', a: 'Toate clasele durează în jur de 60 de minute. Acestea includ instructajul, încălzirea ghidată, o sesiune de forță sau tehnică, ', aClassDuration: true, aClassDurationExtra: true },
         { id: 'frequency', q: 'De câte ori pe săptămână ar trebui să vin?', a: 'Pentru începători, recomandăm ', aFrequency: true },
         { id: 'competitions', q: 'Trebuie să particip la competiții?', a: 'Deloc. Deși unora le plac competițiile, 90% din comunitatea noastră este aici pentru sănătate, aspect fizic și longevitate. Singura ta competiție este cu tine însuți.' },
+        { id: 'partner-7card', q: 'Pot face CrossFit cu 7Card by Wellhub?', a: 'Da, dacă abonamentul tău include accesul la locația noastră, poți participa la clase CrossFit și antrenamente de grup conform condițiilor Wellhub.' },
+        { id: 'partner-sanopass', q: 'Pot veni la CrossFit cu SanoPass?', a: 'Da, pentru planurile eligibile SanoPass FIT poți veni la clase CrossFit și antrenamente de grup cu coplată redusă, direct prin aplicațiile partenere.' },
+        { id: 'partner-edenred', q: 'Pot folosi Edenred Benefit pentru CrossFit?', a: 'Da, poți achiziționa abonamente CrossFit Unbroken Spirit prin Edenred Benefit, iar activarea se face în ThunderWOD.' },
         { id: 'thunderwod-app', q: 'De ce trebuie să descarc aplicația ThunderWOD?', a: ' este folosită pentru organizarea și gestionarea antrenamentelor din sală. Prin aplicație:\n• poți să-ți rezervi locul la clase\n• poți să vezi programul antrenamentelor\n• poți să vezi în avans antrenamentul zilei (WOD)\n• îți poți urmări rezultatele și monitoriza progresul\n• îți poți plăți și gestiona abonamentul\nPractic, ai o singură aplicație pentru tot: programări, antrenamente și plăți. Astfel, procesul este rapid, simplu și ușor de gestionat direct de pe telefon.', aThunderWODLink: true, aThunderWODStart: true },
         { id: 'scores', q: 'De ce notăm scorurile?', a: '', aScores: true },
       ];
@@ -132,6 +138,9 @@ export default function FAQSection({ onBookSession }) {
       { id: 'class-duration', q: 'How long are the classes?', a: 'All classes last about 60 minutes. They include a walkthrough, a guided warm-up, a strength or technique session, ', aClassDuration: true },
       { id: 'frequency', q: 'How many times a week should I come?', a: 'For beginners, we recommend ', aFrequency: true },
       { id: 'competitions', q: 'Do I have to compete?', a: 'Not at all. While some enjoy competitions, 90% of our community is here for health, physique, and longevity. Your only competition is with yourself.' },
+      { id: 'partner-7card', q: 'Can I do CrossFit with 7Card by Wellhub?', a: 'Yes, if your plan includes access to our location, you can join CrossFit group classes according to Wellhub conditions.' },
+      { id: 'partner-sanopass', q: 'Can I train CrossFit with SanoPass?', a: 'Yes, eligible SanoPass FIT plans allow you to attend CrossFit group classes with a reduced co-payment through the partner apps.' },
+      { id: 'partner-edenred', q: 'Can I use Edenred Benefit for CrossFit?', a: 'Yes, you can purchase CrossFit Unbroken Spirit memberships through Edenred Benefit, then access is activated in ThunderWOD.' },
       { id: 'thunderwod-app', q: 'Why do I need to download the ThunderWOD app?', a: ' is used to organize and manage your gym workouts. Through the app:\n• you can reserve your spot in classes\n• you can view the workout schedule\n• you can see the Workout of the Day (WOD) in advance\n• you can track your results and monitor your progress\n• you can pay for and manage your membership\nEssentially, it\'s one app for everything: bookings, workouts, and payments — making the whole process fast, simple, and easy to manage right from your phone.', aThunderWODLink: true, aThunderWODStart: true },
       { id: 'scores', q: 'Why do we track scores?', a: '', aScores: true },
     ];

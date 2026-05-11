@@ -368,34 +368,6 @@ function PartnersContent({ language, t }) {
         ))}
       </div>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
-        {[
-          {
-            qRo: 'Pot face CrossFit cu 7Card by Wellhub?',
-            aRo: 'Da, dacă abonamentul tău include accesul la locația noastră, poți participa la antrenamente de grup CrossFit și Open Gym conform condițiilor Wellhub.',
-            qEn: 'Can I do CrossFit with 7Card by Wellhub?',
-            aEn: 'Yes, if your plan includes access to our location, you can join CrossFit group classes and Open Gym according to Wellhub conditions.',
-          },
-          {
-            qRo: 'Pot veni la CrossFit cu SanoPass?',
-            aRo: 'Da, pentru planurile eligibile SanoPass FIT poți veni la clase CrossFit sau Open Gym cu coplată redusă, direct prin aplicațiile partenere.',
-            qEn: 'Can I train CrossFit with SanoPass?',
-            aEn: 'Yes, eligible SanoPass FIT plans allow you to attend CrossFit classes or Open Gym with a reduced co-payment through the partner apps.',
-          },
-          {
-            qRo: 'Pot folosi Edenred Benefit pentru CrossFit?',
-            aRo: 'Da, poți achiziționa abonamente CrossFit Unbroken Spirit prin Edenred Benefit, iar activarea se face în ThunderWOD.',
-            qEn: 'Can I use Edenred Benefit for CrossFit?',
-            aEn: 'Yes, you can purchase CrossFit Unbroken Spirit memberships through Edenred Benefit, then access is activated in ThunderWOD.',
-          },
-        ].map((item) => (
-          <div key={item.qRo} className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5">
-            <h4 className="text-sm font-bold text-white">{language === 'ro' ? item.qRo : item.qEn}</h4>
-            <p className="mt-2 text-xs leading-relaxed text-gray-400">{language === 'ro' ? item.aRo : item.aEn}</p>
-          </div>
-        ))}
-      </div>
-
       {/* Bottom nudge */}
       <div className="mt-8 text-center p-4 rounded-xl bg-amber-400/5 border border-amber-400/20">
         <p className="text-amber-300/80 text-base">
