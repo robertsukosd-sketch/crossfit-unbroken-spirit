@@ -413,12 +413,21 @@ function PlanCard({ plan, index, t, onSignUpClick, onContactClick, language }) {
       </div>
 
       <ul className="space-y-3 mb-6 flex-grow">
-        {plan.features.map((feature, i) => (
-          <li key={i} className="flex items-start gap-3">
-            <Check className={cn('w-4 h-4 flex-shrink-0 mt-0.5', plan.featured ? 'text-white' : 'text-sky-400')} />
-            <span className={cn('text-sm', plan.featured ? 'text-white/90' : 'text-gray-300')}>{feature}</span>
-          </li>
-        ))}
+        {plan.features.map((feature, i) => {
+          const isPayAtGymFeature = feature === 'Plata se poate face și în sală' || feature === 'Payment can also be made at the gym';
+          return (
+            <li
+              key={i}
+              className={cn(
+                'flex items-start gap-3',
+                isPayAtGymFeature && 'rounded-xl border border-amber-300/40 bg-amber-300/15 px-3 py-2'
+              )}
+            >
+              <Check className={cn('w-4 h-4 flex-shrink-0 mt-0.5', isPayAtGymFeature ? 'text-amber-200' : plan.featured ? 'text-white' : 'text-sky-400')} />
+              <span className={cn('text-sm', isPayAtGymFeature ? 'font-bold text-amber-100' : plan.featured ? 'text-white/90' : 'text-gray-300')}>{feature}</span>
+            </li>
+          );
+        })}
       </ul>
 
       <Button
