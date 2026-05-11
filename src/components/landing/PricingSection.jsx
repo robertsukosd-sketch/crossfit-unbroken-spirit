@@ -159,7 +159,7 @@ const getCategories = (language) => [
     sublabel: language === 'ro' ? 'Vizitatori & Drop-In' : 'Visitors & Drop-In',
     icon: Globe,
     description: language === 'ro'
-      ? `CrossFit Drop In în București pentru vizitatori, sportivi în trecere sau persoane care vor o singură ședință de CrossFit.`
+      ? `CrossFit Drop In în București pentru vizitatori, sportivi în trecere\nsau persoane care vor o singură ședință de CrossFit.`
       : `CrossFit Drop In in Bucharest for visitors, traveling athletes, or anyone who wants a single CrossFit session.\nChoose Drop In for one CrossFit/Open Gym session or Trial Drop In for a full week at our gym in Bucharest.`,
     plans: [
       {
