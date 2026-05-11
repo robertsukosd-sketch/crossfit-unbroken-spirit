@@ -300,7 +300,7 @@ function PartnersContent({ language, t }) {
         </h3>
         <p className="mt-3 text-sm leading-relaxed text-gray-300 sm:text-base">
           {language === 'ro'
-            ? 'Cauți 7Card CrossFit, SanoPass CrossFit, Benefit CrossFit sau antrenamente de grup prin beneficiile de la angajator? La CrossFit Unbroken Spirit poți participa la clase CrossFit și Open Gym prin partenerii disponibili, în funcție de abonamentul tău.'
+            ? 'Cauți 7Card CrossFit, SanoPass CrossFit, Benefit CrossFit sau antrenamente de grup prin beneficiile de la angajator? La CrossFit Unbroken Spirit poți participa la clase de CrossFit prin partenerii disponibili, în funcție de abonamentul tău.'
             : 'Looking for 7Card CrossFit, SanoPass CrossFit, Benefit CrossFit or group training through your employee benefits? At CrossFit Unbroken Spirit you can join CrossFit classes and Open Gym through available partner platforms, depending on your plan.'}
         </p>
       </div>
