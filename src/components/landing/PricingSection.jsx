@@ -159,8 +159,8 @@ const getCategories = (language) => [
     sublabel: language === 'ro' ? 'Vizitatori & Drop-In' : 'Visitors & Drop-In',
     icon: Globe,
     description: language === 'ro'
-      ? `Ești în vizită? Ești la început, dar vrei să încerci o săptămână întreagă de CrossFit?\nUna dintre cele două variante de mai jos ți s-ar potrivi.`
-      : `Visiting or just starting out and want to try a week of CrossFit?\nOne of the two options below might be the right fit for you.`,
+      ? `CrossFit Drop In în București pentru vizitatori, sportivi în trecere sau persoane care vor o singură ședință de CrossFit.\nAlege Drop In pentru o ședință CrossFit/Open Gym sau Trial Drop In pentru o săptămână completă la sala noastră din București.`
+      : `CrossFit Drop In in Bucharest for visitors, traveling athletes, or anyone who wants a single CrossFit session.\nChoose Drop In for one CrossFit/Open Gym session or Trial Drop In for a full week at our gym in Bucharest.`,
     plans: [
       {
         name: 'Drop In',
@@ -168,8 +168,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? 'ședință' : 'session',
         description: language === 'ro' ? 'Pentru CrossFitteri cu experiență' : 'For experienced CrossFitters',
         features: language === 'ro'
-          ? ['1 ședință CrossFit sau Open Gym', 'Acces complet la facilități', 'Pentru sportivi CrossFit', 'Plata se poate face și în sală', '🎁 Prima ședință GRATUITĂ pentru începători', 'Loc de parcare inclus']
-          : ['1 CrossFit or Open Gym session', 'Full access to facilities', 'For experienced CrossFit athletes', 'Payment can also be made at the gym', '🎁 First session FREE for newcomers', 'Free parking spot'],
+          ? ['1 ședință CrossFit sau Open Gym în București', 'Acces complet la facilități', 'Pentru sportivi CrossFit în vizită', 'Plata se poate face și în sală', '🎁 Prima ședință GRATUITĂ pentru începători', 'Loc de parcare inclus']
+          : ['1 CrossFit or Open Gym drop-in session in Bucharest', 'Full access to facilities', 'For visiting CrossFit athletes', 'Payment can also be made at the gym', '🎁 First session FREE for newcomers', 'Free parking spot'],
         popular: false,
         featured: false,
         contactOnly: true,
@@ -181,8 +181,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? 'săptămână' : 'week',
         description: language === 'ro' ? 'Încearcă o săptămână completă' : 'Try a full week',
         features: language === 'ro'
-          ? ['Acces nelimitat 7 zile', 'Toate clasele incluse', 'Ideal pentru călători și vizitatori', 'Plata se poate face și în sală', 'Loc de parcare inclus']
-          : ['Unlimited 7-day access', 'All classes included', 'Ideal for travelers & visitors', 'Payment can also be made at the gym', 'Free parking spot'],
+          ? ['Acces nelimitat 7 zile la CrossFit în București', 'Toate clasele incluse', 'Ideal pentru călători, vizitatori și începători', 'Plata se poate face și în sală', 'Loc de parcare inclus']
+          : ['Unlimited 7-day CrossFit access in Bucharest', 'All classes included', 'Ideal for travelers, visitors, and beginners', 'Payment can also be made at the gym', 'Free parking spot'],
         popular: true,
         featured: true,
         contactOnly: true,
@@ -595,6 +595,19 @@ export default function PricingSection({ onOpenFreeClass }) {
             </div>
 
             {/* Plans Grid or Partners Tab */}
+        {activeId === 'welcome' && (
+          <div className="mx-auto mb-8 max-w-4xl rounded-2xl border border-blue-500/20 bg-blue-500/10 p-5 text-center">
+            <h3 className="text-xl font-black text-white">
+              {language === 'ro' ? 'CrossFit Drop In București — o ședință sau o săptămână de antrenament' : 'CrossFit Drop In Bucharest — one session or a full training week'}
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-gray-300 sm:text-base">
+              {language === 'ro'
+                ? 'Cauți drop in CrossFit București, sală drop in București sau o singură ședință de CrossFit? La CrossFit Unbroken Spirit poți rezerva rapid un Drop In pentru CrossFit sau Open Gym, cu opțiunea de plată și în sală.'
+                : 'Looking for CrossFit drop in Bucharest, drop-in gym Bucharest, or one CrossFit session in Bucharest? At CrossFit Unbroken Spirit you can quickly book a CrossFit or Open Gym drop-in, with payment also available at the gym.'}
+            </p>
+          </div>
+        )}
+
         <AnimatePresence mode="wait">
           <motion.div
             key={activeId + '-plans'}
