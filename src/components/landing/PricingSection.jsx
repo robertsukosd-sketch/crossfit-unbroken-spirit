@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from '../LanguageProvider';
 import { getMobileOrDesktopUrl } from '../appStoreUtils';
 import SubscriptionConfirmModal from './SubscriptionConfirmModal';
+import PackageContactModal from './PackageContactModal';
 // Drop-In payment flow temporarily disabled
 // import DropInPaymentModal from './DropInPaymentModal';
 
@@ -112,6 +113,7 @@ const getCategories = (language) => [
           : ['100% personalized workouts.', 'Technique correction in every session.', 'Constant monitoring and motivation.', 'Ideal for long-term results.'],
         popular: false,
         featured: false,
+        contactOnly: true,
       },
       {
         name: language === 'ro' ? 'PT - 10 ședințe' : 'PT - 10 sessions',
@@ -123,6 +125,7 @@ const getCategories = (language) => [
           : ['Learn the basic movements correctly.', 'Varied and efficient workouts.', 'Constant individual attention.', 'Visible results in a short time.'],
         popular: true,
         featured: true,
+        contactOnly: true,
       },
       {
         name: language === 'ro' ? 'PT - 8 ședințe' : 'PT - 8 sessions',
@@ -134,6 +137,7 @@ const getCategories = (language) => [
           : ['Adapted to your level.', 'Increase your energy and mobility.', 'Individual support at every step.', 'The ideal start in the CrossFit world.'],
         popular: false,
         featured: false,
+        contactOnly: true,
       },
       {
         name: language === 'ro' ? 'Nutriție' : 'Nutrition',
@@ -145,6 +149,7 @@ const getCategories = (language) => [
           : ['Initial consultation', 'Nutrition plan', 'Progress monitoring', 'Ongoing support'],
         popular: false,
         featured: false,
+        contactOnly: true,
       },
     ],
   },
@@ -359,7 +364,7 @@ function PartnersContent({ language, t }) {
   );
 }
 
-function PlanCard({ plan, index, t, onSignUpClick, language }) {
+function PlanCard({ plan, index, t, onSignUpClick, onContactClick, language }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -415,7 +420,7 @@ function PlanCard({ plan, index, t, onSignUpClick, language }) {
       </ul>
 
       <Button
-        onClick={plan.isDropIn ? undefined : onSignUpClick}
+        onClick={plan.contactOnly ? () => onContactClick(plan.name) : plan.isDropIn ? undefined : onSignUpClick}
         className={cn(
           'w-full font-bold rounded-full',
           plan.featured
@@ -425,7 +430,7 @@ function PlanCard({ plan, index, t, onSignUpClick, language }) {
             : 'bg-blue-500/10 text-sky-400 hover:bg-blue-500 hover:text-white border border-blue-500/30'
         )}
       >
-        {t('startNowBtn')}
+        {plan.contactOnly ? (language === 'ro' ? 'Contactează-ne' : 'Contact us') : t('startNowBtn')}
       </Button>
     </motion.div>
   );
@@ -436,6 +441,7 @@ export default function PricingSection({ onOpenFreeClass }) {
   const categories = getCategories(language);
   const [activeId, setActiveId] = useState('core');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [contactPackage, setContactPackage] = useState(null);
   // Drop-In payment flow temporarily disabled
   // const [isDropInModalOpen, setIsDropInModalOpen] = useState(false);
 
@@ -475,6 +481,10 @@ export default function PricingSection({ onOpenFreeClass }) {
 
   const handleCancel = () => {
     setIsModalOpen(false);
+  };
+
+  const handleContactClick = (packageName) => {
+    setContactPackage(packageName);
   };
 
   // Drop-In payment flow temporarily disabled
@@ -597,6 +607,7 @@ export default function PricingSection({ onOpenFreeClass }) {
                         index={index}
                         t={t}
                         onSignUpClick={handleSignUpClick}
+                        onContactClick={handleContactClick}
                         language={language}
                       />
                     </div>
@@ -634,6 +645,11 @@ export default function PricingSection({ onOpenFreeClass }) {
           isOpen={isModalOpen}
           onConfirm={handleConfirm}
           onCancel={handleCancel}
+        />
+        <PackageContactModal
+          isOpen={!!contactPackage}
+          packageName={contactPackage}
+          onClose={() => setContactPackage(null)}
         />
         {/* Drop-In payment flow temporarily disabled
         <DropInPaymentModal
