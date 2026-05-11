@@ -6,11 +6,14 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '../LanguageProvider';
 import { CONTACT_EMAIL, PHONE_1 } from '../config';
+import MiniSchedulePopup from './MiniSchedulePopup';
 
 export default function PackageContactModal({ isOpen, onClose, packageName }) {
   const { language } = useLanguage();
   const isRo = language === 'ro';
+  const isDropInPackage = packageName === 'Drop In';
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
+  const [selectedSlot, setSelectedSlot] = useState(null);
 
   const contactText = useMemo(() => {
     const lines = [
@@ -18,17 +21,27 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
       form.name ? `${isRo ? 'Nume' : 'Name'}: ${form.name}` : '',
       form.email ? `Email: ${form.email}` : '',
       form.phone ? `${isRo ? 'Telefon' : 'Phone'}: ${form.phone}` : '',
+      selectedSlot ? `${isRo ? 'Interval ales' : 'Selected slot'}: ${selectedSlot.day}, ${selectedSlot.time}` : '',
       form.message ? `${isRo ? 'Mesaj' : 'Message'}: ${form.message}` : '',
     ].filter(Boolean);
     return lines.join('\n');
-  }, [form, isRo, packageName]);
+  }, [form, isRo, packageName, selectedSlot]);
 
   const emailUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(isRo ? `Interes ${packageName || 'PT / Nutriție'}` : `Interested in ${packageName || 'PT / Nutrition'}`)}&body=${encodeURIComponent(contactText)}`;
   const whatsappUrl = `https://wa.me/${PHONE_1.replace(/\D/g, '')}?text=${encodeURIComponent(contactText)}`;
 
   const resetAndClose = () => {
     setForm({ name: '', email: '', phone: '', message: '' });
+    setSelectedSlot(null);
     onClose();
+  };
+
+  const handleSlotSelect = (day, time, weekOffset) => {
+    if (selectedSlot?.day === day && selectedSlot?.time === time && selectedSlot?.weekOffset === weekOffset) {
+      setSelectedSlot(null);
+    } else {
+      setSelectedSlot({ day, time, weekOffset });
+    }
   };
 
   return (
@@ -69,6 +82,15 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
             </div>
 
             <div className="space-y-3">
+              {isDropInPackage && (
+                <MiniSchedulePopup
+                  isOpen={true}
+                  onClose={() => {}}
+                  selectedSlot={selectedSlot}
+                  onSlotSelect={handleSlotSelect}
+                />
+              )}
+
               <Input
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
