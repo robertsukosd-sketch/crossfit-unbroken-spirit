@@ -17,8 +17,11 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
   const [selectedSlot, setSelectedSlot] = useState(null);
 
   const contactText = useMemo(() => {
+    const introText = isPtPackage
+      ? `Bună! Sunt interesat(ă) de ${packageName} la CrossFit Unbroken Spirit.`
+      : isRo ? `Bună! Sunt interesat(ă) de ${packageName || 'Personal Training / Nutriție'}.` : `Hi! I'm interested in ${packageName || 'Personal Training / Nutrition'}.`;
     const lines = [
-      isRo ? `Bună! Sunt interesat(ă) de ${packageName || 'Personal Training / Nutriție'}.` : `Hi! I'm interested in ${packageName || 'Personal Training / Nutrition'}.`,
+      introText,
       form.name ? `${isRo ? 'Nume' : 'Name'}: ${form.name}` : '',
       form.email ? `Email: ${form.email}` : '',
       form.phone ? `${isRo ? 'Telefon' : 'Phone'}: ${form.phone}` : '',
@@ -26,7 +29,7 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
       form.message ? `${isRo ? 'Mesaj' : 'Message'}: ${form.message}` : '',
     ].filter(Boolean);
     return lines.join('\n');
-  }, [form, isRo, packageName, selectedSlot]);
+  }, [form, isPtPackage, isRo, packageName, selectedSlot]);
 
   const emailUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(isRo ? `Interes ${packageName || 'PT / Nutriție'}` : `Interested in ${packageName || 'PT / Nutrition'}`)}&body=${encodeURIComponent(contactText)}`;
   const whatsappNumber = isPtPackage ? '40726622011' : isDropInPackage ? '40744798429' : PHONE_1.replace(/\D/g, '');
