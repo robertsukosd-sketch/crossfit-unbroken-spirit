@@ -108,8 +108,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '12 ședințe' : '12 sessions',
         description: language === 'ro' ? 'Transformare completă' : 'Complete transformation',
         features: language === 'ro'
-          ? ['Grup restrâns de maxim 3 persoane', 'Program individualizat', 'Nutriție de bază', 'Suport WhatsApp', 'Monitorizare progres', 'Loc de parcare inclus']
-          : ['Small group of up to 3 people', 'Individualized program', 'Basic nutrition', 'WhatsApp support', 'Progress monitoring', 'Free parking spot'],
+          ? ['Program individualizat', 'Nutriție de bază', 'Suport WhatsApp', 'Monitorizare progres', 'Loc de parcare inclus']
+          : ['Individualized program', 'Basic nutrition', 'WhatsApp support', 'Progress monitoring', 'Free parking spot'],
         popular: false,
         featured: false,
       },
@@ -119,8 +119,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '10 ședințe' : '10 sessions',
         description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
         features: language === 'ro'
-          ? ['Grup restrâns de maxim 3 persoane', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
-          : ['Small group of up to 3 people', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
+          ? ['Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
+          : ['Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
         popular: true,
         featured: true,
       },
@@ -130,8 +130,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? '8 ședințe' : '8 sessions',
         description: language === 'ro' ? 'Antrenament personalizat' : 'Personalized training',
         features: language === 'ro'
-          ? ['Grup restrâns de maxim 3 persoane', 'Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
-          : ['Small group of up to 3 people', 'Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
+          ? ['Program individualizat', 'Tehnici avansate', 'Feedback constant', 'Loc de parcare inclus']
+          : ['Individualized program', 'Advanced techniques', 'Constant feedback', 'Free parking spot'],
         popular: false,
         featured: false,
       },
