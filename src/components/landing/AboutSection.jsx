@@ -295,7 +295,8 @@ export default function AboutSection() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       style={{
                         objectPosition: images[index].objectPosition,
-                        transform: coach.id === 4 ? 'scaleX(-1) scale(0.9)' : undefined,
+                        transform: coach.id === 4 ? 'scaleX(-1) scale(1.02)' : undefined,
+                        transformOrigin: 'center center',
                       }}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
