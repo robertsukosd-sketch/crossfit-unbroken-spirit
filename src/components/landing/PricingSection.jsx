@@ -168,8 +168,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? 'ședință' : 'session',
         description: language === 'ro' ? 'Pentru CrossFitteri cu experiență' : 'For experienced CrossFitters',
         features: language === 'ro'
-          ? ['1 ședință CrossFit sau Open Gym', 'Acces complet la facilități', 'Pentru sportivi CrossFit', '🎁 Prima ședință GRATUITĂ pentru începători', 'Loc de parcare inclus']
-          : ['1 CrossFit or Open Gym session', 'Full access to facilities', 'For experienced CrossFit athletes', '🎁 First session FREE for newcomers', 'Free parking spot'],
+          ? ['1 ședință CrossFit sau Open Gym', 'Acces complet la facilități', 'Pentru sportivi CrossFit', 'Plata se poate face și în sală', '🎁 Prima ședință GRATUITĂ pentru începători', 'Loc de parcare inclus']
+          : ['1 CrossFit or Open Gym session', 'Full access to facilities', 'For experienced CrossFit athletes', 'Payment can also be made at the gym', '🎁 First session FREE for newcomers', 'Free parking spot'],
         popular: false,
         featured: false,
         contactOnly: true,
@@ -181,8 +181,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? 'săptămână' : 'week',
         description: language === 'ro' ? 'Încearcă o săptămână completă' : 'Try a full week',
         features: language === 'ro'
-          ? ['Acces nelimitat 7 zile', 'Toate clasele incluse', 'Ideal pentru călători și vizitatori', 'Loc de parcare inclus']
-          : ['Unlimited 7-day access', 'All classes included', 'Ideal for travelers & visitors', 'Free parking spot'],
+          ? ['Acces nelimitat 7 zile', 'Toate clasele incluse', 'Ideal pentru călători și vizitatori', 'Plata se poate face și în sală', 'Loc de parcare inclus']
+          : ['Unlimited 7-day access', 'All classes included', 'Ideal for travelers & visitors', 'Payment can also be made at the gym', 'Free parking spot'],
         popular: true,
         featured: true,
         contactOnly: true,
