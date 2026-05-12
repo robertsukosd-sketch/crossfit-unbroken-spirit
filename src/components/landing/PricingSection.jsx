@@ -482,8 +482,9 @@ export default function PricingSection({ onOpenFreeClass }) {
 
     const handleHashLink = () => {
       const cleanPath = window.location.pathname.replace(/^\//, '');
+      const openTarget = new URLSearchParams(window.location.search).get('open');
 
-      if (window.location.hash === '#parteneri' || cleanPath === 'parteneri') {
+      if (window.location.hash === '#parteneri' || cleanPath === 'parteneri' || openTarget === 'parteneri') {
         setActiveId('partners');
         setTimeout(() => {
           const el = document.getElementById('pricing');
@@ -491,7 +492,7 @@ export default function PricingSection({ onOpenFreeClass }) {
         }, 100);
       }
 
-      if (window.location.hash === '#drop-in' || cleanPath === 'drop-in') {
+      if (window.location.hash === '#drop-in' || cleanPath === 'drop-in' || openTarget === 'drop-in') {
         setActiveId('welcome');
         setContactPackage('Drop In');
         setTimeout(() => {
