@@ -168,8 +168,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? 'ședință' : 'session',
         description: language === 'ro' ? 'Pentru CrossFitteri cu experiență' : 'For experienced CrossFitters',
         features: language === 'ro'
-          ? ['1 ședință CrossFit sau Open Gym în București', 'Acces complet la facilități', 'Pentru sportivi CrossFit în vizită', 'Plata se poate face și în sală', '🎁 Prima ședință GRATUITĂ pentru începători', 'Loc de parcare inclus']
-          : ['1 CrossFit or Open Gym drop-in session in Bucharest', 'Full access to facilities', 'For visiting CrossFit athletes', 'Payment can also be made at the gym', '🎁 First session FREE for newcomers', 'Free parking spot'],
+          ? ['1 ședință CrossFit sau Open Gym în București', 'Acces complet la facilități', 'Pentru sportivi CrossFit în vizită', 'Plata se poate face și în sală', 'Loc de parcare inclus']
+          : ['1 CrossFit or Open Gym drop-in session in Bucharest', 'Full access to facilities', 'For visiting CrossFit athletes', 'Payment can also be made at the gym', 'Free parking spot'],
         popular: false,
         featured: false,
         contactOnly: true,
