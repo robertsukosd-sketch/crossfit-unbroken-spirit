@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 import Logo from './Logo';
 import { useLanguage } from '../LanguageProvider';
@@ -304,10 +304,36 @@ const getTermsContent = (language) => {
     );
 };
 
+const POLICY_HASHES = {
+  'cookies-ro': { modal: 'cookie', language: 'ro' },
+  'cookies-en': { modal: 'cookie', language: 'en' },
+  'privacy-policy-ro': { modal: 'gdpr', language: 'ro' },
+  'privacy-policy-en': { modal: 'gdpr', language: 'en' },
+  'terms-and-conditions-ro': { modal: 'terms', language: 'ro' },
+  'terms-and-conditions-en': { modal: 'terms', language: 'en' },
+};
+
 export default function Footer() {
-  const { t, language } = useLanguage();
+  const { t, language, changeLanguage } = useLanguage();
   const currentYear = new Date().getFullYear();
-  const [openModal, setOpenModal] = useState(null); // 'cookie' | 'gdpr' | null
+  const [openModal, setOpenModal] = useState(null); // 'cookie' | 'gdpr' | 'terms' | null
+
+  const openPolicyLink = (modal, lang) => {
+    changeLanguage(lang);
+    setOpenModal(modal);
+  };
+
+  useEffect(() => {
+    const openFromHash = () => {
+      const policy = POLICY_HASHES[window.location.hash.replace('#', '')];
+      if (!policy) return;
+      openPolicyLink(policy.modal, policy.language);
+    };
+
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+    return () => window.removeEventListener('hashchange', openFromHash);
+  }, []);
   
   return (
     <footer className="bg-black border-t border-zinc-900">
@@ -393,17 +419,17 @@ export default function Footer() {
             © {currentYear} CrossFit Unbroken Spirit. {t("copyright")}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-3">
-            <button onClick={() => setOpenModal('cookie')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
+            <a href={language === 'ro' ? '#cookies-ro' : '#cookies-en'} onClick={() => openPolicyLink('cookie', language)} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
               {language === 'ro' ? 'Cookie-uri' : 'Cookies'}
-            </button>
+            </a>
             <span className="text-gray-600">|</span>
-            <button onClick={() => setOpenModal('gdpr')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
+            <a href={language === 'ro' ? '#privacy-policy-ro' : '#privacy-policy-en'} onClick={() => openPolicyLink('gdpr', language)} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
               {language === 'ro' ? 'Confidențialitate și GDPR' : 'Privacy Policy'}
-            </button>
+            </a>
             <span className="text-gray-600">|</span>
-            <button onClick={() => setOpenModal('terms')} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
+            <a href={language === 'ro' ? '#terms-and-conditions-ro' : '#terms-and-conditions-en'} onClick={() => openPolicyLink('terms', language)} className="text-blue-400 text-sm hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black rounded">
               {language === 'ro' ? 'Termeni și Condiții' : 'Terms and Conditions'}
-            </button>
+            </a>
             <span className="text-gray-600">|</span>
             <a href="https://anpc.ro" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
               ANPC
