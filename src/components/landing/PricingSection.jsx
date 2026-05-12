@@ -185,7 +185,6 @@ const getCategories = (language) => [
           : ['Unlimited 7-day CrossFit access in Bucharest', 'All classes included', 'Ideal for travelers, visitors, and beginners', 'Payment can also be made at the gym', 'Free parking spot'],
         popular: true,
         featured: true,
-        contactOnly: true,
       },
     ],
   },
