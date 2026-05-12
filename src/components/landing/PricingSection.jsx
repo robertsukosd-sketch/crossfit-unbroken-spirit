@@ -481,16 +481,32 @@ export default function PricingSection({ onOpenFreeClass }) {
     handleSelectCategory();
     window.addEventListener('selectPricingCategory', handleSelectCategory);
 
-    // Handle /#parteneri anchor — scroll to pricing and open Partners tab
-    if (window.location.hash === '#parteneri') {
-      setActiveId('partners');
-      setTimeout(() => {
-        const el = document.getElementById('pricing');
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    }
+    const handleHashLink = () => {
+      if (window.location.hash === '#parteneri') {
+        setActiveId('partners');
+        setTimeout(() => {
+          const el = document.getElementById('pricing');
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
 
-    return () => window.removeEventListener('selectPricingCategory', handleSelectCategory);
+      if (window.location.hash === '#drop-in-form') {
+        setActiveId('welcome');
+        setContactPackage('Drop In');
+        setTimeout(() => {
+          const el = document.getElementById('pricing');
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    };
+
+    handleHashLink();
+    window.addEventListener('hashchange', handleHashLink);
+
+    return () => {
+      window.removeEventListener('selectPricingCategory', handleSelectCategory);
+      window.removeEventListener('hashchange', handleHashLink);
+    };
   }, []);
 
   const activeCategory = categories.find((c) => c.id === activeId);
