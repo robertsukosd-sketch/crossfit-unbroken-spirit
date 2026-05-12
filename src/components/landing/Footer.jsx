@@ -325,7 +325,9 @@ export default function Footer() {
 
   useEffect(() => {
     const openFromHash = () => {
-      const policy = POLICY_HASHES[window.location.hash.replace('#', '')];
+      const cleanPath = window.location.pathname.replace(/^\//, '');
+      const policyKey = window.location.hash ? window.location.hash.replace('#', '') : cleanPath;
+      const policy = POLICY_HASHES[policyKey];
       if (!policy) return;
       openPolicyLink(policy.modal, policy.language);
     };

@@ -16,6 +16,19 @@ const LayoutWrapper = ({ children, currentPageName }) => Layout ?
   <Layout currentPageName={currentPageName}>{children}</Layout>
   : <>{children}</>;
 
+const CLEAN_LINK_PATHS = [
+  'drop-in',
+  'parteneri',
+  'book-free-session',
+  'clasa-gratis',
+  'cookies-ro',
+  'cookies-en',
+  'privacy-policy-ro',
+  'privacy-policy-en',
+  'terms-and-conditions-ro',
+  'terms-and-conditions-en',
+];
+
 const EncodedHashRedirect = () => {
   const location = useLocation();
   const encodedHash = location.pathname.match(/^\/%23(.+)$/)?.[1];
@@ -60,6 +73,17 @@ const AuthenticatedApp = () => {
           <MainPage />
         </LayoutWrapper>
       } />
+      {CLEAN_LINK_PATHS.map((path) => (
+        <Route
+          key={`clean-${path}`}
+          path={`/${path}`}
+          element={
+            <LayoutWrapper currentPageName={mainPageKey}>
+              <MainPage />
+            </LayoutWrapper>
+          }
+        />
+      ))}
       {Object.entries(Pages).map(([path, Page]) => (
         <Route
           key={path}

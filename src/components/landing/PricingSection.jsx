@@ -481,7 +481,9 @@ export default function PricingSection({ onOpenFreeClass }) {
     window.addEventListener('selectPricingCategory', handleSelectCategory);
 
     const handleHashLink = () => {
-      if (window.location.hash === '#parteneri') {
+      const cleanPath = window.location.pathname.replace(/^\//, '');
+
+      if (window.location.hash === '#parteneri' || cleanPath === 'parteneri') {
         setActiveId('partners');
         setTimeout(() => {
           const el = document.getElementById('pricing');
@@ -489,7 +491,7 @@ export default function PricingSection({ onOpenFreeClass }) {
         }, 100);
       }
 
-      if (window.location.hash === '#drop-in') {
+      if (window.location.hash === '#drop-in' || cleanPath === 'drop-in') {
         setActiveId('welcome');
         setContactPackage('Drop In');
         setTimeout(() => {

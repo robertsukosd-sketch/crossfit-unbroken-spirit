@@ -50,10 +50,14 @@ export default function Home() {
       if (stored) setGclid(stored);
     }
 
-    if (params.get('book') === '1' || window.location.hash === '#book-free-session' || window.location.hash === '#clasa-gratis') {
-      history.replaceState(null, '', window.location.pathname);
+    const cleanPath = window.location.pathname.replace(/^\//, '');
+
+    if (params.get('book') === '1' || window.location.hash === '#book-free-session' || window.location.hash === '#clasa-gratis' || cleanPath === 'book-free-session' || cleanPath === 'clasa-gratis') {
+      if (params.get('book') === '1' || window.location.hash === '#book-free-session' || window.location.hash === '#clasa-gratis') {
+        history.replaceState(null, '', window.location.pathname);
+      }
       setIsBookingModalOpen(true);
-    } else if (window.location.hash) {
+    } else if (window.location.hash || cleanPath) {
       // Deep-link to section via hash (English and Romanian aliases)
       // All deep-links force Romanian language
       const RO_HASH_MAP = {
@@ -63,7 +67,7 @@ export default function Home() {
         'programe': 'programs',
         'orar': 'schedule',
       };
-      const raw = window.location.hash.replace('#', '');
+      const raw = window.location.hash ? window.location.hash.replace('#', '') : cleanPath;
       const sectionId = RO_HASH_MAP[raw] || raw;
       localStorage.setItem('language', 'ro');
       setTimeout(() => {
