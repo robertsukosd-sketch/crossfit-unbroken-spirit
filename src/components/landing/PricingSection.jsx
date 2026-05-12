@@ -181,8 +181,8 @@ const getCategories = (language) => [
         period: language === 'ro' ? 'săptămână' : 'week',
         description: language === 'ro' ? 'Încearcă o săptămână completă' : 'Try a full week',
         features: language === 'ro'
-          ? ['Acces nelimitat 7 zile la CrossFit în București', 'Toate clasele incluse', 'Ideal pentru călători, vizitatori și începători', 'Plata se poate face și în sală', 'Loc de parcare inclus']
-          : ['Unlimited 7-day CrossFit access in Bucharest', 'All classes included', 'Ideal for travelers, visitors, and beginners', 'Payment can also be made at the gym', 'Free parking spot'],
+          ? ['Acces nelimitat 7 zile la CrossFit în București', 'Toate clasele incluse', 'Ideal pentru călători, vizitatori și începători', 'Loc de parcare inclus']
+          : ['Unlimited 7-day CrossFit access in Bucharest', 'All classes included', 'Ideal for travelers, visitors, and beginners', 'Free parking spot'],
         popular: true,
         featured: true,
       },
