@@ -490,7 +490,7 @@ export default function PricingSection({ onOpenFreeClass }) {
         }, 100);
       }
 
-      if (window.location.hash === '#drop-in-form') {
+      if (window.location.hash === '#drop-in') {
         setActiveId('welcome');
         setContactPackage('Drop In');
         setTimeout(() => {
