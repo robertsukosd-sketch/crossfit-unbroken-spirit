@@ -19,13 +19,15 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
   const contactText = useMemo(() => {
     const introText = isPtPackage
       ? `Bună! Sunt interesat(ă) de ${packageName} la CrossFit Unbroken Spirit.`
-      : isRo ? `Bună! Sunt interesat(ă) de ${packageName || 'Personal Training / Nutriție'}.` : `Hi! I'm interested in ${packageName || 'Personal Training / Nutrition'}.`;
+      : isDropInPackage && !isRo
+        ? `Hi! I'm interested to drop in for a class${selectedSlot ? ` on ${selectedSlot.day} at ${selectedSlot.time}` : ''}.`
+        : isRo ? `Bună! Sunt interesat(ă) de ${packageName || 'Personal Training / Nutriție'}.` : `Hi! I'm interested in ${packageName || 'Personal Training / Nutrition'}.`;
     const lines = [
       introText,
       form.name ? `${isRo ? 'Nume' : 'Name'}: ${form.name}` : '',
       form.email ? `Email: ${form.email}` : '',
       form.phone ? `${isRo ? 'Telefon' : 'Phone'}: ${form.phone}` : '',
-      selectedSlot ? `${isRo ? 'Interval ales' : 'Selected slot'}: ${selectedSlot.day}, ${selectedSlot.time}` : '',
+      selectedSlot && !isDropInPackage ? `${isRo ? 'Interval ales' : 'Selected slot'}: ${selectedSlot.day}, ${selectedSlot.time}` : '',
       form.message ? `${isRo ? 'Mesaj' : 'Message'}: ${form.message}` : '',
     ].filter(Boolean);
     return lines.join('\n');
