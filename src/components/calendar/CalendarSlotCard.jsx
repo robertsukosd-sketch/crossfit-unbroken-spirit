@@ -4,9 +4,11 @@ import { cn } from '@/lib/utils';
 
 export default function CalendarSlotCard({ slot, signups }) {
   const [open, setOpen] = useState(false);
-  const freeClasses = signups.filter((signup) => signup.signup_type === 'free_class');
+  const isOpenGym = slot.type === 'Open Gym';
+  const freeClasses = isOpenGym ? [] : signups.filter((signup) => signup.signup_type === 'free_class');
   const dropIns = signups.filter((signup) => signup.signup_type === 'drop_in');
-  const hasSignups = signups.length > 0;
+  const visibleSignups = isOpenGym ? dropIns : signups;
+  const hasSignups = visibleSignups.length > 0;
 
   return (
     <div className={cn(
@@ -27,16 +29,16 @@ export default function CalendarSlotCard({ slot, signups }) {
           <ChevronDown className={cn('h-5 w-5 text-zinc-400 transition-transform', open && 'rotate-180')} />
         </div>
         <div className="mt-3 space-y-2 text-xs font-bold">
-          <span className="block rounded-full bg-blue-500/15 px-3 py-1.5 text-blue-200">Free classes: {freeClasses.length}</span>
+          {!isOpenGym && <span className="block rounded-full bg-blue-500/15 px-3 py-1.5 text-blue-200">Free classes: {freeClasses.length}</span>}
           <span className="block rounded-full bg-emerald-500/15 px-3 py-1.5 text-emerald-200">Drop ins: {dropIns.length}</span>
         </div>
       </button>
 
       {open && (
         <div className="mt-4 space-y-3 border-t border-zinc-800 pt-4">
-          {signups.length === 0 ? (
+          {visibleSignups.length === 0 ? (
             <p className="text-sm text-zinc-500">No signups for this slot.</p>
-          ) : signups.map((signup) => (
+          ) : visibleSignups.map((signup) => (
             <div key={signup.id} className="rounded-xl bg-black/30 p-3">
               <div className="flex items-center justify-between gap-2">
                 <p className="font-bold text-white">{signup.name}</p>
