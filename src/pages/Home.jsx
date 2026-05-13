@@ -90,6 +90,9 @@ export default function Home() {
       <SeoMeta />
       <div className="min-h-screen bg-black pb-20 lg:pb-0">
         <Navigation onBookSession={handleBookSession} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
+        <a href="/?page=calendar" className="fixed right-4 top-24 z-[80] rounded-full bg-amber-400 px-4 py-2 text-sm font-black text-black shadow-lg hover:bg-amber-300">
+          Calendar
+        </a>
         <HeroSection onOpenFreeClass={handleBookSession} />
         <AboutSection />
         <StartHereSection />

@@ -8,6 +8,7 @@ import { useLanguage } from '../LanguageProvider';
 import { CONTACT_EMAIL } from '../config';
 import MiniSchedulePopup from './MiniSchedulePopup';
 import ParkingInfoPopup from './ParkingInfoPopup';
+import { createCalendarSignup } from '@/services/calendarSignups';
 
 export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
   const { t, language } = useLanguage();
@@ -115,6 +116,14 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
           subject: isRo ? `Rezervare Ședință Gratuită - ${form.name}` : `Free Session Booking - ${form.name}`,
           body: `${isRo ? 'Nume' : 'Name'}: ${form.name}\n${isRo ? 'Email' : 'Email'}: ${form.email}\n${isRo ? 'Telefon' : 'Phone'}: ${form.phone || (isRo ? 'Necompletat' : 'Not provided')}${gclid ? `\nGCLID: ${gclid}` : ''}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${fullMessage}`
         })
+      });
+      await createCalendarSignup({
+        form,
+        selectedSlot,
+        signupType: 'free_class',
+        packageName: 'Free Class',
+        message: fullMessage,
+        source: 'email',
       });
       setSending(false);
       setSubmitted(true);
@@ -357,7 +366,14 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
                         target={canSend ? '_blank' : undefined}
                         rel="noopener noreferrer"
                         aria-disabled={!canSend}
-                        onClick={canSend ? undefined : (e) => e.preventDefault()}
+                        onClick={canSend ? () => createCalendarSignup({
+                          form,
+                          selectedSlot,
+                          signupType: 'free_class',
+                          packageName: 'Free Class',
+                          message: messagePrefix + userMessage,
+                          source: 'whatsapp',
+                        }) : (e) => e.preventDefault()}
                         className={`flex items-center justify-center gap-2 w-full border-2 font-bold rounded-lg py-2.5 text-sm transition-all duration-150 mt-1 ${
                           canSend
                             ? 'bg-[#25D366] hover:bg-[#1ebe5d] border-[#25D366] text-white shadow-lg shadow-[#25D366]/30 cursor-pointer'

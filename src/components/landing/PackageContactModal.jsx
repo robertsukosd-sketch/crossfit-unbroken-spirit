@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '../LanguageProvider';
 import { CONTACT_EMAIL, PHONE_1 } from '../config';
 import MiniSchedulePopup from './MiniSchedulePopup';
+import { createCalendarSignup } from '@/services/calendarSignups';
 
 export default function PackageContactModal({ isOpen, onClose, packageName }) {
   const { language } = useLanguage();
@@ -36,6 +37,18 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
   const emailUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(isRo ? `Interes ${packageName || 'PT / Nutriție'}` : `Interested in ${packageName || 'PT / Nutrition'}`)}&body=${encodeURIComponent(contactText)}`;
   const whatsappNumber = isPtPackage ? '40726622011' : isDropInPackage ? '40744798429' : PHONE_1.replace(/\D/g, '');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(contactText)}`;
+
+  const saveDropInSignup = async (source) => {
+    if (!isDropInPackage || !selectedSlot || !form.name.trim()) return;
+    await createCalendarSignup({
+      form,
+      selectedSlot,
+      signupType: 'drop_in',
+      packageName,
+      message: form.message,
+      source,
+    });
+  };
 
   const resetAndClose = () => {
     setForm({ name: '', email: '', phone: '', message: '' });
@@ -129,14 +142,14 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
               />
 
               <div className="grid gap-3 pt-2 sm:grid-cols-2">
-                <Button asChild className="rounded-full bg-blue-600 font-bold text-white hover:bg-blue-500">
-                  <a href={emailUrl}>
+                <Button asChild disabled={isDropInPackage && (!selectedSlot || !form.name.trim())} className="rounded-full bg-blue-600 font-bold text-white hover:bg-blue-500 disabled:opacity-40">
+                  <a href={emailUrl} onClick={() => saveDropInSignup('email')}>
                     <Mail className="h-4 w-4" />
                     {isRo ? 'Trimite email' : 'Send email'}
                   </a>
                 </Button>
-                <Button asChild className="rounded-full bg-[#25D366] font-bold text-white hover:bg-[#25D366]/90">
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <Button asChild disabled={isDropInPackage && (!selectedSlot || !form.name.trim())} className="rounded-full bg-[#25D366] font-bold text-white hover:bg-[#25D366]/90 disabled:opacity-40">
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={() => saveDropInSignup('whatsapp')}>
                     <MessageCircle className="h-4 w-4" />
                     WhatsApp
                   </a>

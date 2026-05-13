@@ -5,6 +5,7 @@ import NavigationTracker from '@/lib/NavigationTracker'
 import { pagesConfig } from './pages.config'
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
+import CalendarPage from './pages/Calendar';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
@@ -40,6 +41,21 @@ const EncodedHashRedirect = () => {
   return null;
 };
 
+const MainOrCalendar = () => {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+
+  if (params.get('page') === 'calendar') {
+    return <CalendarPage />;
+  }
+
+  return (
+    <LayoutWrapper currentPageName={mainPageKey}>
+      <MainPage />
+    </LayoutWrapper>
+  );
+};
+
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
 
@@ -68,11 +84,7 @@ const AuthenticatedApp = () => {
     <>
       <EncodedHashRedirect />
       <Routes>
-      <Route path="/" element={
-        <LayoutWrapper currentPageName={mainPageKey}>
-          <MainPage />
-        </LayoutWrapper>
-      } />
+      <Route path="/" element={<MainOrCalendar />} />
       {CLEAN_LINK_PATHS.map((path) => (
         <Route
           key={`clean-${path}`}
@@ -84,6 +96,7 @@ const AuthenticatedApp = () => {
           }
         />
       ))}
+      <Route path="/calendar" element={<CalendarPage />} />
       {Object.entries(Pages).map(([path, Page]) => (
         <Route
           key={path}

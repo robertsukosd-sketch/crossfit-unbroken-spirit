@@ -1,0 +1,72 @@
+{
+  "name": "CalendarSignup",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Person name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Person email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Person phone number"
+    },
+    "signup_type": {
+      "type": "string",
+      "enum": [
+        "free_class",
+        "drop_in"
+      ],
+      "description": "Signup type"
+    },
+    "package_name": {
+      "type": "string",
+      "description": "Selected package name"
+    },
+    "day": {
+      "type": "string",
+      "description": "Selected weekday label"
+    },
+    "time": {
+      "type": "string",
+      "description": "Selected time slot"
+    },
+    "slot_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Selected slot date"
+    },
+    "message": {
+      "type": "string",
+      "description": "Optional message"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "email",
+        "whatsapp"
+      ],
+      "description": "Contact channel used"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "confirmed",
+        "cancelled"
+      ],
+      "default": "new",
+      "description": "Signup status"
+    }
+  },
+  "required": [
+    "name",
+    "signup_type",
+    "day",
+    "time",
+    "slot_date"
+  ]
+}
