@@ -91,8 +91,26 @@ function CalendarContent() {
           </div>
         )}
 
-        <div className={cn('grid gap-4', mobileView === 'weekly' ? 'grid-cols-1' : 'grid-cols-1', 'lg:grid-cols-6')}>
+        <div className="grid gap-4 lg:hidden">
           {visibleDays.map((day) => (
+            <div key={day.dateKey} className="rounded-3xl border border-zinc-800 bg-zinc-950 p-3">
+              <div className="mb-3 rounded-2xl bg-zinc-900 p-3 text-center">
+                <h2 className="font-black">{day.day}</h2>
+                <p className="text-xs text-zinc-500">{day.dateKey}</p>
+              </div>
+              <div className="space-y-3">
+                {day.slots.length === 0 ? (
+                  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 text-center text-sm text-zinc-500">Closed</div>
+                ) : day.slots.map((slot) => (
+                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden gap-4 lg:grid lg:grid-cols-3 2xl:grid-cols-6">
+          {days.map((day) => (
             <div key={day.dateKey} className="rounded-3xl border border-zinc-800 bg-zinc-950 p-3">
               <div className="mb-3 rounded-2xl bg-zinc-900 p-3 text-center">
                 <h2 className="font-black">{day.day}</h2>
