@@ -26,9 +26,9 @@ export default function CalendarSlotCard({ slot, signups }) {
           </div>
           <ChevronDown className={cn('h-5 w-5 text-zinc-400 transition-transform', open && 'rotate-180')} />
         </div>
-        <div className="mt-3 grid grid-cols-2 gap-2 text-xs font-bold">
-          <span className="rounded-full bg-blue-500/15 px-3 py-1.5 text-blue-200">Free classes: {freeClasses.length}</span>
-          <span className="rounded-full bg-emerald-500/15 px-3 py-1.5 text-emerald-200">Drop-ins: {dropIns.length}</span>
+        <div className="mt-3 space-y-2 text-xs font-bold">
+          <span className="block rounded-full bg-blue-500/15 px-3 py-1.5 text-blue-200">Free classes: {freeClasses.length}</span>
+          <span className="block rounded-full bg-emerald-500/15 px-3 py-1.5 text-emerald-200">Drop ins: {dropIns.length}</span>
         </div>
       </button>
 

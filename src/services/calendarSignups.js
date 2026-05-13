@@ -53,7 +53,7 @@ export async function createCalendarSignup({ form, selectedSlot, signupType, pac
 
 export function getWeeklySchedule(weekOffset = 0) {
   const monday = getWeekMonday(weekOffset);
-  const days = DAY_NAMES.ro.map((day, index) => {
+  const days = DAY_NAMES.ro.slice(0, 6).map((day, index) => {
     const date = new Date(monday);
     date.setDate(monday.getDate() + index);
     return {

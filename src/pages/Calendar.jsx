@@ -16,7 +16,7 @@ function CalendarContent() {
   const days = useMemo(() => getWeeklySchedule(weekOffset), [weekOffset]);
   const weekStart = formatDateKey(getWeekMonday(weekOffset));
   const weekEndDate = new Date(getWeekMonday(weekOffset));
-  weekEndDate.setDate(weekEndDate.getDate() + 6);
+  weekEndDate.setDate(weekEndDate.getDate() + 5);
   const weekEnd = formatDateKey(weekEndDate);
 
   const { data: signups = [] } = useQuery({
@@ -78,7 +78,7 @@ function CalendarContent() {
         </div>
 
         {mobileView === 'daily' && (
-          <div className="mb-5 grid grid-cols-7 gap-1 lg:hidden">
+          <div className="mb-5 grid grid-cols-6 gap-1 lg:hidden">
             {days.map((day, index) => (
               <button
                 key={day.dateKey}
@@ -91,7 +91,7 @@ function CalendarContent() {
           </div>
         )}
 
-        <div className={cn('grid gap-4', mobileView === 'weekly' ? 'grid-cols-1' : 'grid-cols-1', 'lg:grid-cols-7')}>
+        <div className={cn('grid gap-4', mobileView === 'weekly' ? 'grid-cols-1' : 'grid-cols-1', 'lg:grid-cols-6')}>
           {visibleDays.map((day) => (
             <div key={day.dateKey} className="rounded-3xl border border-zinc-800 bg-zinc-950 p-3">
               <div className="mb-3 rounded-2xl bg-zinc-900 p-3 text-center">
