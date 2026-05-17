@@ -9,6 +9,8 @@ import { getWeeklySchedule, formatDateKey, getWeekMonday } from '@/services/cale
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
+const GRAND_TOTAL_START_DATE = '2026-05-18';
+
 const getInitialReservationWeekOffset = () => {
   const now = new Date();
   const day = now.getDay();
@@ -28,13 +30,21 @@ function CalendarContent() {
 
   const { data: signups = [] } = useQuery({
     queryKey: ['calendar-signups'],
-    queryFn: () => base44.entities.CalendarSignup.list('-created_date', 500),
+    queryFn: () => base44.entities.CalendarSignup.list('-created_date', 2000),
     initialData: [],
   });
 
-  const weeklySignups = signups.filter((signup) => signup.slot_date >= weekStart && signup.slot_date <= weekEnd && signup.status !== 'cancelled');
+  const activeSignups = signups.filter((signup) => signup.status !== 'cancelled');
+  const weeklySignups = activeSignups.filter((signup) => signup.slot_date >= weekStart && signup.slot_date <= weekEnd);
+  const currentMonth = new Date().toISOString().slice(0, 7);
+  const monthlySignups = activeSignups.filter((signup) => signup.slot_date?.startsWith(currentMonth));
+  const grandTotalSignups = activeSignups.filter((signup) => signup.slot_date >= GRAND_TOTAL_START_DATE);
   const freeTotal = weeklySignups.filter((signup) => signup.signup_type === 'free_class').length;
   const dropInTotal = weeklySignups.filter((signup) => signup.signup_type === 'drop_in').length;
+  const monthlyFreeTotal = monthlySignups.filter((signup) => signup.signup_type === 'free_class').length;
+  const monthlyDropInTotal = monthlySignups.filter((signup) => signup.signup_type === 'drop_in').length;
+  const grandFreeTotal = grandTotalSignups.filter((signup) => signup.signup_type === 'free_class').length;
+  const grandDropInTotal = grandTotalSignups.filter((signup) => signup.signup_type === 'drop_in').length;
 
   const getSignupsForSlot = (dateKey, time) => weeklySignups.filter((signup) => signup.slot_date === dateKey && signup.time === time);
   const isSlotPast = (dateKey, time) => {
@@ -68,7 +78,7 @@ function CalendarContent() {
           </div>
         </div>
 
-        <div className="mb-6 grid gap-4 sm:grid-cols-2">
+        <div className="mb-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-5">
             <p className="text-sm font-semibold text-blue-200">Free classes this week</p>
             <p className="mt-2 text-4xl font-black">{freeTotal}</p>
@@ -76,6 +86,22 @@ function CalendarContent() {
           <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5">
             <p className="text-sm font-semibold text-emerald-200">Drop-ins this week</p>
             <p className="mt-2 text-4xl font-black">{dropInTotal}</p>
+          </div>
+          <div className="rounded-2xl border border-blue-400/20 bg-blue-400/5 p-5">
+            <p className="text-sm font-semibold text-blue-100">Free classes this month</p>
+            <p className="mt-2 text-4xl font-black">{monthlyFreeTotal}</p>
+          </div>
+          <div className="rounded-2xl border border-emerald-400/20 bg-emerald-400/5 p-5">
+            <p className="text-sm font-semibold text-emerald-100">Drop-ins this month</p>
+            <p className="mt-2 text-4xl font-black">{monthlyDropInTotal}</p>
+          </div>
+          <div className="rounded-2xl border border-sky-300/20 bg-sky-300/5 p-5">
+            <p className="text-sm font-semibold text-sky-100">Total free classes since May 18</p>
+            <p className="mt-2 text-4xl font-black">{grandFreeTotal}</p>
+          </div>
+          <div className="rounded-2xl border border-teal-300/20 bg-teal-300/5 p-5">
+            <p className="text-sm font-semibold text-teal-100">Total drop-ins since May 18</p>
+            <p className="mt-2 text-4xl font-black">{grandDropInTotal}</p>
           </div>
         </div>
 
