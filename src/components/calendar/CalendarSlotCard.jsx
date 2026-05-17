@@ -50,14 +50,9 @@ export default function CalendarSlotCard({ slot, signups, isTestHighlighted = fa
             <p className="text-sm text-zinc-500">No signups for this slot.</p>
           ) : visibleSignups.map((signup) => (
             <div key={signup.id} className="rounded-xl bg-black/30 p-3">
-              <div className="flex items-center justify-between gap-2">
-                <p className="font-bold text-white">{signup.name}</p>
-                <span className={cn('rounded-full px-2 py-1 text-[11px] font-bold', signup.signup_type === 'free_class' ? 'bg-blue-500/20 text-blue-200' : 'bg-emerald-500/20 text-emerald-200')}>
-                  {signup.signup_type === 'free_class' ? 'Free class' : 'Drop-in'}
-                </span>
-              </div>
+              <p className="font-bold text-white">{signup.name}</p>
               <div className="mt-2 space-y-1 text-xs text-zinc-400">
-                {signup.email && <p className="flex items-center gap-2"><Mail className="h-3 w-3" />{signup.email}</p>}
+                {signup.email && <p className="flex min-w-0 items-start gap-2 break-all"><Mail className="mt-0.5 h-3 w-3 shrink-0" />{signup.email}</p>}
                 {signup.phone && <p className="flex items-center gap-2"><Phone className="h-3 w-3" />{signup.phone}</p>}
                 {signup.message && <p className="pt-1 text-zinc-300">{signup.message}</p>}
               </div>
