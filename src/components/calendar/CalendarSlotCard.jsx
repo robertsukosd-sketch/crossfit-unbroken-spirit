@@ -2,18 +2,19 @@ import React, { useState } from 'react';
 import { ChevronDown, Clock, Mail, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export default function CalendarSlotCard({ slot, signups }) {
+export default function CalendarSlotCard({ slot, signups, isTestHighlighted = false }) {
   const [open, setOpen] = useState(false);
   const isOpenGym = slot.type === 'Open Gym';
   const freeClasses = isOpenGym ? [] : signups.filter((signup) => signup.signup_type === 'free_class');
   const dropIns = signups.filter((signup) => signup.signup_type === 'drop_in');
   const visibleSignups = isOpenGym ? dropIns : signups;
   const hasSignups = visibleSignups.length > 0;
+  const isHighlighted = hasSignups || isTestHighlighted;
 
   return (
     <div className={cn(
-      'rounded-2xl border p-4 transition-colors',
-      hasSignups ? 'border-amber-400/50 bg-amber-400/10' : 'border-zinc-800 bg-zinc-900/80'
+      'rounded-2xl border p-4 transition-all',
+      isHighlighted ? 'border-white bg-white/10 shadow-[0_0_28px_rgba(255,255,255,0.55)] ring-1 ring-white/60' : 'border-zinc-800 bg-zinc-900/80'
     )}>
       <button onClick={() => setOpen((value) => !value)} className="w-full text-left">
         <div className="flex items-start justify-between gap-3">

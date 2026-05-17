@@ -21,6 +21,10 @@ function CalendarContent() {
   const [mobileView, setMobileView] = useState('daily');
   const [selectedDayIndex, setSelectedDayIndex] = useState(0);
   const days = useMemo(() => getWeeklySchedule(weekOffset), [weekOffset]);
+  const testHighlightedSlotKey = useMemo(() => {
+    const slots = days.flatMap((day) => day.slots.map((slot) => `${day.dateKey}-${slot.time}`));
+    return slots[Math.floor(Math.random() * slots.length)];
+  }, [days]);
   const weekStart = formatDateKey(getWeekMonday(weekOffset));
   const weekEndDate = new Date(getWeekMonday(weekOffset));
   weekEndDate.setDate(weekEndDate.getDate() + 5);
@@ -109,7 +113,7 @@ function CalendarContent() {
                 {day.slots.length === 0 ? (
                   <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 text-center text-sm text-zinc-500">Closed</div>
                 ) : day.slots.map((slot) => (
-                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} />
+                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} isTestHighlighted={testHighlightedSlotKey === `${day.dateKey}-${slot.time}`} />
                 ))}
               </div>
             </div>
@@ -127,7 +131,7 @@ function CalendarContent() {
                 {day.slots.length === 0 ? (
                   <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 text-center text-sm text-zinc-500">Closed</div>
                 ) : day.slots.map((slot) => (
-                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} />
+                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} isTestHighlighted={testHighlightedSlotKey === `${day.dateKey}-${slot.time}`} />
                 ))}
               </div>
             </div>
