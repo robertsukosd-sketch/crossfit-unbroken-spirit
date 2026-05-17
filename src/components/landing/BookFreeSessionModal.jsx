@@ -44,6 +44,9 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
   const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${whatsappText}`;
 
   const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email);
+  const privacyConsentText = isRo
+    ? 'Prin trimitere, ești de acord să stocăm datele rezervării pentru programare și contact, timp de maximum 1 an.'
+    : 'By submitting, you agree that we store your reservation details for scheduling and contact for up to 1 year.';
   const canSend = form.name.trim() && isValidEmail && selectedSlot;
 
   // Compute the actual date for the selected slot
@@ -124,6 +127,7 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
         packageName: 'Free Class',
         message: fullMessage,
         source: 'email',
+        consentText: privacyConsentText,
       });
       setSending(false);
       setSubmitted(true);
@@ -373,6 +377,7 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
                           packageName: 'Free Class',
                           message: messagePrefix + userMessage,
                           source: 'whatsapp',
+                          consentText: privacyConsentText,
                         }) : (e) => e.preventDefault()}
                         className={`flex items-center justify-center gap-2 w-full border-2 font-bold rounded-lg py-2.5 text-sm transition-all duration-150 mt-1 ${
                           canSend
@@ -384,6 +389,8 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
                         {isRo ? 'Rezervă mai rapid pe WhatsApp' : 'Book faster via WhatsApp'}
                       </a>
                     )}
+
+                    <p className="text-[11px] leading-relaxed text-zinc-500">{privacyConsentText}</p>
 
                     <Button
                       type="submit"

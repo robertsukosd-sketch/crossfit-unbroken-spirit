@@ -37,6 +37,9 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
   const emailUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(isRo ? `Interes ${packageName || 'PT / Nutriție'}` : `Interested in ${packageName || 'PT / Nutrition'}`)}&body=${encodeURIComponent(contactText)}`;
   const whatsappNumber = isPtPackage ? '40726622011' : isDropInPackage ? '40744798429' : PHONE_1.replace(/\D/g, '');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(contactText)}`;
+  const privacyConsentText = isRo
+    ? 'Prin trimitere, ești de acord să stocăm datele rezervării pentru programare și contact, timp de maximum 1 an.'
+    : 'By submitting, you agree that we store your reservation details for scheduling and contact for up to 1 year.';
 
   const saveDropInSignup = async (source) => {
     if (!isDropInPackage || !selectedSlot || !form.name.trim()) return;
@@ -47,6 +50,7 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
       packageName,
       message: form.message,
       source,
+      consentText: privacyConsentText,
     });
   };
 
@@ -140,6 +144,8 @@ export default function PackageContactModal({ isOpen, onClose, packageName }) {
                 rows={4}
                 className="resize-none border-zinc-600 bg-zinc-800 text-white placeholder:text-gray-500"
               />
+
+              {isDropInPackage && <p className="text-[11px] leading-relaxed text-zinc-500">{privacyConsentText}</p>}
 
               <div className="grid gap-3 pt-2 sm:grid-cols-2">
                 <Button asChild disabled={isDropInPackage && (!selectedSlot || !form.name.trim())} className="rounded-full bg-blue-600 font-bold text-white hover:bg-blue-500 disabled:opacity-40">

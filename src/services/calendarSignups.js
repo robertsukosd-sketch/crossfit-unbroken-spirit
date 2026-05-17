@@ -33,8 +33,12 @@ export function getSlotDateKey(slot) {
   return formatDateKey(slotDate);
 }
 
-export async function createCalendarSignup({ form, selectedSlot, signupType, packageName, message, source }) {
+export async function createCalendarSignup({ form, selectedSlot, signupType, packageName, message, source, consentText }) {
   if (!selectedSlot || !form?.name?.trim()) return;
+
+  const slotDate = getSlotDateKey(selectedSlot);
+  const retentionDate = new Date(`${slotDate}T00:00:00`);
+  retentionDate.setFullYear(retentionDate.getFullYear() + 1);
 
   await base44.entities.CalendarSignup.create({
     name: form.name.trim(),
@@ -44,10 +48,13 @@ export async function createCalendarSignup({ form, selectedSlot, signupType, pac
     package_name: packageName || '',
     day: selectedSlot.day,
     time: selectedSlot.time,
-    slot_date: getSlotDateKey(selectedSlot),
+    slot_date: slotDate,
     message: message || '',
     source,
     status: 'new',
+    consent_text: consentText || 'User consented to storing reservation details for scheduling and contact purposes for up to 1 year.',
+    consent_date: new Date().toISOString(),
+    retention_until: formatDateKey(retentionDate),
   });
 }
 

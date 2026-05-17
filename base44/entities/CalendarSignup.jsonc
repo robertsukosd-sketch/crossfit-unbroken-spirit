@@ -60,6 +60,20 @@
       ],
       "default": "new",
       "description": "Signup status"
+    },
+    "consent_text": {
+      "type": "string",
+      "description": "Privacy consent text shown at booking time"
+    },
+    "consent_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When privacy consent was recorded"
+    },
+    "retention_until": {
+      "type": "string",
+      "format": "date",
+      "description": "Date until which this reservation record is retained"
     }
   },
   "required": [
