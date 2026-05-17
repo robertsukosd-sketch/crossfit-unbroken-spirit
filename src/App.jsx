@@ -6,6 +6,8 @@ import { pagesConfig } from './pages.config'
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import CalendarPage from './pages/Calendar';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
@@ -88,6 +90,8 @@ const AuthenticatedApp = () => {
       <EncodedHashRedirect />
       <Routes>
       <Route path="/" element={<MainOrCalendar />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
       {CLEAN_LINK_PATHS.map((path) => (
         <Route
           key={`clean-${path}`}
