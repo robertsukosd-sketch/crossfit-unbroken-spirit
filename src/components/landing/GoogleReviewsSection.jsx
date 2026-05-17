@@ -10,6 +10,12 @@ const PLACE_ID = 'ChIJmV_f1yr_sUARNEf83Ig3aYM';
 const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=CrossFit+Unbroken+Spirit&query_place_id=${PLACE_ID}`;
 const GOOGLE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${PLACE_ID}`;
 
+const FALLBACK_REVIEWS = [
+  { author_name: "Marius Paunescu", profile_photo_url: "https://lh3.googleusercontent.com/a-/ALV-UjV0eEw8WZN-8rYdJvM1M-CLV5KI3CL5TLdp1xg8o0ZPYk_ru4M=s128-c0x00000000-cc-rp-mo", rating: 5, relative_time_description: "Google review", text: "Tocmai am terminat cursul comunitar de CrossFit de aici și trebuie să spun că am fost plăcut impresionat de această nouă boxă. Locul este dotat cu echipamente de cea mai bună calitate, dar cel mai important, nivelul de profesionalism al antrenorului a fost remarcabil." },
+  { author_name: "Auras Mihaiu", profile_photo_url: "https://lh3.googleusercontent.com/a-/ALV-UjUzgglOvbOeTFSWjzqxPVTY3r6I8nXxAJ3lwoaQq08-z-PMzKyG=s128-c0x00000000-cc-rp-mo-ba5", rating: 5, relative_time_description: "Google review", text: "Foarte faină atmosfera, recomand!" },
+  { author_name: "Alina C.", profile_photo_url: "https://lh3.googleusercontent.com/a/ACg8ocIKtKM_kJucDSheY0o1tAP5kG4a-IGGVizyHyPieNpuF0q6bg=s128-c0x00000000-cc-rp-mo", rating: 5, relative_time_description: "Google review", text: "Recomand cu drag! Antrenorii stiu cum sa te ajute sa iti atingi obiectivele si sa iti depasesti limitele, indiferent de nivelul la care esti. In plus, echipamentele sunt in stare impecabila, sala este curata si muzica buna." },
+];
+
 function StarRating({ rating }) {
   return (
     <div className="flex gap-0.5">
@@ -71,8 +77,12 @@ export default function GoogleReviewsSection() {
   useEffect(() => {
     setLoading(true);
     base44.functions.invoke('getGoogleReviews', { refreshedAt: Date.now() })
-      .then((res) => { if (res.data && res.data.reviews) setData(res.data); })
-      .catch(() => {})
+      .then((res) => {
+        if (res.data && res.data.reviews) setData(res.data);
+      })
+      .catch(() => {
+        setData({ reviews: FALLBACK_REVIEWS, isFallback: true });
+      })
       .finally(() => setLoading(false));
   }, []);
 
@@ -91,6 +101,21 @@ export default function GoogleReviewsSection() {
           {loading ? (
             <div className="flex items-center justify-center py-10">
               <div className="w-6 h-6 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin" />
+            </div>
+          ) : data?.isFallback ? (
+            <div className="relative mx-auto max-w-3xl rounded-3xl border border-yellow-400/30 bg-zinc-900 px-8 py-10 shadow-2xl shadow-yellow-500/10">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-yellow-400/5 via-transparent to-yellow-400/5 pointer-events-none" />
+              <div className="relative flex flex-col items-center gap-4 text-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-10 opacity-90" />
+                <div>
+                  <h2 className="text-3xl font-black text-white">{language === 'ro' ? 'Recenzii Google' : 'Google Reviews'}</h2>
+                  <p className="mt-2 text-sm text-zinc-400">{language === 'ro' ? 'Afișăm câteva recenzii Google; cele mai noi sunt pe Google Maps.' : 'Showing a few Google reviews; the newest ones are on Google Maps.'}</p>
+                </div>
+                <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-yellow-400/40 bg-yellow-400/10 px-5 py-2.5 text-sm font-bold text-yellow-400 hover:bg-yellow-400/20">
+                  {language === 'ro' ? 'Vezi toate recenziile pe Google' : 'View all reviews on Google'}
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
             </div>
           ) : data ? (
             <>
