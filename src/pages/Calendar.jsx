@@ -21,10 +21,6 @@ function CalendarContent() {
   const [mobileView, setMobileView] = useState('daily');
   const [selectedDayIndex, setSelectedDayIndex] = useState(0);
   const days = useMemo(() => getWeeklySchedule(weekOffset), [weekOffset]);
-  const testHighlightedSlotKey = useMemo(() => {
-    const slots = days.flatMap((day) => day.slots.map((slot) => `${day.dateKey}-${slot.time}`));
-    return slots[Math.floor(Math.random() * slots.length)];
-  }, [days]);
   const weekStart = formatDateKey(getWeekMonday(weekOffset));
   const weekEndDate = new Date(getWeekMonday(weekOffset));
   weekEndDate.setDate(weekEndDate.getDate() + 5);
@@ -57,10 +53,10 @@ function CalendarContent() {
           <div>
             <Link to="/" className="text-sm font-semibold text-sky-400 hover:text-sky-300">← Back to site</Link>
             <h1 className="mt-3 text-3xl font-black sm:text-5xl">Weekly Calendar</h1>
-            <p className="mt-2 text-zinc-400">CrossFit classes and Open Gym signup overview.</p>
+            <p className="mt-2 text-zinc-400">CrossFit classes and Open Gym signup overview. Past reservations are available for the last year.</p>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="outline" onClick={() => setWeekOffset((value) => value - 1)} className="border-zinc-700 bg-zinc-900 text-white hover:bg-zinc-800">
+            <Button variant="outline" disabled={weekOffset <= -52} onClick={() => setWeekOffset((value) => value - 1)} className="border-zinc-700 bg-zinc-900 text-white hover:bg-zinc-800 disabled:opacity-40">
               <ChevronLeft className="h-4 w-4" />
             </Button>
             <div className="rounded-xl border border-zinc-800 bg-zinc-900 px-4 py-2 text-center text-sm font-bold text-zinc-300">
@@ -120,7 +116,7 @@ function CalendarContent() {
                 {day.slots.length === 0 ? (
                   <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 text-center text-sm text-zinc-500">Closed</div>
                 ) : day.slots.map((slot) => (
-                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} isTestHighlighted={testHighlightedSlotKey === `${day.dateKey}-${slot.time}`} isPast={isSlotPast(day.dateKey, slot.time)} />
+                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} isPast={isSlotPast(day.dateKey, slot.time)} />
                 ))}
               </div>
             </div>
@@ -138,7 +134,7 @@ function CalendarContent() {
                 {day.slots.length === 0 ? (
                   <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 text-center text-sm text-zinc-500">Closed</div>
                 ) : day.slots.map((slot) => (
-                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} isTestHighlighted={testHighlightedSlotKey === `${day.dateKey}-${slot.time}`} isPast={isSlotPast(day.dateKey, slot.time)} />
+                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} isPast={isSlotPast(day.dateKey, slot.time)} />
                 ))}
               </div>
             </div>

@@ -2,23 +2,14 @@ import React, { useState } from 'react';
 import { ChevronDown, Clock, Mail, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export default function CalendarSlotCard({ slot, signups, isTestHighlighted = false, isPast = false }) {
+export default function CalendarSlotCard({ slot, signups, isPast = false }) {
   const [open, setOpen] = useState(false);
   const isOpenGym = slot.type === 'Open Gym';
-  const testSignup = {
-    id: 'test-random-person',
-    name: 'Alex Popescu',
-    email: 'alex.popescu@example.com',
-    phone: '0712 345 678',
-    message: 'Temporary test reservation preview.',
-    signup_type: isOpenGym ? 'drop_in' : 'free_class',
-  };
-  const realVisibleSignups = isOpenGym ? signups.filter((signup) => signup.signup_type === 'drop_in') : signups;
-  const visibleSignups = isTestHighlighted && realVisibleSignups.length === 0 ? [testSignup] : realVisibleSignups;
+  const visibleSignups = isOpenGym ? signups.filter((signup) => signup.signup_type === 'drop_in') : signups;
   const freeClasses = isOpenGym ? [] : visibleSignups.filter((signup) => signup.signup_type === 'free_class');
   const dropIns = visibleSignups.filter((signup) => signup.signup_type === 'drop_in');
-  const hasSignups = realVisibleSignups.length > 0;
-  const isHighlighted = hasSignups || isTestHighlighted;
+  const hasSignups = visibleSignups.length > 0;
+  const isHighlighted = hasSignups;
 
   return (
     <div className={cn(
