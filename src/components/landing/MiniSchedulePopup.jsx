@@ -57,10 +57,10 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
     const now = new Date();
     const jsDay = now.getDay(); // 0=Sun..6=Sat
     const timeInMin = now.getHours() * 60 + now.getMinutes();
-    const isFridayAfterCutoff = jsDay === 5 && timeInMin >= (crossFitOnly ? 19 * 60 + 30 : 20 * 60 + 31);
-    const isWeekendOrAfterFridayCutoff = jsDay === 0 || jsDay === 6 || isFridayAfterCutoff;
+    const isSaturdayAfterNoon = jsDay === 6 && timeInMin >= 12 * 60;
+    const shouldShowNextWeek = jsDay === 0 || isSaturdayAfterNoon;
 
-    if (isWeekendOrAfterFridayCutoff) {
+    if (shouldShowNextWeek) {
       // Start on Monday of next week
       return { dayIndex: 0, weekOffset: 1, minWeek: 1, maxWeek: 2 };
     }

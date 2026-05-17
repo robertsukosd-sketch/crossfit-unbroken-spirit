@@ -9,8 +9,15 @@ import { getWeeklySchedule, formatDateKey, getWeekMonday } from '@/services/cale
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
+const getInitialReservationWeekOffset = () => {
+  const now = new Date();
+  const day = now.getDay();
+  const minutes = now.getHours() * 60 + now.getMinutes();
+  return day === 0 || (day === 6 && minutes >= 12 * 60) ? 1 : 0;
+};
+
 function CalendarContent() {
-  const [weekOffset, setWeekOffset] = useState(0);
+  const [weekOffset, setWeekOffset] = useState(getInitialReservationWeekOffset);
   const [mobileView, setMobileView] = useState('daily');
   const [selectedDayIndex, setSelectedDayIndex] = useState(0);
   const days = useMemo(() => getWeeklySchedule(weekOffset), [weekOffset]);
