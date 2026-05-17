@@ -17,6 +17,8 @@ const LayoutWrapper = ({ children, currentPageName }) => Layout ?
   <Layout currentPageName={currentPageName}>{children}</Layout>
   : <>{children}</>;
 
+const PRIVATE_CALENDAR_PATH = '/calendar-usf-8m4q-z7n2-k9vx';
+
 const CLEAN_LINK_PATHS = [
   'drop-in',
   'parteneri',
@@ -41,20 +43,11 @@ const EncodedHashRedirect = () => {
   return null;
 };
 
-const MainOrCalendar = () => {
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-
-  if (params.get('page') === 'calendar') {
-    return <CalendarPage />;
-  }
-
-  return (
-    <LayoutWrapper currentPageName={mainPageKey}>
-      <MainPage />
-    </LayoutWrapper>
-  );
-};
+const MainOrCalendar = () => (
+  <LayoutWrapper currentPageName={mainPageKey}>
+    <MainPage />
+  </LayoutWrapper>
+);
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -96,7 +89,7 @@ const AuthenticatedApp = () => {
           }
         />
       ))}
-      <Route path="/calendar" element={<CalendarPage />} />
+      <Route path={PRIVATE_CALENDAR_PATH} element={<CalendarPage />} />
       {Object.entries(Pages).map(([path, Page]) => (
         <Route
           key={path}
