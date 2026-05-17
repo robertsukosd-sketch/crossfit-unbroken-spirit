@@ -18,6 +18,7 @@ const LayoutWrapper = ({ children, currentPageName }) => Layout ?
   : <>{children}</>;
 
 const PRIVATE_CALENDAR_PATH = '/calendar-usf-8m4q-z7n2-k9vx';
+const PRIVATE_CALENDAR_TOKEN = 'calendar-usf-8m4q-z7n2-k9vx';
 
 const CLEAN_LINK_PATHS = [
   'drop-in',
@@ -43,11 +44,20 @@ const EncodedHashRedirect = () => {
   return null;
 };
 
-const MainOrCalendar = () => (
-  <LayoutWrapper currentPageName={mainPageKey}>
-    <MainPage />
-  </LayoutWrapper>
-);
+const MainOrCalendar = () => {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+
+  if (params.get('calendar') === PRIVATE_CALENDAR_TOKEN) {
+    return <CalendarPage />;
+  }
+
+  return (
+    <LayoutWrapper currentPageName={mainPageKey}>
+      <MainPage />
+    </LayoutWrapper>
+  );
+};
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();

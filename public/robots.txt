@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /calendar-usf-8m4q-z7n2-k9vx
+Disallow: /*?calendar=calendar-usf-8m4q-z7n2-k9vx
 
 Sitemap: https://www.unbrokenspirit.ro/sitemap.xml
