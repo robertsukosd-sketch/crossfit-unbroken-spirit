@@ -41,6 +41,13 @@ function CalendarContent() {
   const dropInTotal = weeklySignups.filter((signup) => signup.signup_type === 'drop_in').length;
 
   const getSignupsForSlot = (dateKey, time) => weeklySignups.filter((signup) => signup.slot_date === dateKey && signup.time === time);
+  const isSlotPast = (dateKey, time) => {
+    const endTime = time.split('-').pop().trim();
+    const [hours, minutes] = endTime.split(':').map(Number);
+    const slotEnd = new Date(`${dateKey}T00:00:00`);
+    slotEnd.setHours(hours, minutes || 0, 0, 0);
+    return slotEnd < new Date();
+  };
   const visibleDays = mobileView === 'daily' ? [days[selectedDayIndex]] : days;
 
   return (
@@ -113,7 +120,7 @@ function CalendarContent() {
                 {day.slots.length === 0 ? (
                   <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 text-center text-sm text-zinc-500">Closed</div>
                 ) : day.slots.map((slot) => (
-                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} isTestHighlighted={testHighlightedSlotKey === `${day.dateKey}-${slot.time}`} />
+                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} isTestHighlighted={testHighlightedSlotKey === `${day.dateKey}-${slot.time}`} isPast={isSlotPast(day.dateKey, slot.time)} />
                 ))}
               </div>
             </div>
@@ -131,7 +138,7 @@ function CalendarContent() {
                 {day.slots.length === 0 ? (
                   <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 text-center text-sm text-zinc-500">Closed</div>
                 ) : day.slots.map((slot) => (
-                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} isTestHighlighted={testHighlightedSlotKey === `${day.dateKey}-${slot.time}`} />
+                  <CalendarSlotCard key={`${day.dateKey}-${slot.time}`} slot={slot} signups={getSignupsForSlot(day.dateKey, slot.time)} isTestHighlighted={testHighlightedSlotKey === `${day.dateKey}-${slot.time}`} isPast={isSlotPast(day.dateKey, slot.time)} />
                 ))}
               </div>
             </div>
