@@ -197,7 +197,22 @@ export default function GoogleReviewsSection() {
                 </div>
               </div>
             </>
-          ) : null}
+          ) : (
+            <div className="relative mx-auto max-w-3xl rounded-3xl border border-yellow-400/30 bg-zinc-900 px-8 py-10 shadow-2xl shadow-yellow-500/10">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-yellow-400/5 via-transparent to-yellow-400/5 pointer-events-none" />
+              <div className="relative flex flex-col items-center gap-4 text-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-10 opacity-90" />
+                <div>
+                  <h2 className="text-3xl font-black text-white">{language === 'ro' ? 'Recenzii Google' : 'Google Reviews'}</h2>
+                  <p className="mt-2 text-sm text-zinc-400">{language === 'ro' ? 'Cele mai noi recenzii sunt disponibile direct pe Google Maps.' : 'The latest reviews are available directly on Google Maps.'}</p>
+                </div>
+                <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-yellow-400/40 bg-yellow-400/10 px-5 py-2.5 text-sm font-bold text-yellow-400 hover:bg-yellow-400/20">
+                  {language === 'ro' ? 'Vezi recenziile pe Google' : 'View reviews on Google'}
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          )}
         </motion.div>
 
         {!loading && data?.reviews?.length > 0 && (
