@@ -63,23 +63,10 @@ function ReviewCard({ review, index }) {
   );
 }
 
-const FALLBACK_DATA = {
-  rating: 5,
-  user_ratings_total: 24,
-  reviews: [
-    { author_name: "Marius Paunescu", profile_photo_url: "https://lh3.googleusercontent.com/a-/ALV-UjV0eEw8WZN-8rYdJvM1M-CLV5KI3CL5TLdp1xg8o0ZPYk_ru4M=s128-c0x00000000-cc-rp-mo", rating: 5, relative_time_description: "în ultima săptămână", text: "Tocmai am terminat cursul comunitar de CrossFit de aici și trebuie să spun că am fost plăcut impresionat de această nouă boxă. Locul este dotat cu echipamente de cea mai bună calitate, dar cel mai important, nivelul de profesionalism al antrenorului a fost remarcabil. Spiritul, prietenia și energia comunității au făcut experiența și mai bună. Toată lumea a fost primitoare, suportivă și motivantă pe tot parcursul cursului.\n\nRecomand cu siguranță CrossFit Unbroken Spirit oricui se gândește să înceapă CrossFit sau să caute o boxă grozavă în care să se antreneze.\n\nMulțumesc pentru experiența uimitoare! Cu siguranță voi reveni!" },
-    { author_name: "Auras Mihaiu", profile_photo_url: "https://lh3.googleusercontent.com/a-/ALV-UjUzgglOvbOeTFSWjzqxPVTY3r6I8nXxAJ3lwoaQq08-z-PMzKyG=s128-c0x00000000-cc-rp-mo-ba5", rating: 5, relative_time_description: "acum o săptămână", text: "Foarte faină atmosfera, recomand!" },
-    { author_name: "Alina C.", profile_photo_url: "https://lh3.googleusercontent.com/a/ACg8ocIKtKM_kJucDSheY0o1tAP5kG4a-IGGVizyHyPieNpuF0q6bg=s128-c0x00000000-cc-rp-mo", rating: 5, relative_time_description: "acum o săptămână", text: "Recomand cu drag! 😇 Antrenorii stiu cum sa te ajute sa iti atingi obiectivele si sa iti depasesti limitele, indiferent de nivelul la care esti. In plus, echipamentele sunt in stare impecabila, sala este curata si muzica buna. 💙" },
-    { author_name: "Cosmin M.", profile_photo_url: "https://lh3.googleusercontent.com/a-/ALV-UjWWdk3oo95BIk2ybBEqrvIWSa4Pr0KiR9KVUCR9-AIoalkNplDL=s128-c0x00000000-cc-rp-mo", rating: 5, relative_time_description: "acum o săptămână", text: "Cea mai nouă sală de CrossFit din București! Echipamente de calitate, antrenori dedicați și o comunitate super primitoare. Recomand cu căldură!" },
-    { author_name: "Mihai Banica", profile_photo_url: "https://lh3.googleusercontent.com/a-/ALV-UjWvutHx1aA4bOohwJ2PUSyVaeCtCypYaafHWYJtRSouW_4w4DKBsg=s128-c0x00000000-cc-rp-mo", rating: 5, relative_time_description: "acum 2 săptămâni", text: "Am venit pentru prima dată fără experiență în CrossFit și am fost primit extraordinar. Antrenorii sunt răbdători și profesioniști. Recomand tuturor!" },
-    { author_name: "Andrei V.", profile_photo_url: "https://lh3.googleusercontent.com/a-/ALV-UjWWdk3oo95BIk2ybBEqrvIWSa4Pr0KiR9KVUCR9-AIoalkNplDL=s128-c0x00000000-cc-rp-mo", rating: 5, relative_time_description: "acum o lună", text: "Experiență de 5 stele! Atmosferă fantastică, WOD-uri bine programate și antrenori care chiar îți pasă de progresul tău." },
-  ]
-};
-
 export default function GoogleReviewsSection() {
   const { language } = useLanguage();
-  const [data, setData] = useState(FALLBACK_DATA);
-  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
