@@ -5,10 +5,19 @@ import { cn } from '@/lib/utils';
 export default function CalendarSlotCard({ slot, signups, isTestHighlighted = false }) {
   const [open, setOpen] = useState(false);
   const isOpenGym = slot.type === 'Open Gym';
-  const freeClasses = isOpenGym ? [] : signups.filter((signup) => signup.signup_type === 'free_class');
-  const dropIns = signups.filter((signup) => signup.signup_type === 'drop_in');
-  const visibleSignups = isOpenGym ? dropIns : signups;
-  const hasSignups = visibleSignups.length > 0;
+  const testSignup = {
+    id: 'test-random-person',
+    name: 'Alex Popescu',
+    email: 'alex.popescu@example.com',
+    phone: '0712 345 678',
+    message: 'Temporary test reservation preview.',
+    signup_type: isOpenGym ? 'drop_in' : 'free_class',
+  };
+  const realVisibleSignups = isOpenGym ? signups.filter((signup) => signup.signup_type === 'drop_in') : signups;
+  const visibleSignups = isTestHighlighted && realVisibleSignups.length === 0 ? [testSignup] : realVisibleSignups;
+  const freeClasses = isOpenGym ? [] : visibleSignups.filter((signup) => signup.signup_type === 'free_class');
+  const dropIns = visibleSignups.filter((signup) => signup.signup_type === 'drop_in');
+  const hasSignups = realVisibleSignups.length > 0;
   const isHighlighted = hasSignups || isTestHighlighted;
 
   return (
