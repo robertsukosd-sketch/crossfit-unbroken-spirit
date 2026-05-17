@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { ChevronUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import LanguageProvider from '@/components/LanguageProvider';
@@ -91,9 +90,6 @@ export default function Home() {
       <SeoMeta />
       <div className="min-h-screen bg-black pb-20 lg:pb-0">
         <Navigation onBookSession={handleBookSession} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
-        <Link to="/?page=calendar" className="fixed right-4 top-24 z-[80] rounded-full bg-amber-400 px-4 py-2 text-sm font-black text-black shadow-lg hover:bg-amber-300">
-          Calendar
-        </Link>
         <HeroSection onOpenFreeClass={handleBookSession} />
         <AboutSection />
         <StartHereSection />
