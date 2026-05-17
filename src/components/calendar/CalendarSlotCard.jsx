@@ -28,8 +28,8 @@ export default function CalendarSlotCard({ slot, signups, isTestHighlighted = fa
       <button onClick={() => setOpen((value) => !value)} className="w-full text-left">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <div className="flex items-center gap-2 text-white font-black">
-              <Clock className="h-4 w-4 text-sky-400" />
+            <div className="flex items-center gap-1.5 whitespace-nowrap text-sm font-black text-white">
+              <Clock className="h-3.5 w-3.5 shrink-0 text-sky-400" />
               {slot.time}
             </div>
             <p className={cn('mt-1 text-sm font-semibold', slot.type === 'Open Gym' ? 'text-cyan-300' : 'text-blue-300')}>
