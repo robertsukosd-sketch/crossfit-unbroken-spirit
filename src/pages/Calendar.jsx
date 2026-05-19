@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const GRAND_TOTAL_START_DATE = '2026-05-18';
+const PRIVATE_CALENDAR_TOKEN = 'calendar-usf-8m4q-z7n2-k9vx';
 
 const getInitialReservationWeekOffset = () => {
   const now = new Date();
@@ -30,7 +31,10 @@ function CalendarContent() {
 
   const { data: signups = [] } = useQuery({
     queryKey: ['calendar-signups'],
-    queryFn: () => base44.entities.CalendarSignup.list('-created_date', 2000),
+    queryFn: async () => {
+      const response = await base44.functions.invoke('getCalendarSignups', { token: PRIVATE_CALENDAR_TOKEN });
+      return response.data.signups || [];
+    },
     initialData: [],
   });
 
