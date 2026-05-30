@@ -96,7 +96,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
 
   const selectedDay = days[selectedDayIndex];
   const classes = crossFitOnly
-    ? (schedule[selectedDay] || []).filter((time) => !time.includes('-'))
+    ? (schedule[selectedDay] || []).filter((time) => !time.includes('-') || time === "10:00-11:30")
     : (schedule[selectedDay] || []);
 
   const weekLabel = () => {
