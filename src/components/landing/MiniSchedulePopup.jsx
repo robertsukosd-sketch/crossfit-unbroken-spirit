@@ -47,10 +47,8 @@ const isSlotInPast = (weekMonday, dayIndex, time) => {
 export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlotSelect, crossFitOnly = false }) {
   const { t, language } = useLanguage();
   const schedule = useMemo(() => getCrossFitClasses(t), [language]);
-  const days = useMemo(() => crossFitOnly ? getDays(t).slice(0, 5) : getDays(t), [language, crossFitOnly]);
-  const dayAbbrList = crossFitOnly
-    ? (language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN).slice(0, 5)
-    : (language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN);
+  const days = useMemo(() => getDays(t), [language]);
+  const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
 
   // Determine initial day/week and min/max week offset
   const getInitialDayAndWeek = () => {
@@ -75,7 +73,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
       if (dayIndex >= 6) { dayIndex = 0; week = 1; } // past Saturday → Monday next week
     }
 
-    return { dayIndex: Math.min(dayIndex, crossFitOnly ? 4 : 5), weekOffset: week, minWeek: 0, maxWeek: 1 };
+    return { dayIndex: Math.min(dayIndex, 5), weekOffset: week, minWeek: 0, maxWeek: 1 };
   };
 
   const initial = getInitialDayAndWeek();
@@ -174,7 +172,7 @@ export default function MiniSchedulePopup({ isOpen, onClose, selectedSlot, onSlo
             </div>
 
             {/* Day tabs with dates */}
-            <div className={cn(crossFitOnly ? "grid grid-cols-5 gap-1 mb-3" : "grid grid-cols-6 gap-1 mb-3")}>
+            <div className="grid grid-cols-6 gap-1 mb-3">
               {days.map((day, i) => {
                 const d = getDateForDayInWeek(weekMonday, i);
                 const dateLabel = `${d.getDate().toString().padStart(2, '0')}.${(d.getMonth() + 1).toString().padStart(2, '0')}`;
