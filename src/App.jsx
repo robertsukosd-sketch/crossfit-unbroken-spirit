@@ -6,6 +6,7 @@ import { pagesConfig } from './pages.config'
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import CalendarPage from './pages/Calendar';
+import EventsAdminPage from './pages/EventsAdmin';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
@@ -104,6 +105,7 @@ const AuthenticatedApp = () => {
         />
       ))}
       <Route path={PRIVATE_CALENDAR_PATH} element={<CalendarPage />} />
+      <Route path="/events-admin-x7k2-9pqr" element={<EventsAdminPage />} />
       {Object.entries(Pages).map(([path, Page]) => (
         <Route
           key={path}
