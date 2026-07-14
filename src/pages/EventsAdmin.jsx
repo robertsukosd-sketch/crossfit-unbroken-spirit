@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Users, CreditCard, CheckCircle, Clock, XCircle, ChevronDown, ChevronUp, Plus, Eye, Ticket } from 'lucide-react';
+import { Calendar, Users, CreditCard, CheckCircle, ChevronDown, ChevronUp, Plus, Eye, Ticket } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 // ─── MOCK DATA (sketch / prototype) ──────────────────────────────────────────
@@ -58,7 +58,6 @@ const STATUS_BADGE = {
   cancelled: { label: 'Cancelled', color: 'bg-red-500/20 text-red-300 border-red-500/30' },
 };
 
-// eslint-disable-next-line no-unused-vars
 function FlowStep({ number, title, description, icon: Icon, accent }) {
   return (
     <div className={cn('flex gap-4 p-4 rounded-2xl border', accent)}>
@@ -165,10 +164,6 @@ function EventRow({ event }) {
 }
 
 export default function EventsAdminPage() {
-  const totalRevenue = MOCK_EVENTS.flatMap(e => e.registrations).filter(r => r.payment === 'paid').reduce((sum, r) => {
-    const event = MOCK_EVENTS.find(e => e.registrations.includes(r));
-    return sum + (event?.price || 0);
-  }, 0);
   const totalRegistrations = MOCK_EVENTS.flatMap(e => e.registrations).length;
 
   return (

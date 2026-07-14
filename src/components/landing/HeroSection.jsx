@@ -96,7 +96,7 @@ export default function HeroSection({ onOpenFreeClass }) {
             className="mt-2 flex flex-col items-center gap-3"
           >
             <p className="text-gray-400 text-xs uppercase tracking-widest">
-              {language === 'ro' ? 'ACCEPTĂM CARDURI DE BENEFICII DE LA' : 'ACCEPTĂM CARDURI DE BENEFICII DE LA'}
+              {language === 'ro' ? 'ACCEPTĂM CARDURI DE BENEFICII DE LA' : 'WE ACCEPT BENEFIT CARDS FROM'}
             </p>
             <button
               onClick={() => {
