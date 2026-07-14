@@ -346,11 +346,7 @@ export default function Footer() {
           <div className="sm:col-span-2">
            <button onClick={() => scrollToSection('hero')} className="flex items-center gap-3 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-1 inline-block hover:opacity-80 transition-opacity">
                 <Logo size={40} />
-                <div className="text-center leading-tight">
-                  <div className="text-xl font-black text-white tracking-wide">CrossFit</div>
-                  <div className="text-xs font-black text-blue-400 uppercase tracking-wide">UNBROKEN SPIRIT</div>
-                </div>
-              </button>
+                </button>
             <p className="text-gray-300 mb-6 max-w-md">
               {t("tagline")}
             </p>

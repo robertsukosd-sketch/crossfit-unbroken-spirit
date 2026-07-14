@@ -85,10 +85,6 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
              className="flex items-center gap-3 flex-shrink-0"
             >
               <Logo size={44} />
-              <div className="hidden sm:block text-center leading-tight">
-                <div className="text-xl font-black text-white tracking-wide">CrossFit</div>
-                <div className="text-sm font-black text-blue-400 uppercase tracking-wide">UNBROKEN SPIRIT</div>
-              </div>
             </a>
 
             {/* Desktop Navigation */}
