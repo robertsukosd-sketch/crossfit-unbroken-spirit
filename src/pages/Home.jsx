@@ -18,7 +18,6 @@ import MobileFooterBar from '@/components/landing/MobileFooterBar';
 import AppPromoSection from '@/components/landing/AppPromoSection';
 import FAQSection from '@/components/landing/FAQSection';
 import GoogleReviewsSection from '@/components/landing/GoogleReviewsSection';
-import EventsSection from '@/components/landing/EventsSection';
 import InstagramFeedSection from '@/components/landing/InstagramFeedSection';
 import SeoMeta from '@/components/landing/SeoMeta';
 import WhatsAppChatButton from '@/components/landing/WhatsAppChatButton';
@@ -101,7 +100,6 @@ export default function Home() {
         {/* Instagram Feed */}
         <InstagramFeedSection />
 
-        <EventsSection />
         <PricingSection onOpenFreeClass={handleBookSession} />
         <ScheduleSection />
         <AppPromoSection />
