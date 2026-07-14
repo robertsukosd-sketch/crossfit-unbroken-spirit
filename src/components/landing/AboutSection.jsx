@@ -247,7 +247,7 @@ export default function AboutSection() {
                   certifications: language === 'ro'
                     ? ['8 ani înot de performanță\n& medaliat național', '7 ani handbal de performanță\n& campion național', '4 ani Head Judge la OMBC Throwdown', 'Strength & Conditioning']
                     : ['8 years competitive swimming\n& national medalist', '7 years competitive handball\n& national champion', '4 years Head Judge at OMBC Throwdown', 'Strength & Conditioning'],
-                  experience: language === 'ro' ? '8 ani în CrossFit' : '8 years in CrossFit',
+                  experience: language === 'ro' ? 'CrossFit din anul 2018' : 'CrossFit since 2018',
                 },
                 {
                   id: 2,
@@ -255,7 +255,7 @@ export default function AboutSection() {
                   certifications: language === 'ro'
                     ? ['Atlet competitiv CrossFit de 7 ani', 'Weightlifting & Gymnastics', 'Competition training']
                     : ['7 years competitive CrossFit athlete', 'Weightlifting & Gymnastics', 'Competition training'],
-                  experience: language === 'ro' ? '7 ani în CrossFit' : '7 years in CrossFit',
+                  experience: language === 'ro' ? 'CrossFit din anul 2019' : 'CrossFit since 2019',
                 },
                 {
                   id: 1,
@@ -263,7 +263,7 @@ export default function AboutSection() {
                   certifications: language === 'ro'
                     ? ['CrossFit Level 2 Trainer', 'The Gymnastics Course Level 1', 'Movement Specialist']
                     : ['CrossFit Level 2 Trainer', 'The Gymnastics Course Level 1', 'Movement Specialist'],
-                  experience: language === 'ro' ? '13 ani în CrossFit' : '13 years in CrossFit',
+                  experience: language === 'ro' ? 'CrossFit din anul 2013' : 'CrossFit since 2013',
                 },
                 {
                   id: 4,
@@ -271,7 +271,7 @@ export default function AboutSection() {
                   certifications: language === 'ro'
                     ? ['Kinetoterapeut', 'CrossFit Level 1 Trainer', 'Antrenor Personal de 8 ani', 'Functional Movement & Rehabilitation Specialist']
                     : ['Physiotherapist', 'CrossFit Level 1 Trainer', 'Personal Trainer for 8 years', 'Functional Movement & Rehabilitation Specialist'],
-                  experience: language === 'ro' ? '2 ani în CrossFit' : '2 years in CrossFit',
+                  experience: language === 'ro' ? 'CrossFit din anul 2024' : 'CrossFit since 2024',
                 }
               ];
 
