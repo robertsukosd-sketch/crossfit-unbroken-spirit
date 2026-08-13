@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Menu, X, Smartphone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Logo from './Logo';
@@ -16,6 +17,7 @@ const getNavLinks = (t) => [
   { name: "FAQ", href: "#faq" },
   { name: t("pricing"), href: "#pricing" },
   { name: t("schedule"), href: "#schedule" },
+  { name: t("articles"), to: "/articole" },
   { name: "ThunderWOD", href: "#app-promo-section" },
   { name: t("contact"), href: "#contact" },
 ];
@@ -90,6 +92,19 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
             {/* Desktop Navigation */}
              <div className="hidden lg:flex items-center gap-6">
               {navLinks.map((link) => {
+                if (link.to) {
+                  return (
+                    <Link
+                      key={link.name}
+                      to={link.to}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="font-medium transition-colors relative group text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1 whitespace-nowrap text-gray-200 hover:text-white"
+                    >
+                      {link.name}
+                      <span className="absolute -bottom-1 left-0 h-0.5 bg-blue-500 transition-[width] w-0 group-hover:w-full" />
+                    </Link>
+                  );
+                }
                 const sectionId = link.href.replace('#', '');
                 const isActive = activeSection === sectionId;
                 return (
@@ -202,17 +217,28 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
           >
             <div className="px-6 py-8 space-y-4 pb-32">
               {navLinks.map((link, index) => (
-                <motion.button
-                   key={link.name}
-                   type="button"
-                   onClick={() => scrollNavToSection(link.href)}
-                   initial={{ opacity: 0, x: -20 }}
-                   animate={{ opacity: 1, x: 0 }}
-                   transition={{ delay: index * 0.1 }}
-                   className="block w-full text-left text-lg font-bold text-white hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-3 py-2"
-                 >
-                   {link.href === '#pricing' ? t("pricingMobile") : link.name}
-                 </motion.button>
+                link.to ? (
+                  <Link
+                    key={link.name}
+                    to={link.to}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block w-full text-left text-lg font-bold text-white hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-3 py-2"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <motion.button
+                     key={link.name}
+                     type="button"
+                     onClick={() => scrollNavToSection(link.href)}
+                     initial={{ opacity: 0, x: -20 }}
+                     animate={{ opacity: 1, x: 0 }}
+                     transition={{ delay: index * 0.1 }}
+                     className="block w-full text-left text-lg font-bold text-white hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-3 py-2"
+                   >
+                     {link.href === '#pricing' ? t("pricingMobile") : link.name}
+                   </motion.button>
+                )
               ))}
               <motion.div
                 initial={{ opacity: 0 }}

@@ -19,6 +19,7 @@ import AppPromoSection from '@/components/landing/AppPromoSection';
 import FAQSection from '@/components/landing/FAQSection';
 import GoogleReviewsSection from '@/components/landing/GoogleReviewsSection';
 import InstagramFeedSection from '@/components/landing/InstagramFeedSection';
+import ArticlesPreview from '@/components/landing/ArticlesPreview';
 import SeoMeta from '@/components/landing/SeoMeta';
 import WhatsAppChatButton from '@/components/landing/WhatsAppChatButton';
 
@@ -96,6 +97,9 @@ export default function Home() {
         <ProgramsSection onBookSession={handleBookSession} />
         <FAQSection onBookSession={handleBookSession} />
         <GoogleReviewsSection />
+
+        {/* Articles preview */}
+        <ArticlesPreview />
 
         {/* Instagram Feed */}
         <InstagramFeedSection />

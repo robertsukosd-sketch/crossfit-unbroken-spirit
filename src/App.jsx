@@ -9,6 +9,9 @@ import CalendarPage from './pages/Calendar';
 import EventsAdminPage from './pages/EventsAdmin';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Articles from './pages/Articles';
+import ArticleDetail from './pages/ArticleDetail';
+import ArticlesAdmin from './pages/ArticlesAdmin';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 
@@ -93,6 +96,9 @@ const AuthenticatedApp = () => {
       <Route path="/" element={<MainOrCalendar />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/articole" element={<Articles />} />
+      <Route path="/articole/:slug" element={<ArticleDetail />} />
+      <Route path="/articles-admin-x7k2-art" element={<ArticlesAdmin />} />
       {CLEAN_LINK_PATHS.map((path) => (
         <Route
           key={`clean-${path}`}

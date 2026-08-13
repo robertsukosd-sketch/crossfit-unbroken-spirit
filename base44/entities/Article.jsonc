@@ -1,0 +1,119 @@
+{
+  "name": "Article",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Article title"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL slug (unique)"
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "Short summary shown on cards and in meta"
+    },
+    "content": {
+      "type": "string",
+      "description": "Article body in Markdown"
+    },
+    "cover_image": {
+      "type": "string",
+      "description": "Cover image URL"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "training",
+        "nutrition",
+        "mindset",
+        "events",
+        "community",
+        "other"
+      ],
+      "default": "other",
+      "description": "Article category"
+    },
+    "author": {
+      "type": "string",
+      "description": "Author name"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "ro",
+        "en"
+      ],
+      "default": "ro",
+      "description": "Article language"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "published"
+      ],
+      "default": "draft",
+      "description": "Publication status"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Publish date"
+    },
+    "faq": {
+      "type": "array",
+      "description": "Optional FAQ entries for AEO / FAQPage JSON-LD",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "language",
+    "status"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "data.status": "published"
+        },
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
