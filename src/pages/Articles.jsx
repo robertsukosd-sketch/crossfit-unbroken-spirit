@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Newspaper } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Newspaper, Search, X } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 import LanguageProvider, { useLanguage } from '@/components/LanguageProvider';
 
@@ -13,6 +13,7 @@ const CATEGORY_LABELS = {
 function ArticlesContent() {
   const { language, t } = useLanguage();
   const [articles, setArticles] = useState(null);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     document.title = language === 'ro' ? 'Articole | CrossFit Unbroken Spirit' : 'Articles | CrossFit Unbroken Spirit';
@@ -27,6 +28,14 @@ function ArticlesContent() {
 
   const labels = CATEGORY_LABELS[language] || CATEGORY_LABELS.ro;
   const formatDate = (d) => d ? new Date(d).toLocaleDateString(language === 'ro' ? 'ro-RO' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+
+  const q = query.trim().toLowerCase();
+  const filtered = q && articles
+    ? articles.filter((a) => {
+        const haystack = [a.title, a.excerpt, a.category ? labels[a.category] : '', a.author].filter(Boolean).join(' ').toLowerCase();
+        return haystack.includes(q);
+      })
+    : articles;
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -47,15 +56,40 @@ function ArticlesContent() {
           <h1 className="text-4xl font-black leading-tight sm:text-5xl md:text-6xl">{t('articlesTitle')}</h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-gray-300 sm:text-lg">{t('articlesSubtitle')}</p>
 
+          {articles !== null && articles.length > 0 && (
+            <div className="mt-8 relative max-w-md">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-500 pointer-events-none" />
+              <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={language === 'ro' ? 'Caută în articole...' : 'Search articles...'}
+                className="w-full rounded-full border border-zinc-700 bg-zinc-900/60 pl-10 pr-9 py-2 text-sm text-white placeholder-zinc-500 outline-none focus:border-sky-400/50 focus:bg-zinc-900 transition-colors"
+              />
+              {query && (
+                <button
+                  type="button"
+                  onClick={() => setQuery('')}
+                  aria-label={language === 'ro' ? 'Golește' : 'Clear'}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-white transition-colors"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </div>
+          )}
+
           {articles === null ? (
             <div className="mt-16 flex justify-center">
               <div className="w-8 h-8 border-4 border-zinc-700 border-t-sky-400 rounded-full animate-spin" />
             </div>
-          ) : articles.length === 0 ? (
-            <p className="mt-16 text-center text-gray-500">{t('articlesEmpty')}</p>
+          ) : filtered.length === 0 ? (
+            <p className="mt-16 text-center text-gray-500">
+              {query ? (language === 'ro' ? 'Niciun articol găsit pentru căutarea ta.' : 'No articles match your search.') : t('articlesEmpty')}
+            </p>
           ) : (
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {articles.map((a, i) => (
+              {filtered.map((a, i) => (
                 <motion.article
                   key={a.id}
                   initial={{ opacity: 0, y: 20 }}
