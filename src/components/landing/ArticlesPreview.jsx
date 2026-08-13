@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Newspaper } from 'lucide-react';
-import { base44 } from '@/api/base44Client';
+import { getPublishedArticles } from '@/content/loadArticles';
 import { useLanguage } from '../LanguageProvider';
 
 const CATEGORY_LABELS = {
@@ -12,15 +12,7 @@ const CATEGORY_LABELS = {
 
 export default function ArticlesPreview() {
   const { language, t } = useLanguage();
-  const [articles, setArticles] = useState(null);
-
-  useEffect(() => {
-    if (language !== 'ro') { setArticles(null); return; }
-    setArticles(null);
-    base44.entities.Article.filter({ status: 'published', language }, '-published_date', 3)
-      .then(setArticles)
-      .catch(() => setArticles([]));
-  }, [language]);
+  const articles = useMemo(() => (language === 'ro' ? getPublishedArticles('ro').slice(0, 3) : []), [language]);
 
   if (language !== 'ro') return null;
 
@@ -63,7 +55,7 @@ export default function ArticlesPreview() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {articles.map((a, i) => (
               <motion.article
-                key={a.id}
+                key={a.slug}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

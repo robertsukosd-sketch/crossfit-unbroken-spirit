@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { base44 } from '@/api/base44Client';
+import { getArticleBySlug } from '@/content/loadArticles';
 import LanguageProvider, { useLanguage } from '@/components/LanguageProvider';
 
 const CATEGORY_LABELS = {
@@ -14,18 +14,8 @@ const CATEGORY_LABELS = {
 function ArticleDetailContent() {
   const { slug } = useParams();
   const { language, t } = useLanguage();
-  const [article, setArticle] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const article = useMemo(() => getArticleBySlug(slug), [slug]);
   const [zoomImg, setZoomImg] = useState(null);
-
-  useEffect(() => {
-    setLoading(true);
-    setArticle(null);
-    base44.entities.Article.filter({ slug, status: 'published' }, '-published_date', 1)
-      .then((res) => setArticle(res && res[0] ? res[0] : null))
-      .catch(() => setArticle(null))
-      .finally(() => setLoading(false));
-  }, [slug]);
 
   useEffect(() => {
     if (!article) return;
@@ -68,14 +58,6 @@ function ArticleDetailContent() {
 
     return () => { scripts.forEach((s) => s.remove()); };
   }, [article]);
-
-  if (loading) {
-    return (
-      <main className="min-h-screen bg-black text-white flex items-center justify-center">
-        <div className="w-8 h-8 border-4 border-zinc-700 border-t-sky-400 rounded-full animate-spin" />
-      </main>
-    );
-  }
 
   if (!article) {
     return (

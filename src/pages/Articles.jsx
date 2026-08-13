@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Newspaper, Search, X } from 'lucide-react';
-import { base44 } from '@/api/base44Client';
+import { getPublishedArticles } from '@/content/loadArticles';
 import LanguageProvider, { useLanguage } from '@/components/LanguageProvider';
 
 const CATEGORY_LABELS = {
@@ -12,18 +12,11 @@ const CATEGORY_LABELS = {
 
 function ArticlesContent() {
   const { language, t } = useLanguage();
-  const [articles, setArticles] = useState(null);
   const [query, setQuery] = useState('');
+  const articles = useMemo(() => getPublishedArticles(language), [language]);
 
   useEffect(() => {
     document.title = language === 'ro' ? 'Articole | CrossFit Unbroken Spirit' : 'Articles | CrossFit Unbroken Spirit';
-  }, [language]);
-
-  useEffect(() => {
-    setArticles(null);
-    base44.entities.Article.filter({ status: 'published', language }, '-published_date', 50)
-      .then(setArticles)
-      .catch(() => setArticles([]));
   }, [language]);
 
   const labels = CATEGORY_LABELS[language] || CATEGORY_LABELS.ro;
@@ -91,7 +84,7 @@ function ArticlesContent() {
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((a, i) => (
                 <motion.article
-                  key={a.id}
+                  key={a.slug}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
