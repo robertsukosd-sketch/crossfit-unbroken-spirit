@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { base44 } from '@/api/base44Client';
 import LanguageProvider, { useLanguage } from '@/components/LanguageProvider';
 
@@ -137,6 +138,7 @@ function ArticleDetailContent() {
         {/* Body */}
         <div className="relative z-10 mx-auto max-w-3xl px-6 py-12">
           <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
             components={{
               h1: ({ node, ...p }) => <h1 className="text-2xl sm:text-3xl font-black text-white mt-10 mb-4" {...p} />,
               h2: ({ node, ...p }) => <h2 className="text-xl sm:text-2xl font-black text-white mt-10 mb-4" {...p} />,
@@ -150,6 +152,10 @@ function ArticleDetailContent() {
               img: ({ node, ...p }) => <img className="rounded-xl my-6 w-full" loading="lazy" {...p} />,
               blockquote: ({ node, ...p }) => <blockquote className="border-l-4 border-sky-500/50 pl-4 italic text-gray-400 my-6" {...p} />,
               code: ({ node, ...p }) => <code className="bg-zinc-800 rounded px-1.5 py-0.5 text-sm text-sky-300" {...p} />,
+              table: ({ node, ...p }) => <table className="w-full my-6 border-collapse text-sm" {...p} />,
+              thead: ({ node, ...p }) => <thead className="border-b border-zinc-700" {...p} />,
+              th: ({ node, ...p }) => <th className="px-3 py-2 text-left font-bold text-white border border-zinc-700" {...p} />,
+              td: ({ node, ...p }) => <td className="px-3 py-2 text-gray-300 border border-zinc-800" {...p} />,
             }}
           >
             {article.content || ''}

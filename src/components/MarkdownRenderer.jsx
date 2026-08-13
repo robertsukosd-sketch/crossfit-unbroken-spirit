@@ -1,4 +1,5 @@
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const MARKDOWN_COMPONENTS = {
   h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-white mb-4" {...props} />,
@@ -11,5 +12,5 @@ const MARKDOWN_COMPONENTS = {
 };
 
 export default function MarkdownRenderer({ children, className = "prose prose-invert prose-sm max-w-none" }) {
-  return <ReactMarkdown className={className} components={MARKDOWN_COMPONENTS}>{children}</ReactMarkdown>;
+  return <ReactMarkdown className={className} remarkPlugins={[remarkGfm]} components={MARKDOWN_COMPONENTS}>{children}</ReactMarkdown>;
 }
