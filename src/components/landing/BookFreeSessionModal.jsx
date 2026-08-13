@@ -238,12 +238,18 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
                     </p>
                     </div>
 
-                    {isRo && (
-                    <div className="mb-2 p-2 rounded-lg bg-amber-400/10 border border-amber-400/30">
-                     <p className="text-[11px] leading-relaxed text-amber-200">
-                       Dacă deții un abonament <strong>WellHub</strong> sau <strong>SanoPass</strong>, trebuie să faci <strong>check-in</strong> la sală.
-                     </p>
-                    </div>
+                    {isRo ? (
+                      <div className="mb-2 p-2 rounded-lg bg-amber-400/10 border border-amber-400/30">
+                        <p className="text-[11px] leading-relaxed text-amber-200">
+                          Dacă deții un abonament <strong>WellHub</strong> sau <strong>SanoPass</strong>, trebuie să faci <strong>check-in</strong> la sală.
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="mb-2 p-2 rounded-lg bg-amber-400/10 border border-amber-400/30">
+                        <p className="text-[11px] leading-relaxed text-amber-200">
+                          If you are visiting from another country and <strong>HAVE DONE</strong> CrossFit before, please let us know via WhatsApp when you are coming. You can pay the <strong>DROP-IN</strong> at the box.
+                        </p>
+                      </div>
                     )}
 
                     {/* Inline schedule panel */}
