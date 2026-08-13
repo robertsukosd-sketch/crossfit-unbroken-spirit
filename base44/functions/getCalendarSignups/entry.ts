@@ -1,13 +1,11 @@
 import { createClientFromRequest } from 'npm:@base44/sdk@0.8.25';
 
-const PRIVATE_CALENDAR_TOKEN = 'calendar-usf-8m4q-z7n2-k9vx';
-
 Deno.serve(async (req) => {
   try {
     const base44 = createClientFromRequest(req);
-    const payload = await req.json();
 
-    if (payload?.token !== PRIVATE_CALENDAR_TOKEN) {
+    const user = await base44.auth.me();
+    if (!user || user.role !== 'admin') {
       return Response.json({ error: 'Forbidden' }, { status: 403 });
     }
 
