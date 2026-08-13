@@ -169,21 +169,6 @@ function ArticleDetailContent() {
             {article.content || ''}
           </ReactMarkdown>
 
-          {/* FAQ (visible, also in JSON-LD) */}
-          {article.faq && article.faq.length > 0 && (
-            <div className="mt-12 pt-8 border-t border-zinc-800">
-              <h2 className="text-xl sm:text-2xl font-black text-white mb-6">{language === 'ro' ? 'Întrebări frecvente' : 'Frequently asked questions'}</h2>
-              <div className="space-y-4">
-                {article.faq.map((f, i) => (
-                  <div key={i} className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">
-                    <h3 className="font-bold text-white mb-2">{f.question}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">{f.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
           <div className="mt-12 pt-8 border-t border-zinc-800">
             <Link to="/articole" className="inline-flex items-center gap-2 text-sm font-semibold text-sky-400 hover:text-sky-300">
               <ArrowLeft className="h-4 w-4" />
