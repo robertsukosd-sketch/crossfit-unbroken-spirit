@@ -236,10 +236,18 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
                         </>
                       )}
                     </p>
-                  </div>
+                    </div>
 
-                  {/* Inline schedule panel */}
-                  <MiniSchedulePopup
+                    {isRo && (
+                    <div className="mb-2 p-2 rounded-lg bg-amber-400/10 border border-amber-400/30">
+                     <p className="text-[11px] leading-relaxed text-amber-200">
+                       Dacă deții un abonament <strong>WellHub</strong> sau <strong>SanoPass</strong>, trebuie să faci <strong>check-in</strong> la sală.
+                     </p>
+                    </div>
+                    )}
+
+                    {/* Inline schedule panel */}
+                    <MiniSchedulePopup
                     isOpen={showSchedule}
                     onClose={() => setShowSchedule(false)}
                     selectedSlot={selectedSlot}
