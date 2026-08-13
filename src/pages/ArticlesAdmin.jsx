@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Plus, Pencil, Trash2, X, Save, Upload, Star } from 'lucide-react';
+import { ArrowLeft, Plus, Pencil, X, Save, Upload, Star, Download, Copy, FileText } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
+import { articles as staticArticles } from '@/content/loadArticles';
 import { useToast } from '@/components/ui/use-toast';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -27,60 +28,80 @@ const emptyForm = {
   published_date: new Date().toISOString().slice(0, 10), faq: [],
 };
 
+function buildMarkdown(form) {
+  const meta = {
+    title: form.title,
+    slug: slugify(form.slug),
+    excerpt: form.excerpt,
+    category: form.category,
+    author: form.author,
+    language: form.language,
+    published_date: form.published_date,
+    cover_image: form.cover_image,
+    faq: form.faq.filter((f) => f.question && f.answer),
+  };
+  return `<!--article-meta\n${JSON.stringify(meta, null, 2)}\n-->\n${form.content}`;
+}
+
+function downloadFile(filename, content) {
+  const blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 export default function ArticlesAdmin() {
   const { toast } = useToast();
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [editing, setEditing] = useState(null); // null | 'new' | existing article
+  const [editing, setEditing] = useState(null);
   const [form, setForm] = useState(emptyForm);
-  const [saving, setSaving] = useState(false);
 
-  const load = () => {
-    setLoading(true);
-    base44.entities.Article.list('-published_date', 100)
-      .then(setArticles)
-      .catch(() => setArticles([]))
-      .finally(() => setLoading(false));
-  };
-  useEffect(() => { load(); }, []);
+  const articles = useMemo(() => staticArticles, []);
 
   const startNew = () => { setForm({ ...emptyForm, published_date: new Date().toISOString().slice(0, 10) }); setEditing('new'); };
-  const startEdit = (a) => { setForm({ ...emptyForm, ...a, faq: Array.isArray(a.faq) ? a.faq : [] }); setEditing(a); };
+  const startEdit = (a) => {
+    setForm({
+      ...emptyForm,
+      title: a.title || '', slug: a.slug || '', excerpt: a.excerpt || '',
+      content: a.content || '', cover_image: a.cover_image || '',
+      category: a.category || 'other', author: a.author || '',
+      language: a.language || 'ro', status: a.status || 'draft',
+      published_date: a.published_date || new Date().toISOString().slice(0, 10),
+      faq: Array.isArray(a.faq) ? a.faq : [],
+    });
+    setEditing(a);
+  };
   const cancel = () => { setEditing(null); };
 
   const set = (field, val) => setForm((f) => ({ ...f, [field]: val }));
 
-  const save = async () => {
+  const generate = () => {
     if (!form.title || !form.slug) {
       toast({ title: 'Titlul și slug-ul sunt obligatorii', variant: 'destructive' });
       return;
     }
-    setSaving(true);
-    try {
-      const payload = { ...form, slug: slugify(form.slug), faq: form.faq.filter((f) => f.question && f.answer) };
-      if (editing === 'new') {
-        await base44.entities.Article.create(payload);
-      } else {
-        await base44.entities.Article.update(editing.id, payload);
-      }
-      toast({ title: 'Articol salvat' });
-      setEditing(null);
-      load();
-    } catch (e) {
-      toast({ title: 'Eroare la salvare', description: e.message, variant: 'destructive' });
-    } finally {
-      setSaving(false);
-    }
+    const slug = slugify(form.slug);
+    const md = buildMarkdown(form);
+    downloadFile(`${slug}.md`, md);
+    toast({ title: 'Fișier generat', description: `${slug}.md — plasează-l în src/content/articles/` });
   };
 
-  const remove = async (a) => {
-    if (!window.confirm(`Ștergi "${a.title}"?`)) return;
+  const copyToClipboard = async () => {
+    if (!form.title || !form.slug) {
+      toast({ title: 'Titlul și slug-ul sunt obligatorii', variant: 'destructive' });
+      return;
+    }
+    const slug = slugify(form.slug);
+    const md = buildMarkdown(form);
     try {
-      await base44.entities.Article.delete(a.id);
-      toast({ title: 'Articol șters' });
-      load();
-    } catch (e) {
-      toast({ title: 'Eroare', description: e.message, variant: 'destructive' });
+      await navigator.clipboard.writeText(md);
+      toast({ title: 'Copiat', description: `${slug}.md — lipește într-un fișier în src/content/articles/` });
+    } catch {
+      toast({ title: 'Nu s-a putut copia', variant: 'destructive' });
     }
   };
 
@@ -107,8 +128,8 @@ export default function ArticlesAdmin() {
           <Link to="/" className="text-sm font-semibold text-sky-400 hover:text-sky-300">← Înapoi la site</Link>
           <div className="mt-3 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
             <div>
-              <h1 className="text-3xl font-black sm:text-5xl">Articole — Admin</h1>
-              <p className="mt-1 text-zinc-400 text-sm">Creează, editează și publică articole.</p>
+              <h1 className="text-3xl font-black sm:text-5xl">Articole — Generator</h1>
+              <p className="mt-1 text-zinc-400 text-sm">Creează articole ca fișiere Markdown statice.</p>
             </div>
             {!editing && (
               <Button onClick={startNew} className="self-start sm:self-auto">
@@ -117,6 +138,13 @@ export default function ArticlesAdmin() {
             )}
           </div>
         </div>
+
+        {!editing && (
+          <div className="mb-6 rounded-2xl border border-sky-500/30 bg-sky-500/5 p-4 text-sm text-sky-200">
+            <p className="font-bold mb-1">Cum funcționează</p>
+            <p>Completează formularul → apasă „Generează .md" → se descarcă un fișier. Plasează-l în <code className="rounded bg-zinc-800 px-1.5 py-0.5 text-sky-300">src/content/articles/</code> și publică — articolul apare automat pe site la următorul build.</p>
+          </div>
+        )}
 
         {editing ? (
           <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-6 space-y-5">
@@ -226,30 +254,35 @@ export default function ArticlesAdmin() {
               ))}
             </div>
 
-            <div className="flex items-center gap-3 pt-4">
-              <Button onClick={save} disabled={saving}>
-                <Save className="w-4 h-4" /> {saving ? 'Se salvează...' : 'Salvează'}
+            {/* Preview */}
+            <div className="space-y-1.5 pt-4 border-t border-zinc-800">
+              <Label className="flex items-center gap-2"><FileText className="w-4 h-4" /> Preview fișier</Label>
+              <pre className="max-h-48 overflow-auto rounded-xl border border-zinc-800 bg-zinc-900 p-4 text-xs text-zinc-300 font-mono whitespace-pre-wrap">{buildMarkdown(form)}</pre>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 pt-4">
+              <Button onClick={generate}>
+                <Download className="w-4 h-4" /> Generează .md
               </Button>
-              <Button variant="outline" onClick={cancel}>Anulează</Button>
+              <Button variant="outline" onClick={copyToClipboard}>
+                <Copy className="w-4 h-4" /> Copiază
+              </Button>
+              <Button variant="ghost" onClick={cancel}>Anulează</Button>
             </div>
           </div>
         ) : (
           <div className="space-y-3">
-            {loading ? (
-              <div className="flex justify-center py-16">
-                <div className="w-8 h-8 border-4 border-zinc-700 border-t-sky-400 rounded-full animate-spin" />
-              </div>
-            ) : articles.length === 0 ? (
+            {articles.length === 0 ? (
               <p className="text-center text-zinc-500 py-16">Niciun articol încă. Apasă „Articol nou".</p>
             ) : (
               articles.map((a) => (
-                <div key={a.id} className="rounded-2xl border border-zinc-800 bg-zinc-950 p-4 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div key={a.slug} className="rounded-2xl border border-zinc-800 bg-zinc-950 p-4 flex flex-col sm:flex-row sm:items-center gap-4">
                   <div className="h-16 w-24 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-800">
                     {a.cover_image && <img src={a.cover_image} alt="" className="h-full w-full object-cover" />}
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <span className={`text-xs font-bold px-2 py-0.5 rounded-full border ${a.status === 'published' ? 'bg-blue-500/20 text-blue-300 border-blue-500/30' : 'bg-zinc-700 text-zinc-400 border-zinc-600'}`}>
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full border bg-blue-500/20 text-blue-300 border-blue-500/30">
                         {a.status === 'published' ? 'Publicat' : 'Draft'}
                       </span>
                       <span className="text-zinc-500 text-xs uppercase">{a.language}</span>
@@ -260,7 +293,6 @@ export default function ArticlesAdmin() {
                   </div>
                   <div className="flex items-center gap-2 flex-shrink-0">
                     <button onClick={() => startEdit(a)} className="p-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-white"><Pencil className="w-4 h-4" /></button>
-                    <button onClick={() => remove(a)} className="p-2 rounded-xl bg-zinc-800 hover:bg-red-900/40 text-zinc-300 hover:text-red-300"><Trash2 className="w-4 h-4" /></button>
                   </div>
                 </div>
               ))
