@@ -15,11 +15,14 @@ export default function ArticlesPreview() {
   const [articles, setArticles] = useState(null);
 
   useEffect(() => {
+    if (language !== 'ro') { setArticles(null); return; }
     setArticles(null);
     base44.entities.Article.filter({ status: 'published', language }, '-published_date', 3)
       .then(setArticles)
       .catch(() => setArticles([]));
   }, [language]);
+
+  if (language !== 'ro') return null;
 
   const labels = CATEGORY_LABELS[language] || CATEGORY_LABELS.ro;
   const formatDate = (d) => d ? new Date(d).toLocaleDateString(language === 'ro' ? 'ro-RO' : 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
