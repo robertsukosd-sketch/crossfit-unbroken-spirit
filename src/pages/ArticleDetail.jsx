@@ -16,6 +16,7 @@ function ArticleDetailContent() {
   const { language, t } = useLanguage();
   const [article, setArticle] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [zoomImg, setZoomImg] = useState(null);
 
   useEffect(() => {
     setLoading(true);
@@ -149,7 +150,14 @@ function ArticleDetailContent() {
               li: ({ node, ...p }) => <li className="leading-relaxed" {...p} />,
               strong: ({ node, ...p }) => <strong className="font-bold text-white" {...p} />,
               a: ({ node, ...p }) => <a className="text-sky-400 hover:text-sky-300 underline underline-offset-2" target="_blank" rel="noopener noreferrer" {...p} />,
-              img: ({ node, ...p }) => <img className="rounded-xl my-6 w-full" loading="lazy" {...p} />,
+              img: ({ node, ...p }) => (
+                <img
+                  className="rounded-xl my-6 w-full cursor-zoom-in transition-transform hover:opacity-90"
+                  loading="lazy"
+                  onClick={(e) => setZoomImg(e.currentTarget.src)}
+                  {...p}
+                />
+              ),
               blockquote: ({ node, ...p }) => <blockquote className="border-l-4 border-sky-500/50 pl-4 italic text-gray-400 my-6" {...p} />,
               code: ({ node, ...p }) => <code className="bg-zinc-800 rounded px-1.5 py-0.5 text-sm text-sky-300" {...p} />,
               table: ({ node, ...p }) => <table className="w-full my-6 border-collapse text-sm" {...p} />,
@@ -184,6 +192,20 @@ function ArticleDetailContent() {
           </div>
         </div>
       </article>
+
+      {zoomImg && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 sm:p-8 cursor-zoom-out"
+          onClick={() => setZoomImg(null)}
+        >
+          <img
+            src={zoomImg}
+            alt=""
+            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+            onClick={(e) => { e.stopPropagation(); setZoomImg(null); }}
+          />
+        </div>
+      )}
     </main>
   );
 }
