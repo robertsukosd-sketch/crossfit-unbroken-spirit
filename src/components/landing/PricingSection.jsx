@@ -57,6 +57,8 @@ const getCategories = (language) => [
           : ['Access to all classes', 'Open Gym included', 'Priority booking', 'Free parking spot'],
         popular: true,
         featured: true,
+        studentPrice: '300',
+        studentLabel: language === 'ro' ? 'Elevi / Studenți' : 'Students',
       },
     ],
   },
@@ -422,6 +424,14 @@ function PlanCard({ plan, index, t, onSignUpClick, onContactClick, language }) {
           / {plan.period}
         </span>
 
+        {plan.studentPrice && (
+          <div className={cn('mt-3 inline-flex items-baseline gap-1.5 rounded-full px-3 py-1', plan.featured ? 'bg-white/15' : 'bg-blue-500/10 border border-blue-500/20')}>
+            <span className={cn('text-xs font-semibold', plan.featured ? 'text-white/80' : 'text-gray-400')}>{plan.studentLabel}:</span>
+            <span className="text-lg font-black text-white">{plan.studentPrice}</span>
+            <span className={cn('text-xs', plan.featured ? 'text-white/80' : 'text-gray-300')}>{t('ron')}</span>
+            <span className={cn('text-xs', plan.featured ? 'text-white/70' : 'text-gray-400')}>/ {plan.period}</span>
+          </div>
+        )}
 
       </div>
 
