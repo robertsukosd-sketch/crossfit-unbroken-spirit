@@ -5,7 +5,6 @@ import NavigationTracker from '@/lib/NavigationTracker'
 import { pagesConfig } from './pages.config'
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
-import CalendarPage from './pages/Calendar';
 import EventsAdminPage from './pages/EventsAdmin';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -22,9 +21,6 @@ const MainPage = mainPageKey ? Pages[mainPageKey] : <></>;
 const LayoutWrapper = ({ children, currentPageName }) => Layout ?
   <Layout currentPageName={currentPageName}>{children}</Layout>
   : <>{children}</>;
-
-const PRIVATE_CALENDAR_PATH = '/calendar-usf-8m4q-z7n2-k9vx';
-const PRIVATE_CALENDAR_TOKEN = 'calendar-usf-8m4q-z7n2-k9vx';
 
 const CLEAN_LINK_PATHS = [
   'drop-in',
@@ -50,20 +46,11 @@ const EncodedHashRedirect = () => {
   return null;
 };
 
-const MainOrCalendar = () => {
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-
-  if (params.get('calendar') === PRIVATE_CALENDAR_TOKEN) {
-    return <CalendarPage />;
-  }
-
-  return (
-    <LayoutWrapper currentPageName={mainPageKey}>
-      <MainPage />
-    </LayoutWrapper>
-  );
-};
+const MainOrCalendar = () => (
+  <LayoutWrapper currentPageName={mainPageKey}>
+    <MainPage />
+  </LayoutWrapper>
+);
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -110,7 +97,6 @@ const AuthenticatedApp = () => {
           }
         />
       ))}
-      <Route path={PRIVATE_CALENDAR_PATH} element={<CalendarPage />} />
       <Route path="/events-admin-x7k2-9pqr" element={<EventsAdminPage />} />
       {Object.entries(Pages).map(([path, Page]) => (
         <Route
