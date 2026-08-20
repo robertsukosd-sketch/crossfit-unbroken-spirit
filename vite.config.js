@@ -1,11 +1,25 @@
 import base44 from "@base44/vite-plugin"
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import fs from 'node:fs'
+
+// Treat local .md article files as JS modules exporting their raw content,
+// so import.meta.glob can load them without the ?raw query (which breaks build).
+function rawMarkdownPlugin() {
+  return {
+    name: 'raw-markdown',
+    load(id) {
+      if (id.endsWith('.md')) {
+        const content = fs.readFileSync(id, 'utf-8');
+        return `export default ${JSON.stringify(content)}`;
+      }
+    }
+  };
+}
 
 // https://vite.dev/config/
 export default defineConfig({
   logLevel: 'error', // Suppress warnings, only show errors
-  assetsInclude: ['**/*.md'],
   plugins: [
     base44({
       // Support for legacy code that imports the base44 SDK with @/integrations, @/entities, etc.
@@ -16,5 +30,6 @@ export default defineConfig({
       visualEditAgent: true
     }),
     react(),
+    rawMarkdownPlugin(),
   ]
 });
