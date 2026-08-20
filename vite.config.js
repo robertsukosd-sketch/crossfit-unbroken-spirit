@@ -3,14 +3,17 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import fs from 'node:fs'
 
-// Treat local .md article files as JS modules exporting their raw content,
-// so import.meta.glob can load them without the ?raw query (which breaks build).
+// Load local .md article files as JS modules exporting their raw content.
+// Handles both plain ".md" and ".md?raw" ids so it works whether or not the
+// glob uses the ?raw query, and avoids the Vite build import-analysis error.
 function rawMarkdownPlugin() {
   return {
     name: 'raw-markdown',
+    enforce: 'pre',
     load(id) {
-      if (id.endsWith('.md')) {
-        const content = fs.readFileSync(id, 'utf-8');
+      const cleanId = id.replace(/\?raw$/, '');
+      if (cleanId.endsWith('.md')) {
+        const content = fs.readFileSync(cleanId, 'utf-8');
         return `export default ${JSON.stringify(content)}`;
       }
     }

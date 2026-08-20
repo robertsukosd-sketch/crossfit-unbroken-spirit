@@ -5,6 +5,7 @@
 // dependency is needed for articles.
 
 const modules = import.meta.glob('./articles/*.md', {
+  query: '?raw',
   import: 'default',
   eager: true,
 });
@@ -25,10 +26,22 @@ function parseArticle(raw, path) {
   return { ...meta, slug, content: body };
 }
 
+const _rawEntries = Object.entries(modules).map(([path, raw]) => ({
+  path,
+  rawType: typeof raw,
+  rawLen: typeof raw === 'string' ? raw.length : 0,
+  rawHead: typeof raw === 'string' ? raw.slice(0, 40) : String(raw).slice(0, 40),
+}));
+// eslint-disable-next-line no-console
+console.log('[articles] glob modules:', modules && Object.keys(modules).length, JSON.stringify(_rawEntries, null, 2));
+
 export const articles = Object.entries(modules)
   .map(([path, raw]) => parseArticle(raw, path))
   .filter((a) => a.title)
   .sort((a, b) => new Date(b.published_date || 0) - new Date(a.published_date || 0));
+
+// eslint-disable-next-line no-console
+console.log('[articles] parsed count:', articles.length, articles.map(a => a.slug));
 
 export function getPublishedArticles(language) {
   if (!language) return articles;
