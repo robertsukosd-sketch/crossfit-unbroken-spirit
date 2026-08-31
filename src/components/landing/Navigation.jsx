@@ -9,9 +9,10 @@ import { useLanguage } from '../LanguageProvider';
 import { openAppWithFallback } from '../appStoreUtils';
 import { scrollToSection } from '../config';
 
-const getNavLinks = (t) => [
+const getNavLinks = (t, language) => [
   { name: t("home"), href: "#hero" },
   { name: t("aboutUs"), href: "#about" },
+  { name: language === 'ro' ? 'Galerie' : 'Gallery', href: "#gallery" },
   { name: t("startHere"), href: "#starthere" },
   { name: t("programs"), href: "#programs" },
   { name: "FAQ", href: "#faq" },
@@ -27,9 +28,9 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
   const [activeSection, setActiveSection] = useState('hero');
   const { language, changeLanguage, t } = useLanguage();
   const shouldReduceMotion = useReducedMotion();
-  const navLinks = useMemo(() => getNavLinks(t).filter((l) => language === 'ro' || !l.to), [language]);
+  const navLinks = useMemo(() => getNavLinks(t, language).filter((l) => language === 'ro' || !l.to), [language]);
 
-  const sectionIds = ['hero', 'about', 'starthere', 'programs', 'faq', 'pricing', 'schedule', 'contact', 'app-promo-section'];
+  const sectionIds = ['hero', 'about', 'gallery', 'starthere', 'programs', 'faq', 'pricing', 'schedule', 'contact', 'app-promo-section'];
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 50);

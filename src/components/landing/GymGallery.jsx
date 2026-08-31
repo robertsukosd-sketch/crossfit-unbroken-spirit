@@ -223,11 +223,11 @@ export default function GymGallery() {
             onClick={() => setLightboxIndex(null)}
           >
             <button
-              className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center text-white z-20 transition-colors"
+              className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white text-zinc-900 hover:bg-zinc-200 flex items-center justify-center z-20 transition-colors shadow-lg"
               onClick={() => setLightboxIndex(null)}
               aria-label={language === 'ro' ? 'Închide galeria' : 'Close gallery'}
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6" strokeWidth={2.5} />
             </button>
 
             <div className="absolute top-4 left-1/2 -translate-x-1/2 text-white/60 text-sm">
