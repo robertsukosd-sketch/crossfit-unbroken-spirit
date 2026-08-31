@@ -108,8 +108,13 @@ export default function GymGallery() {
   }, [lightboxIndex]);
 
   useEffect(() => {
-    document.body.style.overflow = lightboxIndex !== null ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    const lock = lightboxIndex !== null;
+    document.body.style.overflow = lock ? 'hidden' : '';
+    document.documentElement.style.overflow = lock ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
   }, [lightboxIndex]);
 
   const visible = activeImages.length > 0
@@ -218,10 +223,11 @@ export default function GymGallery() {
             onClick={() => setLightboxIndex(null)}
           >
             <button
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-white z-10"
+              className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center text-white z-20 transition-colors"
               onClick={() => setLightboxIndex(null)}
+              aria-label={language === 'ro' ? 'Închide galeria' : 'Close gallery'}
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
 
             <div className="absolute top-4 left-1/2 -translate-x-1/2 text-white/60 text-sm">

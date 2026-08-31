@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, Calendar, User } from 'lucide-react';
+import { ArrowLeft, Calendar, User, X } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getArticleBySlug } from '@/content/loadArticles';
@@ -58,6 +58,20 @@ function ArticleDetailContent() {
 
     return () => { scripts.forEach((s) => s.remove()); };
   }, [article]);
+
+  useEffect(() => {
+    const lock = zoomImg !== null;
+    document.body.style.overflow = lock ? 'hidden' : '';
+    document.documentElement.style.overflow = lock ? 'hidden' : '';
+    if (!lock) return;
+    const onKey = (e) => { if (e.key === 'Escape') setZoomImg(null); };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, [zoomImg]);
 
   if (!article) {
     return (
@@ -165,6 +179,13 @@ function ArticleDetailContent() {
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 sm:p-8 cursor-zoom-out"
           onClick={() => setZoomImg(null)}
         >
+          <button
+            className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center text-white z-20 transition-colors"
+            onClick={(e) => { e.stopPropagation(); setZoomImg(null); }}
+            aria-label={language === 'ro' ? 'Închide imaginea' : 'Close image'}
+          >
+            <X className="w-6 h-6" />
+          </button>
           <img
             src={zoomImg}
             alt=""
