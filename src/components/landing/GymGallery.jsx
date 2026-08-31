@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../LanguageProvider';
@@ -212,9 +213,11 @@ export default function GymGallery() {
       </div>
       )}
 
-      {/* Image Lightbox */}
-      <AnimatePresence>
-        {lightboxIndex !== null && (
+      {/* Image Lightbox — rendered via portal so an ancestor CSS transform
+          (framer-motion) doesn't break position: fixed. */}
+      {createPortal(
+        <AnimatePresence>
+          {lightboxIndex !== null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -266,7 +269,9 @@ export default function GymGallery() {
             </button>
           </motion.div>
         )}
-      </AnimatePresence>
+        </AnimatePresence>,
+        document.body
+      )}
 
       {activeImages.length > 0 && (
         <>
