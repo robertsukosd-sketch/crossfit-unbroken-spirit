@@ -17,6 +17,12 @@ function ArticleDetailContent() {
   const article = useMemo(() => getArticleBySlug(slug), [slug]);
   const [zoomImg, setZoomImg] = useState(null);
 
+  // Strip raw <a id="..."></a> anchor tags — react-markdown shows them as literal text.
+  const processedContent = useMemo(() => {
+    if (!article || !article.content) return '';
+    return article.content.replace(/<a id="[^"]+"><\/a>\s*\n?/g, '');
+  }, [article]);
+
   useEffect(() => {
     if (!article) return;
     document.title = `${article.title} | CrossFit Unbroken Spirit`;
@@ -162,7 +168,7 @@ function ArticleDetailContent() {
               td: ({ node, ...p }) => <td className="px-3 py-2 text-gray-300 border border-zinc-800" {...p} />,
             }}
           >
-            {article.content || ''}
+            {processedContent}
           </ReactMarkdown>
 
           <div className="mt-12 pt-8 border-t border-zinc-800">
