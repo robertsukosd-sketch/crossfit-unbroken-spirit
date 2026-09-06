@@ -27,6 +27,34 @@ function ArticleDetailContent() {
     if (!article) return;
     document.title = `${article.title} | CrossFit Unbroken Spirit`;
 
+    const pageUrl = window.location.href;
+    const description = article.excerpt || '';
+    const image = article.cover_image || '';
+    const fullTitle = `${article.title} | CrossFit Unbroken Spirit`;
+
+    const metaEls = [];
+    const setMeta = (attr, key, content) => {
+      if (!content) return;
+      let el = document.querySelector(`meta[${attr}="${key}"]`);
+      if (!el) { el = document.createElement('meta'); el.setAttribute(attr, key); document.head.appendChild(el); }
+      el.setAttribute('content', content);
+      metaEls.push(el);
+    };
+    setMeta('name', 'description', description);
+    setMeta('property', 'og:title', fullTitle);
+    setMeta('property', 'og:description', description);
+    setMeta('property', 'og:type', 'article');
+    setMeta('property', 'og:url', pageUrl);
+    setMeta('property', 'og:image', image);
+    setMeta('name', 'twitter:card', image ? 'summary_large_image' : 'summary');
+    setMeta('name', 'twitter:title', fullTitle);
+    setMeta('name', 'twitter:description', description);
+    setMeta('name', 'twitter:image', image);
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+    canonical.href = pageUrl;
+
     const scripts = [];
     const articleLd = {
       '@context': 'https://schema.org',
@@ -61,6 +89,20 @@ function ArticleDetailContent() {
       document.head.appendChild(s2);
       scripts.push(s2);
     }
+
+    const breadcrumbLd = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Articole', item: 'https://www.unbrokenspirit.ro/articole' },
+        { '@type': 'ListItem', position: 2, name: article.title, item: pageUrl },
+      ],
+    };
+    const s3 = document.createElement('script');
+    s3.type = 'application/ld+json';
+    s3.text = JSON.stringify(breadcrumbLd);
+    document.head.appendChild(s3);
+    scripts.push(s3);
 
     return () => { scripts.forEach((s) => s.remove()); };
   }, [article]);
