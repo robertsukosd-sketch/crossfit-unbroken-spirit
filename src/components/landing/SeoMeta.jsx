@@ -723,32 +723,21 @@ function applyMeta(lang, sectionId) {
       removeSchema('schema-faq');
     }
   }
-  // RO FAQ is already injected always in useEffect — no need to remove/re-inject per section
-}
+  // RO FAQ is served as static JSON-LD in index.html — no JS injection needed per section
+  }
 
 export default function SeoMeta() {
   const { language } = useLanguage();
 
   useEffect(() => {
-    // Inject always-present schemas
-    injectSchema('schema-local-business', LOCAL_BUSINESS_SCHEMA);
-    injectSchema('schema-coaches', COACHES_SCHEMA);
-    injectSchema('schema-reviews', REVIEWS_SCHEMA);
-    injectSchema('schema-website', WEBSITE_SCHEMA);
+    // Core schemas (LocalBusiness, FAQ-RO, HowTo-RO, Coaches, Reviews, Services,
+    // Partners, Gallery, WebSite, Speakable) are served as static JSON-LD in
+    // index.html so non-JS AEO/SEO crawlers (AI Overviews, voice assistants)
+    // can read them without executing JavaScript.
+    // Only dynamic, date- or language-dependent schemas are injected here.
     injectSchema('schema-events', buildEventSchemas());
-    injectSchema('schema-howto', language === 'en' ? HOWTO_SCHEMA_EN : HOWTO_SCHEMA_RO);
-    injectSchema('schema-services', SERVICES_SCHEMA);
-    injectSchema('schema-gallery', GALLERY_SCHEMA);
-    injectSchema('schema-partners', PARTNERS_SCHEMA);
-    // FAQ always present for Romanian (primary language) — helps AI Overviews
-    // Include partners FAQ merged into main FAQ
-    if (language !== 'en') {
-      const mergedFaqRo = { ...FAQ_SCHEMA_RO, mainEntity: [...FAQ_SCHEMA_RO.mainEntity, ...PARTNERS_FAQ_RO, ...PERSONAL_TRAINING_FAQ_RO, ...LOCAL_SEO_FAQ_RO] };
-      injectSchema('schema-faq', mergedFaqRo);
-    }
-    // Speakable for Romanian — helps Google Assistant / AI read key content
-    if (language !== 'en') {
-      injectSchema('schema-speakable', SPEAKABLE_SCHEMA_RO);
+    if (language === 'en') {
+      injectSchema('schema-howto', HOWTO_SCHEMA_EN);
     }
 
     // Apply default (hero) meta on mount
@@ -776,16 +765,9 @@ export default function SeoMeta() {
     return () => {
       observers.forEach((o) => o.disconnect());
       removeSchema('schema-faq');
-      removeSchema('schema-coaches');
-      removeSchema('schema-reviews');
-      removeSchema('schema-website');
       removeSchema('schema-events');
       removeSchema('schema-webpage');
       removeSchema('schema-howto');
-      removeSchema('schema-services');
-      removeSchema('schema-gallery');
-      removeSchema('schema-partners');
-      removeSchema('schema-speakable');
     };
   }, [language]);
 
