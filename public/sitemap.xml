@@ -1,69 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
   <url>
     <loc>https://www.unbrokenspirit.ro/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Main pages -->
   <url>
-    <loc>https://www.unbrokenspirit.ro/drop-in</loc>
-    <lastmod>2026-05-17</lastmod>
+    <loc>https://www.unbrokenspirit.ro/about</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.unbrokenspirit.ro/contact</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Articles listing -->
+  <url>
+    <loc>https://www.unbrokenspirit.ro/articole</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Articles -->
+  <url>
+    <loc>https://www.unbrokenspirit.ro/articole/ce-este-crossfit-bazele-principiile-glassman</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/5619eabad_fig-00-hero.png</image:loc>
+      <image:title>Ce este CrossFit: ghidul complet al principiilor lui Greg Glassman</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.unbrokenspirit.ro/articole/ce-inseamna-sa-fii-in-forma-definitia-fitness</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://base44.app/api/apps/69948c0d6b8aa61f49f0a23d/files/mp/public/69948c0d6b8aa61f49f0a23d/282b0cc65_p2-fig-00-hero.png</image:loc>
+      <image:title>Ce înseamnă să fii în formă? Definiția lui Greg Glassman</image:title>
+    </image:image>
+  </url>
+
+  <!-- Landing / conversion pages -->
+  <url>
     <loc>https://www.unbrokenspirit.ro/parteneri</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.unbrokenspirit.ro/drop-in</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.unbrokenspirit.ro/book-free-session</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.unbrokenspirit.ro/clasa-gratis</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+
+  <!-- Legal / policy pages -->
   <url>
     <loc>https://www.unbrokenspirit.ro/privacy-policy-ro</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.unbrokenspirit.ro/privacy-policy-en</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.unbrokenspirit.ro/terms-and-conditions-ro</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.unbrokenspirit.ro/terms-and-conditions-en</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.unbrokenspirit.ro/cookies-ro</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.unbrokenspirit.ro/cookies-en</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <priority>0.3</priority>
   </url>
+
 </urlset>

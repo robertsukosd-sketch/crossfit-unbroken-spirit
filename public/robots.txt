@@ -1,6 +1,44 @@
+# robots.txt — CrossFit Unbroken Spirit
+# https://www.unbrokenspirit.ro
+
+# Allow all crawlers full access to public content
 User-agent: *
 Allow: /
-Disallow: /calendar-usf-8m4q-z7n2-k9vx
-Disallow: /*?calendar=calendar-usf-8m4q-z7n2-k9vx
 
+# Block admin / internal pages from indexing
+Disallow: /articles-admin-x7k2-art
+Disallow: /events-admin-x7k2-9pqr
+
+# Block OAuth consent page
+Disallow: /oauth-consent
+
+# AI crawlers — allow full access for AEO / Answer Engine Optimization
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap location
 Sitemap: https://www.unbrokenspirit.ro/sitemap.xml
