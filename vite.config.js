@@ -11,7 +11,8 @@ function rawMarkdownPlugin() {
     name: 'raw-markdown',
     enforce: 'pre',
     load(id) {
-      const cleanId = id.replace(/\?raw$/, '');
+      // Strip any query string (e.g. "?raw", "?raw=") to get the real file path
+      const cleanId = id.replace(/\?.*$/, '');
       if (cleanId.endsWith('.md')) {
         const content = fs.readFileSync(cleanId, 'utf-8');
         return `export default ${JSON.stringify(content)}`;
