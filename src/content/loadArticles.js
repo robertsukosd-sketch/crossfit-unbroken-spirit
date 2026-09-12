@@ -5,7 +5,6 @@
 // dependency is needed for articles.
 
 const modules = import.meta.glob('./articles/*.md', {
-  query: '?raw',
   import: 'default',
   eager: true,
 });
