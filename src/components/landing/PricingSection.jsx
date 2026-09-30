@@ -413,19 +413,18 @@ function PlanCard({ plan, index, t, onSignUpClick, onContactClick, language }) {
         </div>
         
         {/* Pricing with original price strikethrough for limited offers */}
-        <div className="flex items-baseline justify-center gap-2 mb-2">
-          <span className="text-4xl font-black text-white">{plan.price}</span>
+        <div className="flex items-baseline justify-center gap-2 mb-1">
+          <span className="text-3xl sm:text-4xl font-black text-white">{plan.price}</span>
           <span className={cn('text-lg', plan.featured ? 'text-white/80' : 'text-gray-300')}>
             {t('ron')}
           </span>
-
+          <span className={cn('text-sm', plan.featured ? 'text-white/70' : 'text-gray-400')}>
+            / {plan.period}
+          </span>
         </div>
-        <span className={cn('text-sm', plan.featured ? 'text-white/70' : 'text-gray-400')}>
-          / {plan.period}
-        </span>
 
         {plan.studentPrice && (
-          <div className={cn('mt-3 inline-flex items-baseline gap-1.5 rounded-full px-3 py-1', plan.featured ? 'bg-white/15' : 'bg-blue-500/10 border border-blue-500/20')}>
+          <div className={cn('mt-3 inline-flex flex-wrap justify-center items-baseline gap-1.5 max-w-full rounded-full px-3 py-1', plan.featured ? 'bg-white/15' : 'bg-blue-500/10 border border-blue-500/20')}>
             <span className={cn('text-xs font-semibold', plan.featured ? 'text-white/80' : 'text-gray-400')}>{plan.studentLabel}:</span>
             <span className="text-lg font-black text-white">{plan.studentPrice}</span>
             <span className={cn('text-xs', plan.featured ? 'text-white/80' : 'text-gray-300')}>{t('ron')}</span>
