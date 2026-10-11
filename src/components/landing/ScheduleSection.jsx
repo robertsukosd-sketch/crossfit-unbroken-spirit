@@ -83,16 +83,26 @@ const DAY_ABBR_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 export default function ScheduleSection() {
   const { t, language } = useLanguage();
   const schedule = useMemo(() => getSchedule(t, language), [language]);
-  const days = useMemo(() => getDays(t), [language]);
-  const dayAbbrList = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
+  const allDays = useMemo(() => getDays(t), [language]);
+  const allAbbr = language === 'ro' ? DAY_ABBR_RO : DAY_ABBR_EN;
   const todayIndex = new Date().getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
   // days array is Mon(0)...Sun(6), so map JS day to our array index
   const mappedIndex = todayIndex === 0 ? 6 : todayIndex - 1;
 
-  const [selectedDay, setSelectedDay] = useState(days[mappedIndex]);
+  // Rotate so today is first, then the rest follow in order
+  const days = useMemo(
+    () => [...allDays.slice(mappedIndex), ...allDays.slice(0, mappedIndex)],
+    [allDays, mappedIndex]
+  );
+  const dayAbbrList = useMemo(
+    () => [...allAbbr.slice(mappedIndex), ...allAbbr.slice(0, mappedIndex)],
+    [allAbbr, mappedIndex]
+  );
+
+  const [selectedDay, setSelectedDay] = useState(days[0]);
 
   useEffect(() => {
-    setSelectedDay(days[mappedIndex]);
+    setSelectedDay(days[0]);
   }, [days]);
 
   return (
