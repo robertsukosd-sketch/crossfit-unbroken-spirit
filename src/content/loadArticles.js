@@ -36,7 +36,7 @@ console.log('[articles] glob modules:', modules && Object.keys(modules).length, 
 
 export const articles = Object.entries(modules)
   .map(([path, raw]) => parseArticle(raw, path))
-  .filter((a) => a.title)
+  .filter((a) => a.title && a.slug)
   .sort((a, b) => new Date(b.published_date || 0) - new Date(a.published_date || 0));
 
 // eslint-disable-next-line no-console
