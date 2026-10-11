@@ -53,6 +53,26 @@
       <image:title>Ce înseamnă să fii în formă? Definiția lui Greg Glassman</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.unbrokenspirit.ro/articole/cardio-sau-intervale-aerob-anaerob-tabata</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://base44.app/api/apps/69948c0d6b8aa61f49f0a23d/files/mp/public/69948c0d6b8aa61f49f0a23d/9ec9c2007_p3-fig-00-hero.png</image:loc>
+      <image:title>Cardio sau intervale — aerob, anaerob și metoda Tabata</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.unbrokenspirit.ro/articole/gimnastica-haltere-aruncari-crossfit</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://base44.app/api/apps/69948c0d6b8aa61f49f0a23d/files/mp/public/69948c0d6b8aa61f49f0a23d/17f4c1e76_p4-fig-00-hero.png</image:loc>
+      <image:title>Gimnastică, haltere și aruncări în CrossFit</image:title>
+    </image:image>
+  </url>
 
   <!-- Landing / conversion pages -->
   <url>
