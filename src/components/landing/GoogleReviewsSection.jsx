@@ -29,7 +29,7 @@ function StarRating({ rating }) {
   );
 }
 
-function ReviewCard({ review, index }) {
+function ReviewCard({ review, index, language }) {
   const [expanded, setExpanded] = useState(false);
   const isLong = review.text.length > 160;
   const displayText = !expanded && isLong ? review.text.slice(0, 160) + '…' : review.text;
@@ -61,7 +61,7 @@ function ReviewCard({ review, index }) {
             onClick={() => setExpanded(!expanded)}
             className="ml-1 text-sky-400 hover:text-sky-300 font-semibold text-xs"
           >
-            {expanded ? ' Mai puțin' : ' Mai mult'}
+            {expanded ? (language === 'ro' ? ' Mai puțin' : ' Less') : (language === 'ro' ? ' Mai mult' : ' More')}
           </button>
         )}
       </p>
@@ -243,7 +243,7 @@ export default function GoogleReviewsSection() {
         {!loading && data?.reviews?.length > 0 && (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.reviews.map((review, i) => (
-              <ReviewCard key={i} review={review} index={i} />
+              <ReviewCard key={i} review={review} index={i} language={language} />
             ))}
           </div>
         )}

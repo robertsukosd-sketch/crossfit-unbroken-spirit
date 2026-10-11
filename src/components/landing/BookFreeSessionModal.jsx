@@ -36,23 +36,7 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
   const unavailableEnd = 6 * 60; // 6:00
   const isUnavailable = currentTimeInMinutes >= unavailableStart || currentTimeInMinutes < unavailableEnd;
 
-  const whatsappPhone = '40744798429';
-  const whatsappText = encodeURIComponent(
-    isRo
-      ? `Bună! Mă numesc ${form.name.trim() || '...'} și aș dori să rezerv o ședință gratuită${selectedSlot ? ` ${selectedSlot.day} la ${selectedSlot.time}` : ''}. Email: ${form.email}${form.phone ? `. Telefon: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
-      : isDropin
-        ? `Hi, my name is ${form.name.trim() || '...'} and I would like to come for a dropin session${selectedSlot ? ` on ${selectedSlot.day}${slotDateStr ? `, ${slotDateStr}` : ''}` : ''}. I understand that the session will cost 60 RON and I can pay at the gym. Email: ${form.email}${form.phone ? `. Phone: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
-        : `Hi! My name is ${form.name.trim() || '...'} and I would like to book a free session${selectedSlot ? ` on ${selectedSlot.day} at ${selectedSlot.time}` : ''}. Email: ${form.email}${form.phone ? `. Phone: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
-  );
-  const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${whatsappText}`;
-
-  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email);
-  const privacyConsentText = isRo
-    ? 'Prin trimitere, ești de acord să stocăm datele rezervării pentru programare și contact, timp de maximum 1 an.'
-    : 'By submitting, you agree that we store your reservation details for scheduling and contact for up to 1 year.';
-  const canSend = form.name.trim() && isValidEmail && selectedSlot;
-
-  // Compute the actual date for the selected slot
+  // Compute the actual date for the selected slot (must be defined before whatsappText uses slotDateStr)
   const getSlotDate = (slot) => {
     if (!slot) return null;
     const now = new Date();
@@ -74,6 +58,22 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
   const slotDateStr = slotDate
     ? `${slotDate.getDate().toString().padStart(2, '0')}.${(slotDate.getMonth() + 1).toString().padStart(2, '0')}`
     : '';
+
+  const whatsappPhone = '40744798429';
+  const whatsappText = encodeURIComponent(
+    isRo
+      ? `Bună! Mă numesc ${form.name.trim() || '...'} și aș dori să rezerv o ședință gratuită${selectedSlot ? ` ${selectedSlot.day} la ${selectedSlot.time}` : ''}. Email: ${form.email}${form.phone ? `. Telefon: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
+      : isDropin
+        ? `Hi, my name is ${form.name.trim() || '...'} and I would like to come for a dropin session${selectedSlot ? ` on ${selectedSlot.day}${slotDateStr ? `, ${slotDateStr}` : ''}` : ''}. I understand that the session will cost 60 RON and I can pay at the gym. Email: ${form.email}${form.phone ? `. Phone: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
+        : `Hi! My name is ${form.name.trim() || '...'} and I would like to book a free session${selectedSlot ? ` on ${selectedSlot.day} at ${selectedSlot.time}` : ''}. Email: ${form.email}${form.phone ? `. Phone: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
+  );
+  const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${whatsappText}`;
+
+  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email);
+  const privacyConsentText = isRo
+    ? 'Prin trimitere, ești de acord să stocăm datele rezervării pentru programare și contact, timp de maximum 1 an.'
+    : 'By submitting, you agree that we store your reservation details for scheduling and contact for up to 1 year.';
+  const canSend = form.name.trim() && isValidEmail && selectedSlot;
 
   // Build the auto-prefix for the message box
   const messagePrefix = selectedSlot && form.name.trim()
@@ -116,7 +116,7 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
     setSending(true);
     const fullMessage = messagePrefix + userMessage;
     try {
-      await fetch('https://api.unbrokenspirit.ro/email/send/', {
+      const response = await fetch('https://api.unbrokenspirit.ro/email/send/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -125,6 +125,7 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
           body: `${isRo ? 'Nume' : 'Name'}: ${form.name}\n${isRo ? 'Email' : 'Email'}: ${form.email}\n${isRo ? 'Telefon' : 'Phone'}: ${form.phone || (isRo ? 'Necompletat' : 'Not provided')}${gclid ? `\nGCLID: ${gclid}` : ''}\n\n${isRo ? 'Mesaj' : 'Message'}:\n${fullMessage}`
         })
       });
+      if (!response.ok) throw new Error(`API error: ${response.status}`);
       await createCalendarSignup({
         form,
         selectedSlot,

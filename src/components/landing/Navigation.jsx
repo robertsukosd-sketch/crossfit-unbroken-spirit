@@ -217,7 +217,7 @@ export default function Navigation({ onBookSession, isMobileMenuOpen, setIsMobil
             className="fixed inset-0 z-40 bg-black/95 backdrop-blur-lg pt-24 lg:hidden overflow-y-auto"
           >
             <div className="px-6 py-8 space-y-4 pb-32">
-              {navLinks.map((link, index) => (
+              {navLinks.filter(link => link.href !== '#app-promo-section').map((link, index) => (
                 link.to ? (
                   <Link
                     key={link.name}
