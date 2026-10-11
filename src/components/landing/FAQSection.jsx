@@ -4,6 +4,7 @@ import { ChevronDown, Dumbbell, Users, Building2, CreditCard, Smartphone, Handsh
 import { useLanguage } from '../LanguageProvider';
 import { cn } from '@/lib/utils';
 import { openAppWithFallback } from '../appStoreUtils';
+import FaqItem from './FaqItem';
 
 const CATEGORIES_RO = [
   { id: 'crossfit', label: 'Ce este CrossFitul?', icon: Dumbbell },
@@ -39,6 +40,7 @@ export default function FAQSection({ onBookSession }) {
   const { t, language } = useLanguage();
   const [openId, setOpenId] = useState(null);
   const [activeCategory, setActiveCategory] = useState('crossfit');
+  const [showAll, setShowAll] = useState(false);
 
   const categories = language === 'ro' ? CATEGORIES_RO : CATEGORIES_EN;
 
@@ -47,7 +49,10 @@ export default function FAQSection({ onBookSession }) {
       const openFaqId = sessionStorage.getItem('openFaqId');
       if (openFaqId) {
         const cat = Object.entries(FAQ_CATEGORIES).find(([, ids]) => ids.includes(openFaqId));
-        if (cat) setActiveCategory(cat[0]);
+        if (cat) {
+          setActiveCategory(cat[0]);
+          if (cat[1].indexOf(openFaqId) >= 5) setShowAll(true);
+        }
         setOpenId(openFaqId);
         sessionStorage.removeItem('openFaqId');
 
@@ -72,6 +77,7 @@ export default function FAQSection({ onBookSession }) {
   const handleCategoryChange = (catId) => {
     setActiveCategory(catId);
     setOpenId(null);
+    setShowAll(false);
   };
 
   const handleScrollToPricing = (category = null) => {
@@ -218,6 +224,10 @@ export default function FAQSection({ onBookSession }) {
   const allFaqs = getFAQs();
   const activeFaqIds = FAQ_CATEGORIES[activeCategory] || [];
   const visibleFaqs = allFaqs.filter(f => activeFaqIds.includes(f.id));
+  const VISIBLE_COUNT = 5;
+  const firstFaqs = visibleFaqs.slice(0, VISIBLE_COUNT);
+  const restFaqs = visibleFaqs.slice(VISIBLE_COUNT);
+  const hasMore = restFaqs.length > 0;
 
   const renderAnswer = (faq) => {
     if (faq.aThunderWODStart) {
@@ -388,62 +398,89 @@ export default function FAQSection({ onBookSession }) {
             transition={{ duration: 0.2 }}
             className="space-y-3"
           >
-            {visibleFaqs.map((faq, index) => (
-              <motion.div
+            {firstFaqs.map((faq, index) => (
+              <FaqItem
                 key={faq.id}
-                id={faq.id}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.04 }}
+                faq={faq}
+                isOpen={openId === faq.id}
+                onToggle={() => setOpenId(openId === faq.id ? null : faq.id)}
+                delay={index * 0.04}
               >
+                {renderAnswer(faq)}
+                {faq.aParking && (
+                  <img
+                    src="https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/c3e5ef236_new_map_how_to.png"
+                    alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
+                    className="w-full rounded-xl border border-zinc-700 mt-3"
+                  />
+                )}
+                {faq.aImage && (
+                  <img
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/c02900e79_image.png"
+                    alt={language === 'ro' ? 'CrossFit - Fitness în 100 de cuvinte' : 'CrossFit - Fitness in 100 words'}
+                    className="w-full rounded-xl border border-zinc-700 mt-3"
+                  />
+                )}
+              </FaqItem>
+            ))}
+
+            {hasMore && (
+              <div className="pt-1">
                 <button
-                  onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
-                  className={cn(
-                    'w-full text-left px-5 sm:px-6 py-4 rounded-xl border transition-all duration-200',
-                    openId === faq.id
-                      ? 'bg-blue-600/10 border-blue-500/50'
-                      : 'bg-zinc-900/50 border-zinc-800 hover:border-blue-500/30'
-                  )}
+                  onClick={() => setShowAll((v) => !v)}
+                  className="w-full flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-xl border border-zinc-800 bg-zinc-900/50 text-sky-400 hover:border-blue-500/40 hover:bg-zinc-900 transition-all duration-200 font-semibold text-sm"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-base sm:text-lg font-semibold text-white pr-2">{faq.q}</h3>
-                    <motion.div animate={{ rotate: openId === faq.id ? 180 : 0 }} transition={{ duration: 0.2 }} className="flex-shrink-0 mt-0.5">
-                      <ChevronDown className="w-5 h-5 text-sky-400" />
-                    </motion.div>
-                  </div>
+                  <span>
+                    {showAll
+                      ? (language === 'ro' ? 'Arată mai puține întrebări' : 'Show fewer questions')
+                      : (language === 'ro' ? `Arată încă ${restFaqs.length} întrebări` : `Show ${restFaqs.length} more questions`)}
+                  </span>
+                  <motion.div animate={{ rotate: showAll ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                    <ChevronDown className="w-4 h-4" />
+                  </motion.div>
                 </button>
 
-                <AnimatePresence>
-                  {openId === faq.id && (
+                <AnimatePresence initial={false}>
+                  {showAll && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
+                      transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 sm:px-6 py-4 bg-zinc-900/30 border-l-2 border-blue-500 mt-1 rounded-lg space-y-3">
-                        {renderAnswer(faq)}
-                        {faq.aParking && (
-                          <img
-                            src="https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/c3e5ef236_new_map_how_to.png"
-                            alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
-                            className="w-full rounded-xl border border-zinc-700 mt-3"
-                          />
-                        )}
-                        {faq.aImage && (
-                          <img
-                            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/c02900e79_image.png"
-                            alt={language === 'ro' ? 'CrossFit - Fitness în 100 de cuvinte' : 'CrossFit - Fitness in 100 words'}
-                            className="w-full rounded-xl border border-zinc-700 mt-3"
-                          />
-                        )}
+                      <div className="space-y-3 pt-3">
+                        {restFaqs.map((faq, index) => (
+                          <FaqItem
+                            key={faq.id}
+                            faq={faq}
+                            isOpen={openId === faq.id}
+                            onToggle={() => setOpenId(openId === faq.id ? null : faq.id)}
+                            delay={index * 0.04}
+                          >
+                            {renderAnswer(faq)}
+                            {faq.aParking && (
+                              <img
+                                src="https://media.base44.com/images/public/69948c0d6b8aa61f49f0a23d/c3e5ef236_new_map_how_to.png"
+                                alt={language === 'ro' ? 'Hartă traseu spre sală' : 'Map route to the gym'}
+                                className="w-full rounded-xl border border-zinc-700 mt-3"
+                              />
+                            )}
+                            {faq.aImage && (
+                              <img
+                                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69948c0d6b8aa61f49f0a23d/c02900e79_image.png"
+                                alt={language === 'ro' ? 'CrossFit - Fitness în 100 de cuvinte' : 'CrossFit - Fitness in 100 words'}
+                                className="w-full rounded-xl border border-zinc-700 mt-3"
+                              />
+                            )}
+                          </FaqItem>
+                        ))}
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
-            ))}
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>
