@@ -20,6 +20,7 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [userMessage, setUserMessage] = useState('');
   const [emailBlurred, setEmailBlurred] = useState(false);
+  const [isDropin, setIsDropin] = useState(false);
 
   const nameRef = useRef(null);
   const messageRef = useRef(null);
@@ -39,7 +40,9 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
   const whatsappText = encodeURIComponent(
     isRo
       ? `Bună! Mă numesc ${form.name.trim() || '...'} și aș dori să rezerv o ședință gratuită${selectedSlot ? ` ${selectedSlot.day} la ${selectedSlot.time}` : ''}. Email: ${form.email}${form.phone ? `. Telefon: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
-      : `Hi! My name is ${form.name.trim() || '...'} and I would like to book a free session${selectedSlot ? ` on ${selectedSlot.day} at ${selectedSlot.time}` : ''}. Email: ${form.email}${form.phone ? `. Phone: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
+      : isDropin
+        ? `Hi, my name is ${form.name.trim() || '...'} and I would like to come for a dropin session${selectedSlot ? ` on ${selectedSlot.day}${slotDateStr ? `, ${slotDateStr}` : ''}` : ''}. I understand that the session will cost 60 RON and I can pay at the gym. Email: ${form.email}${form.phone ? `. Phone: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
+        : `Hi! My name is ${form.name.trim() || '...'} and I would like to book a free session${selectedSlot ? ` on ${selectedSlot.day} at ${selectedSlot.time}` : ''}. Email: ${form.email}${form.phone ? `. Phone: ${form.phone}` : ''}.${userMessage.trim() ? ` ${userMessage.trim()}` : ''}`
   );
   const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${whatsappText}`;
 
@@ -76,7 +79,9 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
   const messagePrefix = selectedSlot && form.name.trim()
     ? isRo
       ? `Bună! Mă numesc ${form.name.trim()} și aș dori să rezerv o ședință gratuită ${selectedSlot.day}${slotDateStr ? ` (${slotDateStr})` : ''} la ${selectedSlot.time}. `
-      : `Hi! My name is ${form.name.trim()} and I would like to book a free session on ${selectedSlot.day}${slotDateStr ? ` (${slotDateStr})` : ''} at ${selectedSlot.time}. `
+      : isDropin
+        ? `Hi, my name is ${form.name.trim()} and I would like to come for a dropin session on ${selectedSlot.day}${slotDateStr ? `, ${slotDateStr}` : ''}. I understand that the session will cost 60 RON and I can pay at the gym. `
+        : `Hi! My name is ${form.name.trim()} and I would like to book a free session on ${selectedSlot.day}${slotDateStr ? ` (${slotDateStr})` : ''} at ${selectedSlot.time}. `
     : '';
 
   // Show message box only after email field is blurred with a valid email
@@ -145,6 +150,7 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
     setEmailBlurred(false);
     setShowSchedule(true);
     setShowParking(false);
+    setIsDropin(false);
     onClose();
   };
 
@@ -325,6 +331,21 @@ export default function BookFreeSessionModal({ isOpen, onClose, gclid = '' }) {
                         className="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-3 py-2 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-[border-color] duration-150 text-sm"
                       />
                     </div>
+
+                    {/* Drop-in checkbox — English only */}
+                    {!isRo && (
+                      <label className="flex items-center gap-2 cursor-pointer select-none py-1">
+                        <input
+                          type="checkbox"
+                          checked={isDropin}
+                          onChange={(e) => setIsDropin(e.target.checked)}
+                          className="w-4 h-4 rounded border-zinc-600 bg-zinc-800 text-blue-500 focus:ring-blue-500 focus:ring-offset-0 cursor-pointer flex-shrink-0"
+                        />
+                        <span className="text-xs font-bold text-amber-400 tracking-wide">
+                          I'M COMING FOR A DROPIN
+                        </span>
+                      </label>
+                    )}
 
                     {/* Dynamic message box */}
                     <AnimatePresence>
