@@ -20,8 +20,11 @@ Deno.serve(async (req) => {
 
     const { name, rating, user_ratings_total, reviews } = data.result;
 
+    // Keep only reviews that have actual text content
+    const filteredReviews = (reviews || []).filter(r => r.text && r.text.trim().length > 0);
+
     return Response.json(
-      { name, rating, user_ratings_total, reviews: reviews || [] },
+      { name, rating, user_ratings_total, reviews: filteredReviews },
       { headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0' } }
     );
   } catch (error) {
