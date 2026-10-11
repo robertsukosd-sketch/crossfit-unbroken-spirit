@@ -701,7 +701,7 @@ export default function PricingSection({ onOpenFreeClass }) {
               onClick={onOpenFreeClass}
               className="px-5 py-2 rounded-full text-sm font-bold border border-amber-400/50 text-amber-400 bg-amber-400/10 hover:bg-amber-400/20 transition-colors duration-150 whitespace-nowrap"
             >
-              {language === 'ro' ? '🎁 Rezervă o Clasă Gratuită' : '🎁 Book a Free Class'}
+              {language === 'ro' ? '🎁 Rezervă o Clasă Gratuită' : '🎁 Book a Dropin/Free Class'}
             </button>
           </motion.div>
         )}

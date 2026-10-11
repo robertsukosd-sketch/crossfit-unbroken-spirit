@@ -74,7 +74,7 @@ export default function HeroSection({ onOpenFreeClass }) {
                   onClick={onOpenFreeClass}
                   className="bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-500 hover:to-yellow-400 text-black px-6 sm:px-10 py-3 sm:py-6 text-sm sm:text-base md:text-lg font-black rounded-full shadow-xl shadow-amber-400/40 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 focus:ring-offset-black"
                 >
-                  {language === 'ro' ? 'Rezervă o Clasă Gratuită' : 'Book a Free Class'}
+                  {language === 'ro' ? 'Rezervă o Clasă Gratuită' : 'Book a Dropin/Free Class'}
                 </Button>
               </motion.div>
               <Button
