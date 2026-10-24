@@ -78,7 +78,8 @@ export function getWeeklySchedule(weekOffset = 0) {
 function getSlotsForDay(dayIndex) {
   if (dayIndex === 5) {
     return [
-      { time: '08:00-10:00', type: 'Open Gym' },
+      // TEMPORAR SCOS din orar (Sâmbătă 08:00-10:00 Open Gym) - de reactivat la nevoie
+      // { time: '08:00-10:00', type: 'Open Gym' },
       { time: '10:00-11:30', type: 'CrossFit' },
     ];
   }
