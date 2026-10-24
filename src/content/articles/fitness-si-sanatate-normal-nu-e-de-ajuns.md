@@ -6,7 +6,7 @@
   "category": "mindset",
   "author": "CrossFit Unbroken Spirit",
   "language": "ro",
-  "published_date": "2026-10-12",
+  "published_date": "2026-10-24",
   "cover_image": "https://base44.app/api/apps/69948c0d6b8aa61f49f0a23d/files/mp/public/69948c0d6b8aa61f49f0a23d/f2d617ece_p5-fig-00-hero.png",
   "faq": [
     {
